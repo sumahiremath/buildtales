@@ -4,6 +4,7 @@ url: "https://buildtales.dev"
 baseurl: ""
 
 theme: jekyll-theme-cayman
+remote_theme: jekyll-theme-cayman
 
 author:
   name: Suma Manjunath
