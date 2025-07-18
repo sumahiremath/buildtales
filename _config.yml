@@ -3,8 +3,7 @@ description: Stories and insights from the journey of building teams, systems, a
 url: "https://buildtales.dev"
 baseurl: ""
 
-theme: jekyll-theme-cayman
-remote_theme: jekyll-theme-cayman
+remote_theme: pages-themes/cayman@v0.2.0
 
 github:
   is_project_page: false
@@ -26,3 +25,19 @@ author:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+# ✅ Load custom CSS
+sass:
+  style: compressed
+
+# ✅ Allow including assets and custom head
+include:
+  - _includes/head-custom.html
+  - assets/css
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
