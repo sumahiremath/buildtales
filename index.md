@@ -1,10 +1,7 @@
 ---
 layout: default
-title: BuildTales
+title: Build Tales
 ---
-
-
-# Welcome to **Build Tales**
 
 _A blog by Suma, where engineering leadership, complex systems, and team culture come together._
 
