@@ -2,6 +2,7 @@
 layout: default
 title: Build Tales
 ---
+<link rel="stylesheet" href="/assets/css/style.css">
 
 _A blog by Suma, where engineering leadership, complex systems, and team culture come together._
 
