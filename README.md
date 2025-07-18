@@ -1,6 +1,6 @@
 # 🛠️ buildtales.dev
 
-**Personal blog by [Suma](https://www.linkedin.com/in/sumamanjunath)** — thoughts on engineering leadership, teams, systems, fintech, and culture.
+**BuildTales** is a personal blog by **Suma Manjunath** — legally Sumalatha Manjunath, known online as **Suma Hiremath** — an engineering leader passionate about systems, fintech, teams, and the messy magic of software.
 
 > _“Stories and insights from the journey of building teams, systems, and culture.”_
 
@@ -8,9 +8,7 @@
 
 ## 📖 About
 
-**BuildTales** is a personal blog by Suma, an engineering leader passionate about writing, intentional technology, and the messy magic of building great software teams.  
-
-From early systems design to scaling leadership in fast-paced industries like **fintech**, BuildTales explores the real-world stories behind building resilient software and resilient humans.
+BuildTales shares long-form essays, lessons from the trenches, and thoughtful takes on everything from scaling backend systems to navigating career growth and engineering culture.
 
 ---
 
