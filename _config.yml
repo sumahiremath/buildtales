@@ -1,8 +1,32 @@
 title: BuildTales
 description: Stories and insights from the journey of building teams, systems, and culture.
-author: Suma
-theme: minima
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-markdown: kramdown
+url: "https://buildtales.dev"
+baseurl: ""  # important for root domains
+author:
+  name: Suma Manjunath
+  legalname: Sumalatha Manjunath
+  nickname: Suma Hiremath
+  bio: >
+    Engineering leader passionate about writing, intentional tech, and the messy magic of building great software teams.
+  links:
+    - label: LinkedIn
+      url: https://linkedin.com/in/sumamanjunath
+    - label: GitHub
+      url: https://github.com/sumahiremath
+
+---
+
+### 🛠️ Built With
+
+- [Jekyll](https://jekyllrb.com/)
+- [Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/)
+- [GitHub Pages](https://pages.github.com/)
+
+---
+
+### 📫 Reach Me
+
+- 💼 [LinkedIn](https://linkedin.com/in/sumamanjunath)  
+- 🐙 [GitHub](https://github.com/sumahiremath)  
+- 🦊 [GitLab](https://gitlab.com/sumahiremath)  
+- ✍️ Blog: [https://buildtales.dev](https://buildtales.dev)
