@@ -1,0 +1,8 @@
+title: BuildTales
+description: Stories and insights from the journey of building teams, systems, and culture.
+author: Suma
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+markdown: kramdown
