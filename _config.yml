@@ -1,12 +1,13 @@
 title: Build Tales
 description: Stories and insights from the journey of building teams, systems, and culture.
-url: "https://buildtales.dev"
-baseurl: ""
-
 remote_theme: pages-themes/cayman@v0.2.0
 
 github:
   is_project_page: false
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
 
 author:
   name: Suma Manjunath
@@ -21,7 +22,3 @@ author:
       url: https://github.com/sumahiremath
     - label: GitLab
       url: https://gitlab.com/sumahiremath
-
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
