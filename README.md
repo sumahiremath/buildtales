@@ -22,14 +22,6 @@ BuildTales shares long-form essays, lessons from the trenches, and thoughtful ta
 
 ---
 
-## 🛠️ Built With
-
-- [Jekyll](https://jekyllrb.com/)  
-- [Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/)  
-- Hosted on [GitHub Pages](https://pages.github.com)  
-
----
-
 ## 📫 Reach Me
 
 - LinkedIn: [linkedin.com/in/sumamanjunath](https://linkedin.com/in/sumamanjunath)  
