@@ -23,11 +23,11 @@ Welcome! I'm **Suma Manjunath**, an engineering leader who writes about the inte
       3 of 45 articles published
     </span>
   </div>
-  <div style="margin-top: 1.5rem;">
-    <a href="/how-us-payments-actually-work/" style="background: rgba(255,255,255,0.15); color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 500; margin-right: 1rem;">
+  <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+    <a href="/how-us-payments-actually-work/" style="background: rgba(255,255,255,0.15); color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 500; flex: 1; min-width: 200px; max-width: 250px; text-align: center;">
       View Complete Series
     </a>
-    <a href="/fintech/payments/2025/08/13/money-flow-bank-account.html" style="background: white; color: #157878; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 500;">
+    <a href="/fintech/payments/2025/08/13/money-flow-bank-account.html" style="background: white; color: #157878; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 500; flex: 1; min-width: 200px; max-width: 250px; text-align: center;">
       Start Reading
     </a>
   </div>
@@ -43,14 +43,9 @@ Welcome! I'm **Suma Manjunath**, an engineering leader who writes about the inte
 </article>
 {% endfor %}
 
-<div style="text-align: center; margin: 2rem 0;">
-  <a href="/blog/" style="background: #157878; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 4px; font-weight: 500;">Read All Articles</a>
-  <a href="/about/" style="background: transparent; color: #157878; padding: 0.75rem 1.5rem; text-decoration: none; border: 2px solid #157878; border-radius: 4px; font-weight: 500; margin-left: 1rem;">About</a>
+<div style="margin: 2rem 0; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+  <a href="/blog/" style="background: #157878; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 4px; font-weight: 500; flex: 1; min-width: 180px; max-width: 220px; text-align: center;">Read All Articles</a>
+  <a href="/about/" style="background: transparent; color: #157878; padding: 0.75rem 1.5rem; text-decoration: none; border: 2px solid #157878; border-radius: 4px; font-weight: 500; flex: 1; min-width: 180px; max-width: 220px; text-align: center;">About</a>
 </div>
 
----
 
-<div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
-  <p style="margin: 0;"><strong>Building something interesting?</strong> I'd love to hear about it!</p>
-  <small>Find me on <a href="https://linkedin.com/in/sumamanjunath">LinkedIn</a> or drop me a line.</small>
-</div>
