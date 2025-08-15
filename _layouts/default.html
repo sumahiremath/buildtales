@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% if site.head_custom %}{% include head-custom.html %}{% endif %}
     
@@ -43,7 +44,10 @@
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
     <header class="page-header" role="banner">
-      <h1 class="project-name"><a href="/" style="color: white; text-decoration: none;">{{ site.title }}</a></h1>
+      <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+        <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="{{ site.title }} logo" style="height: 60px; width: auto; margin-right: 1rem;">
+        <h1 class="project-name" style="margin: 0;"><a href="/" style="color: white; text-decoration: none;">{{ site.title }}</a></h1>
+      </div>
       <h2 class="project-tagline">{{ site.description }}</h2>
       {% if page.layout != 'default' or page.title != site.title %}
         <nav style="margin-top: 1rem;">
