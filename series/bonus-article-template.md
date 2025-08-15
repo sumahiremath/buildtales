@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "[YOUR BONUS ARTICLE TITLE]"
-date: [YYYY-MM-DD]
+date: 2025-08-27
 categories: [appropriate, categories]  # Use relevant categories like: engineering, leadership, systems, fintech
 tags: [relevant, tags, here]
 excerpt: "[Brief compelling excerpt explaining what this bonus article covers]"

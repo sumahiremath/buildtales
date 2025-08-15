@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "[ARTICLE TITLE]"
-date: [YYYY-MM-DD]
+date: 2025-08-27
 categories: [fintech, payments]
 tags: [relevant, tags, here]
 excerpt: "[Brief compelling excerpt that explains what readers will learn]"
@@ -35,13 +35,13 @@ syndication:
 series:
   name: "How U.S. Payments Really Work"
   index_url: "/rebuilding-us-payments/"
-  part: [X]
+  part: 4
   total_parts: 45
 ---
 
 <!-- Series Navigation -->
 <div style="background: #f8f9fa; border-left: 4px solid #007acc; padding: 1rem; margin: 1rem 0;">
-  <strong>Part [X] of the "How U.S. Payments Really Work" Series</strong><br>
+  <strong>Part 4 of the "How U.S. Payments Really Work" Series</strong><br>
   [NAVIGATION_LINKS_HERE]
 </div>
 
