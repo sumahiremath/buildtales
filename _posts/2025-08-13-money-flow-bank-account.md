@@ -167,6 +167,7 @@ flowchart LR
     style E fill:#e8f5e8
     style F fill:#ffebee
     style G fill:#ffebee
+
 </div>
 
 *ACH Credit Flow: How your salary travels from employer to your bank account*
