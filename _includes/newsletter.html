@@ -6,25 +6,8 @@
   </p>
   
   <div style="max-width: 400px; margin: 0 auto;">
-    {% if site.newsletter.embed_code %}
-      {{ site.newsletter.embed_code }}
-    {% else %}
-      <!-- Fallback form structure -->
-      <form action="#" method="post" style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center;">
-        <input 
-          type="email" 
-          placeholder="your.email@example.com" 
-          required
-          style="flex: 1; min-width: 200px; padding: 0.75rem; border: none; border-radius: 4px; font-size: 1rem;"
-        >
-        <button 
-          type="submit"
-          style="background: white; color: #157878; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 1rem;"
-        >
-          {{ site.newsletter.button_text | default: "Subscribe" }}
-        </button>
-      </form>
-    {% endif %}
+    <!-- ConvertKit form container -->
+    <div data-uid="04e4ace408" data-format="inline" data-version="5" data-embed-style="light"></div>
   </div>
   
   <p style="color: rgba(255,255,255,0.7); font-size: 0.8rem; margin-top: 1rem; margin-bottom: 0;">
