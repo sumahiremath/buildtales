@@ -26,7 +26,7 @@ Here's a collection of posts from the field — lessons learned, patterns discov
     <p>Posts are loading... If this persists, the site may still be building.</p>
     <p><strong>Expected posts:</strong></p>
     <ul style="list-style: none;">
-      <li>• <a href="/fintech/payments/2024/12/19/money-flow-bank-account.html">How Money Moves In And Out Of Your Bank Account?</a></li>
+      <li>• <a href="/fintech/payments/2025/08/13/money-flow-bank-account.html">How Money Moves In And Out Of Your Bank Account?</a></li>
     </ul>
   </div>
 {% endif %}
