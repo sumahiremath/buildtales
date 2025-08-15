@@ -60,7 +60,7 @@ When you pay your electric bill online using your bank account, you're initiatin
 4. **Utility's Bank (RDFI)** receives and processes the payment
 5. **Utility Company** gets notified and credits your account
 
-```mermaid
+<div class="mermaid">
 flowchart LR
     A["👤<br>You<br><small>Authorize Payment</small>"] 
     B["🏦<br>Your Bank<br><small>ODFI</small>"]
@@ -86,7 +86,7 @@ flowchart LR
     style E fill:#e8f5e8
     style F fill:#ffebee
     style G fill:#ffebee
-```
+</div>
 
 *ACH Debit Flow: Your electric bill payment journey from authorization to completion*
 
@@ -141,7 +141,7 @@ When your employer pays you, they're initiating an **ACH Credit** transaction. T
 4. **Your Bank (RDFI)** receives the credit instruction
 5. **You** see your paycheck deposited in your account
 
-```mermaid
+<div class="mermaid">
 flowchart LR
     A["👔<br>Your Employer<br><small>Initiate Payroll</small>"] 
     B["🏦<br>Employer's Bank<br><small>ODFI</small>"]
@@ -167,7 +167,7 @@ flowchart LR
     style E fill:#e8f5e8
     style F fill:#ffebee
     style G fill:#ffebee
-```
+</div>
 
 *ACH Credit Flow: How your salary travels from employer to your bank account*
 
