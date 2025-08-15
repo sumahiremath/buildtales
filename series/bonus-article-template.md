@@ -68,4 +68,4 @@ end
 ---
 
 <!-- Optional: Link back to main series if relevant -->
-*Enjoyed this? Check out the main [How U.S. Payments Really Work](/rebuilding-us-payments/) series for deep dives into payment systems.*
+*Enjoyed this? Check out the main [How U.S. Payments Really Work](/how-us-payments-actually-work/) series for deep dives into payment systems.*

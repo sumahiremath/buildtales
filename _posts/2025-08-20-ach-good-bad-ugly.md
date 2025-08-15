@@ -34,7 +34,7 @@ syndication:
 # Series information
 series:
   name: "How U.S. Payments Really Work"
-  index_url: "/rebuilding-us-payments/"
+  index_url: "/how-us-payments-actually-work/"
   part: 3
   total_parts: 45
 ---
@@ -43,7 +43,7 @@ series:
 <div style="background: #f8f9fa; border-left: 4px solid #007acc; padding: 1rem; margin: 1rem 0;">
   <strong>Part 3 of the "How U.S. Payments Really Work" Series</strong><br>
   <a href="/fintech/payments/2025/08/14/wire-transfers-explained.html">← Previous: Wire Transfers</a> | 
-  <a href="/rebuilding-us-payments/">View complete series roadmap</a> | 
+  <a href="/how-us-payments-actually-work/">View complete series roadmap</a> | 
   <em>Next: ACH Cutoffs: The Hidden Clock That Breaks Your UX (Coming Aug 27)</em>
 </div>
 
@@ -491,6 +491,6 @@ The next article in this series dives deep into **ACH cutoff times** — the hid
 <div style="background: #f8f9fa; border-left: 4px solid #007acc; padding: 1rem; margin: 1rem 0;">
   <strong>"How U.S. Payments Really Work" Series Navigation</strong><br>
   <a href="/fintech/payments/2025/08/14/wire-transfers-explained.html">← Previous: Wire Transfers</a> | 
-  <a href="/rebuilding-us-payments/">View complete series roadmap</a> | 
+  <a href="/how-us-payments-actually-work/">View complete series roadmap</a> | 
   <em>Next: ACH Cutoffs: The Hidden Clock That Breaks Your UX (Coming Aug 27)</em>
 </div>

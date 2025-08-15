@@ -22,7 +22,7 @@ Welcome! I'm **Suma Manjunath**, an engineering leader who writes about the inte
     <strong>Progress:</strong> 3 of 45 articles published • <strong>Target completion:</strong> Q3 2026
   </div>
   <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
-    <a href="/rebuilding-us-payments/" style="background: rgba(255,255,255,0.2); color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold;">
+    <a href="/how-us-payments-actually-work/" style="background: rgba(255,255,255,0.2); color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold;">
       📖 Read the Series
     </a>
     <a href="/fintech/payments/2025/08/13/money-flow-bank-account.html" style="background: white; color: #007acc; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold;">

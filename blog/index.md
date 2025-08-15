@@ -10,7 +10,7 @@ Here's a collection of posts from the field — lessons learned, patterns discov
 ## All Articles
 
 <div style="display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
-  <a href="/rebuilding-us-payments/" style="background: #007acc; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold;">
+  <a href="/how-us-payments-actually-work/" style="background: #007acc; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold;">
     📚 Payment Series (3/45)
   </a>
   <a href="#bonus-articles" style="background: transparent; color: #007acc; padding: 0.75rem 1.5rem; border: 2px solid #007acc; border-radius: 4px; text-decoration: none; font-weight: bold;">
@@ -26,7 +26,7 @@ Here's a collection of posts from the field — lessons learned, patterns discov
 <div style="background: linear-gradient(135deg, #007acc, #0099ff); color: white; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
   <h3 style="margin-top: 0; color: white;">How U.S. Payments Really Work</h3>
   <p>A survival manual for building resilient platforms that move money — and earn trust.</p>
-  <a href="/rebuilding-us-payments/" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; font-weight: bold;">
+  <a href="/how-us-payments-actually-work/" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; font-weight: bold;">
     View Series Roadmap →
   </a>
 </div>

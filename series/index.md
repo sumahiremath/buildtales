@@ -1,8 +1,8 @@
 ---
 layout: default
 title: "How U.S. Payments Really Work: Complete Series Roadmap"
-permalink: /rebuilding-us-payments/
-canonical_url: "https://buildtales.dev/rebuilding-us-payments/"
+permalink: /how-us-payments-actually-work/
+canonical_url: "https://buildtales.dev/how-us-payments-actually-work/"
 description: "A survival manual for building resilient platforms that move money — and earn trust. From ACH basics to advanced compliance and leadership insights."
 
 # SEO and Open Graph
