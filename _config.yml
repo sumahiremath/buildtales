@@ -9,6 +9,14 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+# Markdown settings for better code and diagram support
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  input: GFM
+
+# Mermaid diagrams enabled via CDN in layout
+
 author:
   name: Suma Manjunath
   legalname: Sumalatha Manjunath
