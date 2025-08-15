@@ -1,13 +1,13 @@
 ---
 layout: default
 title: "How Money Moves In And Out Of Your Bank Account?"
-date: 2025-08-14
+date: 2024-12-19
 categories: [fintech, payments]
 tags: [ach, payments, banking, fintech-basics]
 excerpt: "Ever wonder how your paycheck shows up in your bank account on payday? Or how your gym magically pulls your membership fee every month? That's all thanks to ACH - the behind-the-scenes hero of American banking."
 
 # SEO and Canonical Tags
-canonical_url: "https://buildtales.dev/fintech/payments/2025/08/14/money_flow_bank_account.html"
+canonical_url: "https://buildtales.dev/fintech/payments/2024/12/19/money_flow_bank_account.html"
 author:
   name: "Suma Manjunath"
   twitter: "@sumahiremath"
@@ -284,6 +284,3 @@ The network operates on **efficiency over speed** - enabling massive scale at mi
 7. **Bank for International Settlements**. "Payment Systems in the United States." *BIS Quarterly Review*, 2023. [https://www.bis.org/cpmi/publ/d105.htm](https://www.bis.org/cpmi/publ/d105.htm)
 
 ---
-
-*Next up: FedNow vs RTP - the real-time payment networks challenging ACH's dominance.*
-
