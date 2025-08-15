@@ -57,10 +57,7 @@
     <main id="content" class="main-content" role="main">
       {{ content }}
       
-      <!-- Article navigation (before newsletter signup) -->
-      {% if page.categories %}
-        {% include article-navigation.html %}
-      {% endif %}
+
       
       <!-- Newsletter signup for blog posts -->
       {% if page.categories and site.newsletter.show_in_articles %}
