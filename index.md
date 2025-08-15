@@ -12,7 +12,7 @@ Welcome! I'm **Suma Manjunath**, an engineering leader who writes about the inte
 
 ---
 
-## 🔥 Featured Content
+## Featured Content
 
 {% if site.posts.size > 0 %}
   {% assign featured_post = site.posts.first %}
@@ -24,28 +24,28 @@ Welcome! I'm **Suma Manjunath**, an engineering leader who writes about the inte
   </div>
 {% endif %}
 
-## 📚 What You'll Learn
+## What You'll Learn
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
   <div style="padding: 1rem; border-left: 4px solid #157878;">
-    <strong>💰 Fintech Engineering</strong><br>
+    <strong>Fintech Engineering</strong><br>
     <small>Payment systems, ACH, real-time rails, compliance</small>
   </div>
   <div style="padding: 1rem; border-left: 4px solid #157878;">
-    <strong>🏗️ Systems Design</strong><br>
+    <strong>Systems Design</strong><br>
     <small>Scaling backends, architecture patterns, reliability</small>
   </div>
   <div style="padding: 1rem; border-left: 4px solid #157878;">
-    <strong>👥 Engineering Leadership</strong><br>
+    <strong>Engineering Leadership</strong><br>
     <small>Team building, career growth, technical strategy</small>
   </div>
   <div style="padding: 1rem; border-left: 4px solid #157878;">
-    <strong>🧪 Lessons from the Field</strong><br>
+    <strong>Lessons from the Field</strong><br>
     <small>Real stories, patterns, wins, and failures</small>
   </div>
 </div>
 
-## 📖 Recent Posts
+## Recent Posts
 
 {% for post in site.posts limit:3 %}
 <article style="margin: 1rem 0; padding: 1rem 0; border-bottom: 1px solid #eee;">
@@ -56,8 +56,8 @@ Welcome! I'm **Suma Manjunath**, an engineering leader who writes about the inte
 {% endfor %}
 
 <div style="text-align: center; margin: 2rem 0;">
-  <a href="/blog/" style="background: #157878; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 4px; font-weight: bold;">📝 Read All Posts</a>
-  <a href="/about/" style="background: transparent; color: #157878; padding: 0.75rem 1.5rem; text-decoration: none; border: 2px solid #157878; border-radius: 4px; font-weight: bold; margin-left: 1rem;">👤 About Me</a>
+  <a href="/blog/" style="background: #157878; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 4px; font-weight: bold;">Read All Posts</a>
+  <a href="/about/" style="background: transparent; color: #157878; padding: 0.75rem 1.5rem; text-decoration: none; border: 2px solid #157878; border-radius: 4px; font-weight: bold; margin-left: 1rem;">About Me</a>
 </div>
 
 ---

@@ -62,14 +62,14 @@ When you pay your electric bill online using your bank account, you're initiatin
 
 <div class="mermaid">
 flowchart LR
-    A["You<br><small>Authorize Payment</small>"] 
-    B["Your Bank<br><small>ODFI</small>"]
-    C["ACH Network<br><small>Batch Processing</small>"]
-    D["Utility's Bank<br><small>RDFI</small>"]
-    E["Utility Company<br><small>Payment Received</small>"]
+    A["👤<br>You<br><small>Authorize Payment</small>"] 
+    B["🏦<br>Your Bank<br><small>ODFI</small>"]
+    C["📊<br>ACH Network<br><small>Batch Processing</small>"]
+    D["🏛️<br>Utility's Bank<br><small>RDFI</small>"]
+    E["💡<br>Utility Company<br><small>Payment Received</small>"]
     
-    F["Federal Reserve<br><small>FedACH - 80%</small>"]
-    G["The Clearing House<br><small>EPN - 20%</small>"]
+    F["🦅<br>Federal Reserve<br><small>FedACH - 80%</small>"]
+    G["🏢<br>The Clearing House<br><small>EPN - 20%</small>"]
     
     A -->|"Debit Authorization"| B
     B -->|"Batch File"| C
@@ -143,14 +143,14 @@ When your employer pays you, they're initiating an **ACH Credit** transaction. T
 
 <div class="mermaid">
 flowchart LR
-    A["Your Employer<br><small>Initiate Payroll</small>"] 
-    B["Employer's Bank<br><small>ODFI</small>"]
-    C["ACH Network<br><small>Batch Processing</small>"]
-    D["Your Bank<br><small>RDFI</small>"]
-    E["You<br><small>Paycheck Received!</small>"]
+    A["👔<br>Your Employer<br><small>Initiate Payroll</small>"] 
+    B["🏦<br>Employer's Bank<br><small>ODFI</small>"]
+    C["📊<br>ACH Network<br><small>Batch Processing</small>"]
+    D["🏛️<br>Your Bank<br><small>RDFI</small>"]
+    E["👤<br>You<br><small>Paycheck Received!</small>"]
     
-    F["Federal Reserve<br><small>FedACH - 80%</small>"]
-    G["The Clearing House<br><small>EPN - 20%</small>"]
+    F["🦅<br>Federal Reserve<br><small>FedACH - 80%</small>"]
+    G["🏢<br>The Clearing House<br><small>EPN - 20%</small>"]
     
     A -->|"Credit Instructions"| B
     B -->|"Payroll Batch"| C
