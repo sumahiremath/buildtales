@@ -307,8 +307,7 @@ Wire transfer testing is challenging due to regulatory requirements and irrevers
 |----------|---------------|-----------------|-------|
 | **Modern Treasury** | Yes | Excellent | Full wire simulation with approval workflows |
 | **SWIFT Developer Portal** | Message-only | Good | MT103 message testing, no funds |
-| **Banking-as-a-Service** | Varies | Platform-dependent | Synctera, Unit, Treasury Prime |
-| **Dwolla** | No | N/A | ACH-focused platform |
+
 
 ### Modern Treasury Example
 
@@ -386,6 +385,150 @@ Wire transfers require strict security measures:
 - **Batch processing** is acceptable
 - **Reversibility** might be needed
 
+## Reality Check: Things You Should Actually Care About
+
+The technical specs are great, but here's what matters when you're actually sending a wire transfer:
+
+### Realistic Timing Expectations
+
+**Domestic Wires:**
+- **Same business day** if sent before 2 PM local time
+- **Next business day** if sent after cutoff
+- **No weekend processing** - Friday 3 PM wire arrives Monday
+
+**International Wires:**
+- **1-5 business days** depending on destination
+- **Correspondent bank delays** can add 1-2 days
+- **Time zone differences** affect cutoff times
+- **Local holidays** in destination country cause delays
+
+### The Real Cost Breakdown
+
+Wire transfer fees stack up quickly:
+
+| Fee Type | Domestic | International | Who Charges |
+|----------|----------|---------------|-------------|
+| **Outgoing Fee** | $15-$30 | $25-$50 | Your bank |
+| **Incoming Fee** | $10-$15 | $15-$25 | Recipient's bank |
+| **Intermediary Fee** | N/A | $10-$25 | Correspondent banks |
+| **Currency Conversion** | N/A | 2-4% markup | All banks in chain |
+| **SWIFT Fee** | N/A | $5-$15 | International routing |
+
+**Real Example:** $10,000 wire to Europe
+- Your bank: $45 outgoing fee
+- Correspondent bank: $20 routing fee  
+- Recipient bank: $25 incoming fee
+- Currency conversion: $300 (3% markup)
+- **Total cost: $390** (3.9% of transfer amount)
+
+### Fraud and Scam Protection
+
+Wire transfers are **irreversible**, making them prime targets for scams:
+
+**Common Wire Fraud Schemes:**
+- **Business Email Compromise** - fake vendor payment requests
+- **Real estate fraud** - fake closing instructions
+- **Romance scams** - fake emergencies requiring urgent transfers
+- **Tech support scams** - fake "security" wire requests
+
+**Protection Strategies:**
+```ruby
+# Wire fraud prevention checklist
+wire_safety_checklist = {
+  verify_recipient: "Call known phone number to confirm",
+  double_check_details: "Verify routing/account numbers independently", 
+  question_urgency: "Be suspicious of 'wire now or else' pressure",
+  use_secure_channels: "Never send wire details via email",
+  start_small: "Test with smaller amount for new recipients",
+  document_everything: "Save all communications and confirmations"
+}
+```
+
+### Regulatory Monitoring (OFAC and AML)
+
+Your wire transfers are automatically screened:
+
+**What Gets Monitored:**
+- **Recipient names** against sanctions lists
+- **Destination countries** for embargo compliance
+- **Transfer amounts** for suspicious activity reporting
+- **Pattern analysis** for money laundering detection
+
+**What This Means for You:**
+- **Delays possible** if names match watchlists
+- **Additional documentation** may be required
+- **Compliance questions** from your bank
+- **Potential account restrictions** for repeated issues
+
+### Hidden Gotchas
+
+**Exchange Rate Games:**
+- Banks use "wholesale + markup" rates
+- Markups range from 2-6% above mid-market
+- No disclosure requirement for the markup amount
+
+**Correspondent Bank Roulette:**
+- Your bank chooses the routing path
+- Each intermediary can charge fees
+- No way to predict total intermediary costs upfront
+
+**Cut-off Time Reality:**
+- "Same day" usually means "by 2 PM local time"
+- Different banks have different cutoffs
+- International wires often have earlier deadlines
+
+### When ACH Is Actually Smarter
+
+Consider ACH instead of wires when:
+
+**Cost Sensitivity:**
+```ruby
+# Cost comparison for $5,000 domestic transfer
+ach_cost = {
+  fee: 1.50,          # Typical ACH fee
+  time: "1-3 days",
+  total_cost: 1.50
+}
+
+wire_cost = {
+  outgoing_fee: 25,
+  incoming_fee: 15, 
+  time: "Same day",
+  total_cost: 40
+}
+
+# ACH saves $38.50 if timing allows
+```
+
+**Risk Management:**
+- ACH transactions can be returned if unauthorized
+- Lower fraud risk due to batch processing delays
+- Easier to catch and prevent mistakes
+
+**Recurring Transfers:**
+- Set up once, runs automatically
+- Volume discounts often available
+- Better audit trails for business use
+
+### Smart Wire Transfer Strategy
+
+**Before You Wire:**
+1. **Confirm total costs** upfront with your bank
+2. **Verify recipient details** through independent channels
+3. **Check timing** against business requirements
+4. **Consider ACH** for non-urgent transfers
+5. **Document business purpose** for compliance
+
+**During Transfer:**
+1. **Save confirmation numbers** and screenshots
+2. **Monitor for completion** within expected timeframe
+3. **Have recipient confirm** receipt and amount
+
+**After Transfer:**
+1. **Reconcile amounts** including all fees
+2. **File documentation** for tax/audit purposes
+3. **Review process** for future improvements
+
 ## References
 
 1. **Federal Reserve Financial Services**. "Fedwire Funds Service." *FederalReserve.gov*, 2024. [https://www.frbservices.org/financial-services/wires](https://www.frbservices.org/financial-services/wires)
@@ -401,5 +544,3 @@ Wire transfers require strict security measures:
 6. **Office of Foreign Assets Control**. "Sanctions Compliance for Wire Transfers." *Treasury.gov*, 2024. [https://ofac.treasury.gov/compliance](https://ofac.treasury.gov/compliance)
 
 ---
-
-*Next up: Real-time payment rails - FedNow vs RTP, and how they're disrupting both ACH and wire transfers.*
