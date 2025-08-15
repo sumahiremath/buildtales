@@ -10,10 +10,10 @@ Here's a collection of posts from the field — lessons learned, patterns discov
 ## All Articles
 
 <div style="display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
-  <a href="/how-us-payments-actually-work/" style="background: #007acc; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold;">
+  <a href="/how-us-payments-actually-work/" style="background: #157878; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold;">
     📚 Payment Series (3/45)
   </a>
-  <a href="#bonus-articles" style="background: transparent; color: #007acc; padding: 0.75rem 1.5rem; border: 2px solid #007acc; border-radius: 4px; text-decoration: none; font-weight: bold;">
+  <a href="#bonus-articles" style="background: transparent; color: #157878; padding: 0.75rem 1.5rem; border: 2px solid #157878; border-radius: 4px; text-decoration: none; font-weight: bold;">
     ✨ Bonus Articles
   </a>
   <a href="#all-posts" style="background: transparent; color: #666; padding: 0.75rem 1.5rem; border: 1px solid #ccc; border-radius: 4px; text-decoration: none;">
@@ -23,7 +23,7 @@ Here's a collection of posts from the field — lessons learned, patterns discov
 
 ## Featured Series
 
-<div style="background: linear-gradient(135deg, #007acc, #0099ff); color: white; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+<div style="background: #157878; color: white; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
   <h3 style="margin-top: 0; color: white;">How U.S. Payments Really Work</h3>
   <p>A survival manual for building resilient platforms that move money — and earn trust.</p>
   <a href="/how-us-payments-actually-work/" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; font-weight: bold;">
@@ -38,9 +38,9 @@ Here's a collection of posts from the field — lessons learned, patterns discov
   {% if series_posts.size > 0 %}
   <h3 id="series-articles">📚 Payment Series Articles</h3>
   {% for post in series_posts %}
-  <article style="margin-bottom: 1.5rem; padding: 1.5rem; border: 1px solid #007acc; border-radius: 8px; background: #f8f9fa;">
+  <article style="margin-bottom: 1.5rem; padding: 1.5rem; border: 1px solid #157878; border-radius: 8px; background: #f8f9fa;">
     <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-      <span style="background: #007acc; color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">
+      <span style="background: #157878; color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">
         Part {{ post.series.part }}
       </span>
       <span style="color: #666; font-size: 0.9rem;">{{ post.date | date: "%B %d, %Y" }}</span>
@@ -49,7 +49,7 @@ Here's a collection of posts from the field — lessons learned, patterns discov
     {% if post.excerpt %}
       <p style="margin: 0.5rem 0;">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
     {% endif %}
-    <a href="{{ post.url }}" style="color: #007acc; font-weight: bold;">Read Part {{ post.series.part }} →</a>
+    <a href="{{ post.url }}" style="color: #157878; font-weight: bold;">Read Part {{ post.series.part }} →</a>
   </article>
   {% endfor %}
   {% endif %}
