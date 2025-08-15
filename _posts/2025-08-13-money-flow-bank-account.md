@@ -7,7 +7,7 @@ tags: [ach, payments, banking, fintech-basics]
 excerpt: "Ever wonder how your paycheck shows up in your bank account on payday? Or how your gym magically pulls your membership fee every month? That's all thanks to ACH - the behind-the-scenes hero of American banking."
 
 # SEO and Canonical Tags
-canonical_url: "https://buildtales.dev/fintech/payments/2024/12/19/money_flow_bank_account.html"
+canonical_url: "https://buildtales.dev/fintech/payments/2024/12/19/money-flow-bank-account.html"
 author:
   name: "Suma Manjunath"
   twitter: "@sumahiremath"
