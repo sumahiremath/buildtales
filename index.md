@@ -12,6 +12,25 @@ Welcome! I'm **Suma Manjunath**, an engineering leader who writes about the inte
 
 ---
 
+## Featured Series
+
+<div style="background: linear-gradient(135deg, #007acc, #0099ff); color: white; padding: 2rem; border-radius: 8px; margin: 2rem 0; text-align: center;">
+  <h3 style="margin-top: 0; color: white; font-size: 1.5rem;">How U.S. Payments Really Work</h3>
+  <p style="font-size: 1.1rem; line-height: 1.6; margin: 1rem 0;">A survival manual for building resilient platforms that move money — and earn trust.</p>
+  <p style="margin: 1rem 0;">45-article deep dive into payment systems, compliance, and fintech leadership. From ACH basics to advanced operational strategies.</p>
+  <div style="margin: 1.5rem 0;">
+    <strong>Progress:</strong> 3 of 45 articles published • <strong>Target completion:</strong> Q3 2026
+  </div>
+  <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+    <a href="/rebuilding-us-payments/" style="background: rgba(255,255,255,0.2); color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold;">
+      📖 Read the Series
+    </a>
+    <a href="/fintech/payments/2025/08/13/money-flow-bank-account.html" style="background: white; color: #007acc; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold;">
+      🚀 Start Here
+    </a>
+  </div>
+</div>
+
 ## Featured Content
 
 {% if site.posts.size > 0 %}

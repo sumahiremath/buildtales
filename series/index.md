@@ -210,7 +210,8 @@ The goal isn't just to explain how payment systems work, but to share the practi
 **Series Home:** You are here  
 **Start Reading:** [How Money Moves In And Out Of Your Bank Account?](/fintech/payments/2025/08/13/money-flow-bank-account.html)  
 **Publishing Schedule:** [View detailed timeline](/publishing-schedule/)  
-**Article Template:** [For consistent structure](/series/article-template.md)
+**Article Template:** [For series articles](/series/article-template.md)  
+**Bonus Article Template:** [For spontaneous posts](/series/bonus-article-template.md)
 
 ---
 
