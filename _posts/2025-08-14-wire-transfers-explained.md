@@ -30,7 +30,22 @@ syndication:
   original: true
   republish_allowed: true
   canonical_source: "BuildTales.dev"
+
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/rebuilding-us-payments/"
+  part: 2
+  total_parts: 45
 ---
+
+<!-- Series Navigation -->
+<div style="background: #f8f9fa; border-left: 4px solid #007acc; padding: 1rem; margin: 1rem 0;">
+  <strong>Part 2 of the "How U.S. Payments Really Work" Series</strong><br>
+  <a href="/fintech/payments/2025/08/13/money-flow-bank-account.html">← Previous: How Money Moves</a> | 
+  <a href="/rebuilding-us-payments/">View complete series roadmap</a> | 
+  <a href="/fintech/payments/2025/08/20/ach-good-bad-ugly.html">Next: ACH: The Good, The Bad, and The Ugly →</a>
+</div>
 
 # Wire Transfers Explained: Fast, Final, and Expensive
 

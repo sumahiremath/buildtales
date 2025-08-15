@@ -15,6 +15,9 @@ kramdown:
   syntax_highlighter: rouge
   input: GFM
 
+# Permalink structure - use categories for clean URLs
+permalink: /:categories/:year/:month/:day/:title.html
+
 # Mermaid diagrams enabled via CDN in layout
 
 # Google Analytics
