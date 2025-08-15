@@ -18,7 +18,20 @@ kramdown:
 # Mermaid diagrams enabled via CDN in layout
 
 # Google Analytics
-google_analytics: G-XXXXXXXXXX  # Replace with your GA4 Measurement ID
+google_analytics: G-RRLZZG4DPV  # Replace with your GA4 Measurement ID
+
+# Giscus Comments (GitHub Discussions)
+giscus:
+  repo: "sumahiremath/buildtales"
+  repo_id: "R_kgDOPOdOHw"
+  category: "General"
+  category_id: "DIC_kwDOPOdOH84CuNzm"
+  mapping: "pathname"
+  reactions_enabled: true
+  emit_metadata: false
+  input_position: "bottom"
+  theme: "preferred_color_scheme"
+  lang: "en"
 
 author:
   name: Suma Manjunath

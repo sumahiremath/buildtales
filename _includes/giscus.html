@@ -1,0 +1,25 @@
+{% if site.giscus and site.giscus.repo %}
+<div id="comments" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee;">
+  <h3 style="margin-bottom: 1rem; color: #157878;">Comments & Discussion</h3>
+  <p style="color: #666; font-size: 0.9rem; margin-bottom: 1.5rem;">
+    Share your thoughts, ask questions, or start a discussion about this article. 
+    Comments are powered by <a href="https://giscus.app" target="_blank">GitHub Discussions</a>.
+  </p>
+  
+  <script src="https://giscus.app/client.js"
+          data-repo="{{ site.giscus.repo }}"
+          data-repo-id="{{ site.giscus.repo_id }}"
+          data-category="{{ site.giscus.category }}"
+          data-category-id="{{ site.giscus.category_id }}"
+          data-mapping="{{ site.giscus.mapping | default: 'pathname' }}"
+          data-strict="0"
+          data-reactions-enabled="{{ site.giscus.reactions_enabled | default: 1 }}"
+          data-emit-metadata="{{ site.giscus.emit_metadata | default: 0 }}"
+          data-input-position="{{ site.giscus.input_position | default: 'bottom' }}"
+          data-theme="{{ site.giscus.theme | default: 'preferred_color_scheme' }}"
+          data-lang="{{ site.giscus.lang | default: 'en' }}"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
+{% endif %}

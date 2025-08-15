@@ -56,6 +56,11 @@
 
     <main id="content" class="main-content" role="main">
       {{ content }}
+      
+      <!-- Add comments to blog posts -->
+      {% if page.layout == 'default' and page.categories contains 'fintech' %}
+        {% include giscus.html %}
+      {% endif %}
 
       <footer class="site-footer">
         <div style="text-align: center;">
