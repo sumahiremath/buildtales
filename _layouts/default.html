@@ -57,9 +57,23 @@
     <main id="content" class="main-content" role="main">
       {{ content }}
       
+      <!-- Newsletter signup for blog posts -->
+      {% if page.categories and site.newsletter.show_in_articles %}
+        {% include newsletter.html %}
+      {% endif %}
+      
       <!-- Add comments to blog posts -->
       {% if page.categories %}
         {% include giscus.html %}
+      {% endif %}
+
+      <!-- Newsletter signup in footer (optional) -->
+      {% if site.newsletter.show_in_footer %}
+        <div style="background: #f8f9fa; padding: 2rem 0; margin-top: 2rem;">
+          <div style="max-width: 800px; margin: 0 auto; padding: 0 1rem;">
+            {% include newsletter.html %}
+          </div>
+        </div>
       {% endif %}
 
       <footer class="site-footer">
