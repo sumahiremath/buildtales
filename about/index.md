@@ -1,1 +1,3 @@
-Coming soon
+Engineering Leader with 20 years of software development experience—including over a decade in the finance sector. I excel at building scalable systems that power reliable, high-impact solutions. I blend strategic vision with hands-on execution, ensuring engineering teams deliver value-driven innovation.
+
+Outside of work, you’ll find me walking my dog with a strong black coffee in hand, capturing moments through my lens, and staying energized by exploring AI trends and championing team wellness—all while keeping life balanced and well-rounded.
