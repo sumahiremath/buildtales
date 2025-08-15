@@ -36,7 +36,7 @@ giscus:
 # Email Newsletter Signup
 newsletter:
   enabled: true
-  provider: "convertkit"  # or "mailchimp", "custom"
+  provider: "convertkit"
   title: "Join the BuildTales Community"
   description: "Get notified when I publish new deep dives on fintech, payments, and engineering leadership. No spam, just quality content."
   button_text: "Subscribe"

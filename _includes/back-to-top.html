@@ -1,0 +1,47 @@
+<!-- Back to Top Button -->
+<button id="back-to-top" 
+        style="display: none; position: fixed; bottom: 2rem; right: 2rem; background: #157878; color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2); z-index: 1000; font-size: 1.2rem; transition: opacity 0.3s ease;"
+        title="Back to top">
+  ↑
+</button>
+
+<script>
+// Back to top functionality
+(function() {
+  const backToTopButton = document.getElementById('back-to-top');
+  
+  // Show/hide button based on scroll position
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 300) {
+      backToTopButton.style.display = 'block';
+      backToTopButton.style.opacity = '1';
+    } else {
+      backToTopButton.style.opacity = '0';
+      setTimeout(() => {
+        if (window.pageYOffset <= 300) {
+          backToTopButton.style.display = 'none';
+        }
+      }, 300);
+    }
+  });
+  
+  // Smooth scroll to top
+  backToTopButton.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+  
+  // Hover effects
+  backToTopButton.addEventListener('mouseenter', function() {
+    this.style.transform = 'scale(1.1)';
+    this.style.background = '#0f5f61';
+  });
+  
+  backToTopButton.addEventListener('mouseleave', function() {
+    this.style.transform = 'scale(1)';
+    this.style.background = '#157878';
+  });
+})();
+</script>
