@@ -52,10 +52,7 @@ Curious to collaborate, chat automation-first strategies, discuss fintech challe
       <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Message</label>
       <textarea name="message" id="message" rows="4" required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; resize: vertical;"></textarea>
     </div>
-    <div style="margin-bottom: 1.5rem;">
-      <div class="g-recaptcha" data-sitekey="6Le2g6crAAAAABrTyFxjbc5sCYhgnUs0Nnxuicwf"></div>
-    </div>
-    <button type="submit" style="background: #157878; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer; font-weight: 500;">Send Message</button>
+    <button type="submit" class="g-recaptcha" data-sitekey="6Le2g6crAAAAABrTyFxjbc5sCYhgnUs0Nnxuicwf" data-callback="onSubmit" data-action="submit" style="background: #157878; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer; font-weight: 500;">Send Message</button>
   </form>
 </div>
 

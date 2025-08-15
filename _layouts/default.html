@@ -40,8 +40,13 @@
       });
     </script>
     
-    <!-- Google reCAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- Google reCAPTCHA v3 -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6Le2g6crAAAAABrTyFxjbc5sCYhgnUs0Nnxuicwf" async defer></script>
+    <script>
+      function onSubmit(token) {
+        document.querySelector('form').submit();
+      }
+    </script>
   </head>
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
@@ -52,13 +57,13 @@
         <h1 class="project-name" style="margin: 0;"><a href="/" style="color: white; text-decoration: none;">{{ site.title }}</a></h1>
       </div>
       <h2 class="project-tagline">{{ site.description }}</h2>
-      {% if page.layout != 'default' or page.title != site.title %}
-        <nav style="margin-top: 1rem;">
+      <nav style="margin-top: 1rem;">
+        {% unless page.layout == 'default' and page.title == site.title %}
           <a href="/" class="btn" style="margin-right: 0.5rem;">Home</a>
-          <a href="/blog/" class="btn" style="margin-right: 0.5rem;">Blog</a>
-          <a href="/about/" class="btn">About</a>
-        </nav>
-      {% endif %}
+        {% endunless %}
+        <a href="/blog/" class="btn" style="margin-right: 0.5rem;">Blog</a>
+        <a href="/about/" class="btn">About</a>
+      </nav>
     </header>
 
     <main id="content" class="main-content" role="main">
