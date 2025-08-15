@@ -17,6 +17,9 @@ kramdown:
 
 # Mermaid diagrams enabled via CDN in layout
 
+# Google Analytics
+google_analytics: G-XXXXXXXXXX  # Replace with your GA4 Measurement ID
+
 author:
   name: Suma Manjunath
   legalname: Sumalatha Manjunath
