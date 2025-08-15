@@ -27,7 +27,7 @@ When I'm not architecting workflow superhighways, you'll find me out walking my 
 
 Curious to collaborate, chat automation-first strategies, discuss fintech challenges, or just exchange pet‑walk anecdotes over a virtual coffee? I'm always up for conversations about building resilient systems and the human side of engineering leadership.
 
-<div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+<div id="contact-form" style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
   <h4 style="margin-top: 0; color: #333;">Send me a message</h4>
   <form action="https://formspree.io/f/xblkbevy" method="POST" style="max-width: 500px;">
     <div style="margin-bottom: 1rem;">
