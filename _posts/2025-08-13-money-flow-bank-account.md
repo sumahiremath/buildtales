@@ -1,13 +1,13 @@
 ---
 layout: default
 title: "How Money Moves In And Out Of Your Bank Account?"
-date: 2024-12-19
+date: 2025-08-13
 categories: [fintech, payments]
 tags: [ach, payments, banking, fintech-basics]
 excerpt: "Ever wonder how your paycheck shows up in your bank account on payday? Or how your gym magically pulls your membership fee every month? That's all thanks to ACH - the behind-the-scenes hero of American banking."
 
 # SEO and Canonical Tags
-canonical_url: "https://buildtales.dev/fintech/payments/2024/12/19/money-flow-bank-account.html"
+canonical_url: "https://buildtales.dev/fintech/payments/2025/08/13/money-flow-bank-account.html"
 author:
   name: "Suma Manjunath"
   twitter: "@sumahiremath"
