@@ -12,35 +12,34 @@ Welcome! I'm **Suma Manjunath**, an engineering leader who writes about the inte
 
 ---
 
-## Latest Article
-
-{% if site.posts.size > 0 %}
-  {% assign featured_post = site.posts.first %}
-  <div style="border-left: 4px solid #157878; padding: 1.5rem; margin: 1rem 0; background: #f8f9fa;">
-    <h3 style="margin-top: 0;"><a href="{{ featured_post.url }}" style="text-decoration: none; color: #333;">{{ featured_post.title }}</a></h3>
-    <p style="color: #666; margin: 0.5rem 0; font-size: 0.9rem;">{{ featured_post.date | date: "%B %d, %Y" }}</p>
-    <p style="margin: 1rem 0;">{{ featured_post.excerpt | strip_html | truncatewords: 20 }}</p>
-    <a href="{{ featured_post.url }}" style="color: #157878; font-weight: bold;">Read more →</a>
-  </div>
-{% endif %}
-
 ## Featured Series
 
-<div style="background: #157878; color: white; padding: 1.5rem; border-radius: 6px; margin: 1.5rem 0;">
-  <h3 style="margin-top: 0; color: white;">How U.S. Payments Really Work</h3>
-  <p style="margin: 0.5rem 0; opacity: 0.9;">A survival manual for building resilient platforms that move money — and earn trust.</p>
-  <p style="font-size: 0.9rem; margin: 1rem 0; opacity: 0.8;">3 of 45 articles published</p>
-  <a href="/how-us-payments-actually-work/" style="background: rgba(255,255,255,0.15); color: white; padding: 0.6rem 1.2rem; border-radius: 4px; text-decoration: none; font-weight: 500; display: inline-block;">
-    View Complete Series →
-  </a>
+<div style="background: #157878; color: white; padding: 2rem; border-radius: 6px; margin: 2rem 0; text-align: center;">
+  <h3 style="margin-top: 0; color: white; font-size: 1.4rem;">How U.S. Payments Really Work</h3>
+  <p style="margin: 1rem 0; opacity: 0.9; font-size: 1.1rem;">A survival manual for building resilient platforms that move money — and earn trust.</p>
+  <p style="font-size: 0.95rem; margin: 1.5rem 0; opacity: 0.85;">45-article deep dive into payment systems, compliance, and fintech leadership</p>
+  <div style="margin: 1.5rem 0;">
+    <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">
+      3 of 45 articles published
+    </span>
+  </div>
+  <div style="margin-top: 1.5rem;">
+    <a href="/how-us-payments-actually-work/" style="background: rgba(255,255,255,0.15); color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 500; margin-right: 1rem;">
+      View Complete Series
+    </a>
+    <a href="/fintech/payments/2025/08/13/money-flow-bank-account.html" style="background: white; color: #157878; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 500;">
+      Start Reading
+    </a>
+  </div>
 </div>
 
 ## Recent Articles
 
-{% for post in site.posts limit:2 %}
+{% for post in site.posts limit:3 %}
 <article style="margin: 1rem 0; padding-bottom: 1rem; border-bottom: 1px solid #eee;">
   <h4 style="margin: 0 0 0.5rem 0;"><a href="{{ post.url }}" style="text-decoration: none; color: #333;">{{ post.title }}</a></h4>
   <p style="color: #666; font-size: 0.9rem; margin: 0.25rem 0;">{{ post.date | date: "%B %d, %Y" }}</p>
+  <p style="color: #777; font-size: 0.9rem; margin: 0.5rem 0;">{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
 </article>
 {% endfor %}
 
