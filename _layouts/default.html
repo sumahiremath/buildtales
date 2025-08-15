@@ -58,7 +58,7 @@
       {{ content }}
       
       <!-- Add comments to blog posts -->
-      {% if page.layout == 'default' and page.categories contains 'fintech' %}
+      {% if page.categories %}
         {% include giscus.html %}
       {% endif %}
 
