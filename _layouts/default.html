@@ -60,22 +60,14 @@
         <h1 class="project-name" style="margin: 0;"><a href="/" style="color: white; text-decoration: none;">{{ site.title }}</a></h1>
       </div>
       <h2 class="project-tagline">{{ site.description }}</h2>
-      <nav style="margin-top: 1rem; display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
-        <div style="display: flex; align-items: baseline; flex-wrap: wrap; justify-content: center;">
-          <a href="/" class="btn">Home</a>
-          <span class="nav-separator">|</span>
-          <a href="/blog/" class="btn">Blog</a>
-          <span class="nav-separator">|</span>
-          <a href="/search/" class="btn">Search</a>
-          <span class="nav-separator">|</span>
-          <a href="/about/" class="btn">About</a>
-        </div>
-        <div style="position: relative;">
-          <input type="text" id="header-search" placeholder="Search articles..." 
-                 style="border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; width: 300px; backdrop-filter: blur(10px);" 
-                 autocomplete="off">
-          <div id="header-search-suggestions" style="position: absolute; top: 100%; left: 0; right: 0; background: white; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: none; z-index: 1000; max-height: 300px; overflow-y: auto;"></div>
-        </div>
+      <nav class="flex items-center justify-between py-4" style="margin-top: 1rem;">
+        <a href="/" class="font-semibold" style="color: white; text-decoration: none; font-size: 1.2rem;">Build Tales</a>
+        <ul class="flex gap-6" style="list-style: none; margin: 0; padding: 0;">
+          <li><a href="/series" style="color: rgba(255,255,255,0.9); text-decoration: none; font-weight: 500;">Series</a></li>
+          <li><a href="/blog" style="color: rgba(255,255,255,0.9); text-decoration: none; font-weight: 500;">Posts</a></li>
+          <li><a href="/about" style="color: rgba(255,255,255,0.9); text-decoration: none; font-weight: 500;">About</a></li>
+          <li><a class="font-medium" href="/subscribe" style="color: white; text-decoration: none; font-weight: 600;">Subscribe</a></li>
+        </ul>
       </nav>
       
       <style>

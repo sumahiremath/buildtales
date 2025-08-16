@@ -2,50 +2,100 @@
 layout: default
 title: Build Tales
 ---
-<link rel="stylesheet" href="/assets/css/style.css">
 
-## Engineering Leadership & Complex Systems
-
-> *"Stories and insights from the journey of building teams, systems, and culture."*
-
-Welcome! I'm **Suma Manjunath**, an engineering leader who writes about the intersection of **fintech**, **systems design**, and **team building**. If you're scaling systems, leading teams, or navigating complex technical domains, you're in the right place.
-
----
-
-## Featured Series
-
-<div style="background: #157878; color: white; padding: 2rem; border-radius: 6px; margin: 2rem 0; text-align: center;">
-  <h3 style="margin-top: 0; color: white; font-size: 1.4rem;">How U.S. Payments Really Work</h3>
-  <p style="margin: 1rem 0; opacity: 0.9; font-size: 1.1rem;">A survival manual for building resilient platforms that move money — and earn trust.</p>
-  <p style="font-size: 0.95rem; margin: 1.5rem 0; opacity: 0.85;">45-article deep dive into payment systems, compliance, and fintech leadership</p>
-  <div style="margin: 1.5rem 0;">
-    <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">
-      3 of 45 articles published
-    </span>
+<!-- Hero Section -->
+<section class="py-16">
+  <div class="mx-auto max-w-3xl text-center space-y-6">
+    <p class="text-sm uppercase tracking-widest opacity-70">Build Tales</p>
+    <h1 class="text-5xl font-bold">Deep, no-fluff essays on engineering leadership & U.S. payments.</h1>
+    <p class="text-lg opacity-80">Actionable breakdowns you can read in 7–12 minutes.</p>
+    <div class="flex justify-center gap-3">
+      <a class="btn-primary" href="/series/payments">Start the Payments Series</a>
+      <a class="btn-secondary" href="/blog">Explore All Posts</a>
+    </div>
   </div>
-  <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-    <a href="/how-us-payments-actually-work/" style="background: rgba(255,255,255,0.15); color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 500; flex: 1; min-width: 200px; max-width: 250px; text-align: center;">
-      View Complete Series
-    </a>
-    <a href="/fintech/payments/2025/08/13/money-flow-bank-account.html" style="background: white; color: #157878; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 500; flex: 1; min-width: 200px; max-width: 250px; text-align: center;">
-      Start Reading
-    </a>
+</section>
+
+<!-- Start Here Section -->
+<section class="py-10">
+  <div class="mx-auto max-w-3xl">
+    <h2 class="text-2xl font-semibold mb-6">Start here</h2>
+    <div class="grid sm:grid-cols-3 gap-6">
+      <a class="card" href="/series/payments">
+        <h3 class="font-semibold mb-2">How U.S. Payments Really Work</h3>
+        <p class="opacity-80 text-sm">Rails, risk & real-world ops.</p>
+      </a>
+      <a class="card" href="/posts/engineering-leadership-staff-systems">
+        <h3 class="font-semibold mb-2">Staff+ Systems Thinking</h3>
+        <p class="opacity-80 text-sm">Lead through architecture.</p>
+      </a>
+      <a class="card" href="/posts/designing-for-failure">
+        <h3 class="font-semibold mb-2">Designing for Failure</h3>
+        <p class="opacity-80 text-sm">Resilience & incident habits.</p>
+      </a>
+    </div>
   </div>
-</div>
+</section>
 
-## Recent Articles
+<!-- Recent Articles Section -->
+<section class="py-10">
+  <div class="mx-auto max-w-3xl">
+    <h2 class="text-2xl font-semibold mb-6">Recent Articles</h2>
+    <div class="space-y-6">
+      {% for post in site.posts limit:3 %}
+      <article class="card">
+        <a href="{{ post.url }}" class="text-xl font-semibold" style="text-decoration: none; color: #333;">{{ post.title }}</a>
+        <p class="opacity-80">{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
+        <span class="text-sm opacity-60">{{ post.date | date: "%B %d, %Y" }}</span>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 
-{% for post in site.posts limit:3 %}
-<article style="margin: 1rem 0; padding-bottom: 1rem; border-bottom: 1px solid #eee;">
-  <h4 style="margin: 0 0 0.5rem 0;"><a href="{{ post.url }}" style="text-decoration: none; color: #333;">{{ post.title }}</a></h4>
-  <p style="color: #666; font-size: 0.9rem; margin: 0.25rem 0;">{{ post.date | date: "%B %d, %Y" }}</p>
-  <p style="color: #777; font-size: 0.9rem; margin: 0.5rem 0;">{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
-</article>
-{% endfor %}
+<style>
+/* Custom styles for this page */
+.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
 
-<div style="margin: 2rem 0; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-  <a href="/blog/" style="background: #157878; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 4px; font-weight: 500; flex: 1; min-width: 180px; max-width: 220px; text-align: center;">Read All Articles</a>
-  <a href="/about/" style="background: transparent; color: #157878; padding: 0.75rem 1.5rem; text-decoration: none; border: 2px solid #157878; border-radius: 4px; font-weight: 500; flex: 1; min-width: 180px; max-width: 220px; text-align: center;">About</a>
-</div>
+.card h3 {
+  color: #333;
+}
 
+.card:hover {
+  text-decoration: none;
+}
 
+.card:hover h3 {
+  color: var(--accent);
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-3 {
+  gap: 12px;
+}
+
+@media (max-width: 640px) {
+  .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
+</style>
