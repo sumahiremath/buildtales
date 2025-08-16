@@ -17,7 +17,7 @@ These days, I thrive on modernizing legacy systems, pushing microservices-first 
 
 **Build Tales** emerges from the trenches of real-world engineering leadership. Too often, we see glossy case studies that skip the messy middle—the compliance hurdles, the legacy integrations, the human dynamics of scaling teams. I write about the intersection of **fintech**, **payments systems**, and **engineering leadership** because these domains demand both technical excellence and deep regulatory understanding.
 
-My current deep dive, "[How U.S. Payments Really Work](/series/)," is a 45-article survival manual for anyone building platforms that move money. Because understanding how money flows through banks, payment networks, and regulatory frameworks isn't just technical knowledge—it's the foundation for building systems that earn trust.
+My current deep dive, "[How U.S. Payments Really Work](/how-us-payments-actually-work/)," is a 45-article survival manual for anyone building platforms that move money. Because understanding how money flows through banks, payment networks, and regulatory frameworks isn't just technical knowledge—it's the foundation for building systems that earn trust.
 
 ## Beyond the Keyboard
 
