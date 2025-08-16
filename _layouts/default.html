@@ -154,7 +154,7 @@
           color: #666;
         }
         
-        /* Mobile adjustments */
+        /* Mobile adjustments - keep navigation in one line */
         @media (max-width: 768px) {
           .page-header {
             padding: 1rem 1rem 1.5rem !important;
@@ -173,26 +173,23 @@
             margin-top: 0.5rem !important;
           }
           
-          #header-search {
-            width: 280px !important;
-            height: 36px !important;
-          }
-        }
-        
-        /* Very small screens - stack navigation vertically */
-        @media (max-width: 400px) {
+          /* Ensure navigation stays in one line on mobile */
           nav > div:first-child {
-            flex-direction: column !important;
-            gap: 0.5rem !important;
-            text-align: center !important;
-          }
-          
-          .nav-separator {
-            display: none !important;
+            flex-wrap: nowrap !important;
           }
           
           nav .btn {
-            padding: 6px 12px !important;
+            padding: 2px 6px !important;
+            font-size: 15px !important;
+          }
+          
+          .nav-separator {
+            margin: 0 0.5rem !important;
+          }
+          
+          #header-search {
+            width: 280px !important;
+            height: 36px !important;
           }
         }
       </style>
