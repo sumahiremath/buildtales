@@ -7,10 +7,10 @@ title: Build Tales
 <section class="py-16">
   <div class="mx-auto max-w-3xl text-center space-y-6">
     <h1 class="text-5xl font-bold">Deep, no-fluff essays on engineering leadership & U.S. payments.</h1>
-    <p class="text-lg opacity-80">Actionable breakdowns you can read in 7–12 minutes.</p>
-    <div class="flex justify-center gap-3">
-      <a class="btn-primary" href="/series/payments">Start the Payments Series</a>
-      <a class="btn-secondary" href="/blog">Explore All Posts</a>
+    <p class="text-xl font-medium" style="color: #333; margin: 1.5rem auto; max-width: 600px; text-align: center;">Actionable breakdowns you can read in 7–12 minutes.</p>
+    <div class="hero-buttons">
+      <a class="hero-btn-primary" href="/series/payments">🚀 Start the Payments Series</a>
+      <a class="hero-btn-secondary" href="/blog">📚 Explore All Posts</a>
     </div>
   </div>
 </section>
@@ -54,6 +54,60 @@ title: Build Tales
 
 <style>
 /* Custom styles for this page */
+
+/* Hero Buttons - Large, Prominent CTAs */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.hero-btn-primary {
+  background: linear-gradient(135deg, #157878 0%, #1a8a8a 100%);
+  color: white;
+  padding: 18px 36px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(21, 120, 120, 0.3);
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.hero-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(21, 120, 120, 0.4);
+  text-decoration: none;
+  color: white;
+}
+
+.hero-btn-secondary {
+  background: white;
+  color: #157878;
+  padding: 18px 36px;
+  border: 2px solid #157878;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.hero-btn-secondary:hover {
+  background: #157878;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(21, 120, 120, 0.3);
+  text-decoration: none;
+}
+
+/* Card styles */
 .card {
   display: block;
   text-decoration: none;
@@ -84,7 +138,23 @@ title: Build Tales
   gap: 12px;
 }
 
+/* Mobile responsive */
 @media (max-width: 640px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    padding: 16px 24px;
+    font-size: 1rem;
+  }
+  
   .flex {
     flex-direction: column;
     align-items: center;
