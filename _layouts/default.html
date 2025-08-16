@@ -191,6 +191,16 @@
             width: 280px !important;
             height: 36px !important;
           }
+          
+          /* Mobile footer adjustments */
+          .site-footer div {
+            padding: 2rem 1rem !important;
+          }
+          
+          .site-footer a {
+            padding: 10px 16px !important;
+            font-size: 0.9rem !important;
+          }
         }
       </style>
       
@@ -295,35 +305,44 @@
       
 
       
-      <!-- Newsletter signup for blog posts -->
-      {% if page.categories and site.newsletter.show_in_articles %}
-        {% include newsletter.html %}
-      {% endif %}
-      
       <!-- Add comments to blog posts -->
       {% if page.categories %}
         {% include giscus.html %}
       {% endif %}
 
-      <!-- Newsletter signup in footer (optional) -->
-      {% if site.newsletter.show_in_footer %}
-        <div style="background: #f8f9fa; padding: 2rem 0; margin-top: 2rem;">
-          <div style="max-width: 800px; margin: 0 auto; padding: 0 1rem;">
-            {% include newsletter.html %}
-          </div>
-        </div>
-      {% endif %}
-
       <footer class="site-footer">
-        <div style="text-align: center; padding: 2rem 1rem; background: #f8f9fa; border-radius: 8px;">
-          <p style="margin: 0 0 0.5rem 0; font-weight: 500; color: #333;"><strong>Building something interesting?</strong> I'd love to hear about it!</p>
-          <p style="margin: 0 0 1.5rem 0; font-size: 0.9rem; color: #666;">Find me on <a href="https://linkedin.com/in/sumamanjunath">LinkedIn</a> or <a href="/about/#contact-form">drop me a line</a>.</p>
-          <p style="margin: 0 0 0.5rem 0;">
-            <strong>Build Tales</strong> by <a href="https://linkedin.com/in/sumamanjunath">Suma Manjunath</a>
+        <div style="text-align: center; padding: 2.5rem 1rem; background: #f8f9fa; border-radius: 8px; margin-top: 3rem;">
+          <p style="margin: 0 0 1rem 0; font-size: 1.1rem; font-weight: 500; color: #333;">
+            <strong>Building something interesting?</strong> Let's connect!
           </p>
-          <p style="margin: 0; font-size: 0.9rem; color: #666;">
-            Engineering leadership • Fintech • Systems design
+          
+          <div style="margin: 1.5rem 0; display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; align-items: center;">
+            <a href="https://linkedin.com/in/sumamanjunath" 
+               style="background: #0066cc; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 1rem; transition: background 0.2s ease;"
+               onmouseover="this.style.background='#0052a3'" 
+               onmouseout="this.style.background='#0066cc'">
+              💼 Connect on LinkedIn
+            </a>
+            <a href="/about/#contact-form" 
+               style="background: #157878; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 1rem; transition: background 0.2s ease;"
+               onmouseover="this.style.background='#0f5f61'" 
+               onmouseout="this.style.background='#157878'">
+              ✉️ Send a Message
+            </a>
+          </div>
+          
+          <p style="margin: 0.75rem 0 0 0; font-size: 0.85rem; color: #777; font-style: italic;">
+            Interested in newsletter updates? Just mention it in your message!
           </p>
+          
+          <div style="border-top: 1px solid #ddd; padding-top: 1.5rem; margin-top: 1.5rem;">
+            <p style="margin: 0 0 0.5rem 0; font-weight: 600; color: #333;">
+              <strong>Build Tales</strong> by <a href="https://linkedin.com/in/sumamanjunath" style="color: #157878; text-decoration: none;">Suma Manjunath</a>
+            </p>
+            <p style="margin: 0; font-size: 0.9rem; color: #666; font-style: italic;">
+              Engineering leadership • Fintech • Systems design
+            </p>
+          </div>
         </div>
       </footer>
     </main>

@@ -43,8 +43,8 @@ newsletter:
   title: "Join the BuildTales Community"
   description: "Get notified when I publish new deep dives on fintech, payments, and engineering leadership. No spam, just quality content."
   button_text: "Subscribe"
-  show_in_articles: true
-  show_in_footer: true
+  show_in_articles: false
+  show_in_footer: false
   # Add your embed code here:
   embed_code: |
     <script async data-uid="04e4ace408" src="https://buildtales-dev.kit.com/04e4ace408/index.js"></script>
