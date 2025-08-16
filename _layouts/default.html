@@ -336,11 +336,11 @@
           <form action="https://app.kit.com/forms/8443001/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;powered_by&quot;:{&quot;show&quot;:false},&quot;recaptcha&quot;:{&quot;enabled&quot;:false}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800">
             <div data-style="clean">
               <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
-              <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields" style="display: flex; gap: 8px; align-items: center;">
-                <div class="formkit-field" style="flex: 1;">
+              <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields newsletter-form-fields">
+                <div class="formkit-field newsletter-email-field">
                   <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="your.email@example.com" required="" type="email" style="color: rgb(0, 0, 0); border-color: rgb(227, 227, 227); border-radius: 4px; font-weight: 400; padding: 12px 16px; border: 2px solid #ddd; font-size: 16px; width: 100%;">
                 </div>
-                <button data-element="submit" class="formkit-submit formkit-submit" style="background: #157878; color: white; border: none; padding: 12px 20px; border-radius: 6px; font-weight: 500; cursor: pointer; font-size: 16px; white-space: nowrap;">
+                <button data-element="submit" class="formkit-submit formkit-submit newsletter-submit-btn" style="background: #157878; color: white; border: none; padding: 12px 20px; border-radius: 6px; font-weight: 500; cursor: pointer; font-size: 16px; white-space: nowrap;">
                   <div class="formkit-spinner"><div></div><div></div><div></div></div>
                   <span class="">Subscribe</span>
                 </button>
@@ -351,6 +351,40 @@
         
         <!-- ConvertKit Styles - Simplified for inline display -->
         <style>
+        /* Newsletter Form Layout */
+        .newsletter-form-fields {
+          display: flex;
+          gap: 8px;
+          align-items: center;
+        }
+        
+        .newsletter-email-field {
+          flex: 1;
+        }
+        
+        .newsletter-submit-btn {
+          flex-shrink: 0;
+        }
+        
+        /* Mobile: Stack email and button vertically */
+        @media (max-width: 600px) {
+          .newsletter-form-fields {
+            flex-direction: column;
+            gap: 12px;
+            align-items: stretch;
+          }
+          
+          .newsletter-email-field {
+            flex: none;
+            width: 100%;
+          }
+          
+          .newsletter-submit-btn {
+            width: 100%;
+            flex: none;
+          }
+        }
+        
         .formkit-form[data-uid="8443001"] * {
           box-sizing: border-box;
         }
