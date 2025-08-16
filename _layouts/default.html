@@ -48,7 +48,8 @@
       }
     </script>
     
-
+    <!-- ConvertKit Script -->
+    <script async data-uid="46d2aec2f5" src="https://buildtales-dev.kit.com/46d2aec2f5/index.js"></script>
 
   </head>
   <body>
@@ -333,39 +334,10 @@
       <section style="background: #f8f9fa; padding: 2rem 1rem; margin-top: 3rem; text-align: center; border-radius: 8px;">
         <h3 style="margin: 0 0 1.5rem 0; color: #333; font-size: 1.2rem;">Stay Updated</h3>
         <div style="max-width: 400px; margin: 0 auto;">
-          <div id="newsletter-form">
-            <form action="https://app.convertkit.com/forms/46d2aec2f5/subscriptions" method="post" style="display: flex; gap: 8px; align-items: center;">
-              <input type="hidden" name="utf8" value="✓">
-              <input type="hidden" name="redirect_url" value="{{ site.url }}{{ page.url }}?subscribed=true">
-              <input type="email" 
-                     name="email_address" 
-                     placeholder="your.email@example.com" 
-                     required
-                     style="flex: 1; padding: 12px 16px; border: 2px solid #ddd; border-radius: 6px; font-size: 16px; min-width: 0;">
-              <button type="submit" 
-                      style="background: #157878; color: white; border: none; padding: 12px 20px; border-radius: 6px; font-weight: 500; cursor: pointer; font-size: 16px; white-space: nowrap;">
-                Subscribe
-              </button>
-            </form>
-          </div>
-          
-          <div id="success-message" style="display: none; padding: 16px; background: #d4edda; color: #155724; border-radius: 6px; text-align: center;">
-            ✅ Thanks for subscribing! Check your email to confirm.
-          </div>
-          
-          <script>
-            // Show success message if redirected back with success parameter
-            if (window.location.search.includes('subscribed=true')) {
-              document.getElementById('newsletter-form').style.display = 'none';
-              document.getElementById('success-message').style.display = 'block';
-              
-              // Clean up URL
-              if (window.history && window.history.replaceState) {
-                const url = window.location.pathname;
-                window.history.replaceState({}, document.title, url);
-              }
-            }
-          </script>
+          <button data-formkit-toggle="46d2aec2f5" 
+                  style="background: #157878; color: white; border: none; padding: 12px 24px; border-radius: 6px; font-weight: 500; cursor: pointer; font-size: 16px;">
+            Subscribe
+          </button>
         </div>
       </section>
 
