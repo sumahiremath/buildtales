@@ -47,6 +47,9 @@
         document.querySelector('form').submit();
       }
     </script>
+    
+    <!-- ConvertKit Newsletter Form -->
+    {{ site.newsletter.embed_code }}
   </head>
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
@@ -317,9 +320,9 @@
           </p>
           
           <div style="margin: 1.5rem 0; display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; align-items: center;">
-            <a href="https://buildtales-dev.kit.com/04e4ace408" 
-               target="_blank"
-               style="background: #157878; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 1rem; transition: background 0.2s ease;"
+            <a href="javascript:void(0)" 
+               onclick="if(typeof window.Kit !== 'undefined' && window.Kit.show) { window.Kit.show(); } else { window.open('https://buildtales-dev.kit.com/46d2aec2f5', '_blank'); }"
+               style="background: #157878; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 1rem; transition: background 0.2s ease; cursor: pointer;"
                onmouseover="this.style.background='#0f5f61'" 
                onmouseout="this.style.background='#157878'">
               📧 Subscribe to Updates
