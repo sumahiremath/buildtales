@@ -61,7 +61,7 @@
       </div>
       <h2 class="project-tagline">{{ site.description }}</h2>
       <nav style="margin-top: 1rem; display: flex; justify-content: center; align-items: center;">
-        <div style="display: flex; align-items: center; justify-content: center; gap: 0.75rem;">
+        <div style="display: flex; align-items: baseline; justify-content: center; gap: 0.75rem;">
           <a href="/" class="btn">Home</a>
           <span class="nav-separator">|</span>
           <a href="/series" class="btn">Series</a>
@@ -88,6 +88,7 @@
           transition: all 0.2s ease !important;
           display: inline-block !important;
           line-height: 1.2 !important;
+          vertical-align: baseline !important;
         }
         
         nav .btn:hover {
@@ -99,9 +100,11 @@
         /* Navigation separator styling */
         .nav-separator {
           color: rgba(255,255,255,0.6) !important;
-          margin: 0 0.75rem !important;
+          margin: 0 !important;
           font-size: 16px !important;
           line-height: 1.2 !important;
+          vertical-align: baseline !important;
+          display: inline-block !important;
           user-select: none !important;
         }
         
