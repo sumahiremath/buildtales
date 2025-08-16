@@ -16,7 +16,7 @@ Here's a collection of posts from the field — lessons learned, patterns discov
   <a href="#bonus-articles" style="background: transparent; color: #157878; padding: 0.75rem 1.5rem; border: 2px solid #157878; border-radius: 4px; text-decoration: none; font-weight: bold;">
     ✨ Bonus Articles
   </a>
-  <a href="#all-posts" style="background: transparent; color: #666; padding: 0.75rem 1.5rem; border: 1px solid #ccc; border-radius: 4px; text-decoration: none;">
+  <a href="#all-posts" style="background: transparent; color: #157878; padding: 0.75rem 1.5rem; border: 2px solid #157878; border-radius: 4px; text-decoration: none; font-weight: bold;">
     📄 All Posts
   </a>
 </div>
