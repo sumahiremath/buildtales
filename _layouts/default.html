@@ -83,7 +83,13 @@
           border-radius: 4px !important;
           display: inline-flex !important;
           align-items: center !important;
-          vertical-align: top !important;
+          justify-content: center !important;
+        }
+        
+        /* Ensure perfect alignment of nav containers */
+        nav > div {
+          display: flex !important;
+          align-items: center !important;
         }
         
         #header-search::placeholder {
@@ -133,6 +139,7 @@
           
           nav > div {
             margin-right: 0 !important;
+            justify-content: center !important;
           }
           
           #header-search {
