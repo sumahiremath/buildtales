@@ -57,32 +57,35 @@
         <h1 class="project-name" style="margin: 0;"><a href="/" style="color: white; text-decoration: none;">{{ site.title }}</a></h1>
       </div>
       <h2 class="project-tagline">{{ site.description }}</h2>
-      <nav style="margin-top: 1rem; display: flex; align-items: center; justify-content: center;">
-        <div style="display: flex; gap: 0.5rem; align-items: center;">
+      <nav style="margin-top: 1rem; display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+        <div style="display: flex; align-items: center; flex-wrap: wrap; justify-content: center;">
           <a href="/" class="btn">Home</a>
+          <span style="color: rgba(255,255,255,0.6); margin: 0 0.75rem; font-size: 16px;">|</span>
           <a href="/blog/" class="btn">Blog</a>
+          <span style="color: rgba(255,255,255,0.6); margin: 0 0.75rem; font-size: 16px;">|</span>
           <a href="/search/" class="btn">Search</a>
+          <span style="color: rgba(255,255,255,0.6); margin: 0 0.75rem; font-size: 16px;">|</span>
           <a href="/about/" class="btn">About</a>
         </div>
-        <div style="position: relative; margin-left: 1rem;">
+        <div style="position: relative;">
           <input type="text" id="header-search" placeholder="Search articles..." 
-                 style="border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; width: 200px; backdrop-filter: blur(10px);" 
+                 style="border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; width: 300px; backdrop-filter: blur(10px);" 
                  autocomplete="off">
           <div id="header-search-suggestions" style="position: absolute; top: 100%; left: 0; right: 0; background: white; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: none; z-index: 1000; max-height: 300px; overflow-y: auto;"></div>
         </div>
       </nav>
       
       <style>
-        /* Clean navigation styling - convert buttons to links */
+        /* Clean navigation link styling */
         nav .btn {
           background: none !important;
           border: none !important;
           color: rgba(255,255,255,0.9) !important;
           text-decoration: none !important;
-          padding: 8px 16px !important;
+          padding: 4px 8px !important;
           font-size: 16px !important;
           font-weight: 500 !important;
-          border-radius: 4px !important;
+          border-radius: 3px !important;
           transition: all 0.2s ease !important;
           display: inline-block !important;
         }
@@ -101,12 +104,6 @@
           line-height: 1.4 !important;
           font-size: 16px !important;
           border-radius: 4px !important;
-        }
-        
-        /* Ensure perfect alignment of nav containers */
-        nav > div {
-          display: flex !important;
-          align-items: center !important;
         }
         
         #header-search::placeholder {
@@ -147,20 +144,7 @@
           color: #666;
         }
         
-        /* Handle medium screens - stack nav if needed */
-        @media (max-width: 900px) {
-          nav {
-            flex-wrap: wrap !important;
-            gap: 1rem !important;
-            justify-content: center !important;
-          }
-          
-          nav > div:last-child {
-            margin-left: 0 !important;
-          }
-        }
-        
-        /* Mobile layout */
+        /* Mobile adjustments */
         @media (max-width: 768px) {
           .page-header {
             padding: 1rem 1rem 1.5rem !important;
@@ -176,38 +160,24 @@
           }
           
           nav {
-            flex-direction: column !important;
-            gap: 0.75rem !important;
-            align-items: center !important;
             margin-top: 0.5rem !important;
-          }
-          
-          /* Mobile navigation link adjustments */
-          nav .btn {
-            padding: 4px 8px !important;
-            font-size: 16px !important;
-            text-decoration: underline !important;
-          }
-          
-          nav .btn:hover {
-            text-decoration: none !important;
-          }
-          
-          nav > div:first-child {
-            margin-bottom: 0 !important;
-            justify-content: center !important;
-            flex-wrap: wrap !important;
-            gap: 1.5rem !important;
-          }
-          
-          nav > div:last-child {
-            margin-left: 0 !important;
           }
           
           #header-search {
             width: 280px !important;
             height: 36px !important;
-            font-size: 16px !important;
+          }
+        }
+        
+        /* Small mobile screens - stack navigation if needed */
+        @media (max-width: 480px) {
+          nav > div:first-child {
+            flex-direction: column !important;
+            gap: 0.5rem !important;
+          }
+          
+          nav > div:first-child span {
+            display: none !important;
           }
         }
       </style>
