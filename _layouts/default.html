@@ -60,14 +60,18 @@
         <h1 class="project-name" style="margin: 0;"><a href="/" style="color: white; text-decoration: none;">{{ site.title }}</a></h1>
       </div>
       <h2 class="project-tagline">{{ site.description }}</h2>
-      <nav class="flex items-center justify-between py-4" style="margin-top: 1rem;">
-        <a href="/" class="font-semibold" style="color: white; text-decoration: none; font-size: 1.2rem;">Build Tales</a>
-        <ul class="flex gap-6" style="list-style: none; margin: 0; padding: 0;">
-          <li><a href="/series" style="color: rgba(255,255,255,0.9); text-decoration: none; font-weight: 500;">Series</a></li>
-          <li><a href="/blog" style="color: rgba(255,255,255,0.9); text-decoration: none; font-weight: 500;">Posts</a></li>
-          <li><a href="/about" style="color: rgba(255,255,255,0.9); text-decoration: none; font-weight: 500;">About</a></li>
-          <li><a class="font-medium" href="/subscribe" style="color: white; text-decoration: none; font-weight: 600;">Subscribe</a></li>
-        </ul>
+      <nav style="margin-top: 1rem; display: flex; justify-content: center; align-items: center;">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 0.75rem;">
+          <a href="/" class="btn">Home</a>
+          <span class="nav-separator">|</span>
+          <a href="/series" class="btn">Series</a>
+          <span class="nav-separator">|</span>
+          <a href="/blog" class="btn">Posts</a>
+          <span class="nav-separator">|</span>
+          <a href="/about" class="btn">About</a>
+          <span class="nav-separator">|</span>
+          <a href="/subscribe" class="btn">Subscribe</a>
+        </div>
       </nav>
       
       <style>
