@@ -6,7 +6,6 @@ title: Build Tales
 <!-- Hero Section -->
 <section class="py-16">
   <div class="mx-auto max-w-3xl text-center space-y-6">
-    <p class="text-sm uppercase tracking-widest opacity-70">Build Tales</p>
     <h1 class="text-5xl font-bold">Deep, no-fluff essays on engineering leadership & U.S. payments.</h1>
     <p class="text-lg opacity-80">Actionable breakdowns you can read in 7–12 minutes.</p>
     <div class="flex justify-center gap-3">
