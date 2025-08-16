@@ -48,8 +48,7 @@
       }
     </script>
     
-    <!-- ConvertKit JavaScript Embed -->
-    <script async data-uid="46d2aec2f5" src="https://buildtales-dev.kit.com/46d2aec2f5/index.js"></script>
+
 
   </head>
   <body>
@@ -207,9 +206,20 @@
           }
         }
         
-        /* Newsletter button mobile adjustments */
+        /* Newsletter form mobile adjustments */
         @media (max-width: 480px) {
-          [data-formkit-toggle] {
+          .newsletter-form {
+            flex-direction: column !important;
+            align-items: center !important;
+          }
+          
+          .newsletter-form input[type="email"] {
+            min-width: 100% !important;
+            margin-bottom: 0.5rem !important;
+            max-width: 300px !important;
+          }
+          
+          .newsletter-form button {
             width: 100% !important;
             max-width: 300px !important;
           }
@@ -328,14 +338,15 @@
             <strong>Building something interesting?</strong> Let's connect!
           </p>
           
-          <!-- Newsletter Subscription Button -->
-          <div style="margin: 1.5rem 0 2rem 0;">
-            <button type="button" data-formkit-toggle="46d2aec2f5"
-                    style="background: #157878; color: white; border: none; padding: 12px 24px; border-radius: 6px; font-weight: 500; cursor: pointer; font-size: 16px; transition: background 0.2s ease;"
-                    onmouseover="this.style.background='#0f5f61'" 
-                    onmouseout="this.style.background='#157878'">
+          <!-- Newsletter Subscription Form -->
+          <div style="margin: 1.5rem 0 2rem 0; max-width: 500px; margin-left: auto; margin-right: auto;">
+            <a href="https://buildtales-dev.kit.com/46d2aec2f5" 
+               target="_blank"
+               style="background: #157878; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 16px; transition: background 0.2s ease; display: inline-block;"
+               onmouseover="this.style.background='#0f5f61'" 
+               onmouseout="this.style.background='#157878'">
               📧 Subscribe to Updates
-            </button>
+            </a>
           </div>
           
           <div style="margin: 1.5rem 0; display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; align-items: center;">
