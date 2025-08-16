@@ -206,10 +206,10 @@
           }
         }
         
-        /* Newsletter iframe mobile adjustments */
-        @media (max-width: 480px) {
+        /* Newsletter section mobile adjustments */
+        @media (max-width: 768px) {
           iframe[src*="kit.com"] {
-            height: 180px !important;
+            height: 200px !important;
             border-radius: 6px !important;
           }
         }
@@ -321,33 +321,35 @@
         {% include giscus.html %}
       {% endif %}
 
+      <!-- Newsletter Subscription Section - Last thing on every page -->
+      <section style="background: #f8f9fa; padding: 2rem 1rem; margin-top: 3rem; text-align: center; border-radius: 8px;">
+        <h3 style="margin: 0 0 1rem 0; color: #333; font-size: 1.2rem;">Stay Updated</h3>
+        <p style="margin: 0 0 1.5rem 0; color: #666; max-width: 500px; margin-left: auto; margin-right: auto;">
+          Get notified when I publish new deep dives on fintech, payments, and engineering leadership. No spam, just quality content.
+        </p>
+        <div style="max-width: 500px; margin: 0 auto;">
+          <iframe src="https://buildtales-dev.kit.com/46d2aec2f5" 
+                  style="width: 100%; height: 220px; border: none; border-radius: 8px; background: white;"
+                  frameborder="0"
+                  scrolling="no">
+          </iframe>
+        </div>
+      </section>
+
       <footer class="site-footer">
         <div style="text-align: center; padding: 2.5rem 1rem; background: #f8f9fa; border-radius: 8px; margin-top: 3rem;">
           <p style="margin: 0 0 1rem 0; font-size: 1.1rem; font-weight: 500; color: #333;">
             <strong>Building something interesting?</strong> Let's connect!
           </p>
           
-          <!-- Newsletter Subscription Form -->
-          <div style="margin: 1.5rem 0 2rem 0; max-width: 500px; margin-left: auto; margin-right: auto;">
-            <iframe src="https://buildtales-dev.kit.com/46d2aec2f5" 
-                    style="width: 100%; height: 220px; border: none; border-radius: 8px; background: white;"
-                    frameborder="0"
-                    scrolling="no">
-            </iframe>
-          </div>
-          
           <div style="margin: 1.5rem 0; display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; align-items: center;">
             <a href="https://linkedin.com/in/sumamanjunath" 
                target="_blank"
-               style="background: #157878; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 1rem; transition: background 0.2s ease;"
-               onmouseover="this.style.background='#0f5f61'" 
-               onmouseout="this.style.background='#157878'">
+               style="background: #157878; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 1rem;">
               💼 Connect on LinkedIn
             </a>
             <a href="/about/#contact-form" 
-               style="background: #157878; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 1rem; transition: background 0.2s ease;"
-               onmouseover="this.style.background='#0f5f61'" 
-               onmouseout="this.style.background='#157878'">
+               style="background: #157878; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 1rem;">
               ✉️ Send a Message
             </a>
           </div>
