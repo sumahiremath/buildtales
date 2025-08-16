@@ -73,17 +73,34 @@
       </nav>
       
       <style>
-        /* Ensure navigation buttons and search input have same height */
-        nav .btn, #header-search {
-          height: 42px !important;
-          padding: 10px 16px !important;
-          box-sizing: border-box !important;
-          line-height: 1.2 !important;
-          font-size: 14px !important;
+        /* Clean navigation styling - convert buttons to links */
+        nav .btn {
+          background: none !important;
+          border: none !important;
+          color: rgba(255,255,255,0.9) !important;
+          text-decoration: none !important;
+          padding: 8px 16px !important;
+          font-size: 16px !important;
+          font-weight: 500 !important;
           border-radius: 4px !important;
-          display: inline-flex !important;
-          align-items: center !important;
-          justify-content: center !important;
+          transition: all 0.2s ease !important;
+          display: inline-block !important;
+        }
+        
+        nav .btn:hover {
+          color: white !important;
+          background: rgba(255,255,255,0.15) !important;
+          text-decoration: none !important;
+        }
+        
+        /* Search input styling */
+        #header-search {
+          height: 40px !important;
+          padding: 8px 12px !important;
+          box-sizing: border-box !important;
+          line-height: 1.4 !important;
+          font-size: 16px !important;
+          border-radius: 4px !important;
         }
         
         /* Ensure perfect alignment of nav containers */
@@ -135,6 +152,7 @@
           nav {
             flex-wrap: wrap !important;
             gap: 1rem !important;
+            justify-content: center !important;
           }
           
           nav > div:last-child {
@@ -164,21 +182,14 @@
             margin-top: 0.5rem !important;
           }
           
-          /* Convert buttons to simple links on mobile */
+          /* Mobile navigation link adjustments */
           nav .btn {
-            background: none !important;
-            border: none !important;
-            padding: 0.25rem 0.5rem !important;
-            height: auto !important;
-            color: rgba(255,255,255,0.9) !important;
+            padding: 4px 8px !important;
             font-size: 16px !important;
             text-decoration: underline !important;
-            display: inline !important;
           }
           
           nav .btn:hover {
-            color: white !important;
-            background: rgba(255,255,255,0.1) !important;
             text-decoration: none !important;
           }
           
@@ -196,7 +207,6 @@
           #header-search {
             width: 280px !important;
             height: 36px !important;
-            padding: 8px 12px !important;
             font-size: 16px !important;
           }
         }
