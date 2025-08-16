@@ -57,11 +57,166 @@
         <h1 class="project-name" style="margin: 0;"><a href="/" style="color: white; text-decoration: none;">{{ site.title }}</a></h1>
       </div>
       <h2 class="project-tagline">{{ site.description }}</h2>
-      <nav style="margin-top: 1rem;">
-        <a href="/" class="btn" style="margin-right: 0.5rem;">Home</a>
-        <a href="/blog/" class="btn" style="margin-right: 0.5rem;">Blog</a>
-        <a href="/about/" class="btn">About</a>
+      <nav style="margin-top: 1rem; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.5rem;">
+        <div style="display: flex; gap: 0.5rem; margin-right: 1rem;">
+          <a href="/" class="btn">Home</a>
+          <a href="/blog/" class="btn">Blog</a>
+          <a href="/search/" class="btn">Search</a>
+          <a href="/about/" class="btn">About</a>
+        </div>
+        <div style="position: relative;">
+          <input type="text" id="header-search" placeholder="Search articles..." 
+                 style="padding: 8px 12px; border: 2px solid rgba(255,255,255,0.3); border-radius: 4px; background: rgba(255,255,255,0.1); color: white; font-size: 14px; width: 200px; backdrop-filter: blur(10px);" 
+                 autocomplete="off">
+          <div id="header-search-suggestions" style="position: absolute; top: 100%; left: 0; right: 0; background: white; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: none; z-index: 1000; max-height: 300px; overflow-y: auto;"></div>
+        </div>
       </nav>
+      
+      <style>
+        #header-search::placeholder {
+          color: rgba(255,255,255,0.7);
+        }
+        
+        #header-search:focus {
+          outline: none;
+          border-color: rgba(255,255,255,0.6);
+          background: rgba(255,255,255,0.15);
+        }
+        
+        .search-suggestion {
+          padding: 8px 12px;
+          border-bottom: 1px solid #eee;
+          cursor: pointer;
+          color: #333;
+          text-decoration: none;
+          display: block;
+        }
+        
+        .search-suggestion:hover {
+          background: #f8f9fa;
+        }
+        
+        .search-suggestion:last-child {
+          border-bottom: none;
+        }
+        
+        .suggestion-title {
+          font-weight: 500;
+          color: #157878;
+          margin-bottom: 2px;
+        }
+        
+        .suggestion-excerpt {
+          font-size: 12px;
+          color: #666;
+        }
+        
+        @media (max-width: 768px) {
+          nav {
+            flex-direction: column !important;
+            gap: 1rem !important;
+          }
+          
+          #header-search {
+            width: 250px !important;
+          }
+        }
+      </style>
+      
+      <script>
+        (function() {
+          let searchData = [];
+          let searchInput = document.getElementById('header-search');
+          let suggestionsContainer = document.getElementById('header-search-suggestions');
+          let searchTimeout;
+          
+          // Load search data
+          fetch('/search.json')
+            .then(response => response.json())
+            .then(data => {
+              searchData = data;
+            })
+            .catch(error => {
+              console.error('Error loading search data:', error);
+            });
+          
+          // Show suggestions
+          function showSuggestions(query) {
+            if (!query || query.length < 2) {
+              suggestionsContainer.style.display = 'none';
+              return;
+            }
+            
+            const searchTerms = query.toLowerCase().split(/\s+/);
+            let matches = [];
+            
+            searchData.forEach(post => {
+              let score = 0;
+              searchTerms.forEach(term => {
+                if (post.title.toLowerCase().includes(term)) score += 10;
+                if (post.excerpt.toLowerCase().includes(term)) score += 5;
+                if (post.categories && post.categories.join(' ').toLowerCase().includes(term)) score += 8;
+              });
+              
+              if (score > 0) {
+                matches.push({ ...post, score });
+              }
+            });
+            
+            matches.sort((a, b) => b.score - a.score);
+            matches = matches.slice(0, 5); // Show top 5 suggestions
+            
+            if (matches.length > 0) {
+              const html = matches.map(post => {
+                const excerpt = post.excerpt.length > 60 ? post.excerpt.substring(0, 60) + '...' : post.excerpt;
+                return `
+                  <a href="${post.url}" class="search-suggestion">
+                    <div class="suggestion-title">${post.title}</div>
+                    <div class="suggestion-excerpt">${excerpt}</div>
+                  </a>
+                `;
+              }).join('');
+              
+              suggestionsContainer.innerHTML = html;
+              suggestionsContainer.style.display = 'block';
+            } else {
+              suggestionsContainer.style.display = 'none';
+            }
+          }
+          
+          // Handle search input
+          searchInput.addEventListener('input', function(e) {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+              showSuggestions(e.target.value);
+            }, 200);
+          });
+          
+          // Handle enter key
+          searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+              const query = e.target.value.trim();
+              if (query) {
+                window.location.href = `/search/?q=${encodeURIComponent(query)}`;
+              }
+            }
+          });
+          
+          // Hide suggestions when clicking outside
+          document.addEventListener('click', function(e) {
+            if (!searchInput.contains(e.target) && !suggestionsContainer.contains(e.target)) {
+              suggestionsContainer.style.display = 'none';
+            }
+          });
+          
+          // Show suggestions when focusing on input
+          searchInput.addEventListener('focus', function() {
+            if (this.value.length >= 2) {
+              showSuggestions(this.value);
+            }
+          });
+        })();
+      </script>
     </header>
 
     <main id="content" class="main-content" role="main">

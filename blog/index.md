@@ -10,6 +10,9 @@ Here's a collection of posts from the field — lessons learned, patterns discov
 ## All Articles
 
 <div style="display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
+  <a href="/search/" style="background: #28a745; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold;">
+    🔍 Search Articles
+  </a>
   <a href="/how-us-payments-actually-work/" style="background: #157878; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold;">
     📚 Payment Series (3/45)
   </a>
