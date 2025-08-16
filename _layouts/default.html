@@ -66,13 +66,26 @@
         </div>
         <div style="position: relative;">
           <input type="text" id="header-search" placeholder="Search articles..." 
-                 style="padding: 8px 12px; border: 2px solid rgba(255,255,255,0.3); border-radius: 4px; background: rgba(255,255,255,0.1); color: white; font-size: 14px; width: 200px; backdrop-filter: blur(10px);" 
+                 style="border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; width: 200px; backdrop-filter: blur(10px);" 
                  autocomplete="off">
           <div id="header-search-suggestions" style="position: absolute; top: 100%; left: 0; right: 0; background: white; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: none; z-index: 1000; max-height: 300px; overflow-y: auto;"></div>
         </div>
       </nav>
       
       <style>
+        /* Ensure navigation buttons and search input have same height */
+        nav .btn, #header-search {
+          height: 42px !important;
+          padding: 10px 16px !important;
+          box-sizing: border-box !important;
+          line-height: 1.2 !important;
+          font-size: 14px !important;
+          border-radius: 4px !important;
+          display: inline-flex !important;
+          align-items: center !important;
+          vertical-align: top !important;
+        }
+        
         #header-search::placeholder {
           color: rgba(255,255,255,0.7);
         }
@@ -115,6 +128,11 @@
           nav {
             flex-direction: column !important;
             gap: 1rem !important;
+            align-items: center !important;
+          }
+          
+          nav > div {
+            margin-right: 0 !important;
           }
           
           #header-search {
