@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
 
 {% seo %}
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} — Deep, no-fluff essays on payments & leadership{% endif %}">
+    <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 25 }}{% else %}Actionable breakdowns you can read in 7–12 minutes.{% endif %}">
+    <meta property="og:image" content="{% if page.og_image %}{{ page.og_image | absolute_url }}{% else %}{{ '/assets/images/og-default.png' | absolute_url }}{% endif %}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:type" content="{% if page.categories %}article{% else %}website{% endif %}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} — Deep, no-fluff essays on payments & leadership{% endif %}">
+    <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 25 }}{% else %}Actionable breakdowns you can read in 7–12 minutes.{% endif %}">
+    <meta name="twitter:image" content="{% if page.og_image %}{{ page.og_image | absolute_url }}{% else %}{{ '/assets/images/og-default.png' | absolute_url }}{% endif %}">
+    {% if page.author.twitter %}<meta name="twitter:creator" content="{{ page.author.twitter }}">{% endif %}
+    <meta name="twitter:site" content="@sumahiremath">
+    
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,12 +28,13 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS Feed" href="{{ '/feed.xml' | relative_url }}">
     {% if site.head_custom %}{% include head-custom.html %}{% endif %}
     
     <!-- Google Analytics 4 -->
     {% if site.google_analytics %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script async defer src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -32,6 +50,14 @@
         mermaid.initialize({
           startOnLoad: true,
           theme: 'default',
+          themeVariables: {
+            primaryColor: '#F5F7FA',
+            primaryTextColor: '#111',
+            lineColor: '#999',
+            fontSize: '16px',
+            noteBkgColor: '#fffbe6',
+            noteTextColor: '#333'
+          },
           flowchart: {
             useMaxWidth: true,
             htmlLabels: true
@@ -56,7 +82,8 @@
 
     <header class="page-header" role="banner">
       <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-        <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="{{ site.title }} logo" style="height: 60px; width: auto; margin-right: 1rem;">
+        <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="{{ site.title }} logo" 
+             width="60" height="60" style="margin-right: 1rem;">
         <h1 class="project-name" style="margin: 0;"><a href="/" style="color: white; text-decoration: none;">{{ site.title }}</a></h1>
       </div>
       <h2 class="project-tagline">{{ site.description }}</h2>
@@ -345,6 +372,24 @@
 
     <main id="content" class="main-content" role="main">
       {{ content }}
+      
+      <!-- Author Box + CTA for blog posts -->
+      {% if page.layout == 'default' and page.categories %}
+      <hr style="margin: 2.5rem 0; border: none; border-top: 1px solid #e5e5e5;" />
+      <div class="author-box" style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+        <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Suma Manjunath" 
+             width="56" height="56" style="border-radius: 50%; object-fit: cover;">
+        <div>
+          <p style="font-weight: 600; margin: 0 0 0.25rem 0; color: #333;">Suma Manjunath</p>
+          <p style="font-size: 0.9rem; opacity: 0.7; margin: 0; color: #666;">Engineering leader writing about payments, systems & culture.</p>
+        </div>
+      </div>
+      <div style="margin-top: 1.5rem;">
+        <a href="/subscribe" style="background: var(--accent); color: white; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: 500; display: inline-block;">
+          Like this? Get the next one via email
+        </a>
+      </div>
+      {% endif %}
       
 
       
