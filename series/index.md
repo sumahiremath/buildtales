@@ -163,9 +163,7 @@ A comprehensive roadmap for understanding, building, and leading payment systems
 
 ## Stay Updated
 
-This is an ambitious series that will take 18+ months to complete. The best way to stay updated:
-
-{% include newsletter.html %}
+This is an ambitious series that will take 18+ months to complete. The best way to stay updated is through the newsletter signup in the footer below.
 
 ---
 
