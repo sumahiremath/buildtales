@@ -268,4 +268,4 @@ end
 
 ---
 
-*Enjoyed this deep dive? Check out the main [How U.S. Payments Really Work](/series/payments/) series for more payment system breakdowns.*
+*Enjoyed this deep dive? Check out the main [How U.S. Payments Really Work](/series/payments) series for more payment system breakdowns.*

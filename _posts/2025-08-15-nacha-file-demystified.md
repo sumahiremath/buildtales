@@ -385,4 +385,4 @@ A few critical clarifications that trip up even experienced developers:
 
 ---
 
-*Enjoyed this deep dive? Check out the main [How U.S. Payments Really Work](/series/payments/) series for more payment system mysteries demystified.*
+*Enjoyed this deep dive? Check out the main [How U.S. Payments Really Work](/series/payments) series for more payment system mysteries demystified.*
