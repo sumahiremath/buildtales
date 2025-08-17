@@ -31,40 +31,40 @@ permalink: /series/payments
     <section>
       <h3 class="text-lg font-semibold mb-4">Phase 1: Understanding the Rails</h3>
       <ol class="space-y-3">
-        <li class="flex justify-between items-center p-4 border rounded-lg">
+        <li class="flex justify-between items-center p-4 published-article">
           <div>
             <a href="/fintech/payments/2025/08/13/money-flow-bank-account.html" class="font-medium text-accent">How Money Moves In And Out Of Your Bank Account?</a>
             <p class="text-sm opacity-70 mt-1">The foundational mechanics of money movement</p>
           </div>
           <span class="text-sm text-green-600 font-medium">✓ Published</span>
         </li>
-        <li class="flex justify-between items-center p-4 border rounded-lg">
+        <li class="flex justify-between items-center p-4 published-article">
           <div>
             <a href="/fintech/payments/2025/08/14/wire-transfers-explained.html" class="font-medium text-accent">Wire Transfers: Old Money Energy</a>
             <p class="text-sm opacity-70 mt-1">When speed and finality matter most</p>
           </div>
           <span class="text-sm text-green-600 font-medium">✓ Published</span>
         </li>
-        <li class="flex justify-between items-center p-4 border rounded-lg">
+        <li class="flex justify-between items-center p-4 published-article">
           <div>
             <a href="/fintech/payments/2025/08/20/ach-good-bad-ugly.html" class="font-medium text-accent">ACH: The Good, The Bad, and The Ugly</a>
             <p class="text-sm opacity-70 mt-1">Understanding America's payment backbone</p>
           </div>
           <span class="text-sm text-green-600 font-medium">✓ Published</span>
         </li>
-        <li class="flex justify-between items-center p-4 border rounded-lg bg-gray-50">
+        <li class="flex justify-between items-center p-4 unpublished-article">
           <div>
-            <span class="font-medium text-gray-600">ACH Cutoffs: The Hidden Clock That Breaks Your UX</span>
+            <span class="font-medium text-gray-700">ACH Cutoffs: The Hidden Clock That Breaks Your UX</span>
             <p class="text-sm opacity-70 mt-1">Why timing matters in batch processing</p>
           </div>
-          <span class="text-sm text-gray-500">Aug 27, 2025</span>
+          <span class="text-sm text-gray-600 font-medium">Aug 27, 2025</span>
         </li>
-        <li class="flex justify-between items-center p-4 border rounded-lg bg-gray-50">
+        <li class="flex justify-between items-center p-4 unpublished-article">
           <div>
-            <span class="font-medium text-gray-600">RTP: Real-Time Payments With Real-World Bottlenecks</span>
+            <span class="font-medium text-gray-700">RTP: Real-Time Payments With Real-World Bottlenecks</span>
             <p class="text-sm opacity-70 mt-1">The promise and reality of instant payments</p>
           </div>
-          <span class="text-sm text-gray-500">Sep 10, 2025</span>
+          <span class="text-sm text-gray-600 font-medium">Sep 10, 2025</span>
         </li>
       </ol>
     </section>
@@ -72,10 +72,10 @@ permalink: /series/payments
     <!-- Phase 2: Coming Soon -->
     <section>
       <h3 class="text-lg font-semibold mb-4">Phase 2: Failure Modes</h3>
-      <div class="p-4 border rounded-lg bg-gray-50">
-        <p class="font-medium text-gray-600">Returns, Reversals & Retrying Safely</p>
+      <div class="p-4 unpublished-section">
+        <p class="font-medium text-gray-700">Returns, Reversals & Retrying Safely</p>
         <p class="text-sm opacity-70 mt-1">8 articles covering what happens when payments go wrong</p>
-        <span class="text-sm text-gray-500">Starting October 2025</span>
+        <span class="text-sm text-gray-600 font-medium">Starting October 2025</span>
       </div>
     </section>
 
@@ -83,16 +83,16 @@ permalink: /series/payments
     <section>
       <h3 class="text-lg font-semibold mb-4">Upcoming Phases</h3>
       <div class="space-y-3">
-        <div class="p-4 border rounded-lg bg-gray-50">
-          <p class="font-medium text-gray-600">Phase 3: Resilience</p>
+        <div class="p-4 unpublished-section">
+          <p class="font-medium text-gray-700">Phase 3: Resilience</p>
           <p class="text-sm opacity-70">Ops, audit, and legal alignment</p>
         </div>
-        <div class="p-4 border rounded-lg bg-gray-50">
-          <p class="font-medium text-gray-600">Phase 4: Complexity</p>
+        <div class="p-4 unpublished-section">
+          <p class="font-medium text-gray-700">Phase 4: Complexity</p>
           <p class="text-sm opacity-70">TPS, partner access, and multi-entity ops</p>
         </div>
-        <div class="p-4 border rounded-lg bg-gray-50">
-          <p class="font-medium text-gray-600">Phase 5: Lifecycle</p>
+        <div class="p-4 unpublished-section">
+          <p class="font-medium text-gray-700">Phase 5: Lifecycle</p>
           <p class="text-sm opacity-70">Recurring systems & revenue reliability</p>
         </div>
       </div>
@@ -139,6 +139,45 @@ permalink: /series/payments
 
 .bg-gray-50 {
   background-color: #f9fafb;
+}
+
+/* Published Article Styling - Clear and Clickable */
+.published-article {
+  border: 2px solid #157878;
+  border-radius: 8px;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+.published-article:hover {
+  border-color: #0f6b6b;
+  background-color: #f8fffe;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(21, 120, 120, 0.1);
+}
+
+/* Unpublished Article Styling - Clear but Minimalistic */
+.unpublished-article {
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  transition: all 0.2s ease;
+}
+
+.unpublished-article:hover {
+  border-color: #9ca3af;
+  background-color: #f3f4f6;
+}
+
+.unpublished-section {
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  transition: all 0.2s ease;
+}
+
+.unpublished-section:hover {
+  border-color: #9ca3af;
 }
 
 .flex {
