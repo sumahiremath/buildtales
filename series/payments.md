@@ -31,40 +31,56 @@ permalink: /series/payments
     <section>
       <h3 class="text-lg font-semibold mb-4">Phase 1: Understanding the Rails</h3>
       <ol class="space-y-3">
-        <li class="flex justify-between items-center p-4 published-article">
-          <div>
-            <a href="/fintech/payments/2025/08/13/money-flow-bank-account.html" class="font-medium text-accent">How Money Moves In And Out Of Your Bank Account?</a>
-            <p class="text-sm opacity-70 mt-1">The foundational mechanics of money movement</p>
-          </div>
-          <span class="text-sm text-green-600 font-medium">✓ Published</span>
+        <li>
+          <a href="/fintech/payments/2025/08/13/money-flow-bank-account.html" class="published-article-link">
+            <div class="flex justify-between items-center">
+              <div class="flex-grow">
+                <h4 class="font-medium text-accent article-title">How Money Moves In And Out Of Your Bank Account?</h4>
+                <p class="text-sm opacity-70 mt-2">The foundational mechanics of money movement</p>
+              </div>
+              <span class="text-sm text-green-600 font-medium published-badge">✓ Published</span>
+            </div>
+          </a>
         </li>
-        <li class="flex justify-between items-center p-4 published-article">
-          <div>
-            <a href="/fintech/payments/2025/08/14/wire-transfers-explained.html" class="font-medium text-accent">Wire Transfers: Old Money Energy</a>
-            <p class="text-sm opacity-70 mt-1">When speed and finality matter most</p>
-          </div>
-          <span class="text-sm text-green-600 font-medium">✓ Published</span>
+        <li>
+          <a href="/fintech/payments/2025/08/14/wire-transfers-explained.html" class="published-article-link">
+            <div class="flex justify-between items-center">
+              <div class="flex-grow">
+                <h4 class="font-medium text-accent article-title">Wire Transfers: Old Money Energy</h4>
+                <p class="text-sm opacity-70 mt-2">When speed and finality matter most</p>
+              </div>
+              <span class="text-sm text-green-600 font-medium published-badge">✓ Published</span>
+            </div>
+          </a>
         </li>
-        <li class="flex justify-between items-center p-4 published-article">
-          <div>
-            <a href="/fintech/payments/2025/08/20/ach-good-bad-ugly.html" class="font-medium text-accent">ACH: The Good, The Bad, and The Ugly</a>
-            <p class="text-sm opacity-70 mt-1">Understanding America's payment backbone</p>
-          </div>
-          <span class="text-sm text-green-600 font-medium">✓ Published</span>
+        <li>
+          <a href="/fintech/payments/2025/08/20/ach-good-bad-ugly.html" class="published-article-link">
+            <div class="flex justify-between items-center">
+              <div class="flex-grow">
+                <h4 class="font-medium text-accent article-title">ACH: The Good, The Bad, and The Ugly</h4>
+                <p class="text-sm opacity-70 mt-2">Understanding America's payment backbone</p>
+              </div>
+              <span class="text-sm text-green-600 font-medium published-badge">✓ Published</span>
+            </div>
+          </a>
         </li>
-        <li class="flex justify-between items-center p-4 unpublished-article">
-          <div>
-            <span class="font-medium text-gray-700">ACH Cutoffs: The Hidden Clock That Breaks Your UX</span>
-            <p class="text-sm opacity-70 mt-1">Why timing matters in batch processing</p>
+        <li class="unpublished-article">
+          <div class="flex justify-between items-center">
+            <div class="flex-grow">
+              <h4 class="font-medium text-gray-700 article-title">ACH Cutoffs: The Hidden Clock That Breaks Your UX</h4>
+              <p class="text-sm opacity-70 mt-2">Why timing matters in batch processing</p>
+            </div>
+            <span class="text-sm text-gray-600 font-medium">Aug 27, 2025</span>
           </div>
-          <span class="text-sm text-gray-600 font-medium">Aug 27, 2025</span>
         </li>
-        <li class="flex justify-between items-center p-4 unpublished-article">
-          <div>
-            <span class="font-medium text-gray-700">RTP: Real-Time Payments With Real-World Bottlenecks</span>
-            <p class="text-sm opacity-70 mt-1">The promise and reality of instant payments</p>
+        <li class="unpublished-article">
+          <div class="flex justify-between items-center">
+            <div class="flex-grow">
+              <h4 class="font-medium text-gray-700 article-title">RTP: Real-Time Payments With Real-World Bottlenecks</h4>
+              <p class="text-sm opacity-70 mt-2">The promise and reality of instant payments</p>
+            </div>
+            <span class="text-sm text-gray-600 font-medium">Sep 10, 2025</span>
           </div>
-          <span class="text-sm text-gray-600 font-medium">Sep 10, 2025</span>
         </li>
       </ol>
     </section>
@@ -141,19 +157,33 @@ permalink: /series/payments
   background-color: #f9fafb;
 }
 
-/* Published Article Styling - Clear and Clickable */
-.published-article {
+/* Published Article Styling - Entire Card Clickable */
+.published-article-link {
+  display: block;
   border: 2px solid #157878;
   border-radius: 8px;
   background-color: white;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
   transition: all 0.2s ease;
 }
 
-.published-article:hover {
+.published-article-link:hover {
   border-color: #0f6b6b;
   background-color: #f8fffe;
   transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(21, 120, 120, 0.1);
+  box-shadow: 0 4px 12px rgba(21, 120, 120, 0.15);
+  text-decoration: none;
+}
+
+.published-article-link .article-title {
+  color: #157878;
+  transition: color 0.2s ease;
+}
+
+.published-article-link:hover .article-title {
+  color: #0f6b6b;
 }
 
 /* Unpublished Article Styling - Clear but Minimalistic */
@@ -161,12 +191,24 @@ permalink: /series/payments
   border: 2px solid #d1d5db;
   border-radius: 8px;
   background-color: #f9fafb;
+  padding: 1.5rem;
   transition: all 0.2s ease;
 }
 
 .unpublished-article:hover {
   border-color: #9ca3af;
   background-color: #f3f4f6;
+}
+
+/* Spacing improvements */
+.article-title {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.published-badge {
+  margin-left: 1rem;
+  white-space: nowrap;
 }
 
 .unpublished-section {
@@ -196,11 +238,21 @@ permalink: /series/payments
   .flex {
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: 12px;
   }
   
   .justify-between {
     justify-content: flex-start;
+  }
+  
+  .published-article-link,
+  .unpublished-article {
+    padding: 1.25rem;
+  }
+  
+  .published-badge {
+    margin-left: 0;
+    margin-top: 0.5rem;
   }
 }
 </style>
