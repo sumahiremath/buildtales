@@ -922,6 +922,19 @@
           }
         }
         
+        /* Reduce formkit alert padding on mobile */
+        @media (max-width: 640px) {
+          .formkit-alert {
+            padding: 0.25rem 0.5rem !important;
+            margin: 0.125rem 0 !important;
+          }
+          
+          .formkit-alert-error {
+            padding: 0.25rem 0.5rem !important;
+            margin: 0.125rem 0 !important;
+          }
+        }
+        
         /* ConvertKit Form Styles */
         .formkit-form[data-uid="8443001"] * {
           box-sizing: border-box;
