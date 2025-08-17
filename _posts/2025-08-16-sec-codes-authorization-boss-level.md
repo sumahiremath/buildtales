@@ -107,7 +107,7 @@ In one of the ACH audits, the Nacha auditor flagged the use of CCD+ instead of C
 
 > **Lesson**: CTX is only worth it if you need structured EDI remittance data. For single-line invoices, CCD+ is the right tool. Compliance isn't about gold-plating — it's about defensible, efficient decisions.
 
-## 👀 What Happens When You Screw It Up
+## What Happens When You Screw It Up
 
 **Fintech story**: Our misclassification issue wasn't unique. We processed a small business bill pay as WEB. When "Johnson Construction LLC" sent a payment, the ACH operator flagged it: business name + consumer code = violation.
 
@@ -268,4 +268,4 @@ end
 
 ---
 
-*Enjoyed this deep dive? Check out the main [How U.S. Payments Really Work](/how-us-payments-actually-work/) series for more payment system breakdowns.*
+*Enjoyed this deep dive? Check out the main [How U.S. Payments Really Work](/series/payments/) series for more payment system breakdowns.*

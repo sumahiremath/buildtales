@@ -36,7 +36,7 @@ syndication:
 # Series information
 series:
   name: "How U.S. Payments Really Work"
-  index_url: "/how-us-payments-actually-work/"
+  index_url: "/series/payments/"
   part: 1
   total_parts: 45
 ---
@@ -44,7 +44,7 @@ series:
 <!-- Series Navigation -->
 <div style="background: #f8f9fa; border-left: 4px solid #007acc; padding: 1rem; margin: 1rem 0;">
   <strong>Part 1 of the "How U.S. Payments Really Work" Series</strong><br>
-  <a href="/how-us-payments-actually-work/">← View complete series roadmap</a> | 
+  <a href="/series/payments/">← View complete series roadmap</a> | 
   <a href="/fintech/payments/2025/08/14/wire-transfers-explained.html">Next: Wire Transfers →</a>
 </div>
 
