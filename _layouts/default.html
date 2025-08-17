@@ -559,7 +559,7 @@
       </section>
 
       <footer class="site-footer">
-        <div style="text-align: center; padding: 1rem 1rem; background: #f8f9fa; margin-top: 1rem;">
+        <div style="text-align: center; padding: 1rem 1rem; background: #f8f9fa; margin: 0; width: 100%;">
           <!-- Navigation Section -->
           <nav style="margin-bottom: 0.75rem;">
             <div style="display: flex; align-items: baseline; justify-content: center; gap: 0.5rem;" class="footer-nav-container">
@@ -628,6 +628,19 @@
         </div>
         
         <style>
+        /* Footer Full Width */
+        .site-footer {
+          width: 100% !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+        
+        .site-footer > div {
+          width: 100% !important;
+          margin: 0 !important;
+          box-sizing: border-box !important;
+        }
+        
         /* Footer Navigation - Copy exact header styles */
         .footer-nav-link {
           background: none !important;
