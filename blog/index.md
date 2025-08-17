@@ -233,18 +233,19 @@ title: "Posts"
 /* Responsive adjustments */
 @media (max-width: 640px) {
   .filter-nav {
-    gap: 0.5rem;
-    padding: 0.75rem;
-    flex-wrap: wrap;
+    gap: 0.25rem;
+    padding: 0.5rem;
+    flex-wrap: nowrap;
+    justify-content: center;
   }
   
   .filter-link {
-    font-size: 14px;
-    padding: 2px 6px;
+    font-size: 13px;
+    padding: 1px 4px;
   }
   
   .filter-separator {
-    font-size: 14px;
+    font-size: 13px;
   }
   
   .post-card {
@@ -263,6 +264,23 @@ title: "Posts"
   
   .flex {
     flex-wrap: wrap;
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+  .filter-nav {
+    gap: 0.125rem;
+    padding: 0.375rem;
+  }
+  
+  .filter-link {
+    font-size: 12px;
+    padding: 1px 3px;
+  }
+  
+  .filter-separator {
+    font-size: 12px;
   }
 }
 </style>
