@@ -862,26 +862,34 @@
           }
           
           .footer-newsletter {
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: stretch; /* Ensure full width */
+            justify-content: center;
+            gap: 0; /* Remove spacing between elements */
+            margin: 0; /* Remove extra margins */
+            padding: 0; /* Remove extra padding */
             width: 100%;
             max-width: 100%;
           }
           
+          .footer-newsletter * {
+            margin: 0 !important; /* Remove margins for all child elements */
+            padding: 0 !important; /* Remove padding for all child elements */
+            box-sizing: border-box; /* Ensure consistent sizing */
+          }
+          
           .footer-newsletter-fields {
-            flex-direction: column; /* Stack input and button vertically */
-            gap: 0.25rem; /* Reduce spacing between input and button */
-            align-items: stretch; /* Ensure full width */
-            width: 100%; /* Match form width for consistency */
+            gap: 0; /* Remove spacing between input and button */
+            width: 100%; /* Ensure full width */
           }
           
           .footer-email-field {
             width: 100%; /* Full width for input */
-            margin: 0; /* Remove extra margins */
           }
           
           .footer-submit-btn {
             width: 100%; /* Full width for button */
-            padding: 10px 14px; /* Compact padding */
-            font-size: 14px; /* Adjust font size */
           }
           
           .footer-connect {
