@@ -6,18 +6,20 @@
 {% seo %}
     
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} — Deep, no-fluff essays on payments & leadership{% endif %}">
-    <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 25 }}{% else %}Actionable breakdowns you can read in 7–12 minutes.{% endif %}">
-    <meta property="og:image" content="{% if page.og_image %}{{ page.og_image | absolute_url }}{% else %}{{ '/assets/images/og-default.png' | absolute_url }}{% endif %}">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} — Engineering Leadership & Fintech Stories{% endif %}">
+    <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 25 }}{% else %}Stories and insights from the journey of building teams, systems, and culture in fintech.{% endif %}">
+    <meta property="og:image" content="{% if page.og_image %}{{ page.og_image | absolute_url }}{% else %}{{ '/assets/images/logo.png' | absolute_url }}{% endif %}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="627">
     <meta property="og:url" content="{{ page.url | absolute_url }}">
     <meta property="og:type" content="{% if page.categories %}article{% else %}website{% endif %}">
     <meta property="og:site_name" content="{{ site.title }}">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} — Deep, no-fluff essays on payments & leadership{% endif %}">
-    <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 25 }}{% else %}Actionable breakdowns you can read in 7–12 minutes.{% endif %}">
-    <meta name="twitter:image" content="{% if page.og_image %}{{ page.og_image | absolute_url }}{% else %}{{ '/assets/images/og-default.png' | absolute_url }}{% endif %}">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} — Engineering Leadership & Fintech Stories{% endif %}">
+    <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 25 }}{% else %}Stories and insights from the journey of building teams, systems, and culture in fintech.{% endif %}">
+    <meta name="twitter:image" content="{% if page.og_image %}{{ page.og_image | absolute_url }}{% else %}{{ '/assets/images/logo.png' | absolute_url }}{% endif %}">
     {% if page.author.twitter %}<meta name="twitter:creator" content="{{ page.author.twitter }}">{% endif %}
     <meta name="twitter:site" content="@sumahiremath">
     
@@ -849,7 +851,7 @@
           }
           
           .footer-nav-separator {
-            font-size: 11px;
+            font-size: 11 px;
             flex-shrink: 0;
             margin: 0 1px;
           }
