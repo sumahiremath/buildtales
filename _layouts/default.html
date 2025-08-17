@@ -561,8 +561,8 @@
       <footer class="site-footer">
         <div style="text-align: center; padding: 2rem 1rem; background: #f8f9fa; border-radius: 8px; margin-top: 1rem;">
           <!-- Navigation Section -->
-          <nav style="margin-bottom: 2rem;">
-            <div style="display: flex; align-items: baseline; justify-content: center; gap: 0.75rem;">
+          <nav style="margin-bottom: 1.5rem;">
+            <div style="display: flex; align-items: baseline; justify-content: center; gap: 0.75rem;" class="footer-nav-container">
               <a href="/" class="footer-nav-link">Home</a>
               <span class="footer-nav-separator">|</span>
               <a href="/series" class="footer-nav-link">Series</a>
@@ -576,8 +576,8 @@
           </nav>
           
           <!-- Newsletter Section -->
-          <div style="margin-bottom: 2rem;">
-            <h3 style="margin: 0 0 1rem 0; color: #333; font-size: 1.1rem;">Stay Updated</h3>
+          <div style="margin-bottom: 1.5rem;">
+            <h3 style="margin: 0 0 0.75rem 0; color: #333; font-size: 1.1rem;">Stay Updated</h3>
             <form action="https://app.kit.com/forms/8443001/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;powered_by&quot;:{&quot;show&quot;:false},&quot;recaptcha&quot;:{&quot;enabled&quot;:false}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800">
               <div data-style="clean">
                 <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
@@ -599,7 +599,7 @@
             <strong>Building something interesting?</strong> Let's connect!
           </p>
           
-          <div style="margin: 1.5rem 0; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; align-items: center;">
+          <div style="margin: 1rem 0; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; align-items: center;">
             <a href="https://linkedin.com/in/sumamanjunath" 
                target="_blank"
                style="background: #157878; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 1rem;">
@@ -612,10 +612,10 @@
           </div>
           
           <div style="border-top: 1px solid #ddd; padding-top: 0.75rem; margin-top: 1rem; display: flex; justify-content: center; align-items: center;">
-            <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;" class="footer-logo-section">
               <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Suma Manjunath" 
                    width="40" height="40" style="border-radius: 50%; object-fit: cover;">
-              <div style="text-align: left;">
+              <div style="text-align: center;">
                 <div style="font-weight: 700; color: #333; font-size: 1.1rem; line-height: 1.2; margin: 0;">
                   Suma Manjunath
                 </div>
@@ -677,15 +677,47 @@
           flex-shrink: 0;
         }
         
+        /* Footer Logo Section */
+        .footer-logo-section {
+          text-align: center;
+        }
+        
         /* Mobile responsive */
         @media (max-width: 640px) {
+          /* Compact footer navigation like header */
+          .footer-nav-container {
+            gap: 0.5rem !important;
+          }
+          
           .footer-nav-link {
             font-size: 14px;
-            padding: 2px 6px;
+            padding: 2px 4px;
           }
           
           .footer-nav-separator {
             font-size: 14px;
+          }
+          
+          /* Reduce footer padding and margins on mobile */
+          .site-footer > div {
+            padding: 1.5rem 1rem !important;
+          }
+          
+          /* Compact spacing between sections */
+          .site-footer nav {
+            margin-bottom: 1rem !important;
+          }
+          
+          .site-footer > div > div:nth-child(2) {
+            margin-bottom: 1rem !important;
+          }
+          
+          .site-footer > div > div:nth-child(3) {
+            margin-bottom: 0.75rem !important;
+          }
+          
+          .site-footer > div > div:nth-child(4) {
+            margin: 0.75rem 0 !important;
           }
           
           .footer-newsletter-fields {
