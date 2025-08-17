@@ -47,12 +47,29 @@ title: Build Tales
 <section class="py-10">
   <div class="mx-auto max-w-3xl">
     <h2 class="text-2xl font-semibold mb-6">Recent Articles</h2>
-    <div class="space-y-6">
+    <div class="recent-posts-grid">
       {% for post in site.posts limit:3 %}
-      <article class="card">
-        <a href="{{ post.url }}" class="text-xl font-semibold" style="text-decoration: none; color: #333;">{{ post.title }}</a>
-        <p class="opacity-80">{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
-        <span class="text-sm opacity-60">{{ post.date | date: "%B %d, %Y" }}</span>
+      <article class="recent-post-card">
+        <div class="post-meta">
+          <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
+          {% if post.series.name %}
+          <span class="post-series">{{ post.series.name }} Part {{ post.series.part }}</span>
+          {% endif %}
+        </div>
+        
+        <h3 class="recent-post-title">
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </h3>
+        
+        <p class="recent-post-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+        
+        {% if post.categories %}
+        <div class="recent-post-categories">
+          {% for category in post.categories %}
+          <span class="category-tag">{{ category | capitalize }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
       </article>
       {% endfor %}
     </div>
@@ -61,6 +78,58 @@ title: Build Tales
 
 <style>
 /* Custom styles for this page */
+
+/* Recent Articles - Finshots Style */
+.recent-posts-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.recent-post-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.recent-post-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.recent-post-title {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.recent-post-title a {
+  color: #111827;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.recent-post-title a:hover {
+  color: var(--accent);
+}
+
+.recent-post-excerpt {
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+  font-size: 0.95rem;
+}
+
+.recent-post-categories {
+  display: flex;
+  gap: 0.5rem;
+}
 
 /* Start Here Section - Enhanced Card Layout */
 .start-here-grid {
