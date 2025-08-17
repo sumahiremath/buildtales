@@ -2,7 +2,6 @@
 layout: default
 title: Build Tales
 ---
-
 <!-- Hero Section -->
 <section class="py-16">
   <div class="mx-auto max-w-4xl text-center space-y-6">
@@ -26,7 +25,6 @@ title: Build Tales
     </div>
   </div>
 </section>
-<br>  
 
 <!-- Start Here Section -->
 <section class="py-10">

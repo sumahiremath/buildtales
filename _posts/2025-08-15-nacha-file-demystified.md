@@ -38,6 +38,10 @@ syndication:
 
 # NACHA File Demystified: Cracking the 94-Character Code
 
+*Published on: August 15, 2025*
+
+![NACHA Demystified Banner](/assets/banners/A_2D_digital_illustration_serves_as_a_banner_or_co_1200x400.jpg)
+
 Picture this: You're building a payroll system, and your first ACH file submission gets rejected with a cryptic "Invalid field length at position 47." Meanwhile, $72 trillion moves through these exact same files every year without a hitch.
 
 Welcome to NACHA files—where every character matters, spaces are sacred, and one misplaced digit can derail your entire batch.

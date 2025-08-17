@@ -51,6 +51,10 @@ series:
 
 # ACH: The Good, The Bad, and The Ugly
 
+*Published on: August 20, 2025*
+
+![ACH Good Bad Ugly Banner](/assets/banners/goodbadugly.png)
+
 **Still powering trillions. Still moving like it's stuck in fax machine mode.**
 
 The Automated Clearing House is the OG payments backbone of America. It's how your paycheck shows up. How your bills autopay. How fintechs fake "instant transfers" and businesses settle invoices behind the scenes.
