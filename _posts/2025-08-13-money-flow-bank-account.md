@@ -50,6 +50,9 @@ series:
 
 # How Money Moves In and Out of Your Bank Account?
 
+*Published on: August 13, 2025*
+
+![Money Flow](../assets/banners/moneyinout.png)
 Ever wonder how your paycheck shows up in your bank account on payday? Or how your gym magically pulls your membership fee every month? That's all thanks to a behind-the-scenes hero called **ACH** (Automated Clearing House).
 
 ACH is the electronic network that quietly processes over 29 billion transactions per year in the U.S., totaling more than $72 trillion. It's the digital backbone that moves money between bank accounts reliably and affordably.
@@ -58,11 +61,35 @@ ACH is the electronic network that quietly processes over 29 billion transaction
 
 **Automated Clearing House (ACH)** is a batch processing network that banks use to transfer money electronically. Unlike wire transfers or card payments, ACH focuses on cost-efficiency over speed.
 
-Think of it as a digital postal service for money:
+
+> **Concept:** Think of it as a digital postal service for money
+
 - Banks collect payment instructions throughout the day
 - They bundle these into batches
 - The network processes and routes them to destination banks
 - Money settles typically within 1-3 business days
+- Sends notifications for any returns or exceptions
+
+<div class="mermaid">
+graph TD
+    A[Originator (Individual/Business/Government)]:::start --> B(Obtains Authorization):::process
+    B --> C(Submits ACH Transaction to ODFI):::process
+    C --> D[ODFI (Originating Depository Financial Institution)]:::bank
+    D -- Collects & Batches Transactions --> E[ACH Operator (Federal Reserve / The Clearing House)]:::operator
+    E -- Sorts & Processes Batches --> F[RDFI (Receiving Depository Financial Institution)]:::bank
+    F -- Posts Transactions to Accounts --> G[Receiver (Account Holder)]:::end
+    E -- Facilitates Settlement --> D
+    F -- Returns/Notifications (if applicable) --> E
+    E -- Returns/Notifications (if applicable) --> D
+
+    classDef start fill:#e3f2fd,stroke:#007acc,stroke-width:2px;
+    classDef process fill:#fff3e0,stroke:#f57c00,stroke-width:2px;
+    classDef bank fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px;
+    classDef operator fill:#ffebee,stroke:#d32f2f,stroke-width:2px;
+    classDef end fill:#e8f5e8,stroke:#388e3c,stroke-width:2px;
+</div>
+
+*ACH Flow: Interaction between bank and ACH Operator*
 
 ## Paying Bills Using Your Bank Account
 
@@ -248,7 +275,7 @@ The ACH network isn't run by one entity. Two operators handle all ACH processing
 - **Character**: Government-run, conservative, highly regulated
 - **Strengths**: Nationwide reach, ultimate safety, consistent processing
 
-### EPN (The Clearing House)
+### EPN Electronic Payments Network (The Clearing House)
 - **Operator**: The Clearing House (owned by major banks)
 - **Market Share**: ~20% of ACH volume  
 - **Settlement**: Private net settlement + Fedwire
