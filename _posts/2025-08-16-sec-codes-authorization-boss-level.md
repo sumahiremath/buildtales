@@ -5,6 +5,7 @@ date: 2025-08-16
 categories: [fintech, payments]
 tags: [ach, sec-codes, compliance, authorization, nacha]
 excerpt: "SEC codes determine your compliance fate in ACH payments. Get them wrong and face chargebacks, fines, and regulatory headaches. This guide shows you how to classify transactions correctly and stay compliant."
+banner_image: "/assets/images/banners/sec-codes.png"
 banner_color: "#157878"
 
 # SEO and Canonical Tags
@@ -33,7 +34,9 @@ syndication:
   canonical_source: "BuildTales.dev"
 ---
 
-# SEC Codes in ACH: Authorization, Compliance, and How to Not Get Burned  
+# SEC Codes in ACH: Authorization, Compliance, and How to Not Get Burned 
+
+
 
 We once misclassified a whole batch of ACH payments — and our bank noticed immediately. Within days, we had a compliance warning sitting in our inbox and a very clear message: *fix your SEC codes, or else.*  
 
