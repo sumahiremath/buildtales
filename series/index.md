@@ -11,13 +11,12 @@ title: "Series"
   <div class="series-grid">
     <a href="/series/payments" class="series-card available">
       <div class="series-card-header">
-        <div class="series-icon">🚀</div>
         <div class="series-meta">
           <span class="series-status active">Available Now</span>
-          <span class="series-progress">3 of 45 articles</span>
+          <span class="series-progress">3 of 12 articles</span>
         </div>
       </div>
-      <h2 class="series-title">How U.S. Payments Really Work</h2>
+      <h2 class="series-title"><span class="series-title-icon">🚀</span> How U.S. Payments Really Work</h2>
       <p class="series-description">A builder's guide to rails, risk, and reconciliation. Everything you need to understand, build, and scale payment systems in the United States.</p>
       <div class="series-actions">
         <span class="series-cta primary">Start Reading →</span>
@@ -28,13 +27,12 @@ title: "Series"
     <!-- Future Series -->
     <div class="series-card coming-soon">
       <div class="series-card-header">
-        <div class="series-icon">⚡</div>
         <div class="series-meta">
           <span class="series-status upcoming">Coming Q2 2026</span>
-          <span class="series-progress">45 articles planned</span>
+          <span class="series-progress">15 articles planned</span>
         </div>
       </div>
-      <h2 class="series-title">Engineering Leadership Patterns</h2>
+      <h2 class="series-title"><span class="series-title-icon">⚡</span> Engineering Leadership Patterns</h2>
       <p class="series-description">Practical patterns for scaling teams, systems, and culture. From your first tech lead role to VP of Engineering.</p>
       <div class="series-actions">
         <span class="series-cta disabled">Coming Soon</span>
@@ -43,13 +41,12 @@ title: "Series"
     
     <div class="series-card coming-soon">
       <div class="series-card-header">
-        <div class="series-icon">🛡️</div>
         <div class="series-meta">
           <span class="series-status upcoming">Coming Q3 2026</span>
-          <span class="series-progress">30 articles planned</span>
+          <span class="series-progress">18 articles planned</span>
         </div>
       </div>
-      <h2 class="series-title">Systems Design at Scale</h2>
+      <h2 class="series-title"><span class="series-title-icon">🛡️</span> Systems Design at Scale</h2>
       <p class="series-description">Real-world architecture decisions, tradeoffs, and lessons learned from building systems that handle millions of transactions.</p>
       <div class="series-actions">
         <span class="series-cta disabled">Coming Soon</span>
@@ -103,16 +100,9 @@ title: "Series"
 /* Series Card Header */
 .series-card-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: flex-start;
   margin-bottom: 1.5rem;
-}
-
-.series-icon {
-  font-size: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .series-meta {
@@ -153,6 +143,15 @@ title: "Series"
   font-weight: 600;
   margin: 0 0 1rem 0;
   color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.series-title-icon {
+  font-size: 1.8rem;
+  display: inline-flex;
+  align-items: center;
 }
 
 .series-description {
@@ -205,9 +204,7 @@ title: "Series"
   }
   
   .series-card-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+    justify-content: flex-start;
   }
   
   .series-meta {
@@ -216,12 +213,15 @@ title: "Series"
     gap: 1rem;
   }
   
-  .series-icon {
-    font-size: 2rem;
-  }
-  
   .series-title {
     font-size: 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .series-title-icon {
+    font-size: 1.5rem;
   }
 }
 </style>

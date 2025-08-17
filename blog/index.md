@@ -6,18 +6,21 @@ title: "Posts"
 <div class="mx-auto max-w-3xl">
   <h1 class="text-4xl font-bold mb-6">Posts</h1>
   
-  <!-- Filter Chips -->
-  <div class="flex gap-2 mb-6">
-    <a class="chip chip--active" href="/blog">All</a>
-    <a class="chip" href="/blog?tag=payments">Payments</a>
-    <a class="chip" href="/blog?tag=leadership">Leadership</a>
-    <a class="chip" href="/blog?tag=systems">Systems</a>
+  <!-- Filter Navigation -->
+  <div class="filter-nav mb-6">
+    <a class="filter-link filter-link--active" href="/blog">All</a>
+    <span class="filter-separator">|</span>
+    <a class="filter-link" href="/blog?tag=payments">Payments</a>
+    <span class="filter-separator">|</span>
+    <a class="filter-link" href="/blog?tag=leadership">Leadership</a>
+    <span class="filter-separator">|</span>
+    <a class="filter-link" href="/blog?tag=systems">Systems</a>
   </div>
 
   <!-- Posts Grid - Finshots Style -->
   <div class="posts-grid">
     {% for post in site.posts %}
-    <a href="{{ post.url }}" class="post-card-link">
+    <a href="{{ post.url }}" class="post-card-link" data-categories="{{ post.categories | join: ',' | downcase }}">
       <article class="post-card">
         <!-- Clean Banner Image -->
         <div class="post-banner" 
@@ -172,7 +175,53 @@ title: "Posts"
   font-weight: 500;
 }
 
-/* Filter chips styling */
+/* Filter Navigation - Header Style */
+.filter-nav {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 1rem 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fafbfc;
+}
+
+.filter-link {
+  color: #4b5563;
+  text-decoration: none;
+  padding: 4px 8px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+  display: inline-block;
+  line-height: 1.2;
+  vertical-align: baseline;
+}
+
+.filter-link:hover {
+  color: var(--accent);
+  background: rgba(21, 120, 120, 0.08);
+  text-decoration: none;
+}
+
+.filter-link--active {
+  color: var(--accent);
+  font-weight: 600;
+  background: rgba(21, 120, 120, 0.12);
+}
+
+.filter-separator {
+  color: #9ca3af;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.2;
+  vertical-align: baseline;
+  display: inline-block;
+  user-select: none;
+}
+
 .flex {
   display: flex;
 }
@@ -183,6 +232,21 @@ title: "Posts"
 
 /* Responsive adjustments */
 @media (max-width: 640px) {
+  .filter-nav {
+    gap: 0.5rem;
+    padding: 0.75rem;
+    flex-wrap: wrap;
+  }
+  
+  .filter-link {
+    font-size: 14px;
+    padding: 2px 6px;
+  }
+  
+  .filter-separator {
+    font-size: 14px;
+  }
+  
   .post-card {
     padding: 1.25rem;
   }
@@ -202,3 +266,62 @@ title: "Posts"
   }
 }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const filterLinks = document.querySelectorAll('.filter-link');
+  const postCards = document.querySelectorAll('.post-card-link');
+  
+  // Get current filter from URL parameter
+  const urlParams = new URLSearchParams(window.location.search);
+  const currentFilter = urlParams.get('tag') || 'all';
+  
+  // Update active filter link
+  function updateActiveFilter(activeFilter) {
+    filterLinks.forEach(link => {
+      link.classList.remove('filter-link--active');
+      
+      if (activeFilter === 'all' && link.getAttribute('href') === '/blog') {
+        link.classList.add('filter-link--active');
+      } else if (link.getAttribute('href').includes(`tag=${activeFilter}`)) {
+        link.classList.add('filter-link--active');
+      }
+    });
+  }
+  
+  // Filter posts based on category
+  function filterPosts(filter) {
+    postCards.forEach(card => {
+      const categories = card.getAttribute('data-categories') || '';
+      
+      if (filter === 'all' || categories.includes(filter)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+  
+  // Initialize page with current filter
+  updateActiveFilter(currentFilter);
+  filterPosts(currentFilter);
+  
+  // Handle filter link clicks
+  filterLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const href = this.getAttribute('href');
+      const newFilter = href.includes('tag=') ? href.split('tag=')[1] : 'all';
+      
+      // Update URL without page reload
+      const newUrl = newFilter === 'all' ? '/blog' : `/blog?tag=${newFilter}`;
+      window.history.pushState({}, '', newUrl);
+      
+      // Update display
+      updateActiveFilter(newFilter);
+      filterPosts(newFilter);
+    });
+  });
+});
+</script>
