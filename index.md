@@ -2,6 +2,7 @@
 layout: default
 title: Build Tales
 ---
+
 <!-- Hero Section -->
 <section class="py-16">
   <div class="mx-auto max-w-4xl text-center space-y-6">
@@ -25,9 +26,10 @@ title: Build Tales
     </div>
   </div>
 </section>
+<br>  
 
 <!-- Start Here Section -->
-<section class="py-10">
+<section class="py-10 pt-16">
   <div class="mx-auto max-w-5xl">
     <h2 class="text-2xl font-semibold mb-8 text-center">Start here</h2>
     <div class="start-here-grid">
@@ -52,9 +54,11 @@ title: Build Tales
     </div>
   </div>
 </section>
+<br>  
+
 
 <!-- Recent Articles Section -->
-<section class="py-10">
+<section class="py-10 pt-16">
   <div class="mx-auto max-w-3xl">
     <h2 class="text-2xl font-semibold mb-6">Recent Articles</h2>
     <div class="recent-posts-grid">
