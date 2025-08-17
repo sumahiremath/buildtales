@@ -880,7 +880,9 @@
           }
           
           .footer-newsletter-fields {
-            gap: 0; /* Remove spacing between input and button */
+            flex-direction: column; /* Stack input and button on separate lines */
+            gap: 0.5rem; /* Add some spacing between the two lines */
+            align-items: stretch; /* Ensure full width */
             width: 100%; /* Ensure full width */
           }
           
