@@ -5,27 +5,24 @@ title: About
 
 # About
 
-Hey, I'm **Suma Manjunath**—an engineering leader with two decades of crafting scalable, resilient software in highly regulated industries. What really lights me up? Building powerhouse systems rooted in reliability, automation, and compliance-friendly practices.
+Hi, I’m **Suma Manjunath**—an engineering leader with 20 years of experience delivering scalable, resilient software in tightly regulated industries. I thrive on building systems rooted in automation, observability, and compliance-aligned best practices.
 
 ## The Journey
 
-I started my journey navigating QA layers and food-chain code, but somewhere along the way, I became obsessed with expansion—systems that grow, teams that level up, and architectures built to last. 
-
-These days, I thrive on modernizing legacy systems, pushing microservices-first culture, and bringing observability to everything so we can move fast and stay stable. I've led teams through complex fintech transformations, built payment processing systems that handle millions of transactions, and navigated the intricate world of financial compliance where "move fast and break things" simply isn't an option.
+My path began in QA, where I developed a quality-first mindset that propelled me into development and ultimately leadership. Now, I lead initiatives focused on modernizing legacy architectures, driving microservices adoption, and embedding observability across engineering ecosystems. I’ve guided teams through fintech transformations, built large-scale payments infrastructure, and navigated complex financial compliance—where “move fast” meets “don’t break anything.”
 
 ## Why I Write
 
-**Build Tales** emerges from the trenches of real-world engineering leadership. Too often, we see glossy case studies that skip the messy middle—the compliance hurdles, the legacy integrations, the human dynamics of scaling teams. I write about the intersection of **fintech**, **payments systems**, and **engineering leadership** because these domains demand both technical excellence and deep regulatory understanding.
+**Build Tales** captures stories from the engineering trenches—addressing the messy middle of scaling teams, legacy systems, and compliance puzzles that glossy case studies overlook. My ongoing series, “How U.S. Payments Really Work,” spans 45 articles aimed at helping engineers build systems that earn trust by understanding money’s real-life path through banks, networks, and regulatory frameworks.
 
 My current deep dive, "[How U.S. Payments Really Work](/how-us-payments-actually-work/)," is a 45-article survival manual for anyone building platforms that move money. Because understanding how money flows through banks, payment networks, and regulatory frameworks isn't just technical knowledge—it's the foundation for building systems that earn trust.
 
 ## Beyond the Keyboard
 
-When I'm not architecting workflow superhighways, you'll find me out walking my dog—coffee in one hand, camera in the other—capturing moments, experimenting in the kitchen, or geeking out over AI innovations and health trends. Intentional balance fuels my life both on and off the clock.
-
+Outside of work, I savor my daily cup of black coffee, walk my dog, and explore the world through photography. I also dive into cooking, tend to my garden, and stay curious with AI trends and physical/mental wellness practices. This intentional balance isn’t just a hobby—it keeps my leadership grounded and energized.
 ## Let's Connect
 
-Curious to collaborate, chat automation-first strategies, discuss fintech challenges, or just exchange pet‑walk anecdotes over a virtual coffee? I'm always up for conversations about building resilient systems and the human side of engineering leadership.
+Want to chat fintech strategy, engineering leadership, or share dog-walk stories over a virtual brew? I’d love to connect.
 
 <div id="contact-form" style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
   <h4 style="margin-top: 0; color: #333;">Send me a message</h4>
