@@ -384,19 +384,22 @@
         {% if page.layout == 'default' and page.categories %}
           <script>
           document.addEventListener('DOMContentLoaded', function() {
-            // Find the first h1 (post title)
-            const title = document.querySelector('h1');
-            if (title) {
-              // Create the Ghibli avatar element
-              const ghibliSection = document.createElement('div');
-              ghibliSection.className = 'ghibli-title-section';
-              ghibliSection.innerHTML = `
-                <img src="{{ '/assets/images/ghibli-avatar.png' | relative_url }}" alt="Suma Manjunath" class="ghibli-title-avatar">
-                <p class="ghibli-author-name">Suma Manjunath</p>
-              `;
-              
-              // Insert after the title
-              title.parentNode.insertBefore(ghibliSection, title.nextSibling);
+            // Only run on blog post pages (pages with categories)
+            if (document.querySelector('.main-content h1')) {
+              // Find the h1 within the main content area (not the header)
+              const title = document.querySelector('.main-content h1');
+              if (title && !title.closest('header')) {
+                // Create the Ghibli avatar element
+                const ghibliSection = document.createElement('div');
+                ghibliSection.className = 'ghibli-title-section';
+                ghibliSection.innerHTML = `
+                  <img src="{{ '/assets/images/ghibli-avatar.png' | relative_url }}" alt="Suma Manjunath" class="ghibli-title-avatar">
+                  <p class="ghibli-author-name">Suma Manjunath</p>
+                `;
+                
+                // Insert after the title
+                title.parentNode.insertBefore(ghibliSection, title.nextSibling);
+              }
             }
           });
           </script>
