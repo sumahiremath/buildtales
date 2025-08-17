@@ -73,12 +73,12 @@ ACH is the electronic network that quietly processes over 29 billion transaction
 
 <div class="mermaid">
 graph TD
-    A[Originator (Individual/Business/Government)]:::start --> B(Obtains Authorization):::process
-    B --> C(Submits ACH Transaction to ODFI):::process
-    C --> D[ODFI (Originating Depository Financial Institution)]:::bank
-    D -- Collects & Batches Transactions --> E[ACH Operator (Federal Reserve / The Clearing House)]:::operator
-    E -- Sorts & Processes Batches --> F[RDFI (Receiving Depository Financial Institution)]:::bank
-    F -- Posts Transactions to Accounts --> G[Receiver (Account Holder)]:::end
+    A["Originator (Individual/Business/Government)"]:::start --> B("Obtains Authorization"):::process
+    B --> C("Submits ACH Transaction to ODFI"):::process
+    C --> D["ODFI (Originating Depository Financial Institution)"]:::bank
+    D -- Collects & Batches Transactions --> E["ACH Operator (Federal Reserve / The Clearing House)"]:::operator
+    E -- Sorts & Processes Batches --> F["RDFI (Receiving Depository Financial Institution)"]:::bank
+    F -- Posts Transactions to Accounts --> G["Receiver (Account Holder)"]:::endClass
     E -- Facilitates Settlement --> D
     F -- Returns/Notifications (if applicable) --> E
     E -- Returns/Notifications (if applicable) --> D
@@ -87,7 +87,7 @@ graph TD
     classDef process fill:#fff3e0,stroke:#f57c00,stroke-width:2px;
     classDef bank fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px;
     classDef operator fill:#ffebee,stroke:#d32f2f,stroke-width:2px;
-    classDef end fill:#e8f5e8,stroke:#388e3c,stroke-width:2px;
+    classDef endClass fill:#e8f5e8,stroke:#388e3c,stroke-width:2px;
 </div>
 
 *ACH Flow: Interaction between bank and ACH Operator*
