@@ -869,8 +869,11 @@
             gap: 0; /* Remove spacing between elements */
             margin: 0; /* Remove extra margins */
             padding: 0; /* Remove extra padding */
-            width: 100%;
-            max-width: 100%;
+            width: 100%; /* Explicit full width */
+            min-width: 100%; /* Ensure it never gets smaller than container */
+            max-width: 100%; /* Prevent overflow beyond container */
+            height: auto; /* Let content determine height naturally */
+            overflow: visible; /* Prevent any hidden content issues */
           }
           
           .footer-newsletter * {
