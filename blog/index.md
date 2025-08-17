@@ -18,27 +18,37 @@ title: "Posts"
   <div class="posts-grid">
     {% for post in site.posts %}
     <article class="post-card">
-      <div class="post-meta">
-        <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
-        {% if post.series.name %}
-        <span class="post-series">{{ post.series.name }} Part {{ post.series.part }}</span>
-        {% endif %}
+      <!-- Banner Image with Teal Fallback -->
+      <div class="post-banner" 
+           {% if post.banner_image %}
+           style="background-image: url('{{ post.banner_image | relative_url }}');"
+           {% else %}
+           style="background: {{ post.banner_color | default: '#157878' }};"
+           {% endif %}>
+        <div class="post-meta">
+          <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
+          {% if post.series.name %}
+          <span class="post-series">{{ post.series.name }} Part {{ post.series.part }}</span>
+          {% endif %}
+        </div>
       </div>
       
-      <h2 class="post-title">
-        <a href="{{ post.url }}">{{ post.title }}</a>
-      </h2>
-      
-      <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
-      
-      <div class="post-footer">
-        {% if post.categories %}
-        <div class="post-categories">
-          {% for category in post.categories %}
-          <span class="category-tag">{{ category | capitalize }}</span>
-          {% endfor %}
+      <div class="post-content">
+        <h2 class="post-title">
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </h2>
+        
+        <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+        
+        <div class="post-footer">
+          {% if post.categories %}
+          <div class="post-categories">
+            {% for category in post.categories %}
+            <span class="category-tag">{{ category | capitalize }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
         </div>
-        {% endif %}
       </div>
     </article>
     {% endfor %}
@@ -58,38 +68,70 @@ title: "Posts"
 .post-card {
   background: white;
   border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  padding: 1.5rem;
+  border-radius: 12px;
+  overflow: hidden;
   transition: all 0.2s ease;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .post-card:hover {
   border-color: var(--accent);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Banner area with image or teal background */
+.post-banner {
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+}
+
+/* Banner overlay for better text readability */
+.post-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.4));
+  pointer-events: none;
+}
+
+.post-content {
+  padding: 1.5rem;
 }
 
 .post-meta {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 0.75rem;
+  position: relative;
+  z-index: 1;
 }
 
 .post-date {
   font-size: 0.875rem;
-  color: #6b7280;
+  color: rgba(255, 255, 255, 0.9);
   font-weight: 500;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .post-series {
   font-size: 0.75rem;
-  background: #f3f4f6;
-  color: #374151;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   font-weight: 500;
+  backdrop-filter: blur(4px);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .post-title {
