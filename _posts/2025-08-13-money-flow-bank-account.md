@@ -90,7 +90,7 @@ graph TD
     classDef endClass fill:#e8f5e8,stroke:#388e3c,stroke-width:2px;
 </div>
 
-*ACH Flow: Interaction between bank and ACH Operator*
+*ACH Flow: Interaction between banks and ACH Operator*
 
 ## Paying Bills Using Your Bank Account
 
