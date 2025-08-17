@@ -17,40 +17,42 @@ title: "Posts"
   <!-- Posts Grid - Finshots Style -->
   <div class="posts-grid">
     {% for post in site.posts %}
-    <article class="post-card">
-      <!-- Banner Image with Teal Fallback -->
-      <div class="post-banner" 
-           {% if post.banner_image %}
-           style="background-image: url('{{ post.banner_image | relative_url }}');"
-           {% else %}
-           style="background: {{ post.banner_color | default: '#157878' }};"
-           {% endif %}>
-        <div class="post-meta">
-          <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
-          {% if post.series.name %}
-          <span class="post-series">{{ post.series.name }} Part {{ post.series.part }}</span>
-          {% endif %}
+    <a href="{{ post.url }}" class="post-card-link">
+      <article class="post-card">
+        <!-- Clean Banner Image -->
+        <div class="post-banner" 
+             {% if post.banner_image %}
+             style="background-image: url('{{ post.banner_image | relative_url }}');"
+             {% else %}
+             style="background: {{ post.banner_color | default: '#157878' }};"
+             {% endif %}>
         </div>
-      </div>
-      
-      <div class="post-content">
-        <h2 class="post-title">
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </h2>
         
-        <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
-        
-        <div class="post-footer">
-          {% if post.categories %}
-          <div class="post-categories">
-            {% for category in post.categories %}
-            <span class="category-tag">{{ category | capitalize }}</span>
-            {% endfor %}
+        <div class="post-content">
+          <!-- Date and Series Info -->
+          <div class="post-meta">
+            <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
+            {% if post.series.name %}
+            <span class="post-series">{{ post.series.name }} Part {{ post.series.part }}</span>
+            {% endif %}
           </div>
-          {% endif %}
+          
+          <h2 class="post-title">{{ post.title }}</h2>
+          
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+          
+          <div class="post-footer">
+            {% if post.categories %}
+            <div class="post-categories">
+              {% for category in post.categories %}
+              <span class="category-tag">{{ category | capitalize }}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </a>
     {% endfor %}
   </div>
 </div>
@@ -65,6 +67,19 @@ title: "Posts"
   margin-top: 2rem;
 }
 
+/* Post Card Link - Entire Card Clickable */
+.post-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+.post-card-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
 .post-card {
   background: white;
   border: 1px solid #e5e7eb;
@@ -74,64 +89,45 @@ title: "Posts"
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-.post-card:hover {
+.post-card-link:hover .post-card {
   border-color: var(--accent);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   transform: translateY(-2px);
 }
 
-/* Banner area with image or teal background */
+/* Clean Banner - No Text Overlay */
 .post-banner {
   height: 160px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  padding: 1rem;
-}
-
-/* Banner overlay for better text readability */
-.post-banner::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.4));
-  pointer-events: none;
 }
 
 .post-content {
   padding: 1.5rem;
 }
 
+/* Meta Info Below Banner */
 .post-meta {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  position: relative;
-  z-index: 1;
+  margin-bottom: 0.75rem;
 }
 
 .post-date {
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: #6b7280;
   font-weight: 500;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .post-series {
   font-size: 0.75rem;
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
+  background: #f3f4f6;
+  color: #374151;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   font-weight: 500;
-  backdrop-filter: blur(4px);
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .post-title {
@@ -139,15 +135,11 @@ title: "Posts"
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.3;
-}
-
-.post-title a {
   color: #111827;
-  text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.post-title a:hover {
+.post-card-link:hover .post-title {
   color: var(--accent);
 }
 
