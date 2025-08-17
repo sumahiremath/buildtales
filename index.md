@@ -206,11 +206,11 @@ title: Build Tales
   gap: 0.5rem;
 }
 
-/* Start Here Section - Enhanced Card Layout */
+/* Start Here Section - 3 Cards Layout */
 .start-here-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
   margin-top: 2rem;
 }
 
@@ -218,7 +218,7 @@ title: Build Tales
   background: white;
   border: 2px solid #e5e7eb;
   border-radius: 12px;
-  padding: 2rem 1.5rem;
+  padding: 1.5rem 1rem;
   text-decoration: none;
   color: inherit;
   display: flex;
@@ -228,45 +228,48 @@ title: Build Tales
   transition: all 0.3s ease;
   position: relative;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  min-height: 180px;
 }
 
 .start-here-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
   border-color: var(--accent);
   text-decoration: none;
 }
 
 .card-icon {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 1rem;
 }
 
 .start-here-card h3 {
   color: #333;
   margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  line-height: 1.3;
 }
 
 .start-here-card p {
   color: #666;
   margin-bottom: 1rem;
   flex-grow: 1;
+  font-size: 0.875rem;
 }
 
 .card-status {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
-  padding: 0.25rem 0.75rem;
-  border-radius: 12px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 10px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
 }
 
 .card-status.available {
@@ -282,11 +285,18 @@ title: Build Tales
 @media (max-width: 768px) {
   .start-here-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1.25rem;
   }
   
   .start-here-card {
-    padding: 1.5rem 1rem;
+    padding: 1.25rem 1rem;
+    min-height: 160px;
+  }
+  
+  .card-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
   }
 }
 
