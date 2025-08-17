@@ -5,6 +5,8 @@ date: 2025-08-20
 categories: [fintech, payments]
 tags: [ach, nacha, payments, reconciliation, same-day-ach, fintech-operations]
 excerpt: "Still powering trillions. Still moving like it's stuck in fax machine mode. ACH is the OG payments backbone that's both the foundation and frustration of American finance."
+banner_image: "/assets/banners/goodbadugly.png"
+banner_color: "#157878"
 
 # SEO and Canonical Tags
 canonical_url: "https://buildtales.dev/fintech/payments/2025/08/20/ach-good-bad-ugly.html"
