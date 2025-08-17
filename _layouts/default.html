@@ -371,6 +371,26 @@
     </header>
 
     <main id="content" class="main-content" role="main">
+      <!-- Article Banner Image for blog posts -->
+      {% if page.categories and (page.banner_image or page.banner_color) %}
+      <div class="article-banner" 
+           {% if page.banner_image %}
+           style="background-image: url('{{ page.banner_image | relative_url }}');"
+           {% else %}
+           style="background: {{ page.banner_color | default: '#157878' }};"
+           {% endif %}>
+        <div class="article-banner-overlay">
+          <div class="article-meta">
+            <span class="article-date">{{ page.date | date: "%B %d, %Y" }}</span>
+            {% if page.series.name %}
+            <span class="article-series">{{ page.series.name }} Part {{ page.series.part }}</span>
+            {% endif %}
+          </div>
+          <h1 class="article-title">{{ page.title }}</h1>
+        </div>
+      </div>
+      {% endif %}
+      
       {{ content }}
       
       <!-- Author Box + CTA for blog posts -->
