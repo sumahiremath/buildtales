@@ -563,36 +563,43 @@
           <!-- Navigation Section -->
           <nav class="footer-nav">
             <a href="/" class="footer-link">Home</a>
+            <span class="footer-nav-separator">|</span>
             <a href="/series" class="footer-link">Series</a>
+            <span class="footer-nav-separator">|</span>
             <a href="/blog" class="footer-link">Posts</a>
+            <span class="footer-nav-separator">|</span>
             <a href="/about" class="footer-link">About</a>
+            <span class="footer-nav-separator">|</span>
             <a href="/subscribe" class="footer-link">Subscribe</a>
           </nav>
 
-          <!-- Newsletter Section -->
-          <form action="https://app.kit.com/forms/8443001/subscriptions" class="footer-newsletter" method="post" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;powered_by&quot;:{&quot;show&quot;:false},&quot;recaptcha&quot;:{&quot;enabled&quot;:false}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800">
-            <div data-style="clean">
-              <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
-              <div data-element="fields" data-stacked="false" class="footer-newsletter-fields">
-                <div class="formkit-field footer-email-field">
-                  <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="your.email@example.com" required="" type="email">
+          <!-- Newsletter and Connect Section - All in one line -->
+          <div class="footer-actions">
+            <!-- Newsletter Section -->
+            <form action="https://app.kit.com/forms/8443001/subscriptions" class="footer-newsletter" method="post" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;powered_by&quot;:{&quot;show&quot;:false},&quot;recaptcha&quot;:{&quot;enabled&quot;:false}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800">
+              <div data-style="clean">
+                <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+                <div data-element="fields" data-stacked="false" class="footer-newsletter-fields">
+                  <div class="formkit-field footer-email-field">
+                    <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="your.email@example.com" required="" type="email">
+                  </div>
+                  <button data-element="submit" class="formkit-submit footer-submit-btn">
+                    <div class="formkit-spinner"><div></div><div></div><div></div></div>
+                    <span class="">Subscribe</span>
+                  </button>
                 </div>
-                <button data-element="submit" class="formkit-submit footer-submit-btn">
-                  <div class="formkit-spinner"><div></div><div></div><div></div></div>
-                  <span class="">Subscribe</span>
-                </button>
               </div>
-            </div>
-          </form>
+            </form>
 
-          <!-- Connect Section -->
-          <div class="footer-connect">
-            <a href="https://linkedin.com/in/sumamanjunath" target="_blank" class="footer-button">
-              💼 Connect on LinkedIn
-            </a>
-            <a href="/about/#contact-form" class="footer-button">
-              ✉️ Send a Message
-            </a>
+            <!-- Connect Section -->
+            <div class="footer-connect">
+              <a href="https://linkedin.com/in/sumamanjunath" target="_blank" class="footer-button">
+                💼 Connect on LinkedIn
+              </a>
+              <a href="/about/#contact-form" class="footer-button">
+                ✉️ Send a Message
+              </a>
+            </div>
           </div>
         </div>
         
@@ -665,6 +672,16 @@
           text-decoration: none;
         }
         
+        .footer-nav-separator {
+          color: #9ca3af;
+          margin: 0;
+          font-size: 16px;
+          line-height: 1.2;
+          vertical-align: baseline;
+          display: inline-block;
+          user-select: none;
+        }
+        
         .footer-newsletter {
           display: flex;
           justify-content: center;
@@ -710,6 +727,14 @@
           white-space: nowrap;
         }
         
+        .footer-actions {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem;
+          flex-wrap: wrap;
+        }
+        
         .footer-connect {
           display: flex;
           flex-wrap: wrap;
@@ -734,26 +759,17 @@
           text-decoration: none;
         }
         
-        /* Desktop Layout - All in one line */
+        /* Desktop Layout - Navigation on top, actions below in one line */
         @media (min-width: 641px) {
           .footer-container {
+            flex-direction: column;
+            gap: 1rem;
+          }
+          
+          .footer-actions {
             flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2rem;
-          }
-          
-          .footer-nav {
-            flex-shrink: 0;
-          }
-          
-          .footer-newsletter {
-            flex: 1;
-            max-width: 400px;
-          }
-          
-          .footer-connect {
-            flex-shrink: 0;
+            justify-content: center;
+            gap: 3rem;
           }
         }
         
@@ -771,6 +787,15 @@
           .footer-link {
             font-size: 14px;
             padding: 2px 4px;
+          }
+          
+          .footer-nav-separator {
+            font-size: 14px;
+          }
+          
+          .footer-actions {
+            flex-direction: column;
+            gap: 1rem;
           }
           
           .footer-newsletter-fields {
@@ -803,6 +828,10 @@
           .footer-link {
             font-size: 13px;
             padding: 1px 3px;
+          }
+          
+          .footer-nav-separator {
+            font-size: 13px;
           }
         }
         
