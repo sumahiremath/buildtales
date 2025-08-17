@@ -52,7 +52,8 @@ series:
 
 *Published on: August 13, 2025*
 
-![Money Flow](../assets/banners/moneyinout.png)
+![Money Flow](/assets/banners/moneyinout.png)
+
 Ever wonder how your paycheck shows up in your bank account on payday? Or how your gym magically pulls your membership fee every month? That's all thanks to a behind-the-scenes hero called **ACH** (Automated Clearing House).
 
 ACH is the electronic network that quietly processes over 29 billion transactions per year in the U.S., totaling more than $72 trillion. It's the digital backbone that moves money between bank accounts reliably and affordably.
