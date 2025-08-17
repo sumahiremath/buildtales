@@ -560,58 +560,106 @@
 
       <footer class="site-footer">
         <div style="text-align: center; padding: 1rem 1rem; background: #f8f9fa; margin: 0; width: 100%;">
-          <!-- Navigation Section -->
-          <nav style="margin-bottom: 0.75rem;">
-            <div style="display: flex; align-items: baseline; justify-content: center; gap: 0.5rem;" class="footer-nav-container">
-              <a href="/" class="footer-nav-link">Home</a>
-              <span class="footer-nav-separator">|</span>
-              <a href="/series" class="footer-nav-link">Series</a>
-              <span class="footer-nav-separator">|</span>
-              <a href="/blog" class="footer-nav-link">Posts</a>
-              <span class="footer-nav-separator">|</span>
-              <a href="/about" class="footer-nav-link">About</a>
-              <span class="footer-nav-separator">|</span>
-              <a href="/subscribe" class="footer-nav-link">Subscribe</a>
-            </div>
-          </nav>
-          
-          <!-- Newsletter Section -->
-          <div style="margin-bottom: 0.75rem;">
-            <h3 style="margin: 0 0 0.375rem 0; color: #333; font-size: 1.1rem;">Stay Updated</h3>
-            <form action="https://app.kit.com/forms/8443001/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;powered_by&quot;:{&quot;show&quot;:false},&quot;recaptcha&quot;:{&quot;enabled&quot;:false}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800">
-              <div data-style="clean">
-                <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
-                <div data-element="fields" data-stacked="false" class="footer-newsletter-fields">
-                  <div class="formkit-field footer-email-field">
-                    <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="your.email@example.com" required="" type="email" style="color: rgb(0, 0, 0); border-color: rgb(227, 227, 227); border-radius: 4px; font-weight: 400; padding: 12px 16px; border: 2px solid #ddd; font-size: 16px; width: 100%;">
-                  </div>
-                  <button data-element="submit" class="formkit-submit footer-submit-btn" style="background: #157878; color: white; border: none; padding: 12px 20px; border-radius: 6px; font-weight: 500; cursor: pointer; font-size: 16px; white-space: nowrap;">
-                    <div class="formkit-spinner"><div></div><div></div><div></div></div>
-                    <span class="">Subscribe</span>
-                  </button>
-                </div>
+          <!-- Desktop Footer - All in one line -->
+          <div class="footer-desktop-layout">
+            <!-- Navigation Section -->
+            <nav class="footer-nav-section">
+              <div style="display: flex; align-items: baseline; justify-content: center; gap: 0.5rem;" class="footer-nav-container">
+                <a href="/" class="footer-nav-link">Home</a>
+                <span class="footer-nav-separator">|</span>
+                <a href="/series" class="footer-nav-link">Series</a>
+                <span class="footer-nav-separator">|</span>
+                <a href="/blog" class="footer-nav-link">Posts</a>
+                <span class="footer-nav-separator">|</span>
+                <a href="/about" class="footer-nav-link">About</a>
+                <span class="footer-nav-separator">|</span>
+                <a href="/subscribe" class="footer-nav-link">Subscribe</a>
               </div>
-            </form>
+            </nav>
+            
+            <!-- Newsletter Section -->
+            <div class="footer-newsletter-section">
+              <form action="https://app.kit.com/forms/8443001/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;powered_by&quot;:{&quot;show&quot;:false},&quot;recaptcha&quot;:{&quot;enabled&quot;:false}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800">
+                <div data-style="clean">
+                  <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+                  <div data-element="fields" data-stacked="false" class="footer-newsletter-fields">
+                    <div class="formkit-field footer-email-field">
+                      <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="your.email@example.com" required="" type="email" style="color: rgb(0, 0, 0); border-color: rgb(227, 227, 227); border-radius: 4px; font-weight: 400; padding: 12px 16px; border: 2px solid #ddd; font-size: 16px; width: 100%;">
+                    </div>
+                    <button data-element="submit" class="formkit-submit footer-submit-btn" style="background: #157878; color: white; border: none; padding: 12px 20px; border-radius: 6px; font-weight: 500; cursor: pointer; font-size: 16px; white-space: nowrap;">
+                      <div class="formkit-spinner"><div></div><div></div><div></div></div>
+                      <span class="">Subscribe</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            
+            <!-- Connect Section -->
+            <div class="footer-connect-section">
+              <a href="https://linkedin.com/in/sumamanjunath" 
+                 target="_blank"
+                 style="background: #157878; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 1rem;">
+                💼 Connect on LinkedIn
+              </a>
+              <a href="/about/#contact-form" 
+                 style="background: #157878; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 1rem;">
+                ✉️ Send a Message
+              </a>
+            </div>
           </div>
           
-          <!-- Connect Section -->
-          <p style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-weight: 500; color: #333;">
-            <strong>Building something interesting?</strong> Let's connect!
-          </p>
-          
-          <div style="margin: 0.5rem 0; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; align-items: center;">
-            <a href="https://linkedin.com/in/sumamanjunath" 
-               target="_blank"
-               style="background: #157878; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 1rem;">
-              💼 Connect on LinkedIn
-            </a>
-            <a href="/about/#contact-form" 
-               style="background: #157878; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 1rem;">
-              ✉️ Send a Message
-            </a>
+          <!-- Mobile Footer - Stacked layout -->
+          <div class="footer-mobile-layout">
+            <!-- Navigation Section -->
+            <nav style="margin-bottom: 0.75rem;">
+              <div style="display: flex; align-items: baseline; justify-content: center; gap: 0.5rem;" class="footer-nav-container">
+                <a href="/" class="footer-nav-link">Home</a>
+                <span class="footer-nav-separator">|</span>
+                <a href="/series" class="footer-nav-link">Series</a>
+                <span class="footer-nav-separator">|</span>
+                <a href="/blog" class="footer-nav-link">Posts</a>
+                <span class="footer-nav-separator">|</span>
+                <a href="/about" class="footer-nav-link">About</a>
+                <span class="footer-nav-separator">|</span>
+                <a href="/subscribe" class="footer-nav-link">Subscribe</a>
+              </div>
+            </nav>
+            
+            <!-- Newsletter Section -->
+            <div style="margin-bottom: 0.75rem;">
+              <form action="https://app.kit.com/forms/8443001/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;powered_by&quot;:{&quot;show&quot;:false},&quot;recaptcha&quot;:{&quot;enabled&quot;:false}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800">
+                <div data-style="clean">
+                  <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+                  <div data-element="fields" data-stacked="false" class="footer-newsletter-fields">
+                    <div class="formkit-field footer-email-field">
+                      <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="your.email@example.com" required="" type="email" style="color: rgb(0, 0, 0); border-color: rgb(227, 227, 227); border-radius: 4px; font-weight: 400; padding: 12px 16px; border: 2px solid #ddd; font-size: 16px; width: 100%;">
+                    </div>
+                    <button data-element="submit" class="formkit-submit footer-submit-btn" style="background: #157878; color: white; border: none; padding: 12px 20px; border-radius: 6px; font-weight: 500; cursor: pointer; font-size: 16px; white-space: nowrap;">
+                      <div class="formkit-spinner"><div></div><div></div><div></div></div>
+                      <span class="">Subscribe</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            
+            <!-- Connect Section -->
+            <div style="margin: 0.5rem 0; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; align-items: center;">
+              <a href="https://linkedin.com/in/sumamanjunath" 
+                 target="_blank"
+                 style="background: #157878; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 1rem;">
+                💼 Connect on LinkedIn
+              </a>
+              <a href="/about/#contact-form" 
+                 style="background: #157878; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 1rem;">
+                ✉️ Send a Message
+              </a>
+            </div>
           </div>
           
-          <div style="border-top: 1px solid #ddd; padding-top: 0.375rem; margin-top: 0.5rem; display: flex; justify-content: center; align-items: center;">
+          <!-- Logo Section -->
+          <div style="display: flex; justify-content: center; align-items: center; margin-top: 0.5rem;">
             <div style="display: flex; flex-direction: column; align-items: center; gap: 0.375rem;" class="footer-logo-section">
               <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Suma Manjunath" 
                    width="40" height="40" style="border-radius: 50%; object-fit: cover;">
@@ -657,6 +705,46 @@
           margin-right: calc(-50vw + 50%) !important;
           left: 0 !important;
           right: 0 !important;
+        }
+        
+        /* Desktop Footer Layout - All in one line */
+        .footer-desktop-layout {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 2rem;
+          margin-bottom: 1rem;
+        }
+        
+        .footer-nav-section {
+          flex-shrink: 0;
+        }
+        
+        .footer-newsletter-section {
+          flex: 1;
+          max-width: 400px;
+        }
+        
+        .footer-connect-section {
+          flex-shrink: 0;
+          display: flex;
+          gap: 1rem;
+        }
+        
+        /* Mobile Footer Layout - Hidden on desktop */
+        .footer-mobile-layout {
+          display: none;
+        }
+        
+        /* Ensure desktop layout on larger screens */
+        @media (min-width: 641px) {
+          .footer-desktop-layout {
+            display: flex !important;
+          }
+          
+          .footer-mobile-layout {
+            display: none !important;
+          }
         }
         
         /* Footer Navigation - Copy exact header styles */
@@ -717,6 +805,15 @@
         
         /* Mobile responsive - Copy exact header mobile styles */
         @media (max-width: 640px) {
+          /* Show mobile footer, hide desktop footer */
+          .footer-desktop-layout {
+            display: none !important;
+          }
+          
+          .footer-mobile-layout {
+            display: block !important;
+          }
+          
           /* Compact footer navigation like header */
           .footer-nav-container {
             flex-wrap: nowrap !important;
