@@ -5,12 +5,24 @@ title: Build Tales
 
 <!-- Hero Section -->
 <section class="py-16">
-  <div class="mx-auto max-w-3xl text-center space-y-6">
+  <div class="mx-auto max-w-4xl text-center space-y-6">
     <h1 class="text-5xl font-bold">Deep, no-fluff essays on engineering leadership & U.S. payments.</h1>
     <p class="text-xl font-medium" style="color: #333; margin: 1.5rem auto; max-width: 600px; text-align: center;">Actionable breakdowns you can read in 7–12 minutes.</p>
-    <div class="hero-buttons">
-      <a class="hero-btn-primary" href="/series/payments">🚀 Start the Payments Series</a>
-      <a class="hero-btn-secondary" href="/blog">📚 Explore All Posts</a>
+    
+    <!-- Hero Cards -->
+    <div class="hero-cards-grid">
+      <a class="hero-card primary" href="/series/payments">
+        <div class="hero-card-icon">🚀</div>
+        <h3>Start the Payments Series</h3>
+        <p>Deep dive into U.S. payment systems - from ACH to wire transfers</p>
+        <span class="hero-card-action">Begin Reading →</span>
+      </a>
+      <a class="hero-card secondary" href="/blog">
+        <div class="hero-card-icon">📚</div>
+        <h3>Explore All Posts</h3>
+        <p>Browse engineering leadership, systems, and payment articles</p>
+        <span class="hero-card-action">View Posts →</span>
+      </a>
     </div>
   </div>
 </section>
@@ -278,56 +290,89 @@ title: Build Tales
   }
 }
 
-/* Hero Buttons - Large, Prominent CTAs */
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 2rem;
+/* Hero Cards - Card-style CTAs */
+.hero-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.hero-btn-primary {
+.hero-card {
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 2rem;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  min-height: 200px;
+}
+
+.hero-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+}
+
+.hero-card.primary {
+  border-color: #157878;
   background: linear-gradient(135deg, #157878 0%, #1a8a8a 100%);
   color: white;
-  padding: 18px 36px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
-  display: inline-block;
-  box-shadow: 0 4px 12px rgba(21, 120, 120, 0.3);
-  transition: all 0.3s ease;
-  transform: translateY(0);
 }
 
-.hero-btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(21, 120, 120, 0.4);
-  text-decoration: none;
+.hero-card.primary:hover {
+  box-shadow: 0 12px 32px rgba(21, 120, 120, 0.3);
   color: white;
 }
 
-.hero-btn-secondary {
-  background: white;
-  color: #157878;
-  padding: 18px 36px;
-  border: 2px solid #157878;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
-  display: inline-block;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  transform: translateY(0);
+.hero-card.secondary {
+  border-color: #157878;
 }
 
-.hero-btn-secondary:hover {
-  background: #157878;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(21, 120, 120, 0.3);
-  text-decoration: none;
+.hero-card.secondary:hover {
+  border-color: #157878;
+  background: #f8fffe;
+}
+
+.hero-card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+  color: inherit;
+}
+
+.hero-card p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin: 0 0 1.5rem 0;
+  flex-grow: 1;
+  color: inherit;
+}
+
+.hero-card-action {
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* Card styles */
@@ -363,19 +408,24 @@ title: Build Tales
 
 /* Mobile responsive */
 @media (max-width: 640px) {
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+  .hero-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
   }
   
-  .hero-btn-primary,
-  .hero-btn-secondary {
-    width: 100%;
-    max-width: 320px;
-    text-align: center;
-    padding: 16px 24px;
-    font-size: 1rem;
+  .hero-card {
+    padding: 1.5rem;
+    min-height: 160px;
+  }
+  
+  .hero-card-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .hero-card h3 {
+    font-size: 1.125rem;
   }
   
   .flex {
