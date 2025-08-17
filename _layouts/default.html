@@ -234,7 +234,7 @@
           
           /* Mobile footer adjustments */
           .site-footer div {
-            padding: 2rem 1rem !important;
+            padding: 1.5rem 1rem !important;
           }
           
           .site-footer a {
@@ -259,6 +259,11 @@
           }
           
           /* Newsletter form mobile adjustments */
+          section {
+            padding: 1.5rem 1rem !important;
+            margin-top: 1.5rem !important;
+          }
+          
           section form {
             flex-direction: column !important;
             gap: 12px !important;
@@ -399,7 +404,7 @@
       {% endif %}
 
       <!-- Newsletter Subscription Section - Last thing on every page -->
-      <section style="background: #f8f9fa; padding: 2rem 1rem; margin-top: 3rem; text-align: center; border-radius: 8px;">
+      <section style="background: #f8f9fa; padding: 2rem 1rem; margin-top: 2rem; text-align: center; border-radius: 8px;">
         <h3 style="margin: 0 0 1.5rem 0; color: #333; font-size: 1.2rem;">Stay Updated</h3>
         <div style="max-width: 400px; margin: 0 auto;">
           <form action="https://app.kit.com/forms/8443001/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;powered_by&quot;:{&quot;show&quot;:false},&quot;recaptcha&quot;:{&quot;enabled&quot;:false}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800">
@@ -517,12 +522,12 @@
       </section>
 
       <footer class="site-footer">
-        <div style="text-align: center; padding: 2.5rem 1rem; background: #f8f9fa; border-radius: 8px; margin-top: 3rem;">
+        <div style="text-align: center; padding: 2rem 1rem; background: #f8f9fa; border-radius: 8px; margin-top: 1rem;">
           <p style="margin: 0 0 1rem 0; font-size: 1.1rem; font-weight: 500; color: #333;">
             <strong>Building something interesting?</strong> Let's connect!
           </p>
           
-          <div style="margin: 1.5rem 0; display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; align-items: center;">
+          <div style="margin: 1.5rem 0; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; align-items: center;">
             <a href="https://linkedin.com/in/sumamanjunath" 
                target="_blank"
                style="background: #157878; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 1rem;">
@@ -534,7 +539,7 @@
             </a>
           </div>
           
-          <div style="border-top: 1px solid #ddd; padding-top: 1rem; margin-top: 1.5rem; display: flex; justify-content: center; align-items: center;">
+          <div style="border-top: 1px solid #ddd; padding-top: 0.75rem; margin-top: 1rem; display: flex; justify-content: center; align-items: center;">
             <div style="display: flex; align-items: center; gap: 0.75rem;">
               <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Suma Manjunath" 
                    width="40" height="40" style="border-radius: 50%; object-fit: cover;">

@@ -19,8 +19,6 @@ title: "Subscribe"
       
       <!-- Newsletter form will be embedded here by the layout -->
     </div>
-    
-    <p class="text-sm opacity-60 mt-6">Join 1,000+ engineers building better systems and teams.</p>
   </section>
 </div>
 

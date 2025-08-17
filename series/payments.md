@@ -118,7 +118,6 @@ permalink: /series/payments
   <!-- Subscribe Box -->
   <div class="card mt-8" style="background: #f8f9fa; border: 2px solid var(--accent);">
     <h3 class="text-lg font-semibold mb-3">Get New Articles by Email</h3>
-    <p class="opacity-80 mb-4">Join 1,000+ engineers getting deep dives on payments, systems, and leadership. No spam, just quality content.</p>
     <a class="btn-primary" href="/subscribe">Subscribe Now</a>
   </div>
 </div>
