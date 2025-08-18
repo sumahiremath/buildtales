@@ -1,1 +1,14 @@
 .idea/
+
+# Node.js dependencies
+node_modules/
+package-lock.json
+
+# Python virtual environment
+venv/
+__pycache__/
+*.pyc
+
+# Temporary files
+*.tmp
+*.temp
