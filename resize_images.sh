@@ -33,20 +33,22 @@ resize_image() {
     local width="$3"
     local height="$4"
     
-    if sips -s format jpeg -Z "$height" "$input_file" --out "$output_file" > /dev/null 2>&1; then
-        # sips resizes to fit within the specified size, so we need to crop to exact dimensions
-        # First, let's get the actual dimensions of the resized image
+    # First resize to the larger dimension to maintain aspect ratio
+    if sips -s format jpeg -Z "$width" "$input_file" --out "$output_file" > /dev/null 2>&1; then
+        # Then crop to exact dimensions
+        sips -c "$height" "$width" "$output_file" > /dev/null 2>&1
+        
+        # Verify the final dimensions
         local actual_width=$(sips -g pixelWidth "$output_file" | tail -1 | cut -d: -f2 | xargs)
         local actual_height=$(sips -g pixelHeight "$output_file" | tail -1 | cut -d: -f2 | xargs)
         
-        # If the image is wider than needed, crop the width
-        if [ "$actual_width" -gt "$width" ]; then
-            local crop_x=$(( (actual_width - width) / 2 ))
-            sips -c "$height" "$width" "$output_file" --cropOffset "$crop_x" 0 > /dev/null 2>&1
+        if [ "$actual_width" -eq "$width" ] && [ "$actual_height" -eq "$height" ]; then
+            echo -e "${GREEN}✅ Resized: $(basename "$input_file") -> ${width}x${height}${NC}"
+            return 0
+        else
+            echo -e "${RED}❌ Failed to achieve correct dimensions: ${actual_width}x${actual_height} (expected ${width}x${height})${NC}"
+            return 1
         fi
-        
-        echo -e "${GREEN}✅ Resized: $(basename "$input_file") -> ${width}x${height}${NC}"
-        return 0
     else
         echo -e "${RED}❌ Error resizing $(basename "$input_file")${NC}"
         return 1
