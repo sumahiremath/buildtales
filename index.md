@@ -67,7 +67,9 @@ title: Build Tales
         <article class="recent-post-card">
           <!-- Clean Banner Image -->
           <div class="recent-post-banner" 
-               {% if post.banner_image %}
+               {% if post.banner_image_recent %}
+               style="background-image: url('{{ post.banner_image_recent | relative_url }}');"
+               {% elsif post.banner_image %}
                style="background-image: url('{{ post.banner_image | relative_url }}');"
                {% else %}
                style="background: {{ post.banner_color | default: '#157878' }};"

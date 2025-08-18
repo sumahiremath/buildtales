@@ -5,7 +5,8 @@ date: 2025-08-17
 categories: [fintech, payments, compliance]
 tags: [ach, nacha, noc, correction-codes, compliance, fintech-operations, audit]
 excerpt: "When it comes to ACH payments, mistakes happen. Instead of rejecting every transaction, the ACH Network gives us Notification of Change (NOC) codes. I learned the hard way: every NOC is not just a suggestion—it's a requirement."
-banner_image: "/assets/banners/achnocs.png"
+banner_image: "/assets/banners/resized/achnocs-blog.jpg"
+banner_image_recent: "/assets/banners/resized/achnocs-recent.jpg"
 banner_color: "#157878"
 
 # SEO and Canonical Tags

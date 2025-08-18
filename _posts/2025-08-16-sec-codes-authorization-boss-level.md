@@ -5,7 +5,7 @@ date: 2025-08-16
 categories: [fintech, payments]
 tags: [ach, sec-codes, compliance, authorization, nacha]
 excerpt: "SEC codes determine your compliance fate in ACH payments. Get them wrong and face chargebacks, fines, and regulatory headaches. This guide shows you how to classify transactions correctly and stay compliant."
-banner_image: "/assets/banners/A_flat-style_digital_illustration_features_a_young_1200x400.jpg"
+banner_image: "/assets/banners/resized/A_flat-style_digital_illustration_features_a_young_1200x400-blog.jpg"
 banner_color: "#157878"
 
 # SEO and Canonical Tags

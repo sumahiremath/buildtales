@@ -5,7 +5,7 @@ date: 2025-08-15
 categories: [fintech, payments]
 tags: [nacha, ach, file-format, fintech-operations, payments-infrastructure, banking]
 excerpt: "Every ACH transaction starts as a carefully crafted 94-character line in a NACHA file. Let's decode the cryptic structure that moves $72 trillion annually through the U.S. banking system."
-banner_image: "/assets/banners/A_2D_digital_illustration_serves_as_a_banner_or_co_1200x400.jpg"
+banner_image: "/assets/banners/resized/A_2D_digital_illustration_serves_as_a_banner_or_co_1200x400-blog.jpg"
 banner_color: "#157878"
 
 # SEO and Canonical Tags

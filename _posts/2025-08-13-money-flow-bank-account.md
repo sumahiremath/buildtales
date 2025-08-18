@@ -5,7 +5,7 @@ date: 2025-08-13
 categories: [fintech, payments]
 tags: [ach, payments, banking, fintech-basics]
 excerpt: "Ever wonder how your paycheck shows up in your bank account on payday? Or how your gym magically pulls your membership fee every month? That's all thanks to ACH - the behind-the-scenes hero of American banking."
-banner_image: "/assets/banners/moneyinout.png"
+banner_image: "/assets/banners/resized/moneyinout-blog.jpg"
 banner_color: "#157878"
 
 # SEO and Canonical Tags

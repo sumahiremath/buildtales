@@ -5,7 +5,8 @@ date: 2025-08-18
 categories: [engineering, leadership, management, systems]
 tags: [engineering-management, project-management, leadership, team-building, technical-decision-making]
 excerpt: "Sometimes the projects that look simple on paper become the most transformative experiences. Here's how what was supposed to be a straightforward quarter-long initiative became my real introduction to engineering management."
-banner_image: "/assets/banners/mousefinish.png"
+banner_image: "/assets/banners/resized/mousefinish-blog.jpg"
+banner_image_recent: "/assets/banners/resized/mousefinish-recent.jpg"
 banner_color: "#157878"
 
 # SEO and Canonical Tags
