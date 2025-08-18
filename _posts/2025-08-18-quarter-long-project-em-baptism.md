@@ -130,7 +130,7 @@ But it also gave me **proof for the client** that the **old pipeline was quietly
 
 > *In payments, launch isn’t the finish line. The tail can chase you for months.*
 
-## 📊 The ACH Integration Journey
+## The ACH Integration Journey
 
 Here’s the journey in one picture — because sometimes a chart tells the story better than paragraphs.  
 
