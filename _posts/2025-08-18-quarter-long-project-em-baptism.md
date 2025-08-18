@@ -144,6 +144,7 @@ Here’s the journey in one picture — because sometimes a chart tells the stor
 - Managing the Tail → *“Zombie Returns”*  
 - Seamless Launch → *“The Magic Trick”*  
 
+<div class="mermaid">
 flowchart TD
     A["The Quarter-Long Fantasy"] --> B["Spreadsheet Therapy"]
     B --> C["New PMs, Who Dis?"]
@@ -161,7 +162,7 @@ flowchart TD
     style F fill:#ffebee,stroke:#ef9a9a,stroke-width:2px
     style G fill:#ffebee,stroke:#ef5350,stroke-width:2px
     style H fill:#ede7f6,stroke:#9575cd,stroke-width:2px
-
+</div>
 ---
 
 ## The Outcome
