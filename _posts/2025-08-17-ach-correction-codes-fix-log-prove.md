@@ -38,7 +38,7 @@ syndication:
 
 _Published on: August 17, 2025_
 
-![ACH NOCS](/assets/images/ach-nocs.jpg)
+![ACH NOCS](/assets/banners/achnocs.png)
 
 When it comes to ACH payments, mistakes happen. An account number is off by a digit, a routing number is outdated, or someone closed their account last month. Instead of rejecting every transaction outright, the ACH Network gives us Notification of Change (NOC) codes—standardized correction messages that financial institutions send back so originators can fix the data.
 
