@@ -187,6 +187,16 @@ And that was the point.
 - **Onboarding late hires takes time.** The **mythical man month doesn't care about your deadline**.
 - **Operationalize the "what ifs."** **Payments fire drills are weird, but they work**.
 
+## What I Might Have Done Differently
+
+Looking back, a few things stand out.
+
+- I could have invested earlier in **cross-training the product manager** on ACH fundamentals instead of drip-feeding knowledge under pressure. That might have accelerated decision-making.
+- I underestimated how much complexity came from the client’s **multiple sites and environments**, each with their own development, QA, and release cycles. If I had pushed for clearer configurability expectations upfront, it could have reduced later coordination churn.
+- And if I had aligned earlier on the **client’s enterprise release calendar**, we might have avoided some of the heartburn that came from missing narrow release windows.
+
+None of these gaps derailed us — but recognizing them makes me sharper for the next big program.
+
 ## Closing  
 
 This wasn’t the **clean, quarter-long project** I imagined. It was **messy, unpredictable, and exhausting**.  
