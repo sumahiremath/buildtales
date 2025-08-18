@@ -101,10 +101,9 @@ title: "Posts"
 /* Clean Banner - No Text Overlay */
 .post-banner {
   height: 160px;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  object-fit: contain;
 }
 
 .post-content {
