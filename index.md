@@ -144,9 +144,10 @@ title: Build Tales
 /* Clean Recent Post Banner */
 .recent-post-banner {
   height: 140px;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  object-fit: contain;
 }
 
 .recent-post-content {
