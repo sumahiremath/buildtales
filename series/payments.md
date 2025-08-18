@@ -8,7 +8,6 @@ permalink: /series/payments
   <header class="space-y-3 mb-8">
     <h1 class="text-4xl font-bold">How U.S. Payments Really Work</h1>
     <p class="text-lg opacity-80">A builder's guide to rails, risk, and reconciliation.</p>
-    <a class="btn-primary" href="/subscribe">Get new parts by email</a>
   </header>
 
   <!-- Series Progress -->
@@ -113,12 +112,6 @@ permalink: /series/payments
         </div>
       </div>
     </section>
-  </div>
-
-  <!-- Subscribe Box -->
-  <div class="card mt-8" style="background: #f8f9fa; border: 2px solid var(--accent);">
-    <h3 class="text-lg font-semibold mb-3">Get New Articles by Email</h3>
-    <a class="btn-primary" href="/subscribe">Subscribe Now</a>
   </div>
 </div>
 
