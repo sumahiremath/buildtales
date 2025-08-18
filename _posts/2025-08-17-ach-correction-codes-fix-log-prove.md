@@ -102,4 +102,4 @@ In ACH, the saying holds true: Fix it once, fix it right, and leave a trail prov
 
 ---
 
-*Enjoyed this deep dive? Check out the main [How U.S. Payments Really Work](/how-us-payments-actually-work/) series for more payment system mysteries demystified.*
+*Enjoyed this deep dive? Check out the main [How U.S. Payments Really Work](/series/payments) series for more payment system mysteries demystified.*
