@@ -112,5 +112,5 @@ flowchart LR
 <!-- Series Navigation -->
 <div style="background: #f8f9fa; border-left: 4px solid #007acc; padding: 1rem; margin: 1rem 0;">
   <strong>"How U.S. Payments Really Work" Series Navigation</strong><br>
-  [NAVIGATION_LINKS_HERE] | <a href="/how-us-payments-actually-work/">View complete series roadmap</a>
+  [NAVIGATION_LINKS_HERE] | <a href="/series/payments">View complete series roadmap</a>
 </div>
