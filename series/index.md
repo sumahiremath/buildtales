@@ -13,7 +13,7 @@ title: "Series"
       <div class="series-card-header">
         <div class="series-meta">
           <span class="series-status active">Available Now</span>
-          <span class="series-progress">3 of 12 articles</span>
+          <span class="series-progress">3 of 45 articles</span>
         </div>
       </div>
       <h2 class="series-title"><span class="series-title-icon">🚀</span> How U.S. Payments Really Work</h2>
@@ -24,16 +24,16 @@ title: "Series"
       </div>
     </a>
     
-    <!-- Engineering Leadership Series -->
-    <a href="/series/engineering-leadership" class="series-card available">
+    <!-- Build, Break, Lead Series -->
+    <a href="/series/build-break-lead" class="series-card available">
       <div class="series-card-header">
         <div class="series-meta">
           <span class="series-status active">Available Now</span>
-          <span class="series-progress">1 of 13 articles</span>
+          <span class="series-progress">1 of 14 articles</span>
         </div>
       </div>
-      <h2 class="series-title"><span class="series-title-icon">⚡</span> Engineering Leadership: From IC to VP</h2>
-      <p class="series-description">A comprehensive guide to scaling yourself, your team, and your organization through engineering leadership.</p>
+      <h2 class="series-title"><span class="series-title-icon">⚡</span> Build, Break, Lead: Engineering Leadership Journey</h2>
+      <p class="series-description">A practical guide to transitioning from individual contributor to engineering manager. Everything you need to understand, build, and scale engineering teams.</p>
       <div class="series-actions">
         <span class="series-cta primary">Start Reading →</span>
         <span class="series-secondary">View Complete Series</span>
@@ -55,19 +55,7 @@ title: "Series"
       </div>
     </div>
     
-    <div class="series-card coming-soon">
-      <div class="series-card-header">
-        <div class="series-meta">
-          <span class="series-status upcoming">Coming Q3 2026</span>
-          <span class="series-progress">18 articles planned</span>
-        </div>
-      </div>
-      <h2 class="series-title"><span class="series-title-icon">🛡️</span> Systems Design at Scale</h2>
-      <p class="series-description">Real-world architecture decisions, tradeoffs, and lessons learned from building systems that handle millions of transactions.</p>
-      <div class="series-actions">
-        <span class="series-cta disabled">Coming Soon</span>
-      </div>
-    </div>
+
   </div>
 </div>
 
