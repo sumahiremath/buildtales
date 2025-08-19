@@ -31,7 +31,7 @@ title: Build Tales
 <!-- Hero Inline Signup Bar -->
 <section class="py-16">
   <div class="mx-auto max-w-4xl px-4">
-    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 shadow-lg" style="background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%); border: 1px solid #c7d2fe; border-radius: 16px; padding: 2rem; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
+    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 shadow-lg my-8" style="background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%); border: 1px solid #c7d2fe; border-radius: 16px; padding: 2rem; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
       <div class="text-center mb-6">
         <p class="text-lg font-semibold text-gray-800 mb-2" style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">👋 Hey, I'm Suma</p>
         <p class="text-gray-600" style="color: #4b5563; line-height: 1.6;">I write deep dives on fintech & engineering leadership. Join 500+ builders getting one new insight every week.</p>
