@@ -34,6 +34,7 @@ title: Build Tales
     <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
       <div class="flex flex-col sm:flex-row items-center gap-4">
         <div class="flex-shrink-0">
+          <br>
           <p class="text-gray-700 font-medium">👋 Hey, I'm Suma. I write deep dives on fintech & engineering leadership.</p>
         </div>
         <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex-1 flex flex-col sm:flex-row gap-3" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
@@ -82,6 +83,7 @@ title: Build Tales
   <div class="mx-auto max-w-4xl px-4">
     <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-6 shadow-sm">
       <div class="text-center">
+        <br>
         <h3 class="text-lg font-semibold text-gray-800 mb-2">Don't miss when Staff+ Systems Thinking drops</h3>
         <p class="text-gray-600 mb-4">Subscribe and I'll send it straight to you.</p>
         <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex flex-col sm:flex-row gap-3 max-w-md mx-auto" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">

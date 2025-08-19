@@ -6,6 +6,135 @@ title: "Posts"
 <div class="mx-auto max-w-3xl">
   <h1 class="text-4xl font-bold mb-6">Posts</h1>
   
+  <!-- Hero Inline Signup Bar -->
+  <section class="py-8 mb-8">
+    <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+      <div class="flex flex-col sm:flex-row items-center gap-4">
+        <div class="flex-shrink-0">
+          <p class="text-gray-700 font-medium">👋 Hey, I'm Suma. I write deep dives on fintech & engineering leadership. Join 500+ builders getting one new insight every week.</p>
+        </div>
+        <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex-1 flex flex-col sm:flex-row gap-3" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
+          <input type="email" name="email_address" placeholder="Enter your email" required 
+                 class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+          <button type="submit" 
+                  class="px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm whitespace-nowrap">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Tag/Category Clouds -->
+  <section class="mb-8">
+    <h2 class="text-2xl font-semibold mb-4">Explore by Topic</h2>
+    <div class="tag-cloud-container">
+      {% assign tag_counts = '' | split: '' %}
+      {% assign tag_colors = '' | split: '' %}
+      
+      {% for post in site.posts %}
+        {% for category in post.categories %}
+          {% assign tag = category | downcase %}
+          {% assign found = false %}
+          {% for existing_tag in tag_counts %}
+            {% if existing_tag.name == tag %}
+              {% assign found = true %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+          {% unless found %}
+            {% assign tag_info = tag | append: '|1' | split: '|' %}
+            {% assign tag_counts = tag_counts | push: tag_info %}
+          {% else %}
+            {% assign tag_counts = tag_counts | map: 'increment' %}
+          {% endunless %}
+        {% endfor %}
+      {% endfor %}
+      
+      <!-- Calculate tag frequencies and assign colors -->
+      {% assign tag_data = '' | split: '' %}
+      {% for post in site.posts %}
+        {% for category in post.categories %}
+          {% assign tag = category | downcase %}
+          {% assign count = 0 %}
+          {% for post2 in site.posts %}
+            {% for category2 in post2.categories %}
+              {% if category2 | downcase == tag %}
+                {% assign count = count | plus: 1 %}
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+          {% assign tag_info = tag | append: '|' | append: count | split: '|' %}
+          {% assign tag_data = tag_data | push: tag_info %}
+        {% endfor %}
+      {% endfor %}
+      
+      <!-- Remove duplicates and assign colors -->
+      {% assign unique_tags = '' | split: '' %}
+      {% for tag_info in tag_data %}
+        {% assign tag_name = tag_info[0] %}
+        {% assign tag_count = tag_info[1] %}
+        {% assign found = false %}
+        {% for existing in unique_tags %}
+          {% if existing.name == tag_name %}
+            {% assign found = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        {% unless found %}
+          {% assign tag_obj = tag_name | append: '|' | append: tag_count | split: '|' %}
+          {% assign unique_tags = unique_tags | push: tag_obj %}
+        {% endunless %}
+      {% endfor %}
+      
+      <!-- Sort by frequency and assign colors -->
+      {% assign sorted_tags = unique_tags | sort: '1' | reverse %}
+      {% for tag_info in sorted_tags limit: 15 %}
+        {% assign tag_name = tag_info[0] %}
+        {% assign tag_count = tag_info[1] %}
+        {% assign font_size = tag_count | times: 2 | plus: 14 %}
+        {% assign opacity = tag_count | times: 10 | plus: 60 %}
+        
+        {% assign tag_color = '#3b82f6' %}
+        {% if tag_name contains 'payment' or tag_name contains 'ach' or tag_name contains 'nacha' or tag_name contains 'wire' %}
+          {% assign tag_color = '#3b82f6' %}
+        {% elsif tag_name contains 'leadership' or tag_name contains 'management' or tag_name contains 'team' %}
+          {% assign tag_color = '#10b981' %}
+        {% elsif tag_name contains 'system' or tag_name contains 'architecture' or tag_name contains 'scale' %}
+          {% assign tag_color = '#f59e0b' %}
+        {% elsif tag_name contains 'engineering' or tag_name contains 'development' %}
+          {% assign tag_color = '#8b5cf6' %}
+        {% else %}
+          {% assign tag_color = '#6b7280' %}
+        {% endif %}
+        
+        <a href="/blog?tag={{ tag_name }}" class="tag-cloud-item" 
+           style="font-size: {{ font_size }}px; color: {{ tag_color }}; opacity: {{ opacity | divided_by: 100.0 }};"
+           data-tag="{{ tag_name }}">
+          {{ tag_name | capitalize }}
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+  
+  <!-- Staff+ Systems Thinking Signup Card -->
+  <section class="py-8 mb-8">
+    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-6 shadow-sm">
+      <div class="text-center">
+        <h3 class="text-lg font-semibold text-gray-800 mb-2">Don't miss when Staff+ Systems Thinking drops</h3>
+        <p class="text-gray-600 mb-4">Subscribe and I'll send it straight to you.</p>
+        <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex flex-col sm:flex-row gap-3 max-w-md mx-auto" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
+          <input type="email" name="email_address" placeholder="Enter your email" required 
+                 class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+          <button type="submit" 
+                  class="px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm whitespace-nowrap">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+  
   <!-- Filter Navigation -->
   <div class="filter-nav mb-6">
     <a class="filter-link filter-link--active" href="/blog">All</a>
@@ -61,6 +190,41 @@ title: "Posts"
 </div>
 
 <style>
+/* Tag Cloud Styling */
+.tag-cloud-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  min-height: 120px;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.tag-cloud-item {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.tag-cloud-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  border-color: currentColor;
+}
+
 /* Finshots-inspired blog styling */
 
 .posts-grid {
@@ -232,6 +396,16 @@ title: "Posts"
 
 /* Responsive adjustments */
 @media (max-width: 640px) {
+  .tag-cloud-container {
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+  
+  .tag-cloud-item {
+    padding: 0.375rem 0.75rem;
+    font-size: 14px !important;
+  }
+  
   .filter-nav {
     gap: 0.25rem;
     padding: 0.5rem;
@@ -269,6 +443,16 @@ title: "Posts"
 
 /* Extra small mobile devices */
 @media (max-width: 480px) {
+  .tag-cloud-container {
+    padding: 0.75rem;
+    gap: 0.25rem;
+  }
+  
+  .tag-cloud-item {
+    padding: 0.25rem 0.5rem;
+    font-size: 12px !important;
+  }
+  
   .filter-nav {
     gap: 0.125rem;
     padding: 0.375rem;
@@ -289,6 +473,7 @@ title: "Posts"
 document.addEventListener('DOMContentLoaded', function() {
   const filterLinks = document.querySelectorAll('.filter-link');
   const postCards = document.querySelectorAll('.post-card-link');
+  const tagCloudItems = document.querySelectorAll('.tag-cloud-item');
   
   // Get current filter from URL parameter
   const urlParams = new URLSearchParams(window.location.search);
@@ -319,6 +504,23 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
+  
+  // Handle tag cloud clicks
+  tagCloudItems.forEach(tag => {
+    tag.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const tagName = this.getAttribute('data-tag');
+      const newUrl = `/blog?tag=${tagName}`;
+      
+      // Update URL without page reload
+      window.history.pushState({}, '', newUrl);
+      
+      // Update display
+      updateActiveFilter(tagName);
+      filterPosts(tagName);
+    });
+  });
   
   // Initialize page with current filter
   updateActiveFilter(currentFilter);
