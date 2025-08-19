@@ -18,6 +18,21 @@ Works with GitHub Pages (no custom filters).
         {%- assign members = members | push: p -%}
       {%- endif -%}
     {%- endfor -%}
+    {%- for p in site.payments -%}
+      {%- if p.draft != true and p.series and p.series contains slug -%}
+        {%- assign members = members | push: p -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- for p in site.ach -%}
+      {%- if p.draft != true and p.series and p.series contains slug -%}
+        {%- assign members = members | push: p -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- for p in site.leadership -%}
+      {%- if p.draft != true and p.series and p.series contains slug -%}
+        {%- assign members = members | push: p -%}
+      {%- endif -%}
+    {%- endfor -%}
 
     {%- assign with_parts = "" | split: "" -%}
     {%- assign no_parts  = "" | split: "" -%}
