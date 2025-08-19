@@ -29,9 +29,9 @@ title: Build Tales
 
 
 <!-- Hero Inline Signup Bar -->
-<section class="py-16">
+<section class="py-8">
   <div class="mx-auto max-w-4xl px-4">
-    <div class="my-8" style="padding: 2rem;">
+    <div class="my-4" style="padding: 1.5rem;">
       <div class="text-center mb-6">
         <p class="text-lg font-semibold text-gray-800 mb-2" style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">👋 Hey, I'm Suma</p>
         <p class="text-gray-600" style="color: #4b5563; line-height: 1.6;">I write deep dives on fintech & engineering leadership. Join 500+ builders getting one new insight every week.</p>
@@ -54,9 +54,9 @@ title: Build Tales
 </section>
 
 <!-- Start Here Section -->
-<section class="py-16 pt-24">
+<section class="py-8">
   <div class="mx-auto max-w-5xl">
-    <h2 class="text-2xl font-semibold mb-8 text-center">Start here</h2>
+    <h2 class="text-2xl font-semibold mb-6 text-center">Start here</h2>
     <div class="start-here-grid">
       <a class="start-here-card" href="/series/payments">
         <div class="card-icon" style="background: #157878; color: white;">🚀</div>
@@ -87,9 +87,9 @@ title: Build Tales
 </section>
 
 <!-- Staff + Systems Thinking Signup Card -->
-<section class="py-16">
+<section class="py-8">
   <div class="mx-auto max-w-4xl px-4">
-    <div class="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-xl p-8 shadow-lg">
+    <div class="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-xl p-6 shadow-lg">
       <div class="text-center">
         <h3 class="text-xl font-semibold text-gray-800 mb-3">Don't miss when Staff+ Systems Thinking drops</h3>
         <p class="text-gray-600 mb-6 text-lg">Subscribe and I'll send it straight to you.</p>
@@ -110,7 +110,7 @@ title: Build Tales
 </section>
 
 <!-- Recent Articles Section -->
-<section class="py-10 pt-16">
+<section class="py-8">
   <div class="mx-auto max-w-3xl">
     <h2 class="text-2xl font-semibold mb-6">Recent Articles</h2>
     <div class="recent-posts-grid">
