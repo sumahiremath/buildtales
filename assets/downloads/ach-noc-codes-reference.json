@@ -1,0 +1,472 @@
+{
+  "metadata": {
+    "title": "ACH NOC Codes Reference",
+    "description": "Complete reference for ACH Notification of Change (NOC) codes C01-C99",
+    "version": "1.0",
+    "last_updated": "2025-01-27",
+    "source": "NACHA Operating Rules & Guidelines",
+    "format": "JSON",
+    "usage": "Integration with ACH parsers, validators, and audit systems"
+  },
+  "noc_codes": {
+    "C01": {
+      "code": "C01",
+      "description": "Incorrect Account Number",
+      "fields_impacted": ["Account Number"],
+      "action_required": "Update customer/vendor record with new account number",
+      "severity": "high",
+      "common_occurrence": "very_common",
+      "example": "Account number 1234567890 should be 9876543210"
+    },
+    "C02": {
+      "code": "C02",
+      "description": "Incorrect Routing Number",
+      "fields_impacted": ["Routing Number"],
+      "action_required": "Update bank directory or partner record with new routing number",
+      "severity": "high",
+      "common_occurrence": "common",
+      "example": "Routing number changed due to bank merger or consolidation"
+    },
+    "C03": {
+      "code": "C03",
+      "description": "Incorrect Routing Number and Incorrect Account Number",
+      "fields_impacted": ["Routing Number", "Account Number"],
+      "action_required": "Update both routing and account numbers",
+      "severity": "critical",
+      "common_occurrence": "uncommon",
+      "example": "Both bank routing and account number are incorrect"
+    },
+    "C04": {
+      "code": "C04",
+      "description": "Incorrect Individual Identification Number",
+      "fields_impacted": ["Individual ID Number"],
+      "action_required": "Update customer identification number",
+      "severity": "medium",
+      "common_occurrence": "uncommon",
+      "example": "SSN, EIN, or other identification number is incorrect"
+    },
+    "C05": {
+      "code": "C05",
+      "description": "Incorrect Transaction Code",
+      "fields_impacted": ["Transaction Code"],
+      "action_required": "Fix the account type flag in your system",
+      "severity": "medium",
+      "common_occurrence": "common",
+      "example": "Account type should be checking (22) not savings (32)"
+    },
+    "C06": {
+      "code": "C06",
+      "description": "Incorrect Account Number and Incorrect Transaction Code",
+      "fields_impacted": ["Account Number", "Transaction Code"],
+      "action_required": "Treat as re-enrollment; validate customer info fully",
+      "severity": "critical",
+      "common_occurrence": "uncommon",
+      "example": "Both account number and account type are wrong"
+    },
+    "C07": {
+      "code": "C07",
+      "description": "Incorrect Routing Number, Incorrect Account Number, and Incorrect Transaction Code",
+      "fields_impacted": ["Routing Number", "Account Number", "Transaction Code"],
+      "action_required": "Re-enroll customer/vendor before resubmitting",
+      "severity": "critical",
+      "common_occurrence": "rare",
+      "example": "Complete re-enrollment required - all major fields are incorrect"
+    },
+    "C08": {
+      "code": "C08",
+      "description": "Incorrect Foreign Receiving DFI Identification",
+      "fields_impacted": ["Foreign Receiving DFI ID"],
+      "action_required": "Update international bank routing information",
+      "severity": "high",
+      "common_occurrence": "rare",
+      "example": "International bank routing number is incorrect"
+    },
+    "C09": {
+      "code": "C09",
+      "description": "Incorrect Individual Identification Number and Incorrect Transaction Code",
+      "fields_impacted": ["Individual ID Number", "Transaction Code"],
+      "action_required": "Update both ID and account type",
+      "severity": "medium",
+      "common_occurrence": "rare",
+      "example": "Both identification number and account type need correction"
+    },
+    "C13": {
+      "code": "C13",
+      "description": "Addenda Format Error",
+      "fields_impacted": ["Addenda Record"],
+      "action_required": "Fix addenda record format in your system",
+      "severity": "low",
+      "common_occurrence": "uncommon",
+      "example": "Addenda record does not meet NACHA format requirements"
+    },
+    "C14": {
+      "code": "C14",
+      "description": "Incorrect SEC Code for Outbound International Payment",
+      "fields_impacted": ["SEC Code"],
+      "action_required": "Update SEC code for international transactions",
+      "severity": "medium",
+      "common_occurrence": "rare",
+      "example": "SEC code should be IAT for international ACH transactions"
+    },
+    "C61": {
+      "code": "C61",
+      "description": "Misrouted Return",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Route return to correct destination",
+      "severity": "medium",
+      "common_occurrence": "uncommon",
+      "example": "Return was sent to wrong ODFI or originator"
+    },
+    "C62": {
+      "code": "C62",
+      "description": "Incorrect Return Code",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Update return code in your system",
+      "severity": "medium",
+      "common_occurrence": "uncommon",
+      "example": "Return reason code is incorrect or invalid"
+    },
+    "C63": {
+      "code": "C63",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "uncommon",
+      "example": "Return was processed as duplicate when it wasn't"
+    },
+    "C64": {
+      "code": "C64",
+      "description": "Incorrect Return Entry",
+      "fields_impacted": ["Return Entry"],
+      "action_required": "Fix return entry details",
+      "severity": "medium",
+      "common_occurrence": "rare",
+      "example": "Return entry contains incorrect information"
+    },
+    "C65": {
+      "code": "C65",
+      "description": "Return of Erroneous or Reversing Debit",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Process as regular return, not reversal",
+      "severity": "medium",
+      "common_occurrence": "rare",
+      "example": "Return should be processed as regular return, not as reversal"
+    },
+    "C67": {
+      "code": "C67",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C68": {
+      "code": "C68",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C69": {
+      "code": "C69",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C70": {
+      "code": "C70",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C71": {
+      "code": "C71",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C72": {
+      "code": "C72",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C73": {
+      "code": "C73",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C74": {
+      "code": "C74",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C75": {
+      "code": "C75",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C76": {
+      "code": "C76",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C77": {
+      "code": "C77",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C78": {
+      "code": "C78",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C79": {
+      "code": "C79",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C80": {
+      "code": "C80",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C81": {
+      "code": "C81",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C82": {
+      "code": "C82",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C83": {
+      "code": "C83",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C84": {
+      "code": "C84",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C85": {
+      "code": "C85",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C86": {
+      "code": "C86",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C87": {
+      "code": "C87",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C88": {
+      "code": "C88",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C89": {
+      "code": "C89",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C90": {
+      "code": "C90",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C91": {
+      "code": "C91",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C92": {
+      "code": "C92",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C93": {
+      "code": "C93",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C94": {
+      "code": "C94",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C95": {
+      "code": "C95",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C96": {
+      "code": "C96",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C97": {
+      "code": "C97",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C98": {
+      "code": "C98",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    },
+    "C99": {
+      "code": "C99",
+      "description": "Return Not a Duplicate",
+      "fields_impacted": ["Return Code"],
+      "action_required": "Remove duplicate return processing",
+      "severity": "low",
+      "common_occurrence": "rare",
+      "example": "Return was incorrectly marked as duplicate"
+    }
+  },
+  "severity_levels": {
+    "critical": "Immediate action required, may require re-enrollment",
+    "high": "Update required before next ACH file",
+    "medium": "Update recommended, affects compliance",
+    "low": "Minor issue, update when convenient"
+  },
+  "common_occurrence_levels": {
+    "very_common": "Seen frequently in production environments",
+    "common": "Regular occurrence, should be handled automatically",
+    "uncommon": "Occasional occurrence, manual review may be needed",
+    "rare": "Seldom seen, may indicate unusual circumstances"
+  },
+  "implementation_notes": {
+    "parsing": "Look for SEC Code = COR in Entry Detail records",
+    "extraction": "NOC code is typically in positions 79-80 of Entry Detail record",
+    "logging": "Always log corrections with timestamp and operator information",
+    "compliance": "Corrections must be applied within 6 banking days or before next entry"
+  }
+}

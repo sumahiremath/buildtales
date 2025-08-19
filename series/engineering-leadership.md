@@ -1,10 +1,10 @@
 ---
 layout: series
-title: "Engineering Leadership: From IC to VP"
+title: "Build, Break, Lead: Engineering Leadership Journey"
 excerpt: "A comprehensive guide to scaling yourself, your team, and your organization through engineering leadership."
 categories: [engineering-leadership]
 series:
-  name: "Engineering Leadership: From IC to VP"
+  name: "Build, Break, Lead: Engineering Leadership Journey"
   description: "A practical journey through the stages of engineering leadership, from your first tech lead role to scaling entire organizations. Based on real experiences and proven patterns."
   total_parts: 13
   benefits:

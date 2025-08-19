@@ -45,8 +45,6 @@ series:
   tags: [ach-basics, money-movement]
 ---
 
-{% include ach-series-ultra-minimal.html %}
-
 # How Money Moves In and Out of Your Bank Account?
 
 *Published on: August 13, 2025*

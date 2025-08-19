@@ -44,9 +44,6 @@ series:
   read_time: 18
   tags: [ach-analysis, fintech-reality]
 ---
-
-{% include ach-series-ultra-minimal.html %}
-
 # ACH: The Good, The Bad, and The Ugly
 
 *Published on: August 20, 2025*

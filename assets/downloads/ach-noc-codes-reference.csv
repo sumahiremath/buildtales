@@ -1,0 +1,50 @@
+Code,Description,Fields_Impacted,Action_Required,Severity,Common_Occurrence,Example
+C01,Incorrect Account Number,Account Number,Update customer/vendor record with new account number,high,very_common,Account number 1234567890 should be 9876543210
+C02,Incorrect Routing Number,Routing Number,Update bank directory or partner record with new routing number,high,common,Routing number changed due to bank merger or consolidation
+C03,Incorrect Routing Number and Incorrect Account Number,"Routing Number, Account Number",Update both routing and account numbers,critical,uncommon,Both bank routing and account number are incorrect
+C04,Incorrect Individual Identification Number,Individual ID Number,Update customer identification number,medium,uncommon,SSN EIN or other identification number is incorrect
+C05,Incorrect Transaction Code,Transaction Code,Fix the account type flag in your system,medium,common,Account type should be checking (22) not savings (32)
+C06,Incorrect Account Number and Incorrect Transaction Code,"Account Number, Transaction Code",Treat as re-enrollment; validate customer info fully,critical,uncommon,Both account number and account type are wrong
+C07,Incorrect Routing + Account + Transaction Code,"Routing Number, Account Number, Transaction Code",Re-enroll customer/vendor before resubmitting,critical,rare,Complete re-enrollment required - all major fields are incorrect
+C08,Incorrect Foreign Receiving DFI Identification,Foreign Receiving DFI ID,Update international bank routing information,high,rare,International bank routing number is incorrect
+C09,Incorrect Individual Identification Number and Incorrect Transaction Code,"Individual ID Number, Transaction Code",Update both ID and account type,medium,rare,Both identification number and account type need correction
+C13,Addenda Format Error,Addenda Record,Fix addenda record format in your system,low,uncommon,Addenda record does not meet NACHA format requirements
+C14,Incorrect SEC Code for Outbound International Payment,SEC Code,Update SEC code for international transactions,medium,rare,SEC code should be IAT for international ACH transactions
+C61,Misrouted Return,Return Code,Route return to correct destination,medium,uncommon,Return was sent to wrong ODFI or originator
+C62,Incorrect Return Code,Return Code,Update return code in your system,medium,uncommon,Return reason code is incorrect or invalid
+C63,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,uncommon,Return was processed as duplicate when it wasn't
+C64,Incorrect Return Entry,Return Entry,Fix return entry details,medium,rare,Return entry contains incorrect information
+C65,Return of Erroneous or Reversing Debit,Return Code,Process as regular return not reversal,medium,rare,Return should be processed as regular return not as reversal
+C67,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C68,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C69,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C70,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C71,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C72,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C73,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C74,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C75,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C76,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C77,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C78,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C79,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C80,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C81,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C82,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C83,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C84,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C85,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C86,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C87,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C88,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C89,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C90,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C91,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C92,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C93,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C94,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C95,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C96,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C97,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C98,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
+C99,Return Not a Duplicate,Return Code,Remove duplicate return processing,low,rare,Return was incorrectly marked as duplicate
