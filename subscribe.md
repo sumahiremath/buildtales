@@ -9,7 +9,7 @@ title: "Subscribe"
 
     <!-- ConvertKit Form -->
     <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form text-center" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
-      <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto justify-center">
+      <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto justify-center items-center">
         <input type="email" name="email_address" placeholder="Enter your email" required 
                class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
         <button type="submit" 
@@ -33,8 +33,6 @@ title: "Subscribe"
     
   <!-- Newsletter form will be embedded here by the layout -->
   </div>
-  </section>
-</div>
 
 <style>
 ul {
