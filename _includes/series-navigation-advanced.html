@@ -67,11 +67,12 @@
     <!-- Progress Bar -->
     <div class="series-progress" style="margin-bottom: 1rem;">
       <div style="width: 100%; background-color: #e9ecef; border-radius: 10px; height: 8px; overflow: hidden;">
-        <div style="width: {{ current_part | times: 100.0 | divided_by: total_parts }}%; background-color: #007acc; height: 100%; border-radius: 10px; transition: width 0.3s ease;"></div>
+        {% assign progress_percent = current_part | times: 100.0 | divided_by: total_parts | default: 0 %}
+        <div style="width: {{ progress_percent }}%; background-color: #007acc; height: 100%; border-radius: 10px; transition: width 0.3s ease;"></div>
       </div>
       <div style="display: flex; justify-content: space-between; margin-top: 0.5rem; font-size: 0.8rem; color: #6c757d;">
         <span>Started</span>
-        <span>{{ current_part | times: 100.0 | divided_by: total_parts | round }}% Complete</span>
+        <span>{% if total_parts > 0 %}{{ progress_percent | round }}% Complete{% else %}0% Complete{% endif %}</span>
         <span>Finished</span>
       </div>
     </div>
@@ -118,7 +119,11 @@
         {% elsif current_part == total_parts %}
           You've reached the final article! Review the series index to see how far you've come.
         {% else %}
-          You're {{ current_part | times: 100.0 | divided_by: total_parts | round }}% through the series. Keep going!
+          {% if total_parts > 0 %}
+            You're {{ progress_percent | round }}% through the series. Keep going!
+          {% else %}
+            You're making progress through the series. Keep going!
+          {% endif %}
         {% endif %}
       </p>
     </div>

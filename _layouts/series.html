@@ -59,7 +59,8 @@ layout: default
       <span class="text-sm text-gray-500">{{ available_posts }} of {{ total_parts }} articles</span>
     </div>
     <div class="w-full bg-gray-200 rounded-full h-2">
-      <div class="bg-blue-600 h-2 rounded-full" style="width: {{ available_posts | times: 100.0 | divided_by: total_parts }}%"></div>
+      {% assign progress_percent = available_posts | times: 100.0 | divided_by: total_parts | default: 0 %}
+      <div class="bg-blue-600 h-2 rounded-full" style="width: {{ progress_percent }}%"></div>
     </div>
   </div>
 
