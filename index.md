@@ -29,7 +29,7 @@ title: Build Tales
 
 
 <!-- Hero Inline Signup Bar -->
-<section class="py-12">
+<section class="py-16">
   <div class="mx-auto max-w-4xl px-4">
     <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 shadow-lg" style="background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%); border: 1px solid #c7d2fe; border-radius: 16px; padding: 2rem; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
       <div class="flex flex-col lg:flex-row items-center gap-6">
@@ -87,7 +87,7 @@ title: Build Tales
 </section>
 
 <!-- Staff + Systems Thinking Signup Card -->
-<section class="py-12">
+<section class="py-16">
   <div class="mx-auto max-w-4xl px-4">
     <div class="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-xl p-8 shadow-lg">
       <div class="text-center">
