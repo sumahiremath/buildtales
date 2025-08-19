@@ -81,11 +81,11 @@ Works with GitHub Pages (no custom filters).
       <div class="series-arrows">
         {%- if idx > 0 -%}
           {%- assign prev = ordered[idx | minus: 1] -%}
-          <a class="prev" href="{{ prev.url }}">← Part {{ prev.series_parts[slug] | default: "?" }}: {{ prev.title }}</a>
+          <a class="prev" href="{{ prev.url }}">← {% if prev.title contains "Part " %}{{ prev.title }}{% else %}Part {{ prev.series_parts[slug] | default: "?" }}: {{ prev.title }}{% endif %}</a>
         {%- endif -%}
         {%- if idx >= 0 and idx < ordered.size | minus: 1 -%}
           {%- assign nxt = ordered[idx | plus: 1] -%}
-          <a class="next" href="{{ nxt.url }}">Part {{ nxt.series_parts[slug] | default: "?" }}: {{ nxt.title }} →</a>
+          <a class="next" href="{{ nxt.url }}">{% if nxt.title contains "Part " %}{{ nxt.title }}{% else %}Part {{ nxt.series_parts[slug] | default: "?" }}: {{ nxt.title }}{% endif %} →</a>
         {%- endif -%}
       </div>
     </nav>

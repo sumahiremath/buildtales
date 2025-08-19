@@ -3,7 +3,7 @@ title: "Part 3 — ACH: The Good, The Bad, and The Ugly"
 part: 3
 summary: "Still powering trillions. Still moving like it's stuck in fax machine mode."
 layout: default
-date: 2025-08-20
+date: 2024-08-20
 series: "payments"
 categories: [payments, ach]
 tags: [ach, nacha, payments, reconciliation, same-day-ach, fintech-operations]

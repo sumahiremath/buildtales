@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "NACHA File Demystified: Cracking the 94-Character Code"
-date: 2025-08-15
+date: 2024-08-15
 part: 1
 categories: [ach]
 tags: [nacha, ach, file-format, fintech-operations, payments-infrastructure, banking]
@@ -38,6 +38,12 @@ syndication:
 
 # Series information
 series: ["ach"]
+series_info:
+  name: "ACH Deep Dive"
+  part: 1
+  total_parts: 4
+  read_time: 15
+  tags: [ach, nacha, payments]
 ---
 # NACHA File Demystified: Cracking the 94-Character Code
 

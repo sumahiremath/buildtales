@@ -3,7 +3,7 @@ title: "Part 2 — Wire Transfers"
 part: 2
 summary: "How wires settle, irrevocability, and ops realities."
 layout: default
-date: 2025-08-14
+date: 2024-08-14
 tags: [wire-transfers, fedwire, chips, swift, payments, banking]
 excerpt: "Wire transfers are the express lane of money movement - fast, final, and irreversible. Unlike ACH's batch processing, wires move money in real-time through networks like Fedwire and CHIPS."
 banner_image: "/assets/banners/resized/20250814wiretransfer-blog.jpg"

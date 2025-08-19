@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "ACH Correction Codes Deep Dive: What They Mean and How to Handle Them"
-date: 2025-08-21
+date: 2024-08-21
 categories: [ach]
 tags: [ach, nacha, noc, correction-codes, compliance, fintech-operations, audit, developer-resource]
 excerpt: "Yesterday we talked about why ACH corrections (NOCs) matter: fix them, log them, and prove you did. Today, let's get tactical. This post dives into the actual correction codes (C01–C99) you'll encounter, what they mean, and how to respond in practice."
@@ -38,9 +38,11 @@ syndication:
 # Series information
 series: ["ach"]
 series_info:
-  name: "How U.S. Payments Really Work"
+  name: "ACH Deep Dive"
   part: 4
-  total_parts: 8
+  total_parts: 4
+  read_time: 10
+  tags: [ach, noc, corrections, compliance]
 ---
 # ACH Correction Codes Deep Dive: What They Mean and How to Handle Them
 

@@ -72,14 +72,14 @@ title: Build Tales
       </a>
       <a class="start-here-card" href="/series/leadership">
         <div class="card-icon" style="background: #157878; color: white;">⚡</div>
-        <h3 class="font-semibold mb-2">Engineering & Management</h3>
-        <p class="opacity-80 text-sm">From IC to EM to organizational leader</p>
+        <h3 class="font-semibold mb-2">Build, Break, Lead</h3>
+        <p class="opacity-80 text-sm">Engineering leadership journey</p>
         <span class="card-status available">Available now</span>
       </a>
       <a class="start-here-card" href="/series/system">
         <div class="card-icon" style="background: #10b981; color: white;">🛡️</div>
         <h3 class="font-semibold mb-2">Designing for Failure</h3>
-        <p class="opacity-80 text-sm">Resilience & incident habits.</p>
+        <p class="opacity-80 text-sm">Build resilient systems & incident habits</p>
         <span class="card-status available">Available now</span>
       </a>
     </div>
@@ -112,7 +112,7 @@ title: Build Tales
   <div class="mx-auto max-w-3xl">
     <h2 class="text-2xl font-semibold mb-6">Recent Articles</h2>
     <div class="recent-posts-grid">
-      {% assign all_posts = site.posts | concat: site.payments | concat: site.ach | concat: site.leadership | concat: site.system | sort: 'date' | reverse %}
+      {% assign all_posts = site.posts | concat: site.payments | concat: site.ach | concat: site.leadership | concat: site.system | where_exp: "post", "post.date <= site.time" | sort: 'date' | reverse %}
       {% for post in all_posts limit:3 %}
       <a href="{{ post.url }}" class="recent-post-card-link">
         <article class="recent-post-card">

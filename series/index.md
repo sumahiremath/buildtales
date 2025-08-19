@@ -13,7 +13,7 @@ title: "Series"
       <div class="series-card-header">
         <div class="series-meta">
           <span class="series-status active">Available Now</span>
-          <span class="series-progress">3 of 45 articles</span>
+          <span class="series-progress">4 of 45 articles</span>
         </div>
       </div>
       <h2 class="series-title"><span class="series-title-icon">🚀</span> How U.S. Payments Really Work</h2>
@@ -29,10 +29,10 @@ title: "Series"
       <div class="series-card-header">
         <div class="series-meta">
           <span class="series-status active">Available Now</span>
-          <span class="series-progress">4 of 8 articles</span>
+          <span class="series-progress">4 of 4 articles</span>
         </div>
       </div>
-      <h2 class="series-title"><span class="series-title-icon">🏦</span> ACH Deep Dive: From Basics to Advanced Operations</h2>
+      <h2 class="series-title"><span class="series-title-icon">🏦</span> ACH Deep Dive</h2>
       <p class="series-description">Master the Automated Clearing House network that powers $72+ trillion in annual transactions. From fundamentals to advanced compliance and operations.</p>
       <div class="series-actions">
         <span class="series-cta primary">Start Reading →</span>
@@ -45,10 +45,10 @@ title: "Series"
       <div class="series-card-header">
         <div class="series-meta">
           <span class="series-status active">Available Now</span>
-          <span class="series-progress">6 articles published</span>
+          <span class="series-progress">7 of 13 articles</span>
         </div>
       </div>
-      <h2 class="series-title"><span class="series-title-icon">⚡</span> Engineering & Management</h2>
+      <h2 class="series-title"><span class="series-title-icon">⚡</span> Build, Break, Lead</h2>
       <p class="series-description">Master the art of leading engineering teams while building scalable systems. From individual contributor to engineering manager to organizational leader.</p>
       <div class="series-actions">
         <span class="series-cta primary">Start Reading →</span>
@@ -56,20 +56,21 @@ title: "Series"
       </div>
     </a>
     
-    <!-- Future Series -->
-    <div class="series-card coming-soon">
+    <!-- System Design Series -->
+    <a href="/series/system/" class="series-card available">
       <div class="series-card-header">
         <div class="series-meta">
-          <span class="series-status upcoming">Coming Q2 2026</span>
-          <span class="series-progress">15 articles planned</span>
+          <span class="series-status active">Available Now</span>
+          <span class="series-progress">1 article published</span>
         </div>
       </div>
-      <h2 class="series-title"><span class="series-title-icon">🛡️</span> Systems Design at Scale</h2>
-      <p class="series-description">Real-world architecture decisions, tradeoffs, and lessons learned from building systems that handle millions of transactions.</p>
+      <h2 class="series-title"><span class="series-title-icon">🛡️</span> Designing for Failure</h2>
+      <p class="series-description">Build resilient systems and develop anti-fragile incident response habits. Learn how to design systems that can handle failure gracefully.</p>
       <div class="series-actions">
-        <span class="series-cta disabled">Coming Soon</span>
+        <span class="series-cta primary">Start Reading →</span>
+        <span class="series-secondary">View Complete Series</span>
       </div>
-    </div>
+    </a>
     
 
   </div>

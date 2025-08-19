@@ -28,7 +28,7 @@ layout: null
   {% endfor %}
   
   <!-- Blog posts and series -->
-  {% assign all_posts = site.posts | concat: site.payments | concat: site.ach | concat: site.leadership | concat: site.system %}
+  {% assign all_posts = site.posts | concat: site.payments | concat: site.ach | concat: site.leadership | concat: site.system | where_exp: "post", "post.date <= site.time" %}
   {% for post in all_posts %}
   <url>
     <loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>

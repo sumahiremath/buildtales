@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "SEC Codes in ACH: Authorization, Compliance, and How to Not Get Burned"
-date: 2025-08-16
+date: 2024-08-16
 part: 2
 categories: [ach]
 tags: [ach, sec-codes, compliance, authorization, nacha]
@@ -38,6 +38,12 @@ syndication:
 
 # Series information
 series: ["ach"]
+series_info:
+  name: "ACH Deep Dive"
+  part: 2
+  total_parts: 4
+  read_time: 12
+  tags: [ach, sec-codes, compliance]
 ---
 
 # SEC Codes in ACH: Authorization, Compliance, and How to Not Get Burned 

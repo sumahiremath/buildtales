@@ -65,7 +65,11 @@ layout: default
   {%- for p in ordered -%}
     <li>
       <a href="{{ p.url }}">
-        Part {{ p.series_parts[slug] | default: forloop.index }} — {{ p.title }}
+        {% if p.title contains "Part " %}
+          {{ p.title }}
+        {% else %}
+          Part {{ p.series_parts[slug] | default: forloop.index }} — {{ p.title }}
+        {% endif %}
       </a>
       {%- if p.summary -%}<div class="summary">{{ p.summary }}</div>{%- endif -%}
     </li>
