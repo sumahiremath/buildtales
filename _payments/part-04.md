@@ -3,7 +3,7 @@ title: "ACH Cutoffs: The Hidden Clock That Breaks Your UX"
 part: 4
 summary: "Why timing matters in batch processing"
 layout: default
-date: 2024-08-27
+date: 2025-08-27
 draft: true
 series: "payments"
 categories: [payments, ach]

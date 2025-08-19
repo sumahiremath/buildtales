@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Designing for Failure"
-date: 2024-01-01
+date: 2025-10-01
 categories: [engineering, systems]
 excerpt: "Build resilient systems and develop anti-fragile incident response habits"
 banner_image: "/assets/banners/leadx.png"

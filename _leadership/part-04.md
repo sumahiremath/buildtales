@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Engineering + Compliance: A Survival Guide for Regulated Environments"
-date: 2025-01-30
+date: 2025-10-30
 categories: [leadership]
 tags: [compliance, fintech, regulated-environments, risk-management]
 excerpt: "Compliance isn't a box you check at the end; it's a design constraint you account for from the start. Learn how to build compliant systems without killing velocity."

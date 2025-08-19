@@ -13,7 +13,7 @@ This guide helps you migrate existing posts to the new multi-series format that 
 ---
 layout: default
 title: "Your Post Title"
-date: 2025-01-31
+date: 2025-10-31
 categories: [payments, ach]  # Multiple categories for series
 series:
   name: "How U.S. Payments Really Work"
@@ -27,7 +27,7 @@ series:
 ---
 layout: default
 title: "Your Post Title"
-date: 2025-01-31
+date: 2025-10-31
 series: [payments, ach]      # Array of series slugs
 series_parts:
   payments: 5                # Part number in payments series
