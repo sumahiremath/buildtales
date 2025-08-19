@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "Posts"
+title: "Articles"
 ---
 
 <div class="mx-auto max-w-3xl">
-  <h1 class="text-4xl font-bold mb-6">Posts</h1>
+  <h1 class="text-4xl font-bold mb-6">Articles</h1>
   
   <!-- Filter Navigation -->
   <div class="filter-nav mb-6">
@@ -19,7 +19,9 @@ title: "Posts"
 
   <!-- Posts Grid - Finshots Style -->
   <div class="posts-grid">
-    {% for post in site.posts %}
+    {% assign current_date = site.time | date: '%s' %}
+    {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" | sort: 'date' | reverse %}
+    {% for post in published_posts %}
     <a href="{{ post.url }}" class="post-card-link" data-categories="{{ post.categories | join: ',' | downcase }}">
       <article class="post-card">
         <!-- Clean Banner Image -->

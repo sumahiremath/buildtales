@@ -5,9 +5,9 @@ date: 2025-08-15
 categories: [fintech, ach]
 tags: [nacha, ach, file-format, fintech-operations, payments-infrastructure, banking]
 excerpt: "Every ACH transaction starts as a carefully crafted 94-character line in a NACHA file. Let's decode the cryptic structure that moves $72 trillion annually through the U.S. banking system."
-banner_image: "/assets/banners/resized/20250815nachafile-blog.png"
-banner_image_recent: "/assets/banners/resized/20250815nachafile-recent.png"
-banner_image_series: "/assets/banners/resized/20250815nachafile-series.png"
+banner_image: "/assets/banners/resized/20250815nachafile-blog.jpg"
+banner_image_recent: "/assets/banners/resized/20250815nachafile-recent.jpg"
+banner_image_series: "/assets/banners/resized/20250815nachafile-series.jpg"
 banner_color: "#157878"
 
 # SEO and Canonical Tags
@@ -66,7 +66,7 @@ Let's walk through the first 9 lines of a real NACHA file:
 
 ### Line 1: File Header Record (Type '1') - The Envelope
 ```
-101 121042882 1234567891234560815180600A094101FIRST NATIONAL BANK    ACME CORP              
+101 121042882 12345678912345608151806002094101FIRST NATIONAL BANK    ACME CORP              
 ```
 
 This is the **envelope** that tells the postal system (banking network): "Here's who's sending money to whom, when, and how to route this file through the ACH system."
