@@ -1,5 +1,5 @@
 ---
-title: "Part 3 — ACH: The Good, The Bad, and The Ugly"
+title: "ACH: The Good, The Bad, and The Ugly"
 part: 3
 summary: "Still powering trillions. Still moving like it's stuck in fax machine mode."
 layout: default
@@ -21,14 +21,14 @@ author:
   
 # Open Graph / Social Media
 og:
-  title: "Part 3 — ACH: The Good, The Bad, and The Ugly"
+  title: "ACH: The Good, The Bad, and The Ugly"
   description: "Deep dive into ACH's reality - why it powers trillions yet frustrates every fintech builder. Includes reconciliation strategies, code examples, and the truth about 'instant' transfers."
   type: "article"
   
 # Twitter Card
 twitter:
   card: "summary"
-  title: "Part 3 — ACH: The Good, The Bad, and The Ugly"
+  title: "ACH: The Good, The Bad, and The Ugly"
   description: "Deep dive into ACH's reality - why it powers trillions yet frustrates every fintech builder. Includes reconciliation strategies, code examples, and the truth about 'instant' transfers."
 
 # Syndication and Original Content Declaration

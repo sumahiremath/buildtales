@@ -1,5 +1,5 @@
 ---
-title: "Part 2 — Wire Transfers"
+title: "Wire Transfers"
 part: 2
 summary: "How wires settle, irrevocability, and ops realities."
 layout: default
@@ -19,14 +19,14 @@ author:
   
 # Open Graph / Social Media
 og:
-  title: "Part 2 — Wire Transfers"
+  title: "Wire Transfers"
   description: "Deep dive into wire transfer networks - Fedwire, CHIPS, and SWIFT. Includes code samples, testing strategies, and when to use wires vs ACH."
   type: "article"
   
 # Twitter Card
 twitter:
   card: "summary"
-  title: "Part 2 — Wire Transfers"
+  title: "Wire Transfers"
   description: "Deep dive into wire transfer networks - Fedwire, CHIPS, and SWIFT. Includes code samples, testing strategies, and when to use wires vs ACH."
 
 # Syndication and Original Content Declaration

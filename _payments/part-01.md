@@ -1,5 +1,5 @@
 ---
-title: "Part 1 — How Money Moves In And Out Of Your Bank Account?"
+title: "How Money Moves In And Out Of Your Bank Account?"
 part: 1
 summary: "The foundational mechanics of money movement through ACH - the $72 trillion network that powers payroll deposits and bill payments."
 layout: default
@@ -20,14 +20,14 @@ author:
   
 # Open Graph / Social Media
 og:
-  title: "Part 1 — How Money Moves In And Out Of Your Bank Account?"
+  title: "How Money Moves In And Out Of Your Bank Account?"
   description: "Deep dive into ACH payments - the $72 trillion network that powers payroll deposits and bill payments. Includes code samples and system architecture."
   type: "article"
   
 # Twitter Card
 twitter:
   card: "summary"
-  title: "Part 1 — How Money Moves In And Out Of Your Bank Account?"
+  title: "How Money Moves In And Out Of Your Bank Account?"
   description: "Deep dive into ACH payments - the $72 trillion network that powers payroll deposits and bill payments. Includes code samples and system architecture."
 
 # Syndication and Original Content Declaration

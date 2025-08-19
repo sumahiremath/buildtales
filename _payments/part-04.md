@@ -1,5 +1,5 @@
 ---
-title: "Part 4 — ACH Cutoffs: The Hidden Clock That Breaks Your UX"
+title: "ACH Cutoffs: The Hidden Clock That Breaks Your UX"
 part: 4
 summary: "Why timing matters in batch processing"
 layout: default
@@ -22,14 +22,14 @@ author:
   
 # Open Graph / Social Media
 og:
-  title: "Part 4 — ACH Cutoffs: The Hidden Clock That Breaks Your UX"
+  title: "ACH Cutoffs: The Hidden Clock That Breaks Your UX"
   description: "Understanding ACH cutoffs and how they impact user experience in payment systems."
   type: "article"
   
 # Twitter Card
 twitter:
   card: "summary"
-  title: "Part 4 — ACH Cutoffs: The Hidden Clock That Breaks Your UX"
+  title: "ACH Cutoffs: The Hidden Clock That Breaks Your UX"
   description: "Understanding ACH cutoffs and how they impact user experience in payment systems."
 
 # Syndication and Original Content Declaration
