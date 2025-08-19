@@ -1,5 +1,5 @@
 ---
-layout: series
+layout: default
 title: "ACH Deep Dive: From Basics to Advanced Operations"
 excerpt: "Master the Automated Clearing House network that powers $72+ trillion in annual transactions. From fundamentals to advanced compliance and operations."
 permalink: /series/ach.html
