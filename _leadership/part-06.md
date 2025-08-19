@@ -32,7 +32,8 @@ syndication:
   canonical_source: "BuildTales.dev"
 
 # Series information
-series:
+series: ["leadership"]
+series_info:
   name: "Build, Break, Lead: Engineering Leadership Journey"
   part: 2
   total_parts: 15

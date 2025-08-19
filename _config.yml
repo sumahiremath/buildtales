@@ -26,6 +26,9 @@ collections:
   leadership:
     output: true
     permalink: /leadership/:title.html
+  system:
+    output: true
+    permalink: /system/:title.html
 
 # Force Jekyll to use front matter dates
 future: false

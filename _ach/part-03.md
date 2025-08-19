@@ -36,7 +36,8 @@ syndication:
   republish_allowed: true
   canonical_source: "BuildTales.dev"
 
-# NOTE: No "series" metadata = this will be classified as a bonus article
+# Series information
+series: ["ach"]
 ---
 # ACH Correction Codes: Fix It, Log It, Prove It
 

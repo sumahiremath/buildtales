@@ -38,7 +38,8 @@ syndication:
   canonical_source: "BuildTales.dev"
 
 # Series information
-series:
+series: ["payments"]
+series_info:
   name: "How U.S. Payments Really Work"
   total_parts: 45
   read_time: 12

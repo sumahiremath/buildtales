@@ -35,8 +35,9 @@ syndication:
   republish_allowed: true
   canonical_source: "BuildTales.dev"
 
-# Series metadata
-series:
+# Series information
+series: ["ach"]
+series_info:
   name: "How U.S. Payments Really Work"
   part: 4
   total_parts: 8

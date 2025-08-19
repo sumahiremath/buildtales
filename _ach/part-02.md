@@ -35,6 +35,9 @@ syndication:
   original: true
   republish_allowed: true
   canonical_source: "BuildTales.dev"
+
+# Series information
+series: ["ach"]
 ---
 
 # SEC Codes in ACH: Authorization, Compliance, and How to Not Get Burned 

@@ -65,6 +65,13 @@
     {% endfor %}
   {% endif %}
   
+  <!-- Check system collection -->
+  {% if primary_series == "system" %}
+    {% for post in site.system %}
+      {% assign series_posts = series_posts | push: post %}
+    {% endfor %}
+  {% endif %}
+  
   <!-- Sort posts by date or part number -->
   {% assign has_parts = false %}
   {% for post in series_posts %}

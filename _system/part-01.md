@@ -1,7 +1,14 @@
 ---
 layout: default
 title: "Designing for Failure"
-permalink: /posts/designing-for-failure
+date: 2024-01-01
+categories: [engineering, systems]
+excerpt: "Build resilient systems and develop anti-fragile incident response habits"
+banner_image: "/assets/banners/leadx.png"
+banner_image_recent: "/assets/banners/leadx.png"
+banner_color: "#157878"
+series: ["system"]
+part: 1
 ---
 
 <div class="mx-auto max-w-3xl">

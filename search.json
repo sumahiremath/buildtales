@@ -1,7 +1,8 @@
 ---
 ---
 [
-  {% for post in site.posts %}
+  {% assign all_posts = site.posts | concat: site.payments | concat: site.ach | concat: site.leadership | concat: site.system %}
+{% for post in all_posts %}
     {
       "title": {{ post.title | jsonify }},
       "url": {{ post.url | jsonify }},

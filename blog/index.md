@@ -11,7 +11,8 @@ title: "Articles"
     <h2 class="text-2xl font-semibold mb-4">Explore by Topic</h2>
     <div class="tag-cloud-container">
       {% assign all_categories = '' | split: '' %}
-      {% for post in site.posts %}
+      {% assign all_posts = site.posts | concat: site.payments | concat: site.ach | concat: site.leadership | concat: site.system %}
+      {% for post in all_posts %}
         {% for category in post.categories %}
           {% assign all_categories = all_categories | push: category %}
         {% endfor %}
@@ -71,7 +72,8 @@ title: "Articles"
 
   <!-- Posts Grid - Finshots Style -->
   <div class="posts-grid">
-    {% for post in site.posts %}
+    {% assign all_posts = site.posts | concat: site.payments | concat: site.ach | concat: site.leadership | concat: site.system | sort: 'date' | reverse %}
+    {% for post in all_posts %}
     <a href="{{ post.url }}" class="post-card-link">
       <article class="post-card">
         <!-- Clean Banner Image -->

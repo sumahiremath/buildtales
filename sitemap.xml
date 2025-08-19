@@ -27,8 +27,9 @@ layout: null
   {% endunless %}
   {% endfor %}
   
-  <!-- Blog posts -->
-  {% for post in site.posts %}
+  <!-- Blog posts and series -->
+  {% assign all_posts = site.posts | concat: site.payments | concat: site.ach | concat: site.leadership | concat: site.system %}
+  {% for post in all_posts %}
   <url>
     <loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>
     <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>

@@ -76,7 +76,7 @@ title: Build Tales
         <p class="opacity-80 text-sm">From IC to EM to organizational leader</p>
         <span class="card-status available">Available now</span>
       </a>
-      <a class="start-here-card" href="/series/leadership">
+      <a class="start-here-card" href="/series/system">
         <div class="card-icon" style="background: #10b981; color: white;">🛡️</div>
         <h3 class="font-semibold mb-2">Designing for Failure</h3>
         <p class="opacity-80 text-sm">Resilience & incident habits.</p>
@@ -87,24 +87,22 @@ title: Build Tales
 </section>
 
 <!-- Staff + Systems Thinking Signup Card -->
-<section class="py-8">
+<section class="py-16">
   <div class="mx-auto max-w-4xl px-4">
-    <div class="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-xl p-6 shadow-lg">
-      <div class="text-center">
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">Don't miss when Staff+ Systems Thinking drops</h3>
-        <p class="text-gray-600 mb-6 text-lg">Subscribe and I'll send it straight to you.</p>
-        <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex flex-col sm:flex-row gap-3 max-w-md mx-auto" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
-          <input type="email" name="email_address" placeholder="Enter your email" required 
-                 class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-base shadow-sm">
-          <button type="submit" 
-                  class="px-8 py-3 text-white font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 text-base whitespace-nowrap shadow-sm hover:shadow-md transform hover:-translate-y-0.5"
-                  style="background-color: #157878; border-color: #157878;"
-                  onmouseover="this.style.backgroundColor='#0f6b6b'"
-                  onmouseout="this.style.backgroundColor='#157878'">
-            Subscribe
-          </button>
-        </form>
-      </div>
+    <div class="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-xl p-8 shadow-lg text-center">
+      <h3 class="text-xl font-semibold text-gray-800 mb-3">Don't miss when Staff+ Systems Thinking drops</h3>
+      <p class="text-gray-600 mb-6 text-lg">Subscribe and I'll send it straight to you.</p>
+      <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex flex-col sm:flex-row gap-3 max-w-md mx-auto" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
+        <input type="email" name="email_address" placeholder="Enter your email" required 
+               class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-base shadow-sm">
+        <button type="submit" 
+                class="px-8 py-3 text-white font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 text-base whitespace-nowrap shadow-sm hover:shadow-md transform hover:-translate-y-0.5"
+                style="background-color: #157878; border-color: #157878;"
+                onmouseover="this.style.backgroundColor='#0f6b6b'"
+                onmouseout="this.style.backgroundColor='#157878'">
+          Subscribe
+        </button>
+      </form>
     </div>
   </div>
 </section>
@@ -114,7 +112,8 @@ title: Build Tales
   <div class="mx-auto max-w-3xl">
     <h2 class="text-2xl font-semibold mb-6">Recent Articles</h2>
     <div class="recent-posts-grid">
-      {% for post in site.posts limit:3 %}
+      {% assign all_posts = site.posts | concat: site.payments | concat: site.ach | concat: site.leadership | concat: site.system | sort: 'date' | reverse %}
+      {% for post in all_posts limit:3 %}
       <a href="{{ post.url }}" class="recent-post-card-link">
         <article class="recent-post-card">
           <!-- Clean Banner Image -->

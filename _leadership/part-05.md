@@ -32,7 +32,7 @@ syndication:
   canonical_source: "BuildTales.dev"
 
 # Series information
-series: [leadership]
+series: ["leadership"]
 series_parts:
   leadership: 5
 

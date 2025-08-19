@@ -28,6 +28,11 @@ layout: default
     {%- assign members = members | push: p -%}
   {%- endif -%}
 {%- endfor -%}
+{%- for p in site.system -%}
+  {%- if p.draft != true and p.series and p.series contains slug -%}
+    {%- assign members = members | push: p -%}
+  {%- endif -%}
+{%- endfor -%}
 
 {%- assign with_parts = "" | split: "" -%}
 {%- assign no_parts  = "" | split: "" -%}
