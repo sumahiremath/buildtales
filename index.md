@@ -50,7 +50,6 @@ title: Build Tales
 </section>
 
 <br>
-
 <!-- Start Here Section -->
 <section class="py-10 pt-16">
   <div class="mx-auto max-w-5xl">
@@ -77,7 +76,7 @@ title: Build Tales
     </div>
   </div>
 </section>
-
+<br>
 <!-- Staff + Systems Thinking Signup Card -->
 <section class="py-8">
   <div class="mx-auto max-w-4xl px-4">
@@ -97,10 +96,7 @@ title: Build Tales
     </div>
   </div>
 </section>
-
-<br>  
-
-
+<br>
 <!-- Recent Articles Section -->
 <section class="py-10 pt-16">
   <div class="mx-auto max-w-3xl">
