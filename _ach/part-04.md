@@ -11,7 +11,7 @@ banner_image_series: "/assets/banners/resized/20250821corrections.jpg"
 banner_color: "#157878"
 
 # SEO and Canonical Tags
-canonical_url: "https://buildtales.dev/fintech/payments/2025/08/21/ach-correction-codes-deep-dive.html"
+canonical_url: "https://buildtales.dev/ach/part-04.html"
 author:
   name: "Suma Manjunath"
   twitter: "@sumahiremath"

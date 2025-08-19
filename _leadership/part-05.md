@@ -32,12 +32,9 @@ syndication:
   canonical_source: "BuildTales.dev"
 
 # Series information
-series:
-  name: "Build, Break, Lead: Engineering Leadership Journey"
-  part: 5
-  total_parts: 13
-  read_time: 10
-  tags: [incident-response, crisis-management]
+series: [leadership]
+series_parts:
+  leadership: 5
 
 # Banner images for different contexts
 banner:
@@ -46,7 +43,7 @@ banner:
   series: "/assets/banners/resized/lead5-series.jpg"
 ---
 
-{% include series-navigation-advanced.html %}
+
 
 # Incident Response Culture: Beyond the Postmortem
 

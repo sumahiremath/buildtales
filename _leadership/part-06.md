@@ -7,7 +7,7 @@ tags: [management, confidence, transition, team-building]
 excerpt: "The hardest shift isn't process or tools—it's identity. Learn how to build confidence when transitioning from individual contributor to engineering manager."
 
 # SEO and Canonical Tags
-canonical_url: "https://buildtales.dev/posts/lead1"
+canonical_url: "https://buildtales.dev/leadership/part-06.html"
 author:
   name: "Suma Manjunath"
   twitter: "@sumahiremath"

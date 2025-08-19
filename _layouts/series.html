@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+{%- assign slug = page.slug | downcase | strip -%}
+<h1>{{ page.title }}</h1>
+<p class="tagline">{{ page.tagline | default: "Deep dives without the fluff." }}</p>
+
+{%- assign members = site.posts
+  | where_exp: "p", "p.draft != true and p.series"
+  | where_exp: "p", "p.series contains slug"
+-%}
+
+{%- assign with_parts = "" | split: "" -%}
+{%- assign no_parts  = "" | split: "" -%}
+{%- for p in members -%}
+  {%- if p.series_parts[slug] -%}
+    {%- assign with_parts = with_parts | push: p -%}
+  {%- else -%}
+    {%- assign no_parts = no_parts | push: p -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- assign max_part = 0 -%}
+{%- for p in with_parts -%}
+  {%- assign pn = p.series_parts[slug] | plus: 0 -%}
+  {%- if pn > max_part -%}{%- assign max_part = pn -%}{%- endif -%}
+{%- endfor -%}
+
+{%- assign ordered = "" | split: "" -%}
+{%- for n in (1..max_part) -%}
+  {%- for p in with_parts -%}
+    {%- if p.series_parts[slug] == n -%}
+      {%- assign ordered = ordered | push: p -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endfor -%}
+{%- assign no_parts = no_parts | sort: "date" -%}
+{%- assign ordered = ordered | concat: no_parts -%}
+
+<ol class="series-list">
+  {%- for p in ordered -%}
+    <li>
+      <a href="{{ p.url }}">
+        Part {{ p.series_parts[slug] | default: forloop.index }} — {{ p.title }}
+      </a>
+      {%- if p.summary -%}<div class="summary">{{ p.summary }}</div>{%- endif -%}
+    </li>
+  {%- endfor -%}
+</ol>
+
+<style>
+.tagline{color:#666;margin:.5rem 0 1rem}
+.series-list{padding-left:1.25rem}
+.summary{color:#666;font-size:.95rem}
+</style>

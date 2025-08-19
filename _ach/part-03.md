@@ -2,6 +2,7 @@
 layout: default
 title: "ACH Correction Codes: Fix It, Log It, Prove It"
 date: 2025-08-17
+part: 3
 categories: [ach]
 tags: [ach, nacha, noc, correction-codes, compliance, fintech-operations, audit]
 excerpt: "When it comes to ACH payments, mistakes happen. Instead of rejecting every transaction, the ACH Network gives us Notification of Change (NOC) codes. I learned the hard way: every NOC is not just a suggestion—it's a requirement."
@@ -11,7 +12,7 @@ banner_image_series: "/assets/banners/resized/20250817nocs-series.jpg"
 banner_color: "#157878"
 
 # SEO and Canonical Tags
-canonical_url: "https://buildtales.dev/fintech/payments/2025/08/17/ach-correction-codes-fix-log-prove.html"
+canonical_url: "https://buildtales.dev/ach/part-03.html"
 author:
   name: "Suma Manjunath"
   twitter: "@sumahiremath"

@@ -5,7 +5,8 @@ summary: "Why timing matters in batch processing"
 layout: default
 date: 2025-08-27
 draft: true
-categories: [ach]
+series: "payments"
+categories: [payments, ach]
 tags: [ach, cutoffs, batch-processing, ux, fintech-operations]
 excerpt: "ACH cutoffs are the invisible time bombs that break user experience. Understanding these hidden clocks is crucial for building reliable payment systems."
 banner_image: "/assets/banners/resized/20250820goodbadugly-blog.jpg"

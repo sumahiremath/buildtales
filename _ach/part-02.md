@@ -2,6 +2,7 @@
 layout: default
 title: "SEC Codes in ACH: Authorization, Compliance, and How to Not Get Burned"
 date: 2025-08-16
+part: 2
 categories: [ach]
 tags: [ach, sec-codes, compliance, authorization, nacha]
 excerpt: "SEC codes determine your compliance fate in ACH payments. Get them wrong and face chargebacks, fines, and regulatory headaches. This guide shows you how to classify transactions correctly and stay compliant."
@@ -11,7 +12,7 @@ banner_image_series: "/assets/banners/resized/20250816seccode-series.jpg"
 banner_color: "#157878"
 
 # SEO and Canonical Tags
-canonical_url: "https://buildtales.dev/fintech/payments/2025/08/16/sec-codes-authorization-compliance.html"
+canonical_url: "https://buildtales.dev/ach/part-02.html"
 author:
   name: "Suma Manjunath"
   twitter: "@sumahiremath"

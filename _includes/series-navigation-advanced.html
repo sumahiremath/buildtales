@@ -11,12 +11,28 @@
   
   Requirements in post front matter:
   ---
-  categories: [leadership] or categories: [ach] or categories: [payments]
+  # Option 1: Use series field (preferred for content reuse)
+  series: "payments"  # or "ach" or "leadership"
+  categories: [payments, ach]  # Can have multiple categories for reuse
+  
+  # Option 2: Use single category (fallback)
+  categories: [payments]  # Only one category for series
   ---
+  
+  For content reuse, use the 'series' field to explicitly control which series
+  a post appears in, while keeping multiple categories for proper categorization.
 {% endcomment %}
 
-{% if page.categories and page.categories.size > 0 %}
-  {% assign primary_category = page.categories[0] %}
+{% if page.series %}
+  {% assign primary_series = page.series %}
+{% elsif page.categories and page.categories.size > 0 %}
+  {% assign primary_series = page.categories[0] %}
+{% endif %}
+
+{% if primary_series %}
+  <!-- Debug: Show which series we're using for navigation -->
+  <!-- Primary series: {{ primary_series }} -->
+  <!-- All categories: {{ page.categories | join: ', ' }} -->
   
   <!-- Find all posts in this category -->
   {% assign series_posts = "" | split: "" %}
@@ -28,25 +44,37 @@
     {% endif %}
   {% endfor %}
   
-  <!-- Check payments collection for ACH category or part-based series -->
-  {% if primary_category == "ach" %}
+  <!-- Check payments collection -->
+  {% if primary_series == "payments" %}
     {% for post in site.payments %}
-      {% if post.categories contains primary_category or post.part %}
-        {% assign series_posts = series_posts | push: post %}
-      {% endif %}
+      {% assign series_posts = series_posts | push: post %}
     {% endfor %}
-    <!-- Check ach collection -->
+  {% endif %}
+  
+  <!-- Check ach collection -->
+  {% if primary_series == "ach" %}
     {% for post in site.ach %}
       {% assign series_posts = series_posts | push: post %}
     {% endfor %}
-    <!-- Check leadership collection -->
+  {% endif %}
+  
+  <!-- Check leadership collection -->
+  {% if primary_series == "leadership" %}
     {% for post in site.leadership %}
       {% assign series_posts = series_posts | push: post %}
     {% endfor %}
   {% endif %}
   
   <!-- Sort posts by date or part number -->
-  {% if primary_category == "ach" %}
+  {% assign has_parts = false %}
+  {% for post in series_posts %}
+    {% if post.part %}
+      {% assign has_parts = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if has_parts %}
     {% assign sorted_posts = series_posts | sort: "part" %}
   {% else %}
     {% assign sorted_posts = series_posts | sort: "date" %}
@@ -56,7 +84,7 @@
   <!-- Find current post position -->
   {% assign current_position = 0 %}
   {% for post in sorted_posts %}
-    {% if post.url == page.url %}
+    {% if post.url == page.url or post.path == page.path %}
       {% assign current_position = forloop.index %}
       {% break %}
     {% endif %}
@@ -64,10 +92,10 @@
   
   {% if current_position > 0 and total_posts > 1 %}
     <!-- Series Navigation -->
-    <div class="series-navigation-advanced" style="background: #f8f9fa; border-left: 4px solid #157878; padding: 1.5rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0;">
+    <div class="series-navigation-advanced" style="background: #f8f9fa; border-left: 4px solid #157878; padding: 2rem; margin: 2rem 0; border-radius: 0 8px 8px 0;">
       <div class="series-header" style="margin-bottom: 1rem;">
         <h3 style="margin: 0 0 0.5rem 0; color: #157878; font-size: 1.1rem; font-weight: 600;">
-          📚 {{ primary_category | capitalize }} Series
+          📚 {{ primary_series | capitalize }} Series
         </h3>
         <p style="margin: 0; color: #6c757d; font-size: 0.9rem;">
           Article {{ current_position }} of {{ total_posts }}
@@ -89,7 +117,11 @@
       
       <!-- Navigation Links -->
       <div class="series-links" style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
-        <a href="/series/{{ primary_category }}" class="series-link primary" style="background: #157878; color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: background-color 0.2s ease;">
+        {% if primary_series == "leadership" %}
+          <a href="/series/leadership-systems.html" class="series-link primary" style="background: #157878; color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: background-color 0.2s ease;">
+        {% else %}
+          <a href="/series/{{ primary_series }}.html" class="series-link primary" style="background: #157878; color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: background-color 0.2s ease;">
+        {% endif %}
           📋 View Series Roadmap
         </a>
         
@@ -127,14 +159,14 @@
         <p style="margin: 0; font-size: 0.85rem; color: #6c757d; line-height: 1.4;">
           <strong>💡 Series Tip:</strong> 
           {% if current_position == 1 %}
-            Start here! This article lays the foundation for understanding {{ primary_category }}.
+            Start here! This article lays the foundation for understanding {{ primary_series }}.
           {% elsif current_position == total_posts %}
             You've reached the final article! Review the series to see how far you've come.
           {% else %}
             {% if total_posts > 0 %}
-              You're {{ progress_percent | round }}% through the {{ primary_category }} series. Keep going!
+              You're {{ progress_percent | round }}% through the {{ primary_series }} series. Keep going!
             {% else %}
-              You're making progress through the {{ primary_category }} series. Keep going!
+              You're making progress through the {{ primary_series }} series. Keep going!
             {% endif %}
           {% endif %}
         </p>
@@ -165,8 +197,8 @@
       
       @media (max-width: 640px) {
         .series-navigation-advanced {
-          padding: 1rem;
-          margin: 1rem 0;
+          padding: 1.5rem;
+          margin: 1.5rem 0;
         }
         
         .series-links {

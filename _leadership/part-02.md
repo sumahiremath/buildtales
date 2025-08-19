@@ -7,7 +7,7 @@ tags: [culture, scaling, team-building, processes]
 excerpt: "Culture doesn't scale itself. Learn how to transform your team's informal habits into intentional practices that survive growth."
 
 # SEO and Canonical Tags
-canonical_url: "https://buildtales.dev/posts/lead2"
+canonical_url: "https://buildtales.dev/leadership/part-02.html"
 author:
   name: "Suma Manjunath"
   twitter: "@sumahiremath"

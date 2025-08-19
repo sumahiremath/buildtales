@@ -11,7 +11,7 @@ banner_image_series: "/assets/banners/resized/20250818mousefinish-series.jpg"
 banner_color: "#157878"
 
 # SEO and Canonical Tags
-canonical_url: "https://buildtales.dev/engineering/leadership/2025/08/18/quarter-long-project-em-baptism.html"
+canonical_url: "https://buildtales.dev/leadership/part-07.html"
 author:
   name: "Suma Manjunath"
   twitter: "@sumahiremath"
