@@ -44,7 +44,7 @@ syndication:
 
 ![mousefinish](/assets/banners/resized/20250818mousefinish-blog.jpg)
 
-Every engineering manager (EM) remembers their first big project. For me, it was integrating a third-party service provider with a client's bank.
+Every engineering manager (EM) remembers their first big project. For me, it was building an ACH third-party service provider service, which is originating NACHA files using client's bank account.
 
 On paper, it looked like a simple quarter-long integration: gather requirements, build the flows, test, launch. Clean. Predictable. Neat.
 
