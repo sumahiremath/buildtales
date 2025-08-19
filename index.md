@@ -72,7 +72,7 @@ title: Build Tales
       </a>
       <a class="start-here-card" href="/series/leadership-systems">
         <div class="card-icon" style="background: #6b7280; color: white;">⚡</div>
-        <h3 class="font-semibold mb-2">Engineering Leadership & Systems</h3>
+        <h3 class="font-semibold mb-2">Engineering & Management</h3>
         <p class="opacity-80 text-sm">From IC to EM to organizational leader</p>
         <span class="card-status available">Available now</span>
       </a>

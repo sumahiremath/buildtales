@@ -48,7 +48,7 @@ title: "Series"
           <span class="series-progress">6 articles published</span>
         </div>
       </div>
-      <h2 class="series-title"><span class="series-title-icon">⚡</span> Engineering Leadership & Systems Thinking</h2>
+      <h2 class="series-title"><span class="series-title-icon">⚡</span> Engineering & Management</h2>
       <p class="series-description">Master the art of leading engineering teams while building scalable systems. From individual contributor to engineering manager to organizational leader.</p>
       <div class="series-actions">
         <span class="series-cta primary">Start Reading →</span>
