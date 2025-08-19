@@ -244,109 +244,130 @@ title: Build Tales
   gap: 0.5rem;
 }
 
-/* Start Here Section - 4 Cards Layout */
-.start-here-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+/* Series Grid Layout */
+.series-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   margin-top: 2rem;
 }
 
-.start-here-card {
+/* Series Card Base */
+.series-card {
   background: white;
   border: 2px solid #e5e7eb;
-  border-radius: 12px;
-  padding: 1.5rem 1rem;
+  border-radius: 16px;
+  padding: 2rem;
   text-decoration: none;
   color: inherit;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
   transition: all 0.3s ease;
-  position: relative;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  min-height: 180px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.start-here-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-  border-color: var(--accent);
+.series-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
   text-decoration: none;
+  border-color: #157878;
 }
 
-.card-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+/* Series Card Header */
+.series-card-header {
+  margin-bottom: 1.5rem;
+}
+
+.series-meta {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-.start-here-card h3 {
-  color: #333;
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
+.series-status {
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.series-status.active {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.series-progress {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Series Title */
+.series-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 1rem 0;
   line-height: 1.3;
 }
 
-.start-here-card p {
-  color: #666;
-  margin-bottom: 1rem;
+.series-title-icon {
+  margin-right: 0.5rem;
+}
+
+/* Series Description */
+.series-description {
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
   flex-grow: 1;
+}
+
+/* Series Actions */
+.series-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.series-cta {
   font-size: 0.875rem;
-}
-
-.card-status {
-  font-size: 0.7rem;
   font-weight: 600;
-  padding: 0.25rem 0.5rem;
-  border-radius: 10px;
   text-transform: uppercase;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.5px;
 }
 
-.card-status.available {
-  background: #d1fae5;
-  color: #065f46;
+.series-cta.primary {
+  color: #157878;
 }
 
-.card-status.coming-soon {
-  background: #f3f4f6;
+.series-secondary {
+  font-size: 0.75rem;
   color: #6b7280;
+  font-weight: 500;
+}
 }
 
 @media (max-width: 768px) {
-  .start-here-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
+  .series-grid {
+    gap: 1.5rem;
   }
   
-  .start-here-card {
-    padding: 1.25rem 1rem;
-    min-height: 160px;
-  }
-  
-  .card-icon {
-    width: 45px;
-    height: 45px;
-    font-size: 18px;
+  .series-card {
+    padding: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .start-here-grid {
-    grid-template-columns: 1fr;
+  .series-grid {
     gap: 1rem;
   }
   
-  .start-here-card {
-    padding: 1rem;
-    min-height: 140px;
+  .series-card {
+    padding: 1.25rem;
   }
 }
 
