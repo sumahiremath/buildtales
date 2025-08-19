@@ -45,7 +45,7 @@ series:
   tags: [ach-analysis, fintech-reality]
 ---
 
-{% include series-navigation-advanced.html %}
+{% include ach-series-ultra-minimal.html %}
 
 # ACH: The Good, The Bad, and The Ugly
 

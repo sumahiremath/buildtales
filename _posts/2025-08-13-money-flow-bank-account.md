@@ -45,8 +45,7 @@ series:
   tags: [ach-basics, money-movement]
 ---
 
-{% include series-navigation-advanced.html %}
-{% include ach-series-navigation.html %}
+{% include ach-series-ultra-minimal.html %}
 
 # How Money Moves In and Out of Your Bank Account?
 
