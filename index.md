@@ -71,13 +71,13 @@ title: Build Tales
         <span class="card-status available">Available now</span>
       </a>
       <a class="start-here-card" href="/series/leadership">
-        <div class="card-icon" style="background: #6b7280; color: white;">⚡</div>
+        <div class="card-icon" style="background: #157878; color: white;">⚡</div>
         <h3 class="font-semibold mb-2">Engineering & Management</h3>
         <p class="opacity-80 text-sm">From IC to EM to organizational leader</p>
         <span class="card-status available">Available now</span>
       </a>
       <a class="start-here-card" href="/series/leadership">
-        <div class="card-icon" style="background: #6b7280; color: white;">🛡️</div>
+        <div class="card-icon" style="background: #10b981; color: white;">🛡️</div>
         <h3 class="font-semibold mb-2">Designing for Failure</h3>
         <p class="opacity-80 text-sm">Resilience & incident habits.</p>
         <span class="card-status available">Available now</span>
