@@ -28,7 +28,7 @@ title: Build Tales
 </section>
 
 <!-- Hero Inline Signup Bar -->
-<section class="container py-8">
+<section style="padding-top: 1.25em; padding-bottom: 8px; padding-left: 0; padding-right: 0; text-align: center;" class="py-8">
   <div class="mx-auto max-w-4xl px-4">
     <div class="newsletter-box">
       <div class="text-center mb-6">
@@ -82,13 +82,13 @@ title: Build Tales
 </section>
 
 <!-- Staff + Systems Thinking Signup Card -->
-<section class="container py-8">
+<section style="padding-top: 1.25em; padding-bottom: 8px; padding-left: 0; padding-right: 0; text-align: center;" class="py-8">
   <div class="mx-auto max-w-4xl px-4">
     <div class="newsletter-box">
     <div class="text-center">
       <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Don't miss when Build, Break, Lead drops</h3>
       <p class="text-gray-600 mb-6 text-lg">Subscribe and I'll send it straight to you.</p>
-      <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex flex-col sm:flex-row gap-3 max-w-md mx-auto" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
+      <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex flex-col sm:flex-row gap-3 max-w-md mx-auto; flex justify-center" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
         <input type="email" name="email_address" placeholder="Enter your email" required 
                class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-base shadow-sm">
         <button type="submit" 
@@ -100,7 +100,6 @@ title: Build Tales
         </button>
       </form>
     </div>
-  </div>
     </div>
   </div>
 </section>
