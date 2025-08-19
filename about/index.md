@@ -8,7 +8,7 @@ title: About
   <img src="{{ '/assets/images/ghibli-avatar.png' | relative_url }}" alt="Suma Manjunath" 
        width="120" height="120" style="border-radius: 50%; object-fit: cover;">
   <div>
-    <p>Hi, I’m <strong>Suma Manjunath</strong>—an engineering leader with 20 years of experience delivering scalable, resilient software in tightly regulated industries. I thrive on building systems rooted in automation, observability, and compliance-aligned best practices.</p>
+    <p>Hi, I’m <strong>Suma Manjunath</strong>—an engineering leader with over 20 years of experience delivering scalable, resilient software in tightly regulated industries. I thrive on building systems rooted in automation, observability, and compliance-aligned best practices.</p>
   </div>
 </div>
 
