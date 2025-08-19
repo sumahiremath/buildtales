@@ -49,10 +49,10 @@ series:
       <h3 class="text-lg font-semibold mb-4">Phase 1: Understanding the Rails</h3>
       <ol class="space-y-3">
         <li>
-          <a href="/fintech/payments/2025/08/13/money-flow-bank-account.html" class="published-article-link">
+          <a href="/payments/part-01.html" class="published-article-link">
             <div class="flex justify-between items-center">
               <div class="flex-grow">
-                <h4 class="font-medium text-accent article-title">How Money Moves In And Out Of Your Bank Account?</h4>
+                <h4 class="font-medium text-accent article-title">Part 1 — How Money Moves In And Out Of Your Bank Account?</h4>
                 <p class="text-sm opacity-70 mt-2">The foundational mechanics of money movement</p>
               </div>
               <span class="text-sm text-green-600 font-medium published-badge">✓ Published</span>
@@ -60,22 +60,22 @@ series:
           </a>
         </li>
         <li>
-          <a href="/fintech/payments/2025/08/14/wire-transfers-explained.html" class="published-article-link">
+          <a href="/payments/part-02.html" class="published-article-link">
             <div class="flex justify-between items-center">
               <div class="flex-grow">
-                <h4 class="font-medium text-accent article-title">Wire Transfers: Old Money Energy</h4>
-                <p class="text-sm opacity-70 mt-2">When speed and finality matter most</p>
+                <h4 class="font-medium text-accent article-title">Part 2 — Wire Transfers</h4>
+                <p class="text-sm opacity-70 mt-2">How wires settle, irrevocability, and ops realities</p>
               </div>
               <span class="text-sm text-green-600 font-medium published-badge">✓ Published</span>
             </div>
           </a>
         </li>
         <li>
-          <a href="/fintech/payments/2025/08/20/ach-good-bad-ugly.html" class="published-article-link">
+          <a href="/payments/part-03.html" class="published-article-link">
             <div class="flex justify-between items-center">
               <div class="flex-grow">
-                <h4 class="font-medium text-accent article-title">ACH: The Good, The Bad, and The Ugly</h4>
-                <p class="text-sm opacity-70 mt-2">Understanding America's payment backbone</p>
+                <h4 class="font-medium text-accent article-title">Part 3 — ACH: The Good, The Bad, and The Ugly</h4>
+                <p class="text-sm opacity-70 mt-2">Still powering trillions. Still moving like it's stuck in fax machine mode</p>
               </div>
               <span class="text-sm text-green-600 font-medium published-badge">✓ Published</span>
             </div>
@@ -84,7 +84,7 @@ series:
         <li class="unpublished-article">
           <div class="flex justify-between items-center">
             <div class="flex-grow">
-              <h4 class="font-medium text-gray-700 article-title">ACH Cutoffs: The Hidden Clock That Breaks Your UX</h4>
+              <h4 class="font-medium text-gray-700 article-title">Part 4 — ACH Cutoffs: The Hidden Clock That Breaks Your UX</h4>
               <p class="text-sm opacity-70 mt-2">Why timing matters in batch processing</p>
             </div>
             <span class="text-sm text-gray-600 font-medium">Aug 27, 2025</span>
@@ -93,7 +93,7 @@ series:
         <li class="unpublished-article">
           <div class="flex justify-between items-center">
             <div class="flex-grow">
-              <h4 class="font-medium text-gray-700 article-title">RTP: Real-Time Payments With Real-World Bottlenecks</h4>
+              <h4 class="font-medium text-gray-700 article-title">Part 5 — RTP: Real-Time Payments With Real-World Bottlenecks</h4>
               <p class="text-sm opacity-70 mt-2">The promise and reality of instant payments</p>
             </div>
             <span class="text-sm text-gray-600 font-medium">Sep 10, 2025</span>

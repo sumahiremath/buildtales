@@ -15,6 +15,12 @@ kramdown:
   syntax_highlighter: rouge
   input: GFM
 
+# Collections for series
+collections:
+  payments:
+    output: true
+    permalink: /payments/:title.html
+
 # Force Jekyll to use front matter dates
 future: false
 show_drafts: false
@@ -24,6 +30,7 @@ exclude:
   - series/article-template.md
   - series/bonus-article-template.md
   - series/publishing-schedule.md
+  - _payments/part-template.md
   - SERIES_SYSTEM.md
   - IMAGE_GUIDE.md
   - README.md
