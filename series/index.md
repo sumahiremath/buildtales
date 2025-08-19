@@ -41,7 +41,7 @@ title: "Series"
     </a>
     
     <!-- Engineering Leadership & Systems Series -->
-    <a href="/series/leadership-systems.html" class="series-card available">
+    <a href="/series/leadership.html" class="series-card available">
       <div class="series-card-header">
         <div class="series-meta">
           <span class="series-status active">Available Now</span>
