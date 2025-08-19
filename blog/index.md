@@ -29,89 +29,37 @@ title: "Posts"
   <section class="mb-8">
     <h2 class="text-2xl font-semibold mb-4">Explore by Topic</h2>
     <div class="tag-cloud-container">
-      {% assign tag_counts = '' | split: '' %}
-      {% assign tag_colors = '' | split: '' %}
-      
+      {% assign all_categories = '' | split: '' %}
       {% for post in site.posts %}
         {% for category in post.categories %}
-          {% assign tag = category | downcase %}
-          {% assign found = false %}
-          {% for existing_tag in tag_counts %}
-            {% if existing_tag.name == tag %}
-              {% assign found = true %}
-              {% break %}
-            {% endif %}
-          {% endfor %}
-          {% unless found %}
-            {% assign tag_info = tag | append: '|1' | split: '|' %}
-            {% assign tag_counts = tag_counts | push: tag_info %}
-          {% else %}
-            {% assign tag_counts = tag_counts | map: 'increment' %}
-          {% endunless %}
+          {% assign all_categories = all_categories | push: category %}
         {% endfor %}
       {% endfor %}
       
-      <!-- Calculate tag frequencies and assign colors -->
-      {% assign tag_data = '' | split: '' %}
-      {% for post in site.posts %}
-        {% for category in post.categories %}
-          {% assign tag = category | downcase %}
-          {% assign count = 0 %}
-          {% for post2 in site.posts %}
-            {% for category2 in post2.categories %}
-              {% if category2 | downcase == tag %}
-                {% assign count = count | plus: 1 %}
-              {% endif %}
-            {% endfor %}
-          {% endfor %}
-          {% assign tag_info = tag | append: '|' | append: count | split: '|' %}
-          {% assign tag_data = tag_data | push: tag_info %}
-        {% endfor %}
-      {% endfor %}
-      
-      <!-- Remove duplicates and assign colors -->
-      {% assign unique_tags = '' | split: '' %}
-      {% for tag_info in tag_data %}
-        {% assign tag_name = tag_info[0] %}
-        {% assign tag_count = tag_info[1] %}
-        {% assign found = false %}
-        {% for existing in unique_tags %}
-          {% if existing.name == tag_name %}
-            {% assign found = true %}
-            {% break %}
-          {% endif %}
-        {% endfor %}
-        {% unless found %}
-          {% assign tag_obj = tag_name | append: '|' | append: tag_count | split: '|' %}
-          {% assign unique_tags = unique_tags | push: tag_obj %}
-        {% endunless %}
-      {% endfor %}
-      
-      <!-- Sort by frequency and assign colors -->
-      {% assign sorted_tags = unique_tags | sort: '1' | reverse %}
-      {% for tag_info in sorted_tags limit: 15 %}
-        {% assign tag_name = tag_info[0] %}
-        {% assign tag_count = tag_info[1] %}
-        {% assign font_size = tag_count | times: 2 | plus: 14 %}
-        {% assign opacity = tag_count | times: 10 | plus: 60 %}
+      {% assign unique_categories = all_categories | uniq %}
+      {% for category in unique_categories limit: 12 %}
+        {% assign category_count = all_categories | where_exp: "cat", "cat == category" | size %}
+        {% assign font_size = category_count | times: 3 | plus: 14 %}
+        {% assign opacity = category_count | times: 15 | plus: 50 %}
         
         {% assign tag_color = '#3b82f6' %}
-        {% if tag_name contains 'payment' or tag_name contains 'ach' or tag_name contains 'nacha' or tag_name contains 'wire' %}
+        {% assign category_lower = category | downcase %}
+        {% if category_lower contains 'payment' or category_lower contains 'ach' or category_lower contains 'nacha' or category_lower contains 'wire' %}
           {% assign tag_color = '#3b82f6' %}
-        {% elsif tag_name contains 'leadership' or tag_name contains 'management' or tag_name contains 'team' %}
+        {% elsif category_lower contains 'leadership' or category_lower contains 'management' or category_lower contains 'team' %}
           {% assign tag_color = '#10b981' %}
-        {% elsif tag_name contains 'system' or tag_name contains 'architecture' or tag_name contains 'scale' %}
+        {% elsif category_lower contains 'system' or category_lower contains 'architecture' or category_lower contains 'scale' %}
           {% assign tag_color = '#f59e0b' %}
-        {% elsif tag_name contains 'engineering' or tag_name contains 'development' %}
+        {% elsif category_lower contains 'engineering' or category_lower contains 'development' %}
           {% assign tag_color = '#8b5cf6' %}
         {% else %}
           {% assign tag_color = '#6b7280' %}
         {% endif %}
         
-        <a href="/blog?tag={{ tag_name }}" class="tag-cloud-item" 
+        <a href="/blog?tag={{ category | downcase }}" class="tag-cloud-item" 
            style="font-size: {{ font_size }}px; color: {{ tag_color }}; opacity: {{ opacity | divided_by: 100.0 }};"
-           data-tag="{{ tag_name }}">
-          {{ tag_name | capitalize }}
+           data-tag="{{ category | downcase }}">
+          {{ category | capitalize }}
         </a>
       {% endfor %}
     </div>
