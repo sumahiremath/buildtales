@@ -19,9 +19,9 @@ title: Build Tales
       </a>
       <a class="hero-card secondary" href="/blog">
         <div class="hero-card-icon">📚</div>
-        <h3>Explore All Posts</h3>
+        <h3>Explore All .Articles</h3>
         <p>Browse engineering leadership, systems, and payment articles</p>
-        <span class="hero-card-action">View Posts →</span>
+        <span class="hero-card-action">View .Articles →</span>
       </a>
     </div>
   </div>

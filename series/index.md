@@ -24,6 +24,22 @@ title: "Series"
       </div>
     </a>
     
+    <!-- ACH Series -->
+    <a href="/series/ach" class="series-card available">
+      <div class="series-card-header">
+        <div class="series-meta">
+          <span class="series-status active">Available Now</span>
+          <span class="series-progress">4 of 8 articles</span>
+        </div>
+      </div>
+      <h2 class="series-title"><span class="series-title-icon">🏦</span> ACH Deep Dive: From Basics to Advanced Operations</h2>
+      <p class="series-description">Master the Automated Clearing House network that powers $72+ trillion in annual transactions. From fundamentals to advanced compliance and operations.</p>
+      <div class="series-actions">
+        <span class="series-cta primary">Start Reading →</span>
+        <span class="series-secondary">View Complete Series</span>
+      </div>
+    </a>
+    
     <!-- Build, Break, Lead Series -->
     <a href="/series/build-break-lead" class="series-card available">
       <div class="series-card-header">

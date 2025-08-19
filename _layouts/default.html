@@ -379,6 +379,11 @@
 
     <main id="content" class="main-content" role="main">
       {{ content }}
+      
+      <!-- Series Navigation -->
+      {% if page.series %}
+        {% include series-navigation.html %}
+      {% endif %}
 
 
         
@@ -557,6 +562,19 @@
             transform: scale(1);
           }
         }
+        
+        /* Custom teal color classes for subscribe button */
+        .bg-teal-600 {
+          background-color: #157878 !important;
+        }
+        
+        .hover\:bg-teal-700:hover {
+          background-color: #0f6b6b !important;
+        }
+        
+        .focus\:ring-teal-500:focus {
+          --tw-ring-color: #157878 !important;
+        }
         </style>
       </section>
 
@@ -569,9 +587,9 @@
             <p class="text-gray-600 mb-4">No spam. No fluff. Just battle-tested insights on payments & leadership → straight to you.</p>
             <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex flex-col sm:flex-row gap-3 max-w-md mx-auto" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
               <input type="email" name="email_address" placeholder="Enter your email" required 
-                     class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+                     class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent text-sm">
               <button type="submit" 
-                      class="px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm whitespace-nowrap">
+                      class="px-6 py-2 bg-teal-600 text-white font-medium rounded-lg hover:bg-teal-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 text-sm whitespace-nowrap">
                 Subscribe
               </button>
             </form>
