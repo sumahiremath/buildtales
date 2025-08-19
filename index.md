@@ -35,8 +35,8 @@ title: Build Tales
     <p class="text-gray-600 mb-6">Get the latest insights on engineering leadership, payments, and building resilient systems delivered to your inbox.</p>
 
     <!-- ConvertKit Form -->
-    <form action="https://app.convertkit.com/forms/YOUR_FORM_ID/subscriptions" method="post" class="convertkit-form">
-      <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+    <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form text-center" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
+      <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto justify-center">
         <input type="email" name="email_address" placeholder="Enter your email" required 
                class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
         <button type="submit" 
@@ -44,7 +44,7 @@ title: Build Tales
           Subscribe
         </button>
       </div>
-      <p class="text-xs text-gray-500 mt-3">No spam, unsubscribe at any time.</p>
+      <p class="text-xs text-gray-500 mt-3 text-center">No spam, unsubscribe at any time.</p>
     </form>
   </div>
 </section>
