@@ -9,7 +9,7 @@ title: "Series"
   
   <!-- Featured Series -->
   <div class="series-grid">
-    <a href="/series/payments.html" class="series-card available">
+    <a href="/series/payments/" class="series-card available">
       <div class="series-card-header">
         <div class="series-meta">
           <span class="series-status active">Available Now</span>
@@ -25,7 +25,7 @@ title: "Series"
     </a>
     
     <!-- ACH Series -->
-    <a href="/series/ach.html" class="series-card available">
+    <a href="/series/ach/" class="series-card available">
       <div class="series-card-header">
         <div class="series-meta">
           <span class="series-status active">Available Now</span>
@@ -41,7 +41,7 @@ title: "Series"
     </a>
     
     <!-- Engineering Leadership & Systems Series -->
-    <a href="/series/leadership.html" class="series-card available">
+    <a href="/series/leadership/" class="series-card available">
       <div class="series-card-header">
         <div class="series-meta">
           <span class="series-status active">Available Now</span>
