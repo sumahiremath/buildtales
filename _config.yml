@@ -16,7 +16,7 @@ kramdown:
   input: GFM
 
 # Force Jekyll to use front matter dates
-future: true
+future: false
 show_drafts: false
 
 # Exclude template files and other non-content files
