@@ -46,7 +46,7 @@ banner:
   series: "/assets/banners/resized/lead4-series.jpg"
 ---
 
-{% include series-navigation-advanced.html %}
+
 
 # Engineering + Compliance: A Survival Guide for Regulated Environments
 

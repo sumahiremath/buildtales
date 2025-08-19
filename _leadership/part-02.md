@@ -46,7 +46,7 @@ banner:
   series: "/assets/banners/resized/lead2-series.jpg"
 ---
 
-{% include series-navigation-advanced.html %}
+
 
 # Scaling Engineering Culture: From Informal Habits to Intentional Practices
 

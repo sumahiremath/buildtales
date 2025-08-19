@@ -7,7 +7,7 @@ tags: [technical-debt, feature-velocity, decision-making, trade-offs]
 excerpt: "Managing technical debt isn't about saying yes or no. It's about translating hidden costs into visible trade-offs that executives can understand."
 
 # SEO and Canonical Tags
-canonical_url: "https://buildtales.dev/leadership/part-03.html"
+canonical_url: "https://buildtales.dev/posts/lead3"
 author:
   name: "Suma Manjunath"
   twitter: "@sumahiremath"
@@ -46,7 +46,7 @@ banner:
   series: "/assets/banners/resized/lead3-series.jpg"
 ---
 
-{% include series-navigation-advanced.html %}
+
 
 # Technical Debt vs Feature Velocity: A Framework for Hard Decisions
 
