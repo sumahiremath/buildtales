@@ -2,7 +2,7 @@
 layout: default
 title: "Wire Transfers Explained: Fast, Final, and Expensive"
 date: 2025-08-14
-categories: [fintech, payments]
+categories: [payments]
 tags: [wire-transfers, fedwire, chips, swift, payments, banking]
 excerpt: "Wire transfers are the express lane of money movement - fast, final, and irreversible. Unlike ACH's batch processing, wires move money in real-time through networks like Fedwire and CHIPS."
 banner_image: "" "/assets/banners/resized/20250814wiretransfer-blog.jpg"
@@ -38,24 +38,19 @@ syndication:
 # Series information
 series:
   name: "How U.S. Payments Really Work"
-  index_url: "/series/payments"
   part: 2
   total_parts: 45
+  read_time: 15
+  tags: [wire-transfers, fedwire, chips]
 ---
 
-<!-- Series Navigation -->
-<div style="background: #f8f9fa; border-left: 4px solid #007acc; padding: 1rem; margin: 1rem 0;">
-  <strong>Part 2 of the "How U.S. Payments Really Work" Series</strong><br>
-  <a href="/fintech/payments/2025/08/13/money-flow-bank-account.html">← Previous: How Money Moves</a> | 
-  <a href="/series/payments">View complete series roadmap</a> | 
-  <a href="/fintech/payments/2025/08/20/ach-good-bad-ugly.html">Next: ACH: The Good, The Bad, and The Ugly →</a>
-</div>
+{% include series-navigation-advanced.html %}
 
 # Wire Transfers Explained: Fast, Final, and Expensive
 
 *Published on: August 14, 2025*
 
-![Wire Transfers](/assets/banners/resized/20250814wiretransfer-blog.jpg)
+![Wire Transfers](/assets/banners/resized/20250814wiretransfer-bl   og.jpg)
 
 A wire transfer is like telling your bank: **"Move this money to another bank account — right now. No batching. No waiting."**
 

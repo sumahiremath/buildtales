@@ -1,0 +1,169 @@
+{% comment %}
+  Advanced Series Navigation Include
+  
+  This include automatically generates series navigation by:
+  1. Finding all posts in the same series using categories
+  2. Sorting them by series.part number
+  3. Generating previous/next navigation
+  4. Showing series progress and overview
+  
+  Usage: {% include series-navigation-advanced.html %}
+  
+  Requirements in post front matter:
+  ---
+  categories: [series-name]
+  series:
+    name: "Series Display Name"
+    part: 1
+    total_parts: 5
+  ---
+{% endcomment %}
+
+{% if page.series %}
+  {% assign series_name = page.series.name %}
+  {% assign current_part = page.series.part %}
+  {% assign total_parts = page.series.total_parts %}
+  
+  <!-- Find all posts in this series -->
+  {% assign series_posts = "" | split: "" %}
+  {% for post in site.posts %}
+    {% if post.categories contains page.categories[0] and post.series %}
+      {% assign series_posts = series_posts | push: post %}
+    {% endif %}
+  {% endfor %}
+  
+  <!-- Sort posts by part number -->
+  {% assign sorted_posts = series_posts | sort: "series.part" %}
+  
+  <!-- Find current, previous, and next posts -->
+  {% assign current_post = nil %}
+  {% assign prev_post = nil %}
+  {% assign next_post = nil %}
+  
+  {% for post in sorted_posts %}
+    {% if post.series.part == current_part %}
+      {% assign current_post = post %}
+      {% if forloop.index0 > 0 %}
+        {% assign prev_post = sorted_posts[forloop.index0] %}
+      {% endif %}
+      {% if forloop.index0 < forloop.length %}
+        {% assign next_post = sorted_posts[forloop.index0 | plus: 1] %}
+      {% endif %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  
+  <!-- Series Navigation -->
+  <div class="series-navigation-advanced" style="background: #f8f9fa; border-left: 4px solid #007acc; padding: 1.5rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0;">
+    <div class="series-header" style="margin-bottom: 1rem;">
+      <h3 style="margin: 0 0 0.5rem 0; color: #007acc; font-size: 1.1rem; font-weight: 600;">
+        📚 {{ series_name }}
+      </h3>
+      <p style="margin: 0; color: #6c757d; font-size: 0.9rem;">
+        Part {{ current_part }} of {{ total_parts }}
+      </p>
+    </div>
+    
+    <!-- Progress Bar -->
+    <div class="series-progress" style="margin-bottom: 1rem;">
+      <div style="width: 100%; background-color: #e9ecef; border-radius: 10px; height: 8px; overflow: hidden;">
+        <div style="width: {{ current_part | times: 100.0 | divided_by: total_parts }}%; background-color: #007acc; height: 100%; border-radius: 10px; transition: width 0.3s ease;"></div>
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-top: 0.5rem; font-size: 0.8rem; color: #6c757d;">
+        <span>Started</span>
+        <span>{{ current_part | times: 100.0 | divided_by: total_parts | round }}% Complete</span>
+        <span>Finished</span>
+      </div>
+    </div>
+    
+    <!-- Navigation Links -->
+    <div class="series-links" style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+      <a href="/series/{{ page.categories[0] }}" class="series-link primary" style="background: #007acc; color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: background-color 0.2s ease;">
+        📋 View Series Roadmap
+      </a>
+      
+      {% if prev_post %}
+        <a href="{{ prev_post.url }}" class="series-link secondary" style="color: #007acc; text-decoration: none; font-size: 0.9rem; padding: 0.5rem 0;">
+          ← Part {{ prev_post.series.part }}: {{ prev_post.title | truncate: 40 }}
+        </a>
+      {% endif %}
+      
+      {% if next_post %}
+        <a href="{{ next_post.url }}" class="series-link secondary" style="color: #007acc; text-decoration: none; font-size: 0.9rem; padding: 0.5rem 0;">
+          Part {{ next_post.series.part }}: {{ next_post.title | truncate: 40 }} →
+        </a>
+      {% endif %}
+    </div>
+    
+    <!-- Series Overview -->
+    <div class="series-overview" style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #dee2e6;">
+      <h4 style="margin: 0 0 0.5rem 0; font-size: 0.9rem; color: #495057; font-weight: 600;">Series Overview:</h4>
+      <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+        {% for post in sorted_posts %}
+          <a href="{{ post.url }}" 
+             class="series-part-link {% if post.url == page.url %}current{% endif %}"
+             style="display: inline-block; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; text-decoration: none; transition: all 0.2s ease; {% if post.url == page.url %}background: #007acc; color: white;{% else %}background: #e9ecef; color: #6c757d;{% endif %}">
+            {{ post.series.part }}
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+    
+    <!-- Series Benefits -->
+    <div class="series-benefits" style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #dee2e6;">
+      <p style="margin: 0; font-size: 0.85rem; color: #6c757d; line-height: 1.4;">
+        <strong>💡 Series Tip:</strong> 
+        {% if current_part == 1 %}
+          Start here! This article lays the foundation for everything that follows.
+        {% elsif current_part == total_parts %}
+          You've reached the final article! Review the series index to see how far you've come.
+        {% else %}
+          You're {{ current_part | times: 100.0 | divided_by: total_parts | round }}% through the series. Keep going!
+        {% endif %}
+      </p>
+    </div>
+  </div>
+  
+  <style>
+    .series-navigation-advanced .series-link:hover {
+      opacity: 0.8;
+    }
+    
+    .series-navigation-advanced .series-link.primary:hover {
+      background-color: #0056b3;
+    }
+    
+    .series-navigation-advanced .series-link.secondary:hover {
+      text-decoration: underline;
+    }
+    
+    .series-part-link:hover {
+      opacity: 0.8;
+      transform: translateY(-1px);
+    }
+    
+    .series-part-link.current {
+      font-weight: 600;
+    }
+    
+    @media (max-width: 640px) {
+      .series-navigation-advanced {
+        padding: 1rem;
+        margin: 1rem 0;
+      }
+      
+      .series-links {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      
+      .series-link.primary {
+        text-align: center;
+      }
+      
+      .series-overview {
+        margin-top: 0.75rem;
+      }
+    }
+  </style>
+{% endif %}

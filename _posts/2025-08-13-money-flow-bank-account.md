@@ -2,7 +2,7 @@
 layout: default
 title: "How Money Moves In And Out Of Your Bank Account?"
 date: 2025-08-13
-categories: [fintech, payments]
+categories: [payments]
 tags: [ach, payments, banking, fintech-basics]
 excerpt: "Ever wonder how your paycheck shows up in your bank account on payday? Or how your gym magically pulls your membership fee every month? That's all thanks to ACH - the behind-the-scenes hero of American banking."
 banner_image: "/assets/banners/resized/20250813moneyflow-blog.jpg"
@@ -38,17 +38,13 @@ syndication:
 # Series information
 series:
   name: "How U.S. Payments Really Work"
-  index_url: "/series/payments"
   part: 1
   total_parts: 45
+  read_time: 12
+  tags: [ach-basics, money-movement]
 ---
 
-<!-- Series Navigation -->
-<div style="background: #f8f9fa; border-left: 4px solid #007acc; padding: 1rem; margin: 1rem 0;">
-  <strong>Part 1 of the "How U.S. Payments Really Work" Series</strong><br>
-  <a href="/series/payments">← View complete series roadmap</a> | 
-  <a href="/fintech/payments/2025/08/14/wire-transfers-explained.html">Next: Wire Transfers →</a>
-</div>
+{% include series-navigation-advanced.html %}
 
 # How Money Moves In and Out of Your Bank Account?
 

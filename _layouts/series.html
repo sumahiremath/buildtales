@@ -1,0 +1,164 @@
+---
+layout: default
+---
+
+{% comment %}
+  Series Layout
+  
+  This layout automatically generates series content by:
+  1. Finding all posts in the series using categories
+  2. Sorting them by series.part number
+  3. Generating the series overview and article grid
+  4. Showing progress and navigation
+  
+  Usage: Set layout: series in your series page front matter
+  
+  Requirements:
+  - categories: [series-name] - to identify series
+  - series.name - display name
+  - series.description - series description
+  - series.total_parts - total number of parts
+{% endcomment %}
+
+{% assign series_name = page.series.name %}
+{% assign series_description = page.series.description %}
+{% assign total_parts = page.series.total_parts %}
+
+<!-- Find all posts in this series -->
+{% assign series_posts = "" | split: "" %}
+{% for post in site.posts %}
+  {% if post.categories contains page.categories[0] and post.series %}
+    {% assign series_posts = series_posts | push: post %}
+  {% endif %}
+{% endfor %}
+
+<!-- Sort posts by part number -->
+{% assign sorted_posts = series_posts | sort: "series.part" %}
+{% assign available_posts = sorted_posts | size %}
+
+<div class="mx-auto max-w-4xl">
+  <h1 class="text-4xl font-bold mb-6">{{ series_name }}</h1>
+  <p class="text-lg opacity-80 mb-8">{{ series_description }}</p>
+  
+  <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-8">
+    <p class="text-blue-800">
+      <strong>Series Overview:</strong> 
+      This series covers {{ total_parts }} articles on {{ page.categories[0] | replace: "-", " " | capitalize }}. 
+      {% if available_posts > 0 %}
+        {{ available_posts }} of {{ total_parts }} articles are currently available.
+      {% else %}
+        Articles are being published regularly. Subscribe to get notified when new parts are released.
+      {% endif %}
+    </p>
+  </div>
+
+  <!-- Series Progress -->
+  <div class="mb-8">
+    <div class="flex items-center justify-between mb-2">
+      <span class="text-sm font-medium text-gray-700">Series Progress</span>
+      <span class="text-sm text-gray-500">{{ available_posts }} of {{ total_parts }} articles</span>
+    </div>
+    <div class="w-full bg-gray-200 rounded-full h-2">
+      <div class="bg-blue-600 h-2 rounded-full" style="width: {{ available_posts | times: 100.0 | divided_by: total_parts }}%"></div>
+    </div>
+  </div>
+
+  <!-- Article Grid -->
+  <div class="grid gap-6 md:grid-cols-2">
+    {% for post in sorted_posts %}
+      <div class="bg-white border-2 {% if post.url == page.url %}border-blue-300{% else %}border-green-200{% endif %} rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+        <div class="flex items-center justify-between mb-3">
+          <span class="{% if post.url == page.url %}bg-blue-100 text-blue-800{% else %}bg-green-100 text-green-800{% endif %} text-xs font-semibold px-2.5 py-0.5 rounded-full">
+            {% if post.url == page.url %}Current{% else %}Available{% endif %}
+          </span>
+          <span class="text-sm text-gray-500">Part {{ post.series.part }}</span>
+        </div>
+        <h3 class="text-lg font-semibold mb-2">
+          <a href="{{ post.url }}" class="text-blue-600 hover:text-blue-800">{{ post.title }}</a>
+        </h3>
+        <p class="text-gray-600 text-sm mb-3">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+        <div class="flex items-center text-xs text-gray-500">
+          {% if post.series.read_time %}
+            <span>📚 {{ post.series.read_time }} min read</span>
+          {% endif %}
+          {% if post.series.tags %}
+            {% for tag in post.series.tags limit: 2 %}
+              {% if forloop.first and post.series.read_time %}<span class="mx-2">•</span>{% endif %}
+              <span>🎯 {{ tag }}</span>
+              {% unless forloop.last %}<span class="mx-2">•</span>{% endunless %}
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+    
+    <!-- Coming Soon Articles -->
+    {% assign remaining_parts = total_parts | minus: available_posts %}
+    {% for i in (1..remaining_parts) %}
+      {% assign part_number = available_posts | plus: i %}
+      <div class="bg-white border-2 border-gray-200 rounded-lg p-6 shadow-sm opacity-75">
+        <div class="flex items-center justify-between mb-3">
+          <span class="bg-gray-100 text-gray-600 text-xs font-semibold px-2.5 py-0.5 rounded-full">Coming Soon</span>
+          <span class="text-sm text-gray-500">Part {{ part_number }}</span>
+        </div>
+        <h3 class="text-lg font-semibold mb-2 text-gray-700">Article {{ part_number }}: Coming Soon</h3>
+        <p class="text-gray-500 text-sm mb-3">This article is in progress and will be published soon. Subscribe to get notified when it's available.</p>
+        <div class="flex items-center text-xs text-gray-400">
+          <span>📚 Coming Soon</span>
+          <span class="mx-2">•</span>
+          <span>🎯 In Progress</span>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- Series Benefits -->
+  <div class="mt-12 bg-gray-50 rounded-lg p-6">
+    <h2 class="text-2xl font-bold mb-4">What You'll Gain From This Series</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      {% if page.series.benefits %}
+        {% for benefit in page.series.benefits %}
+          <div>
+            <h3 class="font-semibold text-lg mb-2">{{ benefit.icon }} {{ benefit.title }}</h3>
+            <p class="text-gray-600">{{ benefit.description }}</p>
+          </div>
+        {% endfor %}
+      {% else %}
+        <div>
+          <h3 class="font-semibold text-lg mb-2">🎯 Practical Frameworks</h3>
+          <p class="text-gray-600">Actionable models and templates you can implement immediately.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg mb-2">💡 Real-World Examples</h3>
+          <p class="text-gray-600">Case studies and stories from actual experiences and proven patterns.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg mb-2">🚀 Skill Development</h3>
+          <p class="text-gray-600">Build the skills and knowledge you need to succeed.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg mb-2">🔄 Continuous Learning</h3>
+          <p class="text-gray-600">Develop habits and mindsets that support ongoing growth.</p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Get Started CTA -->
+  {% if available_posts > 0 %}
+    {% assign first_post = sorted_posts | first %}
+    <div class="mt-8 text-center">
+      <a href="{{ first_post.url }}" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+        Start Reading Part 1 →
+      </a>
+      <p class="text-sm text-gray-500 mt-2">Begin your {{ page.categories[0] | replace: "-", " " }} journey today</p>
+    </div>
+  {% else %}
+    <div class="mt-8 text-center">
+      <div class="inline-block bg-gray-400 text-white px-8 py-3 rounded-lg font-semibold cursor-not-allowed">
+        Coming Soon
+      </div>
+      <p class="text-sm text-gray-500 mt-2">This series is in development. Subscribe to get notified when it launches.</p>
+    </div>
+  {% endif %}
+</div>

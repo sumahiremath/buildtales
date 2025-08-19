@@ -2,7 +2,7 @@
 layout: default
 title: "ACH: The Good, The Bad, and The Ugly"
 date: 2025-08-20
-categories: [fintech, payments]
+categories: [payments]
 tags: [ach, nacha, payments, reconciliation, same-day-ach, fintech-operations]
 excerpt: "Still powering trillions. Still moving like it's stuck in fax machine mode. ACH is the OG payments backbone that's both the foundation and frustration of American finance."
 banner_image: "/assets/banners/resized/20250820goodbadugly-blog.jpg"
@@ -38,18 +38,13 @@ syndication:
 # Series information
 series:
   name: "How U.S. Payments Really Work"
-  index_url: "/series/payments"
   part: 3
   total_parts: 45
+  read_time: 18
+  tags: [ach-analysis, fintech-reality]
 ---
 
-<!-- Series Navigation -->
-<div style="background: #f8f9fa; border-left: 4px solid #007acc; padding: 1rem; margin: 1rem 0;">
-  <strong>Part 3 of the "How U.S. Payments Really Work" Series</strong><br>
-  <a href="/fintech/payments/2025/08/14/wire-transfers-explained.html">← Previous: Wire Transfers</a> | 
-  <a href="/series/payments">View complete series roadmap</a> | 
-  <em>Next: ACH Cutoffs: The Hidden Clock That Breaks Your UX (Coming Aug 27)</em>
-</div>
+{% include series-navigation-advanced.html %}
 
 # ACH: The Good, The Bad, and The Ugly
 

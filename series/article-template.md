@@ -1,28 +1,28 @@
 ---
 layout: default
-title: "[ARTICLE TITLE]"
-date: 2025-08-27
-categories: [fintech, payments]
-tags: [relevant, tags, here]
-excerpt: "[Brief compelling excerpt that explains what readers will learn]"
+title: "Article Title: Part X of Series"
+date: YYYY-MM-DD
+categories: [series-name]
+tags: [tag1, tag2, tag3]
+excerpt: "Brief description of what this article covers and what readers will learn."
 
 # SEO and Canonical Tags
-canonical_url: "https://buildtales.dev/[URL_PATH]"
+canonical_url: "https://buildtales.dev/posts/article-slug"
 author:
   name: "Suma Manjunath"
   twitter: "@sumahiremath"
   
 # Open Graph / Social Media
 og:
-  title: "[ARTICLE TITLE]"
-  description: "[SEO description with key technical terms]"
+  title: "Article Title: Part X of Series"
+  description: "Brief description for social media sharing."
   type: "article"
   
 # Twitter Card
 twitter:
   card: "summary"
-  title: "[ARTICLE TITLE]"
-  description: "[SEO description with key technical terms]"
+  title: "Article Title: Part X of Series"
+  description: "Brief description for Twitter sharing."
 
 # Syndication and Original Content Declaration
 robots: "index, follow"
@@ -31,86 +31,42 @@ syndication:
   republish_allowed: true
   canonical_source: "BuildTales.dev"
 
-# Series information
+# Series information - This enables automatic series navigation
 series:
-  name: "How U.S. Payments Really Work"
-  index_url: "/how-us-payments-actually-work/"
-  part: 4
-  total_parts: 45
+  name: "Series Display Name"
+  part: X
+  total_parts: Y
+  read_time: Z
+  tags: [tag1, tag2]
 ---
 
-<!-- Series Navigation -->
-<div style="background: #f8f9fa; border-left: 4px solid #007acc; padding: 1rem; margin: 1rem 0;">
-  <strong>Part 4 of the "How U.S. Payments Really Work" Series</strong><br>
-  [NAVIGATION_LINKS_HERE]
-</div>
+{% include series-navigation-advanced.html %}
 
-# [ARTICLE TITLE]
+# Article Title: Part X of Series
 
-[ENGAGING OPENING PARAGRAPH - START WITH A COMPELLING HOOK]
+Your article content goes here...
+
+## Key Points
+
+- Point 1
+- Point 2
+- Point 3
 
 ## What You'll Learn
 
 In this article, we'll cover:
-- [Key learning point 1]
-- [Key learning point 2]
-- [Key learning point 3]
-- [Practical implementation details]
+- Topic 1
+- Topic 2
+- Topic 3
 
-## [MAIN SECTION 1]
+## Main Content
 
-[Content with code examples, diagrams, and practical insights]
+Your main article content...
 
-### Code Example
+## Summary
 
-```ruby
-# Practical example that readers can understand and use
-# Include comments explaining the important parts
-def example_function
-  # Implementation details
-end
-```
+Brief summary of key takeaways...
 
-### Visual Flow (if applicable)
+## Next Steps
 
-<div class="mermaid">
-flowchart LR
-    A["Step 1"] --> B["Step 2"]
-    B --> C["Step 3"]
-    
-    style A fill:#e3f2fd
-    style B fill:#f3e5f5
-    style C fill:#e8f5e8
-</div>
-
-*Caption explaining the diagram*
-
-## [MAIN SECTION 2]
-
-[Continue with content structure]
-
-## Real-World Considerations
-
-[This section should cover practical gotchas, edge cases, and production realities]
-
-## Key Takeaways
-
-- [Practical takeaway 1]
-- [Practical takeaway 2]
-- [Practical takeaway 3]
-
-## References
-
-1. **[Source Name]**. "[Document Title]." *Website*, Year. [URL]
-
-2. **[Authority]**. "[Official Documentation]." *Official Site*, Year. [URL]
-
-[Continue with numbered references...]
-
----
-
-<!-- Series Navigation -->
-<div style="background: #f8f9fa; border-left: 4px solid #007acc; padding: 1rem; margin: 1rem 0;">
-  <strong>"How U.S. Payments Really Work" Series Navigation</strong><br>
-  [NAVIGATION_LINKS_HERE] | <a href="/series/payments">View complete series roadmap</a>
-</div>
+What readers should do next or what's coming in the next part...

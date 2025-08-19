@@ -1,0 +1,111 @@
+{% comment %}
+  Series Navigation Include
+  
+  This include automatically generates series navigation based on:
+  - series.name: The name of the series
+  - series.index_url: URL to the series index page
+  - series.part: Current part number
+  - series.total_parts: Total parts in series
+  
+  Usage: {% include series-navigation.html %}
+  
+  The include will:
+  1. Show current part progress
+  2. Generate navigation to previous/next parts
+  3. Link to series index
+  4. Show series overview
+{% endcomment %}
+
+{% if page.series %}
+  {% assign series_name = page.series.name %}
+  {% assign series_url = page.series.index_url %}
+  {% assign current_part = page.series.part %}
+  {% assign total_parts = page.series.total_parts %}
+  
+  <!-- Series Navigation -->
+  <div class="series-navigation" style="background: #f8f9fa; border-left: 4px solid #007acc; padding: 1.5rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0;">
+    <div class="series-header" style="margin-bottom: 1rem;">
+      <h3 style="margin: 0 0 0.5rem 0; color: #007acc; font-size: 1.1rem; font-weight: 600;">
+        📚 {{ series_name }}
+      </h3>
+      <p style="margin: 0; color: #6c757d; font-size: 0.9rem;">
+        Part {{ current_part }} of {{ total_parts }}
+      </p>
+    </div>
+    
+    <!-- Progress Bar -->
+    <div class="series-progress" style="margin-bottom: 1rem;">
+      <div style="width: 100%; background-color: #e9ecef; border-radius: 10px; height: 8px; overflow: hidden;">
+        <div style="width: {{ current_part | times: 100.0 | divided_by: total_parts }}%; background-color: #007acc; height: 100%; border-radius: 10px; transition: width 0.3s ease;"></div>
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-top: 0.5rem; font-size: 0.8rem; color: #6c757d;">
+        <span>Started</span>
+        <span>{{ current_part | times: 100.0 | divided_by: total_parts | round }}% Complete</span>
+        <span>Finished</span>
+      </div>
+    </div>
+    
+    <!-- Navigation Links -->
+    <div class="series-links" style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+      <a href="{{ series_url }}" class="series-link primary" style="background: #007acc; color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: background-color 0.2s ease;">
+        📋 View Series Roadmap
+      </a>
+      
+      {% if current_part > 1 %}
+        <a href="#" class="series-link secondary" style="color: #007acc; text-decoration: none; font-size: 0.9rem; padding: 0.5rem 0;">
+          ← Previous Part
+        </a>
+      {% endif %}
+      
+      {% if current_part < total_parts %}
+        <a href="#" class="series-link secondary" style="color: #007acc; text-decoration: none; font-size: 0.9rem; padding: 0.5rem 0;">
+          Next Part →
+        </a>
+      {% endif %}
+    </div>
+    
+    <!-- Series Benefits -->
+    <div class="series-benefits" style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #dee2e6;">
+      <p style="margin: 0; font-size: 0.85rem; color: #6c757d; line-height: 1.4;">
+        <strong>💡 Series Tip:</strong> 
+        {% if current_part == 1 %}
+          Start here! This article lays the foundation for everything that follows.
+        {% elsif current_part == total_parts %}
+          You've reached the final article! Review the series index to see how far you've come.
+        {% else %}
+          You're {{ current_part | times: 100.0 | divided_by: total_parts | round }}% through the series. Keep going!
+        {% endif %}
+      </p>
+    </div>
+  </div>
+  
+  <style>
+    .series-navigation .series-link:hover {
+      opacity: 0.8;
+    }
+    
+    .series-navigation .series-link.primary:hover {
+      background-color: #0056b3;
+    }
+    
+    .series-navigation .series-link.secondary:hover {
+      text-decoration: underline;
+    }
+    
+    @media (max-width: 640px) {
+      .series-navigation {
+        padding: 1rem;
+        margin: 1rem 0;
+      }
+      
+      .series-links {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      
+      .series-link.primary {
+        text-align: center;
+      }
+    }
+  </style>
+{% endif %}
