@@ -2,6 +2,7 @@
 layout: series
 title: "How U.S. Payments Really Work"
 excerpt: "A builder's guide to rails, risk, and reconciliation. Everything you need to understand, build, and scale payment systems in the United States."
+permalink: /series/payments.html
 categories: [payments]
 series:
   name: "How U.S. Payments Really Work"
