@@ -2,7 +2,7 @@
 layout: default
 title: "ACH Correction Codes: Fix It, Log It, Prove It"
 date: 2025-08-17
-categories: [fintech, payments, compliance]
+categories: [ach]
 tags: [ach, nacha, noc, correction-codes, compliance, fintech-operations, audit]
 excerpt: "When it comes to ACH payments, mistakes happen. Instead of rejecting every transaction, the ACH Network gives us Notification of Change (NOC) codes. I learned the hard way: every NOC is not just a suggestion—it's a requirement."
 banner_image: "/assets/banners/resized/20250817nocs-blog.jpg"
