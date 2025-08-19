@@ -2,12 +2,26 @@
 layout: default
 title: "Subscribe"
 ---
+<section class="py-10 pt-16">
+  <div class="mx-auto max-w-3xl text-center">
+    <h2 class="text-2xl font-semibold mb-4">Stay Updated</h2>
+    <p class="text-gray-600 mb-6">Get the latest insights on engineering leadership, payments, and building resilient systems delivered to your inbox.</p>
 
-<div class="mx-auto max-w-3xl text-center">
-  <section class="py-16">
-    <h1 class="text-4xl font-bold mb-6">Stay Updated</h1>
-    <p class="text-lg opacity-80 mb-8">Get deep dives on engineering leadership, fintech, and systems design delivered to your inbox. No spam, just quality content you can read in 7–12 minutes.</p>
-    
+    <!-- ConvertKit Form -->
+    <form action="https://app.convertkit.com/forms/YOUR_FORM_ID/subscriptions" method="post" class="convertkit-form">
+      <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input type="email" name="email_address" placeholder="Enter your email" required 
+               class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+        <button type="submit" 
+                class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+          Subscribe
+        </button>
+      </div>
+      <p class="text-xs text-gray-500 mt-3">No spam, unsubscribe at any time.</p>
+    </form>
+  </div>
+</section>
+
     <div class="card" style="max-width: 500px; margin: 0 auto;">
       <h2 class="text-xl font-semibold mb-4">What You'll Get</h2>
       <ul style="text-align: left; margin-bottom: 2rem;">

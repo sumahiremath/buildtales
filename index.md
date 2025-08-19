@@ -28,6 +28,27 @@ title: Build Tales
 </section>
 <br>  
 
+<!-- Stay Updated Section -->
+<section class="py-10 pt-16">
+  <div class="mx-auto max-w-3xl text-center">
+    <h2 class="text-2xl font-semibold mb-4">Stay Updated</h2>
+    <p class="text-gray-600 mb-6">Get the latest insights on engineering leadership, payments, and building resilient systems delivered to your inbox.</p>
+
+    <!-- ConvertKit Form -->
+    <form action="https://app.convertkit.com/forms/YOUR_FORM_ID/subscriptions" method="post" class="convertkit-form">
+      <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input type="email" name="email_address" placeholder="Enter your email" required 
+               class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+        <button type="submit" 
+                class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+          Subscribe
+        </button>
+      </div>
+      <p class="text-xs text-gray-500 mt-3">No spam, unsubscribe at any time.</p>
+    </form>
+  </div>
+</section>
+
 <!-- Start Here Section -->
 <section class="py-10 pt-16">
   <div class="mx-auto max-w-5xl">
@@ -36,14 +57,14 @@ title: Build Tales
       <a class="start-here-card" href="/series/payments">
         <div class="card-icon" style="background: #157878; color: white;">🚀</div>
         <h3 class="font-semibold mb-2">How U.S. Payments Really Work</h3>
-        <p class="opacity-80 text-sm">Rails, risk & real-world ops.</p>
+        <p class="opacity-80 text-sm">Inside the messy plumbing of money movement</p>
         <span class="card-status available">Available now</span>
       </a>
-      <a class="start-here-card" href="/posts/engineering-leadership-staff-systems">
+      <a class="start-here-card" href="/series/build-break-lead">
         <div class="card-icon" style="background: #6b7280; color: white;">⚡</div>
-        <h3 class="font-semibold mb-2">Staff+ Systems Thinking</h3>
-        <p class="opacity-80 text-sm">Lead through architecture.</p>
-        <span class="card-status coming-soon">Coming soon</span>
+        <h3 class="font-semibold mb-2">Staff + Systems Thinking</h3>
+        <p class="opacity-80 text-sm">Engineers Who Lead Through Architecture</p>
+        <span class="card-status coming-soon">Available now</span>
       </a>
       <a class="start-here-card" href="/posts/designing-for-failure">
         <div class="card-icon" style="background: #6b7280; color: white;">🛡️</div>
@@ -54,6 +75,7 @@ title: Build Tales
     </div>
   </div>
 </section>
+
 <br>  
 
 
