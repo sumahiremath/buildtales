@@ -5,7 +5,9 @@ date: 2025-08-15
 categories: [fintech, payments]
 tags: [nacha, ach, file-format, fintech-operations, payments-infrastructure, banking]
 excerpt: "Every ACH transaction starts as a carefully crafted 94-character line in a NACHA file. Let's decode the cryptic structure that moves $72 trillion annually through the U.S. banking system."
-banner_image: "/assets/banners/resized/A_2D_digital_illustration_serves_as_a_banner_or_co_1200x400-blog.jpg"
+banner_image: "/assets/banners/resized/A0250815nachafile-blog.png"
+banner_image_recent: "/assets/banners/resized/A0250815nachafile-recent.png"
+banner_image_series: "/assets/banners/resized/A0250815nachafile-series.png"
 banner_color: "#157878"
 
 # SEO and Canonical Tags
@@ -40,7 +42,7 @@ syndication:
 
 *Published on: August 15, 2025*
 
-![NACHA Demystified Banner](/assets/banners/A_2D_digital_illustration_serves_as_a_banner_or_co_1200x400.jpg)
+![NACHA Demystified Banner](/assets/banners/resized/20250815nachafile-blog.jpg)
 
 Picture this: You're building a payroll system, and your first ACH file submission gets rejected with a cryptic "Invalid field length at position 47." Meanwhile, $72 trillion moves through these exact same files every year without a hitch.
 

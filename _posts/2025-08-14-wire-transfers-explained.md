@@ -5,7 +5,9 @@ date: 2025-08-14
 categories: [fintech, payments]
 tags: [wire-transfers, fedwire, chips, swift, payments, banking]
 excerpt: "Wire transfers are the express lane of money movement - fast, final, and irreversible. Unlike ACH's batch processing, wires move money in real-time through networks like Fedwire and CHIPS."
-banner_image: "/assets/banners/resized/wire_transfers-blog.jpg"
+banner_image: "" "/assets/banners/resized/20250814wiretransfer-blog.jpg"
+banner_image_recent: "/assets/banners/resized/20250814wiretransfer-recent.jpg"
+banner_image_series: "/assets/banners/resized/20250814wiretransfer-series.jpg"
 banner_color: "#157878"
 
 # SEO and Canonical Tags
@@ -53,7 +55,7 @@ series:
 
 *Published on: August 14, 2025*
 
-![Wire Transfers](/assets/banners/wire_transfers.png)
+![Wire Transfers](/assets/banners/resized/20250814wiretransfer-blog.jpg)
 
 A wire transfer is like telling your bank: **"Move this money to another bank account — right now. No batching. No waiting."**
 

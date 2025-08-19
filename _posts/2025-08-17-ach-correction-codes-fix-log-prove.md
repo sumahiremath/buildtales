@@ -5,8 +5,9 @@ date: 2025-08-17
 categories: [fintech, payments, compliance]
 tags: [ach, nacha, noc, correction-codes, compliance, fintech-operations, audit]
 excerpt: "When it comes to ACH payments, mistakes happen. Instead of rejecting every transaction, the ACH Network gives us Notification of Change (NOC) codes. I learned the hard way: every NOC is not just a suggestion—it's a requirement."
-banner_image: "/assets/banners/resized/achnocs-blog.jpg"
-banner_image_recent: "/assets/banners/resized/achnocs-recent.jpg"
+banner_image: "/assets/banners/resized/20250817nocs-blog.jpg"
+banner_image_recent: "/assets/banners/resized/20250817nocs-recent.jpg"
+banner_image_series: "/assets/banners/resized/20250817nocs-series.jpg"
 banner_color: "#157878"
 
 # SEO and Canonical Tags
@@ -38,6 +39,10 @@ syndication:
 ---
 
 # ACH Correction Codes: Fix It, Log It, Prove It
+
+*Published on: August 17, 2025*
+
+![noc fixing](/assets/banners/resized/20250817nocs-blog.jpg)
 
 When it comes to ACH payments, mistakes happen. An account number is off by a digit, someone had a typo in their name, a routing number is outdated, or someone closed their account last month. Instead of rejecting every transaction outright, the ACH Network gives us Notification of Change (NOC) codes—standardized correction messages that financial institutions send back so originators can fix the data.
 
