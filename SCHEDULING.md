@@ -5,8 +5,9 @@ This repository is configured to automatically build and deploy the site daily a
 ## How It Works
 
 1. **GitHub Actions Workflow**: `.github/workflows/daily-build.yml` runs automatically every day at 3 AM Pacific
-2. **Future Posts Enabled**: Jekyll is configured with `future: true` to include posts with future dates
-3. **Automatic Deployment**: The workflow builds the site and deploys it to GitHub Pages
+2. **Future Posts in Scheduled Builds**: The workflow uses `--future` flag to include posts with future dates only during scheduled builds
+3. **Regular Builds**: Normal builds exclude future posts (`future: false` in config)
+4. **Automatic Deployment**: The workflow builds the site and deploys it to GitHub Pages
 
 ## Schedule Details
 
@@ -18,7 +19,8 @@ This repository is configured to automatically build and deploy the site daily a
 ## Future-Dated Posts
 
 Posts with dates in the future will be:
-- ✅ **Included** in the daily build
+- ✅ **Included** in scheduled daily builds (3 AM Pacific)
+- ✅ **Hidden** in regular builds and development
 - ✅ **Published** when their date arrives
 - ✅ **Automatically deployed** to the live site
 
