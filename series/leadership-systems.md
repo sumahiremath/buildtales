@@ -56,7 +56,7 @@ categories: [leadership, systems]
                   {% endif %}
                 </div>
               </div>
-              <span class="text-sm text-green-600 font-medium published-badge">✓ Published</span>
+              <span class="text-sm text-green-600 font-medium published-badge">{{ article.date | date: "%B %d, %Y" }}</span>
             </div>
           </a>
         </li>
