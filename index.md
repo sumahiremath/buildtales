@@ -28,7 +28,7 @@ title: Build Tales
 </section>
 
 <!-- Hero Inline Signup Bar -->
-<section style="padding-top: 1.25em; padding-bottom: 8px; padding-left: 0; padding-right: 0; text-align: center;" class="py-8">
+<section id="newsletter" style="padding-top: 1.25em; padding-bottom: 8px; padding-left: 0; padding-right: 0; text-align: center;" class="py-8">
   <div class="mx-auto max-w-4xl px-4">
     <div class="newsletter-box">
       <div class="text-center mb-6">
