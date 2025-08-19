@@ -34,6 +34,14 @@ syndication:
   original: true
   republish_allowed: true
   canonical_source: "BuildTales.dev"
+  
+# Series information
+series:
+  name: "Build, Break, Lead: Engineering Leadership Journey"
+  part: 1
+  total_parts: 15
+  read_time: 8
+  tags: [confidence-building, team-building]
 
 # NOTE: No "series" metadata = this will be classified as a bonus article
 ---

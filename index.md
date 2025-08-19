@@ -29,19 +29,19 @@ title: Build Tales
 
 
 <!-- Hero Inline Signup Bar -->
-<section class="py-8">
+<section class="py-12">
   <div class="mx-auto max-w-4xl px-4">
-    <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
-      <div class="flex flex-col sm:flex-row items-center gap-4">
-        <div class="flex-shrink-0">
-          <br>
-          <p class="text-gray-700 font-medium">👋 Hey, I'm Suma. I write deep dives on fintech & engineering leadership.</p>
+    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 shadow-lg">
+      <div class="flex flex-col lg:flex-row items-center gap-6">
+        <div class="flex-shrink-0 text-center lg:text-left">
+          <p class="text-lg font-semibold text-gray-800 mb-2">👋 Hey, I'm Suma</p>
+          <p class="text-gray-600">I write deep dives on fintech & engineering leadership. Join 500+ builders getting one new insight every week.</p>
         </div>
-        <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex-1 flex flex-col sm:flex-row gap-3" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
+        <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex-1 flex flex-col sm:flex-row gap-3 max-w-md" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
           <input type="email" name="email_address" placeholder="Enter your email" required 
-                 class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+                 class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base shadow-sm">
           <button type="submit" 
-                  class="px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm whitespace-nowrap">
+                  class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-base whitespace-nowrap shadow-sm hover:shadow-md transform hover:-translate-y-0.5">
             Subscribe
           </button>
         </form>
@@ -79,18 +79,17 @@ title: Build Tales
 </section>
 <br>
 <!-- Staff + Systems Thinking Signup Card -->
-<section class="py-8">
+<section class="py-12">
   <div class="mx-auto max-w-4xl px-4">
-    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-6 shadow-sm">
+    <div class="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-xl p-8 shadow-lg">
       <div class="text-center">
-        <br>
-        <h3 class="text-lg font-semibold text-gray-800 mb-2">Don't miss when Staff+ Systems Thinking drops</h3>
-        <p class="text-gray-600 mb-4">Subscribe and I'll send it straight to you.</p>
+        <h3 class="text-xl font-semibold text-gray-800 mb-3">Don't miss when Staff+ Systems Thinking drops</h3>
+        <p class="text-gray-600 mb-6 text-lg">Subscribe and I'll send it straight to you.</p>
         <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex flex-col sm:flex-row gap-3 max-w-md mx-auto" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
           <input type="email" name="email_address" placeholder="Enter your email" required 
-                 class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+                 class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-base shadow-sm">
           <button type="submit" 
-                  class="px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm whitespace-nowrap">
+                  class="px-8 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 text-base whitespace-nowrap shadow-sm hover:shadow-md transform hover:-translate-y-0.5">
             Subscribe
           </button>
         </form>
