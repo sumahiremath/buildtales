@@ -31,17 +31,17 @@ title: Build Tales
 <!-- Hero Inline Signup Bar -->
 <section class="py-12">
   <div class="mx-auto max-w-4xl px-4">
-    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 shadow-lg">
+    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 shadow-lg" style="background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%); border: 1px solid #c7d2fe; border-radius: 16px; padding: 2rem; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
       <div class="flex flex-col lg:flex-row items-center gap-6">
         <div class="flex-shrink-0 text-center lg:text-left">
-          <p class="text-lg font-semibold text-gray-800 mb-2">👋 Hey, I'm Suma</p>
-          <p class="text-gray-600">I write deep dives on fintech & engineering leadership. Join 500+ builders getting one new insight every week.</p>
+          <p class="text-lg font-semibold text-gray-800 mb-2" style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">👋 Hey, I'm Suma</p>
+          <p class="text-gray-600" style="color: #4b5563; line-height: 1.6;">I write deep dives on fintech & engineering leadership. Join 500+ builders getting one new insight every week.</p>
         </div>
         <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex-1 flex flex-col sm:flex-row gap-3 max-w-md" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
           <input type="email" name="email_address" placeholder="Enter your email" required 
-                 class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base shadow-sm">
+                 style="flex: 1; padding: 0.75rem 1rem; border: 2px solid #d1d5db; border-radius: 8px; font-size: 1rem; outline: none; transition: all 0.2s ease; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); background: white; color: #374151;" onfocus="this.style.borderColor='#3b82f6'; this.style.boxShadow='0 0 0 3px rgba(59, 130, 246, 0.1)'" onblur="this.style.borderColor='#d1d5db'; this.style.boxShadow='0 1px 3px rgba(0, 0, 0, 0.1)'">
           <button type="submit" 
-                  class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-base whitespace-nowrap shadow-sm hover:shadow-md transform hover:-translate-y-0.5">
+                  style="padding: 0.75rem 2rem; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; font-weight: 600; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 6px rgba(59, 130, 246, 0.25); white-space: nowrap; transform: translateY(0);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(59, 130, 246, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(59, 130, 246, 0.25)'">
             Subscribe
           </button>
         </form>
