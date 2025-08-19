@@ -15,6 +15,10 @@ kramdown:
   syntax_highlighter: rouge
   input: GFM
 
+# Force Jekyll to use front matter dates
+future: true
+show_drafts: false
+
 # Permalink structure - use categories for clean URLs
 permalink: /:categories/:year/:month/:day/:title.html
 
