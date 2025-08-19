@@ -64,6 +64,12 @@ title: Build Tales
         <p class="opacity-80 text-sm">Inside the messy plumbing of money movement</p>
         <span class="card-status available">Available now</span>
       </a>
+      <a class="start-here-card" href="/series/ach">
+        <div class="card-icon" style="background: #10b981; color: white;">🏦</div>
+        <h3 class="font-semibold mb-2">ACH Deep Dive</h3>
+        <p class="opacity-80 text-sm">Master the $72+ trillion ACH network</p>
+        <span class="card-status available">Available now</span>
+      </a>
       <a class="start-here-card" href="/series/build-break-lead">
         <div class="card-icon" style="background: #6b7280; color: white;">⚡</div>
         <h3 class="font-semibold mb-2">Staff + Systems Thinking</h3>
@@ -233,10 +239,10 @@ title: Build Tales
   gap: 0.5rem;
 }
 
-/* Start Here Section - 3 Cards Layout */
+/* Start Here Section - 4 Cards Layout */
 .start-here-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   margin-top: 2rem;
 }
@@ -311,7 +317,7 @@ title: Build Tales
 
 @media (max-width: 768px) {
   .start-here-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
   }
   
@@ -324,6 +330,18 @@ title: Build Tales
     width: 45px;
     height: 45px;
     font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .start-here-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .start-here-card {
+    padding: 1rem;
+    min-height: 140px;
   }
 }
 
