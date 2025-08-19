@@ -70,11 +70,11 @@ title: Build Tales
         <p class="opacity-80 text-sm">Master the $72+ trillion ACH network</p>
         <span class="card-status available">Available now</span>
       </a>
-      <a class="start-here-card" href="/series/build-break-lead">
+      <a class="start-here-card" href="/series/leadership-systems">
         <div class="card-icon" style="background: #6b7280; color: white;">⚡</div>
-        <h3 class="font-semibold mb-2">Staff + Systems Thinking</h3>
-        <p class="opacity-80 text-sm">Engineers Who Lead Through Architecture</p>
-        <span class="card-status coming-soon">Available now</span>
+        <h3 class="font-semibold mb-2">Engineering Leadership & Systems</h3>
+        <p class="opacity-80 text-sm">From IC to EM to organizational leader</p>
+        <span class="card-status available">Available now</span>
       </a>
       <a class="start-here-card" href="/posts/designing-for-failure">
         <div class="card-icon" style="background: #6b7280; color: white;">🛡️</div>

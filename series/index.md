@@ -40,16 +40,16 @@ title: "Series"
       </div>
     </a>
     
-    <!-- Build, Break, Lead Series -->
-    <a href="/series/build-break-lead" class="series-card available">
+    <!-- Engineering Leadership & Systems Series -->
+    <a href="/series/leadership-systems" class="series-card available">
       <div class="series-card-header">
         <div class="series-meta">
           <span class="series-status active">Available Now</span>
-          <span class="series-progress">1 of 14 articles</span>
+          <span class="series-progress">6 articles published</span>
         </div>
       </div>
-      <h2 class="series-title"><span class="series-title-icon">⚡</span> Build, Break, Lead: Engineering Leadership Journey</h2>
-      <p class="series-description">A practical guide to transitioning from individual contributor to engineering manager. Everything you need to understand, build, and scale engineering teams.</p>
+      <h2 class="series-title"><span class="series-title-icon">⚡</span> Engineering Leadership & Systems Thinking</h2>
+      <p class="series-description">Master the art of leading engineering teams while building scalable systems. From individual contributor to engineering manager to organizational leader.</p>
       <div class="series-actions">
         <span class="series-cta primary">Start Reading →</span>
         <span class="series-secondary">View Complete Series</span>
