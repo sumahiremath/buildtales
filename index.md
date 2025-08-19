@@ -27,11 +27,10 @@ title: Build Tales
   </div>
 </section>
 
-
 <!-- Hero Inline Signup Bar -->
 <section class="container py-8">
   <div class="mx-auto max-w-4xl px-4">
-    <div class="my-4" style="padding: 1.5rem;">
+    <div class="newsletter-box">
       <div class="text-center mb-6">
         <p class="text-lg font-semibold text-gray-800 mb-2" style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">👋 Hey, I'm Suma</p>
         <p class="text-gray-600" style="color: #4b5563; line-height: 1.6;">I write deep dives on fintech & engineering leadership. Join 500+ builders getting one new insight every week.</p>
@@ -58,37 +57,34 @@ title: Build Tales
   <div class="mx-auto max-w-5xl">
     <h2 class="text-2xl font-semibold mb-6 text-center">Start here</h2>
     <div class="start-here-grid">
-      <a class="start-here-card" href="/series/payments">
-        <div class="card-icon" style="background: #157878; color: white;">🚀</div>
-        <h3 class="font-semibold mb-2">How U.S. Payments Really Work</h3>
-        <p class="opacity-80 text-sm">Inside the messy plumbing of money movement</p>
-        <span class="card-status available">Available now</span>
-      </a>
-      <a class="start-here-card" href="/series/ach">
-        <div class="card-icon" style="background: #10b981; color: white;">🏦</div>
-        <h3 class="font-semibold mb-2">ACH Deep Dive</h3>
-        <p class="opacity-80 text-sm">Master the $72+ trillion ACH network</p>
-        <span class="card-status available">Available now</span>
-      </a>
-      <a class="start-here-card" href="/series/leadership">
-        <div class="card-icon" style="background: #157878; color: white;">⚡</div>
-        <h3 class="font-semibold mb-2">Build, Break, Lead</h3>
-        <p class="opacity-80 text-sm">Engineering leadership journey</p>
-        <span class="card-status available">Available now</span>
-      </a>
-      <a class="start-here-card" href="/series/systems">
-        <div class="card-icon" style="background: #10b981; color: white;">🛡️</div>
-        <h3 class="font-semibold mb-2">Designing for Failure</h3>
-        <p class="opacity-80 text-sm">Build resilient systems & incident habits</p>
-        <span class="card-status available">Available now</span>
-      </a>
+                    <a class="start-here-card" href="/series/payments">
+         <div class="card-icon" style="background: #157878; color: white;">🚀</div>
+         <h3 class="font-semibold mb-2">How U.S. Payments Really Work</h3>
+         <p class="opacity-80 text-sm">Inside the messy plumbing of money movement</p>
+       </a>
+       <a class="start-here-card" href="/series/ach">
+         <div class="card-icon" style="background: #10b981; color: white;">🏦</div>
+         <h3 class="font-semibold mb-2">ACH Deep Dive</h3>
+         <p class="opacity-80 text-sm">Master the $72+ trillion ACH network</p>
+       </a>
+       <a class="start-here-card" href="/series/leadership">
+         <div class="card-icon" style="background: #157878; color: white;">⚡</div>
+         <h3 class="font-semibold mb-2">Build, Break, Lead</h3>
+         <p class="opacity-80 text-sm">Engineering leadership journey</p>
+       </a>
+       <a class="start-here-card" href="/series/systems">
+         <div class="card-icon" style="background: #157878; color: white;">🛡️</div>
+         <h3 class="font-semibold mb-2">Designing for Failure</h3>
+         <p class="opacity-80 text-sm">Build resilient systems & incident habits</p>
+       </a>
     </div>
   </div>
 </section>
 
 <!-- Staff + Systems Thinking Signup Card -->
-<section class="container">
-  <div class="my-4" style="padding: 1.5rem;">
+<section class="container py-8">
+  <div class="mx-auto max-w-4xl px-4">
+    <div class="newsletter-box">
     <div class="text-center">
       <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Don't miss when Build, Break, Lead drops</h3>
       <p class="text-gray-600 mb-6 text-lg">Subscribe and I'll send it straight to you.</p>
@@ -105,6 +101,8 @@ title: Build Tales
       </form>
     </div>
   </div>
+    </div>
+  </div>
 </section>
 
 <!-- Recent Articles Section -->
@@ -112,7 +110,9 @@ title: Build Tales
   <div class="mx-auto max-w-3xl">
     <h2 class="text-2xl font-semibold mb-6">Recent Articles</h2>
     <div class="recent-posts-grid">
-      {% for post in site.posts limit:3 %}
+      {% assign current_date = site.time | date: '%s' %}
+      {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" | sort: 'date' | reverse %}
+      {% for post in published_posts limit:3 %}
       <a href="{{ post.url }}" class="recent-post-card-link">
         <article class="recent-post-card">
           <!-- Clean Banner Image -->
@@ -159,9 +159,20 @@ title: Build Tales
 
 .container {
   display: flex;
+  margin-top: 1em;
   justify-content: center;
   align-items: center;
   text-align: center; /* Optional: Center text inside */
+}
+
+/* Newsletter Box Styling */
+.newsletter-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1rem 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* Recent Articles - Finshots Style */
@@ -244,130 +255,93 @@ title: Build Tales
   gap: 0.5rem;
 }
 
-/* Series Grid Layout */
-.series-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+/* Start Here Section - 4 Cards Layout */
+.start-here-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
   margin-top: 2rem;
 }
 
-/* Series Card Base */
-.series-card {
+.start-here-card {
   background: white;
   border: 2px solid #e5e7eb;
-  border-radius: 16px;
-  padding: 2rem;
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
   text-decoration: none;
   color: inherit;
   display: flex;
   flex-direction: column;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.series-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-  text-decoration: none;
-  border-color: #157878;
-}
-
-/* Series Card Header */
-.series-card-header {
-  margin-bottom: 1.5rem;
-}
-
-.series-meta {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  min-height: 180px;
+}
+
+.start-here-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-color: var(--accent);
+  text-decoration: none;
+}
+
+.card-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+.start-here-card h3 {
+  color: #333;
   margin-bottom: 0.5rem;
-}
-
-.series-status {
-  font-size: 0.875rem;
-  font-weight: 600;
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.series-status.active {
-  background: #dcfce7;
-  color: #166534;
-}
-
-.series-progress {
-  font-size: 0.875rem;
-  color: #6b7280;
-  font-weight: 500;
-}
-
-/* Series Title */
-.series-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #111827;
-  margin: 0 0 1rem 0;
+  font-size: 1rem;
   line-height: 1.3;
 }
 
-.series-title-icon {
-  margin-right: 0.5rem;
-}
-
-/* Series Description */
-.series-description {
-  color: #4b5563;
-  line-height: 1.6;
-  margin: 0 0 1.5rem 0;
+.start-here-card p {
+  color: #666;
+  margin-bottom: 1rem;
   flex-grow: 1;
-}
-
-/* Series Actions */
-.series-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.series-cta {
   font-size: 0.875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
-.series-cta.primary {
-  color: #157878;
-}
 
-.series-secondary {
-  font-size: 0.75rem;
-  color: #6b7280;
-  font-weight: 500;
-}
 }
 
 @media (max-width: 768px) {
-  .series-grid {
-    gap: 1.5rem;
+  .start-here-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
   
-  .series-card {
-    padding: 1.5rem;
+  .start-here-card {
+    padding: 1.25rem 1rem;
+    min-height: 160px;
+  }
+  
+  .card-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
   }
 }
 
 @media (max-width: 480px) {
-  .series-grid {
+  .start-here-grid {
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
   
-  .series-card {
-    padding: 1.25rem;
+  .start-here-card {
+    padding: 1rem;
+    min-height: 140px;
   }
 }
 
