@@ -37,9 +37,6 @@ syndication:
 
 # NOTE: No "series" metadata = this will be classified as a bonus article
 ---
-
-{% include ach-series-ultra-minimal.html %}
-
 # ACH Correction Codes: Fix It, Log It, Prove It
 
 *Published on: August 17, 2025*

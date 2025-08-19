@@ -45,7 +45,7 @@ series:
   tags: [wire-transfers, fedwire, chips]
 ---
 
-{% include ach-series-ultra-minimal.html %}
+
 
 # Wire Transfers Explained: Fast, Final, and Expensive
 
