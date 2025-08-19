@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "Posts"
+title: "Articles"
 ---
 
 <div class="mx-auto max-w-3xl">
-  <h1 class="text-4xl font-bold mb-6">Posts</h1>
+  <h1 class="text-4xl font-bold mb-6">Articles</h1>
   
   <!-- Tag/Category Clouds -->
   <section class="mb-8">
