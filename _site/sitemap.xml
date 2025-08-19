@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>http://localhost:4000/</loc>
+    <lastmod>2025-08-19T12:17:08-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Static pages -->
+  
+  
+  <url>
+    <loc>http://localhost:4000/series/article-template</loc>
+    
+    <lastmod>2025-08-27T00:00:00-07:00</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/series/bonus-article-template</loc>
+    
+    <lastmod>2025-08-27T00:00:00-07:00</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/posts/designing-for-failure</loc>
+    
+    <lastmod>2025-08-19T12:17:08-07:00</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/posts/engineering-leadership-staff-systems</loc>
+    
+    <lastmod>2025-08-19T12:17:08-07:00</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/blog/</loc>
+    
+    <lastmod>2025-08-19T12:17:08-07:00</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/series/</loc>
+    
+    <lastmod>2025-08-19T12:17:08-07:00</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/about/</loc>
+    
+    <lastmod>2025-08-19T12:17:08-07:00</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/</loc>
+    
+    <lastmod>2025-08-19T12:17:08-07:00</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/series/payments</loc>
+    
+    <lastmod>2025-08-19T12:17:08-07:00</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/publishing-schedule/</loc>
+    
+    <lastmod>2025-08-19T12:17:08-07:00</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/rebuilding-us-payments/</loc>
+    
+    <lastmod>2025-08-19T12:17:08-07:00</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/search.json</loc>
+    
+    <lastmod>2025-08-19T12:17:08-07:00</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/search/</loc>
+    
+    <lastmod>2025-08-19T12:17:08-07:00</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/subscribe</loc>
+    
+    <lastmod>2025-08-19T12:17:08-07:00</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/assets/css/style.css</loc>
+    
+    <lastmod>2025-08-19T12:17:08-07:00</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/IMAGE_GUIDE</loc>
+    
+    <lastmod>2025-08-19T12:17:08-07:00</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  
+  
+  <!-- Blog posts -->
+  
+  <url>
+    <loc>http://localhost:4000/engineering/leadership/management/systems/2025/08/18/quarter-long-project-em-baptism.html</loc>
+    <lastmod>2025-08-18T00:00:00-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/fintech/ach/compliance/2025/08/17/ach-correction-codes-fix-log-prove.html</loc>
+    <lastmod>2025-08-17T00:00:00-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/fintech/ach/2025/08/16/sec-codes-authorization-boss-level.html</loc>
+    <lastmod>2025-08-16T00:00:00-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/fintech/ach/2025/08/15/nacha-file-demystified.html</loc>
+    <lastmod>2025-08-15T00:00:00-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/fintech/payments/2025/08/14/wire-transfers-explained.html</loc>
+    <lastmod>2025-08-14T00:00:00-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/fintech/payments/2025/08/13/money-flow-bank-account.html</loc>
+    <lastmod>2025-08-13T00:00:00-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+</urlset>

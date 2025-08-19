@@ -3,6 +3,7 @@ layout: default
 title: "ACH: The Good, The Bad, and The Ugly"
 date: 2025-08-20
 categories: [fintech, payments]
+section: "Phase 1: Understanding the Rails"
 tags: [ach, nacha, payments, reconciliation, same-day-ach, fintech-operations]
 excerpt: "Still powering trillions. Still moving like it's stuck in fax machine mode. ACH is the OG payments backbone that's both the foundation and frustration of American finance."
 banner_image: "/assets/banners/resized/20250820goodbadugly-blog.jpg"

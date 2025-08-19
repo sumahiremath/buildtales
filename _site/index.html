@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Build Tales | Stories and insights from the journey of building teams, systems, and culture.</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Build Tales" />
+<meta name="author" content="Suma Manjunath" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Stories and insights from the journey of building teams, systems, and culture." />
+<meta property="og:description" content="Stories and insights from the journey of building teams, systems, and culture." />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="Build Tales" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Build Tales" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Suma Manjunath"},"description":"Stories and insights from the journey of building teams, systems, and culture.","headline":"Build Tales","name":"Build Tales","url":"http://localhost:4000/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Build Tales | Build Tales">
+    <meta property="og:description" content="Stories and insights from the journey of building teams, systems, and culture in fintech.">
+    <meta property="og:image" content="http://localhost:4000/assets/images/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="627">
+    <meta property="og:url" content="http://localhost:4000/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Build Tales">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Build Tales | Build Tales">
+    <meta name="twitter:description" content="Stories and insights from the journey of building teams, systems, and culture in fintech.">
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/logo.png">
+    
+    <meta name="twitter:site" content="@sumahiremath">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+    <link rel="stylesheet" href="/assets/css/style.css?v=ae54650521d35d23def2d6025f86338002f4fdb0">
+    <link rel="alternate" type="application/rss+xml" title="Build Tales RSS Feed" href="/feed.xml">
+    
+    
+    <!-- Google Analytics 4 -->
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async defer src="https://www.googletagmanager.com/gtag/js?id=G-RRLZZG4DPV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RRLZZG4DPV');
+    </script>
+    
+    
+    <!-- Mermaid for diagrams -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: 'default',
+          themeVariables: {
+            primaryColor: '#F5F7FA',
+            primaryTextColor: '#111',
+            lineColor: '#999',
+            fontSize: '16px',
+            noteBkgColor: '#fffbe6',
+            noteTextColor: '#333'
+          },
+          flowchart: {
+            useMaxWidth: true,
+            htmlLabels: true
+          }
+        });
+      });
+    </script>
+    
+    <!-- Google reCAPTCHA v3 -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6Le2g6crAAAAABrTyFxjbc5sCYhgnUs0Nnxuicwf" async defer></script>
+    <script>
+      function onSubmit(token) {
+        document.querySelector('form').submit();
+      }
+    </script>
+    
+
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+        <img src="/assets/images/logo.png" alt="Build Tales logo" 
+             width="60" height="60" style="margin-right: 1rem;">
+        <h1 class="project-name" style="margin: 0;"><a href="/" style="color: white; text-decoration: none;">Build Tales</a></h1>
+      </div>
+      <h2 class="project-tagline">Stories and insights from the journey of building teams, systems, and culture.</h2>
+      <nav style="margin-top: 1rem; display: flex; justify-content: center; align-items: center;">
+        <div style="display: flex; align-items: baseline; justify-content: center; gap: 0.75rem;">
+          <a href="/" class="btn">Home</a>
+          <span class="nav-separator">|</span>
+          <a href="/series" class="btn">Series</a>
+          <span class="nav-separator">|</span>
+          <a href="/blog" class="btn">Posts</a>
+          <span class="nav-separator">|</span>
+          <a href="/about" class="btn">About</a>
+          <span class="nav-separator">|</span>
+          <a href="/subscribe" class="btn">Subscribe</a>
+        </div>
+      </nav>
+      
+      <!-- Search Bar -->
+      <div style="margin-top: 1rem; display: flex; justify-content: center;">
+        <div style="position: relative;">
+          <input type="text" id="header-search" placeholder="Search articles..." 
+                 style="border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; width: 300px; backdrop-filter: blur(10px); padding: 8px 16px; border-radius: 4px; font-size: 16px;" 
+                 autocomplete="off">
+          <div id="header-search-suggestions" style="position: absolute; top: 100%; left: 0; right: 0; background: white; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: none; z-index: 1000; max-height: 300px; overflow-y: auto;"></div>
+        </div>
+      </div>
+      
+      <style>
+        /* Clean navigation link styling */
+        nav .btn {
+          background: none !important;
+          border: none !important;
+          color: rgba(255,255,255,0.9) !important;
+          text-decoration: none !important;
+          padding: 4px 8px !important;
+          font-size: 16px !important;
+          font-weight: 500 !important;
+          border-radius: 3px !important;
+          transition: all 0.2s ease !important;
+          display: inline-block !important;
+          line-height: 1.2 !important;
+          vertical-align: baseline !important;
+        }
+        
+        nav .btn:hover {
+          color: white !important;
+          background: rgba(255,255,255,0.15) !important;
+          text-decoration: none !important;
+        }
+        
+        /* Navigation separator styling */
+        .nav-separator {
+          color: rgba(255,255,255,0.6) !important;
+          margin: 0 !important;
+          font-size: 16px !important;
+          line-height: 1.2 !important;
+          vertical-align: baseline !important;
+          display: inline-block !important;
+          user-select: none !important;
+        }
+        
+        /* Search input styling */
+        #header-search {
+          height: 40px !important;
+          padding: 8px 12px !important;
+          box-sizing: border-box !important;
+          line-height: 1.4 !important;
+          font-size: 16px !important;
+          border-radius: 4px !important;
+        }
+        
+        #header-search::placeholder {
+          color: rgba(255,255,255,0.7);
+        }
+        
+        #header-search:focus {
+          outline: none;
+          border-color: rgba(255,255,255,0.6);
+          background: rgba(255,255,255,0.15);
+        }
+        
+        .search-suggestion {
+          padding: 8px 12px;
+          border-bottom: 1px solid #eee;
+          cursor: pointer;
+          color: #333;
+          text-decoration: none;
+          display: block;
+        }
+        
+        .search-suggestion:hover {
+          background: #f8f9fa;
+        }
+        
+        .search-suggestion:last-child {
+          border-bottom: none;
+        }
+        
+        .suggestion-title {
+          font-weight: 500;
+          color: #157878;
+          margin-bottom: 2px;
+        }
+        
+        .suggestion-excerpt {
+          font-size: 12px;
+          color: #666;
+        }
+        
+        /* Mobile adjustments - keep navigation in one line */
+        @media (max-width: 768px) {
+          .page-header {
+            padding: 1rem 1rem 1.5rem !important;
+          }
+          
+          .page-header .project-name {
+            font-size: 1.5rem !important;
+          }
+          
+          .page-header .project-tagline {
+            font-size: 0.9rem !important;
+            margin-bottom: 1rem !important;
+          }
+          
+          nav {
+            margin-top: 0.5rem !important;
+          }
+          
+          /* Ensure navigation stays in one line on mobile */
+          nav > div:first-child {
+            flex-wrap: nowrap !important;
+            gap: 0.375rem !important; /* Reduce gap from 0.75rem to 0.375rem (6px) */
+          }
+          
+          nav .btn {
+            padding: 2px 4px !important;
+            font-size: 14px !important;
+          }
+          
+          .nav-separator {
+            margin: 0 !important;
+          }
+          
+          #header-search {
+            width: 280px !important;
+            height: 36px !important;
+          }
+          
+          /* Mobile footer adjustments */
+          .site-footer div {
+            padding: 1.5rem 1rem !important;
+          }
+          
+          .site-footer a {
+            padding: 10px 16px !important;
+            font-size: 0.9rem !important;
+          }
+        }
+        
+        /* Very small screens - extra compact navigation */
+        @media (max-width: 480px) {
+          nav > div:first-child {
+            gap: 0.25rem !important; /* Even tighter spacing (4px) for small screens */
+          }
+          
+          nav .btn {
+            padding: 1px 3px !important;
+            font-size: 13px !important;
+          }
+          
+          #header-search {
+            width: 250px !important;
+          }
+          
+          /* Newsletter form mobile adjustments */
+          section {
+            padding: 1.5rem 1rem !important;
+            margin-top: 1.5rem !important;
+          }
+          
+          section form {
+            flex-direction: column !important;
+            gap: 12px !important;
+          }
+          
+          section form input[type="email"] {
+            width: 100% !important;
+          }
+          
+          section form button {
+            width: 100% !important;
+          }
+        }
+      </style>
+      
+      <script>
+        (function() {
+          let searchData = [];
+          let searchInput = document.getElementById('header-search');
+          let suggestionsContainer = document.getElementById('header-search-suggestions');
+          let searchTimeout;
+          
+          // Load search data
+          fetch('/search.json')
+            .then(response => response.json())
+            .then(data => {
+              searchData = data;
+            })
+            .catch(error => {
+              console.error('Error loading search data:', error);
+            });
+          
+          // Show suggestions
+          function showSuggestions(query) {
+            if (!query || query.length < 2) {
+              suggestionsContainer.style.display = 'none';
+              return;
+            }
+            
+            const searchTerms = query.toLowerCase().split(/\s+/);
+            let matches = [];
+            
+            searchData.forEach(post => {
+              let score = 0;
+              searchTerms.forEach(term => {
+                if (post.title.toLowerCase().includes(term)) score += 10;
+                if (post.excerpt.toLowerCase().includes(term)) score += 5;
+                if (post.categories && post.categories.join(' ').toLowerCase().includes(term)) score += 8;
+              });
+              
+              if (score > 0) {
+                matches.push({ ...post, score });
+              }
+            });
+            
+            matches.sort((a, b) => b.score - a.score);
+            matches = matches.slice(0, 5); // Show top 5 suggestions
+            
+            if (matches.length > 0) {
+              const html = matches.map(post => {
+                const excerpt = post.excerpt.length > 60 ? post.excerpt.substring(0, 60) + '...' : post.excerpt;
+                return `
+                  <a href="${post.url}" class="search-suggestion">
+                    <div class="suggestion-title">${post.title}</div>
+                    <div class="suggestion-excerpt">${excerpt}</div>
+                  </a>
+                `;
+              }).join('');
+              
+              suggestionsContainer.innerHTML = html;
+              suggestionsContainer.style.display = 'block';
+            } else {
+              suggestionsContainer.style.display = 'none';
+            }
+          }
+          
+          // Handle search input
+          searchInput.addEventListener('input', function(e) {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+              showSuggestions(e.target.value);
+            }, 200);
+          });
+          
+          // Handle enter key
+          searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+              const query = e.target.value.trim();
+              if (query) {
+                window.location.href = `/search/?q=${encodeURIComponent(query)}`;
+              }
+            }
+          });
+          
+          // Hide suggestions when clicking outside
+          document.addEventListener('click', function(e) {
+            if (!searchInput.contains(e.target) && !suggestionsContainer.contains(e.target)) {
+              suggestionsContainer.style.display = 'none';
+            }
+          });
+          
+          // Show suggestions when focusing on input
+          searchInput.addEventListener('focus', function() {
+            if (this.value.length >= 2) {
+              showSuggestions(this.value);
+            }
+          });
+        })();
+      </script>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <!-- Hero Section -->
+<section class="py-16">
+  <div class="mx-auto max-w-4xl text-center space-y-6">
+    <h1 class="text-5xl font-bold">Deep, no-fluff essays on engineering leadership &amp; U.S. payments.</h1>
+    <p class="text-xl font-medium" style="color: #333; margin: 1.5rem auto; max-width: 600px; text-align: center;">Actionable breakdowns you can read in 7–12 minutes.</p>
+    
+    <!-- Hero Cards -->
+    <div class="hero-cards-grid">
+      <a class="hero-card primary" href="/series/payments">
+        <div class="hero-card-icon">🚀</div>
+        <h3>Start the Payments Series</h3>
+        <p>Deep dive into U.S. payment systems - from ACH to crypto</p>
+        <span class="hero-card-action">Begin Reading →</span>
+      </a>
+      <a class="hero-card secondary" href="/blog">
+        <div class="hero-card-icon">📚</div>
+        <h3>Explore All Articles</h3>
+        <p>Browse engineering leadership, systems, and payment articles</p>
+        <span class="hero-card-action">View Articles →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Hero Inline Signup Bar -->
+<section class="container py-8">
+  <div class="mx-auto max-w-4xl px-4">
+    <div class="my-4" style="padding: 1.5rem;">
+      <div class="text-center mb-6">
+        <p class="text-lg font-semibold text-gray-800 mb-2" style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">👋 Hey, I'm Suma</p>
+        <p class="text-gray-600" style="color: #4b5563; line-height: 1.6;">I write deep dives on fintech &amp; engineering leadership. Join 500+ builders getting one new insight every week.</p>
+      </div>
+      <div class="flex justify-center">
+        <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex flex-col sm:flex-row gap-3 max-w-md" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
+          <input type="email" name="email_address" placeholder="Enter your email" required="" class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base shadow-sm" />
+          <button type="submit" class="px-8 py-3 text-white font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 text-base whitespace-nowrap shadow-sm hover:shadow-md transform hover:-translate-y-0.5" style="background-color: #157878; border-color: #157878; color: white;" onmouseover="this.style.backgroundColor='#0f6b6b'; this.style.color='white';" onmouseout="this.style.backgroundColor='#157878'; this.style.color='white';">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Start Here Section -->
+<section class="py-8">
+  <div class="mx-auto max-w-5xl">
+    <h2 class="text-2xl font-semibold mb-6 text-center">Start here</h2>
+    <div class="start-here-grid">
+      <a class="start-here-card" href="/series/payments">
+        <div class="card-icon" style="background: #157878; color: white;">🚀</div>
+        <h3 class="font-semibold mb-2">How U.S. Payments Really Work</h3>
+        <p class="opacity-80 text-sm">Inside the messy plumbing of money movement</p>
+        <span class="card-status available">Available now</span>
+      </a>
+      <a class="start-here-card" href="/series/ach">
+        <div class="card-icon" style="background: #10b981; color: white;">🏦</div>
+        <h3 class="font-semibold mb-2">ACH Deep Dive</h3>
+        <p class="opacity-80 text-sm">Master the $72+ trillion ACH network</p>
+        <span class="card-status available">Available now</span>
+      </a>
+      <a class="start-here-card" href="/series/leadership">
+        <div class="card-icon" style="background: #157878; color: white;">⚡</div>
+        <h3 class="font-semibold mb-2">Build, Break, Lead</h3>
+        <p class="opacity-80 text-sm">Engineering leadership journey</p>
+        <span class="card-status available">Available now</span>
+      </a>
+      <a class="start-here-card" href="/series/system">
+        <div class="card-icon" style="background: #10b981; color: white;">🛡️</div>
+        <h3 class="font-semibold mb-2">Designing for Failure</h3>
+        <p class="opacity-80 text-sm">Build resilient systems &amp; incident habits</p>
+        <span class="card-status available">Available now</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Staff + Systems Thinking Signup Card -->
+<section class="container">
+  <div class="my-4" style="padding: 1.5rem;">
+    <div class="text-center">
+      <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Don't miss when Build, Break, Lead drops</h3>
+      <p class="text-gray-600 mb-6 text-lg">Subscribe and I'll send it straight to you.</p>
+      <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex flex-col sm:flex-row gap-3 max-w-md mx-auto" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
+        <input type="email" name="email_address" placeholder="Enter your email" required="" class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-base shadow-sm" />
+        <button type="submit" class="px-8 py-3 text-white font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 text-base whitespace-nowrap shadow-sm hover:shadow-md transform hover:-translate-y-0.5" style="background-color: #157878; border-color: #157878; color: white;" onmouseover="this.style.backgroundColor='#0f6b6b'; this.style.color='white';" onmouseout="this.style.backgroundColor='#157878'; this.style.color='white';">
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Recent Articles Section -->
+<section class="py-8">
+  <div class="mx-auto max-w-3xl">
+    <h2 class="text-2xl font-semibold mb-6">Recent Articles</h2>
+    <div class="recent-posts-grid">
+      
+      <a href="/engineering/leadership/management/systems/2025/08/18/quarter-long-project-em-baptism.html" class="recent-post-card-link">
+        <article class="recent-post-card">
+          <!-- Clean Banner Image -->
+          <div class="recent-post-banner" style="background-image: url('/assets/banners/resized/20250818mousefinish-recent.jpg');">
+          </div>
+          
+          <div class="recent-post-content">
+            <!-- Date and Series Info -->
+            <div class="post-meta">
+              <span class="post-date">Aug 18, 2025</span>
+              
+            </div>
+            
+            <h3 class="recent-post-title">When a Supposedly Quarter-Long Project Became My Real EM Baptism</h3>
+            
+            <p class="recent-post-excerpt">Sometimes the projects that look simple on paper become the most transformative experiences. Here's how what was supposed to be...</p>
+            
+            
+            <div class="recent-post-categories">
+              
+              <span class="category-tag">Engineering</span>
+              
+              <span class="category-tag">Leadership</span>
+              
+              <span class="category-tag">Management</span>
+              
+              <span class="category-tag">Systems</span>
+              
+            </div>
+            
+          </div>
+        </article>
+      </a>
+      
+      <a href="/fintech/ach/compliance/2025/08/17/ach-correction-codes-fix-log-prove.html" class="recent-post-card-link">
+        <article class="recent-post-card">
+          <!-- Clean Banner Image -->
+          <div class="recent-post-banner" style="background-image: url('/assets/banners/resized/20250817nocs-recent.jpg');">
+          </div>
+          
+          <div class="recent-post-content">
+            <!-- Date and Series Info -->
+            <div class="post-meta">
+              <span class="post-date">Aug 17, 2025</span>
+              
+            </div>
+            
+            <h3 class="recent-post-title">ACH Correction Codes: Fix It, Log It, Prove It</h3>
+            
+            <p class="recent-post-excerpt">When it comes to ACH payments, mistakes happen. Instead of rejecting every transaction, the ACH Network gives us Notification of...</p>
+            
+            
+            <div class="recent-post-categories">
+              
+              <span class="category-tag">Fintech</span>
+              
+              <span class="category-tag">Ach</span>
+              
+              <span class="category-tag">Compliance</span>
+              
+            </div>
+            
+          </div>
+        </article>
+      </a>
+      
+      <a href="/fintech/ach/2025/08/16/sec-codes-authorization-boss-level.html" class="recent-post-card-link">
+        <article class="recent-post-card">
+          <!-- Clean Banner Image -->
+          <div class="recent-post-banner" style="background-image: url('/assets/banners/resized/20250816seccode-recent.jpg');">
+          </div>
+          
+          <div class="recent-post-content">
+            <!-- Date and Series Info -->
+            <div class="post-meta">
+              <span class="post-date">Aug 16, 2025</span>
+              
+            </div>
+            
+            <h3 class="recent-post-title">SEC Codes in ACH: Authorization, Compliance, and How to Not Get Burned</h3>
+            
+            <p class="recent-post-excerpt">SEC codes determine your compliance fate in ACH payments. Get them wrong and face chargebacks, fines, and regulatory headaches. This...</p>
+            
+            
+            <div class="recent-post-categories">
+              
+              <span class="category-tag">Fintech</span>
+              
+              <span class="category-tag">Ach</span>
+              
+            </div>
+            
+          </div>
+        </article>
+      </a>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+/* Custom styles for this page */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Optional: Center text inside */
+}
+
+/* Recent Articles - Finshots Style */
+.recent-posts-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Recent Post Card Link - Entire Card Clickable */
+.recent-post-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+.recent-post-card-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.recent-post-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.recent-post-card-link:hover .recent-post-card {
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Clean Recent Post Banner */
+.recent-post-banner {
+  height: 140px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.recent-post-content {
+  padding: 1.5rem;
+}
+
+.recent-post-content .post-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.recent-post-title {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #111827;
+  transition: color 0.2s ease;
+}
+
+.recent-post-card-link:hover .recent-post-title {
+  color: var(--accent);
+}
+
+.recent-post-excerpt {
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+  font-size: 0.95rem;
+}
+
+.recent-post-categories {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Start Here Section - 4 Cards Layout */
+.start-here-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.start-here-card {
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  min-height: 180px;
+}
+
+.start-here-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-color: var(--accent);
+  text-decoration: none;
+}
+
+.card-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+.start-here-card h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.start-here-card p {
+  color: #666;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+  font-size: 0.875rem;
+}
+
+.card-status {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.card-status.available {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.card-status.coming-soon {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .start-here-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  
+  .start-here-card {
+    padding: 1.25rem 1rem;
+    min-height: 160px;
+  }
+  
+  .card-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .start-here-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .start-here-card {
+    padding: 1rem;
+    min-height: 140px;
+  }
+}
+
+/* Hero Cards - Card-style CTAs */
+.hero-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-card {
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 2rem;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  min-height: 200px;
+}
+
+.hero-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+}
+
+.hero-card.primary {
+  border-color: #157878;
+  background: linear-gradient(135deg, #157878 0%, #1a8a8a 100%);
+  color: white;
+}
+
+.hero-card.primary:hover {
+  box-shadow: 0 12px 32px rgba(21, 120, 120, 0.3);
+  color: white;
+}
+
+.hero-card.secondary {
+  border-color: #157878;
+}
+
+.hero-card.secondary:hover {
+  border-color: #157878;
+  background: #f8fffe;
+}
+
+.hero-card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+  color: inherit;
+}
+
+.hero-card p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin: 0 0 1.5rem 0;
+  flex-grow: 1;
+  color: inherit;
+}
+
+.hero-card-action {
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Card styles */
+.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card h3 {
+  color: #333;
+}
+
+.card:hover {
+  text-decoration: none;
+}
+
+.card:hover h3 {
+  color: var(--accent);
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-3 {
+  gap: 12px;
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  .hero-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .hero-card {
+    padding: 1.5rem;
+    min-height: 160px;
+  }
+  
+  .hero-card-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .hero-card h3 {
+    font-size: 1.125rem;
+  }
+  
+  .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
+</style>
+
+
+
+
+        
+        <!-- Ghibli Avatar Script - Insert under post title -->
+        
+
+
+
+
+
+      <!-- Add comments to blog posts -->
+      
+
+
+
+        
+        <!-- ConvertKit Styles - Simplified for inline display -->
+        <style>
+        /* Newsletter Form Layout */
+        .newsletter-form-fields {
+          display: flex;
+          gap: 8px;
+          align-items: center;
+        }
+        
+        .newsletter-email-field {
+          flex: 1;
+        }
+        
+        .newsletter-submit-btn {
+          flex-shrink: 0;
+        }
+        
+        /* Mobile: Stack email and button vertically */
+        @media (max-width: 600px) {
+          .newsletter-form-fields {
+            flex-direction: column;
+            gap: 12px;
+            align-items: stretch;
+          }
+          
+          .newsletter-email-field {
+            flex: none;
+            width: 100%;
+          }
+          
+          .newsletter-submit-btn {
+            width: 100%;
+            flex: none;
+          }
+        }
+        
+        .formkit-form[data-uid="8443001"] * {
+          box-sizing: border-box;
+        }
+        .formkit-form[data-uid="8443001"] .formkit-alert {
+          background: #fde8e2;
+          border: 1px solid #f2643b;
+          color: #ea4110;
+          padding: 8px 12px;
+          border-radius: 4px;
+          margin: 0 0 10px 0;
+          font-size: 14px;
+        }
+        .formkit-form[data-uid="8443001"] .formkit-alert:empty {
+          display: none;
+        }
+        .formkit-form[data-uid="8443001"] .formkit-spinner {
+          display: none;
+          height: 0px;
+          width: 0px;
+          margin: 0 auto;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          text-align: center;
+          transition: all 300ms ease-in-out;
+        }
+        .formkit-form[data-uid="8443001"] .formkit-submit[data-active] .formkit-spinner {
+          opacity: 1;
+          height: 100%;
+          width: 50px;
+          display: flex;
+        }
+        .formkit-form[data-uid="8443001"] .formkit-submit[data-active] .formkit-spinner ~ span {
+          opacity: 0;
+        }
+        .formkit-form[data-uid="8443001"] .formkit-spinner > div {
+          margin: auto;
+          width: 12px;
+          height: 12px;
+          background-color: #fff;
+          opacity: 0.3;
+          border-radius: 100%;
+          display: inline-block;
+          animation: formkit-bouncedelay 1.4s infinite ease-in-out both;
+        }
+        .formkit-form[data-uid="8443001"] .formkit-spinner > div:nth-child(1) {
+          animation-delay: -0.32s;
+        }
+        .formkit-form[data-uid="8443001"] .formkit-spinner > div:nth-child(2) {
+          animation-delay: -0.16s;
+        }
+        @keyframes formkit-bouncedelay {
+          0%, 80%, 100% { 
+            transform: scale(0);
+          } 40% { 
+            transform: scale(1);
+          }
+        }
+        </style>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-container">
+          <!-- Navigation Section -->
+          <nav class="footer-nav">
+            <a href="/" class="footer-link">Home</a>
+            <span class="footer-nav-separator">|</span>
+            <a href="/series" class="footer-link">Series</a>
+            <span class="footer-nav-separator">|</span>
+            <a href="/blog" class="footer-link">Posts</a>
+            <span class="footer-nav-separator">|</span>
+            <a href="/about" class="footer-link">About</a>
+          </nav>
+
+          <!-- Connect Section -->
+          <div class="footer-connect">
+              <a href="https://linkedin.com/in/sumamanjunath" target="_blank" class="footer-button linkedin-button">
+                <svg class="linkedin-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                <span class="linkedin-text">Connect</span>
+              </a>
+            <a href="/about/#contact-form" class="footer-button">
+              ✉️ Email
+            </a>
+            <a href="/feed.xml" class="footer-button rss-button">
+              📡 RSS Feed
+            </a>
+          </div>
+        </div>
+        
+        <style>
+        /* Footer Full Width - Force break out of containers */
+        .site-footer {
+          width: 100vw !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          position: relative !important;
+          left: 50% !important;
+          right: 50% !important;
+          margin-left: -50vw !important;
+          margin-right: -50vw !important;
+          box-sizing: border-box !important;
+        }
+        
+        .site-footer > div {
+          width: 100% !important;
+          margin: 0 !important;
+          box-sizing: border-box !important;
+          max-width: none !important;
+        }
+        
+        /* Override any theme container constraints */
+        main .site-footer,
+        .container .site-footer,
+        .wrapper .site-footer {
+          width: 100vw !important;
+          margin-left: calc(-50vw + 50%) !important;
+          margin-right: calc(-50vw + 50%) !important;
+          left: 0 !important;
+          right: 0 !important;
+        }
+        
+        /* Clean Footer Layout */
+        .footer-container {
+          background: #f8f9fa;
+          padding: 1rem;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+        
+        .footer-nav {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 0.5rem;
+          align-items: baseline;
+        }
+        
+        .footer-link {
+          color: #4b5563;
+          text-decoration: none;
+          font-size: 16px;
+          font-weight: 500;
+          padding: 4px 8px;
+          border-radius: 3px;
+          transition: all 0.2s ease;
+          display: inline-block;
+          line-height: 1.2;
+          vertical-align: baseline;
+        }
+        
+        .footer-link:hover {
+          color: var(--accent);
+          background: rgba(21, 120, 120, 0.08);
+          text-decoration: none;
+        }
+        
+        .footer-nav-separator {
+          color: #9ca3af;
+          margin: 0;
+          font-size: 16px;
+          line-height: 1.2;
+          vertical-align: baseline;
+          display: inline-block;
+          user-select: none;
+        }
+        
+        /* Copyright styling */
+        .footer-copyright {
+          margin-top: 1rem;
+          padding-top: 1rem;
+          border-top: 1px solid #e5e7eb;
+          text-align: center;
+        }
+        
+        .footer-copyright p {
+          margin: 0;
+          color: #6b7280;
+          font-size: 0.875rem;
+          font-weight: 400;
+        }
+        
+        .footer-actions {
+          display: flex;
+          flex-direction: row; /* Horizontal layout */
+          justify-content: center; /* Center horizontally */
+          align-items: center; /* Align vertically */
+          gap: 2rem; /* Space between elements */
+          flex-wrap: wrap; /* Allow wrapping if needed */
+          width: 100%;
+        }
+        
+        .footer-newsletter {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+          padding: 0;
+        }
+        
+        .footer-newsletter * {
+          margin: 0;
+          padding: 0;
+        }
+        
+        .footer-newsletter form {
+          margin: 0;
+          padding: 0;
+        }
+        
+        .footer-newsletter-fields {
+          display: flex;
+          gap: 8px;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+        }
+        
+        .footer-email-field {
+          flex: 1;
+          min-width: 200px;
+          display: flex;
+          align-items: center;
+        }
+        
+        .footer-email-field .formkit-input {
+          color: rgb(0, 0, 0);
+          border-color: rgb(227, 227, 227);
+          border-radius: 4px;
+          font-weight: 400;
+          padding: 12px 16px;
+          border: 2px solid #ddd;
+          font-size: 16px;
+          width: 100%;
+          height: 48px;
+          box-sizing: border-box;
+          line-height: 1;
+        }
+        
+        .footer-submit-btn {
+          flex-shrink: 0;
+          background: #157878;
+          color: white;
+          border: none;
+          padding: 12px 20px;
+          border-radius: 6px;
+          font-weight: 500;
+          cursor: pointer;
+          font-size: 16px;
+          white-space: nowrap;
+          height: 48px;
+          box-sizing: border-box;
+          line-height: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .footer-connect {
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+          align-items: center;
+        }
+        
+        .footer-button {
+          background: #157878;
+          color: white;
+          padding: 12px 24px;
+          border-radius: 6px;
+          text-decoration: none;
+          font-weight: 500;
+          font-size: 1rem;
+          transition: background-color 0.2s ease;
+          white-space: nowrap;
+          height: 48px;
+          box-sizing: border-box;
+          line-height: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .footer-button:hover {
+          background: #135f5f;
+          text-decoration: none;
+        }
+        
+        /* LinkedIn button specific styling */
+        .linkedin-button {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        
+        .linkedin-icon {
+          flex-shrink: 0;
+          width: 18px;
+          height: 18px;
+        }
+        
+        .linkedin-text {
+          font-size: 0.9rem;
+        }
+        
+        /* Desktop Layout - Navigation on top, actions below in one line */
+        @media (min-width: 641px) {
+          .footer-container {
+            flex-direction: column !important;
+            gap: 1rem !important;
+          }
+          
+          .footer-actions {
+            flex-direction: row !important; /* Horizontal layout */
+            justify-content: center !important; /* Center horizontally */
+            align-items: center !important; /* Align vertically */
+            gap: 3rem !important; /* Space between newsletter and connect sections */
+            flex-wrap: nowrap !important; /* Prevent wrapping */
+            width: 100% !important;
+          }
+          
+          .footer-newsletter {
+            flex-shrink: 0 !important;
+            width: auto !important;
+            max-width: none !important;
+          }
+          
+          .footer-newsletter-fields {
+            flex-direction: row !important; /* Horizontal layout for desktop */
+            gap: 8px !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: auto !important;
+          }
+          
+          .footer-connect {
+            flex-shrink: 0 !important;
+            flex-direction: row !important; /* Horizontal layout for desktop */
+            gap: 1rem !important;
+            width: auto !important;
+          }
+        }
+        
+        /* Mobile Layout - Stacked with compact spacing */
+        @media (max-width: 640px) {
+          .footer-container {
+            gap: 0.375rem;
+            padding: 0.375rem 0.75rem;
+          }
+          
+          .footer-nav {
+            gap: 0;
+            flex-wrap: nowrap;
+            overflow-x: visible;
+            padding: 0.125rem 0;
+            justify-content: center;
+          }
+          
+          .footer-link {
+            font-size: 11px;
+            padding: 0;
+            white-space: nowrap;
+            flex-shrink: 0;
+          }
+          
+          .footer-nav-separator {
+            font-size: 11 px;
+            flex-shrink: 0;
+            margin: 0 1px;
+          }
+          
+          .footer-actions {
+            flex-direction: column; /* Stack elements vertically */
+            gap: 0.5rem; /* Reduce spacing between elements */
+            align-items: center;
+            padding: 0.5rem 0; /* Reduce padding */
+          }
+          
+          .footer-newsletter {
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: stretch; /* Ensure full width */
+            justify-content: center;
+            gap: 0; /* Remove spacing between elements */
+            margin: 0; /* Remove extra margins */
+            padding: 0; /* Remove extra padding */
+            width: 100%; /* Explicit full width */
+            min-width: 100%; /* Ensure it never gets smaller than container */
+            max-width: 100%; /* Prevent overflow beyond container */
+            height: auto; /* Let content determine height naturally */
+            overflow: visible; /* Prevent any hidden content issues */
+          }
+          
+          .footer-newsletter * {
+            margin: 0 !important; /* Remove margins for all child elements */
+            padding: 0 !important; /* Remove padding for all child elements */
+            box-sizing: border-box; /* Ensure consistent sizing */
+          }
+          
+          .footer-newsletter-fields {
+            flex-direction: column; /* Stack input and button on separate lines */
+            gap: 0.5rem; /* Add some spacing between the two lines */
+            align-items: stretch; /* Ensure full width */
+            width: 100%; /* Ensure full width */
+          }
+          
+          .footer-email-field {
+            width: 100%; /* Full width for input */
+          }
+          
+          .footer-submit-btn {
+            width: 100%; /* Full width for button */
+          }
+          
+          .footer-connect {
+            flex-direction: column; /* Stack buttons vertically */
+            gap: 0.5rem; /* Reduce spacing between buttons */
+            width: 100%; /* Full width */
+          }
+          
+          .footer-button {
+            width: 100%; /* Full width for buttons */
+            padding: 10px 14px; /* Compact padding */
+            font-size: 14px; /* Adjust font size */
+          }
+        }
+        
+        /* Very small screens - extra compact */
+        @media (max-width: 480px) {
+          .footer-container {
+            gap: 0.25rem;
+            padding: 0.25rem 0.5rem;
+          }
+          
+          .footer-nav {
+            gap: 0;
+            padding: 0.1rem 0;
+          }
+          
+          .footer-link {
+            font-size: 10px;
+            padding: 0;
+          }
+          
+          .footer-nav-separator {
+            font-size: 10px;
+            margin: 0 0.5px;
+          }
+          
+          .footer-actions {
+            gap: 0.375rem;
+            padding: 0.375rem 0;
+          }
+          
+          .footer-newsletter-fields {
+            gap: 0.2rem;
+          }
+          
+          .footer-connect {
+            gap: 0.375rem;
+          }
+          
+          .footer-submit-btn,
+          .footer-button {
+            padding: 8px 12px;
+            font-size: 13px;
+          }
+        }
+        
+        /* Reduce formkit alert padding on mobile */
+        @media (max-width: 640px) {
+          .formkit-alert {
+            padding: 0.25rem 0.5rem !important;
+            margin: 0.125rem 0 !important;
+          }
+          
+          .formkit-alert-error {
+            padding: 0.25rem 0.5rem !important;
+            margin: 0.125rem 0 !important;
+          }
+        }
+        
+        /* ConvertKit Form Styles */
+        .formkit-form[data-uid="8443001"] * {
+          box-sizing: border-box;
+        }
+        .formkit-form[data-uid="8443001"] .formkit-alert {
+          background: #fde8e2;
+          border: 1px solid #f2643b;
+          color: #ea4110;
+          padding: 8px 12px;
+          border-radius: 4px;
+          margin: 0 0 10px 0;
+          font-size: 14px;
+        }
+        .formkit-form[data-uid="8443001"] .formkit-alert:empty {
+          display: none;
+        }
+        .formkit-form[data-uid="8443001"] .formkit-spinner {
+          display: none;
+          height: 0px;
+          width: 0px;
+          margin: 0 auto;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          text-align: center;
+          transition: all 300ms ease-in-out;
+        }
+        .formkit-form[data-uid="8443001"] .formkit-submit[data-active] .formkit-spinner {
+          opacity: 1;
+          height: 100%;
+          width: 50px;
+          display: flex;
+        }
+        .formkit-form[data-uid="8443001"] .formkit-submit[data-active] .formkit-spinner ~ span {
+          opacity: 0;
+        }
+        .formkit-form[data-uid="8443001"] .formkit-spinner > div {
+          margin: auto;
+          width: 12px;
+          height: 12px;
+          background-color: #fff;
+          opacity: 0.3;
+          border-radius: 100%;
+          display: inline-block;
+          animation: formkit-bouncedelay 1.4s infinite ease-in-out both;
+        }
+        .formkit-form[data-uid="8443001"] .formkit-spinner > div:nth-child(1) {
+          animation-delay: -0.32s;
+        }
+        .formkit-form[data-uid="8443001"] .formkit-submit[data-active] .formkit-spinner > div:nth-child(2) {
+          animation-delay: -0.16s;
+        }
+        @keyframes formkit-bouncedelay {
+          0%, 80%, 100% { 
+            transform: scale(0);
+          } 40% { 
+            transform: scale(1);
+          }
+        }
+        </style>
+        
+        <!-- Copyright -->
+        <div class="footer-copyright">
+          <p>© 2025 BuildTales.Dev by Suma Manjunath</p>
+        </div>
+      </footer>
+    </main>
+    
+    <!-- Back to top button -->
+    <!-- Back to Top Button -->
+<button id="back-to-top" 
+        style="display: none; position: fixed; bottom: 2rem; right: 2rem; background: #157878; color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2); z-index: 1000; font-size: 1.2rem; transition: opacity 0.3s ease;"
+        title="Back to top">
+  ↑
+</button>
+
+<script>
+// Back to top functionality
+(function() {
+  const backToTopButton = document.getElementById('back-to-top');
+  
+  // Show/hide button based on scroll position
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 300) {
+      backToTopButton.style.display = 'block';
+      backToTopButton.style.opacity = '1';
+    } else {
+      backToTopButton.style.opacity = '0';
+      setTimeout(() => {
+        if (window.pageYOffset <= 300) {
+          backToTopButton.style.display = 'none';
+        }
+      }, 300);
+    }
+  });
+  
+  // Smooth scroll to top
+  backToTopButton.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+  
+  // Hover effects
+  backToTopButton.addEventListener('mouseenter', function() {
+    this.style.transform = 'scale(1.1)';
+    this.style.background = '#0f5f61';
+  });
+  
+  backToTopButton.addEventListener('mouseleave', function() {
+    this.style.transform = 'scale(1)';
+    this.style.background = '#157878';
+  });
+})();
+</script>
+
+    
+    <!-- ConvertKit Script - Load after DOM is ready -->
+    <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+  </body>
+</html>

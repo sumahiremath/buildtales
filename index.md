@@ -14,51 +14,101 @@ title: Build Tales
       <a class="hero-card primary" href="/series/payments">
         <div class="hero-card-icon">🚀</div>
         <h3>Start the Payments Series</h3>
-        <p>Deep dive into U.S. payment systems - from ACH to wire transfers</p>
+        <p>Deep dive into U.S. payment systems - from ACH to crypto</p>
         <span class="hero-card-action">Begin Reading →</span>
       </a>
       <a class="hero-card secondary" href="/blog">
         <div class="hero-card-icon">📚</div>
-        <h3>Explore All Posts</h3>
+        <h3>Explore All Articles</h3>
         <p>Browse engineering leadership, systems, and payment articles</p>
-        <span class="hero-card-action">View Posts →</span>
+        <span class="hero-card-action">View Articles →</span>
       </a>
     </div>
   </div>
 </section>
-<br>  
+
+
+<!-- Hero Inline Signup Bar -->
+<section class="container py-8">
+  <div class="mx-auto max-w-4xl px-4">
+    <div class="my-4" style="padding: 1.5rem;">
+      <div class="text-center mb-6">
+        <p class="text-lg font-semibold text-gray-800 mb-2" style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">👋 Hey, I'm Suma</p>
+        <p class="text-gray-600" style="color: #4b5563; line-height: 1.6;">I write deep dives on fintech & engineering leadership. Join 500+ builders getting one new insight every week.</p>
+      </div>
+      <div class="flex justify-center">
+        <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex flex-col sm:flex-row gap-3 max-w-md" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
+          <input type="email" name="email_address" placeholder="Enter your email" required 
+                 class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base shadow-sm">
+          <button type="submit" 
+                  class="px-8 py-3 text-white font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 text-base whitespace-nowrap shadow-sm hover:shadow-md transform hover:-translate-y-0.5"
+                  style="background-color: #157878; border-color: #157878; color: white;"
+                  onmouseover="this.style.backgroundColor='#0f6b6b'; this.style.color='white';"
+                  onmouseout="this.style.backgroundColor='#157878'; this.style.color='white';">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Start Here Section -->
-<section class="py-10 pt-16">
+<section class="py-8">
   <div class="mx-auto max-w-5xl">
-    <h2 class="text-2xl font-semibold mb-8 text-center">Start here</h2>
+    <h2 class="text-2xl font-semibold mb-6 text-center">Start here</h2>
     <div class="start-here-grid">
       <a class="start-here-card" href="/series/payments">
         <div class="card-icon" style="background: #157878; color: white;">🚀</div>
         <h3 class="font-semibold mb-2">How U.S. Payments Really Work</h3>
-        <p class="opacity-80 text-sm">Rails, risk & real-world ops.</p>
+        <p class="opacity-80 text-sm">Inside the messy plumbing of money movement</p>
         <span class="card-status available">Available now</span>
       </a>
-      <a class="start-here-card" href="/posts/engineering-leadership-staff-systems">
-        <div class="card-icon" style="background: #6b7280; color: white;">⚡</div>
-        <h3 class="font-semibold mb-2">Staff+ Systems Thinking</h3>
-        <p class="opacity-80 text-sm">Lead through architecture.</p>
-        <span class="card-status coming-soon">Coming soon</span>
+      <a class="start-here-card" href="/series/ach">
+        <div class="card-icon" style="background: #10b981; color: white;">🏦</div>
+        <h3 class="font-semibold mb-2">ACH Deep Dive</h3>
+        <p class="opacity-80 text-sm">Master the $72+ trillion ACH network</p>
+        <span class="card-status available">Available now</span>
       </a>
-      <a class="start-here-card" href="/posts/designing-for-failure">
-        <div class="card-icon" style="background: #6b7280; color: white;">🛡️</div>
+      <a class="start-here-card" href="/series/leadership">
+        <div class="card-icon" style="background: #157878; color: white;">⚡</div>
+        <h3 class="font-semibold mb-2">Build, Break, Lead</h3>
+        <p class="opacity-80 text-sm">Engineering leadership journey</p>
+        <span class="card-status available">Available now</span>
+      </a>
+      <a class="start-here-card" href="/series/system">
+        <div class="card-icon" style="background: #10b981; color: white;">🛡️</div>
         <h3 class="font-semibold mb-2">Designing for Failure</h3>
-        <p class="opacity-80 text-sm">Resilience & incident habits.</p>
-        <span class="card-status coming-soon">Coming soon</span>
+        <p class="opacity-80 text-sm">Build resilient systems & incident habits</p>
+        <span class="card-status available">Available now</span>
       </a>
     </div>
   </div>
 </section>
-<br>  
 
+<!-- Staff + Systems Thinking Signup Card -->
+<section class="container">
+  <div class="my-4" style="padding: 1.5rem;">
+    <div class="text-center">
+      <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Don't miss when Build, Break, Lead drops</h3>
+      <p class="text-gray-600 mb-6 text-lg">Subscribe and I'll send it straight to you.</p>
+      <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex flex-col sm:flex-row gap-3 max-w-md mx-auto" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
+        <input type="email" name="email_address" placeholder="Enter your email" required 
+               class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-base shadow-sm">
+        <button type="submit" 
+                class="px-8 py-3 text-white font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 text-base whitespace-nowrap shadow-sm hover:shadow-md transform hover:-translate-y-0.5"
+                style="background-color: #157878; border-color: #157878; color: white;"
+                onmouseover="this.style.backgroundColor='#0f6b6b'; this.style.color='white';"
+                onmouseout="this.style.backgroundColor='#157878'; this.style.color='white';">
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
 
 <!-- Recent Articles Section -->
-<section class="py-10 pt-16">
+<section class="py-8">
   <div class="mx-auto max-w-3xl">
     <h2 class="text-2xl font-semibold mb-6">Recent Articles</h2>
     <div class="recent-posts-grid">
@@ -106,6 +156,13 @@ title: Build Tales
 
 <style>
 /* Custom styles for this page */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Optional: Center text inside */
+}
 
 /* Recent Articles - Finshots Style */
 .recent-posts-grid {
@@ -187,10 +244,10 @@ title: Build Tales
   gap: 0.5rem;
 }
 
-/* Start Here Section - 3 Cards Layout */
+/* Start Here Section - 4 Cards Layout */
 .start-here-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   margin-top: 2rem;
 }
@@ -265,7 +322,7 @@ title: Build Tales
 
 @media (max-width: 768px) {
   .start-here-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
   }
   
@@ -278,6 +335,18 @@ title: Build Tales
     width: 45px;
     height: 45px;
     font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .start-here-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .start-here-card {
+    padding: 1rem;
+    min-height: 140px;
   }
 }
 

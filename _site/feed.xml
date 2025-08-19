@@ -1,0 +1,2205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Build Tales</title>
+    <description>Stories and insights from the journey of building teams, systems, and culture.</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 19 Aug 2025 12:17:08 -0700</pubDate>
+    <lastBuildDate>Tue, 19 Aug 2025 12:17:08 -0700</lastBuildDate>
+    <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>When a Supposedly Quarter-Long Project Became My Real EM Baptism</title>
+        <description>&lt;h1 id=&quot;when-a-supposedly-quarter-long-project-became-my-real-em-baptism&quot;&gt;When a Supposedly Quarter-Long Project Became My Real EM Baptism&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;Published on: August 18, 2025&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/banners/resized/20250818mousefinish-blog.jpg&quot; alt=&quot;mousefinish&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Every engineering manager (EM) remembers their first big project. For me, it was integrating a third-party service provider with a client’s bank.&lt;/p&gt;
+
+&lt;p&gt;On paper, it looked like a simple quarter-long integration: gather requirements, build the flows, test, launch. Clean. Predictable. Neat.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Reality had other plans. (Spoiler: the universe laughs at clean Gantt charts.)&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The project stretched across multiple quarters, wound through pauses and reversals, and tested every ounce of &lt;strong&gt;planning, adaptability, and persistence&lt;/strong&gt; I had as a new EM. By the end, it launched &lt;strong&gt;flawlessly&lt;/strong&gt; — but it became my &lt;strong&gt;true baptism into engineering management&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;planning-before-dates&quot;&gt;Planning Before Dates&lt;/h2&gt;
+
+&lt;p&gt;I didn’t start with timelines. I started by making sure &lt;strong&gt;I understood&lt;/strong&gt; every piece of the system — how money moved, what reports were generated, where reconciliation lived, even what a consumer would see on their bank statement per NACHA rules.&lt;/p&gt;
+
+&lt;p&gt;Only after I could see it clearly myself did I set out to create &lt;strong&gt;shared understanding&lt;/strong&gt;. I turned those flows into Miro diagrams that became the universal reference point — something engineers, support, compliance, and even the client’s bank could all point to.&lt;/p&gt;
+
+&lt;p&gt;That shared map turned arguments into alignment. We weren’t debating opinions anymore; we were debating the same picture.&lt;/p&gt;
+
+&lt;p&gt;Only once we had that did I even think about dates.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;&lt;strong&gt;(Spoiler: dates lie. Flows don’t.)&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;the-spreadsheet-that-made-slippage-visible&quot;&gt;The Spreadsheet That Made Slippage Visible&lt;/h2&gt;
+
+&lt;p&gt;Next came the spreadsheet: sprint by sprint deliverables, dependencies, and release timing.&lt;/p&gt;
+
+&lt;p&gt;It wasn’t just backlog grooming. It was &lt;strong&gt;slippage radar&lt;/strong&gt;. If something slipped in Sprint 3, it &lt;strong&gt;screamed at us&lt;/strong&gt; in Sprint 4 — not buried until the end.&lt;/p&gt;
+
+&lt;p&gt;I also knew &lt;strong&gt;Nov/Dec freezes&lt;/strong&gt; were coming. Translation: no one’s pushing code when half the company is in ski chalets or watching Hallmark movies. So I &lt;strong&gt;front-loaded heavy releases&lt;/strong&gt; and left December &lt;strong&gt;lean&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;It was &lt;strong&gt;proactive, not reactive&lt;/strong&gt;. Also: &lt;strong&gt;mildly soul-saving&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;chaos-in-the-middle&quot;&gt;Chaos in the Middle&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;No project manager until the last mile&lt;/strong&gt;. Forty-five days before launch, we finally got a project manager — &lt;strong&gt;brand-new to the company, brand-new to ACH, and dropped straight into the fire&lt;/strong&gt;. The &lt;strong&gt;mythical man month is real&lt;/strong&gt;: adding people late slows you down before it speeds you up. I spent as much time &lt;strong&gt;onboarding as delivering&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;A new product manager, too. A few months before development even started, a new product manager had joined the company. They were new to both our product and ACH. Which meant in parallel with everything else, I was running &lt;strong&gt;crash courses in SEC codes, NACHA returns, and reconciliation flows&lt;/strong&gt; so product decisions could be made with confidence.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tech debt first&lt;/strong&gt;. Two sprints went to &lt;strong&gt;architecture cleanup&lt;/strong&gt;. No demos, no visible progress. Telling stakeholders, &lt;strong&gt;“Trust me, we’re deleting old code”&lt;/strong&gt; went about as well as you’d expect.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Client pause + restart&lt;/strong&gt;. Midstream, the client paused. Months later, they restarted with new requirements. &lt;strong&gt;Documentation saved us&lt;/strong&gt; — otherwise we’d still be arguing about what we were building.&lt;/p&gt;
+
+&lt;h2 id=&quot;curveballs&quot;&gt;Curveballs&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Reporting flip.&lt;/strong&gt; For months: &lt;strong&gt;“No reporting changes.”&lt;/strong&gt; Then in November: &lt;strong&gt;“Actually, new reports are required for launch.”&lt;/strong&gt; Cue the sound of every engineer’s soul leaving their body. I pulled in a dev from another team, handed them a spec so detailed it included the &lt;strong&gt;SQL qery and run time&lt;/strong&gt;, and we shipped… in January, &lt;strong&gt;one week before launch&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Enterprise release cycles.&lt;/strong&gt; I was enlightened to the fact that our sprint board wasn’t the only calendar that mattered. The &lt;strong&gt;client’s release schedule was the real boss fight&lt;/strong&gt; — and some releases only happened on a specific day of the month. Miss it, and you weren’t just a week late, you were a &lt;em&gt;month&lt;/em&gt; late. Nothing will give you heartburn quite like realizing a single slip can cascade into thirty days of delay. &lt;em&gt;Sprint velocity is optional; the client’s release train is not.&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;In enterprise projects, the real deadline isn’t your sprint — it’s the client’s release train. Miss it, and you wait a month to board again.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;NACHA file validation &amp;amp; observability.&lt;/strong&gt; Every filename and field at the new bank had to match spec or the file would be rejected. I pushed for &lt;strong&gt;dashboards and alerts from the start&lt;/strong&gt; — because if ACH breaks silently, you don’t find out until your client calls at &lt;strong&gt;7 a.m.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;operationalization-break-glass-if-needed&quot;&gt;Operationalization: Break Glass if Needed&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Code wasn’t enough.&lt;/strong&gt; We had to prepare for when things went wrong — internally, with the client, and with their bank. I established DLs for communication and mapped escalation paths before we ever hit production.&lt;/p&gt;
+
+&lt;p&gt;We rehearsed &lt;strong&gt;fire drills&lt;/strong&gt; such as:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What if a &lt;strong&gt;NACHA file is submitted twice&lt;/strong&gt;?&lt;/li&gt;
+  &lt;li&gt;What if a &lt;strong&gt;reversal is required&lt;/strong&gt;?&lt;/li&gt;
+  &lt;li&gt;What if &lt;strong&gt;reports were missing&lt;/strong&gt;?&lt;/li&gt;
+  &lt;li&gt;What would be &lt;strong&gt;our engineering team SLA&lt;/strong&gt; for inquiry vs. incident?&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Who approves changes&lt;/strong&gt; — at our company, at the client, at the bank?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I documented the &lt;strong&gt;hierarchy of decisions and “break glass” procedures&lt;/strong&gt; in Confluence like a &lt;strong&gt;Payments Doomsday Prepper&lt;/strong&gt;. We prayed we’d never need it — but if we did, at least we wouldn’t be &lt;strong&gt;inventing policy mid-incident&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;And because this was a new flow, I also thought through &lt;strong&gt;scenarios we hadn’t yet encountered&lt;/strong&gt;. Planning for the unknown felt paranoid at times — but it was the only way to be extra prepared.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;In payments, you don’t just plan for failures you’ve seen — you plan for the ones you haven’t.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;intentional-phased-roll-out&quot;&gt;Intentional Phased Roll Out&lt;/h2&gt;
+
+&lt;p&gt;When code was ready, we &lt;strong&gt;didn’t flip the switch overnight&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;We earned trust in increments: &lt;strong&gt;a few transactions → 1% → 5% → 20% → 50% → 100%&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;It stretched another quarter, but it made &lt;strong&gt;reconciliation boring&lt;/strong&gt; — which is exactly how you want it.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;In payments, boring is a feature. If the cutover feels exciting, you probably did it wrong.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;managing-the-tail&quot;&gt;Managing the Tail&lt;/h2&gt;
+
+&lt;p&gt;Even after &lt;strong&gt;100% rollout&lt;/strong&gt;, the old bank wasn’t done with us. Per &lt;strong&gt;NACHA rules&lt;/strong&gt;, returns, refunds and retries had to flow through the original originator. That meant a &lt;strong&gt;60-day tail of zombie transactions&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;To manage it, I built a &lt;strong&gt;Looker report&lt;/strong&gt; that landed in my inbox weekly. Every Monday it reminded me: &lt;strong&gt;“Surprise, you’re still not done.”&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;But it also gave me &lt;strong&gt;proof for the client&lt;/strong&gt; that the &lt;strong&gt;old pipeline was quietly dying off&lt;/strong&gt; — no hidden stragglers, no surprises.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;In payments, launch isn’t the finish line. The tail can chase you for months.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;the-ach-integration-journey&quot;&gt;The ACH Integration Journey&lt;/h2&gt;
+
+&lt;p&gt;Here’s the journey in one picture — because sometimes a chart tells the story better than paragraphs.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Nodes (with cheeky labels):&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Kickoff → &lt;em&gt;“The Quarter-Long Fantasy”&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Spreadsheet Therapy → &lt;em&gt;“My Slippage Radar”&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Chaos in the Middle → &lt;em&gt;“New PMs, Who Dis?”&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Curveballs → &lt;em&gt;“Reporting Flip + Boss Fight Calendar”&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Operationalization → &lt;em&gt;“Payments Doomsday Prepper”&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Intentional Rollout → &lt;em&gt;“Boring by Design”&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Managing the Tail → &lt;em&gt;“Zombie Returns”&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Seamless Launch → &lt;em&gt;“The Magic Trick”&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;mermaid&quot;&gt;
+flowchart TD
+    A[&quot;The Quarter-Long Fantasy&quot;] --&amp;gt; B[&quot;Spreadsheet Therapy&quot;]
+    B --&amp;gt; C[&quot;New PMs, Who Dis?&quot;]
+    C --&amp;gt; D[&quot;Reporting Flip + Boss Fight Calendar&quot;]
+    D --&amp;gt; E[&quot;Payments Doomsday Prepper&quot;]
+    E --&amp;gt; F[&quot;Boring by Design&quot;]
+    F --&amp;gt; G[&quot;Zombie Returns&quot;]
+    G --&amp;gt; H[&quot;The Magic Trick (Seamless Launch)&quot;]
+
+    style A fill:#e3f2fd,stroke:#90caf9,stroke-width:2px
+    style B fill:#f3e5f5,stroke:#ce93d8,stroke-width:2px
+    style C fill:#fff3e0,stroke:#ffb74d,stroke-width:2px
+    style D fill:#f3e5f5,stroke:#ba68c8,stroke-width:2px
+    style E fill:#e8f5e9,stroke:#81c784,stroke-width:2px
+    style F fill:#ffebee,stroke:#ef9a9a,stroke-width:2px
+    style G fill:#ffebee,stroke:#ef5350,stroke-width:2px
+    style H fill:#ede7f6,stroke:#9575cd,stroke-width:2px
+&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;the-outcome&quot;&gt;The Outcome&lt;/h2&gt;
+
+&lt;p&gt;From the outside, the launch looked &lt;strong&gt;seamless&lt;/strong&gt;. Clean rollout. Reconciled reports. Stable ops.&lt;/p&gt;
+
+&lt;p&gt;From the inside, it was &lt;strong&gt;chaos with a spreadsheet&lt;/strong&gt;: a late project manager, a new product manager, the client pause, the reporting flip, the overloaded team, the phased rollout, the zombie tail of returns, the fire drills — &lt;strong&gt;none of it was visible&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;And that was the point.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Great delivery isn’t about showing the chaos. It’s about making sure the chaos never shows.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;what-i-learned&quot;&gt;What I Learned&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Miro diagrams are lies you tell yourself early — but useful lies.&lt;/strong&gt; People forgive delays; they don’t forgive &lt;strong&gt;surprises&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Don’t fight holiday freezes or enterprise cycles.&lt;/strong&gt; &lt;strong&gt;Ski season always wins&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Pulling in help only works if you hand over a blueprint.&lt;/strong&gt; Give people &lt;strong&gt;complete requirements&lt;/strong&gt;, not partial context.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Earn trust in increments, not big bangs.&lt;/strong&gt; &lt;strong&gt;Phased cutovers are your friend&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Old systems die slowly — zombie returns are forever.&lt;/strong&gt; &lt;strong&gt;Legacy systems have long shadows&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Compliance and contracts matter as much as code.&lt;/strong&gt; &lt;strong&gt;Technical solutions are only part of the equation&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Set expectations when work is invisible.&lt;/strong&gt; &lt;strong&gt;Refactors don’t demo well&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Onboarding late hires takes time.&lt;/strong&gt; The &lt;strong&gt;mythical man month doesn’t care about your deadline&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Operationalize the “what ifs.”&lt;/strong&gt; &lt;strong&gt;Payments fire drills are weird, but they work&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;what-i-might-have-done-differently&quot;&gt;What I Might Have Done Differently&lt;/h2&gt;
+
+&lt;p&gt;Looking back, a few things stand out.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;I could have invested earlier in &lt;strong&gt;cross-training the product manager&lt;/strong&gt; on ACH fundamentals instead of drip-feeding knowledge under pressure. That might have accelerated decision-making.&lt;/li&gt;
+  &lt;li&gt;I underestimated how much complexity came from the client’s &lt;strong&gt;multiple sites and environments&lt;/strong&gt;, each with their own development, QA, and release cycles. If I had pushed for clearer configurability expectations upfront, it could have reduced later coordination churn.&lt;/li&gt;
+  &lt;li&gt;And if I had aligned earlier on the &lt;strong&gt;client’s enterprise release calendar&lt;/strong&gt;, we might have avoided some of the heartburn that came from missing narrow release windows.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;None of these gaps derailed us — but recognizing them makes me sharper for the next big program.&lt;/p&gt;
+
+&lt;h2 id=&quot;closing&quot;&gt;Closing&lt;/h2&gt;
+
+&lt;p&gt;This wasn’t the &lt;strong&gt;clean, quarter-long project&lt;/strong&gt; I imagined. It was &lt;strong&gt;messy, unpredictable, and exhausting&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;But it wasn’t just me. A &lt;strong&gt;lean but determined cross-functional team&lt;/strong&gt; — engineering, QA, support, compliance, client services, project manager, and product managers — made it possible. My &lt;strong&gt;manager’s support&lt;/strong&gt; also helped &lt;strong&gt;unblock key decisions&lt;/strong&gt; and keep things moving when momentum stalled. Together we carried the chaos without ever letting it show.&lt;/p&gt;
+
+&lt;p&gt;It &lt;strong&gt;made me an EM&lt;/strong&gt;. And it taught me that &lt;strong&gt;engineering management isn’t about keeping projects on straight tracks&lt;/strong&gt;. It’s about &lt;strong&gt;navigating the curves&lt;/strong&gt; — and making sure that, when the client looks, all they see is a &lt;strong&gt;smooth road&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;That project made me. Every one since has built on it.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;In payments and in leadership, the job isn’t to eliminate chaos — it’s to make sure chaos never shows.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;Enjoyed this deep dive into engineering management? Check out the main &lt;a href=&quot;/series/payments&quot;&gt;How U.S. Payments Really Work&lt;/a&gt; series for more technical deep dives into payment systems.&lt;/em&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 18 Aug 2025 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/engineering/leadership/management/systems/2025/08/18/quarter-long-project-em-baptism.html</link>
+        <guid isPermaLink="true">http://localhost:4000/engineering/leadership/management/systems/2025/08/18/quarter-long-project-em-baptism.html</guid>
+        
+        <category>engineering-management</category>
+        
+        <category>project-management</category>
+        
+        <category>leadership</category>
+        
+        <category>team-building</category>
+        
+        <category>technical-decision-making</category>
+        
+        
+        <category>engineering</category>
+        
+        <category>leadership</category>
+        
+        <category>management</category>
+        
+        <category>systems</category>
+        
+      </item>
+    
+      <item>
+        <title>ACH Correction Codes: Fix It, Log It, Prove It</title>
+        <description>&lt;h1 id=&quot;ach-correction-codes-fix-it-log-it-prove-it&quot;&gt;ACH Correction Codes: Fix It, Log It, Prove It&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;Published on: August 17, 2025&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/banners/resized/20250817nocs-blog.jpg&quot; alt=&quot;noc fixing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When it comes to ACH payments, mistakes happen. An account number is off by a digit, someone had a typo in their name, a routing number is outdated, or someone closed their account last month. Instead of rejecting every transaction outright, the ACH Network gives us Notification of Change (NOC) codes—standardized correction messages that financial institutions send back so originators can fix the data.&lt;/p&gt;
+
+&lt;p&gt;Every NOC is not just a suggestion—it’s a requirement.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-this-matters-now&quot;&gt;Why This Matters Now&lt;/h2&gt;
+
+&lt;p&gt;ACH correction handling is one of those operational details that seems minor until you’re sitting across from an auditor explaining why the same account keeps generating NOCs month after month. In today’s fintech landscape, where compliance scrutiny is intensifying and operational costs are under the microscope, proper NOC handling isn’t just about following rules—it’s about protecting your business.&lt;/p&gt;
+
+&lt;p&gt;In one of our ACH audits, the auditor went line by line through our correction handling process. The key point drilled in:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Every correction must be updated in your system.&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;strong&gt;The corrected data must flow into the very next ACH file you send.&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;strong&gt;NACHA rules require that corrections be applied within six banking days of receipt, or before the next entry is originated—whichever comes first.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It’s not enough to glance at the NOC and think, “We’ll fix it later.” ACH rules make it clear—if you don’t update immediately, you’re out of compliance. Worse, you risk rejected payments, customer frustration, and fines.&lt;/p&gt;
+
+&lt;p&gt;And let’s be honest: the ACH operator notices. If you keep sending uncorrected data, expect them to grumble. Each NOC comes at a price too—literally. Financial institutions charge per correction, and those costs add up quickly. Staying compliant isn’t just about keeping auditors happy—it’s about saving money and maintaining credibility with your partners.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-it-works-step-by-step&quot;&gt;How It Works: Step by Step&lt;/h2&gt;
+
+&lt;p&gt;Here’s the process the auditor walked us through:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Receive the NOC&lt;/strong&gt;: Your ODFI forwards correction codes from the RDFI.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Decode the Code&lt;/strong&gt;: Each code maps to a specific issue (e.g., C01 = incorrect account number, C02 = incorrect routing number).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Update the Record&lt;/strong&gt;: Apply the change to your customer or vendor record inside your system of record.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Log the Action&lt;/strong&gt;: Record when, who, and what was updated.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Propagate the Fix&lt;/strong&gt;: Make sure the corrected data is included in your next outgoing ACH file.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Verify&lt;/strong&gt;: Spot-check your file output to confirm corrections didn’t get skipped.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;best-practices-that-save-headaches&quot;&gt;Best Practices That Save Headaches&lt;/h2&gt;
+
+&lt;p&gt;Auditors, operators, and seasoned practitioners all recommend a few extra guardrails:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Maintain Audit Logs&lt;/strong&gt;: Track every correction, when it was made, and by whom. This isn’t optional—it’s your defense if questioned.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Validate NOC Data Before Applying:&lt;/strong&gt; Occasionally, corrected data in an NOC is itself wrong. Add error handling to detect bad routing numbers, mismatched names, or impossible account formats before blindly updating records.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Automate Updates&lt;/strong&gt;: Manual fixes increase the risk of human error.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Check for Data Differences Before Updating:&lt;/strong&gt; If you receive both the NACHA file and a webhook event, confirm the data is actually different before applying the update—this prevents overwriting valid information with duplicates.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Monitor Repeat Offenders&lt;/strong&gt;: If the same account keeps producing NOCs, dig deeper—maybe your customer database is out of sync with their bank.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Train Your Ops Team&lt;/strong&gt;: Everyone should know that a correction is not a low-priority task.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Think ROI&lt;/strong&gt;: Every ignored NOC costs you real dollars. Treat compliance as cost control.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;why-it-matters&quot;&gt;Why It Matters&lt;/h2&gt;
+
+&lt;p&gt;NOCs may feel like administrative noise, but they’re part of the discipline of ACH payments. If you want to run clean files, keep your NACHA audit smooth, and avoid repeat exceptions, treating corrections as a first-class operation is non-negotiable.&lt;/p&gt;
+
+&lt;p&gt;In ACH, the saying holds true: Fix it once, fix it right, and leave a trail proving you did. Otherwise, you’ll pay for the same mistake over and over again—literally.&lt;/p&gt;
+
+&lt;h2 id=&quot;key-takeaways&quot;&gt;Key Takeaways&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;NOCs are mandatory, not suggestions&lt;/strong&gt; - Every correction must be implemented immediately&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Audit trails are your defense&lt;/strong&gt; - Log every change with timestamps and user attribution&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Corrections flow to the next file&lt;/strong&gt; - Updated data must appear in your very next ACH submission&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Costs add up quickly&lt;/strong&gt; - Each NOC has a price tag, making compliance a cost control measure&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Operators notice patterns&lt;/strong&gt; - Repeated NOCs from the same accounts signal deeper issues&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;NACHA&lt;/strong&gt;. “ACH Operating Rules &amp;amp; Guidelines.” &lt;em&gt;NACHA&lt;/em&gt;, 2024. &lt;a href=&quot;https://www.nacha.org&quot;&gt;nacha.org&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Federal Reserve&lt;/strong&gt;. “FedACH Services - Notification of Change.” &lt;em&gt;Federal Reserve Financial Services&lt;/em&gt;, 2024.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;Enjoyed this deep dive? Check out the main &lt;a href=&quot;/series/payments&quot;&gt;How U.S. Payments Really Work&lt;/a&gt; series for more payment system mysteries demystified.&lt;/em&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 17 Aug 2025 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/fintech/ach/compliance/2025/08/17/ach-correction-codes-fix-log-prove.html</link>
+        <guid isPermaLink="true">http://localhost:4000/fintech/ach/compliance/2025/08/17/ach-correction-codes-fix-log-prove.html</guid>
+        
+        <category>ach</category>
+        
+        <category>nacha</category>
+        
+        <category>noc</category>
+        
+        <category>correction-codes</category>
+        
+        <category>compliance</category>
+        
+        <category>fintech-operations</category>
+        
+        <category>audit</category>
+        
+        
+        <category>fintech</category>
+        
+        <category>ach</category>
+        
+        <category>compliance</category>
+        
+      </item>
+    
+      <item>
+        <title>SEC Codes in ACH: Authorization, Compliance, and How to Not Get Burned</title>
+        <description>&lt;h1 id=&quot;sec-codes-in-ach-authorization-compliance-and-how-to-not-get-burned&quot;&gt;SEC Codes in ACH: Authorization, Compliance, and How to Not Get Burned&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;Published on: August 16, 2025&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/banners/resized/20250816seccode-blog.jpg&quot; alt=&quot;image info&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We once misclassified a whole batch of ACH payments — and our bank noticed immediately. Within days, we had a compliance warning sitting in our inbox and a very clear message: &lt;em&gt;fix your SEC codes, or else.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;That’s when we realized SEC codes aren’t just three-letter labels. &lt;strong&gt;They’re legal shorthand for how authorization was obtained&lt;/strong&gt; — telling every bank in the chain &lt;em&gt;who’s paying whom&lt;/em&gt; and &lt;em&gt;what rules apply for disputes.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Get them right, and your payments flow smoothly. Get them wrong, and you invite disputes, audits, and compliance headaches.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;This guide breaks down what SEC codes are, how to classify ACH payments correctly, and how to stay compliant with Nacha and Reg E.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;what-sec-codes-actually-do&quot;&gt;What SEC Codes Actually Do&lt;/h2&gt;
+
+&lt;p&gt;Every ACH batch header carries a three-letter SEC code. Example from a payroll file:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5220TECH STARTUP    1234567890PPDPAYROLL    250816   1091000019000001
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;That &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PPD&lt;/code&gt; isn’t decorative. It signals: “This is a consumer payment with signed authorization.” If you change that to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CCD&lt;/code&gt; for payroll, you’ve just violated Nacha rules by pretending employees are businesses.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SEC = Standard Entry Class.&lt;/strong&gt; It encodes two things:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Transaction classification&lt;/strong&gt; → consumer vs. business, paper vs. digital&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Authorization methodology&lt;/strong&gt; → written, online, telephone, implied&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Think of it as a contract: how you got the “yes.”&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The cost of getting it wrong?&lt;/strong&gt; Misclassify a consumer payment as business (using CCD instead of PPD), and you’ve just eliminated Regulation E protections. When that customer disputes the transaction, you have no legal defense — and you’ll eat the full chargeback, plus potential fines for violating consumer protection laws.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-core-sec-codes-youll-actually-use&quot;&gt;The Core SEC Codes You’ll Actually Use&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;SEC Code&lt;/th&gt;
+      &lt;th&gt;When to Use&lt;/th&gt;
+      &lt;th&gt;Authorization Method&lt;/th&gt;
+      &lt;th&gt;Dispute Risk&lt;/th&gt;
+      &lt;th&gt;Example&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;PPD&lt;/strong&gt; (Prearranged Payment &amp;amp; Deposit)&lt;/td&gt;
+      &lt;td&gt;Recurring or single consumer payments&lt;/td&gt;
+      &lt;td&gt;Signed authorization (paper/digital)&lt;/td&gt;
+      &lt;td&gt;High (60-day Reg E)&lt;/td&gt;
+      &lt;td&gt;Payroll, gym memberships&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;CCD&lt;/strong&gt; (Cash Concentration or Disbursement)&lt;/td&gt;
+      &lt;td&gt;B2B payments&lt;/td&gt;
+      &lt;td&gt;Corporate agreement&lt;/td&gt;
+      &lt;td&gt;Low&lt;/td&gt;
+      &lt;td&gt;Vendor settlement&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;WEB&lt;/strong&gt; (Internet-Initiated Entry)&lt;/td&gt;
+      &lt;td&gt;Consumer payments authorized online&lt;/td&gt;
+      &lt;td&gt;Online form + Nacha account validation&lt;/td&gt;
+      &lt;td&gt;High fraud risk, 60-day window&lt;/td&gt;
+      &lt;td&gt;Subscriptions, e-commerce&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;TEL&lt;/strong&gt; (Telephone-Initiated Entry)&lt;/td&gt;
+      &lt;td&gt;Consumer authorization by phone&lt;/td&gt;
+      &lt;td&gt;Recorded authorization OR written confirmation to customer&lt;/td&gt;
+      &lt;td&gt;High&lt;/td&gt;
+      &lt;td&gt;Call center bill pay&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;ARC&lt;/strong&gt; (Accounts Receivable Conversion)&lt;/td&gt;
+      &lt;td&gt;Mailed-in check converted to ACH&lt;/td&gt;
+      &lt;td&gt;Implied via check submission&lt;/td&gt;
+      &lt;td&gt;Moderate&lt;/td&gt;
+      &lt;td&gt;Insurance premiums&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;POP&lt;/strong&gt; (Point-of-Purchase Conversion)&lt;/td&gt;
+      &lt;td&gt;Paper check converted at POS&lt;/td&gt;
+      &lt;td&gt;Implied via in-person handoff&lt;/td&gt;
+      &lt;td&gt;Moderate&lt;/td&gt;
+      &lt;td&gt;Legacy retail checkout&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Key Rule&lt;/strong&gt;: Consumer-facing codes = Reg E protections, 60-day dispute window. Business-facing codes = contract-only protection, minimal dispute rights.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;advanced-sec-codes-for-business&quot;&gt;Advanced SEC Codes for Business&lt;/h2&gt;
+
+&lt;p&gt;Big corporations live in enhanced codes that support remittance detail:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;SEC Code&lt;/th&gt;
+      &lt;th&gt;Purpose&lt;/th&gt;
+      &lt;th&gt;When to Use&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;CCD+&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Business payments with addenda&lt;/td&gt;
+      &lt;td&gt;Vendor invoices needing line-item notes&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;PPD+&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Consumer payments with addenda&lt;/td&gt;
+      &lt;td&gt;Government benefits with detailed breakdowns&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;CTX&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Corporate Trade Exchange, full EDI integration&lt;/td&gt;
+      &lt;td&gt;Enterprise treasury, supply chain payments&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;the-cost-of-addenda-ccd-vs-ctx&quot;&gt;The Cost of Addenda (CCD+ vs. CTX)&lt;/h2&gt;
+
+&lt;p&gt;In one of the ACH audits, the Nacha auditor flagged the use of CCD+ instead of CTX for vendor payments. Why aren’t we using CTX, I explained that we only needed one line of extra information and CCD+ was cost effective.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bank fee math&lt;/strong&gt; (example - fees vary by institution):&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Base ACH: $0.05&lt;/li&gt;
+  &lt;li&gt;Addenda record: $0.02&lt;/li&gt;
+  &lt;li&gt;CTX premium: $0.08 + $500/month setup&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Volume&lt;/strong&gt;: 25,000 payments/month&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;CCD+ cost&lt;/strong&gt;: $1,750/month&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;CTX cost&lt;/strong&gt;: $3,750/month&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Annual savings&lt;/strong&gt;: $24,000&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Lesson&lt;/strong&gt;: CTX is only worth it if you need structured EDI remittance data. For single-line invoices, CCD+ is the right tool. Compliance isn’t about gold-plating — it’s about defensible, efficient decisions.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;what-happens-when-you-screw-it-up&quot;&gt;What Happens When You Screw It Up&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Fintech story&lt;/strong&gt;: Our misclassification issue wasn’t unique. We processed a small business bill pay as WEB. When “Johnson Construction LLC” sent a payment, the ACH operator flagged it: business name + consumer code = violation.&lt;/p&gt;
+
+&lt;p&gt;The ACH operator issued a formal warning to our sponsor bank about incorrect SEC code usage patterns. The bank immediately escalated to us with an ultimatum: “Fix SEC logic in 72 hours or risk processing restrictions.”&lt;/p&gt;
+
+&lt;p&gt;Their fix: auto-detect business entities and assign CCD. Example:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;determine_sec_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;account_holder_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;transaction_type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account_type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;business_indicators&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;LLC&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;INC&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;CORP&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;LTD&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;CO&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;COMPANY&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;LP&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;LLP&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;is_business&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;business_indicators&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;any?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account_holder_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;upcase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;include?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  
+  &lt;span class=&quot;c1&quot;&gt;# Note: This is a simplified approach. In practice, you may need:&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# - Manual review for edge cases (sole proprietorships, DBAs, trusts)&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# - Account type verification (business vs consumer account)&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# - Customer self-identification during onboarding&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is_business&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account_type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;business&apos;&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;&apos;CCD&apos;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;transaction_type&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;web_authorization&apos;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;WEB&apos;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;recurring_payment&apos;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;PPD&apos;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;phone_authorization&apos;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;TEL&apos;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;check_conversion&apos;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;ARC&apos;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Unsupported transaction type: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transaction_type&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Takeaway&lt;/strong&gt;: Banks run automated pattern checks. Misuse isn’t hypothetical — it’s detected, flagged, and escalated fast.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;-what-you-must-prove--or-lose-the-dispute&quot;&gt;🧾 What You Must Prove — or Lose the Dispute&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Consumer transactions&lt;/strong&gt; (PPD, WEB, TEL, ARC, POP):&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Must follow Regulation E&lt;/li&gt;
+  &lt;li&gt;Customers can dispute “unauthorized” debits up to 60 days&lt;/li&gt;
+  &lt;li&gt;You need audit-proof authorization records&lt;/li&gt;
+  &lt;li&gt;Burden of proof is on you, the merchant&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Business transactions&lt;/strong&gt; (CCD, CCD+, CTX):&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Governed by commercial agreements&lt;/li&gt;
+  &lt;li&gt;Very limited dispute rights&lt;/li&gt;
+  &lt;li&gt;Much lower return rates&lt;/li&gt;
+  &lt;li&gt;Businesses can’t casually reverse like consumers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Retention rules that matter&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Keep authorization evidence for &lt;strong&gt;2 years minimum&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Produce within &lt;strong&gt;10 business days&lt;/strong&gt; of a dispute request&lt;/li&gt;
+  &lt;li&gt;Can’t produce evidence = you eat the full loss&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;implementation-scenarios&quot;&gt;Implementation Scenarios&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Online subscriptions&lt;/strong&gt; → WEB with account validation before first debit.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Payroll&lt;/strong&gt; → PPD credit with employee-signed authorization.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Vendor settlement&lt;/strong&gt; → CCD with commercial agreement.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Call center bill pay&lt;/strong&gt; → TEL with recorded authorization OR written confirmation to customer.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;example-web-authorization-flow&quot;&gt;Example: WEB Authorization Flow&lt;/h2&gt;
+
+&lt;p&gt;Here’s what proper WEB authorization looks like in code:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Example WEB authorization capture&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;WebACHAuthorization&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;capture_authorization&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;customer_params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;verify_customer_identity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;customer_params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;present_nacha_disclosures&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;authorization&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;build_authorization_record&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;customer_params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;validate_account_before_first_debit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;authorization&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;store_authorization_record&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;authorization&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  
+  &lt;span class=&quot;kp&quot;&gt;private&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;build_authorization_record&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;customer_params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;customer_id: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;customer_params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;account_number: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mask_account&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;customer_params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:account&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;routing_number: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;customer_params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:routing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;amount: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;customer_params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:amount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;consent_timestamp: &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;current&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;ip_address: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;remote_ip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;user_agent: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;user_agent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;sec_code: &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;WEB&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;nacha_disclosure_shown: &lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;customer_consent: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;customer_params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:i_agree&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;true&apos;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;validate_account_before_first_debit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# Microdeposits, Plaid, or similar verification required&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;AccountValidationService&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;verify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;routing: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:routing_number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;account: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:account_number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;store_authorization_record&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;authorization&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# Store for 2+ years per Nacha requirements with encryption&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;AuthorizationRecord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;authorization&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;sec-code-compliance-checklist&quot;&gt;SEC Code Compliance Checklist&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;✅ Pre-Implementation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Map all payment flows to appropriate SEC codes&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Implement business entity detection logic&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Design authorization capture workflows&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Set up 2-year retention system for authorization records&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Include encryption and access logging for stored authorization records&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;✅ Operational Requirements&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Automate SEC code assignment (eliminate manual selection)&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Validate accounts before first WEB debit&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Maintain call recordings for TEL transactions OR send written confirmations to customers&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Store IP addresses and timestamps for online authorizations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;✅ Ongoing Compliance&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Monitor transaction patterns for SEC code violations&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Monitor SEC code mix monthly and flag unexpected ratios (e.g., high WEB volume with few account validations)&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Audit authorization records quarterly&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Respond to disputes within 10 business days&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Review bank compliance feedback regularly&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Critical Principle&lt;/strong&gt;: SEC codes document your authorization process. Accurate implementation provides regulatory protection; incorrect usage creates liability under consumer protection regulations.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;-quick-reference-sec-code-decision-tree&quot;&gt;📋 Quick Reference: SEC Code Decision Tree&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1: Who’s the account holder?&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Business name (LLC, INC, CORP, etc.) → Use &lt;strong&gt;CCD&lt;/strong&gt; family&lt;/li&gt;
+  &lt;li&gt;Individual person → Continue to Step 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2: How was authorization captured?&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Online form/website → &lt;strong&gt;WEB&lt;/strong&gt; (with account validation)&lt;/li&gt;
+  &lt;li&gt;Phone call → &lt;strong&gt;TEL&lt;/strong&gt; (with recorded authorization OR written confirmation)&lt;/li&gt;
+  &lt;li&gt;Signed agreement → &lt;strong&gt;PPD&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Mailed/dropped-off check → &lt;strong&gt;ARC&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;In-person check at register → &lt;strong&gt;POP&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 3: Need remittance data?&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Simple payments → Standard codes (PPD, CCD, WEB, TEL)&lt;/li&gt;
+  &lt;li&gt;Invoice details needed → Enhanced codes (PPD+, CCD+)&lt;/li&gt;
+  &lt;li&gt;Full EDI integration → &lt;strong&gt;CTX&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;NACHA (National Automated Clearing House Association)&lt;/strong&gt;. “ACH Rules &amp;amp; Guidelines.” &lt;em&gt;NACHA.org&lt;/em&gt;, 2024. &lt;a href=&quot;https://www.nacha.org/rules&quot;&gt;https://www.nacha.org/rules&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Federal Reserve&lt;/strong&gt;. “Regulation E - Electronic Fund Transfers.” &lt;em&gt;FederalReserve.gov&lt;/em&gt;, 2024. &lt;a href=&quot;https://www.federalreserve.gov/regulations/&quot;&gt;https://www.federalreserve.gov/regulations/&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;NACHA Operating Rules&lt;/strong&gt;. “Standard Entry Class Codes.” &lt;em&gt;NACHA Operating Rules &amp;amp; Guidelines&lt;/em&gt;, 2024.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;Enjoyed this deep dive? Check out the main &lt;a href=&quot;/series/payments&quot;&gt;How U.S. Payments Really Work&lt;/a&gt; series for more payment system breakdowns.&lt;/em&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 16 Aug 2025 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/fintech/ach/2025/08/16/sec-codes-authorization-boss-level.html</link>
+        <guid isPermaLink="true">http://localhost:4000/fintech/ach/2025/08/16/sec-codes-authorization-boss-level.html</guid>
+        
+        <category>ach</category>
+        
+        <category>sec-codes</category>
+        
+        <category>compliance</category>
+        
+        <category>authorization</category>
+        
+        <category>nacha</category>
+        
+        
+        <category>fintech</category>
+        
+        <category>ach</category>
+        
+      </item>
+    
+      <item>
+        <title>NACHA File Demystified: Cracking the 94-Character Code</title>
+        <description>&lt;h1 id=&quot;nacha-file-demystified-cracking-the-94-character-code&quot;&gt;NACHA File Demystified: Cracking the 94-Character Code&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;Published on: August 15, 2025&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/banners/resized/20250815nachafile-blog.jpg&quot; alt=&quot;NACHA Demystified Banner&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Picture this: You’re building a payroll system, and your first ACH file submission gets rejected with a cryptic “Invalid field length at position 47.” Meanwhile, $72 trillion moves through these exact same files every year without a hitch.&lt;/p&gt;
+
+&lt;p&gt;Welcome to NACHA files—where every character matters, spaces are sacred, and one misplaced digit can derail your entire batch.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-this-matters-now&quot;&gt;Why This Matters Now&lt;/h2&gt;
+
+&lt;p&gt;If you’re building anything that touches money in the U.S., you’ll eventually encounter NACHA files. They’re the beating heart of ACH transactions—from your Venmo transfer to that $50K B2B payment. But the 50-year-old fixed-width format feels like archaeology until you need to debug why your file got rejected at 2 AM.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-anatomy-of-financial-dna&quot;&gt;The Anatomy of Financial DNA&lt;/h2&gt;
+
+&lt;p&gt;Every NACHA file is exactly what it sounds like: a text file with rigidly structured lines, each exactly 94 characters. No more, no less. Think of it as financial DNA—every position has meaning, every character serves a purpose.&lt;/p&gt;
+
+&lt;p&gt;But here’s the perfect analogy: &lt;strong&gt;NACHA files are like mail delivery&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;File Header/Footer (lines 1 &amp;amp; 9)&lt;/strong&gt; = The envelope telling the postal system who’s sending to whom&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Batch Header/Footer (lines 5 &amp;amp; 8)&lt;/strong&gt; = Letters inside the envelope, each with their own addressing&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Entry Details (line 6)&lt;/strong&gt; = The actual message content (transactions)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Addenda Records (line 7)&lt;/strong&gt; = Extra pages, return receipts, or “address correction” notices&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Let’s walk through the first 9 lines of a real NACHA file:&lt;/p&gt;
+
+&lt;h3 id=&quot;line-1-file-header-record-type-1---the-envelope&quot;&gt;Line 1: File Header Record (Type ‘1’) - The Envelope&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;101 121042882 1234567891234560815180600A094101FIRST NATIONAL BANK    ACME CORP              
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This is the &lt;strong&gt;envelope&lt;/strong&gt; that tells the postal system (banking network): “Here’s who’s sending money to whom, when, and how to route this file through the ACH system.”&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Field breakdown:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 1-1:&lt;/strong&gt; Record Type Code (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 2-3:&lt;/strong&gt; Priority Code (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;01&lt;/code&gt; - always)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 4-13:&lt;/strong&gt; Immediate Destination (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;121042882&lt;/code&gt; - receiving bank’s routing number)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 14-23:&lt;/strong&gt; Immediate Origin (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1234567891&lt;/code&gt; - your ODFI’s routing number + company ID)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 24-29:&lt;/strong&gt; File Creation Date (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;250815&lt;/code&gt; - YYMMDD)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 30-33:&lt;/strong&gt; File Creation Time (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1800&lt;/code&gt; - HHMM)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 34-34:&lt;/strong&gt; File ID Modifier (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt; - daily sequence)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 35-37:&lt;/strong&gt; Record Size (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;094&lt;/code&gt; - always 94 characters)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 38-39:&lt;/strong&gt; Blocking Factor (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;10&lt;/code&gt; - always)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 40-40:&lt;/strong&gt; Format Code (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt; - always)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 41-63:&lt;/strong&gt; Immediate Destination Name (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FIRST NATIONAL BANK&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 64-86:&lt;/strong&gt; Immediate Origin Name (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ACME CORP&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 87-94:&lt;/strong&gt; Reference Code (optional notes)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;line-2-companybatch-header-record-type-5---the-letter-header&quot;&gt;Line 2: Company/Batch Header Record (Type ‘5’) - The Letter Header&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5220ACME CORP                   1234567891PPDPAYROLL   250815   1123456780000001
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Think of this as the &lt;strong&gt;letter header&lt;/strong&gt; inside the envelope. Each batch is like a separate letter with its own purpose - this one says “ACME Corp is sending payroll transactions.”&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Key fields:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 1-1:&lt;/strong&gt; Record Type (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 2-4:&lt;/strong&gt; Service Class Code (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;220&lt;/code&gt; = mixed debits/credits)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 5-20:&lt;/strong&gt; Company Name (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ACME CORP&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 21-40:&lt;/strong&gt; Company Discretionary Data (internal reference)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 41-50:&lt;/strong&gt; Company ID (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1234567891&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 51-53:&lt;/strong&gt; Standard Entry Class (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PPD&lt;/code&gt; = Prearranged Payment/Deposit)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 54-63:&lt;/strong&gt; Company Entry Description (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PAYROLL&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 64-69:&lt;/strong&gt; Company Descriptive Date (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;250815&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 70-75:&lt;/strong&gt; Effective Entry Date (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;250815&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 76-78:&lt;/strong&gt; Settlement Date (Julian, blank = next banking day)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 79-79:&lt;/strong&gt; Originator Status Code (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 80-87:&lt;/strong&gt; Originating DFI ID (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;12345678&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 88-94:&lt;/strong&gt; Batch Number (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0000001&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;lines-3-6-entry-detail-records-type-6&quot;&gt;Lines 3-6: Entry Detail Records (Type ‘6’)&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;627123456789987654321        0000050000JOHN DOE              0123456780000001
+627123456789876543210        0000075000JANE SMITH            0123456780000002  
+622123456789555666777        0000100000MIKE JOHNSON          0123456780000003
+627123456789444555666        0000025000SARAH WILSON          0123456780000004
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here’s where the money moves. Each line represents one transaction.&lt;/p&gt;
+
+&lt;h3 id=&quot;line-7-addenda-record-type-7---the-extra-pages&quot;&gt;Line 7: Addenda Record (Type ‘7’) - The Extra Pages&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;799RETURN REASON: R01 INSUFFICIENT FUNDS                                    00010000001
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;These are the “extra pages” attached to transactions. Addenda records serve multiple critical purposes:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Outgoing (your additional info):&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;CCD/CTX transactions&lt;/strong&gt;: Can include remittance data, invoice details&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Corporate payments&lt;/strong&gt;: Purchase order numbers, contract references&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;B2B payments&lt;/strong&gt;: Detailed payment allocation information&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;International&lt;/strong&gt;: Additional regulatory or routing information&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Incoming (bank responses):&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Returns&lt;/strong&gt;: When transactions fail (insufficient funds, account closed)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Notifications of Change (NOC)&lt;/strong&gt;: When account info needs updating&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Acknowledgments&lt;/strong&gt;: Confirmation receipts from receiving banks&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Addenda anatomy:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Position 1:&lt;/strong&gt; Record Type (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Position 2:&lt;/strong&gt; Addenda Type Code (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;05&lt;/code&gt; = remittance data, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;99&lt;/code&gt; = returns/NOCs)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 3-82:&lt;/strong&gt; Payment Related Information (remittance details, return reason, etc.)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 83-86:&lt;/strong&gt; Addenda Sequence Number (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0001&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 87-94:&lt;/strong&gt; Entry Detail Sequence Number (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0000001&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Entry Detail anatomy:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Position 1:&lt;/strong&gt; Record Type (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;6&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Position 2:&lt;/strong&gt; Transaction Code (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;22&lt;/code&gt; = credit to checking, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;27&lt;/code&gt; = debit from checking)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 3-10:&lt;/strong&gt; Receiving DFI ID (first 8 digits of recipient’s bank routing)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 11-27:&lt;/strong&gt; DFI Account Number (recipient’s account, left-justified)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 28-37:&lt;/strong&gt; Amount (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0000050000&lt;/code&gt; = $500.00, no decimal point)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 38-59:&lt;/strong&gt; Individual Name (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JOHN DOE&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 60-61:&lt;/strong&gt; Discretionary Data (usually blank)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 62-79:&lt;/strong&gt; Individual ID Number (employee ID, SSN, etc.)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 80-94:&lt;/strong&gt; Trace Number (unique transaction identifier)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;line-8-companybatch-control-record-type-8---the-letter-footer&quot;&gt;Line 8: Company/Batch Control Record (Type ‘8’) - The Letter Footer&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;822000000500492592580000000000000000025000012345678000001
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This closes the &lt;strong&gt;letter&lt;/strong&gt; (batch) with a mathematical proof that everything adds up correctly. Like signing and dating a letter.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Control totals:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Position 1:&lt;/strong&gt; Record Type (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;8&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 2-4:&lt;/strong&gt; Service Class Code (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;220&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 5-10:&lt;/strong&gt; Entry/Addenda Count (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;000005&lt;/code&gt; = 4 transactions + 1 addenda)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 11-20:&lt;/strong&gt; Entry Hash (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0492592580&lt;/code&gt; - sum of first 8 digits of all routing numbers, rightmost 10 digits)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 21-32:&lt;/strong&gt; Total Debit Amount (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;000000000000&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 33-44:&lt;/strong&gt; Total Credit Amount (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;000000250000&lt;/code&gt; = $2,500.00)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 45-54:&lt;/strong&gt; Company ID (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1234567891&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 80-87:&lt;/strong&gt; Originating DFI ID (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;12345678&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 88-94:&lt;/strong&gt; Batch Number (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0000001&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;line-9-file-control-record-type-9---sealing-the-envelope&quot;&gt;Line 9: File Control Record (Type ‘9’) - Sealing the Envelope&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;9000001000001000000050492592580000000000000000025000                       
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This &lt;strong&gt;seals the envelope&lt;/strong&gt; with file-level totals that must match the sum of all letters (batches) inside. The postal system uses this to verify nothing was lost in transit.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;File totals:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Position 1:&lt;/strong&gt; Record Type (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;9&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 2-7:&lt;/strong&gt; Batch Count (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;000001&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 8-13:&lt;/strong&gt; Block Count (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;000001&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 14-21:&lt;/strong&gt; Entry/Addenda Count (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;00000005&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 22-31:&lt;/strong&gt; Entry Hash (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0492592580&lt;/code&gt; - sum of first 8 digits of all routing numbers, rightmost 10 digits)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 32-43:&lt;/strong&gt; Total File Debit Amount (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;000000000000&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Positions 44-55:&lt;/strong&gt; Total File Credit Amount (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;000000250000&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;the-devils-in-the-details&quot;&gt;The Devil’s in the Details&lt;/h2&gt;
+
+&lt;h3 id=&quot;why-fixed-width-still-rules&quot;&gt;Why Fixed-Width Still Rules&lt;/h3&gt;
+&lt;p&gt;In an era of JSON APIs and GraphQL, NACHA’s fixed-width format feels archaic. But there’s method to the madness:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Parsing Performance:&lt;/strong&gt; Banks process millions of transactions daily. Fixed-width parsing is blazingly fast.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Error Detection:&lt;/strong&gt; Misaligned data is immediately obvious.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Legacy Integration:&lt;/strong&gt; Core banking systems from the 1970s still run production workloads.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Regulatory Compliance:&lt;/strong&gt; The format is legally mandated and audited.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;common-gotchas-that-will-bite-you&quot;&gt;Common Gotchas That Will Bite You&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Padding Hell:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Wrong - this will get rejected&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;account_number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;12345&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Right - left-justified, space-padded to 17 characters  &lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;account_number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;12345            &quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Numerical Nightmares:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Wrong - NACHA doesn&apos;t understand decimals&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;amount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;500.00&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Right - implied decimal, zero-padded to 10 digits&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;amount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;0000050000&quot;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# represents $500.00&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Date Format Disasters:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Wrong - ISO 8601 is too modern&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;2025-08-15&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Right - YYMMDD format&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;250815&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;building-a-nacha-file-generator&quot;&gt;Building a NACHA File Generator&lt;/h2&gt;
+
+&lt;p&gt;Here’s a Ruby class that handles the core structure:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;NachaFileBuilder&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;company_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;company_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;destination_bank&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@company_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;company_name&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@company_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;company_id&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@destination_bank&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;destination_bank&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@entries&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@batch_number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;add_credit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;account_number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;routing_number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;amount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;individual_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@entries&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;transaction_code: &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;22&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# Credit to checking account&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;routing_number: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;routing_number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;account_number: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;account_number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ljust&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;17&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;amount: &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sprintf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;%010d&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;amount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;name: &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ljust&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;individual_id: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;individual_id&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;generate_file&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file_header_record&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;batch_header_record&lt;/span&gt;
+    
+    &lt;span class=&quot;vi&quot;&gt;@entries&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;each_with_index&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;entry_detail_record&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;batch_control_record&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file_control_record&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;# Pad to block boundary (multiple of 10 lines)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;9&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;94&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;lines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  
+  &lt;span class=&quot;kp&quot;&gt;private&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;file_header_record&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+      &lt;span class=&quot;s1&quot;&gt;&apos;1&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;                                    &lt;span class=&quot;c1&quot;&gt;# Record Type&lt;/span&gt;
+      &lt;span class=&quot;s1&quot;&gt;&apos;01&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;                                   &lt;span class=&quot;c1&quot;&gt;# Priority Code&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@destination_bank&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ljust&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;            &lt;span class=&quot;c1&quot;&gt;# Immediate Destination&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@company_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;rjust&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;0&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;            &lt;span class=&quot;c1&quot;&gt;# Immediate Origin&lt;/span&gt;
+      &lt;span class=&quot;no&quot;&gt;Time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;strftime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;%y%m%d&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;           &lt;span class=&quot;c1&quot;&gt;# File Creation Date&lt;/span&gt;
+      &lt;span class=&quot;no&quot;&gt;Time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;strftime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;%H%M&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;             &lt;span class=&quot;c1&quot;&gt;# File Creation Time&lt;/span&gt;
+      &lt;span class=&quot;s1&quot;&gt;&apos;A&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;                                   &lt;span class=&quot;c1&quot;&gt;# File ID Modifier&lt;/span&gt;
+      &lt;span class=&quot;s1&quot;&gt;&apos;094&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;                                 &lt;span class=&quot;c1&quot;&gt;# Record Size&lt;/span&gt;
+      &lt;span class=&quot;s1&quot;&gt;&apos;10&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;                                  &lt;span class=&quot;c1&quot;&gt;# Blocking Factor&lt;/span&gt;
+      &lt;span class=&quot;s1&quot;&gt;&apos;1&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;                                   &lt;span class=&quot;c1&quot;&gt;# Format Code&lt;/span&gt;
+      &lt;span class=&quot;s1&quot;&gt;&apos;BANK NAME&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ljust&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;23&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;                 &lt;span class=&quot;c1&quot;&gt;# Destination Name&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@company_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ljust&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;23&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;               &lt;span class=&quot;c1&quot;&gt;# Origin Name&lt;/span&gt;
+      &lt;span class=&quot;s1&quot;&gt;&apos; &apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;                                &lt;span class=&quot;c1&quot;&gt;# Reference Code&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ljust&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;94&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;entry_detail_record&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trace_number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+      &lt;span class=&quot;s1&quot;&gt;&apos;6&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;                                   &lt;span class=&quot;c1&quot;&gt;# Record Type&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:transaction_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;              &lt;span class=&quot;c1&quot;&gt;# Transaction Code&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:routing_number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;           &lt;span class=&quot;c1&quot;&gt;# Receiving DFI ID&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:account_number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;                &lt;span class=&quot;c1&quot;&gt;# Account Number&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:amount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;                        &lt;span class=&quot;c1&quot;&gt;# Amount&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;                          &lt;span class=&quot;c1&quot;&gt;# Individual Name&lt;/span&gt;
+      &lt;span class=&quot;s1&quot;&gt;&apos;  &apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;                                  &lt;span class=&quot;c1&quot;&gt;# Discretionary Data&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:individual_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ljust&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;# Individual ID&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;sprintf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;%07d&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trace_number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;          &lt;span class=&quot;c1&quot;&gt;# Trace Number&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ljust&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;94&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  
+  &lt;span class=&quot;c1&quot;&gt;# ... other record methods&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;complete-working-example&quot;&gt;Complete Working Example&lt;/h2&gt;
+
+&lt;p&gt;Here’s a minimal but valid NACHA file you can copy-paste and test. It contains 1 credit + 1 debit transaction, properly padded to a 10-line block:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;101 121042882 123456789 2508151800A094101FIRST NATIONAL BANK    ACME CORP              
+5220ACME CORP                   1234567891PPDPAYROLL   250815   1123456780000001
+6221234567801234567890123456    0000100000JOHN DOE              0000000000000001
+6271234567809876543210987654    0000050000JANE SMITH            0000000000000002
+8220000002002469135600000000500000000001000001234567890000001
+900000100000200000002024691356000000005000000000100000
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;whats-happening-here&quot;&gt;What’s Happening Here:&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Line 1 (File Header):&lt;/strong&gt; The envelope - tells the system who’s sending to whom&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;121042882&lt;/code&gt; → Destination bank routing number&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;123456789&lt;/code&gt; → Origin ODFI routing number&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2508151800&lt;/code&gt; → File created August 15, 2025 at 18:00&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Line 2 (Batch Header):&lt;/strong&gt; Letter header - describes this batch of transactions&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5220&lt;/code&gt; → Mixed debits and credits service class&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PPD&lt;/code&gt; → Prearranged Payment &amp;amp; Deposit entry class&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;250815&lt;/code&gt; → Effective date (August 15, 2025)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Line 3 (Credit Entry):&lt;/strong&gt; $100.00 credit to John Doe’s checking account&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;22&lt;/code&gt; → Credit to checking account&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0000100000&lt;/code&gt; → $100.00 (implied decimal)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Line 4 (Debit Entry):&lt;/strong&gt; $50.00 debit from Jane Smith’s checking account&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;27&lt;/code&gt; → Debit from checking account&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0000050000&lt;/code&gt; → $50.00 (implied decimal)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Line 5 (Batch Control):&lt;/strong&gt; Mathematical proof for this batch&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2&lt;/code&gt; entries total, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$100&lt;/code&gt; credit, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$50&lt;/code&gt; debit&lt;/li&gt;
+  &lt;li&gt;Entry hash: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;02469135&lt;/code&gt; (sum of receiving DFI routing numbers)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Line 6 (File Control):&lt;/strong&gt; File-level totals (must match batch totals)&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt; batch, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2&lt;/code&gt; entries, same monetary totals&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Lines 7-10:&lt;/strong&gt; Padding with all 9s to reach 10-line block boundary&lt;/p&gt;
+
+&lt;h3 id=&quot;testing-this-file&quot;&gt;Testing This File&lt;/h3&gt;
+
+&lt;p&gt;Copy the above example into a text file (save as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sample.ach&lt;/code&gt;) and:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Use NACHA validation tools&lt;/strong&gt; to verify the format&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Test with your Ruby generator&lt;/strong&gt; to compare output&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Examine with a hex editor&lt;/strong&gt; to see the exact 94-character line structure&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Study the math&lt;/strong&gt;: Notice how entry hash &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;024691356&lt;/code&gt; = &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;12345678&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;12345678&lt;/code&gt; (first 8 digits of both routing numbers)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;precision-notes-for-builders&quot;&gt;Precision Notes for Builders&lt;/h2&gt;
+
+&lt;p&gt;A few critical clarifications that trip up even experienced developers:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Transaction Codes&lt;/strong&gt;: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;22&lt;/code&gt; = credit to checking account, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;27&lt;/code&gt; = debit from checking account. Remember: it’s from the recipient’s perspective.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Immediate Origin&lt;/strong&gt;: Usually your ODFI’s routing number (sometimes combined with company ID), not your company’s EIN or Fed ID.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Entry Hash&lt;/strong&gt;: Sum of the first 8 digits of all receiving bank routing numbers, then truncated to the rightmost 10 digits.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Addenda Types&lt;/strong&gt;: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;05&lt;/code&gt; for remittance data (CCD/CTX), &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;99&lt;/code&gt; for returns and Notifications of Change (NOCs).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Block Count&lt;/strong&gt;: Number of physical blocks (10 records per block). In our example: 10 lines = 1 block. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;9&lt;/code&gt; padding records count toward this total.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Discretionary Data&lt;/strong&gt;: Positions 60-61 in Entry Detail records. Most leave blank, but some originators use for internal tracking codes.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Trace Number&lt;/strong&gt;: Should be 8-digit ODFI routing + 7-digit sequence (15 characters total). Our simplified examples show just the sequence portion.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;key-takeaways&quot;&gt;Key Takeaways&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Every character counts:&lt;/strong&gt; NACHA files are unforgiving. One misplaced space will reject your entire batch.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Think in fixed-width:&lt;/strong&gt; Padding, alignment, and field lengths are non-negotiable.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Test religiously:&lt;/strong&gt; Use the ACH operator’s file validation tools before going live.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Embrace the constraints:&lt;/strong&gt; The rigid format enables high-speed, reliable processing.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Read the spec:&lt;/strong&gt; NACHA’s Operating Rules are your bible—all 500+ pages of them.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;NACHA&lt;/strong&gt;. “ACH Operating Rules &amp;amp; Guidelines.” &lt;em&gt;NACHA&lt;/em&gt;, 2024. &lt;a href=&quot;https://www.nacha.org&quot;&gt;nacha.org&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Federal Reserve&lt;/strong&gt;. “FedACH Services.” &lt;em&gt;Federal Reserve Financial Services&lt;/em&gt;, 2024.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;Enjoyed this deep dive? Check out the main &lt;a href=&quot;/series/payments&quot;&gt;How U.S. Payments Really Work&lt;/a&gt; series for more payment system mysteries demystified.&lt;/em&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 15 Aug 2025 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/fintech/ach/2025/08/15/nacha-file-demystified.html</link>
+        <guid isPermaLink="true">http://localhost:4000/fintech/ach/2025/08/15/nacha-file-demystified.html</guid>
+        
+        <category>nacha</category>
+        
+        <category>ach</category>
+        
+        <category>file-format</category>
+        
+        <category>fintech-operations</category>
+        
+        <category>payments-infrastructure</category>
+        
+        <category>banking</category>
+        
+        
+        <category>fintech</category>
+        
+        <category>ach</category>
+        
+      </item>
+    
+      <item>
+        <title>Wire Transfers Explained: Fast, Final, and Expensive</title>
+        <description>&lt;!-- Series Navigation --&gt;
+&lt;div style=&quot;background: #f8f9fa; border-left: 4px solid #007acc; padding: 1rem; margin: 1rem 0;&quot;&gt;
+  &lt;strong&gt;Part 2 of the &quot;How U.S. Payments Really Work&quot; Series&lt;/strong&gt;&lt;br /&gt;
+  &lt;a href=&quot;/fintech/payments/2025/08/13/money-flow-bank-account.html&quot;&gt;← Previous: How Money Moves&lt;/a&gt; | 
+  &lt;a href=&quot;/series/payments&quot;&gt;View complete series roadmap&lt;/a&gt; | 
+  &lt;a href=&quot;/fintech/payments/2025/08/20/ach-good-bad-ugly.html&quot;&gt;Next: ACH: The Good, The Bad, and The Ugly →&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;wire-transfers-explained-fast-final-and-expensive&quot;&gt;Wire Transfers Explained: Fast, Final, and Expensive&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;Published on: August 14, 2025&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/banners/resized/20250814wiretransfer-blog.jpg&quot; alt=&quot;Wire Transfers&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A wire transfer is like telling your bank: &lt;strong&gt;“Move this money to another bank account — right now. No batching. No waiting.”&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Wire transfers are fast, final, and irreversible. Once the money moves, it’s gone — no take-backs, no “oops,” no reversal unless fraud is involved.&lt;/p&gt;
+
+&lt;p&gt;While ACH processes payments in batches over 1-3 days, wire transfers settle immediately through real-time gross settlement systems. This speed comes at a premium: expect to pay $15-$50 per wire, sometimes more for international transfers.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-a-wire-transfer&quot;&gt;What Is a Wire Transfer?&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Wire transfers&lt;/strong&gt; are electronic fund transfers that move money directly from one bank account to another in real-time. Unlike ACH’s batch processing system, wires are processed individually and settle immediately.&lt;/p&gt;
+
+&lt;p&gt;Key characteristics:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Real-time processing&lt;/strong&gt; - funds move within minutes&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Irreversible&lt;/strong&gt; - no ability to cancel once sent&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;High value&lt;/strong&gt; - commonly used for large transactions&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Expensive&lt;/strong&gt; - significant fees compared to ACH&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Secure&lt;/strong&gt; - heavily regulated and monitored&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;who-uses-wire-transfers&quot;&gt;Who Uses Wire Transfers?&lt;/h2&gt;
+
+&lt;p&gt;Wire transfers serve specific use cases where speed and finality are crucial:&lt;/p&gt;
+
+&lt;h3 id=&quot;business-use-cases&quot;&gt;Business Use Cases&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Real estate transactions&lt;/strong&gt; - closing on property purchases&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Large vendor payments&lt;/strong&gt; - time-sensitive business deals&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;International trade&lt;/strong&gt; - cross-border commercial payments&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Securities trading&lt;/strong&gt; - same-day settlement requirements&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;personal-use-cases&quot;&gt;Personal Use Cases&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Home purchases&lt;/strong&gt; - down payments and closing costs&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Emergency transfers&lt;/strong&gt; - urgent family support&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;International remittances&lt;/strong&gt; - sending money abroad&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Large purchases&lt;/strong&gt; - luxury items, vehicles&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;wire-transfer-networks&quot;&gt;Wire Transfer Networks&lt;/h2&gt;
+
+&lt;p&gt;Wire transfers operate on different networks depending on the type and destination:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Type&lt;/th&gt;
+      &lt;th&gt;Network&lt;/th&gt;
+      &lt;th&gt;Operator&lt;/th&gt;
+      &lt;th&gt;Use Case&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Domestic (U.S.)&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Fedwire&lt;/td&gt;
+      &lt;td&gt;Federal Reserve&lt;/td&gt;
+      &lt;td&gt;Real-time gross settlement&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Domestic (Private)&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;CHIPS&lt;/td&gt;
+      &lt;td&gt;The Clearing House&lt;/td&gt;
+      &lt;td&gt;Large-value net settlement&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;International&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;SWIFT&lt;/td&gt;
+      &lt;td&gt;SWIFT (Belgium)&lt;/td&gt;
+      &lt;td&gt;Cross-border messaging&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;network-definitions&quot;&gt;Network Definitions&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Fedwire&lt;/strong&gt;: Real-time gross settlement system operated by the Federal Reserve. Processes individual transactions immediately with full reserve backing.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;CHIPS&lt;/strong&gt;: Clearing House Interbank Payments System. Net settlement system for high-value domestic and international dollar payments.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SWIFT&lt;/strong&gt;: Society for Worldwide Interbank Financial Telecommunication. Messaging network that facilitates international wire instructions between banks.&lt;/p&gt;
+
+&lt;h2 id=&quot;domestic-wire-transfer-flow&quot;&gt;Domestic Wire Transfer Flow&lt;/h2&gt;
+
+&lt;p&gt;When you send a domestic wire transfer, here’s exactly what happens:&lt;/p&gt;
+
+&lt;h3 id=&quot;the-process&quot;&gt;The Process&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;You&lt;/strong&gt; provide wire instructions to your bank&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Your Bank&lt;/strong&gt; validates the transaction and debits your account&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Wire Network&lt;/strong&gt; processes the payment through Fedwire or CHIPS&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Receiving Bank&lt;/strong&gt; credits the recipient’s account&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Recipient&lt;/strong&gt; receives funds same-day (often within minutes)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;mermaid&quot;&gt;
+flowchart LR
+    A[&quot;You&lt;br /&gt;&lt;small&gt;Wire Instructions&lt;/small&gt;&quot;] 
+    B[&quot;Your Bank&lt;br /&gt;&lt;small&gt;Sender&lt;/small&gt;&quot;]
+    C[&quot;Wire Network&lt;br /&gt;&lt;small&gt;Real-time Processing&lt;/small&gt;&quot;]
+    D[&quot;Receiving Bank&lt;br /&gt;&lt;small&gt;Recipient Bank&lt;/small&gt;&quot;]
+    E[&quot;Recipient&lt;br /&gt;&lt;small&gt;Funds Received&lt;/small&gt;&quot;]
+    
+    F[&quot;Fedwire&lt;br /&gt;&lt;small&gt;Federal Reserve&lt;/small&gt;&quot;]
+    G[&quot;CHIPS&lt;br /&gt;&lt;small&gt;The Clearing House&lt;/small&gt;&quot;]
+    
+    A --&amp;gt;|&quot;Wire Request&quot;| B
+    B --&amp;gt;|&quot;Debit Account&quot;| B
+    B --&amp;gt;|&quot;Send via&quot;| F
+    B --&amp;gt;|&quot;Send via&quot;| G
+    F --&amp;gt;|&quot;Real-time Settlement&quot;| D
+    G --&amp;gt;|&quot;Net Settlement&quot;| D
+    D --&amp;gt;|&quot;Credit Account&quot;| E
+    
+    style A fill:#e3f2fd
+    style B fill:#f3e5f5
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e8f5e8
+    style F fill:#ffebee
+    style G fill:#ffebee
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Domestic Wire Transfer Flow: Real-time money movement through Fedwire or CHIPS&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;sample-wire-transfer-code&quot;&gt;Sample Wire Transfer Code&lt;/h2&gt;
+
+&lt;p&gt;While most wire integrations are bank API-specific, here’s how you might model and submit a wire transfer request:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;net/http&apos;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;json&apos;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;WireTransfer&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;FEDWIRE_ROUTING_PREFIX&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%w[01 02 03 04 05 06 07 08 09 10 11 12]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;freeze&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@sender_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:sender_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@sender_account&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:sender_account&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@sender_routing&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:sender_routing_number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@amount_cents&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:amount_cents&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@currency&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:currency&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;USD&apos;&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@recipient_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:recipient_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@recipient_account&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:recipient_account&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@recipient_routing&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:recipient_routing_number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@purpose&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:purpose&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;validate!&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Invalid amount&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@amount_cents&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Invalid sender routing&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;valid_routing?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@sender_routing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Invalid recipient routing&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;valid_routing?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@recipient_routing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Purpose required for wires&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@purpose&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;nil?&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@purpose&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;empty?&lt;/span&gt;
+    &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;to_wire_format&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;message_type: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;MT103&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# SWIFT message type for wire&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;sender: &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;ss&quot;&gt;name: &lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@sender_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;ss&quot;&gt;account: &lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@sender_account&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;ss&quot;&gt;routing: &lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@sender_routing&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;recipient: &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;ss&quot;&gt;name: &lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@recipient_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;ss&quot;&gt;account: &lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@recipient_account&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;ss&quot;&gt;routing: &lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@recipient_routing&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;amount: &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;ss&quot;&gt;value: &lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@amount_cents&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;ss&quot;&gt;currency: &lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@currency&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;purpose: &lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@purpose&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;settlement_method: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fedwire_eligible?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;FEDWIRE&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;CHIPS&quot;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;submit_to_bank&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;api_endpoint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;api_key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;validate!&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;URI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;api_endpoint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;http&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Net&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;HTTP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;host&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;use_ssl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Net&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;HTTP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;s1&quot;&gt;&apos;Content-Type&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;application/json&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;s1&quot;&gt;&apos;Authorization&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Bearer &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;api_key&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to_wire_format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_json&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_i&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;299&lt;/span&gt;
+      &lt;span class=&quot;no&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Wire submission failed: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; - &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  
+  &lt;span class=&quot;kp&quot;&gt;private&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;valid_routing?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;routing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;routing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;routing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;match?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/\A\d{9}\z/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fedwire_eligible?&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# Simplified logic - Fedwire handles most domestic wires&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@currency&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;USD&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;domestic_routing?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@recipient_routing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;domestic_routing?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;routing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;FEDWIRE_ROUTING_PREFIX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;include?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;routing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Usage example&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;wire&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;WireTransfer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;sender_name: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Suma Manjunath&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;sender_account: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;123456789&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;sender_routing_number: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;021000021&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# JPMorgan Chase&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;amount_cents: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;25_000_00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# $25,000&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;recipient_name: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Tech Supplier Inc.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;recipient_account: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;987654321&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;recipient_routing_number: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;031000053&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Wells Fargo&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;purpose: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Hardware payment Q3&quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Submit to bank API (mock endpoint)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;begin&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wire&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;submit_to_bank&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;https://api.yourbank.com/v1/wire_transfers&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;your_api_key_here&quot;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Wire initiated successfully!&quot;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Reference: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;wire_reference&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Status: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;status&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;rescue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Wire failed: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;international-wire-transfers&quot;&gt;International Wire Transfers&lt;/h2&gt;
+
+&lt;p&gt;International wires add complexity through the SWIFT network:&lt;/p&gt;
+
+&lt;h3 id=&quot;additional-requirements&quot;&gt;Additional Requirements&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;SWIFT/BIC codes&lt;/strong&gt; instead of routing numbers&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Correspondent banking&lt;/strong&gt; relationships&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Compliance screening&lt;/strong&gt; (OFAC, sanctions)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Currency conversion&lt;/strong&gt; if needed&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Higher fees&lt;/strong&gt; ($25-$75+ per transfer)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;international-wire-flow&quot;&gt;International Wire Flow&lt;/h3&gt;
+
+&lt;div class=&quot;mermaid&quot;&gt;
+flowchart LR
+    A[&quot;You&lt;br /&gt;&lt;small&gt;International Wire&lt;/small&gt;&quot;] 
+    B[&quot;Your Bank&lt;br /&gt;&lt;small&gt;Originator&lt;/small&gt;&quot;]
+    C[&quot;SWIFT Network&lt;br /&gt;&lt;small&gt;Messaging&lt;/small&gt;&quot;]
+    D[&quot;Correspondent Bank&lt;br /&gt;&lt;small&gt;Intermediary&lt;/small&gt;&quot;]
+    E[&quot;Beneficiary Bank&lt;br /&gt;&lt;small&gt;Destination&lt;/small&gt;&quot;]
+    F[&quot;Recipient&lt;br /&gt;&lt;small&gt;Foreign Account&lt;/small&gt;&quot;]
+    
+    A --&amp;gt;|&quot;Wire Instructions&quot;| B
+    B --&amp;gt;|&quot;MT103 Message&quot;| C
+    C --&amp;gt;|&quot;Route Message&quot;| D
+    D --&amp;gt;|&quot;Forward Funds&quot;| E
+    E --&amp;gt;|&quot;Credit Account&quot;| F
+    
+    style A fill:#e3f2fd
+    style B fill:#f3e5f5
+    style C fill:#fff3e0
+    style D fill:#ffeaa7
+    style E fill:#f3e5f5
+    style F fill:#e8f5e8
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;International Wire Flow: Multi-hop routing through SWIFT and correspondent banks&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;wire-vs-ach-comparison&quot;&gt;Wire vs ACH Comparison&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Aspect&lt;/th&gt;
+      &lt;th&gt;Wire Transfers&lt;/th&gt;
+      &lt;th&gt;ACH&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Speed&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Real-time (minutes)&lt;/td&gt;
+      &lt;td&gt;1-3 days&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Cost&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;$15-$75 per transfer&lt;/td&gt;
+      &lt;td&gt;$0.25-$1.50 per transfer&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Reversibility&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Irreversible&lt;/td&gt;
+      &lt;td&gt;Can be returned&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Amount Limits&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;High ($1M+)&lt;/td&gt;
+      &lt;td&gt;Lower ($1M for same-day)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Use Cases&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Large, urgent payments&lt;/td&gt;
+      &lt;td&gt;Recurring, batch payments&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Network&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Fedwire, CHIPS, SWIFT&lt;/td&gt;
+      &lt;td&gt;FedACH, EPN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Settlement&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Real-time gross&lt;/td&gt;
+      &lt;td&gt;Batch net settlement&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;testing-wire-transfers&quot;&gt;Testing Wire Transfers&lt;/h2&gt;
+
+&lt;p&gt;Wire transfer testing is challenging due to regulatory requirements and irreversible nature. Here are the best approaches:&lt;/p&gt;
+
+&lt;h3 id=&quot;sandbox-environments&quot;&gt;Sandbox Environments&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Platform&lt;/th&gt;
+      &lt;th&gt;Supports Wires&lt;/th&gt;
+      &lt;th&gt;Sandbox Quality&lt;/th&gt;
+      &lt;th&gt;Notes&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Modern Treasury&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Yes&lt;/td&gt;
+      &lt;td&gt;Excellent&lt;/td&gt;
+      &lt;td&gt;Full wire simulation with approval workflows&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;SWIFT Developer Portal&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Message-only&lt;/td&gt;
+      &lt;td&gt;Good&lt;/td&gt;
+      &lt;td&gt;MT103 message testing, no funds&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;modern-treasury-example&quot;&gt;Modern Treasury Example&lt;/h3&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Modern Treasury sandbox wire test&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;net/http&apos;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;json&apos;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_wire_transfer&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;URI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://sandbox.moderntreasury.com/api/payment_orders&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;http&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Net&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;HTTP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;host&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;use_ssl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;
+  
+  &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Net&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;HTTP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;&apos;Content-Type&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;application/json&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;&apos;Authorization&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;Bearer test_api_key&apos;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+  
+  &lt;span class=&quot;n&quot;&gt;wire_payload&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;amount: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100_000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# $1,000 in cents&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;currency: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;USD&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;direction: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;credit&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;originating_account_id: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;test-origin-account&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;receiving_account_id: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;test-recipient-account&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;payment_type: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;wire&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;purpose: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Testing wire transfer flow&quot;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  
+  &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wire_payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_json&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;between?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;299&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Test wire created: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;id&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Status: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;status&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Test failed: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;test_wire_transfer&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;security-and-compliance&quot;&gt;Security and Compliance&lt;/h2&gt;
+
+&lt;p&gt;Wire transfers require strict security measures:&lt;/p&gt;
+
+&lt;h3 id=&quot;validation-requirements&quot;&gt;Validation Requirements&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Dual authorization&lt;/strong&gt; for large amounts&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;OFAC screening&lt;/strong&gt; for sanctions compliance&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Know Your Customer (KYC)&lt;/strong&gt; verification&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Anti-Money Laundering (AML)&lt;/strong&gt; monitoring&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Purpose codes&lt;/strong&gt; for regulatory reporting&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;best-practices&quot;&gt;Best Practices&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Triple-check&lt;/strong&gt; recipient details (irreversible!)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Use secure channels&lt;/strong&gt; for wire instructions&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Implement approval workflows&lt;/strong&gt; for business wires&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Monitor for fraud patterns&lt;/strong&gt; in wire activity&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Maintain audit trails&lt;/strong&gt; for compliance&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;when-to-use-wire-transfers&quot;&gt;When to Use Wire Transfers&lt;/h2&gt;
+
+&lt;h3 id=&quot;choose-wires-when&quot;&gt;Choose Wires When:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Speed is critical&lt;/strong&gt; (same-day settlement needed)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Large amounts&lt;/strong&gt; require immediate finality&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;International transfers&lt;/strong&gt; to countries without ACH&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Real estate transactions&lt;/strong&gt; with closing deadlines&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Securities trading&lt;/strong&gt; requiring immediate settlement&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;choose-ach-when&quot;&gt;Choose ACH When:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Cost matters&lt;/strong&gt; more than speed&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Recurring payments&lt;/strong&gt; like payroll or subscriptions&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Domestic transfers&lt;/strong&gt; under $1M&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Batch processing&lt;/strong&gt; is acceptable&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Reversibility&lt;/strong&gt; might be needed&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reality-check-things-you-should-actually-care-about&quot;&gt;Reality Check: Things You Should Actually Care About&lt;/h2&gt;
+
+&lt;p&gt;The technical specs are great, but here’s what matters when you’re actually sending a wire transfer:&lt;/p&gt;
+
+&lt;h3 id=&quot;realistic-timing-expectations&quot;&gt;Realistic Timing Expectations&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Domestic Wires:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Same business day&lt;/strong&gt; if sent before 2 PM local time&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Next business day&lt;/strong&gt; if sent after cutoff&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;No weekend processing&lt;/strong&gt; - Friday 3 PM wire arrives Monday&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;International Wires:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;1-5 business days&lt;/strong&gt; depending on destination&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Correspondent bank delays&lt;/strong&gt; can add 1-2 days&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Time zone differences&lt;/strong&gt; affect cutoff times&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Local holidays&lt;/strong&gt; in destination country cause delays&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-real-cost-breakdown&quot;&gt;The Real Cost Breakdown&lt;/h3&gt;
+
+&lt;p&gt;Wire transfer fees stack up quickly:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Fee Type&lt;/th&gt;
+      &lt;th&gt;Domestic&lt;/th&gt;
+      &lt;th&gt;International&lt;/th&gt;
+      &lt;th&gt;Who Charges&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Outgoing Fee&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;$15-$30&lt;/td&gt;
+      &lt;td&gt;$25-$50&lt;/td&gt;
+      &lt;td&gt;Your bank&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Incoming Fee&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;$10-$15&lt;/td&gt;
+      &lt;td&gt;$15-$25&lt;/td&gt;
+      &lt;td&gt;Recipient’s bank&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Intermediary Fee&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;N/A&lt;/td&gt;
+      &lt;td&gt;$10-$25&lt;/td&gt;
+      &lt;td&gt;Correspondent banks&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Currency Conversion&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;N/A&lt;/td&gt;
+      &lt;td&gt;2-4% markup&lt;/td&gt;
+      &lt;td&gt;All banks in chain&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;SWIFT Fee&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;N/A&lt;/td&gt;
+      &lt;td&gt;$5-$15&lt;/td&gt;
+      &lt;td&gt;International routing&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;Real Example:&lt;/strong&gt; $10,000 wire to Europe&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Your bank: $45 outgoing fee&lt;/li&gt;
+  &lt;li&gt;Correspondent bank: $20 routing fee&lt;/li&gt;
+  &lt;li&gt;Recipient bank: $25 incoming fee&lt;/li&gt;
+  &lt;li&gt;Currency conversion: $300 (3% markup)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Total cost: $390&lt;/strong&gt; (3.9% of transfer amount)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;fraud-and-scam-protection&quot;&gt;Fraud and Scam Protection&lt;/h3&gt;
+
+&lt;p&gt;Wire transfers are &lt;strong&gt;irreversible&lt;/strong&gt;, making them prime targets for scams:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Common Wire Fraud Schemes:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Business Email Compromise&lt;/strong&gt; - fake vendor payment requests&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Real estate fraud&lt;/strong&gt; - fake closing instructions&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Romance scams&lt;/strong&gt; - fake emergencies requiring urgent transfers&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Tech support scams&lt;/strong&gt; - fake “security” wire requests&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Protection Strategies:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Wire fraud prevention checklist&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;wire_safety_checklist&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;verify_recipient: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Call known phone number to confirm&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;double_check_details: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Verify routing/account numbers independently&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+  &lt;span class=&quot;ss&quot;&gt;question_urgency: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Be suspicious of &apos;wire now or else&apos; pressure&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;use_secure_channels: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Never send wire details via email&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;start_small: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Test with smaller amount for new recipients&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;document_everything: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Save all communications and confirmations&quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;regulatory-monitoring-ofac-and-aml&quot;&gt;Regulatory Monitoring (OFAC and AML)&lt;/h3&gt;
+
+&lt;p&gt;Your wire transfers are automatically screened:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What Gets Monitored:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Recipient names&lt;/strong&gt; against sanctions lists&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Destination countries&lt;/strong&gt; for embargo compliance&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Transfer amounts&lt;/strong&gt; for suspicious activity reporting&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Pattern analysis&lt;/strong&gt; for money laundering detection&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;What This Means for You:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Delays possible&lt;/strong&gt; if names match watchlists&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Additional documentation&lt;/strong&gt; may be required&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Compliance questions&lt;/strong&gt; from your bank&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Potential account restrictions&lt;/strong&gt; for repeated issues&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;hidden-gotchas&quot;&gt;Hidden Gotchas&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Exchange Rate Games:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Banks use “wholesale + markup” rates&lt;/li&gt;
+  &lt;li&gt;Markups range from 2-6% above mid-market&lt;/li&gt;
+  &lt;li&gt;No disclosure requirement for the markup amount&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Correspondent Bank Roulette:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Your bank chooses the routing path&lt;/li&gt;
+  &lt;li&gt;Each intermediary can charge fees&lt;/li&gt;
+  &lt;li&gt;No way to predict total intermediary costs upfront&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Cut-off Time Reality:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;“Same day” usually means “by 2 PM local time”&lt;/li&gt;
+  &lt;li&gt;Different banks have different cutoffs&lt;/li&gt;
+  &lt;li&gt;International wires often have earlier deadlines&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;when-ach-is-actually-smarter&quot;&gt;When ACH Is Actually Smarter&lt;/h3&gt;
+
+&lt;p&gt;Consider ACH instead of wires when:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Cost Sensitivity:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Cost comparison for $5,000 domestic transfer&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ach_cost&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;fee: &lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;          &lt;span class=&quot;c1&quot;&gt;# Typical ACH fee&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;time: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1-3 days&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;total_cost: &lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.50&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;wire_cost&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;outgoing_fee: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;incoming_fee: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+  &lt;span class=&quot;ss&quot;&gt;time: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Same day&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;total_cost: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# ACH saves $38.50 if timing allows&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Risk Management:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;ACH transactions can be returned if unauthorized&lt;/li&gt;
+  &lt;li&gt;Lower fraud risk due to batch processing delays&lt;/li&gt;
+  &lt;li&gt;Easier to catch and prevent mistakes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Recurring Transfers:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Set up once, runs automatically&lt;/li&gt;
+  &lt;li&gt;Volume discounts often available&lt;/li&gt;
+  &lt;li&gt;Better audit trails for business use&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;smart-wire-transfer-strategy&quot;&gt;Smart Wire Transfer Strategy&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Before You Wire:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Confirm total costs&lt;/strong&gt; upfront with your bank&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Verify recipient details&lt;/strong&gt; through independent channels&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Check timing&lt;/strong&gt; against business requirements&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Consider ACH&lt;/strong&gt; for non-urgent transfers&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Document business purpose&lt;/strong&gt; for compliance&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;During Transfer:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Save confirmation numbers&lt;/strong&gt; and screenshots&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Monitor for completion&lt;/strong&gt; within expected timeframe&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Have recipient confirm&lt;/strong&gt; receipt and amount&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;After Transfer:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Reconcile amounts&lt;/strong&gt; including all fees&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;File documentation&lt;/strong&gt; for tax/audit purposes&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Review process&lt;/strong&gt; for future improvements&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Federal Reserve Financial Services&lt;/strong&gt;. “Fedwire Funds Service.” &lt;em&gt;FederalReserve.gov&lt;/em&gt;, 2024. &lt;a href=&quot;https://www.frbservices.org/financial-services/wires&quot;&gt;https://www.frbservices.org/financial-services/wires&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;The Clearing House&lt;/strong&gt;. “CHIPS Payment System.” &lt;em&gt;TCH.com&lt;/em&gt;, 2024. &lt;a href=&quot;https://www.theclearinghouse.org/payment-systems/chips&quot;&gt;https://www.theclearinghouse.org/payment-systems/chips&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;SWIFT&lt;/strong&gt;. “Wire Transfer Message Types and Standards.” &lt;em&gt;SWIFT.com&lt;/em&gt;, 2024. &lt;a href=&quot;https://www.swift.com/our-solutions/messaging&quot;&gt;https://www.swift.com/our-solutions/messaging&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Modern Treasury&lt;/strong&gt;. “Wire Transfer API Documentation.” &lt;em&gt;ModernTreasury.com&lt;/em&gt;, 2024. &lt;a href=&quot;https://docs.moderntreasury.com/docs/wire-transfers&quot;&gt;https://docs.moderntreasury.com/docs/wire-transfers&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Federal Financial Institutions Examination Council&lt;/strong&gt;. “Wire Transfer Compliance Guidelines.” &lt;em&gt;FFIEC.gov&lt;/em&gt;, 2024. &lt;a href=&quot;https://www.ffiec.gov/press/pr041299.htm&quot;&gt;https://www.ffiec.gov/press/pr041299.htm&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Office of Foreign Assets Control&lt;/strong&gt;. “Sanctions Compliance for Wire Transfers.” &lt;em&gt;Treasury.gov&lt;/em&gt;, 2024. &lt;a href=&quot;https://ofac.treasury.gov/compliance&quot;&gt;https://ofac.treasury.gov/compliance&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+</description>
+        <pubDate>Thu, 14 Aug 2025 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/fintech/payments/2025/08/14/wire-transfers-explained.html</link>
+        <guid isPermaLink="true">http://localhost:4000/fintech/payments/2025/08/14/wire-transfers-explained.html</guid>
+        
+        <category>wire-transfers</category>
+        
+        <category>fedwire</category>
+        
+        <category>chips</category>
+        
+        <category>swift</category>
+        
+        <category>payments</category>
+        
+        <category>banking</category>
+        
+        
+        <category>fintech</category>
+        
+        <category>payments</category>
+        
+      </item>
+    
+      <item>
+        <title>How Money Moves In And Out Of Your Bank Account?</title>
+        <description>&lt;!-- Series Navigation --&gt;
+&lt;div style=&quot;background: #f8f9fa; border-left: 4px solid #007acc; padding: 1rem; margin: 1rem 0;&quot;&gt;
+  &lt;strong&gt;Part 1 of the &quot;How U.S. Payments Really Work&quot; Series&lt;/strong&gt;&lt;br /&gt;
+  &lt;a href=&quot;/series/payments&quot;&gt;← View complete series roadmap&lt;/a&gt; | 
+  &lt;a href=&quot;/fintech/payments/2025/08/14/wire-transfers-explained.html&quot;&gt;Next: Wire Transfers →&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;how-money-moves-in-and-out-of-your-bank-account&quot;&gt;How Money Moves In and Out of Your Bank Account?&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;Published on: August 13, 2025&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/banners/resized/20250813moneyflow-blog.jpg&quot; alt=&quot;Money Flow&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ever wonder how your paycheck shows up in your bank account on payday? Or how your gym magically pulls your membership fee every month? That’s all thanks to a behind-the-scenes hero called &lt;strong&gt;ACH&lt;/strong&gt; (Automated Clearing House).&lt;/p&gt;
+
+&lt;p&gt;ACH is the electronic network that quietly processes over 29 billion transactions per year in the U.S., totaling more than $72 trillion. It’s the digital backbone that moves money between bank accounts reliably and affordably.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-ach&quot;&gt;What Is ACH?&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Automated Clearing House (ACH)&lt;/strong&gt; is a batch processing network that banks use to transfer money electronically. Unlike wire transfers or card payments, ACH focuses on cost-efficiency over speed.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Concept:&lt;/strong&gt; Think of it as a digital postal service for money&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Banks collect payment instructions throughout the day&lt;/li&gt;
+  &lt;li&gt;They bundle these into batches&lt;/li&gt;
+  &lt;li&gt;The network processes and routes them to destination banks&lt;/li&gt;
+  &lt;li&gt;Money settles typically within 1-3 business days&lt;/li&gt;
+  &lt;li&gt;Sends notifications for any returns or exceptions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;mermaid&quot;&gt;
+graph TD
+    A[&quot;Originator (Individual/Business/Government)&quot;]:::start --&amp;gt; B(&quot;Obtains Authorization&quot;):::process
+    B --&amp;gt; C(&quot;Submits ACH Transaction to ODFI&quot;):::process
+    C --&amp;gt; D[&quot;ODFI (Originating Depository Financial Institution)&quot;]:::bank
+    D -- Collects &amp;amp; Batches Transactions --&amp;gt; E[&quot;ACH Operator (Federal Reserve / The Clearing House)&quot;]:::operator
+    E -- Sorts &amp;amp; Processes Batches --&amp;gt; F[&quot;RDFI (Receiving Depository Financial Institution)&quot;]:::bank
+    F -- Posts Transactions to Accounts --&amp;gt; G[&quot;Receiver (Account Holder)&quot;]:::endClass
+    E -- Facilitates Settlement --&amp;gt; D
+    F -- Returns/Notifications (if applicable) --&amp;gt; E
+    E -- Returns/Notifications (if applicable) --&amp;gt; D
+
+    classDef start fill:#e3f2fd,stroke:#007acc,stroke-width:2px;
+    classDef process fill:#fff3e0,stroke:#f57c00,stroke-width:2px;
+    classDef bank fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px;
+    classDef operator fill:#ffebee,stroke:#d32f2f,stroke-width:2px;
+    classDef endClass fill:#e8f5e8,stroke:#388e3c,stroke-width:2px;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;ACH Flow: Interaction between banks and ACH Operator&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;paying-bills-using-your-bank-account&quot;&gt;Paying Bills Using Your Bank Account&lt;/h2&gt;
+
+&lt;p&gt;When you pay your electric bill online using your bank account, you’re initiating an &lt;strong&gt;ACH Debit&lt;/strong&gt; transaction. Here’s exactly what happens:&lt;/p&gt;
+
+&lt;h3 id=&quot;the-flow&quot;&gt;The Flow&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;You&lt;/strong&gt; authorize the utility company to pull money from your account&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Your Bank (ODFI)&lt;/strong&gt; validates the transaction and sends it to the ACH network&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;ACH Network&lt;/strong&gt; routes the payment through either FedACH or EPN&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Utility’s Bank (RDFI)&lt;/strong&gt; receives and processes the payment&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Utility Company&lt;/strong&gt; gets notified and credits your account&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;mermaid&quot;&gt;
+flowchart LR
+    A[&quot;👤&lt;br /&gt;You&lt;br /&gt;&lt;small&gt;Authorize Payment&lt;/small&gt;&quot;] 
+    B[&quot;🏦&lt;br /&gt;Your Bank&lt;br /&gt;&lt;small&gt;ODFI&lt;/small&gt;&quot;]
+    C[&quot;📊&lt;br /&gt;ACH Network&lt;br /&gt;&lt;small&gt;Batch Processing&lt;/small&gt;&quot;]
+    D[&quot;🏛️&lt;br /&gt;Utility&apos;s Bank&lt;br /&gt;&lt;small&gt;RDFI&lt;/small&gt;&quot;]
+    E[&quot;💡&lt;br /&gt;Utility Company&lt;br /&gt;&lt;small&gt;Payment Received&lt;/small&gt;&quot;]
+    
+    F[&quot;🦅&lt;br /&gt;Federal Reserve&lt;br /&gt;&lt;small&gt;FedACH - 80%&lt;/small&gt;&quot;]
+    G[&quot;🏢&lt;br /&gt;The Clearing House&lt;br /&gt;&lt;small&gt;EPN - 20%&lt;/small&gt;&quot;]
+    
+    A --&amp;gt;|&quot;Debit Authorization&quot;| B
+    B --&amp;gt;|&quot;Batch File&quot;| C
+    C --&amp;gt;|&quot;Route via&quot;| F
+    C --&amp;gt;|&quot;Route via&quot;| G
+    F --&amp;gt;|&quot;Settlement&quot;| D
+    G --&amp;gt;|&quot;Settlement&quot;| D
+    D --&amp;gt;|&quot;Credit Account&quot;| E
+    
+    style A fill:#e3f2fd
+    style B fill:#f3e5f5
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e8f5e8
+    style F fill:#ffebee
+    style G fill:#ffebee
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;ACH Debit Flow: Your electric bill payment journey from authorization to completion&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-ach-debit-code&quot;&gt;Sample ACH Debit Code&lt;/h3&gt;
+
+&lt;p&gt;Here’s what an ACH debit file looks like using the Ruby ACH gem:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;ach&apos;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Create ACH file for bill payment&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ach_file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ACH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;ACHFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ach_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;immediate_dest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;091000019&apos;&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;# Fed routing number&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ach_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;immediate_origin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;123456789&apos;&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;# Utility&apos;s bank routing&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ach_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;immediate_dest_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;FEDERAL RESERVE BANK&apos;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ach_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;immediate_origin_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;ELECTRIC COMPANY&apos;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Create batch for customer debits&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ACH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Batch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;service_class_code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;225&apos;&lt;/span&gt;             &lt;span class=&quot;c1&quot;&gt;# Debits only&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;company_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;ELECTRIC CO&apos;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;company_identification&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;1234567890&apos;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;standard_entry_class_code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;WEB&apos;&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;# Internet-initiated&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;company_entry_description&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;ELECTRIC BILL&apos;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;effective_entry_date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;tomorrow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;strftime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;%y%m%d&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Individual customer payment&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ACH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EntryDetail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;transaction_code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ACH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;CHECKING_DEBIT&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 27 = Checking Debit&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;routing_number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;011000015&apos;&lt;/span&gt;            &lt;span class=&quot;c1&quot;&gt;# Customer&apos;s bank&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;account_number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;9876543210&apos;&lt;/span&gt;           &lt;span class=&quot;c1&quot;&gt;# Customer&apos;s account&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;amount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12500&lt;/span&gt;                          &lt;span class=&quot;c1&quot;&gt;# $125.00 in cents&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;individual_id_number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;ACCT12345&apos;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;individual_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;JOHN DOE&apos;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;entries&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ach_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;batches&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Generate NACHA file&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;electric_bill_debits.ach&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ach_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;how-salary-comes-into-your-account&quot;&gt;How Salary Comes Into Your Account&lt;/h2&gt;
+
+&lt;p&gt;When your employer pays you, they’re initiating an &lt;strong&gt;ACH Credit&lt;/strong&gt; transaction. This pushes money from their account into yours.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-flow-1&quot;&gt;The Flow&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Your Employer&lt;/strong&gt; instructs their bank to send your salary&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Employer’s Bank (ODFI)&lt;/strong&gt; creates ACH credit entries for all employees&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;ACH Network&lt;/strong&gt; processes the payroll batch&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Your Bank (RDFI)&lt;/strong&gt; receives the credit instruction&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;You&lt;/strong&gt; see your paycheck deposited in your account&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;mermaid&quot;&gt;
+flowchart LR
+    A[&quot;👔&lt;br /&gt;Your Employer&lt;br /&gt;&lt;small&gt;Initiate Payroll&lt;/small&gt;&quot;] 
+    B[&quot;🏦&lt;br /&gt;Employer&apos;s Bank&lt;br /&gt;&lt;small&gt;ODFI&lt;/small&gt;&quot;]
+    C[&quot;📊&lt;br /&gt;ACH Network&lt;br /&gt;&lt;small&gt;Batch Processing&lt;/small&gt;&quot;]
+    D[&quot;🏛️&lt;br /&gt;Your Bank&lt;br /&gt;&lt;small&gt;RDFI&lt;/small&gt;&quot;]
+    E[&quot;👤&lt;br /&gt;You&lt;br /&gt;&lt;small&gt;Paycheck Received!&lt;/small&gt;&quot;]
+    
+    F[&quot;🦅&lt;br /&gt;Federal Reserve&lt;br /&gt;&lt;small&gt;FedACH - 80%&lt;/small&gt;&quot;]
+    G[&quot;🏢&lt;br /&gt;The Clearing House&lt;br /&gt;&lt;small&gt;EPN - 20%&lt;/small&gt;&quot;]
+    
+    A --&amp;gt;|&quot;Credit Instructions&quot;| B
+    B --&amp;gt;|&quot;Payroll Batch&quot;| C
+    C --&amp;gt;|&quot;Route via&quot;| F
+    C --&amp;gt;|&quot;Route via&quot;| G
+    F --&amp;gt;|&quot;Settlement&quot;| D
+    G --&amp;gt;|&quot;Settlement&quot;| D
+    D --&amp;gt;|&quot;Deposit Funds&quot;| E
+    
+    style A fill:#fff3e0
+    style B fill:#f3e5f5
+    style C fill:#e3f2fd
+    style D fill:#f3e5f5
+    style E fill:#e8f5e8
+    style F fill:#ffebee
+    style G fill:#ffebee
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;ACH Credit Flow: How your salary travels from employer to your bank account&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;sample-ach-credit-code&quot;&gt;Sample ACH Credit Code&lt;/h3&gt;
+
+&lt;p&gt;Here’s how a payroll ACH file looks:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;ach&apos;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Create ACH file for payroll&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ach_file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ACH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;ACHFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ach_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;immediate_dest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;091000019&apos;&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;# Fed routing number&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ach_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;immediate_origin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;987654321&apos;&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;# Company&apos;s bank routing&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ach_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;immediate_dest_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;FEDERAL RESERVE BANK&apos;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ach_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;immediate_origin_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;TECH STARTUP INC&apos;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Create batch for employee credits&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ACH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Batch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;service_class_code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;220&apos;&lt;/span&gt;             &lt;span class=&quot;c1&quot;&gt;# Credits only&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;company_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;TECH STARTUP&apos;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;company_identification&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;9876543210&apos;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;standard_entry_class_code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;PPD&apos;&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;# Prearranged payments&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;company_entry_description&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;PAYROLL&apos;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;effective_entry_date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;tomorrow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;strftime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;%y%m%d&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Individual employee payment&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ACH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EntryDetail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;transaction_code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ACH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;CHECKING_CREDIT&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 22 = Checking Credit&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;routing_number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;011000015&apos;&lt;/span&gt;            &lt;span class=&quot;c1&quot;&gt;# Employee&apos;s bank&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;account_number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;1234567890&apos;&lt;/span&gt;           &lt;span class=&quot;c1&quot;&gt;# Employee&apos;s account&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;amount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;250000&lt;/span&gt;                         &lt;span class=&quot;c1&quot;&gt;# $2,500.00 in cents&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;individual_id_number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;EMP001&apos;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;individual_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;JANE SMITH&apos;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;entries&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ach_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;batches&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Generate NACHA file&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;payroll_credits.ach&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ach_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;key-differences-debit-vs-credit&quot;&gt;Key Differences: Debit vs Credit&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Aspect&lt;/th&gt;
+      &lt;th&gt;ACH Debit&lt;/th&gt;
+      &lt;th&gt;ACH Credit&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Direction&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Pull money from account&lt;/td&gt;
+      &lt;td&gt;Push money to account&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Initiator&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Receiver (biller)&lt;/td&gt;
+      &lt;td&gt;Sender (employer)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Common Uses&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Bills, subscriptions, loan payments&lt;/td&gt;
+      &lt;td&gt;Payroll, tax refunds, vendor payments&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Transaction Code&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;27 (Checking Debit), 37 (Savings Debit)&lt;/td&gt;
+      &lt;td&gt;22 (Checking Credit), 32 (Savings Credit)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Risk Profile&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Higher (unauthorized debits)&lt;/td&gt;
+      &lt;td&gt;Lower (erroneous credits can be returned)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;the-two-players-in-the-ach-system&quot;&gt;The Two Players in the ACH System&lt;/h2&gt;
+
+&lt;p&gt;The ACH network isn’t run by one entity. Two operators handle all ACH processing in the United States:&lt;/p&gt;
+
+&lt;h3 id=&quot;fedach-federal-reserve&quot;&gt;FedACH (Federal Reserve)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Operator&lt;/strong&gt;: Federal Reserve Banks&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Market Share&lt;/strong&gt;: ~80% of ACH volume&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Settlement&lt;/strong&gt;: Through Federal Reserve accounts&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Character&lt;/strong&gt;: Government-run, conservative, highly regulated&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Strengths&lt;/strong&gt;: Nationwide reach, ultimate safety, consistent processing&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;epn-electronic-payments-network-the-clearing-house&quot;&gt;EPN Electronic Payments Network (The Clearing House)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Operator&lt;/strong&gt;: The Clearing House (owned by major banks)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Market Share&lt;/strong&gt;: ~20% of ACH volume&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Settlement&lt;/strong&gt;: Private net settlement + Fedwire&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Character&lt;/strong&gt;: Private sector, innovative, business-focused&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Strengths&lt;/strong&gt;: Faster processing windows, enhanced services for large clients&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;how-they-work-together&quot;&gt;How They Work Together&lt;/h3&gt;
+
+&lt;p&gt;Both networks are fully interoperable:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Banks can connect to either FedACH, EPN, or both&lt;/li&gt;
+  &lt;li&gt;Payments seamlessly route between networks&lt;/li&gt;
+  &lt;li&gt;Both follow identical NACHA rules and formats&lt;/li&gt;
+  &lt;li&gt;Settlement happens at the Federal Reserve level&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Same ACH entry format works for both networks&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;routing_number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;021000021&apos;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# Chase (uses both FedACH &amp;amp; EPN)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# vs&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;routing_number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;011401533&apos;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# Vermont Federal CU (FedACH only)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# The ACH gem handles routing automatically based on &lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# your bank&apos;s network connectivity&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;why-ach-matters&quot;&gt;Why ACH Matters&lt;/h2&gt;
+
+&lt;p&gt;ACH processes over &lt;strong&gt;$72 trillion annually&lt;/strong&gt; with &lt;strong&gt;99.95% reliability&lt;/strong&gt;. It’s the invisible infrastructure that powers:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;93% of U.S. workers receiving direct deposit&lt;/li&gt;
+  &lt;li&gt;$2.3 trillion in business-to-business payments&lt;/li&gt;
+  &lt;li&gt;Government benefits reaching 98% of recipients electronically&lt;/li&gt;
+  &lt;li&gt;Consumer bill payments saving $2.3 billion in processing costs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The network operates on &lt;strong&gt;efficiency over speed&lt;/strong&gt; - enabling massive scale at minimal cost while maintaining bank-grade security.&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;NACHA (National Automated Clearing House Association)&lt;/strong&gt;. “ACH Volume Statistics.” &lt;em&gt;NACHA.org&lt;/em&gt;, 2024. &lt;a href=&quot;https://www.nacha.org/rules/ach-operations-bulletins-and-advisories&quot;&gt;https://www.nacha.org/rules/ach-operations-bulletins-and-advisories&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Federal Reserve Financial Services&lt;/strong&gt;. “FedACH Services.” &lt;em&gt;FederalReserve.gov&lt;/em&gt;, 2024. &lt;a href=&quot;https://www.frbservices.org/financial-services/ach&quot;&gt;https://www.frbservices.org/financial-services/ach&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;The Clearing House&lt;/strong&gt;. “Electronic Payments Network (EPN).” &lt;em&gt;TCH.com&lt;/em&gt;, 2024. &lt;a href=&quot;https://www.theclearinghouse.org/payment-systems/ach&quot;&gt;https://www.theclearinghouse.org/payment-systems/ach&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;NACHA Operating Rules &amp;amp; Guidelines&lt;/strong&gt;. “2024 NACHA Operating Rules.” &lt;em&gt;NACHA.org&lt;/em&gt;, 2024. &lt;a href=&quot;https://www.nacha.org/rules&quot;&gt;https://www.nacha.org/rules&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Ruby ACH Gem Documentation&lt;/strong&gt;. “ACH File Processing for Ruby.” &lt;em&gt;GitHub&lt;/em&gt;, 2024. &lt;a href=&quot;https://github.com/jm81/ach&quot;&gt;https://github.com/jm81/ach&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Federal Reserve Economic Data&lt;/strong&gt;. “ACH Transaction Volume and Value Statistics.” &lt;em&gt;FRED.stlouisfed.org&lt;/em&gt;, 2024. &lt;a href=&quot;https://fred.stlouisfed.org/series/ACHCREDIT&quot;&gt;https://fred.stlouisfed.org/series/ACHCREDIT&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Bank for International Settlements&lt;/strong&gt;. “Payment Systems in the United States.” &lt;em&gt;BIS Quarterly Review&lt;/em&gt;, 2023. &lt;a href=&quot;https://www.bis.org/cpmi/publ/d105.htm&quot;&gt;https://www.bis.org/cpmi/publ/d105.htm&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+</description>
+        <pubDate>Wed, 13 Aug 2025 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/fintech/payments/2025/08/13/money-flow-bank-account.html</link>
+        <guid isPermaLink="true">http://localhost:4000/fintech/payments/2025/08/13/money-flow-bank-account.html</guid>
+        
+        <category>ach</category>
+        
+        <category>payments</category>
+        
+        <category>banking</category>
+        
+        <category>fintech-basics</category>
+        
+        
+        <category>fintech</category>
+        
+        <category>payments</category>
+        
+      </item>
+    
+  </channel>
+</rss>

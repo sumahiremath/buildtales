@@ -3,6 +3,147 @@ layout: default
 title: "How U.S. Payments Really Work"
 permalink: /series/payments
 ---
+# How U.S. Payments Really Work
+
+<!-- Series Articles -->
+<div class="series-articles-container">
+  <h2 class="text-2xl font-semibold mb-6">Series Articles</h2>
+  <div class="articles-grid">
+    {% assign payments_posts = site.posts | where_exp: "post", "post.categories contains 'payments'" | sort: 'date' %}
+    {% for post in payments_posts %}
+      {% if post.draft %}
+        <div class="article-card draft-card">
+          <div class="card-content">
+            <h3 class="article-title">{{ post.title }}</h3>
+            <p class="article-date">{{ post.date | date: "%B %d, %Y" }}</p>
+            <span class="status-badge draft">Draft</span>
+          </div>
+        </div>
+      {% else %}
+        <a href="{{ post.url }}" class="article-card published-card">
+          <div class="card-content">
+            <h3 class="article-title">{{ post.title }}</h3>
+            <p class="article-date">{{ post.date | date: "%B %d, %Y" }}</p>
+          </div>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+🧭 Phase 1: Orientation — Set the Stage
+
+These articles ground the reader in how money moves and why rebuilding is even needed.
+
+ACH: The Good, The Bad, and The Ugly
+
+Credit Cards: Swipe, Smile, Settle Later
+
+RTP: Real-Time Payments With Real-World Bottlenecks
+
+FedNow: Built by the Fed. Moving Like the Fed
+
+Wire Transfers: Old Money Energy
+
+ACH Cutoffs: The Hidden Clock That Breaks Your UX
+
+ACH Limits at Scale: Surviving Entry, File, and Dollar Caps
+
+Goal: By the end, the reader knows the core rails, their constraints, and the invisible rules.
+
+🔁 Phase 2: Failure Modes — Returns, Reversals, & Chaos
+
+Here we dive into what breaks, why it breaks, and how to prevent it.
+
+ACH Retries: Designing a Safe and Compliant Retry Engine
+
+ACH Refunds: Designing a Compliant and Observable Return Flow
+
+Handling Dishonored and Contested Returns
+
+Surviving ACH File Reversals as an EM
+
+Handling ACH Returns with Missing or Broken Data
+
+The Inevitable: Handling Missed Entries and File Resubmission
+
+Tracking ACH Trace IDs: Yours, Theirs, and the Fed’s
+
+The Day I Submitted the Wrong ACH File (Personal tale for empathy + realism)
+
+Goal: Readers now understand the full lifecycle of errors — and how to detect + mitigate them.
+
+🔍 Phase 3: Observability & Ops Strategy
+
+Time to get technical with ledger states, alerting, and team-level maturity.
+
+ACH Returns, Corrections & Threshold Monitoring for Engineering Leaders
+
+Surviving an ACH Audit: Engineering Manager’s Guide
+
+Working with Legal & Risk to Stay Within ACH Thresholds
+
+Building with Legal and Risk at the Core
+
+Reg E & UDAAP: The Engineering Leader’s Playbook
+
+Goal: Connect product behavior to legal, audit, and trust outcomes. Infra meets policy.
+
+🧑‍💻 Phase 4: Multi-Client, Multi-Rail Complexity
+
+Now that readers understand core movement + ops, we introduce third-party roles, ledger separation, and reconciliation at scale.
+
+Designing Systems for Third-Party Senders & Service Providers
+
+Reconciling Like a Ghost: ACH Ops for Third-Party Service Providers
+
+EPN vs. FedACH: Operational Deep Dive & Efficiency Comparison
+
+EPN Access for Fintechs: What You Need to Know
+
+Can a Fintech Connect Directly to FedACH?
+
+Goal: Get readers thinking about scaling clients, partnerships, and ops.
+
+📆 Phase 5: Recurring, Revenue, and Lifecycle Systems
+
+Now it’s about customer lifecycle, recurring flows, and revenue resilience.
+
+Recurring Payments: The Silent Beast Behind Subscription Infrastructure
+
+Recurring Payments & ACH Audits: Engineering for Long-Term Compliance
+
+ACH Cutoffs (Revisited for scheduling systems)
+
+ACH Refunds (Revisited for lifecycle integrity)
+
+Goal: Payments is never one-and-done — it's systems that must live for years.
+
+🌐 Phase 6: Modern Money Movement (Crypto & Global)
+
+Now shift to what comes next, or what we can learn from adjacent ecosystems.
+
+Stablecoins & Crypto Rails: The New Instant Settlement Layer?
+
+DeFi Infrastructure: Protocols, Liquidity, and the Future of Money Movement
+
+On/Off-Ramp Infrastructure: Bridging TradFi and Crypto
+
+UPI Integration as a Developer
+
+UPI vs FedNow vs RTP: Developer-Centric Comparison
+
+🎯 Optional Final Chapter: Vision, Patterns, and Observability
+
+These are future or in-progress suggestions you can write next to wrap the series:
+
+🧠 What to Log, Alert, and Visualize in Payments Infra
+
+🕓 ACH is Not Atomic: Designing Systems That Survive Asynchronous Truth
+
+⏱ How Long Does Money Actually Take? Modeling Settlement Timelines
+
+🔁 Rebuilding State: How to Backfill, Retry, or Reconcile at Scale
 
 <div class="mx-auto max-w-3xl">
   <header class="space-y-3 mb-8">
@@ -23,8 +164,8 @@ permalink: /series/payments
   </div>
 
   <!-- Table of Contents -->
-  <h2 class="text-2xl font-semibold mb-6">Table of Contents</h2>
-  
+<h2 class="text-2xl font-semibold mb-6">Table of Contents</h2>
+
   <div class="space-y-6">
     <!-- Phase 1: Published Articles -->
     <section>
@@ -116,6 +257,203 @@ permalink: /series/payments
 </div>
 
 <style>
+/* Series Articles Cards */
+.series-articles-container {
+  margin-bottom: 3rem;
+}
+
+.articles-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.article-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+}
+
+.article-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Published Card Styling */
+.published-card {
+  border-color: #157878;
+}
+
+.published-card:hover {
+  border-color: #0f5a5a;
+  background: #f8fffe;
+}
+
+/* Draft Card Styling */
+.draft-card {
+  background: #f9fafb;
+  border-color: #d1d5db;
+  opacity: 0.8;
+  cursor: default;
+}
+
+.draft-card:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+/* Future Card Styling */
+.future-card {
+  background: #fef3c7;
+  border-color: #f59e0b;
+  opacity: 0.9;
+  cursor: default;
+}
+
+.future-card:hover {
+  background: #fde68a;
+  border-color: #d97706;
+}
+
+/* Phase Section Styling */
+.phase-section {
+  margin-bottom: 3rem;
+}
+
+.phase-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.3;
+}
+
+.phase-description {
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+/* Card Content */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.article-title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #111827;
+}
+
+.published-card .article-title {
+  color: #157878;
+}
+
+.draft-card .article-title {
+  color: #6b7280;
+  font-style: italic;
+}
+
+.article-date {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.published-card .article-date {
+  color: #059669;
+}
+
+.draft-card .article-date {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+/* Date Styling */
+.published-date {
+  color: #059669;
+  font-weight: 500;
+}
+
+.draft-date {
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Title Styling */
+.published-title {
+  color: #157878;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.published-title:hover {
+  color: #0f5a5a;
+  text-decoration: underline;
+}
+
+.draft-title {
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Status Badge Styling */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-badge.published {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-badge.draft {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.status-badge.future {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  .series-table {
+    font-size: 0.875rem;
+  }
+  
+  .series-table th,
+  .series-table td {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .series-table th:nth-child(3),
+  .series-table td:nth-child(3) {
+    display: none; /* Hide status column on mobile */
+  }
+}
+
 .space-y-3 > * + * {
   margin-top: 12px;
 }

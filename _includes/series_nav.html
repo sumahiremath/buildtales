@@ -1,0 +1,127 @@
+<!-- Series Navigation -->
+<div class="series-navigation">
+  <div class="series-nav-container">
+    <div class="series-nav-header">
+      <h3 class="series-nav-title">{{ page.series.name }} Series</h3>
+      <span class="series-nav-part">Part {{ page.series.part }}</span>
+    </div>
+    
+    <div class="series-nav-links">
+      {% if page.series.part > 1 %}
+        <a href="{{ page.series.previous_url | default: '#' }}" class="series-nav-link prev-link" {% unless page.series.previous_url %}style="opacity: 0.5; pointer-events: none;"{% endunless %}>
+          ← Previous: {{ page.series.previous_title | default: 'Previous Part' }}
+        </a>
+      {% endif %}
+      
+      <a href="{{ page.series.index_url | default: '/series' }}" class="series-nav-link index-link">
+        📚 Series Overview
+      </a>
+      
+      {% if page.series.next_url %}
+        <a href="{{ page.series.next_url }}" class="series-nav-link next-link">
+          Next: {{ page.series.next_title | default: 'Next Part' }} →
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<style>
+.series-navigation {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.series-nav-container {
+  max-width: 100%;
+}
+
+.series-nav-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.series-nav-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.series-nav-part {
+  background: #157878;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.series-nav-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.series-nav-link {
+  color: #157878;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.series-nav-link:hover {
+  background: #157878;
+  color: white;
+  border-color: #157878;
+  text-decoration: none;
+}
+
+.series-nav-link.index-link {
+  background: #157878;
+  color: white;
+  border-color: #157878;
+}
+
+.series-nav-link.index-link:hover {
+  background: #0f5a5a;
+  border-color: #0f5a5a;
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  .series-navigation {
+    padding: 1rem;
+    margin: 1.5rem 0;
+  }
+  
+  .series-nav-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .series-nav-links {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+  
+  .series-nav-link {
+    width: 100%;
+    text-align: center;
+  }
+}
+</style>
