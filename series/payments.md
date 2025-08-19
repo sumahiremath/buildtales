@@ -22,6 +22,9 @@ series:
       description: "Build robust systems that can track, trace, and reconcile every transaction."
 ---
 
+{%- assign published = site.payments | where_exp: "p", "p.draft != true" | sort: "part" -%}
+{%- assign latest = published | last -%}
+
 <div class="mx-auto max-w-3xl">
   <header class="space-y-3 mb-8">
     <h1 class="text-4xl font-bold">How U.S. Payments Really Work</h1>
@@ -32,10 +35,10 @@ series:
   <div class="card mb-8">
     <div class="flex justify-between items-center mb-4">
       <h2 class="text-xl font-semibold">Series Progress</h2>
-      <span class="text-sm opacity-60">3 of 45 articles</span>
+      <span class="text-sm opacity-60">{{ published.size }} of {{ page.series.total_parts }} articles</span>
     </div>
     <div style="background: #f0f0f0; height: 8px; border-radius: 4px; overflow: hidden;">
-      <div style="background: var(--accent); height: 100%; width: 7%; border-radius: 4px;"></div>
+      <div style="background: var(--accent); height: 100%; width: {{ published.size | times: 100.0 | divided_by: page.series.total_parts }}%; border-radius: 4px;"></div>
     </div>
     <p class="text-sm opacity-60 mt-2">Updated weekly • Expected completion Q3 2026</p>
   </div>
@@ -44,78 +47,40 @@ series:
   <h2 class="text-2xl font-semibold mb-6">Table of Contents</h2>
   
   <div class="space-y-6">
-    <!-- Phase 1: Published Articles -->
+    <!-- Published Articles -->
+    {% if published.size > 0 %}
     <section>
-      <h3 class="text-lg font-semibold mb-4">Phase 1: Understanding the Rails</h3>
+      <h3 class="text-lg font-semibold mb-4">Published Articles</h3>
       <ol class="space-y-3">
+        {% for article in published %}
         <li>
-          <a href="/payments/part-01.html" class="published-article-link">
+          <a href="{{ article.url }}" class="published-article-link">
             <div class="flex justify-between items-center">
               <div class="flex-grow">
-                <h4 class="font-medium text-accent article-title">Part 1 — How Money Moves In And Out Of Your Bank Account?</h4>
-                <p class="text-sm opacity-70 mt-2">The foundational mechanics of money movement</p>
+                <h4 class="font-medium text-accent article-title">Part {{ article.part }} — {{ article.title }}</h4>
+                {% if article.excerpt %}
+                <p class="text-sm opacity-70 mt-2">{{ article.excerpt }}</p>
+                {% endif %}
               </div>
               <span class="text-sm text-green-600 font-medium published-badge">✓ Published</span>
             </div>
           </a>
         </li>
-        <li>
-          <a href="/payments/part-02.html" class="published-article-link">
-            <div class="flex justify-between items-center">
-              <div class="flex-grow">
-                <h4 class="font-medium text-accent article-title">Part 2 — Wire Transfers</h4>
-                <p class="text-sm opacity-70 mt-2">How wires settle, irrevocability, and ops realities</p>
-              </div>
-              <span class="text-sm text-green-600 font-medium published-badge">✓ Published</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="/payments/part-03.html" class="published-article-link">
-            <div class="flex justify-between items-center">
-              <div class="flex-grow">
-                <h4 class="font-medium text-accent article-title">Part 3 — ACH: The Good, The Bad, and The Ugly</h4>
-                <p class="text-sm opacity-70 mt-2">Still powering trillions. Still moving like it's stuck in fax machine mode</p>
-              </div>
-              <span class="text-sm text-green-600 font-medium published-badge">✓ Published</span>
-            </div>
-          </a>
-        </li>
-        <li class="unpublished-article">
-          <div class="flex justify-between items-center">
-            <div class="flex-grow">
-              <h4 class="font-medium text-gray-700 article-title">Part 4 — ACH Cutoffs: The Hidden Clock That Breaks Your UX</h4>
-              <p class="text-sm opacity-70 mt-2">Why timing matters in batch processing</p>
-            </div>
-            <span class="text-sm text-gray-600 font-medium">Aug 27, 2025</span>
-          </div>
-        </li>
-        <li class="unpublished-article">
-          <div class="flex justify-between items-center">
-            <div class="flex-grow">
-              <h4 class="font-medium text-gray-700 article-title">Part 5 — RTP: Real-Time Payments With Real-World Bottlenecks</h4>
-              <p class="text-sm opacity-70 mt-2">The promise and reality of instant payments</p>
-            </div>
-            <span class="text-sm text-gray-600 font-medium">Sep 10, 2025</span>
-          </div>
-        </li>
+        {% endfor %}
       </ol>
     </section>
+    {% endif %}
 
-    <!-- Phase 2: Coming Soon -->
+    <!-- Upcoming Articles -->
     <section>
-      <h3 class="text-lg font-semibold mb-4">Phase 2: Failure Modes</h3>
-      <div class="p-4 unpublished-section">
-        <p class="font-medium text-gray-700">Returns, Reversals & Retrying Safely</p>
-        <p class="text-sm opacity-70 mt-1">8 articles covering what happens when payments go wrong</p>
-        <span class="text-sm text-gray-600 font-medium">Starting October 2025</span>
-      </div>
-    </section>
-
-    <!-- Phase 3: Further Out -->
-    <section>
-      <h3 class="text-lg font-semibold mb-4">Upcoming Phases</h3>
+      <h3 class="text-lg font-semibold mb-4">Coming Soon</h3>
       <div class="space-y-3">
+        <div class="p-4 unpublished-section">
+          <p class="font-medium text-gray-700">Phase 2: Failure Modes</p>
+          <p class="text-sm opacity-70">Returns, Reversals & Retrying Safely</p>
+          <p class="text-sm opacity-70 mt-1">8 articles covering what happens when payments go wrong</p>
+          <span class="text-sm text-gray-600 font-medium">Starting October 2025</span>
+        </div>
         <div class="p-4 unpublished-section">
           <p class="font-medium text-gray-700">Phase 3: Resilience</p>
           <p class="text-sm opacity-70">Ops, audit, and legal alignment</p>
