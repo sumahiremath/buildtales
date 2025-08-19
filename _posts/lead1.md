@@ -2,7 +2,7 @@
 layout: default
 title: "From IC to EM: Building Confidence Leading Former Peers"
 date: 2025-08-20
-categories: [engineering-leadership]
+categories: [leadership]
 tags: [management, confidence, transition, team-building]
 excerpt: "The hardest shift isn't process or tools—it's identity. Learn how to build confidence when transitioning from individual contributor to engineering manager."
 

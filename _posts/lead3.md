@@ -2,7 +2,7 @@
 layout: default
 title: "Technical Debt vs Feature Velocity: A Framework for Hard Decisions"
 date: 2025-01-29
-categories: [engineering-leadership]
+categories: [leadership]
 tags: [technical-debt, feature-velocity, decision-making, trade-offs]
 excerpt: "Managing technical debt isn't about saying yes or no. It's about translating hidden costs into visible trade-offs that executives can understand."
 

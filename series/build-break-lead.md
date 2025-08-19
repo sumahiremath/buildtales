@@ -2,7 +2,7 @@
 layout: series
 title: "Build, Break, Lead: Engineering Leadership Journey"
 excerpt: "A practical guide to transitioning from individual contributor to engineering manager. Everything you need to understand, build, and scale engineering teams."
-categories: [engineering-leadership]
+categories: [leadership]
 series:
   name: "Build, Break, Lead: Engineering Leadership Journey"
   description: "A comprehensive guide to engineering leadership from IC to EM. From managing former peers to scaling teams and building engineering culture. Perfect for engineers considering management, new managers, and experienced leaders looking to improve their craft."

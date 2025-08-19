@@ -2,7 +2,7 @@
 layout: default
 title: "Incident Response Culture: Beyond the Postmortem"
 date: 2025-01-31
-categories: [engineering-leadership]
+categories: [leadership]
 tags: [incident-response, postmortem, crisis-management, team-culture]
 excerpt: "Incidents reveal more than broken systems — they reveal your culture. Learn how to build a strong incident response culture that turns chaos into clarity."
 

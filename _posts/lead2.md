@@ -2,7 +2,7 @@
 layout: default
 title: "Scaling Engineering Culture: From Informal Habits to Intentional Practices"
 date: 2025-01-28
-categories: [engineering-leadership]
+categories: [leadership]
 tags: [culture, scaling, team-building, processes]
 excerpt: "Culture doesn't scale itself. Learn how to transform your team's informal habits into intentional practices that survive growth."
 
