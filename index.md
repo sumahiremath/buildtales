@@ -19,9 +19,9 @@ title: Build Tales
       </a>
       <a class="hero-card secondary" href="/blog">
         <div class="hero-card-icon">📚</div>
-        <h3>Explore All .Articles</h3>
+        <h3>Explore All Articles</h3>
         <p>Browse engineering leadership, systems, and payment articles</p>
-        <span class="hero-card-action">View .Articles →</span>
+        <span class="hero-card-action">View Articles →</span>
       </a>
     </div>
   </div>
@@ -32,12 +32,12 @@ title: Build Tales
 <section class="py-16">
   <div class="mx-auto max-w-4xl px-4">
     <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 shadow-lg" style="background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%); border: 1px solid #c7d2fe; border-radius: 16px; padding: 2rem; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);">
-      <div class="flex flex-col lg:flex-row items-center gap-6">
-        <div class="flex-shrink-0 text-center lg:text-left">
-          <p class="text-lg font-semibold text-gray-800 mb-2" style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">👋 Hey, I'm Suma</p>
-          <p class="text-gray-600" style="color: #4b5563; line-height: 1.6;">I write deep dives on fintech & engineering leadership. Join 500+ builders getting one new insight every week.</p>
-        </div>
-        <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex-1 flex flex-col sm:flex-row gap-3 max-w-md" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
+      <div class="text-center mb-6">
+        <p class="text-lg font-semibold text-gray-800 mb-2" style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">👋 Hey, I'm Suma</p>
+        <p class="text-gray-600" style="color: #4b5563; line-height: 1.6;">I write deep dives on fintech & engineering leadership. Join 500+ builders getting one new insight every week.</p>
+      </div>
+      <div class="flex justify-center">
+        <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex flex-col sm:flex-row gap-3 max-w-md" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
           <input type="email" name="email_address" placeholder="Enter your email" required 
                  class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base shadow-sm">
           <button type="submit" 
@@ -54,7 +54,7 @@ title: Build Tales
 </section>
 
 <!-- Start Here Section -->
-<section class="py-10 pt-16">
+<section class="py-16 pt-24">
   <div class="mx-auto max-w-5xl">
     <h2 class="text-2xl font-semibold mb-8 text-center">Start here</h2>
     <div class="start-here-grid">
