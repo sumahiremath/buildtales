@@ -19,6 +19,17 @@ kramdown:
 future: true
 show_drafts: false
 
+# Exclude template files and other non-content files
+exclude:
+  - series/article-template.md
+  - series/bonus-article-template.md
+  - series/publishing-schedule.md
+  - SERIES_SYSTEM.md
+  - IMAGE_GUIDE.md
+  - README.md
+  - rebuilding-us-payments.md
+  - resize_images.sh
+
 # Permalink structure - use categories for clean URLs
 permalink: /:categories/:year/:month/:day/:title.html
 
