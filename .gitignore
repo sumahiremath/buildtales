@@ -26,3 +26,6 @@ Thumbs.db
 _site/
 .sass-cache/
 .jekyll-cache/
+
+# Vendor dependencies
+vendor/
