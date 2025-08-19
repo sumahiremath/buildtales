@@ -10,6 +10,7 @@ banner_image: "/assets/banners/resized/20250820goodbadugly-blog.jpg"
 banner_image_recent: "/assets/banners/resized/20250820goodbadugly-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250820goodbadugly-series.jpg"
 banner_color: "#157878"
+future: true
 
 # SEO and Canonical Tags
 canonical_url: "https://buildtales.dev/fintech/payments/2025/08/20/ach-good-bad-ugly.html"

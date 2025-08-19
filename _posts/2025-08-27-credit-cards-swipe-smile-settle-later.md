@@ -8,7 +8,8 @@ excerpt: "Understanding the credit card payment flow from authorization to settl
 banner_image: "/assets/banners/resized/20250827creditcards-blog.jpg"
 banner_image_recent: "/assets/banners/resized/20250827creditcards-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250827creditcards-series.jpg"
-banner_color: "#1e40af"
+banner_color: "#157878"
+future: true
 ---
 
 # Credit Cards: Swipe, Smile, Settle Later

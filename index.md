@@ -76,7 +76,7 @@ title: Build Tales
         <p class="opacity-80 text-sm">Engineering leadership journey</p>
         <span class="card-status available">Available now</span>
       </a>
-      <a class="start-here-card" href="/series/system">
+      <a class="start-here-card" href="/series/systems">
         <div class="card-icon" style="background: #10b981; color: white;">🛡️</div>
         <h3 class="font-semibold mb-2">Designing for Failure</h3>
         <p class="opacity-80 text-sm">Build resilient systems & incident habits</p>

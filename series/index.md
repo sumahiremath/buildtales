@@ -24,34 +24,50 @@ title: "Series"
       </div>
     </a>
     
-    <!-- Future Series -->
-    <div class="series-card coming-soon">
+    <a href="/series/ach" class="series-card available">
       <div class="series-card-header">
         <div class="series-meta">
-          <span class="series-status upcoming">Coming Q2 2026</span>
-          <span class="series-progress">15 articles planned</span>
+          <span class="series-status active">Available Now</span>
+          <span class="series-progress">3 articles</span>
         </div>
       </div>
-      <h2 class="series-title"><span class="series-title-icon">⚡</span> Engineering Leadership Patterns</h2>
+      <h2 class="series-title"><span class="series-title-icon">🏦</span> ACH (Automated Clearing House) Series</h2>
+      <p class="series-description">Deep dives into ACH fundamentals, operations, compliance, and advanced system design for payment processors.</p>
+      <div class="series-actions">
+        <span class="series-cta primary">Start Reading →</span>
+        <span class="series-secondary">View Complete Series</span>
+      </div>
+    </a>
+    
+    <a href="/series/leadership" class="series-card available">
+      <div class="series-card-header">
+        <div class="series-meta">
+          <span class="series-status active">Available Now</span>
+          <span class="series-progress">1 article</span>
+        </div>
+      </div>
+      <h2 class="series-title"><span class="series-title-icon">⚡</span> Engineering Leadership Series</h2>
       <p class="series-description">Practical patterns for scaling teams, systems, and culture. From your first tech lead role to VP of Engineering.</p>
       <div class="series-actions">
-        <span class="series-cta disabled">Coming Soon</span>
+        <span class="series-cta primary">Start Reading →</span>
+        <span class="series-secondary">View Complete Series</span>
       </div>
-    </div>
+    </a>
     
-    <div class="series-card coming-soon">
+    <a href="/series/systems" class="series-card available">
       <div class="series-card-header">
         <div class="series-meta">
-          <span class="series-status upcoming">Coming Q3 2026</span>
-          <span class="series-progress">18 articles planned</span>
+          <span class="series-status active">Available Now</span>
+          <span class="series-progress">1 article</span>
         </div>
       </div>
-      <h2 class="series-title"><span class="series-title-icon">🛡️</span> Systems Design at Scale</h2>
+      <h2 class="series-title"><span class="series-title-icon">🛡️</span> Systems & Architecture Series</h2>
       <p class="series-description">Real-world architecture decisions, tradeoffs, and lessons learned from building systems that handle millions of transactions.</p>
       <div class="series-actions">
-        <span class="series-cta disabled">Coming Soon</span>
+        <span class="series-cta primary">Start Reading →</span>
+        <span class="series-secondary">View Complete Series</span>
       </div>
-    </div>
+    </a>
   </div>
 </div>
 
