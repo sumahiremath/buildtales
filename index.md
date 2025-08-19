@@ -27,6 +27,7 @@ title: Build Tales
   </div>
 </section>
 
+
 <!-- Hero Inline Signup Bar -->
 <section class="py-8">
   <div class="mx-auto max-w-4xl px-4">
@@ -48,28 +49,7 @@ title: Build Tales
   </div>
 </section>
 
-<br>  
-
-<!-- Stay Updated Section -->
-<section class="py-10 pt-16">
-  <div class="mx-auto max-w-3xl text-center">
-    <h2 class="text-2xl font-semibold mb-4">Stay Updated</h2>
-    <p class="text-gray-600 mb-6">Get the latest insights on engineering leadership, payments, and building resilient systems delivered to your inbox.</p>
-
-    <!-- ConvertKit Form -->
-    <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form text-center" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
-      <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto justify-center">
-        <input type="email" name="email_address" placeholder="Enter your email" required 
-               class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-        <button type="submit" 
-                class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-          Subscribe
-        </button>
-      </div>
-      <p class="text-xs text-gray-500 mt-3 text-center">No spam, unsubscribe at any time.</p>
-    </form>
-  </div>
-</section>
+<br>
 
 <!-- Start Here Section -->
 <section class="py-10 pt-16">
@@ -98,7 +78,7 @@ title: Build Tales
   </div>
 </section>
 
-<!-- Staff+ Systems Thinking Signup Card -->
+<!-- Staff + Systems Thinking Signup Card -->
 <section class="py-8">
   <div class="mx-auto max-w-4xl px-4">
     <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-6 shadow-sm">
