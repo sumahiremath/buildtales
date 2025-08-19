@@ -41,7 +41,10 @@ title: Build Tales
           <input type="email" name="email_address" placeholder="Enter your email" required 
                  class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base shadow-sm">
           <button type="submit" 
-                  class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-base whitespace-nowrap shadow-sm hover:shadow-md transform hover:-translate-y-0.5">
+                  class="px-8 py-3 text-white font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 text-base whitespace-nowrap shadow-sm hover:shadow-md transform hover:-translate-y-0.5"
+                  style="background-color: #157878; border-color: #157878;"
+                  onmouseover="this.style.backgroundColor='#0f6b6b'"
+                  onmouseout="this.style.backgroundColor='#157878'">
             Subscribe
           </button>
         </form>
@@ -88,7 +91,10 @@ title: Build Tales
           <input type="email" name="email_address" placeholder="Enter your email" required 
                  class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-base shadow-sm">
           <button type="submit" 
-                  class="px-8 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 text-base whitespace-nowrap shadow-sm hover:shadow-md transform hover:-translate-y-0.5">
+                  class="px-8 py-3 text-white font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 text-base whitespace-nowrap shadow-sm hover:shadow-md transform hover:-translate-y-0.5"
+                  style="background-color: #157878; border-color: #157878;"
+                  onmouseover="this.style.backgroundColor='#0f6b6b'"
+                  onmouseout="this.style.backgroundColor='#157878'">
             Subscribe
           </button>
         </form>

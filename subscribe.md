@@ -13,7 +13,10 @@ title: "Subscribe"
         <input type="email" name="email_address" placeholder="Enter your email" required 
                class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
         <button type="submit" 
-                class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                class="px-6 py-3 text-white font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2"
+                style="background-color: #157878; border-color: #157878;"
+                onmouseover="this.style.backgroundColor='#0f6b6b'"
+                onmouseout="this.style.backgroundColor='#157878'">
           Subscribe
         </button>
       </div>
