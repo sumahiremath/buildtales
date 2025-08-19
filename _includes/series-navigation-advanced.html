@@ -21,8 +21,8 @@
 
 {% if page.series %}
   {% assign series_name = page.series.name %}
-  {% assign current_part = page.series.part %}
-  {% assign total_parts = page.series.total_parts %}
+  {% assign current_part = page.series.part | plus: 0 %}
+  {% assign total_parts = page.series.total_parts | plus: 0 %}
   
   <!-- Find all posts in this series -->
   {% assign series_posts = "" | split: "" %}
@@ -114,9 +114,9 @@
     <div class="series-benefits" style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #dee2e6;">
       <p style="margin: 0; font-size: 0.85rem; color: #6c757d; line-height: 1.4;">
         <strong>💡 Series Tip:</strong> 
-        {% if current_part == 1 %}
+        {% if current_part == 1 and total_parts > 0 %}
           Start here! This article lays the foundation for everything that follows.
-        {% elsif current_part == total_parts %}
+        {% elsif current_part == total_parts and total_parts > 0 %}
           You've reached the final article! Review the series index to see how far you've come.
         {% else %}
           {% if total_parts > 0 %}

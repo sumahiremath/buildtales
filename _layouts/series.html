@@ -22,7 +22,7 @@ layout: default
 
 {% assign series_name = page.series.name %}
 {% assign series_description = page.series.description %}
-{% assign total_parts = page.series.total_parts %}
+{% assign total_parts = page.series.total_parts | plus: 0 %}
 
 <!-- Find all posts in this series -->
 {% assign series_posts = "" | split: "" %}
