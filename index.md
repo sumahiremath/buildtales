@@ -97,9 +97,9 @@ title: Build Tales
                class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-base shadow-sm">
         <button type="submit" 
                 class="px-8 py-3 text-white font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 text-base whitespace-nowrap shadow-sm hover:shadow-md transform hover:-translate-y-0.5"
-                style="background-color: #157878; border-color: #157878;"
-                onmouseover="this.style.backgroundColor='#0f6b6b'"
-                onmouseout="this.style.backgroundColor='#157878'">
+                style="background-color: #157878; border-color: #157878; color: white;"
+                onmouseover="this.style.backgroundColor='#0f6b6b'; this.style.color='white';"
+                onmouseout="this.style.backgroundColor='#157878'; this.style.color='white';">
           Subscribe
         </button>
       </form>

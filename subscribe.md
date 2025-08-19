@@ -14,9 +14,9 @@ title: "Subscribe"
                class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
         <button type="submit" 
                 class="px-6 py-3 text-white font-medium rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2"
-                style="background-color: #157878; border-color: #157878;"
-                onmouseover="this.style.backgroundColor='#0f6b6b'"
-                onmouseout="this.style.backgroundColor='#157878'">
+                style="background-color: #157878; border-color: #157878; color: white;"
+                onmouseover="this.style.backgroundColor='#0f6b6b'; this.style.color='white';"
+                onmouseout="this.style.backgroundColor='#157878'; this.style.color='white';">
           Subscribe
         </button>
       </div>
