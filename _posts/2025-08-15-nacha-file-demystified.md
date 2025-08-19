@@ -38,7 +38,7 @@ syndication:
 # NOTE: No "series" metadata = this will be classified as a bonus article
 ---
 
-{% include ach-series-navigation.html %}
+{% include ach-series-ultra-minimal.html %}
 
 # NACHA File Demystified: Cracking the 94-Character Code
 

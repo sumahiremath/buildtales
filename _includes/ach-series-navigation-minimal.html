@@ -1,0 +1,61 @@
+{% comment %}
+  Minimal ACH Series Navigation
+  
+  Clean, Apple-like UI with minimal elements and clear navigation.
+  Simple progress indicator and next/previous links only.
+{% endcomment %}
+
+{% comment %} Find ACH posts and current position {% endcomment %}
+{% assign ach_posts = "" | split: "" %}
+{% for post in site.posts %}
+  {% if post.categories contains "ach" or post.tags contains "ach" %}
+    {% assign ach_posts = ach_posts | push: post %}
+  {% endif %}
+{% endfor %}
+
+{% assign sorted_ach_posts = ach_posts | sort: "date" %}
+{% assign current_position = 0 %}
+{% assign total_posts = sorted_ach_posts | size %}
+
+{% for post in sorted_ach_posts %}
+  {% if post.url == page.url %}
+    {% assign current_position = forloop.index %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% if current_position > 0 and total_posts > 1 %}
+  <!-- Minimal Series Navigation -->
+  <div class="series-nav-minimal" style="margin: 2rem 0; padding: 1.5rem; background: #fafafa; border-radius: 12px; border: 1px solid #e5e5e7;">
+    
+    <!-- Simple Progress -->
+    <div style="margin-bottom: 1.5rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+        <span style="font-size: 0.875rem; color: #6b7280; font-weight: 500;">ACH Series</span>
+        <span style="font-size: 0.875rem; color: #6b7280;">{{ current_position }} of {{ total_posts }}</span>
+      </div>
+      <div style="width: 100%; height: 3px; background: #e5e5e7; border-radius: 2px; overflow: hidden;">
+        <div style="width: {{ current_position | times: 100.0 | divided_by: total_posts }}%; height: 100%; background: #157878; border-radius: 2px; transition: width 0.3s ease;"></div>
+      </div>
+    </div>
+    
+    <!-- Navigation Links -->
+    <div style="display: flex; gap: 1rem; align-items: center;">
+      {% if current_position > 1 %}
+        {% assign prev_post = sorted_ach_posts[current_position | minus: 2] %}
+        <a href="{{ prev_post.url }}" style="display: flex; align-items: center; gap: 0.5rem; color: #157878; text-decoration: none; font-size: 0.875rem; font-weight: 500; padding: 0.5rem 0;">
+          <span style="font-size: 1rem;">←</span>
+          <span>Previous</span>
+        </a>
+      {% endif %}
+      
+      {% if current_position < total_posts %}
+        {% assign next_post = sorted_ach_posts[current_position] %}
+        <a href="{{ next_post.url }}" style="display: flex; align-items: center; gap: 0.5rem; color: #157878; text-decoration: none; font-size: 0.875rem; font-weight: 500; padding: 0.5rem 0; margin-left: auto;">
+          <span>Next</span>
+          <span style="font-size: 1rem;">→</span>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
