@@ -39,9 +39,9 @@ title: Build Tales
         </div>
         <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex-1 flex flex-col sm:flex-row gap-3 max-w-md" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
           <input type="email" name="email_address" placeholder="Enter your email" required 
-                 style="flex: 1; padding: 0.75rem 1rem; border: 2px solid #d1d5db; border-radius: 8px; font-size: 1rem; outline: none; transition: all 0.2s ease; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); background: white; color: #374151;" onfocus="this.style.borderColor='#3b82f6'; this.style.boxShadow='0 0 0 3px rgba(59, 130, 246, 0.1)'" onblur="this.style.borderColor='#d1d5db'; this.style.boxShadow='0 1px 3px rgba(0, 0, 0, 0.1)'">
+                 class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base shadow-sm">
           <button type="submit" 
-                  style="padding: 0.75rem 2rem; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; font-weight: 600; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 6px rgba(59, 130, 246, 0.25); white-space: nowrap; transform: translateY(0);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(59, 130, 246, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(59, 130, 246, 0.25)'">
+                  class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-base whitespace-nowrap shadow-sm hover:shadow-md transform hover:-translate-y-0.5">
             Subscribe
           </button>
         </form>
@@ -50,7 +50,6 @@ title: Build Tales
   </div>
 </section>
 
-<br>
 <!-- Start Here Section -->
 <section class="py-10 pt-16">
   <div class="mx-auto max-w-5xl">
@@ -77,7 +76,7 @@ title: Build Tales
     </div>
   </div>
 </section>
-<br>
+
 <!-- Staff + Systems Thinking Signup Card -->
 <section class="py-12">
   <div class="mx-auto max-w-4xl px-4">
@@ -97,7 +96,7 @@ title: Build Tales
     </div>
   </div>
 </section>
-<br>
+
 <!-- Recent Articles Section -->
 <section class="py-10 pt-16">
   <div class="mx-auto max-w-3xl">
