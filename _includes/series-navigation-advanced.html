@@ -20,11 +20,22 @@
   
   <!-- Find all posts in this category -->
   {% assign series_posts = "" | split: "" %}
+  
+  <!-- Check regular posts -->
   {% for post in site.posts %}
     {% if post.categories contains primary_category %}
       {% assign series_posts = series_posts | push: post %}
     {% endif %}
   {% endfor %}
+  
+  <!-- Check payments collection for ACH category -->
+  {% if primary_category == "ach" %}
+    {% for post in site.payments %}
+      {% if post.categories contains primary_category %}
+        {% assign series_posts = series_posts | push: post %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
   
   <!-- Sort posts by date -->
   {% assign sorted_posts = series_posts | sort: "date" %}
