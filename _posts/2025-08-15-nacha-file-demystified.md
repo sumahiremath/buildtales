@@ -38,11 +38,11 @@ syndication:
 # NOTE: No "series" metadata = this will be classified as a bonus article
 ---
 
+{% include ach-series-navigation.html %}
+
 # NACHA File Demystified: Cracking the 94-Character Code
 
 *Published on: August 15, 2025*
-
-{% include ach-series-navigation.html %}
 
 ![NACHA Demystified Banner](/assets/banners/resized/20250815nachafile-blog.jpg)
 
