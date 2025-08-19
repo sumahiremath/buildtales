@@ -26,6 +26,28 @@ title: Build Tales
     </div>
   </div>
 </section>
+
+<!-- Hero Inline Signup Bar -->
+<section class="py-8">
+  <div class="mx-auto max-w-4xl px-4">
+    <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+      <div class="flex flex-col sm:flex-row items-center gap-4">
+        <div class="flex-shrink-0">
+          <p class="text-gray-700 font-medium">👋 Hey, I'm Suma. I write deep dives on fintech & engineering leadership.</p>
+        </div>
+        <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex-1 flex flex-col sm:flex-row gap-3" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
+          <input type="email" name="email_address" placeholder="Enter your email" required 
+                 class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+          <button type="submit" 
+                  class="px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm whitespace-nowrap">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
 <br>  
 
 <!-- Stay Updated Section -->
@@ -72,6 +94,26 @@ title: Build Tales
         <p class="opacity-80 text-sm">Resilience & incident habits.</p>
         <span class="card-status coming-soon">Coming soon</span>
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- Staff+ Systems Thinking Signup Card -->
+<section class="py-8">
+  <div class="mx-auto max-w-4xl px-4">
+    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-6 shadow-sm">
+      <div class="text-center">
+        <h3 class="text-lg font-semibold text-gray-800 mb-2">Don't miss when Staff+ Systems Thinking drops</h3>
+        <p class="text-gray-600 mb-4">Subscribe and I'll send it straight to you.</p>
+        <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex flex-col sm:flex-row gap-3 max-w-md mx-auto" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
+          <input type="email" name="email_address" placeholder="Enter your email" required 
+                 class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+          <button type="submit" 
+                  class="px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm whitespace-nowrap">
+            Subscribe
+          </button>
+        </form>
+      </div>
     </div>
   </div>
 </section>
