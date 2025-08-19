@@ -28,17 +28,21 @@
     {% endif %}
   {% endfor %}
   
-  <!-- Check payments collection for ACH category -->
+  <!-- Check payments collection for ACH category or part-based series -->
   {% if primary_category == "ach" %}
     {% for post in site.payments %}
-      {% if post.categories contains primary_category %}
+      {% if post.categories contains primary_category or post.part %}
         {% assign series_posts = series_posts | push: post %}
       {% endif %}
     {% endfor %}
   {% endif %}
   
-  <!-- Sort posts by date -->
-  {% assign sorted_posts = series_posts | sort: "date" %}
+  <!-- Sort posts by date or part number -->
+  {% if primary_category == "ach" %}
+    {% assign sorted_posts = series_posts | sort: "part" %}
+  {% else %}
+    {% assign sorted_posts = series_posts | sort: "date" %}
+  {% endif %}
   {% assign total_posts = sorted_posts | size %}
   
   <!-- Find current post position -->
