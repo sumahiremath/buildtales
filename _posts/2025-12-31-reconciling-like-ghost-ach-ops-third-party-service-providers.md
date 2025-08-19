@@ -10,6 +10,7 @@ banner_image: "/assets/banners/resized/20250813moneyflow-blog.jpg"
 banner_image_recent: "/assets/banners/resized/20250813moneyflow-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250813moneyflow-series.jpg"
 banner_color: "#157878"
+future: true
 
 # SEO and Canonical Tags
 canonical_url: "https://buildtales.dev/fintech/payments/2025/12/31/reconciling-like-ghost-ach-ops-third-party-service-providers.html"

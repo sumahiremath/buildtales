@@ -5,258 +5,119 @@ permalink: /series/payments
 ---
 # How U.S. Payments Really Work
 
-<!-- Series Articles -->
-<div class="series-articles-container">
-  <h2 class="text-2xl font-semibold mb-6">Series Articles</h2>
-  <div class="articles-grid">
-    {% assign payments_posts = site.posts | where_exp: "post", "post.categories contains 'payments'" | sort: 'date' %}
-    {% for post in payments_posts %}
-      {% if post.draft %}
-        <div class="article-card draft-card">
-          <div class="card-content">
-            <h3 class="article-title">{{ post.title }}</h3>
-            <p class="article-date">{{ post.date | date: "%B %d, %Y" }}</p>
-            <span class="status-badge draft">Draft</span>
-          </div>
-        </div>
-      {% else %}
-        <a href="{{ post.url }}" class="article-card published-card">
-          <div class="card-content">
-            <h3 class="article-title">{{ post.title }}</h3>
-            <p class="article-date">{{ post.date | date: "%B %d, %Y" }}</p>
-          </div>
-        </a>
-      {% endif %}
-    {% endfor %}
-  </div>
+<!-- Table of Contents -->
+<div class="toc-container">
+  <h2 class="toc-title">📚 Table of Contents</h2>
+  <nav class="toc-nav">
+    <a href="#phase-1" class="toc-link">Phase 1: Understanding the Rails</a>
+    <a href="#phase-2" class="toc-link">Phase 2: Failure Modes — Returns, Reversals, & Chaos</a>
+    <a href="#phase-3" class="toc-link">Phase 3: Observability & Ops Strategy</a>
+    <a href="#phase-4" class="toc-link">Phase 4: Multi-Client, Multi-Rail Complexity</a>
+    <a href="#phase-5" class="toc-link">Phase 5: Recurring, Revenue, and Lifecycle Systems</a>
+    <a href="#phase-6" class="toc-link">Phase 6: Modern Money Movement (Crypto & Global)</a>
+  </nav>
 </div>
 
-🧭 Phase 1: Orientation — Set the Stage
-
-These articles ground the reader in how money moves and why rebuilding is even needed.
-
-ACH: The Good, The Bad, and The Ugly
-
-Credit Cards: Swipe, Smile, Settle Later
-
-RTP: Real-Time Payments With Real-World Bottlenecks
-
-FedNow: Built by the Fed. Moving Like the Fed
-
-Wire Transfers: Old Money Energy
-
-ACH Cutoffs: The Hidden Clock That Breaks Your UX
-
-ACH Limits at Scale: Surviving Entry, File, and Dollar Caps
-
-Goal: By the end, the reader knows the core rails, their constraints, and the invisible rules.
-
-🔁 Phase 2: Failure Modes — Returns, Reversals, & Chaos
-
-Here we dive into what breaks, why it breaks, and how to prevent it.
-
-ACH Retries: Designing a Safe and Compliant Retry Engine
-
-ACH Refunds: Designing a Compliant and Observable Return Flow
-
-Handling Dishonored and Contested Returns
-
-Surviving ACH File Reversals as an EM
-
-Handling ACH Returns with Missing or Broken Data
-
-The Inevitable: Handling Missed Entries and File Resubmission
-
-Tracking ACH Trace IDs: Yours, Theirs, and the Fed’s
-
-The Day I Submitted the Wrong ACH File (Personal tale for empathy + realism)
-
-Goal: Readers now understand the full lifecycle of errors — and how to detect + mitigate them.
-
-🔍 Phase 3: Observability & Ops Strategy
-
-Time to get technical with ledger states, alerting, and team-level maturity.
-
-ACH Returns, Corrections & Threshold Monitoring for Engineering Leaders
-
-Surviving an ACH Audit: Engineering Manager’s Guide
-
-Working with Legal & Risk to Stay Within ACH Thresholds
-
-Building with Legal and Risk at the Core
-
-Reg E & UDAAP: The Engineering Leader’s Playbook
-
-Goal: Connect product behavior to legal, audit, and trust outcomes. Infra meets policy.
-
-🧑‍💻 Phase 4: Multi-Client, Multi-Rail Complexity
-
-Now that readers understand core movement + ops, we introduce third-party roles, ledger separation, and reconciliation at scale.
-
-Designing Systems for Third-Party Senders & Service Providers
-
-Reconciling Like a Ghost: ACH Ops for Third-Party Service Providers
-
-EPN vs. FedACH: Operational Deep Dive & Efficiency Comparison
-
-EPN Access for Fintechs: What You Need to Know
-
-Can a Fintech Connect Directly to FedACH?
-
-Goal: Get readers thinking about scaling clients, partnerships, and ops.
-
-📆 Phase 5: Recurring, Revenue, and Lifecycle Systems
-
-Now it’s about customer lifecycle, recurring flows, and revenue resilience.
-
-Recurring Payments: The Silent Beast Behind Subscription Infrastructure
-
-Recurring Payments & ACH Audits: Engineering for Long-Term Compliance
-
-ACH Cutoffs (Revisited for scheduling systems)
-
-ACH Refunds (Revisited for lifecycle integrity)
-
-Goal: Payments is never one-and-done — it's systems that must live for years.
-
-🌐 Phase 6: Modern Money Movement (Crypto & Global)
-
-Now shift to what comes next, or what we can learn from adjacent ecosystems.
-
-Stablecoins & Crypto Rails: The New Instant Settlement Layer?
-
-DeFi Infrastructure: Protocols, Liquidity, and the Future of Money Movement
-
-On/Off-Ramp Infrastructure: Bridging TradFi and Crypto
-
-UPI Integration as a Developer
-
-UPI vs FedNow vs RTP: Developer-Centric Comparison
-
-🎯 Optional Final Chapter: Vision, Patterns, and Observability
-
-These are future or in-progress suggestions you can write next to wrap the series:
-
-🧠 What to Log, Alert, and Visualize in Payments Infra
-
-🕓 ACH is Not Atomic: Designing Systems That Survive Asynchronous Truth
-
-⏱ How Long Does Money Actually Take? Modeling Settlement Timelines
-
-🔁 Rebuilding State: How to Backfill, Retry, or Reconcile at Scale
-
-<div class="mx-auto max-w-3xl">
-  <header class="space-y-3 mb-8">
-    <h1 class="text-4xl font-bold">How U.S. Payments Really Work</h1>
-    <p class="text-lg opacity-80">A builder's guide to rails, risk, and reconciliation.</p>
-  </header>
-
-  <!-- Series Progress -->
-  <div class="card mb-8">
-    <div class="flex justify-between items-center mb-4">
-      <h2 class="text-xl font-semibold">Series Progress</h2>
-      <span class="text-sm opacity-60">3 of 45 articles</span>
-    </div>
-    <div style="background: #f0f0f0; height: 8px; border-radius: 4px; overflow: hidden;">
-      <div style="background: var(--accent); height: 100%; width: 7%; border-radius: 4px;"></div>
-    </div>
-    <p class="text-sm opacity-60 mt-2">Updated weekly • Expected completion Q3 2026</p>
-  </div>
-
-  <!-- Table of Contents -->
-<h2 class="text-2xl font-semibold mb-6">Table of Contents</h2>
-
-  <div class="space-y-6">
-    <!-- Phase 1: Published Articles -->
-    <section>
-      <h3 class="text-lg font-semibold mb-4">Phase 1: Understanding the Rails</h3>
-      <ol class="space-y-3">
-        <li>
-          <a href="/fintech/payments/2025/08/13/money-flow-bank-account.html" class="published-article-link">
-            <div class="flex justify-between items-center">
-              <div class="flex-grow">
-                <h4 class="font-medium text-accent article-title">How Money Moves In And Out Of Your Bank Account?</h4>
-                <p class="text-sm opacity-70 mt-2">The foundational mechanics of money movement</p>
+<!-- Series Articles -->
+<div class="series-articles-container">
+  {% assign payments_posts = site.posts | where_exp: "post", "post.categories contains 'payments'" | sort: 'date' %}
+  {% assign grouped_posts = payments_posts | group_by: "section" | sort: "name" %}
+  
+  {% for group in grouped_posts %}
+    <section class="phase-section" id="phase-{{ forloop.index }}">
+      <h2 class="phase-title">{{ group.name }}</h2>
+      {% if group.name == "Phase 1: Understanding the Rails" %}
+        <p class="phase-description">These articles ground the reader in how money moves and why rebuilding is even needed.</p>
+      {% elsif group.name == "Phase 2: Failure Modes — Returns, Reversals, & Chaos" %}
+        <p class="phase-description">Here we dive into what breaks, why it breaks, and how to prevent it.</p>
+      {% elsif group.name == "Phase 3: Observability & Ops Strategy" %}
+        <p class="phase-description">Time to get technical with ledger states, alerting, and team-level maturity.</p>
+      {% elsif group.name == "Phase 4: Multi-Client, Multi-Rail Complexity" %}
+        <p class="phase-description">Now that readers understand core movement + ops, we introduce third-party roles, ledger separation, and reconciliation at scale.</p>
+      {% elsif group.name == "Phase 5: Recurring, Revenue, and Lifecycle Systems" %}
+        <p class="phase-description">Now it's about customer lifecycle, recurring flows, and revenue resilience.</p>
+      {% elsif group.name == "Phase 6: Modern Money Movement (Crypto & Global)" %}
+        <p class="phase-description">Now shift to what comes next, or what we can learn from adjacent ecosystems.</p>
+      {% endif %}
+      
+      <div class="articles-grid">
+        {% for post in group.items %}
+          {% assign current_date = site.time | date: "%s" %}
+          {% assign post_date = post.date | date: "%s" %}
+          
+          {% if post.draft %}
+            <div class="article-card draft-card">
+              <div class="card-content">
+                <h3 class="article-title">{{ post.title }}</h3>
+                <p class="article-date">{{ post.date | date: "%B %d, %Y" }}</p>
+                <span class="status-badge draft">Draft</span>
               </div>
-              <span class="text-sm text-green-600 font-medium published-badge">✓ Published</span>
             </div>
-          </a>
-        </li>
-        <li>
-          <a href="/fintech/payments/2025/08/14/wire-transfers-explained.html" class="published-article-link">
-            <div class="flex justify-between items-center">
-              <div class="flex-grow">
-                <h4 class="font-medium text-accent article-title">Wire Transfers: Old Money Energy</h4>
-                <p class="text-sm opacity-70 mt-2">When speed and finality matter most</p>
+          {% elsif post_date > current_date %}
+            <div class="article-card future-card">
+              <div class="card-content">
+                <h3 class="article-title">{{ post.title }}</h3>
+                <p class="article-date">{{ post.date | date: "%B %d, %Y" }}</p>
+                <span class="status-badge future">Coming Soon</span>
               </div>
-              <span class="text-sm text-green-600 font-medium published-badge">✓ Published</span>
             </div>
-          </a>
-        </li>
-        <li>
-          <a href="/fintech/payments/2025/08/20/ach-good-bad-ugly.html" class="published-article-link">
-            <div class="flex justify-between items-center">
-              <div class="flex-grow">
-                <h4 class="font-medium text-accent article-title">ACH: The Good, The Bad, and The Ugly</h4>
-                <p class="text-sm opacity-70 mt-2">Understanding America's payment backbone</p>
+          {% else %}
+            <a href="{{ post.url }}" class="article-card published-card">
+              <div class="card-content">
+                <h3 class="article-title">{{ post.title }}</h3>
+                <p class="article-date">{{ post.date | date: "%B %d, %Y" }}</p>
+                <span class="status-badge published">Published</span>
               </div>
-              <span class="text-sm text-green-600 font-medium published-badge">✓ Published</span>
-            </div>
-          </a>
-        </li>
-        <li class="unpublished-article">
-          <div class="flex justify-between items-center">
-            <div class="flex-grow">
-              <h4 class="font-medium text-gray-700 article-title">ACH Cutoffs: The Hidden Clock That Breaks Your UX</h4>
-              <p class="text-sm opacity-70 mt-2">Why timing matters in batch processing</p>
-            </div>
-            <span class="text-sm text-gray-600 font-medium">Aug 27, 2025</span>
-          </div>
-        </li>
-        <li class="unpublished-article">
-          <div class="flex justify-between items-center">
-            <div class="flex-grow">
-              <h4 class="font-medium text-gray-700 article-title">RTP: Real-Time Payments With Real-World Bottlenecks</h4>
-              <p class="text-sm opacity-70 mt-2">The promise and reality of instant payments</p>
-            </div>
-            <span class="text-sm text-gray-600 font-medium">Sep 10, 2025</span>
-          </div>
-        </li>
-      </ol>
-    </section>
-
-    <!-- Phase 2: Coming Soon -->
-    <section>
-      <h3 class="text-lg font-semibold mb-4">Phase 2: Failure Modes</h3>
-      <div class="p-4 unpublished-section">
-        <p class="font-medium text-gray-700">Returns, Reversals & Retrying Safely</p>
-        <p class="text-sm opacity-70 mt-1">8 articles covering what happens when payments go wrong</p>
-        <span class="text-sm text-gray-600 font-medium">Starting October 2025</span>
+            </a>
+          {% endif %}
+        {% endfor %}
       </div>
     </section>
-
-    <!-- Phase 3: Further Out -->
-    <section>
-      <h3 class="text-lg font-semibold mb-4">Upcoming Phases</h3>
-      <div class="space-y-3">
-        <div class="p-4 unpublished-section">
-          <p class="font-medium text-gray-700">Phase 3: Resilience</p>
-          <p class="text-sm opacity-70">Ops, audit, and legal alignment</p>
-        </div>
-        <div class="p-4 unpublished-section">
-          <p class="font-medium text-gray-700">Phase 4: Complexity</p>
-          <p class="text-sm opacity-70">TPS, partner access, and multi-entity ops</p>
-        </div>
-        <div class="p-4 unpublished-section">
-          <p class="font-medium text-gray-700">Phase 5: Lifecycle</p>
-          <p class="text-sm opacity-70">Recurring systems & revenue reliability</p>
-        </div>
-      </div>
-    </section>
-  </div>
+  {% endfor %}
 </div>
 
 <style>
+/* Table of Contents */
+.toc-container {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0 3rem 0;
+}
+
+.toc-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+}
+
+.toc-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.toc-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  color: #157878;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.toc-link:hover {
+  background: #f0fdf4;
+  border-color: #157878;
+  transform: translateX(4px);
+}
+
 /* Series Articles Cards */
 .series-articles-container {
   margin-bottom: 3rem;
@@ -310,15 +171,15 @@ These are future or in-progress suggestions you can write next to wrap the serie
 
 /* Future Card Styling */
 .future-card {
-  background: #fef3c7;
-  border-color: #f59e0b;
+  background: #f3f4f6;
+  border-color: #9ca3af;
   opacity: 0.9;
   cursor: default;
 }
 
 .future-card:hover {
-  background: #fde68a;
-  border-color: #d97706;
+  background: #e5e7eb;
+  border-color: #6b7280;
 }
 
 /* Phase Section Styling */
