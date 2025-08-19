@@ -23,7 +23,7 @@ series:
       description: "Build robust systems for reconciliation, error handling, and audit trails."
 ---
 
-{%- assign ach_articles = site.posts | where_exp: "post", "post.categories contains 'ach'" | sort: "date" -%}
+{%- assign ach_articles = site.ach | sort: "date" -%}
 {%- assign published = ach_articles | where_exp: "post", "post.draft != true" -%}
 
 <div class="mx-auto max-w-3xl">

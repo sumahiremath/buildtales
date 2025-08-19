@@ -6,7 +6,7 @@ permalink: /series/leadership-systems.html
 categories: [leadership, systems]
 ---
 
-{%- assign leadership_articles = site.posts | where_exp: "post", "post.categories contains 'leadership'" | sort: "date" -%}
+{%- assign leadership_articles = site.leadership | sort: "date" -%}
 {%- assign systems_articles = site.posts | where_exp: "post", "post.categories contains 'systems'" | sort: "date" -%}
 {%- assign all_articles = leadership_articles | concat: systems_articles | uniq | sort: "date" -%}
 {%- assign published = all_articles | where_exp: "post", "post.draft != true" -%}

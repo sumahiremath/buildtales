@@ -20,6 +20,12 @@ collections:
   payments:
     output: true
     permalink: /payments/:title.html
+  ach:
+    output: true
+    permalink: /ach/:title.html
+  leadership:
+    output: true
+    permalink: /leadership/:title.html
 
 # Force Jekyll to use front matter dates
 future: false

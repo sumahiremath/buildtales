@@ -35,6 +35,14 @@
         {% assign series_posts = series_posts | push: post %}
       {% endif %}
     {% endfor %}
+    <!-- Check ach collection -->
+    {% for post in site.ach %}
+      {% assign series_posts = series_posts | push: post %}
+    {% endfor %}
+    <!-- Check leadership collection -->
+    {% for post in site.leadership %}
+      {% assign series_posts = series_posts | push: post %}
+    {% endfor %}
   {% endif %}
   
   <!-- Sort posts by date or part number -->
