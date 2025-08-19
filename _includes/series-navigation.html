@@ -23,9 +23,9 @@
   {% assign total_parts = page.series.total_parts | plus: 0 %}
   
   <!-- Series Navigation -->
-  <div class="series-navigation" style="background: #f8f9fa; border-left: 4px solid #007acc; padding: 1.5rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0;">
+  <div class="series-navigation" style="background: #f8f9fa; border-left: 4px solid #157878; padding: 1.5rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0;">
     <div class="series-header" style="margin-bottom: 1rem;">
-      <h3 style="margin: 0 0 0.5rem 0; color: #007acc; font-size: 1.1rem; font-weight: 600;">
+      <h3 style="margin: 0 0 0.5rem 0; color: #157878; font-size: 1.1rem; font-weight: 600;">
         📚 {{ series_name }}
       </h3>
       <p style="margin: 0; color: #6c757d; font-size: 0.9rem;">
@@ -37,7 +37,7 @@
     <div class="series-progress" style="margin-bottom: 1rem;">
       <div style="width: 100%; background-color: #e9ecef; border-radius: 10px; height: 8px; overflow: hidden;">
         {% assign progress_percent = current_part | times: 100.0 | divided_by: total_parts | default: 0 %}
-        <div style="width: {{ progress_percent }}%; background-color: #007acc; height: 100%; border-radius: 10px; transition: width 0.3s ease;"></div>
+        <div style="width: {{ progress_percent }}%; background-color: #157878; height: 100%; border-radius: 10px; transition: width 0.3s ease;"></div>
       </div>
       <div style="display: flex; justify-content: space-between; margin-top: 0.5rem; font-size: 0.8rem; color: #6c757d;">
         <span>Started</span>
@@ -48,18 +48,18 @@
     
     <!-- Navigation Links -->
     <div class="series-links" style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
-      <a href="{{ series_url }}" class="series-link primary" style="background: #007acc; color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: background-color 0.2s ease;">
+      <a href="{{ series_url }}" class="series-link primary" style="background: #157878; color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: background-color 0.2s ease;">
         📋 View Series Roadmap
       </a>
       
       {% if current_part > 1 %}
-        <a href="#" class="series-link secondary" style="color: #007acc; text-decoration: none; font-size: 0.9rem; padding: 0.5rem 0;">
+        <a href="#" class="series-link secondary" style="color: #157878; text-decoration: none; font-size: 0.9rem; padding: 0.5rem 0;">
           ← Previous Part
         </a>
       {% endif %}
       
       {% if current_part < total_parts %}
-        <a href="#" class="series-link secondary" style="color: #007acc; text-decoration: none; font-size: 0.9rem; padding: 0.5rem 0;">
+        <a href="#" class="series-link secondary" style="color: #157878; text-decoration: none; font-size: 0.9rem; padding: 0.5rem 0;">
           Next Part →
         </a>
       {% endif %}
@@ -90,7 +90,7 @@
     }
     
     .series-navigation .series-link.primary:hover {
-      background-color: #0056b3;
+      background-color: #1a7a7c;
     }
     
     .series-navigation .series-link.secondary:hover {
