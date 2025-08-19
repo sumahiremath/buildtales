@@ -51,6 +51,8 @@ series:
 
 *Published on: August 14, 2025*
 
+{% include ach-series-navigation.html %}
+
 ![Wire Transfers](/assets/banners/resized/20250814wiretransfer-bl   og.jpg)
 
 A wire transfer is like telling your bank: **"Move this money to another bank account — right now. No batching. No waiting."**
