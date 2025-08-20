@@ -19,7 +19,7 @@ title: Engineering Leadership Series
 <div class="series-articles-container">
   {% assign leadership_posts = site.posts | where_exp: "post", "post.categories contains 'leadership'" | sort: 'date' %}
   {% assign management_posts = site.posts | where_exp: "post", "post.categories contains 'management'" | sort: 'date' %}
-  {% assign all_leadership_posts = leadership_posts | concat: management_posts %}
+  {% assign all_leadership_posts = leadership_posts | concat: management_posts | uniq %}
   {% assign grouped_posts = all_leadership_posts | group_by: "section" | sort: "name" %}
   
   {% for group in grouped_posts %}
