@@ -16,9 +16,14 @@ title: "Subscribe"
         <li style="margin-bottom: 0.5rem;">✅ Real-world systems design lessons</li>
         <li style="margin-bottom: 0.5rem;">✅ Early access to new series</li>
       </ul>
-      
-      <!-- Newsletter Signup Form -->
-      <div class="newsletter-box">
+    </div>
+  </section>
+</div>
+
+<!-- Newsletter Signup Form - Full Width -->
+<section class="py-8">
+  <div class="mx-auto max-w-5xl px-4">
+    <div class="newsletter-box">
         <div class="text-center mb-6">
           <p class="text-lg font-semibold text-gray-800 mb-2" style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">👋 Ready to Subscribe?</p>
           <p class="text-gray-600" style="color: #4b5563; line-height: 1.6;">Get new insights every week.</p>
@@ -36,10 +41,9 @@ title: "Subscribe"
             </button>
           </form>
         </div>
-      </div>
     </div>
-  </section>
-</div>
+  </div>
+</section>
 
 <style>
 ul {
