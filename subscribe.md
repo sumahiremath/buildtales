@@ -25,8 +25,8 @@ title: "Subscribe"
   <div class="mx-auto max-w-5xl px-4">
     <div class="newsletter-box">
         <div class="text-center mb-6">
-          <p class="text-lg font-semibold text-gray-800 mb-2" style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">👋 Ready to Subscribe?</p>
-          <p class="text-gray-600" style="color: #4b5563; line-height: 1.6;">Get new insights every week.</p>
+          <p class="text-lg font-semibold text-gray-800 mb-2" style="text-align: center; font-size: 1.125rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">👋 Ready to Subscribe?</p>
+          <p class="text-gray-600" style="text-align: center; color: #4b5563; line-height: 1.6;">Get new insights every week.</p>
         </div>
         <div class="flex justify-center">
           <form id="subscribe-form" action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex flex-col sm:flex-row gap-3 w-full max-w-2xl" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
