@@ -27,8 +27,8 @@ title: Engineering Leadership Series
       <h2 class="phase-title">{{ group.name | default: "Leadership Articles" }}</h2>
       {% if group.name == "Vision & Planning" %}
         <p class="phase-description">Turn chaos into clarity and turn vague ideas into actionable plans</p>
-      {% elsif group.name == "Translate vision into game plans and navigate the messy middle between planning and execution" %}
-        <p class="phase-description">Leading technical decisions, system design, and architectural strategy.</p>
+      {% elsif group.name == "Strategies & Tactics" %}
+        <p class="phase-description">Translate vision into game plans and navigate the messy middle between planning and execution.</p>
       {% elsif group.name == "Execute & Assess" %}
         <p class="phase-description">Get things done and lessons learned</p>
       {% endif %}
