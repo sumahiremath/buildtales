@@ -2,7 +2,7 @@
 layout: default
 title: "How Money Moves In And Out Of Your Bank Account?"
 date: 2025-08-13
-categories: [fintech, payments]
+categories: [fintech, payments, ach]
 section: "Phase 1: Understanding the Rails"
 tags: [ach, payments, banking, fintech-basics]
 excerpt: "Ever wonder how your paycheck shows up in your bank account on payday? Or how your gym magically pulls your membership fee every month? That's all thanks to ACH - the behind-the-scenes hero of American banking."
