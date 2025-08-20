@@ -6,6 +6,13 @@ categories: [fintech, payments]
 tags: [relevant, tags, here]
 excerpt: "[Brief compelling excerpt that explains what readers will learn]"
 
+# Meta tag elements
+section: "[SECTION_NAME]"
+banner_image: "[BANNER_IMAGE_NAME]"
+banner_image_recent: "[BANNER_IMAGE_RECENT_NAME]"
+banner_image_series: "[BANNER_IMAGE_SERIES_NAME]"
+banner_color: "#157878"
+
 # SEO and Canonical Tags
 canonical_url: "https://buildtales.dev/[URL_PATH]"
 author:
