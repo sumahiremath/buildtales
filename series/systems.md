@@ -7,11 +7,11 @@ title: Systems & Architecture Series
 
 <!-- Table of Contents -->
 <div class="toc-container">
-  <h2 class="toc-title">📚 Table of Contents</h2>
+  <h2 class="toc-title">Topics</h2>
   <nav class="toc-nav">
-    <a href="#phase-1" class="toc-link">Phase 1: System Design Fundamentals</a>
-    <a href="#phase-2" class="toc-link">Phase 2: Scalability & Performance</a>
-    <a href="#phase-3" class="toc-link">Phase 3: Advanced Architecture Patterns</a>
+    <a href="#phase-1" class="toc-link">System Design Fundamentals</a>
+    <a href="#phase-2" class="toc-link">Scalability & Performance</a>
+    <a href="#phase-3" class="toc-link">Advanced Architecture Patterns</a>
   </nav>
 </div>
 

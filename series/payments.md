@@ -7,7 +7,7 @@ permalink: /series/payments
 
 <!-- Table of Contents -->
 <div class="toc-container">
-  <h2 class="toc-title">📚 Table of Contents</h2>
+  <h2 class="toc-title">Topics</h2>
   <nav class="toc-nav">
     <a href="#phase-1" class="toc-link">Phase 1: Understanding the Rails</a>
     <a href="#phase-2" class="toc-link">Phase 2: Failure Modes — Returns, Reversals, & Chaos</a>

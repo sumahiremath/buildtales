@@ -7,11 +7,11 @@ title: Engineering Leadership Series
 
 <!-- Table of Contents -->
 <div class="toc-container">
-  <h2 class="toc-title">📚 Table of Contents</h2>
+  <h2 class="toc-title">Topics</h2>
   <nav class="toc-nav">
-    <a href="#phase-1" class="toc-link">Phase 1: Management Fundamentals</a>
-    <a href="#phase-2" class="toc-link">Phase 2: Systems & Architecture Leadership</a>
-    <a href="#phase-3" class="toc-link">Phase 3: Advanced Leadership & Strategy</a>
+    <a href="#phase-1" class="toc-link">Vision & Planning</a>
+    <a href="#phase-2" class="toc-link">Strategies & Tactics</a>
+    <a href="#phase-3" class="toc-link">Execute & Assess</a>
   </nav>
 </div>
 
@@ -25,12 +25,12 @@ title: Engineering Leadership Series
   {% for group in grouped_posts %}
     <section class="phase-section" id="phase-{{ forloop.index }}">
       <h2 class="phase-title">{{ group.name | default: "Leadership Articles" }}</h2>
-      {% if group.name == "Phase 1: Management Fundamentals" %}
-        <p class="phase-description">Core management skills, team building, and leadership foundations.</p>
-      {% elsif group.name == "Phase 2: Systems & Architecture Leadership" %}
+      {% if group.name == "Vision & Planning" %}
+        <p class="phase-description">Turn chaos into clarity and turn vague ideas into actionable plans</p>
+      {% elsif group.name == "Translate vision into game plans and navigate the messy middle between planning and execution" %}
         <p class="phase-description">Leading technical decisions, system design, and architectural strategy.</p>
-      {% elsif group.name == "Phase 3: Advanced Leadership & Strategy" %}
-        <p class="phase-description">Strategic thinking, organizational leadership, and advanced management techniques.</p>
+      {% elsif group.name == "Execute & Assess" %}
+        <p class="phase-description">Get things done and lessons learned</p>
       {% endif %}
       
       <div class="articles-grid">

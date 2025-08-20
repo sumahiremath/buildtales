@@ -7,11 +7,11 @@ title: ACH Series
 
 <!-- Table of Contents -->
 <div class="toc-container">
-  <h2 class="toc-title">📚 Table of Contents</h2>
+  <h2 class="toc-title">Topics</h2>
   <nav class="toc-nav">
-    <a href="#phase-1" class="toc-link">Phase 1: ACH Fundamentals</a>
-    <a href="#phase-2" class="toc-link">Phase 2: ACH Operations & Compliance</a>
-    <a href="#phase-3" class="toc-link">Phase 3: Advanced ACH Systems</a>
+    <a href="#section-1" class="toc-link">ACH Fundamentals</a>
+    <a href="#section-2" class="toc-link">ACH Operations & Compliance</a>
+    <a href="#section-3" class="toc-link">Advanced ACH Concepts</a>
   </nav>
 </div>
 
@@ -21,13 +21,13 @@ title: ACH Series
   {% assign grouped_posts = ach_posts | group_by: "section" | sort: "name" %}
   
   {% for group in grouped_posts %}
-    <section class="phase-section" id="phase-{{ forloop.index }}">
+    <section class="section-section" id="section-{{ forloop.index }}">
       <h2 class="phase-title">{{ group.name | default: "ACH Articles" }}</h2>
       {% if group.name == "Phase 1: ACH Fundamentals" %}
         <p class="phase-description">Core concepts and understanding of how ACH works.</p>
       {% elsif group.name == "Phase 2: ACH Operations & Compliance" %}
         <p class="phase-description">Operational aspects, compliance requirements, and best practices.</p>
-      {% elsif group.name == "Phase 3: Advanced ACH Systems" %}
+      {% elsif group.name == "Phase 3: Advanced ACH Concepts" %}
         <p class="phase-description">Advanced implementations, integrations, and system design.</p>
       {% endif %}
       

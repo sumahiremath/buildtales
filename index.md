@@ -64,7 +64,7 @@ title: Build Tales
          <p class="opacity-80 text-sm">Inside the messy plumbing of money movement</p>
        </a>
        <a class="start-here-card" href="/series/ach">
-         <div class="card-icon" style="background: #14b8a6; color: white;">🏦</div>
+         <div class="card-icon" style="background: #157878; color: white;">🏦</div>
          <h3 class="font-semibold mb-2">ACH Deep Dive</h3>
          <p class="opacity-80 text-sm">Master the $72+ trillion ACH network</p>
        </a>
@@ -343,6 +343,36 @@ title: Build Tales
   .start-here-card {
     padding: 1rem;
     min-height: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .start-here-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Newsletter and subscription mobile adjustments - only vertical spacing */
+@media (max-width: 640px) {
+  .newsletter-box {
+    margin: 1.5rem 0;
+    padding: 1em;
+  }
+  
+  /* Hero section mobile adjustments - only vertical spacing */
+  .hero-section {
+    padding: 2rem 1rem;
+  }
+  
+  /* Section spacing consistency - only vertical */
+  section {
+    padding: 2rem 1rem;
+  }
+  
+  .py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
 
