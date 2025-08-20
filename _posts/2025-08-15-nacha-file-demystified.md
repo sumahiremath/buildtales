@@ -48,6 +48,8 @@ Picture this: You're building a payroll system, and your first ACH file submissi
 
 Welcome to NACHA files—where every character matters, spaces are sacred, and one misplaced digit can derail your entire batch.
 
+If you’re new to banking, start with [this primer on money flow between bank accounts](http://localhost:4000/fintech/payments/2025/08/13/money-flow-bank-account.html) to understand the key participants before diving into the details.
+
 ## Why This Matters Now
 
 If you're building anything that touches money in the U.S., you'll eventually encounter NACHA files. They're the beating heart of ACH transactions—from your Venmo transfer to that $50K B2B payment. But the 50-year-old fixed-width format feels like archaeology until you need to debug why your file got rejected at 2 AM.
