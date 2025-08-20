@@ -46,7 +46,7 @@
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="icon" type="image/png" href="/assets/images/favicon.png">
-    <link rel="stylesheet" href="/assets/css/style.css?v=183140f31d32a81a91a707070df41dbd5585bd6e">
+    <link rel="stylesheet" href="/assets/css/style.css?v=472d3e593fd03be0fee11d717809cd5fd8d9802b">
     <link rel="alternate" type="application/rss+xml" title="Build Tales RSS Feed" href="/feed.xml">
     
     
@@ -428,12 +428,13 @@
         <p class="text-gray-600" style="color: #4b5563; line-height: 1.6;">I write deep dives on fintech &amp; engineering leadership. Join 500+ builders getting one new insight every week.</p>
       </div>
       <div class="flex justify-center">
-        <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex flex-col sm:flex-row gap-3 max-w-md" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
+        <form id="newsletter-form-1" action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex flex-col sm:flex-row gap-3 max-w-md" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
           <input type="email" name="email_address" placeholder="Enter your email" required="" class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base shadow-sm" />
           <button type="submit" class="px-8 py-3 text-white font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 text-base whitespace-nowrap shadow-sm hover:shadow-md transform hover:-translate-y-0.5" style="background-color: #157878; border-color: #157878; color: white;" onmouseover="this.style.backgroundColor='#0f6b6b'; this.style.color='white';" onmouseout="this.style.backgroundColor='#157878'; this.style.color='white';">
             Subscribe
           </button>
         </form>
+        <div id="form-message-1" style="margin-top: 1rem; font-size: 0.9rem; display: none; text-align: center;"></div>
       </div>
     </div>
   </div>
@@ -450,7 +451,7 @@
          <p class="opacity-80 text-sm">Inside the messy plumbing of money movement</p>
        </a>
        <a class="start-here-card" href="/series/ach">
-         <div class="card-icon" style="background: #10b981; color: white;">🏦</div>
+         <div class="card-icon" style="background: #14b8a6; color: white;">🏦</div>
          <h3 class="font-semibold mb-2">ACH Deep Dive</h3>
          <p class="opacity-80 text-sm">Master the $72+ trillion ACH network</p>
        </a>
@@ -475,12 +476,13 @@
     <div class="text-center">
       <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Don't miss when Build, Break, Lead drops</h3>
       <p class="text-gray-600 mb-6 text-lg">Subscribe and I'll send it straight to you.</p>
-      <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex flex-col sm:flex-row gap-3 max-w-md mx-auto; flex justify-center" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
+      <form id="newsletter-form-2" action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex flex-col sm:flex-row gap-3 max-w-md mx-auto; flex justify-center" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
         <input type="email" name="email_address" placeholder="Enter your email" required="" class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-base shadow-sm" />
         <button type="submit" class="px-8 py-3 text-white font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 text-base whitespace-nowrap shadow-sm hover:shadow-md transform hover:-translate-y-0.5" style="background-color: #157878; border-color: #157878; color: white;" onmouseover="this.style.backgroundColor='#0f6b6b'; this.style.color='white';" onmouseout="this.style.backgroundColor='#157878'; this.style.color='white';">
           Subscribe
         </button>
       </form>
+      <div id="form-message-2" style="margin-top: 1rem; font-size: 0.9rem; display: none; text-align: center;"></div>
     </div>
     </div>
   </div>
@@ -937,6 +939,98 @@
 }
 </style>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Handle both newsletter forms
+  function setupForm(formId, messageId) {
+    const form = document.getElementById(formId);
+    const messageDiv = document.getElementById(messageId);
+    
+    if (form) {
+      // Wait a bit for ConvertKit to load, then override its behavior
+      setTimeout(() => {
+        // Remove any existing ConvertKit event listeners
+        const newForm = form.cloneNode(true);
+        form.parentNode.replaceChild(newForm, form);
+        
+        // Add our custom handler to the new form
+        newForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          const email = newForm.querySelector('input[name="email_address"]').value;
+          const button = newForm.querySelector('button[type="submit"]');
+          const originalButtonText = button.textContent;
+          
+          if (!email || !email.includes('@')) {
+            showMessage(messageDiv, '❌ Please enter a valid email address.', 'error');
+            return;
+          }
+          
+          // Show loading state
+          button.textContent = 'Subscribing...';
+          button.disabled = true;
+          
+          // Check if we're on localhost
+          if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+            // Simulate form submission for localhost
+            setTimeout(() => {
+              showMessage(messageDiv, '✅ Thanks for subscribing! (Localhost simulation)', 'success');
+              newForm.reset();
+              button.textContent = originalButtonText;
+              button.disabled = false;
+            }, 1000);
+          } else {
+            // Production submission using ConvertKit API
+            const formData = new FormData();
+            formData.append('email_address', email);
+            formData.append('form', '8443001');
+            
+            fetch('https://app.kit.com/forms/8443001/subscriptions', {
+              method: 'POST',
+              body: formData,
+              mode: 'no-cors' // This is important for ConvertKit
+            })
+            .then(() => {
+              // Since we're using no-cors, we can't read the response
+              // But ConvertKit typically succeeds if the request goes through
+              showMessage(messageDiv, '✅ Thanks for subscribing! Welcome to the community.', 'success');
+              newForm.reset();
+            })
+            .catch(error => {
+              console.error('Subscription error:', error);
+              showMessage(messageDiv, '❌ Something went wrong. Please try again.', 'error');
+            })
+            .finally(() => {
+              button.textContent = originalButtonText;
+              button.disabled = false;
+            });
+          }
+        });
+      }, 1000); // Wait 1 second for ConvertKit to load
+    }
+  }
+  
+  function showMessage(messageDiv, text, type) {
+    if (messageDiv) {
+      messageDiv.textContent = text;
+      messageDiv.style.display = 'block';
+      messageDiv.style.color = type === 'success' ? '#059669' : '#dc2626';
+      messageDiv.style.fontWeight = '500';
+      
+      // Hide message after 5 seconds
+      setTimeout(() => {
+        messageDiv.style.display = 'none';
+      }, 5000);
+    }
+  }
+  
+  // Setup both forms
+  setupForm('newsletter-form-1', 'form-message-1');
+  setupForm('newsletter-form-2', 'form-message-2');
+});
+</script>
+
 
 
 
@@ -1064,7 +1158,7 @@
             <span class="footer-nav-separator">|</span>
             <a href="/about" class="footer-link">About</a>
             <span class="footer-nav-separator">|</span>
-            <a href="#newsletter" class="footer-link">Subscribe</a>
+            <a href="/subscribe" class="footer-link">Subscribe</a>
           </nav>
 
           <!-- Connect Section -->

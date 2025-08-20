@@ -29,7 +29,7 @@ title: "Subscribe"
           <p class="text-gray-600" style="color: #4b5563; line-height: 1.6;">Get new insights every week.</p>
         </div>
         <div class="flex justify-center">
-          <form action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex flex-col sm:flex-row gap-3 w-full max-w-2xl" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
+          <form id="subscribe-form" action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex flex-col sm:flex-row gap-3 w-full max-w-2xl" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
             <input type="email" name="email_address" placeholder="Enter your email" required 
                    class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base shadow-sm">
             <button type="submit" 
@@ -40,6 +40,7 @@ title: "Subscribe"
               Subscribe
             </button>
           </form>
+          <div id="form-message" style="margin-top: 1rem; font-size: 0.9rem; display: none; text-align: center;"></div>
         </div>
     </div>
   </div>
@@ -77,3 +78,88 @@ ul li {
   gap: 12px;
 }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('subscribe-form');
+  const messageDiv = document.getElementById('form-message');
+  
+  if (form) {
+    // Wait a bit for ConvertKit to load, then override its behavior
+    setTimeout(() => {
+      // Remove any existing ConvertKit event listeners
+      const newForm = form.cloneNode(true);
+      form.parentNode.replaceChild(newForm, form);
+      
+      // Add our custom handler to the new form
+      newForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const email = newForm.querySelector('input[name="email_address"]').value;
+        const button = newForm.querySelector('button[type="submit"]');
+        const originalButtonText = button.textContent;
+        
+        if (!email || !email.includes('@')) {
+          showMessage('❌ Please enter a valid email address.', 'error');
+          return;
+        }
+        
+        // Show loading state
+        button.textContent = 'Subscribing...';
+        button.disabled = true;
+        
+        // Check if we're on localhost
+        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+          // Simulate form submission for localhost
+          setTimeout(() => {
+            showMessage('✅ Thanks for subscribing! (Localhost simulation)', 'success');
+            newForm.reset();
+            button.textContent = originalButtonText;
+            button.disabled = false;
+          }, 1000);
+        } else {
+          // Production submission using ConvertKit API
+          const formData = new FormData();
+          formData.append('email_address', email);
+          formData.append('form', '8443001');
+          
+          fetch('https://app.kit.com/forms/8443001/subscriptions', {
+            method: 'POST',
+            body: formData,
+            mode: 'no-cors' // This is important for ConvertKit
+          })
+          .then(() => {
+            // Since we're using no-cors, we can't read the response
+            // But ConvertKit typically succeeds if the request goes through
+            showMessage('✅ Thanks for subscribing! Welcome to the community.', 'success');
+            newForm.reset();
+          })
+          .catch(error => {
+            console.error('Subscription error:', error);
+            showMessage('❌ Something went wrong. Please try again.', 'error');
+          })
+          .finally(() => {
+            button.textContent = originalButtonText;
+            button.disabled = false;
+          });
+        }
+      });
+    }, 1000); // Wait 1 second for ConvertKit to load
+  }
+  
+  function showMessage(text, type) {
+    if (messageDiv) {
+      messageDiv.textContent = text;
+      messageDiv.style.display = 'block';
+      messageDiv.style.color = type === 'success' ? '#059669' : '#dc2626';
+      messageDiv.style.fontWeight = '500';
+      
+      // Hide message after 5 seconds
+      setTimeout(() => {
+        messageDiv.style.display = 'none';
+      }, 5000);
+    }
+  }
+});
+</script>
