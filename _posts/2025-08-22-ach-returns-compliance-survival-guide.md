@@ -78,6 +78,40 @@ ACH returns represent failed payments that need immediate attention. But they're
 
 💡 **Audit note**: Every ACH return must be processed within one banking day of receipt, and every action must be traceable back to the original transaction.
 
+## Sample NACHA File with Returns
+
+Here's what a real NACHA file with returns looks like. This example shows both original entries and their corresponding returns:
+
+```
+# NACHA File Header
+5220BUILDTALES    1234567890PPDACHFILE    250822   1091000019000001
+
+# Original Entry (Debit)
+6220BUILDTALES    1234567890PPDACHFILE    250822   1091000019000001
+1234567890123456789012345678901234567890123456789012345678901234567890
+6*1234567890123456789012345678901234567890123456789012345678901234567890
+7*1234567890123456789012345678901234567890123456789012345678901234567890
+8*1234567890123456789012345678901234567890123456789012345678901234567890
+
+# Return Entry (R01 - Insufficient Funds)
+8220BUILDTALES    1234567890PPDACHFILE    250822   1091000019000001
+1234567890123456789012345678901234567890123456789012345678901234567890
+6*1234567890123456789012345678901234567890123456789012345678901234567890
+7*1234567890123456789012345678901234567890123456789012345678901234567890
+8*1234567890123456789012345678901234567890123456789012345678901234567890
+
+# Return Addenda Record (Contains Return Reason)
+7990BUILDTALES    1234567890PPDACHFILE    250822   1091000019000001
+R01*Insufficient Funds*Original Trace: 1234567890123456789012345678901234567890
+```
+
+**Key Elements in Returns:**
+- **Return Code**: R01 in the addenda record
+- **Return Reason**: "Insufficient Funds" 
+- **Original Trace**: Links back to the original entry
+- **Settlement Date**: When the return was processed
+- **Amount**: Same as original entry (unless partial return)
+
 ## The Return Code Universe: R01 to R85
 
 ACH returns come with standardized codes that tell you exactly what went wrong. Understanding these codes is the first step to proper handling:

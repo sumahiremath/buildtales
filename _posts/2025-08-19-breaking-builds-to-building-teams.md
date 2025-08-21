@@ -41,6 +41,10 @@ syndication:
 
 # Breaking Builds to Building Teams: How QA Sculpted Me Into an Engineering Leader
 
+Published on: August 19, 2025
+
+![Breaking Builds to Building Teams](/assets/banners/resized/20250819qatolead-blog.jpg)
+
 I didn't set out to be an engineering leader. I started in QA — breaking builds, filing bugs, and thinking of every possible way software could fail. At the time, it felt like my role was to slow things down.
 
 What I didn't realize then was that QA was sculpting me for leadership. The habits I built as a QA engineer — systems thinking, risk awareness, prioritization, empathy — became the foundation for how I lead teams today.
