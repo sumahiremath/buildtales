@@ -2,8 +2,8 @@
 layout: default
 title: "ACH: The Good, The Bad, and The Ugly"
 date: 2025-08-20
-categories: [fintech, payments]
-section: "Phase 1: Understanding the Rails"
+categories: [fintech, payments, ach]
+section: "ACH Fundamentals"
 tags: [ach, nacha, payments, reconciliation, same-day-ach, fintech-operations]
 excerpt: "Still powering trillions. Still moving like it's stuck in fax machine mode. ACH is the OG payments backbone that's both the foundation and frustration of American finance."
 banner_image: "/assets/banners/resized/20250820goodbadugly-blog.jpg"
@@ -37,21 +37,10 @@ syndication:
   republish_allowed: true
   canonical_source: "BuildTales.dev"
 
-# Series information
-series:
-  name: "How U.S. Payments Really Work"
-  index_url: "/series/payments"
-  part: 3
-  total_parts: 45
+
 ---
 
-<!-- Series Navigation -->
-<div style="background: #f8f9fa; border-left: 4px solid #007acc; padding: 1rem; margin: 1rem 0;">
-  <strong>Part 3 of the "How U.S. Payments Really Work" Series</strong><br>
-  <a href="/fintech/payments/2025/08/14/wire-transfers-explained.html">← Previous: Wire Transfers</a> | 
-  <a href="/series/payments">View complete series roadmap</a> | 
-  <em>Next: ACH Cutoffs: The Hidden Clock That Breaks Your UX (Coming Aug 27)</em>
-</div>
+{% include ach_series_nav.html post=post %}
 
 # ACH: The Good, The Bad, and The Ugly
 
@@ -495,10 +484,4 @@ The next article in this series dives deep into **ACH cutoff times** — the hid
 
 ---
 
-<!-- Series Navigation -->
-<div style="background: #f8f9fa; border-left: 4px solid #007acc; padding: 1rem; margin: 1rem 0;">
-  <strong>"How U.S. Payments Really Work" Series Navigation</strong><br>
-  <a href="/fintech/payments/2025/08/14/wire-transfers-explained.html">← Previous: Wire Transfers</a> | 
-  <a href="/series/payments">View complete series roadmap</a> | 
-  <em>Next: ACH Cutoffs: The Hidden Clock That Breaks Your UX (Coming Aug 27)</em>
-</div>
+

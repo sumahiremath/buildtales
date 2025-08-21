@@ -41,6 +41,8 @@ syndication:
 
 # When a Supposedly Quarter-Long Project Became My Real EM Baptism
 
+{% include systems_series_nav.html post=post %}
+
 ![mousefinish](/assets/banners/resized/20250818mousefinish-blog.jpg)
 
 Every engineering manager (EM) remembers their first big project. For me, it was integrating a third-party service provider with a client's bank.

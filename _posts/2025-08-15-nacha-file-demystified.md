@@ -41,6 +41,8 @@ syndication:
 
 # NACHA File Demystified: Cracking the 94-Character Code
 
+{% include ach_series_nav.html post=post %}
+
 ![NACHA Demystified Banner](/assets/banners/resized/20250815nachafile-blog.jpg)
 
 Picture this: You're building a payroll system, and your first ACH file submission gets rejected with a cryptic "Invalid field length at position 47." Meanwhile, $72 trillion moves through these exact same files every year without a hitch.

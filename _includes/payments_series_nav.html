@@ -1,0 +1,62 @@
+{% comment %}
+  Payments Series Navigation
+  Usage: {% include payments_series_nav.html post=post %}
+  
+  This include provides article-level navigation for the payments series,
+  showing which part of the series the current article is and providing
+  navigation to the previous and next payments articles.
+{% endcomment %}
+
+{% assign payments_posts = site.posts | where_exp: "post", "post.categories contains 'payments'" | sort: 'date' %}
+
+{% comment %} Find current article position {% endcomment %}
+{% assign current_index = -1 %}
+{% for payments_post in payments_posts %}
+  {% if payments_post.title == post.title %}
+    {% assign current_index = forloop.index0 %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% comment %} Calculate part number and navigation {% endcomment %}
+{% assign part_number = current_index | plus: 1 %}
+{% assign prev_post = nil %}
+{% assign next_post = nil %}
+
+{% if current_index > 0 %}
+  {% assign prev_index = current_index | minus: 1 %}
+  {% for payments_post in payments_posts %}
+    {% if forloop.index0 == prev_index %}
+      {% assign prev_post = payments_post %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if current_index < payments_posts.size | minus: 1 %}
+  {% assign next_index = current_index | plus: 1 %}
+  {% for payments_post in payments_posts %}
+    {% if forloop.index0 == next_index %}
+      {% assign next_post = payments_post %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<div class="article-series-nav">
+  <div class="series-navigation-links">
+    {% if prev_post %}
+      <a href="{{ prev_post.url }}" class="series-nav-prev">← {{ prev_post.title | truncate: 40 }}</a>
+    {% else %}
+      <span class="series-nav-prev disabled">← Previous</span>
+    {% endif %}
+    
+    <a href="/series/payments" class="series-nav-roadmap">View payments series roadmap</a>
+    
+    {% if next_post %}
+      <a href="{{ next_post.url }}" class="series-nav-next">{{ next_post.title | truncate: 40 }} →</a>
+    {% else %}
+      <span class="series-nav-next disabled">Next →</span>
+    {% endif %}
+  </div>
+</div>

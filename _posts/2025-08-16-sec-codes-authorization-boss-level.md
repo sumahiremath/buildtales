@@ -39,6 +39,8 @@ syndication:
 
 # SEC Codes in ACH: Authorization, Compliance, and How to Not Get Burned 
 
+{% include ach_series_nav.html post=post %}
+
 ![image info](/assets/banners/resized/20250816seccode-blog.jpg)
 
 We once misclassified a whole batch of ACH payments — and our bank noticed immediately. Within days, we had a compliance warning sitting in our inbox and a very clear message: *fix your SEC codes, or else.*  

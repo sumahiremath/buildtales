@@ -19,6 +19,8 @@ banner_color: "#157878"
 
 # The Engineering Leader's Survival Guide to Compliance
 
+{% include leadership_series_nav.html post=post %}
+
 ![EL Survial](/assets/banners/resized/20250821elcompliancesurvial-blog.jpg)
 
 ### *Welcome to the Regulated Arena!*
