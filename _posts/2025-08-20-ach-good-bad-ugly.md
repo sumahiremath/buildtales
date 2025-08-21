@@ -55,8 +55,6 @@ series:
 
 # ACH: The Good, The Bad, and The Ugly
 
-*Published on: August 20, 2025*
-
 ![ACH Good Bad Ugly Banner](/assets/banners/resized/20250820goodbadugly-blog.jpg)
 
 **Still powering trillions. Still moving like it's stuck in fax machine mode.**

@@ -19,8 +19,6 @@ banner_color: "#157878"
 
 # The Engineering Leader's Survival Guide to Compliance
 
-*Published on: August 21, 2025*
-
 ![EL Survial](/assets/banners/resized/20250821elcompliancesurvial-blog.jpg)
 
 ### *Welcome to the Regulated Arena!*

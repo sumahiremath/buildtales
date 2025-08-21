@@ -53,8 +53,6 @@ series:
 
 # How Money Moves In and Out of Your Bank Account?
 
-*Published on: August 13, 2025*
-
 ![Money Flow](/assets/banners/resized/20250813moneyflow-blog.jpg)
 
 Ever wonder how your paycheck shows up in your bank account on payday? Or how your gym magically pulls your membership fee every month? That's all thanks to a behind-the-scenes hero called **ACH** (Automated Clearing House).

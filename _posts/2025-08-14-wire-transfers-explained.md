@@ -54,8 +54,6 @@ series:
 
 # Wire Transfers Explained: Fast, Final, and Expensive
 
-*Published on: August 14, 2025*
-
 ![Wire Transfers](/assets/banners/resized/20250814wiretransfer-blog.jpg)
 
 A wire transfer is like telling your bank: **"Move this money to another bank account — right now. No batching. No waiting."**

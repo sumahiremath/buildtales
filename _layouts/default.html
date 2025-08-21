@@ -192,6 +192,31 @@
           color: #666;
         }
         
+        /* Published date styling */
+        .published-date {
+          text-align: center;
+          color: #6b7280;
+          font-size: 0.875rem;
+          margin: 1rem 0 2rem 0;
+          padding: 0.5rem 0;
+          border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .published-date em {
+          font-style: italic;
+          color: #9ca3af;
+        }
+        
+        /* Full-width banner images */
+        .main-content img {
+          width: 100vw !important;
+          margin-left: calc(-50vw + 50%) !important;
+          margin-right: calc(-50vw + 50%) !important;
+          max-width: none !important;
+          height: auto !important;
+          display: block !important;
+        }
+        
         /* Mobile adjustments */
         @media (max-width: 768px) {
           #header-search {
@@ -349,6 +374,12 @@
     </header>
 
     <main id="content" class="main-content" role="main">
+      {% if page.date %}
+        <div class="published-date">
+          <em>Published on: {{ page.date | date: "%B %d, %Y" }}</em>
+        </div>
+      {% endif %}
+      
       {{ content }}
 
       <!-- Add comments to blog posts -->
