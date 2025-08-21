@@ -9,63 +9,57 @@ title: Engineering Leadership Series
 <div class="toc-container">
   <h2 class="toc-title">Topics</h2>
   <nav class="toc-nav">
-    <a href="#phase-1" class="toc-link">Vision & Planning</a>
-    <a href="#phase-2" class="toc-link">Strategies & Tactics</a>
-    <a href="#phase-3" class="toc-link">Execute & Assess</a>
+    <a href="#section-1" class="toc-link">Vision & Planning</a>
+    <a href="#section-2" class="toc-link">Strategies & Tactics</a>
+    <a href="#section-3" class="toc-link">Execute & Assess</a>
   </nav>
 </div>
 
 <!-- Series Articles -->
 <div class="series-articles-container">
   {% assign leadership_posts = site.posts | where_exp: "post", "post.categories contains 'leadership'" | sort: 'date' %}
-  {% assign management_posts = site.posts | where_exp: "post", "post.categories contains 'management'" | sort: 'date' %}
-  {% assign all_leadership_posts = leadership_posts | concat: management_posts | uniq %}
-  {% assign grouped_posts = all_leadership_posts | group_by: "section" | sort: "name" %}
-  
-  {% for group in grouped_posts %}
-    <section class="phase-section" id="phase-{{ forloop.index }}">
-      <h2 class="phase-title">{{ group.name | default: "Leadership Articles" }}</h2>
-      {% if group.name == "Vision & Planning" %}
-        <p class="phase-description">Turn chaos into clarity and turn vague ideas into actionable plans</p>
-      {% elsif group.name == "Strategies & Tactics" %}
-        <p class="phase-description">Translate vision into game plans and navigate the messy middle between planning and execution.</p>
-      {% elsif group.name == "Execute & Assess" %}
-        <p class="phase-description">Get things done and lessons learned</p>
-      {% endif %}
-      
-      <div class="articles-grid">
-        {% assign current_date = site.time | date: '%s' %}
-        {% for post in group.items %}
-          {% assign post_date = post.date | date: '%s' %}
-          {% if post.draft %}
-            <div class="article-card draft-card">
-              <div class="card-content">
-                <h3 class="article-title">{{ post.title }}</h3>
-                <p class="article-date">{{ post.date | date: "%B %d, %Y" }}</p>
-                <span class="status-badge draft">Draft</span>
-              </div>
-            </div>
-          {% elsif post_date > current_date %}
-            <div class="article-card future-card">
-              <div class="card-content">
-                <h3 class="article-title">{{ post.title }}</h3>
-                <p class="article-date">{{ post.date | date: "%B %d, %Y" }}</p>
-                <span class="status-badge future">Coming Soon</span>
-              </div>
-            </div>
-          {% else %}
-            <a href="{{ post.url }}" class="article-card published-card">
-              <div class="card-content">
-                <h3 class="article-title">{{ post.title }}</h3>
-                <p class="article-date">{{ post.date | date: "%B %d, %Y" }}</p>
-                <span class="status-badge published">Published</span>
-              </div>
-            </a>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </section>
-  {% endfor %}
+
+  <!-- Vision & Planning Section -->
+  <section class="section-section" id="section-1">
+    <h2 class="phase-title">Vision & Planning</h2>
+    <p class="phase-description">Turn chaos into clarity and transform vague ideas into actionable plans.</p>
+
+    <div class="articles-grid">
+      {% for post in leadership_posts %}
+        {% if post.section contains 'Vision & Planning' or post.section contains 'Management' %}
+          {% include article_card.html post=post %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Strategies & Tactics Section -->
+  <section class="section-section" id="section-2">
+    <h2 class="phase-title">Strategies & Tactics</h2>
+    <p class="phase-description">Translate vision into game plans and navigate the messy middle between planning and execution.</p>
+
+    <div class="articles-grid">
+      {% for post in leadership_posts %}
+        {% if post.section contains 'Strategies & Tactics' %}
+          {% include article_card.html post=post %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Execute & Assess Section -->
+  <section class="section-section" id="section-3">
+    <h2 class="phase-title">Execute & Assess</h2>
+    <p class="phase-description">Get things done and learn lessons from execution.</p>
+
+    <div class="articles-grid">
+      {% for post in leadership_posts %}
+        {% if post.section contains 'Execute & Assess' %}
+          {% include article_card.html post=post %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
 </div>
 
 <style>
@@ -175,24 +169,27 @@ title: Engineering Leadership Series
 }
 
 /* Phase Section Styling */
-.phase-section {
+.section-section {
   margin-bottom: 3rem;
 }
 
 .phase-title {
-  font-size: 1.875rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 700;
   color: #111827;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid #e5e7eb;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .phase-description {
-  color: #6b7280;
+  color: #4b5563;
   font-size: 1.125rem;
   margin-bottom: 1.5rem;
   line-height: 1.6;
+  font-weight: 500;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* Card Content Styling */
@@ -208,6 +205,7 @@ title: Engineering Leadership Series
   color: #111827;
   margin: 0;
   line-height: 1.4;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .article-date {
