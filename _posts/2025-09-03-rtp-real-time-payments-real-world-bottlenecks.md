@@ -15,6 +15,7 @@ banner_color: "#059669"
 
 *The rail that's ready for the future—but held back by the past.*
 
+![rtp](/assets/banners/resized/20250903rtp-blog.jpg)
 ## What Is RTP?
 
 Real-Time Payments (RTP) represents the future of money movement in the United States. Launched in 2017 by The Clearing House (TCH), RTP promised to deliver instant, irrevocable payments with rich messaging capabilities. As we approach 2025, the reality is more nuanced than the marketing suggests.
@@ -57,7 +58,7 @@ Because RTP payments are instant and irrevocable, the sender bears full risk of 
 ### Inconsistent Interfaces
 Each bank exposes RTP differently—some provide APIs, others require middleware or have feature gaps. This breaks the "it just works" expectation for developers.
 
-### No Interop with FedNow
+### No Interoperability with FedNow
 FedNow (launched 2023) and RTP are parallel rails with no bridge. Developers must pick one—or build for both.
 
 ## The Ugly: Integration Reality
@@ -127,6 +128,20 @@ Despite advantages, RTP won't replace ACH soon because:
 - Legacy bank cores resist real-time processing
 - Businesses value ACH's delay and dispute mechanisms for risk control
 
+### RTP vs. Credit Cards: Key Differences
+
+Understanding how RTP differs from credit cards helps clarify when to use each rail:
+
+| Aspect | RTP | Credit Cards |
+|--------|-----|--------------|
+| **Authorization vs. Settlement** | No separate authorization—payment is settlement | Two-phase: authorization (instant) + settlement (delayed) |
+| **Card Networks** | Direct bank-to-bank, no network intermediary | Visa, Mastercard, AmEx, Discover act as intermediaries |
+| **"Instant" Reality** | Truly instant settlement and finality | Instant approval, but 1-3 day settlement delay |
+| **Settlement Timing** | Real-time, 24/7/365 | Batch processing, business day cycles |
+| **Chargebacks & Disputes** | No reversals—final means final | Months-long dispute windows, chargeback processes |
+
+**Key Insight**: RTP eliminates the "authorization vs. settlement" gap that creates reconciliation headaches in credit card systems. When an RTP payment completes, the money has actually moved—no waiting, no batch processing, no settlement failures.
+
 ## Final Take
 
 RTP is the rail U.S. fintech desperately needs—and still struggles to adopt. It's fast, final, and modern, but bank enablement, integration hurdles, and lack of standard APIs slow adoption.
@@ -177,5 +192,3 @@ The technology is ready. The ecosystem just needs to catch up.
 10. **Fintech Futures**. The Integration Reality of Real-Time Payments. January 2025.
 
 ---
-
-*This article is part of the [Payments Series](/series/payments), exploring the infrastructure that moves money in the modern economy. Next up: we'll examine FedNow and how it compares to RTP in the race for real-time payment dominance.*
