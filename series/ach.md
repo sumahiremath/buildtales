@@ -18,52 +18,44 @@ title: ACH Series
 <!-- Series Articles -->
 <div class="series-articles-container">
   {% assign ach_posts = site.posts | where_exp: "post", "post.categories contains 'ach'" | sort: 'date' %}
-  {% assign grouped_posts = ach_posts | group_by: "section" | sort: "name" %}
   
-  {% for group in grouped_posts %}
-    <section class="section-section" id="section-{{ forloop.index }}">
-      <h2 class="phase-title">{{ group.name | default: "ACH Articles" }}</h2>
-      {% if group.name == "Phase 1: ACH Fundamentals" %}
-        <p class="phase-description">Core concepts and understanding of how ACH works.</p>
-      {% elsif group.name == "Phase 2: ACH Operations & Compliance" %}
-        <p class="phase-description">Operational aspects, compliance requirements, and best practices.</p>
-      {% elsif group.name == "Phase 3: Advanced ACH Concepts" %}
-        <p class="phase-description">Advanced implementations, integrations, and system design.</p>
-      {% endif %}
-      
-      <div class="articles-grid">
-        {% assign current_date = site.time | date: '%s' %}
-        {% for post in group.items %}
-          {% assign post_date = post.date | date: '%s' %}
-          {% if post.draft %}
-            <div class="article-card draft-card">
-              <div class="card-content">
-                <h3 class="article-title">{{ post.title }}</h3>
-                <p class="article-date">{{ post.date | date: "%B %d, %Y" }}</p>
-                <span class="status-badge draft">Draft</span>
-              </div>
-            </div>
-          {% elsif post_date > current_date %}
-            <div class="article-card future-card">
-              <div class="card-content">
-                <h3 class="article-title">{{ post.title }}</h3>
-                <p class="article-date">{{ post.date | date: "%B %d, %Y" }}</p>
-                <span class="status-badge future">Coming Soon</span>
-              </div>
-            </div>
-          {% else %}
-            <a href="{{ post.url }}" class="article-card published-card">
-              <div class="card-content">
-                <h3 class="article-title">{{ post.title }}</h3>
-                <p class="article-date">{{ post.date | date: "%B %d, %Y" }}</p>
-                <span class="status-badge published">Published</span>
-              </div>
-            </a>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </section>
-  {% endfor %}
+  <!-- ACH Fundamentals Section -->
+  <section class="section-section" id="section-1">
+    <h2 class="phase-title">ACH Fundamentals</h2>
+    <p class="phase-description">Master the basics before you build. Understand how money actually moves through the ACH network.</p>
+    
+    <div class="articles-grid">
+      {% assign fundamentals_posts = ach_posts | where_exp: "post", "post.section contains 'Fundamentals' or post.section contains 'Understanding the Rails'" %}
+      {% for post in fundamentals_posts %}
+        {% include article_card.html post=post %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- ACH Operations & Compliance Section -->
+  <section class="section-section" id="section-2">
+    <h2 class="phase-title">ACH Operations & Compliance</h2>
+    <p class="phase-description">Where theory meets reality. Learn to handle the daily chaos of ACH operations while staying compliant.</p>
+    
+    <div class="articles-grid">
+      {% assign operations_posts = ach_posts | where_exp: "post", "post.section contains 'Operations' or post.section contains 'Compliance'" %}
+      {% for post in operations_posts %}
+        {% include article_card.html post=post %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Advanced Concepts Section -->
+  <section class="section-section" id="section-7">
+    <h2 class="phase-title">Advanced ACH Concepts</h2>
+    <p class="phase-description"> Push the boundaries of what's possible</p>
+    
+    <div class="articles-grid">
+      {% assign advanced_posts = ach_posts | where_exp: "post", "post.section contains 'Advanced' or post.section contains 'Enterprise' or post.section contains 'Performance'" %}
+      {% for post in advanced_posts %}
+        {% include article_card.html post=post %}
+      {% endfor %}
+    </div>
 </div>
 
 <style>
@@ -173,24 +165,27 @@ title: ACH Series
 }
 
 /* Phase Section Styling */
-.phase-section {
+.section-section {
   margin-bottom: 3rem;
 }
 
 .phase-title {
-  font-size: 1.875rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 700;
   color: #111827;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid #e5e7eb;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .phase-description {
-  color: #6b7280;
+  color: #4b5563;
   font-size: 1.125rem;
   margin-bottom: 1.5rem;
   line-height: 1.6;
+  font-weight: 500;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* Card Content Styling */
@@ -206,6 +201,7 @@ title: ACH Series
   color: #111827;
   margin: 0;
   line-height: 1.4;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .article-date {
