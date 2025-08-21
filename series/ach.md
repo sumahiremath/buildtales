@@ -25,9 +25,10 @@ title: ACH Series
     <p class="phase-description">Master the basics before you build. Understand how money actually moves through the ACH network.</p>
     
     <div class="articles-grid">
-      {% assign fundamentals_posts = ach_posts | where_exp: "post", "post.section contains 'Fundamentals' or post.section contains 'Understanding the Rails'" %}
-      {% for post in fundamentals_posts %}
-        {% include article_card.html post=post %}
+      {% for post in ach_posts %}
+        {% if post.section contains 'Fundamentals' or post.section contains 'Understanding the Rails' %}
+          {% include article_card.html post=post %}
+        {% endif %}
       {% endfor %}
     </div>
   </section>
@@ -38,24 +39,27 @@ title: ACH Series
     <p class="phase-description">Where theory meets reality. Learn to handle the daily chaos of ACH operations while staying compliant.</p>
     
     <div class="articles-grid">
-      {% assign operations_posts = ach_posts | where_exp: "post", "post.section contains 'Operations' or post.section contains 'Compliance'" %}
-      {% for post in operations_posts %}
-        {% include article_card.html post=post %}
+      {% for post in ach_posts %}
+        {% if post.section contains 'Operations' or post.section contains 'Compliance' %}
+          {% include article_card.html post=post %}
+        {% endif %}
       {% endfor %}
     </div>
   </section>
 
   <!-- Advanced Concepts Section -->
-  <section class="section-section" id="section-7">
+  <section class="section-section" id="section-3">
     <h2 class="phase-title">Advanced ACH Concepts</h2>
-    <p class="phase-description"> Push the boundaries of what's possible</p>
+    <p class="phase-description">Push the boundaries of what's possible. Enterprise integrations, performance optimization, and cutting-edge ACH implementations.</p>
     
     <div class="articles-grid">
-      {% assign advanced_posts = ach_posts | where_exp: "post", "post.section contains 'Advanced' or post.section contains 'Enterprise' or post.section contains 'Performance'" %}
-      {% for post in advanced_posts %}
-        {% include article_card.html post=post %}
+      {% for post in ach_posts %}
+        {% if post.section contains 'Advanced' or post.section contains 'Enterprise' or post.section contains 'Performance' %}
+          {% include article_card.html post=post %}
+        {% endif %}
       {% endfor %}
     </div>
+  </section>
 </div>
 
 <style>

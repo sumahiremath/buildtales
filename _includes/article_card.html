@@ -1,0 +1,28 @@
+{% assign current_date = site.time | date: '%s' %}
+{% assign post_date = post.date | date: '%s' %}
+
+{% if post.draft %}
+  <div class="article-card draft-card">
+    <div class="card-content">
+      <h3 class="article-title">{{ post.title }}</h3>
+      <p class="article-date">{{ post.date | date: "%B %d, %Y" }}</p>
+      <span class="status-badge draft">Draft</span>
+    </div>
+  </div>
+{% elsif post_date > current_date %}
+  <div class="article-card future-card">
+    <div class="card-content">
+      <h3 class="article-title">{{ post.title }}</h3>
+      <p class="article-date">{{ post.date | date: "%B %d, %Y" }}</p>
+      <span class="status-badge future">Coming Soon</span>
+    </div>
+  </div>
+{% else %}
+  <a href="{{ post.url }}" class="article-card published-card">
+    <div class="card-content">
+      <h3 class="article-title">{{ post.title }}</h3>
+      <p class="article-date">{{ post.date | date: "%B %d, %Y" }}</p>
+      <span class="status-badge published">Published</span>
+    </div>
+  </a>
+{% endif %}

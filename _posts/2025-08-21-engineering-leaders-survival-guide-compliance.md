@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "The Engineering Leader's Survival Guide to Compliance"
 date: 2025-08-21
 categories: [leadership, management]
