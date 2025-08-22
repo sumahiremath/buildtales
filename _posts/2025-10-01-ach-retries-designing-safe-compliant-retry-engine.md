@@ -5,9 +5,9 @@ date: 2025-10-01
 categories: [payments]
 section: "Phase 1: Understanding the Rails"
 excerpt: "Why retries are not just a technical decision — they're a regulatory minefield that requires compliance-first design."
-banner_image: "/assets/banners/resized/20251001achretries-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20251001achretries-recent.jpg"
-banner_image_series: "/assets/banners/resized/20251001achretries-series.jpg"
+banner_image: "/assets/banners/resized/20251001achretry-blog.jpg"
+banner_image_recent: "/assets/banners/resized/20251001achretry-recent.jpg"
+banner_image_series: "/assets/banners/resized/20251001achretry-series.jpg"
 banner_color: "#dc2626"
 ---
 
@@ -15,7 +15,9 @@ banner_color: "#dc2626"
 
 *Why retries are not just a technical decision — they're a regulatory minefield.*
 
-ACH retries are one of the trickiest payment system pain points. They sit at the intersection of **Reg E compliance**, **user trust**, and **technical resilience**. If you build retry logic like you build HTTP retries, you'll end up in **NACHA/CFPB hell**.
+![ACH retry Banner](/assets/banners/resized/20251001achretry-blog.jpg)
+
+ACH retry are one of the trickiest payment system pain points. They sit at the intersection of **Reg E compliance**, **user trust**, and **technical resilience**. If you build retry logic like you build HTTP retries, you'll end up in **NACHA/CFPB hell**.
 
 This article explores why ACH retries are fundamentally different from other retry mechanisms, and how to design systems that respect both regulatory requirements and user expectations.
 
