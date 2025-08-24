@@ -1,0 +1,116 @@
+# Cursor Rules for Build Tales Project
+
+## Project Overview
+Build Tales is a comprehensive technical blog and resource site focused on engineering leadership, U.S. payments systems (ACH, wire transfers, crypto), and building great software teams. The content spans from deep technical dives into payment infrastructure to practical engineering leadership advice.
+
+## Content Categories & Focus Areas
+
+### 🚀 U.S. Payments Series
+- **ACH (Automated Clearing House)**: Deep dives into ACH fundamentals, operations, compliance, and system design
+- **Wire Transfers**: Real-time payment systems, FedNow, RTP, and cross-border transfers
+- **Crypto & Stablecoins**: DeFi infrastructure, on/off ramps, and crypto payment rails
+- **Payment Processing**: Risk management, compliance, reconciliation, and scaling challenges
+- **Regulatory Compliance**: SEC codes, NACHA rules, Reg E, UDAAP, and legal frameworks
+
+### ⚡ Engineering Leadership Series
+- **Team Building**: Scaling teams, culture development, and organizational design
+- **Technical Leadership**: From first tech lead to VP of Engineering
+- **Compliance & Risk**: Engineering leadership in regulated environments
+- **Systems Thinking**: Building resilient, scalable architectures
+- **Incident Management**: Designing for failure and building incident response habits
+
+### 🛡️ Systems & Architecture Series
+- **Payment System Design**: High-volume transaction processing, reconciliation, and monitoring
+- **Resilience Engineering**: Designing systems that handle failures gracefully
+- **Scalability Patterns**: Lessons from systems handling millions of transactions
+- **Compliance Architecture**: Building systems that meet regulatory requirements
+- **Third-Party Integration**: Working with service providers and external systems
+
+### 🏦 Fintech Deep Dives
+- **Banking Infrastructure**: Understanding the plumbing of money movement
+- **Risk Management**: Fraud detection, chargebacks, and financial risk
+- **Compliance Engineering**: Building systems that stay within regulatory thresholds
+- **Audit & Monitoring**: Engineering approaches to compliance and oversight
+
+## Writing Style & Tone
+- **Technical Depth**: Provide actionable, implementation-ready insights
+- **Professional but Accessible**: Write for intermediate to senior developers and engineering leaders
+- **Real-World Focus**: Include practical examples, code snippets, and real scenarios
+- **Story-Driven**: Use narratives and case studies to illustrate technical concepts
+- **Actionable**: Every article should provide concrete takeaways and implementation guidance
+
+## Technical Content Standards
+- **Code Examples**: Include practical, production-ready code snippets
+- **Architecture Diagrams**: Use clear visual representations of system designs
+- **Real Scenarios**: Base examples on actual fintech and payment system challenges
+- **Compliance Context**: Always consider regulatory implications in technical solutions
+- **Performance Focus**: Emphasize scalability, reliability, and efficiency
+
+## Content Structure & Format
+- **Series Navigation**: Each article should include proper series navigation based on category
+- **Banner Images**: Use consistent banner image naming from /assets/banners/resized/
+- **Progressive Complexity**: Build from fundamentals to advanced implementation
+- **Practical Examples**: Include before/after comparisons and real-world scenarios
+- **Action Items**: End sections with clear next steps and implementation guidance
+
+## Technical Accuracy Requirements
+- **Payment Systems**: Verify ACH rules, NACHA requirements, and regulatory frameworks
+- **Compliance**: Ensure accuracy in SEC codes, Reg E, UDAAP, and other regulations
+- **Technical Details**: Verify API specifications, system limits, and performance characteristics
+- **Regulatory Updates**: Keep current with changing compliance requirements
+- **Industry Standards**: Reference official documentation and industry best practices
+
+## Visual & Interactive Elements
+- **Banner Images**: Use consistent naming: [topic]-blog.jpg, [topic]-recent.jpg, [topic]-series.jpg
+- **Color Scheme**: Primary color #157878 (teal) for branding consistency
+- **Diagrams**: Include system architecture diagrams and flow charts
+- **Code Highlighting**: Use proper syntax highlighting for different languages
+- **Mobile Responsiveness**: Ensure all content works well on mobile devices
+
+## SEO & Accessibility
+- **Descriptive Headings**: Use clear, search-friendly section headers
+- **Alt Text**: Include descriptive alt text for all images and diagrams
+- **Semantic Structure**: Use proper HTML structure for accessibility
+- **Internal Linking**: Link between related articles and series
+- **Meta Descriptions**: Write compelling excerpts that encourage reading
+
+## Content Maintenance
+- **Regular Updates**: Keep payment system information current with industry changes
+- **Regulatory Changes**: Monitor and update compliance-related content
+- **Technical Accuracy**: Verify technical details against current specifications
+- **Link Validation**: Ensure all external links remain valid
+- **Performance Monitoring**: Track content performance and user engagement
+
+## Code Quality Standards
+- **Production Ready**: All code examples should be immediately usable
+- **Error Handling**: Include proper error handling and edge case management
+- **Security Focus**: Emphasize security best practices in all examples
+- **Testing**: Include testing strategies and validation approaches
+- **Documentation**: Provide clear comments and implementation notes
+
+## Series-Specific Guidelines
+
+### ACH Series
+- Focus on practical implementation challenges
+- Include compliance checklists and monitoring strategies
+- Address common pitfalls and failure modes
+- Provide audit and reconciliation guidance
+
+### Leadership Series
+- Include real management scenarios and decision frameworks
+- Address team scaling challenges and cultural development
+- Provide practical tools and templates for engineering leaders
+- Focus on compliance and risk management in leadership contexts
+
+### Systems Series
+- Emphasize resilience and failure handling
+- Include performance monitoring and alerting strategies
+- Address compliance requirements in system design
+- Provide scaling patterns and architectural trade-offs
+
+## Content Creation Workflow
+- **Research Phase**: Verify technical details and regulatory requirements
+- **Outline Development**: Create structured content with clear progression
+- **Technical Review**: Ensure accuracy of code examples and system descriptions
+- **Compliance Check**: Verify regulatory accuracy and current requirements
+- **User Experience**: Ensure content is accessible and actionable for target audience
