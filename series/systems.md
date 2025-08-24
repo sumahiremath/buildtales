@@ -9,63 +9,87 @@ title: Systems & Architecture Series
 <div class="toc-container">
   <h2 class="toc-title">Topics</h2>
   <nav class="toc-nav">
-    <a href="#phase-1" class="toc-link">System Design Fundamentals</a>
-    <a href="#phase-2" class="toc-link">Scalability & Performance</a>
-    <a href="#phase-3" class="toc-link">Advanced Architecture Patterns</a>
+    <a href="#section-1" class="toc-link">System Design Fundamentals</a>
+    <a href="#section-2" class="toc-link">Scalability & Performance</a>
+    <a href="#section-3" class="toc-link">Advanced Architecture Patterns</a>
+    <a href="#section-4" class="toc-link">Distributed Systems & Microservices</a>
+    <a href="#section-5" class="toc-link">Leveraging AI Tools</a>
   </nav>
 </div>
 
 <!-- Series Articles -->
 <div class="series-articles-container">
   {% assign systems_posts = site.posts | where_exp: "post", "post.categories contains 'systems'" | sort: 'date' %}
-  {% assign engineering_posts = site.posts | where_exp: "post", "post.categories contains 'engineering'" | sort: 'date' %}
-  {% assign all_systems_posts = systems_posts | concat: engineering_posts %}
-  {% assign grouped_posts = all_systems_posts | group_by: "section" | sort: "name" %}
-  
-  {% for group in grouped_posts %}
-    <section class="phase-section" id="phase-{{ forloop.index }}">
-      <h2 class="phase-title">{{ group.name | default: "Systems Articles" }}</h2>
-      {% if group.name == "Phase 1: System Design Fundamentals" %}
-        <p class="phase-description">Core principles of system design, architecture patterns, and foundational concepts.</p>
-      {% elsif group.name == "Phase 2: Scalability & Performance" %}
-        <p class="phase-description">Building scalable systems, performance optimization, and operational excellence.</p>
-      {% elsif group.name == "Phase 3: Advanced Architecture Patterns" %}
-        <p class="phase-description">Advanced patterns, distributed systems, and cutting-edge architectural approaches.</p>
-      {% endif %}
-      
-      <div class="articles-grid">
-        {% assign current_date = site.time | date: '%s' %}
-        {% for post in group.items %}
-          {% assign post_date = post.date | date: '%s' %}
-          {% if post.draft %}
-            <div class="article-card draft-card">
-              <div class="card-content">
-                <h3 class="article-title">{{ post.title }}</h3>
-                <p class="article-date">{{ post.date | date: "%B %d, %Y" }}</p>
-                <span class="status-badge draft">Draft</span>
-              </div>
-            </div>
-          {% elsif post_date > current_date %}
-            <div class="article-card future-card">
-              <div class="card-content">
-                <h3 class="article-title">{{ post.title }}</h3>
-                <p class="article-date">{{ post.date | date: "%B %d, %Y" }}</p>
-                <span class="status-badge future">Coming Soon</span>
-              </div>
-            </div>
-          {% else %}
-            <a href="{{ post.url }}" class="article-card published-card">
-              <div class="card-content">
-                <h3 class="article-title">{{ post.title }}</h3>
-                <p class="article-date">{{ post.date | date: "%B %d, %Y" }}</p>
-                <span class="status-badge published">Published</span>
-              </div>
-            </a>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </section>
-  {% endfor %}
+
+  <!-- System Design Fundamentals Section -->
+  <section class="section-section" id="section-1">
+    <h2 class="phase-title">System Design Fundamentals</h2>
+    <p class="phase-description">Core principles of system design, architecture patterns, and foundational concepts.</p>
+
+    <div class="articles-grid">
+      {% for post in systems_posts %}
+        {% if post.section contains 'System Design Fundamentals' %}
+          {% include article_card.html post=post %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Scalability & Performance Section -->
+  <section class="section-section" id="section-2">
+    <h2 class="phase-title">Scalability & Performance</h2>
+    <p class="phase-description">Building scalable systems, performance optimization, and operational excellence.</p>
+
+    <div class="articles-grid">
+      {% for post in systems_posts %}
+        {% if post.section contains 'Scalability & Performance' %}
+          {% include article_card.html post=post %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Advanced Architecture Patterns Section -->
+  <section class="section-section" id="section-3">
+    <h2 class="phase-title">Advanced Architecture Patterns</h2>
+    <p class="phase-description">Advanced patterns, distributed systems, and cutting-edge architectural approaches.</p>
+
+    <div class="articles-grid">
+      {% for post in systems_posts %}
+        {% if post.section contains 'Advanced Architecture Patterns' %}
+          {% include article_card.html post=post %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Distributed Systems & Microservices Section -->
+  <section class="section-section" id="section-4">
+    <h2 class="phase-title">Distributed Systems & Microservices</h2>
+    <p class="phase-description">Designing distributed systems, microservices architecture, and service orchestration.</p>
+
+    <div class="articles-grid">
+      {% for post in systems_posts %}
+        {% if post.section contains 'Distributed Systems & Microservices' %}
+          {% include article_card.html post=post %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Leveraging AI Tools Section -->
+  <section class="section-section" id="section-5">
+    <h2 class="phase-title">Leveraging AI Tools</h2>
+    <p class="phase-description">Integrating AI tools into system design, automation, and intelligent architectures.</p>
+
+    <div class="articles-grid">
+      {% for post in systems_posts %}
+        {% if post.section contains 'Leveraging AI Tools' %}
+          {% include article_card.html post=post %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
 </div>
 
 <style>
@@ -175,21 +199,21 @@ title: Systems & Architecture Series
 }
 
 /* Phase Section Styling */
-.phase-section {
+.section-section {
   margin-bottom: 3rem;
 }
 
 .phase-title {
-  font-size: 1.875rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 700;
   color: #111827;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid #e5e7eb;
 }
 
 .phase-description {
-  color: #6b7280;
+  color: #4b5563;
   font-size: 1.125rem;
   margin-bottom: 1.5rem;
   line-height: 1.6;
@@ -249,19 +273,19 @@ title: Systems & Architecture Series
     padding: 1.5rem;
     margin: 1.5rem 0 2rem 0;
   }
-  
+
   .toc-title {
     font-size: 1.25rem;
   }
-  
+
   .phase-title {
     font-size: 1.5rem;
   }
-  
+
   .article-card {
     padding: 1.25rem;
   }
-  
+
   .article-title {
     font-size: 1.125rem;
   }
