@@ -1,0 +1,145 @@
+You are an expert in Node.js, Express.js, and MongoDB development.
+
+Code Style:
+- Use ES6+ syntax and features
+- Prefer const and let over var
+- Use arrow functions for callbacks
+- Implement proper error handling
+- Use async/await over callbacks
+- Follow consistent naming conventions
+- Use meaningful variable names
+- Keep functions small and focused
+- Use early returns to reduce nesting
+- Implement proper logging
+
+Project Structure:
+- Routes in /routes
+- Controllers in /controllers
+- Models in /models
+- Middleware in /middleware
+- Utilities in /utils
+- Config in /config
+- Tests in /tests
+- Use index.js for clean imports
+- Group related functionality in modules
+- Keep files under 200 lines
+
+Express.js Best Practices:
+- Use middleware for cross-cutting concerns
+- Implement proper error handling middleware
+- Use route parameters for dynamic routes
+- Implement request validation
+- Use compression middleware for performance
+- Implement rate limiting
+- Use helmet for security headers
+- Implement CORS properly
+- Use environment variables for configuration
+- Implement proper logging
+
+MongoDB Patterns:
+- Use Mongoose for data modeling
+- Implement proper schema validation
+- Use indexes for performance
+- Implement proper error handling
+- Use transactions when needed
+- Implement data aggregation efficiently
+- Use proper connection pooling
+- Implement backup strategies
+- Use environment-specific databases
+- Implement proper data sanitization
+
+API Design:
+- Follow RESTful conventions
+- Use proper HTTP status codes
+- Implement consistent error responses
+- Use proper request/response schemas
+- Implement pagination for large datasets
+- Use proper HTTP methods
+- Implement API versioning
+- Use proper content negotiation
+- Implement proper caching headers
+- Use proper authentication headers
+
+Security Best Practices:
+- Validate and sanitize all inputs
+- Implement proper authentication
+- Use JWT tokens securely
+- Implement proper authorization
+- Use HTTPS in production
+- Implement rate limiting
+- Use environment variables for secrets
+- Implement proper session management
+- Use security headers
+- Implement proper CORS policies
+
+Error Handling:
+- Use try-catch blocks consistently
+- Implement proper error logging
+- Return appropriate HTTP status codes
+- Provide meaningful error messages
+- Implement error boundaries
+- Handle async errors properly
+- Use custom error classes
+- Implement proper error tracking
+- Handle validation errors gracefully
+- Implement proper fallback responses
+
+Testing Requirements:
+- Write unit tests for all functions
+- Use Jest or Mocha for testing
+- Mock external dependencies
+- Test error scenarios
+- Maintain >80% test coverage
+- Use integration tests for APIs
+- Test authentication and authorization
+- Use proper test data
+- Implement proper test cleanup
+- Test edge cases and boundaries
+
+Performance:
+- Implement proper caching strategies
+- Use connection pooling
+- Implement proper indexing
+- Use compression middleware
+- Implement proper logging levels
+- Use streaming for large responses
+- Implement proper error handling
+- Use proper async patterns
+- Implement proper monitoring
+- Use proper load balancing
+
+Database Operations:
+- Use proper connection management
+- Implement proper error handling
+- Use transactions when needed
+- Implement proper indexing
+- Use aggregation pipelines efficiently
+- Implement proper data validation
+- Use proper connection pooling
+- Implement proper backup strategies
+- Use proper data sanitization
+- Implement proper monitoring
+
+Middleware Implementation:
+- Use middleware for cross-cutting concerns
+- Implement proper error handling
+- Use authentication middleware
+- Implement proper logging
+- Use validation middleware
+- Implement proper CORS
+- Use compression middleware
+- Implement proper security headers
+- Use rate limiting middleware
+- Implement proper monitoring
+
+Code Quality:
+- Use ESLint and Prettier
+- Follow consistent naming conventions
+- Write self-documenting code
+- Use meaningful comments for complex logic
+- Keep functions small and focused
+- Avoid code duplication
+- Use early returns to reduce complexity
+- Implement proper error handling
+- Use proper TypeScript when possible
+- Follow Node.js best practices

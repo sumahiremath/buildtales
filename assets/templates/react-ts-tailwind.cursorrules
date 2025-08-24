@@ -1,0 +1,113 @@
+You are an expert in TypeScript, React, and Tailwind CSS.
+
+Code Style:
+- Use functional components with hooks
+- Prefer const assertions
+- Use Tailwind for styling
+- Always include proper TypeScript types
+- Use destructuring for props and state
+- Prefer arrow functions for components
+- Use meaningful variable names
+- Keep components focused and single-purpose
+- Use early returns to reduce nesting
+- Prefer composition over inheritance
+
+Project Structure:
+- Components in /components
+- Utilities in /lib
+- Types in /types
+- Tests alongside source files
+- Use index.ts for clean imports
+- Keep component files under 200 lines
+- Group related components in subdirectories
+- Use barrel exports for clean imports
+
+TypeScript Best Practices:
+- Define interfaces for all props
+- Use generic types when appropriate
+- Prefer union types over enums
+- Use type guards for runtime type checking
+- Avoid 'any' type - use 'unknown' if needed
+- Use const assertions for literal types
+- Define utility types for common patterns
+- Use branded types for domain-specific values
+
+React Patterns:
+- Use React.memo for expensive components
+- Implement proper loading states
+- Use error boundaries for error handling
+- Prefer controlled components
+- Use custom hooks for reusable logic
+- Implement proper cleanup in useEffect
+- Use React.lazy for code splitting
+- Prefer functional components over class components
+
+Tailwind CSS Guidelines:
+- Use semantic class names
+- Prefer utility classes over custom CSS
+- Use responsive prefixes consistently
+- Group related utilities logically
+- Use @apply sparingly for complex patterns
+- Maintain consistent spacing scale
+- Use color palette consistently
+- Implement dark mode with proper contrast
+
+Testing Requirements:
+- Write tests for all components
+- Use React Testing Library
+- Mock external dependencies
+- Test user interactions, not implementation
+- Maintain >80% test coverage
+- Test accessibility features
+- Use meaningful test descriptions
+- Test error states and edge cases
+
+Performance:
+- Use React.memo for expensive components
+- Implement proper loading states
+- Lazy load routes when possible
+- Optimize bundle size with dynamic imports
+- Use useMemo and useCallback appropriately
+- Implement virtual scrolling for long lists
+- Optimize images and assets
+- Use code splitting for large applications
+
+Accessibility:
+- Include proper ARIA labels
+- Ensure keyboard navigation
+- Maintain proper heading hierarchy
+- Use semantic HTML elements
+- Test with screen readers
+- Ensure sufficient color contrast
+- Provide alternative text for images
+- Support reduced motion preferences
+
+Error Handling:
+- Use error boundaries for component errors
+- Implement proper loading states
+- Show user-friendly error messages
+- Log errors for debugging
+- Handle network failures gracefully
+- Validate user input properly
+- Provide fallback UI for errors
+- Use try-catch blocks appropriately
+
+State Management:
+- Use React Context for global state
+- Prefer local state when possible
+- Use reducers for complex state logic
+- Implement proper state persistence
+- Handle loading and error states
+- Use optimistic updates when appropriate
+- Implement proper state synchronization
+- Avoid prop drilling
+
+Code Quality:
+- Use ESLint and Prettier
+- Follow consistent naming conventions
+- Write self-documenting code
+- Use meaningful comments for complex logic
+- Keep functions small and focused
+- Avoid code duplication
+- Use early returns to reduce complexity
+- Implement proper error boundaries

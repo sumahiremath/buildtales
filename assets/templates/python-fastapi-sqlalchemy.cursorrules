@@ -1,0 +1,169 @@
+You are an expert in Python, FastAPI, and SQLAlchemy development.
+
+Code Style:
+- Follow PEP 8 style guidelines
+- Use type hints consistently
+- Prefer list comprehensions over loops when appropriate
+- Use f-strings for string formatting
+- Implement proper error handling
+- Use meaningful variable names
+- Keep functions small and focused
+- Use early returns to reduce nesting
+- Implement proper logging
+- Use context managers for resource management
+
+Project Structure:
+- API routes in /api
+- Models in /models
+- Schemas in /schemas
+- Services in /services
+- Utilities in /utils
+- Config in /config
+- Tests in /tests
+- Use __init__.py for clean imports
+- Group related functionality in modules
+- Keep files under 300 lines
+
+FastAPI Best Practices:
+- Use dependency injection for services
+- Implement proper request/response models
+- Use Pydantic for data validation
+- Implement proper error handling
+- Use background tasks when appropriate
+- Implement proper authentication
+- Use proper HTTP status codes
+- Implement proper CORS handling
+- Use environment variables for configuration
+- Implement proper logging
+
+SQLAlchemy Patterns:
+- Use declarative models
+- Implement proper relationship definitions
+- Use session management properly
+- Implement proper transaction handling
+- Use migrations for schema changes
+- Implement proper indexing
+- Use query optimization techniques
+- Implement proper connection pooling
+- Use environment-specific databases
+- Implement proper data validation
+
+API Design:
+- Follow RESTful conventions
+- Use proper HTTP status codes
+- Implement consistent error responses
+- Use proper request/response schemas
+- Implement pagination for large datasets
+- Use proper HTTP methods
+- Implement API versioning
+- Use proper content negotiation
+- Implement proper caching headers
+- Use proper authentication headers
+
+Pydantic Models:
+- Use proper field types and validators
+- Implement custom validators when needed
+- Use proper default values
+- Implement proper field descriptions
+- Use proper field constraints
+- Implement proper serialization
+- Use proper field aliases
+- Implement proper nested models
+- Use proper field dependencies
+- Implement proper custom types
+
+Database Operations:
+- Use proper session management
+- Implement proper error handling
+- Use transactions when needed
+- Implement proper indexing
+- Use query optimization techniques
+- Implement proper data validation
+- Use proper connection pooling
+- Implement proper backup strategies
+- Use proper data sanitization
+- Implement proper monitoring
+
+Security Best Practices:
+- Validate and sanitize all inputs
+- Implement proper authentication
+- Use OAuth2 with Password flow
+- Implement proper authorization
+- Use HTTPS in production
+- Implement rate limiting
+- Use environment variables for secrets
+- Implement proper session management
+- Use security headers
+- Implement proper CORS policies
+
+Error Handling:
+- Use try-except blocks consistently
+- Implement proper error logging
+- Return appropriate HTTP status codes
+- Provide meaningful error messages
+- Implement custom exception classes
+- Handle async errors properly
+- Use proper error tracking
+- Handle validation errors gracefully
+- Implement proper fallback responses
+- Use proper error serialization
+
+Testing Requirements:
+- Write unit tests for all functions
+- Use pytest for testing
+- Mock external dependencies
+- Test error scenarios
+- Maintain >80% test coverage
+- Use integration tests for APIs
+- Test authentication and authorization
+- Use proper test data
+- Implement proper test cleanup
+- Test edge cases and boundaries
+
+Performance:
+- Implement proper caching strategies
+- Use connection pooling
+- Implement proper indexing
+- Use async operations when appropriate
+- Implement proper logging levels
+- Use streaming for large responses
+- Implement proper error handling
+- Use proper async patterns
+- Implement proper monitoring
+- Use proper load balancing
+
+Dependency Injection:
+- Use FastAPI's dependency injection system
+- Implement proper service layers
+- Use proper dependency scoping
+- Implement proper dependency overrides
+- Use proper dependency validation
+- Implement proper dependency caching
+- Use proper dependency testing
+- Implement proper dependency documentation
+- Use proper dependency error handling
+- Implement proper dependency monitoring
+
+Code Quality:
+- Use Black for code formatting
+- Use isort for import sorting
+- Use flake8 for linting
+- Use mypy for type checking
+- Follow consistent naming conventions
+- Write self-documenting code
+- Use meaningful comments for complex logic
+- Keep functions small and focused
+- Avoid code duplication
+- Use early returns to reduce complexity
+
+Async Programming:
+- Use async/await properly
+- Implement proper error handling for async code
+- Use proper async context managers
+- Implement proper async resource management
+- Use proper async testing patterns
+- Implement proper async error boundaries
+- Use proper async monitoring
+- Implement proper async logging
+- Use proper async caching
+- Implement proper async rate limiting
