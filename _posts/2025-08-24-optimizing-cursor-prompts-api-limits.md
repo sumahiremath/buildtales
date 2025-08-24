@@ -560,10 +560,10 @@ handleSubmit = (formData) => {
 ```
 📊 WEEKLY METRICS
 ┌─────────────────────────────────────┐
-│ Requests: 47/500 (9.4% used)       │
-│ Avg Tokens: 1,850 (Target: <2,000) │
-│ Efficiency Score: 78/100 🟡        │
-│ Context Clears: 12 (Good!)         │
+│ Requests: 47/500 (9.4% used)        │
+│ Avg Tokens: 1,850 (Target: <2,000)  │
+│ Efficiency Score: 78/100 (Warn!)    │
+│ Context Clears: 12 (Good!)          │
 └─────────────────────────────────────┘
 ```
 
@@ -665,9 +665,7 @@ Location: Chat panel error messages
 Shows: "Rate limit exceeded" or "Context too large" warnings
 Caption: "These warnings indicate optimization opportunities"
 ```
-
-![Cursor Rate Limit Warning](/assets/banners/resized/cursorapiratelimit.jpg)
-
+![Cursor Rate Limit Warning](/assets/banners/resized/cursorratelimit.jpg)
 *Rate limit warnings are visible to both Pro and Enterprise users - use them as optimization signals*
 
 **Screenshot 3: File Request Examples**
