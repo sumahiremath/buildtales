@@ -463,7 +463,7 @@ Best Practices:
 
 **Ready-to-use resources for your team:**
 
-> **Engineering Leadership Note:** These templates have been battle-tested by teams of 5-100+ developers and can be customized for your specific tech stack and processes.
+> **Engineering Leadership Note:** These templates samples can be customized for your specific tech stack and processes.
 
 > **Real Talk:** These aren't just templates—they're the cheat codes that separate the AI rookies from the AI legends. Use them wisely.
 
