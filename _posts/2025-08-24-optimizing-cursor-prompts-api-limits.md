@@ -15,7 +15,7 @@ banner_color: "#157878"
 
 *A practical guide to getting more done with fewer tokens*
 
-![Cursor Optimization](/assets/banners/resized/20250824cursorapilimit-blog.jpg)
+![Cursor Optimization](/assets/banners/resized/20250824cursorapilimit-blog.jpg "title image")
 
 > **⚠️ Verification Note:** This guide contains pricing and interface information that may need updating. Please verify current Cursor rates and UI paths before implementing recommendations.
 
@@ -244,7 +244,7 @@ in these two files. Any security issues?"
 
 Structure your context inclusion like a pyramid:
 
-![The Context Pyramid](/assets/banners/resized/cursorcontextpyramid.jpg)
+<img alt="The Context Pyramid" height="250" src="/assets/banners/resized/cursorcontextpyramid.jpg" width="250"/>
 
 *Each level typically doubles your token usage - start at the top and only descend when absolutely necessary*
 
@@ -334,9 +334,9 @@ The context counter may not appear in your Enterprise build. Instead, track effi
 
 **Context Persistence Patterns:**
 
-| Action | When to Do | Examples |
-|--------|------------|----------|
-| **🟢 Keep Context** | Iterative improvements to same code<br>Related debugging sessions<br>Sequential feature development | Bug fixes, refinements<br>Related error investigation<br>Building related features |
+| Action               | When to Do                                                                                                       | Examples                                                                                                   |
+|----------------------|------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| **🟢 Keep Context**  | Iterative improvements to same code<br>Related debugging sessions<br>Sequential feature development              | Bug fixes, refinements<br>Related error investigation<br>Building related features                         |
 | **🔴 Clear Context** | Different project areas<br>New development sessions<br>After error resolution<br>Switching programming languages | New features, different modules<br>New coding session<br>Problem solved, moving on<br>React → Python, etc. |
 
 ---
@@ -353,19 +353,19 @@ The context counter may not appear in your Enterprise build. Instead, track effi
 
 ### High-Efficiency Prompt Patterns
 
-| Pattern | Good Example | Bad Example | Token Savings |
-|---------|--------------|-------------|---------------|
-| **Focused File** | "@ComponentName.js Add error handling for the API call on line 23" | "How do I add error handling to my app?" | ~7,000 tokens |
-| **Incremental** | "Refactor this function to use async/await: [paste function]" | "@Codebase modernize all async code" | ~7,500 tokens |
-| **Specific Problem** | "Why does this component re-render? [paste code]" | "@Codebase find performance issues" | ~7,800 tokens |
+| Pattern              | Good Example                                                       | Bad Example                              | Token Savings |
+|----------------------|--------------------------------------------------------------------|------------------------------------------|---------------|
+| **Focused File**     | "@ComponentName.js Add error handling for the API call on line 23" | "How do I add error handling to my app?" | ~7,000 tokens |
+| **Incremental**      | "Refactor this function to use async/await: [paste function]"      | "@Codebase modernize all async code"     | ~7,500 tokens |
+| **Specific Problem** | "Why does this component re-render? [paste code]"                  | "@Codebase find performance issues"      | ~7,800 tokens |
 
 ### Token-Saving Prompt Techniques
 
-| Technique | ✅ Efficient | ❌ Wasteful | Token Savings |
-|-----------|--------------|-------------|---------------|
-| **Abbreviations** | "Fix TypeError on line 34 in AuthService.js" | "I'm getting a TypeError that says 'Cannot read property of undefined' in my authentication service file..." | ~200 tokens |
-| **Previous Context** | "Apply the same pattern to UserProfile" | "Take this pattern [paste code] and implement in UserProfile [paste entire component]" | ~1,500 tokens |
-| **@ References** | @utils/validation.js @UserForm.js | @src/ @components/ @utils/ | ~3,000+ tokens |
+| Technique            | ✅ Efficient                                  | ❌ Wasteful                                                                                                 | Token Savings |
+|----------------------|----------------------------------------------|--------------------------------------------------------------------------------------------------------------|---------------|
+| **Abbreviations**    | "Fix TypeError on line 34 in AuthService.js" | "I'm getting a TypeError that says 'Cannot read property of undefined' in my authentication service file..." | ~200 tokens |
+| **Previous Context** | "Apply the same pattern to UserProfile"      | "Take this pattern [paste code] and implement in UserProfile [paste entire component]"                       | ~1,500 tokens |
+| **@ References**     | @utils/validation.js @UserForm.js            | @src/ @components/ @utils/                                                                                   | ~3,000+ tokens |
 
 ---
 
@@ -375,10 +375,10 @@ The context counter may not appear in your Enterprise build. Instead, track effi
 
 Start with minimal context and add incrementally:
 
-| Step | Context Level | Example | Token Cost |
-|------|---------------|---------|------------|
-| **Step 1** | Question Only | "How do I add input validation to a React form?" | ~200 tokens |
-| **Step 2** | + Target File | "@UserForm.js Apply email validation to the signup form" | ~800 tokens |
+| Step       | Context Level   | Example                                                            | Token Cost    |
+|------------|-----------------|--------------------------------------------------------------------|---------------|
+| **Step 1** | Question Only   | "How do I add input validation to a React form?"                   | ~200 tokens   |
+| **Step 2** | + Target File   | "@UserForm.js Apply email validation to the signup form"           | ~800 tokens   |
 | **Step 3** | + Related Files | "@UserForm.js @ValidationUtils.js Use existing validation helpers" | ~1,500 tokens |
 
 💡 **Pro Tip:** Progressive disclosure isn't just about saving tokens—it often leads to better solutions because you're not overwhelming the AI with irrelevant context.
@@ -435,10 +435,10 @@ Add PropTypes to these three components"
 
 **High-consumption patterns to watch:**
 
-| Pattern Type | Examples | Token Cost | Status |
-|--------------|----------|------------|---------|
-| **🚨 Token Drains** | @Codebase queries<br>Long conversation threads<br>Web search + large context<br>Repeated file inclusions | 5,000+ tokens each<br>Cumulative cost<br>3,000+ tokens<br>2,000+ tokens | Avoid |
-| **💡 Efficient Patterns** | Single-file focus<br>Clear, specific questions<br>Progressive context building<br>Strategic context clearing | 200-800 tokens<br>100-500 tokens<br>1,200 tokens<br>200 tokens | Embrace |
+| Pattern Type              | Examples                                                                                                     | Token Cost                                                              | Status   |
+|---------------------------|--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|----------|
+| **🚨 Token Drains**       | @Codebase queries<br>Long conversation threads<br>Web search + large context<br>Repeated file inclusions     | 5,000+ tokens each<br>Cumulative cost<br>3,000+ tokens<br>2,000+ tokens | Avoid    |
+| **💡 Efficient Patterns** | Single-file focus<br>Clear, specific questions<br>Progressive context building<br>Strategic context clearing | 200-800 tokens<br>100-500 tokens<br>1,200 tokens<br>200 tokens          | Embrace  |
 
 💡 **Pro Tip:** Track your "token per successful task" ratio. If it's consistently above 3,000 tokens, you're likely including too much context or asking overly broad questions.
 
@@ -464,10 +464,10 @@ Total Tokens =
 
 ### The Two-Phase Development Approach
 
-| Phase | Strategy | Activities | Token Cost |
-|-------|----------|------------|------------|
-| **Phase 1: Planning** | Low Token Cost | General questions without context<br>Plan architecture and approach<br>Get high-level guidance<br>Research best practices | ~200-500 tokens |
-| **Phase 2: Implementation** | Targeted Token Use | Include specific files only<br>Focus on implementation details<br>Debug specific issues<br>Refine and optimize | ~800-2,000 tokens |
+| Phase                       | Strategy           | Activities                                                                                                                | Token Cost        |
+|-----------------------------|--------------------|---------------------------------------------------------------------------------------------------------------------------|-------------------|
+| **Phase 1: Planning**       | Low Token Cost     | General questions without context<br>Plan architecture and approach<br>Get high-level guidance<br>Research best practices | ~200-500 tokens   |
+| **Phase 2: Implementation** | Targeted Token Use | Include specific files only<br>Focus on implementation details<br>Debug specific issues<br>Refine and optimize            | ~800-2,000 tokens |
 
 ### Smart Task Sequencing
 
@@ -505,15 +505,15 @@ handleSubmit = (formData) => {
 
 **Cursor Pro vs Custom API Keys:**
 
-| Feature | Cursor Pro (500 req/month) | Custom API Keys |
-|---------|----------------------------|-----------------|
-| **Cost** | $20/month fixed | Pay per token (~$0.015/1K) |
-| **Requests** | 500/month limit | Unlimited |
-| **Setup** | ✅ No setup complexity | ❌ Setup complexity |
-| **Integration** | ✅ Integrated experience | ❌ Manual integration |
-| **Monitoring** | ✅ Built-in dashboard | ❌ Usage monitoring required |
-| **Rate Limits** | ✅ Managed by Cursor | ❌ Rate limit management |
-| **Best For** | Daily development, learning | High-volume, cost optimization |
+| Feature         | Cursor Pro (500 req/month) | Custom API Keys                |
+|-----------------|----------------------------|--------------------------------|
+| **Cost**        | $20/month fixed            | Pay per token (~$0.015/1K)     |
+| **Requests**    | 500/month limit            | Unlimited                      |
+| **Setup**       | ✅ No setup complexity      | ❌ Setup complexity             |
+| **Integration** | ✅ Integrated experience    | ❌ Manual integration           |
+| **Monitoring**  | ✅ Built-in dashboard       | ❌ Usage monitoring required    |
+| **Rate Limits** | ✅ Managed by Cursor        | ❌ Rate limit management        |
+| **Best For**    | Daily development, learning | High-volume, cost optimization |
 
 ### When Custom Keys Make Sense
 
@@ -539,10 +539,10 @@ handleSubmit = (formData) => {
 - Codebase analysis and documentation
 - High-volume batch operations
 
-| Tool | Use Case | Token Range | Cost Efficiency |
-|------|----------|-------------|-----------------|
-| **Cursor Pro** | Daily development, quick questions, learning | 200-2,000 tokens | High for low volume |
-| **Custom Keys** | Large refactors, analysis, batch operations | 5,000+ tokens | High for high volume |
+| Tool            | Use Case                                     | Token Range      | Cost Efficiency      |
+|-----------------|----------------------------------------------|------------------|----------------------|
+| **Cursor Pro**  | Daily development, quick questions, learning | 200-2,000 tokens | High for low volume  |
+| **Custom Keys** | Large refactors, analysis, batch operations  | 5,000+ tokens    | High for high volume |
 
 ### Team Optimization Strategies
 
@@ -632,17 +632,8 @@ improve accessibility, optimize performance, and follow modern React patterns"
 "Review performance issues" → "@ProductList.js"
 ```
 
-
-
-
-
-
-
-
-
 ### Real Usage Screenshots Guide
 
-> **📸 Screenshots Needed:** The following interface descriptions should be accompanied by actual Cursor screenshots for clarity. Consider taking your own screenshots or referring to Cursor's official documentation.
 
 #### 📱 Universal Screenshots (Pro & Enterprise)
 

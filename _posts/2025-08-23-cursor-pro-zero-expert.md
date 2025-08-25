@@ -21,28 +21,27 @@ banner_color: "#157878"
 ## Table of Contents
 
 1. [Introduction](#introduction)
-2. [Executive Summary for Engineering Leaders](#executive-summary-for-engineering-leaders)
-3. [Quick Start](#quick-start-skip-to-phase-1-if-you-prefer-the-full-journey)
-4. [Troubleshooting Common Issues](#troubleshooting-common-issues)
-5. [Quick Reference Card](#quick-reference-card)
-6. [Phase 1: Getting Started (Days 1-7)](#phase-1-getting-started-days-1-7)
+2. [Quick Start](#quick-start-skip-to-phase-1-if-you-prefer-the-full-journey)
+3. [Troubleshooting Common Issues](#troubleshooting-common-issues)
+4. [Quick Reference Card](#quick-reference-card)
+5. [Phase 1: Getting Started (Days 1-7)](#phase-1-getting-started-days-1-7)
    - [Phase 1 Checklist](#phase-1-checklist)
-7. [Phase 2: Building Confidence (Weeks 2-4)](#phase-2-building-confidence-weeks-2-4)
+6. [Phase 2: Building Confidence (Weeks 2-4)](#phase-2-building-confidence-weeks-2-4)
    - [Creating and Managing .cursorrules Files](#creating-and-managing-cursorrules-files)
    - [Phase 2 Checklist](#phase-2-checklist)
-8. [Phase 3: Advanced Workflows (Months 2-3)](#phase-3-advanced-workflows-months-2-3)
+7. [Phase 3: Advanced Workflows (Months 2-3)](#phase-3-advanced-workflows-months-2-3)
    - [Phase 3 Checklist](#phase-3-checklist)
-9. [Phase 4: Expert Level (Month 4+)](#phase-4-expert-level-month-4)
+8. [Phase 4: Expert Level (Month 4+)](#phase-4-expert-level-month-4)
    - [Phase 4 Checklist](#phase-4-checklist)
-10. [Skill Checkpoints & Milestones](#skill-checkpoints--milestones)
-11. [Common Pitfalls & Solutions](#common-pitfalls--solutions)
-12. [Glossary of AI Development Terms](#glossary-of-ai-development-terms)
-13. [Case Studies: Successful Team Adoptions](#case-studies-successful-team-adoptions)
-14. [ROI Calculator for Engineering Leaders](#roi-calculator-for-engineering-leaders)
-15. [Downloadable Templates](#downloadable-templates)
-16. [Progress Sharing Framework](#progress-sharing-framework)
-17. [Community Discussion & Team Exercises](#community-discussion--team-exercises)
-18. [Resources & Next Steps](#resources--next-steps)
+9. [Skill Checkpoints & Milestones](#skill-checkpoints--milestones)
+10. [Common Pitfalls & Solutions](#common-pitfalls--solutions)
+11. [Glossary of AI Development Terms](#glossary-of-ai-development-terms)
+12. [Case Studies: Successful Team Adoptions](#case-studies-successful-team-adoptions)
+13. [ROI Calculator for Engineering Leaders](#roi-calculator-for-engineering-leaders)
+14. [Downloadable Templates](#downloadable-templates)
+15. [Progress Sharing Framework](#progress-sharing-framework)
+16. [Community Discussion & Team Exercises](#community-discussion--team-exercises)
+17. [Resources & Next Steps](#resources--next-steps)
 
 ---
 
@@ -78,39 +77,6 @@ This guide takes you through a structured 4-month journey from your first Cursor
 **Remember:** AI-assisted development is a team sport. The Cursor community is growing rapidly, and you'll find developers at every stage of this journey ready to help, share experiences, and collaborate on solutions.
 
 Let's begin your transformation from traditional developer to AI-assisted expert.
-
----
-
-## Executive Summary for Engineering Leaders
-
-**Bottom Line:** Cursor Pro can deliver 3-5x productivity gains for your engineering team within 3-6 months, with measurable ROI starting in weeks 6-8.
-
-### **Key Benefits**
-- **40-60% faster** feature development cycles
-- **60-80% reduction** in code review time
-- **50-70% faster** bug resolution
-- **40-60% faster** developer onboarding
-- **Improved code quality** and reduced production bugs
-
-### **Implementation Timeline**
-- **Weeks 1-4:** Setup, training, initial adoption (10-20% gains)
-- **Weeks 5-12:** Established workflows (30-40% gains)
-- **Months 3-6:** Team-wide adoption (50-70% gains)
-- **Month 6+:** Expert-level workflows (70-90% gains)
-
-### **Resource Investment**
-- **Setup:** 2-4 hours per developer
-- **Training:** 1-2 hours per week for first month
-- **Ongoing:** Minimal maintenance, self-sustaining
-
-### **Risk Mitigation**
-- **Phased rollout** starting with smaller teams
-- **Comprehensive training** and support
-- **Regular metrics tracking** and adjustment
-- **Community support** and best practices
-
-> **Strategic Recommendation:** Start with a pilot team of 3-5 developers, measure results for 4-6 weeks, then scale based on proven ROI.
-
 ---
 
 ## Quick Start (Skip to Phase 1 if you prefer the full journey)
@@ -133,27 +99,24 @@ Let's begin your transformation from traditional developer to AI-assisted expert
 
 **Before diving into Cursor, ensure you have these prerequisites ready:**
 
-### **Essential Accounts & Access**
-- **GitHub account** (for importing settings and project management)
-- **Stable internet connection** (AI features require consistent connectivity)
-- **Admin access** to your machine (for installation and potential permission issues)
+````mermaid
+timeline
+    title Prerequisites
+      Essential Accounts & Access : GitHub account <br> . <br> (for importing settings and project management)
+                                  : Stable internet connection <br> . <br> (AI features require consistent connectivity)
+                                  : Admin access to your machine <br> . <br> (for installation and potential permission issues)
+      Development Environment : Node.js (v16+) or Python (3.8+) <br> . <br> installed and accessible from terminal
+                                  : Git configured with your credentials
+                                  : VSCode <br> . <br> (optional but recommended for settings import)
+      System Requirements : Windows 10+ (64-bit)
+                          : macOS  10.15+ (Catalina or later) 
+                          : Linux Ubuntu 18.04+ or equivalent                       
+````
 
-### **Development Environment**
-- **Node.js** (v16+) or **Python** (3.8+) installed and accessible from terminal
-- **Git** configured with your credentials
-- **VSCode** (optional but recommended for settings import)
-
-### **System Requirements**
-- **Windows:** Windows 10+ (64-bit)
-- **macOS:** 10.15+ (Catalina or later)
-- **Linux:** Ubuntu 18.04+ or equivalent
 
 > **Pro Tip:** If you're on a corporate machine, check with IT about software installation policies. Some companies require admin approval for new development tools.
 
 **Time Investment:** 15-30 minutes for setup, depending on your system and existing tools.
-
-![Getting Started with Cursor Pro](/assets/banners/resized/output1-blog.jpg)
-
 ---
 
 ## Troubleshooting Common Issues
@@ -181,33 +144,70 @@ Let's begin your transformation from traditional developer to AI-assisted expert
 
 ## Quick Reference Card
 
-**Essential Shortcuts:**
-- `Ctrl+L` - Open AI Chat
-- `Ctrl+Shift+L` - Clear chat context
-- `Ctrl+K` - Smart edit/refactor
-- `Ctrl+Shift+P` - Command palette
-- `Tab` - Accept autocomplete suggestion
-
-**Common Prompts:**
-```
-"Explain what this code does"
-"Refactor this function to be more readable"
-"Add error handling to this function"
-"Create tests for this component"
-"Optimize this code for performance"
-```
-
-**Context References:**
-- `@Files` - Include specific files
-- `@Folders` - Include entire directories
-- `@Code` - Reference functions/classes
-- `@Web` - Include web search results
+````mermaid
+kanban
+  **Essential Shortcuts:**
+    [**Ctrl+L** - Open AI Chat]
+    [**Ctrl+Shift+L** - Clear chat context]
+    [ **Ctrl+K** - Smart edit/refactor]
+    [ **Ctrl+Shift+P** - Command palette]
+    [ **Tab** - Accept autocomplete suggestion]
+  **Common Prompts:**
+    ["Explain what this code does"]
+    ["Refactor this function to be more readable"]
+    ["Add error handling to this function"]
+    ["Create tests for this component"]
+    ["Optimize this code for performance"]
+  **Context References:**
+    [@Files - Include specific files]
+    [@Folders - Include entire directories]
+    [@Code - Reference functions/classes]
+    [@Web - Include web search results]
+````
 
 **Save this card for quick access during your learning journey!**
 
 ---
 
+## The Five W's Framework: Asking Better Questions
+
+The quality of your prompts directly determines the quality of AI assistance you receive. Use this framework to structure your questions:
+
+```mermaid
+kanban
+   **Who** - Define Your Role and Context
+      **Before:** "How do I fix this bug?"
+      **Better:** "As a React developer working on a payment form, how do I fix this validation bug that's preventing users from completing checkout?"
+   **What** - Specify the Exact Problem
+      **Before:** "Help me with authentication"
+      **Better:** "What's the best way to implement JWT token refresh in a React app that automatically handles expired tokens without user interruption?"
+   **When** - Consider Timing and Context
+      **Before:** "How do I handle errors?"
+      **Better:** "During high-traffic periods when our API response times increase, how do I implement graceful error handling that doesn't crash the user experience?"
+   **Where** - Identify the System Context
+      **Before:** "How do I handle errors?"
+      **Better:** "During high-traffic periods when our API response times increase, how do I implement graceful error handling that doesn't crash the user experience?"
+   **Why** - Understand the Business Impact
+      **Before:** "How do I make this faster?"
+      **Better:** "Our checkout process is taking 8 seconds, causing 25% cart abandonment. How do I optimize the payment flow to complete in under 3 seconds and reduce abandonment to under 10%?"
+```
+
+
+### **Example: Applying the Five W's to Code Review**
+
+**Poor Prompt:** "Review this code"
+
+**Better Prompt:** "I'm a senior developer (Who) reviewing a React component that handles user authentication (What). This component will be used in production next week during our Black Friday sale (When) and needs to handle 10x normal traffic (Where). Any security or performance issues could cost us $100k in lost sales (Why). Can you review this code for vulnerabilities and performance bottlenecks?"
+
+**Result:** You'll get focused, actionable feedback instead of generic suggestions.
+
+**Pro Tip:** Start with the Five W's framework for complex questions, then use simpler prompts for quick tasks like "explain this function" or "add error handling here."
+
+---
+
 ## Phase 1: Getting Started (Days 1-7)
+
+![Getting Started with Cursor Pro](/assets/banners/resized/output1-blog.jpg)
 
 | Day | Goal | Key Activities | Success Metric |
 |-----|------|----------------|----------------|
@@ -366,96 +366,87 @@ Best Practices:
 
 ## Skill Checkpoints & Milestones
 
-| Level | Phase | Key Capabilities | Typical Timeline |
-|-------|-------|------------------|------------------|
-| **Beginner** | Phase 1 | • Generate simple programs through conversation<br>• Understand Chat vs Autocomplete<br>• Write effective basic prompts<br>• Work on multi-file projects<br>• Use @Files and @Folders context effectively | Days 1-7 |
-| **Intermediate** | Phase 2 | • Debug complex issues with AI assistance<br>• Understand large codebases quickly<br>• Use advanced prompting techniques<br>• Create and use Cursor Rules<br>• Generate production-ready code | Weeks 2-4 |
-| **Advanced** | Phase 3 | • Handle complex architectural changes<br>• Create sophisticated team Cursor Rules<br>• Review AI-generated code effectively<br>• Lead team AI-assisted development<br>• Measure productivity improvements | Months 2-3 |
-| **Expert** | Phase 4 | • Integrate Cursor into complete development workflows<br>• Build production applications with AI assistance<br>• Train and mentor others<br>• Contribute to AI development community<br>• Stay current with AI development trends | Month 4+ |
-
+````mermaid
 ---
+config:
+  kanban:
+---
+kanban
+  **Beginner - Phase 1 <br/><br/>Days 1-7**
+    [Generate simple programs through conversation]
+    [Understand Chat vs Autocomplete]
+    [Write effective basic prompts]
+    [Work on multi-file projects]
+    [Use @Files and @Folders context effectively]
+  **Intermediate - Phase 2<br/><br/>Weeks 2-4**
+    [Debug complex issues with AI assistance]
+    [Understand large codebases quickly]
+    [Use advanced prompting techniques]
+    [Create and use Cursor Rules]
+    [Generate production-ready code]
+  [**Advanced - Phase 3<br><br>Months 2-3**]
+    [Handle complex architectural change]
+    [Create sophisticated team Cursor Rules]
+    [Review AI-generated code effectively]
+    [Lead team AI-assisted development]
+    [Measure productivity improvements]
+  [**Expert - Phase 4<br><br>Month 4+**]
+    [Integrate Cursor into complete development workflows]
+    [Build production applications with AI assistance]
+    [Train and mentor others]
+    [Contribute to AI development community]
+    [Stay current with AI development trend]
+````
 
 ## Common Pitfalls & Solutions
 
-| Phase | Common Pitfall | Solution |
-|-------|----------------|----------|
-| **Phase 1** | "I don't know what to ask" | Start with "Explain this code" or "How would you improve this?" |
-| **Phase 1** | "The AI generates code I don't understand" | Always ask "Explain this code step by step" after generation |
-| **Phase 1** | "Autocomplete keeps suggesting wrong things" | Provide more context in comments or use Chat mode for complex logic |
-| **Phase 2** | "My prompts are too vague" | Use the "5 W's" - Who, What, When, Where, Why in your prompts |
-| **Phase 2** | "I'm becoming too dependent on AI" | Regularly code without AI assistance to maintain core skills |
-| **Phase 2** | "The AI doesn't follow my coding style" | Create detailed Cursor Rules with specific examples |
-| **Phase 3** | "AI-generated code breaks in production" | Always review AI code, add comprehensive tests, and understand what it does |
-| **Phase 3** | "Team members resist AI-assisted development" | Start small, demonstrate value, provide training and support |
-| **Phase 3** | "Cursor Rules are too generic" | Include specific examples and project context in your rules |
-| **Phase 4** | "Staying current with rapidly evolving AI tools" | Follow AI development communities, regularly experiment with new features |
-| **Phase 4** | "Over-engineering with AI assistance" | Always consider if simpler solutions exist, maintain focus on business value |
+Phase 1
+
+| Common Pitfall                               | Solution  |
+|----------------------------------------------|----------|
+| "I don't know what to ask"                   | Start with "Explain this code" or "How would you improve this?" |
+| "The AI generates code I don't understand"   | Always ask "Explain this code step by step" after generation |
+| "Autocomplete keeps suggesting wrong things" | Provide more context in comments or use Chat mode for complex logic |
+
+Phase 2
+
+| Common Pitfall                          | Solution                                                      |
+|-----------------------------------------|---------------------------------------------------------------|
+| "My prompts are too vague"              | Use the "5 W's" - Who, What, When, Where, Why in your prompts |
+| "I'm becoming too dependent on AI"      | Regularly code without AI assistance to maintain core skills  |
+| "The AI doesn't follow my coding style" | Create detailed Cursor Rules with specific examples           |
+
+Phase 3
+
+| Common Pitfall                                | Solution                                                                    |
+|-----------------------------------------------|-----------------------------------------------------------------------------|
+| "AI-generated code breaks in production"      | Always review AI code, add comprehensive tests, and understand what it does |
+| "Team members resist AI-assisted development" | Start small, demonstrate value, provide training and support                |
+| "Cursor Rules are too generic"                | Include specific examples and project context in your rules                 |
+Phase 4
+
+| Common Pitfall                                   | Solution                                                                     |
+|--------------------------------------------------|------------------------------------------------------------------------------|
+| "Staying current with rapidly evolving AI tools" | Follow AI development communities, regularly experiment with new features    |
+| "Over-engineering with AI assistance"            | Always consider if simpler solutions exist, maintain focus on business value |
 
 ---
 
 ## Glossary of AI Development Terms
 
-| Term | Definition |
-|------|------------|
-| **AI-Assisted Development** | Software development where AI tools augment human capabilities rather than replace them |
-| **Autocomplete** | AI-powered code suggestions that appear as you type, completing functions, classes, and patterns |
-| **Chat Mode** | AI conversation interface for planning, debugging, and explaining code concepts |
-| **Context Management** | How AI tools understand your project structure using @Files, @Folders, and @Code references |
+| Term                            | Definition |
+|---------------------------------|------------|
+| **AI-Assisted Development**     | Software development where AI tools augment human capabilities rather than replace them |
+| **Autocomplete**                | AI-powered code suggestions that appear as you type, completing functions, classes, and patterns |
+| **Chat Mode**                   | AI conversation interface for planning, debugging, and explaining code concepts |
+| **Context Management**          | How AI tools understand your project structure using @Files, @Folders, and @Code references |
 | **Cursor Rules (.cursorrules)** | Configuration files that define AI behavior, coding standards, and project context |
-| **Human-in-the-Loop** | Development approach where humans review and approve AI-generated code before implementation |
-| **Prompt Engineering** | The art of writing clear, specific instructions for AI tools to generate desired outputs |
-| **Role Playing** | Technique where you ask AI to act as a specific type of developer (e.g., "senior React developer") |
-| **Agent Mode** | Advanced Cursor feature that can execute complex tasks across multiple files while maintaining human oversight |
-| **Chain of Thought** | Breaking complex tasks into sequential steps for more accurate AI assistance |
-| **Hallucination** | When AI generates code that looks correct but references non-existent APIs, functions, or patterns |
-
----
-
-## Case Studies: Successful Team Adoptions
-
-> **Success Stories:** These aren't fairy tales—they're real teams who went from "AI is magic" to "AI is our secret weapon" in months, not years.
-
-| Case Study | Team Size | Challenge | Solution | Results |
-|------------|-----------|-----------|----------|---------|
-| **Startup Engineering Team** | 15 developers | Rapid scaling, inconsistent code quality, 3-week feature cycles | Shared Cursor Rules, AI-assisted code reviews, pair programming with AI | • 40% faster feature development<br>• 60% reduction in code review iterations<br>• Consistent code quality<br>• 2-week feature cycles achieved |
-| **Enterprise Development Team** | 50+ developers | Large legacy codebase, complex compliance, slow onboarding | AI-assisted code analysis, automated documentation, intelligent refactoring | • 50% faster onboarding<br>• 30% reduction in production bugs<br>• Automated compliance checks<br>• Improved code maintainability |
-| **Open Source Project Maintainers** | 100+ contributors | Managing contributions, maintaining quality, rapid development | AI-assisted code review, automated testing, intelligent issue triaging | • 3x faster code review process<br>• 90% test coverage maintained<br>• Improved contributor experience<br>• Reduced maintainer burnout |
-
----
-
-## ROI Calculator for Engineering Leaders
-
-**Calculate your team's potential productivity gains with Cursor Pro:**
-
-> **Pro Tip:** Want an interactive version? We've created a Google Sheets template with pre-built formulas. Just copy the template and plug in your numbers for instant ROI calculations.
-
-### **Quick ROI Estimate**
-
-> **If your CFO doesn't smile after seeing this ROI chart, check if they're secretly a robot.**
-
-| Metric | Current | Projected (Month 3) |
-|--------|---------|---------------------|
-| **Team Size** | [Your team size] developers | - |
-| **Feature Development Time** | [X] weeks | 40-60% faster |
-| **Code Review Time** | [X] hours per PR | 60-80% faster |
-| **Bug Resolution** | [X] hours | 50-70% faster |
-| **Onboarding** | [X] weeks | 40-60% faster |
-| **Annual Developer Cost** | $[X] per developer | - |
-
-**Annual Productivity Value:** $[Calculate based on your team]
-
-### **Detailed ROI Breakdown**
-
-| Phase | Timeline | Productivity Gains | ROI |
-|-------|----------|-------------------|-----|
-| **Phase 1** | Weeks 1-4 | 10-20% | Break-even typically achieved by week 3 |
-| **Phase 2** | Weeks 5-12 | 30-40% | 2-3x return on time investment |
-| **Phase 3** | Months 3-6 | 50-70% | 5-10x return on investment |
-| **Phase 4** | Month 6+ | 70-90% | 10-20x return on investment |
-
-> **Engineering Leadership Insight:** Most teams achieve positive ROI within 6-8 weeks, with full productivity gains realized by month 3-4.
-
-> **Pro Tip:** I asked Cursor to migrate 1,000 lines of spaghetti JavaScript into TypeScript... and it actually worked. Your mileage may vary, but the ROI is real.
+| **Human-in-the-Loop**           | Development approach where humans review and approve AI-generated code before implementation |
+| **Prompt Engineering**          | The art of writing clear, specific instructions for AI tools to generate desired outputs |
+| **Role Playing**                | Technique where you ask AI to act as a specific type of developer (e.g., "senior React developer") |
+| **Agent Mode**                  | Advanced Cursor feature that can execute complex tasks across multiple files while maintaining human oversight |
+| **Chain of Thought**            | Breaking complex tasks into sequential steps for more accurate AI assistance |
+| **Hallucination**               | When AI generates code that looks correct but references non-existent APIs, functions, or patterns |
 
 ---
 
@@ -565,29 +556,29 @@ Next Week's Goals:
 
 **Throughout your Cursor Pro journey, engage with the community and your team:**
 
-### **Phase 1 Discussion Topics**
-- What was your biggest "aha moment" in getting started?
-- Which mini-project challenged you the most?
-- How did you adapt to the collaborative coding approach?
-- What tips would you give to someone just starting?
-
-### **Phase 2 Discussion Topics**
-- What was the most complex bug you solved with AI assistance?
-- How did Cursor help you understand unfamiliar codebases?
-- What advanced prompting techniques worked best for you?
-- How did you customize Cursor Rules for your projects?
-
-### **Phase 3 Discussion Topics**
-- What was the biggest resistance you faced when introducing Cursor to your team?
-- How did you measure and communicate productivity improvements?
-- What team workflows changed most dramatically with AI assistance?
-- How did you handle code review processes with AI-generated code?
-
-### **Phase 4 Discussion Topics**
-- What integrations with other tools have been most valuable?
-- How do you stay current with rapidly evolving AI development trends?
-- What advice would you give to teams just starting their AI journey?
-- How has AI assistance changed your approach to software architecture?
+````mermaid
+kanban
+  <br>**Phase 1 Discussion Topics**<br>  <br>
+    What was your biggest "aha moment" in getting started?
+    Which mini-project challenged you the most?
+    How did you adapt to the collaborative coding approach?
+    What tips would you give to someone just starting?
+  <br>**Phase 2 Discussion Topics**<br>  <br>
+      What was the most complex bug you solved with AI assistance?
+      How did Cursor help you understand unfamiliar codebases?
+      What advanced prompting techniques worked best for you?
+      How did you customize Cursor Rules for your projects?
+  <br>**Phase 3 Discussion Topics**<br> <br>
+      What was the biggest resistance you faced when introducing Cursor to your team?
+      How did you measure and communicate productivity improvements?
+      What team workflows changed most dramatically with AI assistance?
+      How did you handle code review processes with AI-generated code?  
+  <br>**Phase 4 Discussion Topics**<br> <br>
+      What integrations with other tools have been most valuable?
+      How do you stay current with rapidly evolving AI development trends?
+      What advice would you give to teams just starting their AI journey?
+      How has AI assistance changed your approach to software architecture?
+````
 
 ### **Team Exercises for All Phases**
 - How does AI assistance change your pair programming dynamics?
