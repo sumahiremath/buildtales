@@ -99,20 +99,19 @@ Let's begin your transformation from traditional developer to AI-assisted expert
 
 **Before diving into Cursor, ensure you have these prerequisites ready:**
 
-````mermaid
+```mermaid
 timeline
     title Prerequisites
-      Essential Accounts & Access : GitHub account <br> . <br> (for importing settings and project management)
-                                  : Stable internet connection <br> . <br> (AI features require consistent connectivity)
-                                  : Admin access to your machine <br> . <br> (for installation and potential permission issues)
-      Development Environment : Node.js (v16+) or Python (3.8+) <br> . <br> installed and accessible from terminal
+      Essential Accounts & Access : GitHub account (for importing settings and project management)
+                                  : Stable internet connection (AI features require consistent connectivity)
+                                  : Admin access to your machine (for installation and potential permission issues)
+      Development Environment: Node.js (v16+) or Python (3.8+) installed and accessible from terminal
                                   : Git configured with your credentials
-                                  : VSCode <br> . <br> (optional but recommended for settings import)
+                                  : VSCode  (optional but recommended for settings import)
       System Requirements : Windows 10+ (64-bit)
                           : macOS  10.15+ (Catalina or later) 
-                          : Linux Ubuntu 18.04+ or equivalent                       
-````
-
+                          : Linux Ubuntu 18.04+ or equivalent
+```
 
 > **Pro Tip:** If you're on a corporate machine, check with IT about software installation policies. Some companies require admin approval for new development tools.
 
@@ -144,14 +143,14 @@ timeline
 
 ## Quick Reference Card
 
-````mermaid
+```mermaid
 kanban
   **Essential Shortcuts:**
-    [**Ctrl+L** - Open AI Chat]
-    [**Ctrl+Shift+L** - Clear chat context]
-    [ **Ctrl+K** - Smart edit/refactor]
-    [ **Ctrl+Shift+P** - Command palette]
-    [ **Tab** - Accept autocomplete suggestion]
+    ["Ctrl+L - Open AI Chat"]
+    ["Ctrl+Shift+L - Clear chat context"]
+    ["Ctrl+K - Smart edit/refactor"]
+    ["Ctrl+Shift+P - Command palette"]
+    ["Tab - Accept autocomplete suggestion"]
   **Common Prompts:**
     ["Explain what this code does"]
     ["Refactor this function to be more readable"]
@@ -159,11 +158,11 @@ kanban
     ["Create tests for this component"]
     ["Optimize this code for performance"]
   **Context References:**
-    [@Files - Include specific files]
-    [@Folders - Include entire directories]
-    [@Code - Reference functions/classes]
-    [@Web - Include web search results]
-````
+    ["@Files - Include specific files"]
+    ["@Folders - Include entire directories"]
+    ["@Code - Reference functions/classes"]
+    ["@Web - Include web search results"]
+```
 
 **Save this card for quick access during your learning journey!**
 
@@ -174,24 +173,19 @@ kanban
 The quality of your prompts directly determines the quality of AI assistance you receive. Use this framework to structure your questions:
 
 ```mermaid
-kanban
-   **Who** - Define Your Role and Context
-      **Before:** "How do I fix this bug?"
-      **Better:** "As a React developer working on a payment form, how do I fix this validation bug that's preventing users from completing checkout?"
-   **What** - Specify the Exact Problem
-      **Before:** "Help me with authentication"
-      **Better:** "What's the best way to implement JWT token refresh in a React app that automatically handles expired tokens without user interruption?"
-   **When** - Consider Timing and Context
-      **Before:** "How do I handle errors?"
-      **Better:** "During high-traffic periods when our API response times increase, how do I implement graceful error handling that doesn't crash the user experience?"
-   **Where** - Identify the System Context
-      **Before:** "How do I handle errors?"
-      **Better:** "During high-traffic periods when our API response times increase, how do I implement graceful error handling that doesn't crash the user experience?"
-   **Why** - Understand the Business Impact
-      **Before:** "How do I make this faster?"
-      **Better:** "Our checkout process is taking 8 seconds, causing 25% cart abandonment. How do I optimize the payment flow to complete in under 3 seconds and reduce abandonment to under 10%?"
-```
-
+timeline
+    title The Five W's of Effective Prompting
+      Who <br>.<br> Define Your Role and Context: How do I fix this bug?
+          : As a React developer working on a payment form, how do I fix this validation bug that's preventing users from completing checkout?
+      What <br>.<br> Specify the exact problem: Help me with authentication
+          : What's the best way to implement JWT token refresh in a React app that automatically handles expired tokens without user interruption?
+      When <br>.<br> Consider Timing and Context : How do I handle errors?
+          : In a Next.js app running on Vercel with a PostgreSQL database, how do I optimize database queries to reduce page load times from 3 seconds to under 1 second?
+      Where <br>.<br> Identify the System Context: How do I optimize my code?
+          : In a Next.js app running on Vercel with a PostgreSQL database, how do I optimize database queries to reduce page load times from 3 seconds to under 1 second?
+      Why <br>.<br> Understand the Business Impact : How do I make this faster?
+          : Our checkout process is taking 8 seconds, causing 25% cart abandonment. How do I optimize the payment flow to complete in under 3 seconds and reduce abandonment to under 10%?
+ ```
 
 ### **Example: Applying the Five W's to Code Review**
 
@@ -366,37 +360,33 @@ Best Practices:
 
 ## Skill Checkpoints & Milestones
 
-````mermaid
----
-config:
-  kanban:
----
+```mermaid
 kanban
-  **Beginner - Phase 1 <br/><br/>Days 1-7**
-    [Generate simple programs through conversation]
-    [Understand Chat vs Autocomplete]
-    [Write effective basic prompts]
-    [Work on multi-file projects]
-    [Use @Files and @Folders context effectively]
-  **Intermediate - Phase 2<br/><br/>Weeks 2-4**
-    [Debug complex issues with AI assistance]
-    [Understand large codebases quickly]
-    [Use advanced prompting techniques]
-    [Create and use Cursor Rules]
-    [Generate production-ready code]
-  [**Advanced - Phase 3<br><br>Months 2-3**]
-    [Handle complex architectural change]
-    [Create sophisticated team Cursor Rules]
-    [Review AI-generated code effectively]
-    [Lead team AI-assisted development]
-    [Measure productivity improvements]
-  [**Expert - Phase 4<br><br>Month 4+**]
-    [Integrate Cursor into complete development workflows]
-    [Build production applications with AI assistance]
-    [Train and mentor others]
-    [Contribute to AI development community]
-    [Stay current with AI development trend]
-````
+  **Beginner - Phase 1**
+    ["Generate simple programs through conversation"]
+    ["Understand Chat vs Autocomplete"]
+    ["Write effective basic prompts"]
+    ["Work on multi-file projects"]
+    ["Use @Files and @Folders context effectively"]
+  **Intermediate - Phase 2**
+    ["Debug complex issues with AI assistance"]
+    ["Understand large codebases quickly"]
+    ["Use advanced prompting techniques"]
+    ["Create and use Cursor Rules"]
+    ["Generate production-ready code"]
+  **Advanced - Phase 3**
+    ["Handle complex architectural change"]
+    ["Create sophisticated team Cursor Rules"]
+    ["Review AI-generated code effectively"]
+    ["Lead team AI-assisted development"]
+    ["Measure productivity improvements"]
+  **Expert - Phase 4**
+    ["Integrate Cursor into complete development workflows"]
+    ["Build production applications with AI assistance"]
+    ["Train and mentor others"]
+    ["Contribute to AI development community"]
+    ["Stay current with AI development trends"]
+```
 
 ## Common Pitfalls & Solutions
 
@@ -556,29 +546,29 @@ Next Week's Goals:
 
 **Throughout your Cursor Pro journey, engage with the community and your team:**
 
-````mermaid
+```mermaid
 kanban
-  <br>**Phase 1 Discussion Topics**<br>  <br>
-    What was your biggest "aha moment" in getting started?
-    Which mini-project challenged you the most?
-    How did you adapt to the collaborative coding approach?
-    What tips would you give to someone just starting?
-  <br>**Phase 2 Discussion Topics**<br>  <br>
-      What was the most complex bug you solved with AI assistance?
-      How did Cursor help you understand unfamiliar codebases?
-      What advanced prompting techniques worked best for you?
-      How did you customize Cursor Rules for your projects?
-  <br>**Phase 3 Discussion Topics**<br> <br>
-      What was the biggest resistance you faced when introducing Cursor to your team?
-      How did you measure and communicate productivity improvements?
-      What team workflows changed most dramatically with AI assistance?
-      How did you handle code review processes with AI-generated code?  
-  <br>**Phase 4 Discussion Topics**<br> <br>
-      What integrations with other tools have been most valuable?
-      How do you stay current with rapidly evolving AI development trends?
-      What advice would you give to teams just starting their AI journey?
-      How has AI assistance changed your approach to software architecture?
-````
+  **Phase 1 Discussion Topics**
+    ["What was your biggest 'aha moment' in getting started?"]
+    ["Which mini-project challenged you the most?"]
+    ["How did you adapt to the collaborative coding approach?"]
+    ["What tips would you give to someone just starting?"]
+  **Phase 2 Discussion Topics**
+    ["What was the most complex bug you solved with AI assistance?"]
+    ["How did Cursor help you understand unfamiliar codebases?"]
+    ["What advanced prompting techniques worked best for you?"]
+    ["How did you customize Cursor Rules for your projects?"]
+  **Phase 3 Discussion Topics**
+    ["What was the biggest resistance you faced when introducing Cursor to your team?"]
+    ["How did you measure and communicate productivity improvements?"]
+    ["What team workflows changed most dramatically with AI assistance?"]
+    ["How did you handle code review processes with AI-generated code?"]
+  **Phase 4 Discussion Topics**
+    ["What integrations with other tools have been most valuable?"]
+    ["How do you stay current with rapidly evolving AI development trends?"]
+    ["What advice would you give to teams just starting their AI journey?"]
+    ["How has AI assistance changed your approach to software architecture?"]
+```
 
 ### **Team Exercises for All Phases**
 - How does AI assistance change your pair programming dynamics?
