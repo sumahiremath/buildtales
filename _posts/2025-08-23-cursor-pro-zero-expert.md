@@ -102,15 +102,18 @@ Let's begin your transformation from traditional developer to AI-assisted expert
 ```mermaid
 timeline
     title Prerequisites
-      Essential Accounts & Access : GitHub account (for importing settings and project management)
-                                  : Stable internet connection (AI features require consistent connectivity)
-                                  : Admin access to your machine (for installation and potential permission issues)
-      Development Environment: Node.js (v16+) or Python (3.8+) installed and accessible from terminal
-                                  : Git configured with your credentials
-                                  : VSCode  (optional but recommended for settings import)
-      System Requirements : Windows 10+ (64-bit)
-                          : macOS  10.15+ (Catalina or later) 
-                          : Linux Ubuntu 18.04+ or equivalent
+    section Essential Accounts & Access
+        GitHub account : for importing settings and project management
+        Stable internet connection : AI features require consistent connectivity
+        Admin access to your machine : for installation and potential permission issues
+    section Development Environment
+        Node.js (v16+) or Python (3.8+) : installed and accessible from terminal
+        Git configured : with your credentials
+        VSCode : optional but recommended for settings import
+    section System Requirements
+        Windows 10+ (64-bit) : 
+        macOS 10.15+ (Catalina or later) : 
+        Linux Ubuntu 18.04+ or equivalent : 
 ```
 
 > **Pro Tip:** If you're on a corporate machine, check with IT about software installation policies. Some companies require admin approval for new development tools.
@@ -175,17 +178,22 @@ The quality of your prompts directly determines the quality of AI assistance you
 ```mermaid
 timeline
     title The Five W's of Effective Prompting
-      Who <br>.<br> Define Your Role and Context: How do I fix this bug?
-          : As a React developer working on a payment form, how do I fix this validation bug that's preventing users from completing checkout?
-      What <br>.<br> Specify the exact problem: Help me with authentication
-          : What's the best way to implement JWT token refresh in a React app that automatically handles expired tokens without user interruption?
-      When <br>.<br> Consider Timing and Context : How do I handle errors?
-          : In a Next.js app running on Vercel with a PostgreSQL database, how do I optimize database queries to reduce page load times from 3 seconds to under 1 second?
-      Where <br>.<br> Identify the System Context: How do I optimize my code?
-          : In a Next.js app running on Vercel with a PostgreSQL database, how do I optimize database queries to reduce page load times from 3 seconds to under 1 second?
-      Why <br>.<br> Understand the Business Impact : How do I make this faster?
-          : Our checkout process is taking 8 seconds, causing 25% cart abandonment. How do I optimize the payment flow to complete in under 3 seconds and reduce abandonment to under 10%?
- ```
+    section Who
+        Define Your Role and Context : How do I fix this bug?
+        Example : As a React developer working on a payment form, how do I fix this validation bug that's preventing users from completing checkout?
+    section What
+        Specify the exact problem : Help me with authentication
+        Example : What's the best way to implement JWT token refresh in a React app that automatically handles expired tokens without user interruption?
+    section When
+        Consider Timing and Context : How do I handle errors?
+        Example : In a Next.js app running on Vercel with a PostgreSQL database, how do I optimize database queries to reduce page load times from 3 seconds to under 1 second?
+    section Where
+        Identify the System Context : How do I optimize my code?
+        Example : In a Next.js app running on Vercel with a PostgreSQL database, how do I optimize database queries to reduce page load times from 3 seconds to under 1 second?
+    section Why
+        Understand the Business Impact : How do I make this faster?
+        Example : Our checkout process is taking 8 seconds, causing 25% cart abandonment. How do I optimize the payment flow to complete in under 3 seconds and reduce abandonment to under 10%?
+```
 
 ### **Example: Applying the Five W's to Code Review**
 
