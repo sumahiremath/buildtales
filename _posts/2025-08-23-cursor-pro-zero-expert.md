@@ -421,6 +421,7 @@ Phase 3
 | "AI-generated code breaks in production"      | Always review AI code, add comprehensive tests, and understand what it does |
 | "Team members resist AI-assisted development" | Start small, demonstrate value, provide training and support                |
 | "Cursor Rules are too generic"                | Include specific examples and project context in your rules                 |
+
 Phase 4
 
 | Common Pitfall                                   | Solution                                                                     |
@@ -432,19 +433,19 @@ Phase 4
 
 ## Glossary of AI Development Terms
 
-| Term                            | Definition |
-|---------------------------------|------------|
-| **AI-Assisted Development**     | Software development where AI tools augment human capabilities rather than replace them |
-| **Autocomplete**                | AI-powered code suggestions that appear as you type, completing functions, classes, and patterns |
-| **Chat Mode**                   | AI conversation interface for planning, debugging, and explaining code concepts |
-| **Context Management**          | How AI tools understand your project structure using @Files, @Folders, and @Code references |
-| **Cursor Rules (.cursorrules)** | Configuration files that define AI behavior, coding standards, and project context |
-| **Human-in-the-Loop**           | Development approach where humans review and approve AI-generated code before implementation |
-| **Prompt Engineering**          | The art of writing clear, specific instructions for AI tools to generate desired outputs |
-| **Role Playing**                | Technique where you ask AI to act as a specific type of developer (e.g., "senior React developer") |
+| Term                            | Definition                                                                                                     |
+|---------------------------------|----------------------------------------------------------------------------------------------------------------|
+| **AI-Assisted Development**     | Software development where AI tools augment human capabilities rather than replace them                        |
+| **Autocomplete**                | AI-powered code suggestions that appear as you type, completing functions, classes, and patterns               |
+| **Chat Mode**                   | AI conversation interface for planning, debugging, and explaining code concepts                                |
+| **Context Management**          | How AI tools understand your project structure using @Files, @Folders, and @Code references                    |
+| **Cursor Rules (.cursorrules)** | Configuration files that define AI behavior, coding standards, and project context                             |
+| **Human-in-the-Loop**           | Development approach where humans review and approve AI-generated code before implementation                   |
+| **Prompt Engineering**          | The art of writing clear, specific instructions for AI tools to generate desired outputs                       |
+| **Role Playing**                | Technique where you ask AI to act as a specific type of developer (e.g., "senior React developer")             |
 | **Agent Mode**                  | Advanced Cursor feature that can execute complex tasks across multiple files while maintaining human oversight |
-| **Chain of Thought**            | Breaking complex tasks into sequential steps for more accurate AI assistance |
-| **Hallucination**               | When AI generates code that looks correct but references non-existent APIs, functions, or patterns |
+| **Chain of Thought**            | Breaking complex tasks into sequential steps for more accurate AI assistance                                   |
+| **Hallucination**               | When AI generates code that looks correct but references non-existent APIs, functions, or patterns             |
 
 ---
 
