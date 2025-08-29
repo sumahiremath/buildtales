@@ -6,14 +6,14 @@ categories: [payments]
 section: "Phase 1: Understanding the Rails"
 excerpt: "Understanding the credit card payment flow from authorization to settlement, and why it's not as instant as it seems."
 banner_image: "/assets/banners/resized/20250827creditcards-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20250827creditcards-recent.jpg"
-banner_image_series: "/assets/banners/resized/20250827creditcards-series.jpg"
+banner_image_recent: "/assets/banners/resized/20250827creditcard-recent.jpg"
+banner_image_series: "/assets/banners/resized/20250827creditcard-series.jpg"
 banner_color: "#157878"
 ---
 
 # Credit Cards: Swipe, Smile, Settle Later
 
-![Credit Cards: Swipe, Smile, Settle Later](/assets/banners/resized/20250827creditcards-blog.jpg)
+![Credit Cards: Swipe, Smile, Settle Later](/assets/banners/resized/20250827creditcard-blog.jpg)
 
 *The rail that powers commerce — with a hidden settlement machine behind the scenes.*
 
@@ -80,6 +80,64 @@ Credit card payments involve four key players, each with different incentives an
 4. **Issuer** - The cardholder's bank that extends credit
 
 **Card Networks** (Visa, Mastercard, AmEx, Discover) act as the infrastructure layer, connecting all parties and setting the rules.
+
+```mermaid
+flowchart TD
+    %% Cardholder - The Happy Shopper
+    CH["🛒 Cardholder
+    I want that coffee!
+    💳 Swipes Card"]
+    
+    %% Merchant - The Business
+    M["🏪 Merchant
+    Coffee shop
+    ☕ Sells goods/services"]
+    
+    %% Acquirer - Merchant's Bank
+    A["🏦 Acquirer
+    Merchant Bank
+    💼 Processes payments"]
+    
+    %% Issuer - Cardholder's Bank
+    I["🏛️ Issuer
+    Cardholder Bank
+    💰 Extends credit"]
+    
+    %% Card Network (infrastructure)
+    CN["🌐 Card Network
+    Visa/Mastercard
+    🔗 Connects everyone"]
+    
+    %% Flow arrows with labels
+    CH -->|1| M
+    M -->|2| A
+    A -->|3| CN
+    CN -->|4| I
+    I -->|5| CN
+    CN -->|6| A
+    A -->|7| M
+    M -->|8| CH
+    
+    %% Settlement flow (dashed lines)
+    M -.->|Settle| A
+    A -.->|Settle| CN
+    CN -.->|Settle| I
+    I -.->|Settle| A
+    A -.->|Settle| M
+    
+    %% Styling
+    classDef cardholder fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    classDef merchant fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef acquirer fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
+    classDef issuer fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef network fill:#fce4ec,stroke:#880e4f,stroke-width:2px
+    
+    class CH cardholder
+    class M merchant
+    class A acquirer
+    class I issuer
+    class CN network
+```
 
 ### Authorization vs. Settlement: The Two-Phase Process
 
