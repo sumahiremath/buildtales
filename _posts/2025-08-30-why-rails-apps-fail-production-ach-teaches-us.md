@@ -116,13 +116,13 @@ Notice the eventual consistency: the user sees "Payment Submitted," but the real
 
 In the next post, we'll dive into stability patterns from Release It! and show how to apply them to Rails ACH systems — starting with circuit breakers.
 
+**Next Article**: [Stability Patterns Every Rails Fintech Engineer Should Know](/2025/08/31/stability-patterns-every-rails-fintech-engineer-should-know.html)
+
 ## Key Takeaways
 
 - ACH is the perfect playground for studying system reliability.
 - Rails apps fail in production not just due to bugs, but due to distributed system realities like partitions, latency, and eventual consistency.
 - By applying Release It! patterns (timeouts, retries, idempotency), we can build resilient, trustworthy payment systems.
-
----
 
 ---
 
@@ -145,4 +145,8 @@ In the next post, we'll dive into stability patterns from Release It! and show h
 
 ---
 
+**Series: Release It! with Rails & ACH** | **Part 1 of 7**
+
 *This is the first article in a series exploring how to apply Michael Nygard's Release It! principles to Rails applications processing ACH payments. We'll cover circuit breakers, bulkheads, timeouts, and other resilience patterns that keep your payment systems running when external dependencies fail.*
+
+**Next**: [Stability Patterns Every Rails Fintech Engineer Should Know](/2025/08/31/stability-patterns-every-rails-fintech-engineer-should-know.html)
