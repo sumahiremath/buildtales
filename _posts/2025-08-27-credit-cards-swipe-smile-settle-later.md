@@ -5,7 +5,7 @@ date: 2025-08-27
 categories: [payments]
 section: "Phase 1: Understanding the Rails"
 excerpt: "Understanding the credit card payment flow from authorization to settlement, and why it's not as instant as it seems."
-banner_image: "/assets/banners/resized/20250827creditcards-blog.jpg"
+banner_image: "/assets/banners/resized/20250827creditcard-blog.jpg"
 banner_image_recent: "/assets/banners/resized/20250827creditcard-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250827creditcard-series.jpg"
 banner_color: "#157878"
