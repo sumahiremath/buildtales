@@ -104,13 +104,13 @@ What actually protects you isn't the controller—it's the evidence you persist:
 ### What to Do If You Receive a Chargeback on a 3DS Transaction
 
 ```mermaid
-flowchart TD
+graph TD
     A([Dispute received]) --> B{Reason code = Fraud?}
     B -->|Yes| C{3DS successful & evidence on file?}
-    C -->|Yes| D[Invoke liability shift<br/>(submit ECI/CAVV/DS txn id)]
-    C -->|No| E[Defend as standard fraud<br/>(limited coverage)]
-    B -->|No| F[Non-fraud dispute<br/>(delivery/quality/billing)]
-    F --> G[Defend with other evidence:<br/>PoD, comms, refund policy]
+    C -->|Yes| D[Invoke liability shift - submit ECI/CAVV/DS txn id]
+    C -->|No| E[Defend as standard fraud - limited coverage]
+    B -->|No| F[Non-fraud dispute - delivery/quality/billing]
+    F --> G[Defend with other evidence - PoD, comms, refund policy]
     D --> H([Outcome: issuer bears fraud liability])
     E --> H
     G --> I([Outcome: merchant must defend on merits])

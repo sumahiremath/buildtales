@@ -58,7 +58,7 @@ end
 
 **Diagram**:
 ```mermaid
-flowchart TD
+graph TD
     A[Client Request] --> B[ACH API Call]
     B -->|Fails repeatedly| C[Circuit Breaker Trips]
     C --> D[Fast Fail Response]
@@ -126,7 +126,7 @@ In Rails, this often means separate Sidekiq queues:
 
 **Diagram**:
 ```mermaid
-flowchart LR
+graph LR
     subgraph ACH["ACH Queue"]
       A1[ACH Job]:::ach
       A2[ACH Job]:::ach
