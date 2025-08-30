@@ -5,7 +5,6 @@ date: 2025-09-02
 categories: [payments]
 tags: [credit-cards, interchange, downgrades, reconciliation, fintech]
 banner_image: 20250902cardnocs-blog.jpg
-banner_image_recent: 20250902cardnocs-recent.jpg
 banner_image_series: 20250902cardnocs-series.jpg
 banner_color: "#157878"
 banner_alt: "Credit card network downgrade analysis showing interchange categories and fee impacts"

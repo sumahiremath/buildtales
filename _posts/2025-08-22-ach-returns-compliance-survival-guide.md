@@ -7,7 +7,6 @@ section: "ACH Operations & Compliance"
 tags: [ach, nacha, returns, compliance, fintech-operations, audit, reg-e]
 excerpt: "ACH returns are your early warning system for payment failures. But they're also your compliance nightmare if you don't handle them correctly. Learn how to turn returns from operational chaos into strategic insights."
 banner_image: "/assets/banners/resized/20250817nocs-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20250817nocs-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250817nocs-series.jpg"
 banner_color: "#157878"
 

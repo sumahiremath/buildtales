@@ -6,7 +6,6 @@ categories: [payments]
 section: "Phase 3: Observability & Ops Strategy"
 excerpt: "ACH audits can be stressful, but with proper preparation and system design, engineering managers can navigate them successfully."
 banner_image: "/assets/banners/resized/20251203achaudit-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20251203achaudit-recent.jpg"
 banner_image_series: "/assets/banners/resized/20251203achaudit-series.jpg"
 banner_color: "#7c3aed"
 ---

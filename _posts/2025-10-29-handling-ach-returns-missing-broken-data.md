@@ -6,7 +6,6 @@ categories: [payments]
 section: "Phase 2: Failure Modes — Returns, Reversals, & Chaos"
 excerpt: "When ACH returns arrive with incomplete or corrupted information, your systems need to handle the uncertainty gracefully."
 banner_image: "/assets/banners/resized/20251029missingdata-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20251029missingdata-recent.jpg"
 banner_image_series: "/assets/banners/resized/20251029missingdata-series.jpg"
 banner_color: "#7c3aed"
 ---

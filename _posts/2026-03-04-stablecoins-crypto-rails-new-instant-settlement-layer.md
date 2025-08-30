@@ -6,7 +6,6 @@ categories: [payments]
 section: "Phase 6: Modern Money Movement (Crypto & Global)"
 excerpt: "Are stablecoins and crypto rails the future of instant settlement, or just another layer of complexity in the payment ecosystem?"
 banner_image: "/assets/banners/resized/20260304stablecoins-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20260304stablecoins-recent.jpg"
 banner_image_series: "/assets/banners/resized/20260304stablecoins-series.jpg"
 banner_color: "#059669"
 ---

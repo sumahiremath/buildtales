@@ -6,7 +6,6 @@ categories: [payments]
 section: "Phase 5: Recurring, Revenue, and Lifecycle Systems"
 excerpt: "Recurring payments are the engine that keeps subscription businesses running, but they're also the source of complex engineering challenges."
 banner_image: "/assets/banners/resized/20260204recurring-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20260204recurring-recent.jpg"
 banner_image_series: "/assets/banners/resized/20260204recurring-series.jpg"
 banner_color: "#059669"
 ---

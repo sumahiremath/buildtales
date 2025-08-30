@@ -7,7 +7,6 @@ section: "ACH Operations & Compliance"
 tags: [ach, sec-codes, compliance, authorization, nacha]
 excerpt: "SEC codes determine your compliance fate in ACH payments. Get them wrong and face chargebacks, fines, and regulatory headaches. This guide shows you how to classify transactions correctly and stay compliant."
 banner_image: "/assets/banners/resized/20250816seccode-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20250816seccode-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250816seccode-series.jpg"
 banner_color: "#157878"
 

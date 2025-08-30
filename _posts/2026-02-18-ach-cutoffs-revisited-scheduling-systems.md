@@ -6,7 +6,6 @@ categories: [payments]
 section: "Phase 5: Recurring, Revenue, and Lifecycle Systems"
 excerpt: "When building scheduling systems, ACH cutoffs take on new complexity. Learn how to design systems that work around these timing constraints."
 banner_image: "/assets/banners/resized/20260218cutoffsrevisited-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20260218cutoffsrevisited-recent.jpg"
 banner_image_series: "/assets/banners/resized/20260218cutoffsrevisited-series.jpg"
 banner_color: "#157878"
 future: true

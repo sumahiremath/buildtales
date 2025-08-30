@@ -6,7 +6,6 @@ categories: [payments]
 section: "Phase 2: Failure Modes — Returns, Reversals, & Chaos"
 excerpt: "When an entire ACH file needs to be reversed, engineering managers need to coordinate teams, systems, and stakeholders to minimize damage."
 banner_image: "/assets/banners/resized/20251022achreversals-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20251022achreversals-recent.jpg"
 banner_image_series: "/assets/banners/resized/20251022achreversals-series.jpg"
 banner_color: "#dc2626"
 ---

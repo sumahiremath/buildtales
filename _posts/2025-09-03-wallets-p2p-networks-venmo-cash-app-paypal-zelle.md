@@ -7,7 +7,6 @@ section: "Phase 1: Understanding the Rails"
 tags: [wallets, p2p, venmo, cash-app, paypal, zelle, apple-pay, google-pay, ach, card-networks]
 excerpt: "Consumers think Venmo = cash. Engineers know better: wallets are ledger-first abstractions that sit on top of ACH and card rails. If you mistake 'instant ledger' for 'settled funds,' your ops team will bleed."
 banner_image: "/assets/banners/resized/2025-09-03-wallets-blog.jpg"
-banner_image_recent: "/assets/banners/resized/2025-09-03-wallets-recent.jpg"
 banner_image_series: "/assets/banners/resized/2025-09-03-wallets-series.jpg"
 banner_color: "#157878"
 

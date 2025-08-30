@@ -6,7 +6,6 @@ categories: [payments]
 section: "Phase 3: Observability & Ops Strategy"
 excerpt: "Engineering leaders need to understand ACH returns, corrections, and thresholds to build systems that stay compliant and operational."
 banner_image: "/assets/banners/resized/20251126thresholds-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20251126thresholds-recent.jpg"
 banner_image_series: "/assets/banners/resized/20251126thresholds-series.jpg"
 banner_color: "#059669"
 ---

@@ -6,7 +6,6 @@ categories: [systems, architecture, releaseit, design-patterns]
 section: "System Design Fundamentals"
 excerpt: "Understanding why Rails apps fail in production using ACH payment processing as a case study, and how to apply Release It! principles for resilience."
 banner_image: "/assets/banners/resized/20250830railsfail-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20250830railsfail-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250830railsfail-series.jpg"
 banner_color: "#157878"
 

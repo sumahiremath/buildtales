@@ -6,7 +6,6 @@ categories: [payments]
 section: "Phase 2: Failure Modes — Returns, Reversals, & Chaos"
 excerpt: "A personal story about the time I submitted the wrong ACH file and what I learned about human error in payment systems."
 banner_image: "/assets/banners/resized/20251119wrongfile-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20251119wrongfile-recent.jpg"
 banner_image_series: "/assets/banners/resized/20251119wrongfile-series.jpg"
 banner_color: "#dc2626"
 ---

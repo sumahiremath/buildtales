@@ -6,7 +6,6 @@ categories: [payments]
 section: "Phase 1: Understanding the Rails"
 excerpt: "Understanding the invisible time constraints that make ACH payments feel slow and how to design around these hidden deadlines."
 banner_image: "/assets/banners/resized/20250917achcutoffs-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20250917achcutoffs-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250917achcutoffs-series.jpg"
 banner_color: "#7c3aed"
 

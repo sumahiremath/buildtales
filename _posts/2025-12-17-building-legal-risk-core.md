@@ -6,7 +6,6 @@ categories: [payments]
 section: "Phase 3: Observability & Ops Strategy"
 excerpt: "Instead of bolting on compliance, build it into your system architecture from the ground up."
 banner_image: "/assets/banners/resized/20251217legalcore-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20251217legalcore-recent.jpg"
 banner_image_series: "/assets/banners/resized/20251217legalcore-series.jpg"
 banner_color: "#157878"
 future: true

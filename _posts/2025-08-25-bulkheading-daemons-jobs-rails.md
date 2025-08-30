@@ -6,7 +6,6 @@ categories: [rails, sidekiq, systems]
 section: "System Design Fundamentals"
 excerpt: "How to use the bulkhead pattern with Sidekiq daemons and scheduled jobs in Rails to isolate failures and keep critical workloads running."
 banner_image: "/assets/banners/resized/20250825railsbulkhead-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20250825railsbulkhead-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250825railsbulkhead-series.jpg"
 banner_color: "#157878"
 

@@ -6,7 +6,6 @@ categories: [payments]
 section: "Phase 1: Understanding the Rails"
 excerpt: "Exploring the promise of real-time payments and the practical bottlenecks that limit their true potential in production systems."
 banner_image: "/assets/banners/resized/20250903rtp-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20250903rtp-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250903rtp-series.jpg"
 banner_color: "#059669"
 

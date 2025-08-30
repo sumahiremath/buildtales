@@ -6,7 +6,6 @@ categories: [payments]
 section: "Phase 3: Observability & Ops Strategy"
 excerpt: "Understanding Reg E and UDAAP requirements is essential for engineering leaders building consumer-facing payment systems."
 banner_image: "/assets/banners/resized/20251224regeudaap-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20251224regeudaap-recent.jpg"
 banner_image_series: "/assets/banners/resized/20251224regeudaap-series.jpg"
 banner_color: "#7c3aed"
 ---

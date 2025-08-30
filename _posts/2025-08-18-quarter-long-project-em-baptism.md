@@ -7,7 +7,6 @@ section: "Strategies & Tactics"
 tags: [engineering-management, project-management, leadership, team-building, technical-decision-making]
 excerpt: "Sometimes the projects that look simple on paper become the most transformative experiences. Here's how what was supposed to be a straightforward quarter-long initiative became my real introduction to engineering management."
 banner_image: "/assets/banners/resized/20250818mousefinish-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20250818mousefinish-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250818mousefinish-series.jpg"
 banner_color: "#157878"
 

@@ -6,7 +6,6 @@ categories: [payments]
 section: "Phase 2: Failure Modes — Returns, Reversals, & Chaos"
 excerpt: "File processing failures are inevitable. The question is how quickly and gracefully you can recover and resubmit."
 banner_image: "/assets/banners/resized/20251105missedentries-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20251105missedentries-recent.jpg"
 banner_image_series: "/assets/banners/resized/20251105missedentries-series.jpg"
 banner_color: "#059669"
 ---

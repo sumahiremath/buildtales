@@ -6,7 +6,6 @@ categories: [payments]
 section: "Phase 2: Failure Modes — Returns, Reversals, & Chaos"
 excerpt: "ACH trace IDs are your lifeline when payments go wrong. Learn how to track them across your systems, banks, and the Federal Reserve."
 banner_image: "/assets/banners/resized/20251112traceids-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20251112traceids-recent.jpg"
 banner_image_series: "/assets/banners/resized/20251112traceids-series.jpg"
 banner_color: "#157878"
 future: true

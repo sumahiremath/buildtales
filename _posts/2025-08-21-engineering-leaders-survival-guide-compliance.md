@@ -10,7 +10,6 @@ og_title: "The Engineering Leader's Survival Guide to Compliance"
 og_description: "How engineering leaders can turn compliance from a blocker into a design parameter that builds trust and system resilience."
 og_image: /assets/images/leadership-compliance-guide.png
 banner_image: "/assets/banners/resized/20250821elcompliancesurvial-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20250821elcompliancesurvial-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250821elcompliancesurvial-series.jpg"
 banner_color: "#157878"
 

@@ -6,7 +6,6 @@ categories: [payments]
 section: "Phase 6: Modern Money Movement (Crypto & Global)"
 excerpt: "India's UPI system offers lessons for developers building payment systems. Learn how to integrate with UPI and what it teaches us about payment design."
 banner_image: "/assets/banners/resized/20260325upiintegration-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20260325upiintegration-recent.jpg"
 banner_image_series: "/assets/banners/resized/20260325upiintegration-series.jpg"
 banner_color: "#059669"
 ---

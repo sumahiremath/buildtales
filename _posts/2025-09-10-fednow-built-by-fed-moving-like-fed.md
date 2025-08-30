@@ -6,7 +6,6 @@ categories: [payments]
 section: "Phase 1: Understanding the Rails"
 excerpt: "Examining the Federal Reserve's entry into real-time payments and why government-built systems move at government speed."
 banner_image: "/assets/banners/resized/20250910fednow-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20250910fednow-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250910fednow-series.jpg"
 banner_color: "#dc2626"
 

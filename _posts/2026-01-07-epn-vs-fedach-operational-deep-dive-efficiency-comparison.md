@@ -7,7 +7,6 @@ section: "Phase 4: Multi-Client, Multi-Rail Complexity"
 tags: [ach, payments, fintech, epn, fedach, operations, efficiency, third-party-senders]
 excerpt: "Both operators process ACH, but EPN's customization, faster return handling, and telemetry options give it a unique edge. This piece walks through settlement behavior, file acknowledgments, return processing, and why EPN may better support high-volume TPSP flows."
 banner_image: "/assets/banners/resized/20250813moneyflow-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20250813moneyflow-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250813moneyflow-series.jpg"
 banner_color: "#157878"
 future: true

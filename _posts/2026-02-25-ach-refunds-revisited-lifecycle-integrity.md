@@ -6,7 +6,6 @@ categories: [payments]
 section: "Phase 5: Recurring, Revenue, and Lifecycle Systems"
 excerpt: "In recurring payment systems, refunds affect more than just one transaction. Learn how to maintain lifecycle integrity during refund operations."
 banner_image: "/assets/banners/resized/20260225refundsrevisited-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20260225refundsrevisited-recent.jpg"
 banner_image_series: "/assets/banners/resized/20260225refundsrevisited-series.jpg"
 banner_color: "#dc2626"
 ---

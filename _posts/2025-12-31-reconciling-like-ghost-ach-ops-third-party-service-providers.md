@@ -7,7 +7,6 @@ section: "Phase 4: Multi-Client, Multi-Rail Complexity"
 tags: [ach, payments, fintech, third-party-senders, reconciliation, operations]
 excerpt: "As a TPSP, you don't have access to the underlying bank balance — just the files you send and the return files you receive. This article explains how to reconcile via metadata, file logging, and trace ID correlation when you can't see the bank's books."
 banner_image: "/assets/banners/resized/20250813moneyflow-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20250813moneyflow-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250813moneyflow-series.jpg"
 banner_color: "#157878"
 future: true

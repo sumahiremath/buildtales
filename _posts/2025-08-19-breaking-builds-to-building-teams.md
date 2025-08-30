@@ -7,7 +7,6 @@ section: "Execute & Assess"
 tags: [qa, engineering-leadership, team-building, systems-thinking, empathy, documentation]
 excerpt: "I started out breaking builds in QA. What I didn't realize was that QA was secretly sculpting me into an engineering leader — teaching me systems thinking, empathy, and risk-based decision making."
 banner_image: "/assets/banners/resized/20250819qatolead-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20250819qatolead-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250819qatolead-series.jpg"
 banner_color: "#157878"
 

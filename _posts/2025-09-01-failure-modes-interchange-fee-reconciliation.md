@@ -7,7 +7,6 @@ section: "Phase 1: Understanding the Rails"
 tags: [interchange, variance, reconciliation, payment-systems, credit-cards, compliance, fintech]
 excerpt: "Understanding why credit card interchange fees change between authorization and settlement is crucial for payment system design. This article explores the reconciliation challenges and provides practical solutions for tracking fee variances."
 banner_image: "/assets/banners/resized/20250901cardauth-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20250901cardauth-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250901cardauth-series.jpg"
 banner_color: "#059669"
 

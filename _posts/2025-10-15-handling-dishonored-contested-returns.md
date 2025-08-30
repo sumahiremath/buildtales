@@ -6,7 +6,6 @@ categories: [payments]
 section: "Phase 2: Failure Modes — Returns, Reversals, & Chaos"
 excerpt: "When returns come back dishonored or customers contest them, your payment system needs to handle the chaos gracefully."
 banner_image: "/assets/banners/resized/20251015dishonoredreturns-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20251015dishonoredreturns-recent.jpg"
 banner_image_series: "/assets/banners/resized/20251015dishonoredreturns-series.jpg"
 banner_color: "#dc2626"
 ---

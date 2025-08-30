@@ -6,7 +6,6 @@ categories: [payments]
 section: "Phase 4: Multi-Client, Multi-Rail Complexity"
 excerpt: "When you're processing payments for other companies, your system design needs to handle multiple clients, rails, and compliance requirements."
 banner_image: "/assets/banners/resized/20251231thirdparty-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20251231thirdparty-recent.jpg"
 banner_image_series: "/assets/banners/resized/20251231thirdparty-series.jpg"
 banner_color: "#059669"
 ---

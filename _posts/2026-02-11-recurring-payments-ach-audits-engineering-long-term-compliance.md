@@ -6,7 +6,6 @@ categories: [payments]
 section: "Phase 5: Recurring, Revenue, and Lifecycle Systems"
 excerpt: "Long-term compliance in recurring payments requires engineering systems that can withstand years of regulatory scrutiny and audits."
 banner_image: "/assets/banners/resized/20260211longtermcompliance-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20260211longtermcompliance-recent.jpg"
 banner_image_series: "/assets/banners/resized/20260211longtermcompliance-series.jpg"
 banner_color: "#7c3aed"
 ---

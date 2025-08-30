@@ -6,7 +6,6 @@ categories: [payments]
 section: "Phase 1: Understanding the Rails"
 excerpt: "How to handle ACH dollar limits when processing millions of transactions and why entry file caps matter more than you think."
 banner_image: "/assets/banners/resized/202500924achlimits-blog.jpg"
-banner_image_recent: "/assets/banners/resized/202500924achlimits-recent.jpg"
 banner_image_series: "/assets/banners/resized/202500924achlimits-series.jpg"
 banner_color: "#059669"
 

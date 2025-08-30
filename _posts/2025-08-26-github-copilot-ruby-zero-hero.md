@@ -6,7 +6,6 @@ categories: [ai-tools, systems]
 section: "Leveraging AI Tools"
 excerpt: "Learn GitHub Copilot by building a Ruby CLI project from scratch. A hands-on, end-to-end guide from installation to tests, persistence, and documentation."
 banner_image: "/assets/banners/resized/20250826copilot-ruby-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20250826copilot-ruby-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250826copilot-ruby-series.jpg"
 banner_color: "#157878"
 

@@ -6,7 +6,6 @@ categories: [ai-tools, systems]
 section: "Leveraging AI Tools"
 excerpt: "A practical guide to getting more done with fewer tokens - master the art of efficient AI-assisted development within Cursor's usage constraints."
 banner_image: "/assets/banners/resized/20250824cursorapilimit-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20250824cursorapilimit-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250824cursorapilimit-series.jpg"
 banner_color: "#157878"
 

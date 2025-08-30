@@ -6,7 +6,6 @@ categories: [systems, ai-tools]
 section: "Leveraging AI Tools"
 excerpt: "A structured guide to mastering AI-powered development with Cursor Pro, from installation to expert-level workflows."
 banner_image: "/assets/banners/resized/20250823cursorpro-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20250823cursorpro-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250823cursorpro-series.jpg"
 banner_color: "#157878"
 

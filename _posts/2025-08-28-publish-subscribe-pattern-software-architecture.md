@@ -6,7 +6,6 @@ categories: [systems, architecture, messaging, design-patterns]
 section: "System Design Fundamentals"
 excerpt: "Master the publish-subscribe pattern for building scalable, loosely-coupled systems. Learn when to use it, implementation strategies, and production considerations."
 banner_image: "/assets/banners/resized/20250828pubsub-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20250828pubsub-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250828pubsub-series.jpg"
 banner_color: "#157878"
 

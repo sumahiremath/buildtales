@@ -6,7 +6,6 @@ categories: [payments]
 section: "Phase 1: Understanding the Rails"
 excerpt: "Understanding how 3-D Secure changes money flows, how to reason about chargebacks, and what to instrument in a Rails stack to defend disputes and protect margin."
 banner_image: "/assets/banners/resized/20250829creditcard3ds-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20250829creditcard3ds-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250829creditcard3ds-series.jpg"
 banner_color: "#157878"
 

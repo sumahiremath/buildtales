@@ -6,7 +6,6 @@ categories: [payments]
 section: "Phase 6: Modern Money Movement (Crypto & Global)"
 excerpt: "DeFi protocols are reimagining how money moves. Learn what this means for traditional payment systems and how to prepare."
 banner_image: "/assets/banners/resized/20260311defi-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20260311defi-recent.jpg"
 banner_image_series: "/assets/banners/resized/20260311defi-series.jpg"
 banner_color: "#7c3aed"
 ---

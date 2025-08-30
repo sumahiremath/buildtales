@@ -6,7 +6,6 @@ categories: [payments]
 section: "Phase 1: Understanding the Rails"
 excerpt: "Building a retry engine for ACH payments that handles failures gracefully while staying compliant with NACHA rules and avoiding duplicate submissions."
 banner_image: "/assets/banners/resized/20251001achretry-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20251001achretry-recent.jpg"
 banner_image_series: "/assets/banners/resized/20251001achretry-series.jpg"
 banner_color: "#157878"
 

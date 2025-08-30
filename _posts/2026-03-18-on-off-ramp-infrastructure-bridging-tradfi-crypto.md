@@ -6,7 +6,6 @@ categories: [payments]
 section: "Phase 6: Modern Money Movement (Crypto & Global)"
 excerpt: "On/off-ramps are the bridges between traditional finance and crypto. Learn how to build and integrate with these critical infrastructure pieces."
 banner_image: "/assets/banners/resized/20260318onofframp-blog.jpg"
-banner_image_recent: "/assets/banners/resized/20260318onofframp-recent.jpg"
 banner_image_series: "/assets/banners/resized/20260318onofframp-series.jpg"
 banner_color: "#157878"
 future: true
