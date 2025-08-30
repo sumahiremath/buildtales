@@ -50,7 +50,7 @@ syndication:
 
 # FedNow: Built by the Fed. Moving Like the Fed
 
-![FedNow Banner](/assets/banners/resized/20250910fednow-blog.jpg)
+<img src="/assets/banners/resized/20250910fednow-blog.jpg" alt="FedNow Banner" class="wide-image" style="width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); max-width: none; display: block;">
 
 *The Federal Reserve's real-time payment rail—where government efficiency meets payment innovation.*
 

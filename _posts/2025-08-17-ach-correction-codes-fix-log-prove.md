@@ -55,7 +55,7 @@ content_type: "how_to"
 
 *Published on: August 17, 2025*
 
-![noc fixing](/assets/banners/resized/20250817nocs-blog.jpg)
+<img src="/assets/banners/resized/20250817nocs-blog.jpg" alt="noc fixing" class="wide-image" style="width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); max-width: none; display: block;">
 
 When it comes to ACH payments, mistakes happen. An account number is off by a digit, someone had a typo in their name, a routing number is outdated, or someone closed their account last month. Instead of rejecting every transaction outright, the ACH Network gives us Notification of Change (NOC) codes—standardized correction messages that financial institutions send back so originators can fix the data.
 

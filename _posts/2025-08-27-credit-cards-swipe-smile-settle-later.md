@@ -50,7 +50,7 @@ syndication:
 
 # Credit Cards: Swipe, Smile, Settle Later
 
-![Credit Cards: Swipe, Smile, Settle Later](/assets/banners/resized/20250827creditcard-blog.jpg)
+<img src="/assets/banners/resized/20250827creditcard-blog.jpg" alt="Credit Cards: Swipe, Smile, Settle Later" class="article-header-image">
 
 *The rail that powers commerce — with a hidden settlement machine behind the scenes.*
 

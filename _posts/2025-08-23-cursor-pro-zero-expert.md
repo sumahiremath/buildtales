@@ -45,7 +45,7 @@ series:
 
 *The definitive guide to mastering AI-powered development with Cursor*
 
-![Cursor Pro](/assets/banners/resized/20250823cursorpro-blog.jpg)
+<img src="/assets/banners/resized/20250823cursorpro-blog.jpg" alt="Cursor Pro" class="article-header-image">
 
 
 ## Table of Contents

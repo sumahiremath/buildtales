@@ -50,7 +50,8 @@ content_type: "case_study"
 ---
 # Why Credit Card Interchange Fees Differ at Authorization vs Settlement (and How to Reconcile Them)
 
-![card auth settlement](/assets/banners/resized/20250901cardauth-blog.jpg)
+<img src="/assets/banners/resized/20250901cardauth-blog.jpg" alt="Why Credit Card Interchange Fees Differ at Authorization vs Settlement (and How to Reconcile Them)" class="article-header-image">
+
 Interchange at auth is just an estimate. Final fees are set at settlement, where missing data, timing, and classification issues can "downgrade" a transaction. If you treat auth as final, you'll end up with reconciliation noise, misstated margins, and ops pain.
 
 > **Note:** This post focuses on U.S. credit card interchange (Visa, Mastercard, AmEx). Other regions/methods differ.

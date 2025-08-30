@@ -50,7 +50,7 @@ content_type: "compliance_guide"
 
 # Money Flows, Chargebacks, and Rails: A Leader's Guide to 3-D Secure
 
-![Money Flows, Chargebacks, and Rails: A Leader's Guide to 3-D Secure](/assets/banners/resized/20250829creditcard3ds-blog.jpg)
+<img src="/assets/banners/resized/20250829creditcard3ds-blog.jpg" alt="Money Flows, Chargebacks, and Rails: A Leader's Guide to 3-D Secure" class="article-header-image">
 
 *The rail that powers commerce — with a hidden settlement machine behind the scenes.*
 

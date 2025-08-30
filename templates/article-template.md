@@ -7,7 +7,6 @@ section: "Section Name"
 tags: [tag1, tag2, tag3]
 excerpt: "A compelling excerpt that describes what the article covers and why readers should care."
 banner_image: "/assets/banners/resized/[filename]-blog.jpg"
-
 banner_image_series: "/assets/banners/resized/[filename]-series.jpg"
 banner_color: "#157878"
 
@@ -45,9 +44,18 @@ series:
 
 # Your Article Title Here
 
-*Published on: [Month Day, Year]*
+<div class="personal-branding">
+  <img src="/assets/images/ghibli-avatar.png" alt="Suma Manjunath" class="ghibli-avatar">
+  <div class="author-info">
+    <div class="author-name">Author: Suma Manjunath</div>
+    <div class="publish-date">Published on: {{ page.date | date: "%B %d, %Y" }}</div>
+    {% if page.last_modified_at %}
+    <div class="update-date">Updated on: {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
+    {% endif %}
+  </div>
+</div>
 
-![Article Banner](/assets/banners/resized/[filename]-blog.jpg)
+<img src="/assets/banners/resized/[filename]-blog.jpg" alt="Article Banner" class="article-header-image">
 
 ## Introduction
 

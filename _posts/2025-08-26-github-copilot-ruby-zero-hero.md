@@ -45,7 +45,7 @@ series:
 
 *Learn Copilot by building a complete app from scratch — no fluff, just code.*
 
-![GitHub Copilot Ruby Demo](/assets/banners/resized/20250826copilot-ruby-blog.jpg)
+<img src="/assets/banners/resized/20250826copilot-ruby-blog.jpg" alt="GitHub Copilot: Zero to Hero" class="article-header-image">
 
 ---
 

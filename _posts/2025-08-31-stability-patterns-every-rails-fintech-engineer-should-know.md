@@ -43,7 +43,7 @@ series:
 
 # Stability Patterns Every Rails Fintech Engineer Should Know
 
-![Stability Patterns Every Rails Fintech Engineer Should Know](/assets/banners/resized/20250831stability-blog.jpg)
+<img src="/assets/banners/resized/20250831stability-blog.jpg" alt="Stability Patterns Every Rails Fintech Engineer Should Know" class="article-header-image">
 
 In *Release It!*, Michael Nygard introduces **stability patterns** — design techniques that keep systems alive when real-world failures strike.  
 

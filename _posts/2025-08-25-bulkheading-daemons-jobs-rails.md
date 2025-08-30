@@ -53,7 +53,7 @@ syndication:
 
 *How to use the bulkhead pattern with Sidekiq daemons and scheduled jobs in Rails to isolate failures and keep critical workloads running*
 
-![Bulkheading Daemons](/assets/banners/resized/20250825railsbulkhead-blog.jpg "Bulkheading Daemons and Jobs in Rails")
+<img src="/assets/banners/resized/20250825railsbulkhead-blog.jpg" alt="Bulkheading Daemons" class="article-header-image">
 
 When we think about system design in Ruby on Rails applications, background jobs often get less architectural attention than APIs or databases. But in many systems, they're just as critical: processing payments, provisioning accounts, sending emails, or crunching analytics.  
 

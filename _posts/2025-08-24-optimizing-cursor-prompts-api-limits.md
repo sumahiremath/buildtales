@@ -45,7 +45,7 @@ series:
 
 *A practical guide to getting more done with fewer tokens*
 
-![Cursor Optimization](/assets/banners/resized/20250824cursorapilimit-blog.jpg "title image")
+<img src="/assets/banners/resized/20250824cursorapilimit-blog.jpg "title image" alt="Optimizing Your Cursor Prompts" class="article-header-image">
 
 > **⚠️ Verification Note:** This guide contains pricing and interface information that may need updating. Please verify current Cursor rates and UI paths before implementing recommendations.
 
@@ -129,7 +129,7 @@ Cursor Pro includes **500 "fast requests"** per month, with additional usage-bas
 
 **Location: Cursor Settings → Usage & Billing**
 
-![Cursor Pro vs Enterprise API Limits](/assets/banners/resized/cursorapiratelimit.jpg)
+<img src="/assets/banners/resized/cursorapiratelimit.jpg" alt="Cursor Pro vs Enterprise API Limits" class="wide-image" style="width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); max-width: none; display: block;">
 
 *Pro users see detailed usage metrics, Enterprise users have centralized management*
 

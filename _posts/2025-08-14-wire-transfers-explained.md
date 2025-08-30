@@ -54,7 +54,7 @@ syndication:
 
 *Published on: August 14, 2025*
 
-![Wire Transfers](/assets/banners/resized/20250814wiretransfer-blog.jpg)
+<img src="/assets/banners/resized/20250814wiretransfer-blog.jpg" alt="Wire Transfers" class="wide-image" style="width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); max-width: none; display: block;">
 
 A wire transfer is like telling your bank: **"Move this money to another bank account — right now. No batching. No waiting."**
 

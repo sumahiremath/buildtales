@@ -47,14 +47,20 @@ syndication:
   republish_allowed: true
   canonical_source: "BuildTales.dev"
 ---
-
-
-
 # How Money Moves In and Out of Your Bank Account?
 
-*Published on: August 13, 2025*
+<div class="personal-branding">
+  <img src="/assets/images/ghibli-avatar.png" alt="Suma Manjunath" class="ghibli-avatar">
+  <div class="author-info">
+    <div class="author-name">Author: Suma Manjunath</div>
+    <div class="publish-date">Published on: {{ page.date | date: "%B %d, %Y" }}</div>
+    {% if page.last_modified_at %}
+    <div class="update-date">Updated on: {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
+    {% endif %}
+  </div>
+</div>
 
-![Money Flow](/assets/banners/resized/20250813moneyflow-blog.jpg)
+<img src="/assets/banners/resized/20250813moneyflow-blog.jpg" alt="Money Flow" class="article-header-image">
 
 Ever wonder how your paycheck shows up in your bank account on payday? Or how your gym magically pulls your membership fee every month? That's all thanks to a behind-the-scenes hero called **ACH** (Automated Clearing House).
 

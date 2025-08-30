@@ -53,7 +53,7 @@ syndication:
 
 *Published on: August 21, 2025*
 
-![EL Survial](/assets/banners/resized/20250821elcompliancesurvial-blog.jpg)
+<img src="/assets/banners/resized/20250821elcompliancesurvial-blog.jpg" alt="EL Survival" class="article-header-image">
 
 ### *Welcome to the Regulated Arena!*
 

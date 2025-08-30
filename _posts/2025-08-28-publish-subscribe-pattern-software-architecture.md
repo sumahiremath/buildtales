@@ -45,7 +45,7 @@ series:
 
 *Master the publish-subscribe pattern for building scalable, loosely-coupled systems*
 
-![Publish-Subscribe Pattern](/assets/banners/resized/20250828pubsub-blog.jpg "Publish-Subscribe Pattern in Software Architecture")
+<img src="/assets/banners/resized/20250828pubsub-blog.jpg" alt="Publish-Subscribe Pattern in Software Architecture" class="article-header-image">
 
 The publish-subscribe (pub-sub) pattern is one of the most powerful messaging patterns in distributed systems and software architecture. It enables loose coupling between components by introducing an intermediary that handles message distribution, allowing systems to scale and evolve independently.
 

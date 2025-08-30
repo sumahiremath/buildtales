@@ -257,6 +257,79 @@
             font-size: 12px !important;
           }
         }
+        
+        /* Article header images - responsive and centered on all devices */
+        .article-header-image {
+          display: block !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+          max-width: 100% !important;
+          height: auto !important;
+          width: 100% !important;
+        }
+        
+        /* Personal branding section with circular Ghibli image */
+        .personal-branding {
+          display: flex !important;
+          align-items: center !important;
+          gap: 0.75rem !important;
+          margin: 1rem 0 !important;
+        }
+        
+        .personal-branding .ghibli-avatar {
+          width: 45px !important;
+          height: 45px !important;
+          border-radius: 50% !important;
+          object-fit: cover !important;
+          border: 2px solid #157878 !important;
+          flex-shrink: 0 !important;
+        }
+        
+        .personal-branding .author-info {
+          flex: 1 !important;
+        }
+        
+        .personal-branding .author-name {
+          font-weight: 400 !important;
+          color: #555 !important;
+          margin: 0 0 0.2rem 0 !important;
+          font-size: 0.8rem !important;
+        }
+        
+        .personal-branding .publish-date {
+          font-weight: 400 !important;
+          color: #555 !important;
+          margin: 0 0 0.15rem 0 !important;
+          font-size: 0.8rem !important;
+          font-style: italic !important;
+        }
+        
+        .personal-branding .update-date {
+          font-size: 0.8rem !important;
+          color: #555 !important;
+          margin: 0 !important;
+          font-style: italic !important;
+        }
+        
+        /* Desktop: extend beyond content for wider screens */
+        @media (min-width: 768px) {
+          .article-header-image {
+            width: calc(100% + 4rem) !important;
+            margin-left: -2rem !important;
+            margin-right: -2rem !important;
+            max-width: calc(100% + 4rem) !important;
+          }
+        }
+        
+        /* Large desktop: even wider extension */
+        @media (min-width: 1200px) {
+          .article-header-image {
+            width: calc(100% + 6rem) !important;
+            margin-left: -3rem !important;
+            margin-right: -3rem !important;
+            max-width: calc(100% + 6rem) !important;
+          }
+        }
       </style>
       
       <script>

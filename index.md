@@ -301,7 +301,7 @@ title: Build Tales
 }
 
 .see-all-link {
-  color: #4fd1c7;
+  color: #157878;
   text-decoration: none;
   font-size: 1.125rem;
   font-weight: 600;

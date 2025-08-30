@@ -52,7 +52,7 @@ syndication:
 
 *Published on: August 16, 2025*
 
-![image info](/assets/banners/resized/20250816seccode-blog.jpg)
+<img src="/assets/banners/resized/20250816seccode-blog.jpg" alt="image info" class="wide-image" style="width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); max-width: none; display: block;">
 
 We once misclassified a whole batch of ACH payments — and our bank noticed immediately. Within days, we had a compliance warning sitting in our inbox and a very clear message: *fix your SEC codes, or else.*  
 

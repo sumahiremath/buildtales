@@ -55,7 +55,7 @@ content_type: "analysis"
 
 *Published on: August 20, 2025*
 
-![ACH Good Bad Ugly Banner](/assets/banners/resized/20250820goodbadugly-blog.jpg)
+<img src="/assets/banners/resized/20250820goodbadugly-blog.jpg" alt="ACH Good Bad Ugly" class="article-header-image">
 
 **Still powering trillions. Still moving like it's stuck in fax machine mode.**
 

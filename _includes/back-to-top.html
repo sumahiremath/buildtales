@@ -1,18 +1,201 @@
-<!-- Back to Top Button -->
+<!-- Back to Top, Table of Contents, and Bottom Buttons -->
 <button id="back-to-top" 
-        style="display: none; position: fixed; bottom: 2rem; right: 2rem; background: #157878; color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2); z-index: 1000; font-size: 1.2rem; transition: opacity 0.3s ease;"
+        style="display: none; position: fixed; bottom: 6rem; right: 2rem; background: #157878; color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2); z-index: 1000; font-size: 1.2rem; transition: opacity 0.3s ease;"
         title="Back to top">
   ↑
 </button>
 
+<div id="floating-toc" 
+     style="display: none; position: fixed; bottom: 6rem; right: 2rem; background: white; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 999; max-width: 300px; max-height: 400px; overflow-y: auto; padding: 1rem; font-size: 0.9rem;"
+     title="Table of Contents">
+  <div id="toc-content"></div>
+</div>
+
+<!-- Desktop TOC Toggle Button -->
+<button id="toc-toggle" 
+        style="display: none; position: fixed; bottom: 10rem; right: 2rem; background: #157878; color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2); z-index: 1000; font-size: 1.2rem; transition: opacity 0.3s ease;"
+        title="Show topics">
+  ≡
+</button>
+
+<!-- Mobile Navigation Buttons -->
+<button id="prev-section" 
+        style="display: none; position: fixed; bottom: 6rem; right: 2rem; background: #157878; color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2); z-index: 1000; font-size: 1.2rem; transition: opacity 0.3s ease;"
+        title="Previous section">
+  ←
+</button>
+
+<button id="next-section" 
+        style="display: none; position: fixed; bottom: 6rem; right: 2rem; background: #157878; color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2); z-index: 1000; font-size: 1.2rem; transition: opacity 0.3s ease;"
+        title="Next section">
+  →
+</button>
+
+<button id="back-to-bottom" 
+        style="display: none; position: fixed; bottom: 2rem; right: 2rem; background: #157878; color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2); z-index: 1000; font-size: 1.2rem; transition: opacity 0.3s ease;"
+        title="Go to bottom">
+  ↓
+</button>
+
 <script>
-// Back to top functionality
+// Back to top, table of contents, and bottom functionality
 (function() {
   const backToTopButton = document.getElementById('back-to-top');
+  const backToBottomButton = document.getElementById('back-to-bottom');
+  const floatingToc = document.getElementById('floating-toc');
+  const tocContent = document.getElementById('toc-content');
+  const prevSectionButton = document.getElementById('prev-section');
+  const nextSectionButton = document.getElementById('next-section');
+  const tocToggleButton = document.getElementById('toc-toggle');
   
-  // Show/hide button based on scroll position
+  let headings = [];
+  let currentSectionIndex = 0;
+  let isMobile = window.innerWidth <= 768;
+  let tocVisible = false; // Track TOC visibility state
+  
+  // Check if current page should show TOC toggle
+  function shouldShowTocToggle() {
+    const currentPath = window.location.pathname;
+    // Hide TOC toggle on home page and series pages
+    return !currentPath.match(/^\/(?:series\/.*|)$/);
+  }
+  
+  // Generate table of contents
+  function generateTOC() {
+    headings = Array.from(document.querySelectorAll('h2'));
+    if (headings.length === 0) return;
+    
+    // Generate IDs for headings if not present
+    headings.forEach((heading, index) => {
+      if (!heading.id) {
+        heading.id = `heading-${index}`;
+      }
+    });
+    
+    // Generate TOC HTML for desktop
+    let tocHTML = '';
+    headings.forEach((heading, index) => {
+      const style = `display: block; padding: 0.3rem 0; color: #333; text-decoration: none; border-bottom: 1px solid #f0f0f0;`;
+      tocHTML += `<a href="#${heading.id}" class="toc-link" style="${style}" onclick="scrollToSection('${heading.id}'); return false;">${heading.textContent}</a>`;
+    });
+    
+    if (tocHTML) {
+      tocContent.innerHTML = tocHTML;
+    }
+    
+    // Update current section index based on scroll position
+    updateCurrentSectionIndex();
+  }
+  
+  // Toggle TOC visibility
+  function toggleTOC() {
+    if (!isMobile && headings.length > 0) {
+      tocVisible = !tocVisible;
+      if (tocVisible) {
+        floatingToc.style.display = 'block';
+        floatingToc.style.opacity = '1';
+        tocToggleButton.innerHTML = '×';
+        tocToggleButton.title = 'Hide topics';
+      } else {
+        floatingToc.style.opacity = '0';
+        setTimeout(() => {
+          if (!tocVisible) {
+            floatingToc.style.display = 'none';
+          }
+        }, 300);
+        tocToggleButton.innerHTML = '≡';
+        tocToggleButton.title = 'Show topics';
+      }
+    }
+  }
+  
+  // Update current section index based on scroll position
+  function updateCurrentSectionIndex() {
+    if (headings.length === 0) return;
+    
+    const scrollPosition = window.pageYOffset + 100; // Offset for better detection
+    
+    for (let i = headings.length - 1; i >= 0; i--) {
+      const headingTop = headings[i].offsetTop;
+      if (scrollPosition >= headingTop) {
+        currentSectionIndex = i;
+        break;
+      }
+    }
+    
+    updateMobileNavigation();
+  }
+  
+  // Update mobile navigation button states
+  function updateMobileNavigation() {
+    if (!isMobile) return;
+    
+    // Show/hide previous button
+    if (currentSectionIndex > 0) {
+      prevSectionButton.style.display = 'block';
+      prevSectionButton.style.opacity = '1';
+      prevSectionButton.title = `Previous: ${headings[currentSectionIndex - 1].textContent}`;
+    } else {
+      prevSectionButton.style.opacity = '0';
+      setTimeout(() => {
+        if (currentSectionIndex <= 0) {
+          prevSectionButton.style.display = 'none';
+        }
+      }, 300);
+    }
+    
+    // Show/hide next button
+    if (currentSectionIndex < headings.length - 1) {
+      nextSectionButton.style.display = 'block';
+      nextSectionButton.style.opacity = '1';
+      nextSectionButton.title = `Next: ${headings[currentSectionIndex + 1].textContent}`;
+    } else {
+      nextSectionButton.style.opacity = '0';
+      setTimeout(() => {
+        if (currentSectionIndex >= headings.length - 1) {
+          nextSectionButton.style.display = 'none';
+        }
+      }, 300);
+    }
+  }
+  
+  // Navigate to previous section
+  function goToPreviousSection() {
+    if (currentSectionIndex > 0) {
+      currentSectionIndex--;
+      scrollToSection(headings[currentSectionIndex].id);
+    }
+  }
+  
+  // Navigate to next section
+  function goToNextSection() {
+    if (currentSectionIndex < headings.length - 1) {
+      currentSectionIndex++;
+      scrollToSection(headings[currentSectionIndex].id);
+    }
+  }
+  
+  // Smooth scroll to section
+  window.scrollToSection = function(sectionId) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+  
+  // Show/hide buttons and TOC based on scroll position
   window.addEventListener('scroll', function() {
-    if (window.pageYOffset > 300) {
+    const scrollPosition = window.pageYOffset;
+    const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+    
+    // Update current section index
+    updateCurrentSectionIndex();
+    
+    // Show back-to-top button when scrolled down
+    if (scrollPosition > 300) {
       backToTopButton.style.display = 'block';
       backToTopButton.style.opacity = '1';
     } else {
@@ -22,6 +205,26 @@
           backToTopButton.style.display = 'none';
         }
       }, 300);
+    }
+    
+    // Show back-to-bottom button when not at bottom
+    if (scrollPosition < documentHeight - 100) {
+      backToBottomButton.style.display = 'block';
+      backToBottomButton.style.opacity = '1';
+    } else {
+      backToBottomButton.style.opacity = '0';
+      setTimeout(() => {
+        if (scrollPosition >= documentHeight - 100) {
+          backToBottomButton.style.display = 'none';
+        }
+      }, 300);
+    }
+    
+    // Show TOC on desktop when scrolled down
+    if (!isMobile && scrollPosition > 400 && tocContent.children.length > 0) {
+      // TOC visibility is now controlled by toggle button, not scroll
+    } else if (!isMobile) {
+      // TOC visibility is now controlled by toggle button, not scroll
     }
   });
   
@@ -33,15 +236,166 @@
     });
   });
   
-  // Hover effects
-  backToTopButton.addEventListener('mouseenter', function() {
-    this.style.transform = 'scale(1.1)';
-    this.style.background = '#0f5f61';
+  // Smooth scroll to bottom
+  backToBottomButton.addEventListener('click', function() {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'smooth'
+    });
   });
   
-  backToTopButton.addEventListener('mouseleave', function() {
-    this.style.transform = 'scale(1)';
-    this.style.background = '#157878';
+  // Previous section navigation
+  prevSectionButton.addEventListener('click', goToPreviousSection);
+  
+  // Next section navigation
+  nextSectionButton.addEventListener('click', goToNextSection);
+  
+  // TOC toggle button
+  tocToggleButton.addEventListener('click', toggleTOC);
+  
+  // Hover effects for all buttons
+  [backToTopButton, backToBottomButton, prevSectionButton, nextSectionButton, tocToggleButton].forEach(button => {
+    button.addEventListener('mouseenter', function() {
+      this.style.transform = 'scale(1.1)';
+      this.style.background = '#0f5f61';
+    });
+    
+    button.addEventListener('mouseleave', function() {
+      this.style.transform = 'scale(1)';
+      this.style.background = '#157878';
+    });
   });
+  
+  // TOC hover effects
+  floatingToc.addEventListener('mouseenter', function() {
+    this.style.transform = 'scale(1.02)';
+    this.style.boxShadow = '0 6px 16px rgba(0,0,0,0.2)';
+  });
+  
+  floatingToc.addEventListener('mouseleave', function() {
+    this.style.transform = 'scale(1)';
+    this.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+  });
+  
+  // Generate TOC when DOM is loaded
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', generateTOC);
+  } else {
+    generateTOC();
+  }
+  
+  // Handle window resize for mobile responsiveness
+  window.addEventListener('resize', function() {
+    const wasMobile = isMobile;
+    isMobile = window.innerWidth <= 768;
+    
+    if (isMobile) {
+      // Mobile layout - smaller buttons arranged vertically with even spacing
+      // Calculate proper spacing: 4 buttons with equal gaps between them
+      // Button height: 35px, convert to rem for consistent spacing
+      // Available height: from 2rem to 11rem (9rem total)
+      // Need to account for button height: 4 buttons × 35px = 140px ≈ 8.75rem
+      // Remaining space: 9rem - 8.75rem = 0.25rem, divided by 3 gaps = ~0.08rem per gap
+      
+      backToTopButton.style.right = '1rem';
+      backToTopButton.style.bottom = '11rem';
+      backToTopButton.style.width = '35px';
+      backToTopButton.style.height = '35px';
+      backToTopButton.style.fontSize = '0.9rem';
+      
+      backToBottomButton.style.right = '1rem';
+      backToBottomButton.style.bottom = '2rem';
+      backToBottomButton.style.width = '35px';
+      backToBottomButton.style.height = '35px';
+      backToBottomButton.style.fontSize = '0.9rem';
+      
+      // Position buttons with proper spacing to prevent overlapping
+      prevSectionButton.style.right = '1rem';
+      prevSectionButton.style.bottom = '5rem';
+      prevSectionButton.style.width = '35px';
+      prevSectionButton.style.height = '35px';
+      prevSectionButton.style.fontSize = '0.9rem';
+      
+      nextSectionButton.style.right = '1rem';
+      nextSectionButton.style.bottom = '8rem';
+      nextSectionButton.style.width = '35px';
+      nextSectionButton.style.height = '35px';
+      nextSectionButton.style.fontSize = '0.9rem';
+      
+      floatingToc.style.display = 'none';
+      tocToggleButton.style.display = 'none';
+      tocVisible = false; // Reset TOC state on mobile
+    } else {
+      // Desktop layout - normal size buttons arranged vertically with even spacing
+      // Order: burger (top), up (middle), down (bottom)
+      backToTopButton.style.right = '2rem';
+      backToTopButton.style.bottom = '6rem'; // Middle position
+      backToTopButton.style.width = '50px';
+      backToTopButton.style.height = '50px';
+      backToTopButton.style.fontSize = '1.2rem';
+      
+      backToBottomButton.style.right = '2rem';
+      backToBottomButton.style.bottom = '2rem'; // Bottom position
+      backToBottomButton.style.width = '50px';
+      backToBottomButton.style.height = '50px';
+      backToBottomButton.style.fontSize = '1.2rem';
+      
+      prevSectionButton.style.display = 'none';
+      nextSectionButton.style.display = 'none';
+      floatingToc.style.right = '2rem';
+      floatingToc.style.maxWidth = '300px';
+      
+      // Show TOC toggle only on appropriate pages
+      if (shouldShowTocToggle()) {
+        tocToggleButton.style.display = 'block';
+        tocToggleButton.style.right = '2rem';
+        tocToggleButton.style.bottom = '10rem'; // Top position
+        tocToggleButton.style.width = '50px';
+        tocToggleButton.style.height = '50px';
+        tocToggleButton.style.fontSize = '1.2rem';
+      } else {
+        tocToggleButton.style.display = 'none';
+      }
+    }
+    
+    // Regenerate TOC if switching between mobile/desktop
+    if (wasMobile !== isMobile) {
+      generateTOC();
+    }
+  });
+  
+  // Initialize mobile state on page load
+  if (isMobile) {
+    backToTopButton.style.width = '35px';
+    backToTopButton.style.height = '35px';
+    backToTopButton.style.fontSize = '0.9rem';
+    backToTopButton.style.bottom = '11rem';
+    
+    backToBottomButton.style.width = '35px';
+    backToBottomButton.style.height = '35px';
+    backToBottomButton.style.fontSize = '0.9rem';
+    backToBottomButton.style.bottom = '2rem';
+    
+    prevSectionButton.style.width = '35px';
+    prevSectionButton.style.height = '35px';
+    prevSectionButton.style.fontSize = '0.9rem';
+    prevSectionButton.style.bottom = '5rem';
+    
+    nextSectionButton.style.width = '35px';
+    nextSectionButton.style.height = '35px';
+    nextSectionButton.style.fontSize = '0.9rem';
+    nextSectionButton.style.bottom = '8rem';
+  } else {
+    // Desktop initialization - show burger and down arrow by default
+    backToTopButton.style.display = 'none'; // Hidden until scroll
+    backToBottomButton.style.display = 'block'; // Visible by default
+    
+    // Show TOC toggle only on appropriate pages
+    if (shouldShowTocToggle()) {
+      tocToggleButton.style.display = 'block';
+    } else {
+      tocToggleButton.style.display = 'none';
+    }
+  }
 })();
 </script>

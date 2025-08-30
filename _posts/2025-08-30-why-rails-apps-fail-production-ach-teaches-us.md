@@ -43,8 +43,7 @@ series:
 
 # Why Rails Apps Fail in Production (and What ACH Teaches Us)
 
-![Why Rails Apps Fail in Production (and What ACH Teaches Us)](/assets/banners/resized/20250830railsfail-blog.jpg)
-
+<img src="/assets/banners/resized/20250830railsfail-blog.jpg" alt="Why Rails Apps Fail in Production (and What ACH Teaches Us)" class="article-header-image">
 
 When I first read *Release It!* by Michael Nygard, one phrase stuck:  
 

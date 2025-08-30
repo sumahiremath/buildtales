@@ -42,7 +42,7 @@ syndication:
 
 *Published on: August 18, 2025*
 
-![mousefinish](/assets/banners/resized/20250818mousefinish-blog.jpg)
+<img src="/assets/banners/resized/20250818mousefinish-blog.jpg" alt="Mouse finish line" class="article-header-image"/>
 
 Every engineering manager (EM) remembers their first big project. For me, it was integrating a third-party service provider with a client's bank.
 

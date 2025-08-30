@@ -55,7 +55,7 @@ content_type: "how_to"
 
 *Published on: August 15, 2025*
 
-![NACHA Demystified Banner](/assets/banners/resized/20250815nachafile-blog.jpg)
+<img src="/assets/banners/resized/20250815nachafile-blog.jpg" alt="NACHA Demystified Banner" class="wide-image" style="width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); max-width: none; display: block;">
 
 Picture this: You're building a payroll system, and your first ACH file submission gets rejected with a cryptic "Invalid field length at position 47." Meanwhile, $72 trillion moves through these exact same files every year without a hitch.
 

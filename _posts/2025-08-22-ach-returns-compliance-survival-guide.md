@@ -59,9 +59,11 @@ series:
 
 # ACH Returns: The Compliance Survival Guide Every Fintech Needs
 
-*Published on: August 22, 2025*
+By: Suma Manjunath
+Published on: {{ page.date | date: "%B %d, %Y" }}
+Updated on: {{ "_posts/2025-08-22-ach-returns-compliance-survival-guide.md" | git_last_modified }}
 
-![ach returns](/assets/banners/resized/20250817nocs-blog.jpg)
+<img src="/assets/banners/resized/20250817nocs-blog.jpg" alt="ACH Returns Compliance" class="article-header-image">
 
 ACH returns are your early warning system for payment failures. But they're also your compliance nightmare if you don't handle them correctly. Every return code tells a story—insufficient funds, account closed, unauthorized transaction—and how you respond determines whether you survive the audit or face regulatory consequences.
 
