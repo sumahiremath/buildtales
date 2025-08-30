@@ -15,7 +15,7 @@ banner_color: "#157878"
 canonical_url: "https://buildtales.dev/fintech/payments/2025/08/22/ach-returns-compliance-survival-guide.html"
 author:
   name: "Suma Manjunath"
-  twitter: "@sumahiremath"
+  twitter: "@buildtales"
   
 # Open Graph / Social Media
 og:
@@ -37,6 +37,12 @@ syndication:
   canonical_source: "BuildTales.dev"
 
 # NOTE: No "series" metadata = this will be classified as a bonus article
+
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 4
 ---
 
 # ACH Returns: The Compliance Survival Guide Every Fintech Needs

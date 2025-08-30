@@ -18,9 +18,9 @@ My path began in QA, where I developed a quality-first mindset that propelled me
 
 ## Why I Write
 
-**Build Tales** captures stories from the engineering trenches—addressing the messy middle of scaling teams, legacy systems, and compliance puzzles that glossy case studies overlook. My ongoing series, “How U.S. Payments Really Work,” spans 45 articles aimed at helping engineers build systems that earn trust by understanding money’s real-life path through banks, networks, and regulatory frameworks.
+**Build Tales** captures stories from the engineering trenches—addressing the messy middle of scaling teams, legacy systems, and compliance puzzles that glossy case studies overlook. My ongoing series, “How U.S. Payments Really Work,” spans 50+ articles aimed at helping engineers build systems that earn trust by understanding money’s real-life path through banks, networks, and regulatory frameworks.
 
-My current deep dive, "[How U.S. Payments Really Work](/how-us-payments-actually-work/)," is a 45-article survival manual for anyone building platforms that move money. Because understanding how money flows through banks, payment networks, and regulatory frameworks isn't just technical knowledge—it's the foundation for building systems that earn trust.
+My current deep dive, "[How U.S. Payments Really Work](/how-us-payments-actually-work/)," is a 50+ article survival manual for anyone building platforms that move money. Because understanding how money flows through banks, payment networks, and regulatory frameworks isn't just technical knowledge—it's the foundation for building systems that earn trust.
 
 ## Beyond the Keyboard
 

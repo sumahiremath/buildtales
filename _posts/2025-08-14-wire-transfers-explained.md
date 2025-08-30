@@ -41,7 +41,6 @@ series:
   name: "How U.S. Payments Really Work"
   index_url: "/series/payments"
   part: 2
-  total_parts: 45
 ---
 
 <!-- Series Navigation -->

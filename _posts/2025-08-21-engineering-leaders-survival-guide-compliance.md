@@ -6,8 +6,6 @@ categories: [leadership, management]
 section: "Vision & Planning"
 tags: [compliance, fintech, engineering-leadership, pci, ach, soc2]
 excerpt: "Compliance doesn't have to feel like shackles. When leaders bring compliance into design, translate between legal and engineering, and invest in automation, teams stop treating it as a drag and start seeing it as part of system resilience."
-author: Suma Manjunath
-canonical_url: https://buildtales.dev/fintech/payments/compliance/2025/08/21/engineering-leaders-survival-guide-compliance.html
 og_title: "The Engineering Leader's Survival Guide to Compliance"
 og_description: "How engineering leaders can turn compliance from a blocker into a design parameter that builds trust and system resilience."
 og_image: /assets/images/leadership-compliance-guide.png
@@ -15,6 +13,37 @@ banner_image: "/assets/banners/resized/20250821elcompliancesurvial-blog.jpg"
 banner_image_recent: "/assets/banners/resized/20250821elcompliancesurvial-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250821elcompliancesurvial-series.jpg"
 banner_color: "#157878"
+
+# SEO and Canonical Tags
+canonical_url: "https://buildtales.dev/fintech/leadership/2025/08/21/engineering-leaders-survival-guide-compliance.html"
+author:
+  name: "Suma Manjunath"
+  twitter: "@buildtales"
+  
+# Open Graph / Social Media
+og:
+  title: "The Engineering Leader's Survival Guide to Compliance"
+  description: "How engineering leaders can turn compliance from a blocker into a design parameter that builds trust and system resilience."
+  type: "article"
+  
+# Twitter Card
+twitter:
+  card: "summary"
+  title: "The Engineering Leader's Survival Guide to Compliance"
+  description: "How engineering leaders can turn compliance from a blocker into a design parameter that builds trust and system resilience."
+
+# Syndication and Original Content Declaration
+robots: "index, follow"
+syndication:
+  original: true
+  republish_allowed: true
+  canonical_source: "BuildTales.dev"
+
+# Series information
+series:
+  name: "Engineering Leadership in Regulated Environments"
+  index_url: "/series/leadership"
+  part: 1
 ---
 
 # The Engineering Leader's Survival Guide to Compliance

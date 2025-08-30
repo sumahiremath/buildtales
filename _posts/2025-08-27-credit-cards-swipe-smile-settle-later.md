@@ -9,6 +9,37 @@ banner_image: "/assets/banners/resized/20250827creditcard-blog.jpg"
 banner_image_recent: "/assets/banners/resized/20250827creditcard-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250827creditcard-series.jpg"
 banner_color: "#157878"
+
+# SEO and Canonical Tags
+canonical_url: "https://buildtales.dev/fintech/payments/2025/08/27/credit-cards-swipe-smile-settle-later.html"
+author:
+  name: "Suma Manjunath"
+  twitter: "@buildtales"
+  
+# Open Graph / Social Media
+og:
+  title: "Credit Cards: Swipe, Smile, Settle Later"
+  description: "Understanding the credit card payment flow from authorization to settlement, and why it's not as instant as it seems."
+  type: "article"
+  
+# Twitter Card
+twitter:
+  card: "summary"
+  title: "Credit Cards: Swipe, Smile, Settle Later"
+  description: "Understanding the credit card payment flow from authorization to settlement, and why it's not as instant as it seems."
+
+# Syndication and Original Content Declaration
+robots: "index, follow"
+syndication:
+  original: true
+  republish_allowed: true
+  canonical_source: "BuildTales.dev"
+
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 5
 ---
 
 # Credit Cards: Swipe, Smile, Settle Later

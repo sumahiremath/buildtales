@@ -11,6 +11,20 @@ cayman:
 github:
   is_project_page: false
 
+# Exclude non-content files from Jekyll processing
+exclude:
+  - .idea/
+  - templates/
+  - vendor/
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - IMAGE_GUIDE.md
+  - resize_images.sh
+  - rebuilding-us-payments.md
+  - posts/
+  - content/
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

@@ -9,6 +9,37 @@ banner_image: "/assets/banners/resized/20250826copilot-ruby-blog.jpg"
 banner_image_recent: "/assets/banners/resized/20250826copilot-ruby-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250826copilot-ruby-series.jpg"
 banner_color: "#157878"
+
+# SEO and Canonical Tags
+canonical_url: "https://buildtales.dev/fintech/systems/2025/08/26/github-copilot-ruby-zero-hero.html"
+author:
+  name: "Suma Manjunath"
+  twitter: "@buildtales"
+  
+# Open Graph / Social Media
+og:
+  title: "GitHub Copilot: Zero to Hero — Build Your First Ruby Project with AI Pair Programming"
+  description: "Learn GitHub Copilot by building a Ruby CLI project from scratch. A hands-on, end-to-end guide from installation to tests, persistence, and documentation."
+  type: "article"
+  
+# Twitter Card
+twitter:
+  card: "summary"
+  title: "GitHub Copilot: Zero to Hero — Build Your First Ruby Project with AI Pair Programming"
+  description: "Learn GitHub Copilot by building a Ruby CLI project from scratch. A hands-on, end-to-end guide from installation to tests, persistence, and documentation."
+
+# Syndication and Original Content Declaration
+robots: "index, follow"
+syndication:
+  original: true
+  republish_allowed: true
+  canonical_source: "BuildTales.dev"
+
+# Series information
+series:
+  name: "Leveraging AI Tools for Engineering Teams"
+  index_url: "/series/systems"
+  part: 3
 ---
 
 # GitHub Copilot: Zero to Hero — Build Your First Ruby Project with AI Pair Programming

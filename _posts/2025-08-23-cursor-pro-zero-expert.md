@@ -9,6 +9,37 @@ banner_image: "/assets/banners/resized/20250823cursorpro-blog.jpg"
 banner_image_recent: "/assets/banners/resized/20250823cursorpro-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250823cursorpro-series.jpg"
 banner_color: "#157878"
+
+# SEO and Canonical Tags
+canonical_url: "https://buildtales.dev/fintech/systems/2025/08/23/cursor-pro-zero-expert.html"
+author:
+  name: "Suma Manjunath"
+  twitter: "@buildtales"
+  
+# Open Graph / Social Media
+og:
+  title: "Cursor Pro: Zero to Expert - The Complete Developer's Journey"
+  description: "A structured guide to mastering AI-powered development with Cursor Pro, from installation to expert-level workflows."
+  type: "article"
+  
+# Twitter Card
+twitter:
+  card: "summary"
+  title: "Cursor Pro: Zero to Expert - The Complete Developer's Journey"
+  description: "A structured guide to mastering AI-powered development with Cursor Pro, from installation to expert-level workflows."
+
+# Syndication and Original Content Declaration
+robots: "index, follow"
+syndication:
+  original: true
+  republish_allowed: true
+  canonical_source: "BuildTales.dev"
+
+# Series information
+series:
+  name: "Leveraging AI Tools for Engineering Teams"
+  index_url: "/series/systems"
+  part: 1
 ---
 
 # Cursor Pro: Zero to Expert - The Complete Developer's Journey

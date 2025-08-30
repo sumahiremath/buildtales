@@ -9,6 +9,37 @@ banner_image: "/assets/banners/resized/20250829creditcard3ds-blog.jpg"
 banner_image_recent: "/assets/banners/resized/20250829creditcard3ds-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250829creditcard3ds-series.jpg"
 banner_color: "#157878"
+
+# SEO and Canonical Tags
+canonical_url: "https://buildtales.dev/fintech/payments/2025/08/29/money-flows-chargebacks-rails-leaders-guide-3d-secure.html"
+author:
+  name: "Suma Manjunath"
+  twitter: "@buildtales"
+  
+# Open Graph / Social Media
+og:
+  title: "Money Flows, Chargebacks, and Rails: A Leader's Guide to 3-D Secure"
+  description: "Understanding how 3-D Secure changes money flows, how to reason about chargebacks, and what to instrument in a Rails stack to defend disputes and protect margin."
+  type: "article"
+  
+# Twitter Card
+twitter:
+  card: "summary"
+  title: "Money Flows, Chargebacks, and Rails: A Leader's Guide to 3-D Secure"
+  description: "Understanding how 3-D Secure changes money flows, how to reason about chargebacks, and what to instrument in a Rails stack to defend disputes and protect margin."
+
+# Syndication and Original Content Declaration
+robots: "index, follow"
+syndication:
+  original: true
+  republish_allowed: true
+  canonical_source: "BuildTales.dev"
+
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 6
 ---
 
 # Money Flows, Chargebacks, and Rails: A Leader's Guide to 3-D Secure

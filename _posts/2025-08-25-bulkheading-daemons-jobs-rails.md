@@ -9,6 +9,37 @@ banner_image: "/assets/banners/resized/20250825railsbulkhead-blog.jpg"
 banner_image_recent: "/assets/banners/resized/20250825railsbulkhead-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250825railsbulkhead-series.jpg"
 banner_color: "#157878"
+
+# SEO and Canonical Tags
+canonical_url: "https://buildtales.dev/fintech/systems/2025/08/25/bulkheading-daemons-jobs-rails.html"
+author:
+  name: "Suma Manjunath"
+  twitter: "@buildtales"
+  
+# Open Graph / Social Media
+og:
+  title: "Bulkheading Daemons and Jobs in Rails: Building Resilient Background Systems"
+  description: "How to use the bulkhead pattern with Sidekiq daemons and scheduled jobs in Rails to isolate failures and keep critical workloads running."
+  type: "article"
+  
+# Twitter Card
+twitter:
+  card: "summary"
+  title: "Bulkheading Daemons and Jobs in Rails: Building Resilient Background Systems"
+  description: "How to use the bulkhead pattern with Sidekiq daemons and scheduled jobs in Rails to isolate failures and keep critical workloads running."
+
+# Syndication and Original Content Declaration
+robots: "index, follow"
+syndication:
+  original: true
+  republish_allowed: true
+  canonical_source: "BuildTales.dev"
+
+# Series information
+series:
+  name: "System Design Fundamentals"
+  index_url: "/series/systems"
+  part: 1
 ---
 
 # Bulkheading Daemons and Jobs in Rails: Building Resilient Background Systems
