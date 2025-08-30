@@ -9,6 +9,37 @@ banner_image: "/assets/banners/resized/20250830railsfail-blog.jpg"
 banner_image_recent: "/assets/banners/resized/20250830railsfail-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250830railsfail-series.jpg"
 banner_color: "#157878"
+
+# SEO and Canonical Tags
+canonical_url: "https://buildtales.dev/fintech/systems/2025/08/30/why-rails-apps-fail-production-ach-teaches-us.html"
+author:
+  name: "Suma Manjunath"
+  twitter: "@buildtales"
+  
+# Open Graph / Social Media
+og:
+  title: "Why Rails Apps Fail in Production (and What ACH Teaches Us)"
+  description: "Understanding why Rails apps fail in production using ACH payment processing as a case study, and how to apply Release It! principles for resilience."
+  type: "article"
+  
+# Twitter Card
+twitter:
+  card: "summary"
+  title: "Why Rails Apps Fail in Production (and What ACH Teaches Us)"
+  description: "Understanding why Rails apps fail in production using ACH payment processing as a case study, and how to apply Release It! principles for resilience."
+
+# Syndication and Original Content Declaration
+robots: "index, follow"
+syndication:
+  original: true
+  republish_allowed: true
+  canonical_source: "BuildTales.dev"
+
+# Series information
+series:
+  name: "System Design Fundamentals"
+  index_url: "/series/systems"
+  part: 3
 ---
 
 # Why Rails Apps Fail in Production (and What ACH Teaches Us)

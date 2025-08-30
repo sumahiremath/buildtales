@@ -9,6 +9,37 @@ banner_image: "/assets/banners/resized/20250831stability-blog.jpg"
 banner_image_recent: "/assets/banners/resized/20250831stability-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250831stability-series.jpg"
 banner_color: "#157878"
+
+# SEO and Canonical Tags
+canonical_url: "https://buildtales.dev/fintech/systems/2025/08/31/stability-patterns-every-rails-fintech-engineer-should-know.html"
+author:
+  name: "Suma Manjunath"
+  twitter: "@buildtales"
+  
+# Open Graph / Social Media
+og:
+  title: "Stability Patterns Every Rails Fintech Engineer Should Know"
+  description: "Learn the four essential stability patterns for Rails fintech apps: Circuit Breakers, Timeouts, Retries, and Bulkheads. These patterns aren't optional for ACH payments — they're survival skills."
+  type: "article"
+  
+# Twitter Card
+twitter:
+  card: "summary"
+  title: "Stability Patterns Every Rails Fintech Engineer Should Know"
+  description: "Learn the four essential stability patterns for Rails fintech apps: Circuit Breakers, Timeouts, Retries, and Bulkheads. These patterns aren't optional for ACH payments — they're survival skills."
+
+# Syndication and Original Content Declaration
+robots: "index, follow"
+syndication:
+  original: true
+  republish_allowed: true
+  canonical_source: "BuildTales.dev"
+
+# Series information
+series:
+  name: "System Design Fundamentals"
+  index_url: "/series/systems"
+  part: 4
 ---
 
 # Stability Patterns Every Rails Fintech Engineer Should Know

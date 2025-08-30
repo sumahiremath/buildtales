@@ -9,6 +9,37 @@ banner_image: "/assets/banners/resized/20250917achcutoffs-blog.jpg"
 banner_image_recent: "/assets/banners/resized/20250917achcutoffs-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250917achcutoffs-series.jpg"
 banner_color: "#7c3aed"
+
+# SEO and Canonical Tags
+canonical_url: "https://buildtales.dev/fintech/payments/2025/09/17/ach-cutoffs-hidden-clock-breaks-ux.html"
+author:
+  name: "Suma Manjunath"
+  twitter: "@buildtales"
+  
+# Open Graph / Social Media
+og:
+  title: "ACH Cutoffs: The Hidden Clock That Breaks Your UX"
+  description: "Understanding the invisible time constraints that make ACH payments feel slow and how to design around these hidden deadlines."
+  type: "article"
+  
+# Twitter Card
+twitter:
+  card: "summary"
+  title: "ACH Cutoffs: The Hidden Clock That Breaks Your UX"
+  description: "Understanding the invisible time constraints that make ACH payments feel slow and how to design around these hidden deadlines."
+
+# Syndication and Original Content Declaration
+robots: "index, follow"
+syndication:
+  original: true
+  republish_allowed: true
+  canonical_source: "BuildTales.dev"
+
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 9
 ---
 
 # ACH Cutoffs: The Hidden Clock That Breaks Your UX

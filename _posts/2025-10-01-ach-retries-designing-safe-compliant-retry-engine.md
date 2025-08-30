@@ -1,14 +1,45 @@
 ---
 layout: default
-title: "ACH Retries: Designing a Safe and Compliant Retry Engine"
+title: "ACH Retries: Designing a Safe, Compliant Retry Engine"
 date: 2025-10-01
 categories: [payments]
 section: "Phase 1: Understanding the Rails"
-excerpt: "Why retries are not just a technical decision — they're a regulatory minefield that requires compliance-first design."
+excerpt: "Building a retry engine for ACH payments that handles failures gracefully while staying compliant with NACHA rules and avoiding duplicate submissions."
 banner_image: "/assets/banners/resized/20251001achretry-blog.jpg"
 banner_image_recent: "/assets/banners/resized/20251001achretry-recent.jpg"
 banner_image_series: "/assets/banners/resized/20251001achretry-series.jpg"
-banner_color: "#dc2626"
+banner_color: "#157878"
+
+# SEO and Canonical Tags
+canonical_url: "https://buildtales.dev/fintech/payments/2025/10/01/ach-retries-designing-safe-compliant-retry-engine.html"
+author:
+  name: "Suma Manjunath"
+  twitter: "@buildtales"
+  
+# Open Graph / Social Media
+og:
+  title: "ACH Retries: Designing a Safe, Compliant Retry Engine"
+  description: "Building a retry engine for ACH payments that handles failures gracefully while staying compliant with NACHA rules and avoiding duplicate submissions."
+  type: "article"
+  
+# Twitter Card
+twitter:
+  card: "summary"
+  title: "ACH Retries: Designing a Safe, Compliant Retry Engine"
+  description: "Building a retry engine for ACH payments that handles failures gracefully while staying compliant with NACHA rules and avoiding duplicate submissions."
+
+# Syndication and Original Content Declaration
+robots: "index, follow"
+syndication:
+  original: true
+  republish_allowed: true
+  canonical_source: "BuildTales.dev"
+
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 11
 ---
 
 # ACH Retries: Designing a Safe and Compliant Retry Engine

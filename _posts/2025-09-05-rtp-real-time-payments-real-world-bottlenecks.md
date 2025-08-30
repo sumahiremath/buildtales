@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "RTP: Real-Time Payments With Real-World Bottlenecks"
-date: 2025-09-03
+date: 2025-09-05
 categories: [payments]
 section: "Phase 1: Understanding the Rails"
 excerpt: "Exploring the promise of real-time payments and the practical bottlenecks that limit their true potential in production systems."
@@ -9,6 +9,37 @@ banner_image: "/assets/banners/resized/20250903rtp-blog.jpg"
 banner_image_recent: "/assets/banners/resized/20250903rtp-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250903rtp-series.jpg"
 banner_color: "#059669"
+
+# SEO and Canonical Tags
+canonical_url: "https://buildtales.dev/fintech/payments/2025/09/03/rtp-real-time-payments-real-world-bottlenecks.html"
+author:
+  name: "Suma Manjunath"
+  twitter: "@buildtales"
+  
+# Open Graph / Social Media
+og:
+  title: "RTP: Real-Time Payments With Real-World Bottlenecks"
+  description: "Exploring the promise of real-time payments and the practical bottlenecks that limit their true potential in production systems."
+  type: "article"
+  
+# Twitter Card
+twitter:
+  card: "summary"
+  title: "RTP: Real-Time Payments With Real-World Bottlenecks"
+  description: "Exploring the promise of real-time payments and the practical bottlenecks that limit their true potential in production systems."
+
+# Syndication and Original Content Declaration
+robots: "index, follow"
+syndication:
+  original: true
+  republish_allowed: true
+  canonical_source: "BuildTales.dev"
+
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 7
 ---
 
 # RTP: Real-Time Payments With Real-World Bottlenecks

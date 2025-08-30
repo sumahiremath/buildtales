@@ -9,6 +9,37 @@ banner_image: "/assets/banners/resized/20250910fednow-blog.jpg"
 banner_image_recent: "/assets/banners/resized/20250910fednow-recent.jpg"
 banner_image_series: "/assets/banners/resized/20250910fednow-series.jpg"
 banner_color: "#dc2626"
+
+# SEO and Canonical Tags
+canonical_url: "https://buildtales.dev/fintech/payments/2025/09/10/fednow-built-by-fed-moving-like-fed.html"
+author:
+  name: "Suma Manjunath"
+  twitter: "@buildtales"
+  
+# Open Graph / Social Media
+og:
+  title: "FedNow: Built by the Fed. Moving Like the Fed"
+  description: "Examining the Federal Reserve's entry into real-time payments and why government-built systems move at government speed."
+  type: "article"
+  
+# Twitter Card
+twitter:
+  card: "summary"
+  title: "FedNow: Built by the Fed. Moving Like the Fed"
+  description: "Examining the Federal Reserve's entry into real-time payments and why government-built systems move at government speed."
+
+# Syndication and Original Content Declaration
+robots: "index, follow"
+syndication:
+  original: true
+  republish_allowed: true
+  canonical_source: "BuildTales.dev"
+
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 8
 ---
 
 # FedNow: Built by the Fed. Moving Like the Fed

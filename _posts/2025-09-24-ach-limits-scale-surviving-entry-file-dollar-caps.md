@@ -1,14 +1,45 @@
 ---
 layout: default
-title: "ACH Limits at Scale: Surviving Entry, File, and Dollar Caps"
+title: "ACH Limits at Scale: Surviving Entry File Dollar Caps"
 date: 2025-09-24
 categories: [payments]
 section: "Phase 1: Understanding the Rails"
-excerpt: "Navigating the complex web of ACH limits that can break your payment system when you least expect it."
+excerpt: "How to handle ACH dollar limits when processing millions of transactions and why entry file caps matter more than you think."
 banner_image: "/assets/banners/resized/202500924achlimits-blog.jpg"
 banner_image_recent: "/assets/banners/resized/202500924achlimits-recent.jpg"
 banner_image_series: "/assets/banners/resized/202500924achlimits-series.jpg"
 banner_color: "#059669"
+
+# SEO and Canonical Tags
+canonical_url: "https://buildtales.dev/fintech/payments/2025/09/24/ach-limits-scale-surviving-entry-file-dollar-caps.html"
+author:
+  name: "Suma Manjunath"
+  twitter: "@buildtales"
+  
+# Open Graph / Social Media
+og:
+  title: "ACH Limits at Scale: Surviving Entry File Dollar Caps"
+  description: "How to handle ACH dollar limits when processing millions of transactions and why entry file caps matter more than you think."
+  type: "article"
+  
+# Twitter Card
+twitter:
+  card: "summary"
+  title: "ACH Limits at Scale: Surviving Entry File Dollar Caps"
+  description: "How to handle ACH dollar limits when processing millions of transactions and why entry file caps matter more than you think."
+
+# Syndication and Original Content Declaration
+robots: "index, follow"
+syndication:
+  original: true
+  republish_allowed: true
+  canonical_source: "BuildTales.dev"
+
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 10
 ---
 
 # ACH Limits at Scale: Surviving Entry, File, and Dollar Caps
