@@ -16,7 +16,7 @@ title: "Articles"
     <span class="filter-separator">|</span>
     <a class="filter-link" href="/blog?tag=systems">Systems</a>
     <span class="filter-separator">|</span>
-    <a class="filter-link" href="/blog?tag=ach">ACH</a>
+
   </div>
 
   <!-- Posts Grid - Finshots Style -->
@@ -317,6 +317,9 @@ document.addEventListener('DOMContentLoaded', function() {
       const categories = card.getAttribute('data-categories') || '';
       
       if (filter === 'all' || categories.includes(filter)) {
+        card.style.display = 'block';
+      } else if (filter === 'payments' && (categories.includes('payments') || categories.includes('ach'))) {
+        // Show both payments and ACH posts when filtering by payments
         card.style.display = 'block';
       } else {
         card.style.display = 'none';

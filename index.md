@@ -63,11 +63,7 @@ title: Build Tales
          <h3 class="font-semibold mb-2">How U.S. Payments Really Work</h3>
          <p class="opacity-80 text-sm">Inside the messy plumbing of money movement</p>
        </a>
-       <a class="start-here-card" href="/series/ach">
-         <div class="card-icon" style="background: #157878; color: white;">🏦</div>
-         <h3 class="font-semibold mb-2">ACH Deep Dive</h3>
-         <p class="opacity-80 text-sm">Master the $72+ trillion ACH network</p>
-       </a>
+
        <a class="start-here-card" href="/series/leadership">
          <div class="card-icon" style="background: #157878; color: white;">⚡</div>
          <h3 class="font-semibold mb-2">Build, Break, Lead</h3>

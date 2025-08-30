@@ -9,7 +9,7 @@ permalink: /series/payments
 <div class="toc-container">
   <h2 class="toc-title">Topics</h2>
   <nav class="toc-nav">
-    <a href="#phase-1" class="toc-link">Phase 1: Understanding the Rails</a>
+    <a href="#phase-1" class="toc-link">Phase 1: ACH Fundamentals & Understanding the Rails</a>
     <a href="#phase-2" class="toc-link">Phase 2: Failure Modes — Returns, Reversals, & Chaos</a>
     <a href="#phase-3" class="toc-link">Phase 3: Observability & Ops Strategy</a>
     <a href="#phase-4" class="toc-link">Phase 4: Multi-Client, Multi-Rail Complexity</a>
@@ -21,13 +21,16 @@ permalink: /series/payments
 <!-- Series Articles -->
 <div class="series-articles-container">
   {% assign payments_posts = site.posts | where_exp: "post", "post.categories contains 'payments'" | sort: 'date' %}
-  {% assign grouped_posts = payments_posts | group_by: "section" | sort: "name" %}
+  {% assign ach_posts = site.posts | where_exp: "post", "post.categories contains 'ach'" | sort: 'date' %}
+  {% assign all_payments_posts = payments_posts | concat: ach_posts | sort: 'date' %}
+  {% assign grouped_posts = all_payments_posts | group_by: "section" | sort: "name" %}
+  {% assign phase_counter = 1 %}
   
   {% for group in grouped_posts %}
-    <section class="phase-section" id="phase-{{ forloop.index }}">
+    <section class="phase-section" id="phase-{{ phase_counter }}">
       <h2 class="phase-title">{{ group.name }}</h2>
-      {% if group.name == "Phase 1: Understanding the Rails" %}
-        <p class="phase-description">These articles ground the reader in how money moves and why rebuilding is even needed.</p>
+      {% if group.name == "Phase 1: ACH Fundamentals & Understanding the Rails" %}
+        <p class="phase-description">Master ACH fundamentals and understand how money actually moves through the U.S. payment rails. These articles ground the reader in the basics before diving into complex scenarios.</p>
       {% elsif group.name == "Phase 2: Failure Modes — Returns, Reversals, & Chaos" %}
         <p class="phase-description">Here we dive into what breaks, why it breaks, and how to prevent it.</p>
       {% elsif group.name == "Phase 3: Observability & Ops Strategy" %}
@@ -73,6 +76,7 @@ permalink: /series/payments
         {% endfor %}
       </div>
     </section>
+    {% assign phase_counter = phase_counter | plus: 1 %}
   {% endfor %}
 </div>
 

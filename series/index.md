@@ -11,21 +11,14 @@ title: "Series"
   <div class="series-grid">
     <a href="/series/payments" class="series-card available">
       <h2 class="series-title"><span class="series-title-icon">🚀</span> How U.S. Payments Really Work</h2>
-      <p class="series-description">A builder's guide to rails, risk, and reconciliation. Everything you need to understand, build, and scale payment systems in the United States.</p>
+      <p class="series-description">A comprehensive builder's guide to U.S. payment systems including ACH fundamentals, wire transfers, cards, crypto, and more. Everything you need to understand, build, and scale payment systems in the United States.</p>
       <div class="series-actions">
         <span class="series-cta primary">Start Reading →</span>
         <span class="series-secondary">View Complete Series</span>
       </div>
     </a>
     
-    <a href="/series/ach" class="series-card available">
-      <h2 class="series-title"><span class="series-title-icon">🏦</span> ACH (Automated Clearing House) Series</h2>
-      <p class="series-description">Deep dives into ACH fundamentals, operations, compliance, and advanced system design for payment processors.</p>
-      <div class="series-actions">
-        <span class="series-cta primary">Start Reading →</span>
-        <span class="series-secondary">View Complete Series</span>
-      </div>
-    </a>
+
     
     <a href="/series/leadership" class="series-card available">
       <h2 class="series-title"><span class="series-title-icon">⚡</span> Engineering Leadership Series</h2>
