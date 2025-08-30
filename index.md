@@ -114,10 +114,10 @@ title: Build Tales
       {% assign current_date = site.time | date: '%s' %}
       {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" | sort: 'date' | reverse %}
       {% for post in published_posts limit:3 %}
-      <a href="{{ post.url }}" class="recent-post-card-link">
-        <article class="recent-post-card">
+      <a href="{{ post.url }}" class="post-card-link">
+        <article class="post-card">
           <!-- Clean Banner Image -->
-          <div class="recent-post-banner" 
+          <div class="post-banner" 
                {% if post.banner_image_recent %}
                style="background-image: url('{{ post.banner_image_recent | relative_url }}');"
                {% elsif post.banner_image %}
@@ -127,7 +127,7 @@ title: Build Tales
                {% endif %}>
           </div>
           
-          <div class="recent-post-content">
+          <div class="post-content">
             <!-- Date and Series Info -->
             <div class="post-meta">
               <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
@@ -136,17 +136,19 @@ title: Build Tales
               {% endif %}
             </div>
             
-            <h3 class="recent-post-title">{{ post.title }}</h3>
+            <h2 class="post-title">{{ post.title }}</h2>
             
-            <p class="recent-post-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+            <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
             
-            {% if post.categories %}
-            <div class="recent-post-categories">
-              {% for category in post.categories %}
-              <span class="category-tag">{{ category | capitalize }}</span>
-              {% endfor %}
+            <div class="post-footer">
+              {% if post.categories %}
+              <div class="post-categories">
+                {% for category in post.categories %}
+                <span class="category-tag">{{ category | capitalize }}</span>
+                {% endfor %}
+              </div>
+              {% endif %}
             </div>
-            {% endif %}
           </div>
         </article>
       </a>
@@ -184,20 +186,32 @@ title: Build Tales
   margin-top: 1.5rem;
 }
 
-/* Recent Post Card Link - Entire Card Clickable */
-.recent-post-card-link {
+/* Ensure cards don't nest and display properly */
+.recent-posts-grid .post-card-link {
   display: block;
+  width: 100%;
+}
+
+.recent-posts-grid .post-card {
+  width: 100%;
+  position: relative;
+}
+
+/* Post Card Link - Entire Card Clickable */
+.post-card-link {
+  display: block !important;
   text-decoration: none;
   color: inherit;
   transition: all 0.2s ease;
+  width: 100%;
 }
 
-.recent-post-card-link:hover {
+.post-card-link:hover {
   text-decoration: none;
   color: inherit;
 }
 
-.recent-post-card {
+.post-card {
   background: white;
   border: 1px solid #e5e7eb;
   border-radius: 12px;
@@ -206,54 +220,86 @@ title: Build Tales
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-.recent-post-card-link:hover .recent-post-card {
+.post-card-link:hover .post-card {
   border-color: var(--accent);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   transform: translateY(-2px);
 }
 
-/* Clean Recent Post Banner */
-.recent-post-banner {
-  height: 140px;
+/* Clean Post Banner */
+.post-banner {
+  height: 160px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.recent-post-content {
+.post-content {
   padding: 1.5rem;
 }
 
-.recent-post-content .post-meta {
+.post-content .post-meta {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   margin-bottom: 0.75rem;
 }
 
-.recent-post-title {
+.post-date {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.post-series {
+  font-size: 0.75rem;
+  background: #f3f4f6;
+  color: #374151;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.post-title {
   margin: 0 0 0.75rem 0;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.3;
   color: #111827;
   transition: color 0.2s ease;
 }
 
-.recent-post-card-link:hover .recent-post-title {
+.post-card-link:hover .post-title {
   color: var(--accent);
 }
 
-.recent-post-excerpt {
+.post-excerpt {
   color: #4b5563;
   line-height: 1.6;
   margin: 0 0 1rem 0;
   font-size: 0.95rem;
 }
 
-.recent-post-categories {
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.75rem;
+  border-top: 1px solid #f3f4f6;
+}
+
+.post-categories {
   display: flex;
   gap: 0.5rem;
+}
+
+.category-tag {
+  font-size: 0.75rem;
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-weight: 500;
 }
 
 /* Start Here Section - 4 Cards Layout */
