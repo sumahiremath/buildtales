@@ -192,8 +192,8 @@ title: "Articles"
 
 .category-tag {
   font-size: 0.75rem;
-  background: #e0f2fe;
-  color: #0369a1;
+  background: #157878;
+  color: #ffffff;
   padding: 0.25rem 0.5rem;
   border-radius: 12px;
   font-weight: 500;

@@ -436,7 +436,7 @@ title: Build Tales
 
 .category-tag {
   font-size: 0.75rem;
-  background: #4fd1c7;
+  background: #157878;
   color: #ffffff;
   padding: 0.25rem 0.5rem;
   border-radius: 12px;
