@@ -15,7 +15,7 @@ section: "Section Name"
 tags: [tag1, tag2, tag3]
 excerpt: "A compelling excerpt that describes what the article covers and why readers should care."
 banner_image: "/assets/banners/resized/[filename]-blog.jpg"
-banner_image_recent: "/assets/banners/resized/[filename]-recent.jpg"
+
 banner_image_series: "/assets/banners/resized/[filename]-series.jpg"
 banner_color: "#157878"
 ```
