@@ -2,12 +2,25 @@
 layout: default
 title: "FedNow: Built by the Fed. Moving Like the Fed"
 date: 2025-09-10
-categories: [payments]
-section: "Phase 1: Understanding the Rails"
+categories: [payments, real_time_payments, faster_payments]
+tags: [fednow, federal_reserve, real_time_payments, rtp, instant_settlement]
 excerpt: "Examining the Federal Reserve's entry into real-time payments and why government-built systems move at government speed."
 banner_image: "/assets/banners/resized/20250910fednow-blog.jpg"
 banner_image_series: "/assets/banners/resized/20250910fednow-series.jpg"
 banner_color: "#dc2626"
+
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 7
+  series_type: "payments"
+
+# Content classification
+payment_type: "faster_payments"
+payment_network: ["fednow", "federal_reserve"]
+content_level: "intermediate"
+content_type: "analysis"
 
 # SEO and Canonical Tags
 canonical_url: "https://buildtales.dev/fintech/payments/2025/09/10/fednow-built-by-fed-moving-like-fed.html"
@@ -33,12 +46,6 @@ syndication:
   original: true
   republish_allowed: true
   canonical_source: "BuildTales.dev"
-
-# Series information
-series:
-  name: "How U.S. Payments Really Work"
-  index_url: "/series/payments"
-  part: 8
 ---
 
 # FedNow: Built by the Fed. Moving Like the Fed

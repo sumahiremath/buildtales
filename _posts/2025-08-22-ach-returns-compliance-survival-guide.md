@@ -35,6 +35,19 @@ syndication:
   republish_allowed: true
   canonical_source: "BuildTales.dev"
 
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 5
+  series_type: "payments"
+
+# Content classification
+payment_type: "ach_transfers"
+payment_network: ["federal_reserve", "epn"]
+content_level: "advanced"
+content_type: "compliance_guide"
+
 # NOTE: No "series" metadata = this will be classified as a bonus article
 
 # Series information

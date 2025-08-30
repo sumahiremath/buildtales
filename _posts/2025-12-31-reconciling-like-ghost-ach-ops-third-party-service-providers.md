@@ -15,7 +15,7 @@ future: true
 canonical_url: "https://buildtales.dev/fintech/payments/2025/12/31/reconciling-like-ghost-ach-ops-third-party-service-providers.html"
 author:
   name: "Suma Manjunath"
-  twitter: "@sumahiremath"
+  twitter: "@buildtales"
   
 # Open Graph / Social Media
 og:
@@ -40,7 +40,14 @@ syndication:
 series:
   name: "How U.S. Payments Really Work"
   index_url: "/series/payments"
-  part: 2
+  part: 27
+  series_type: "payments"
+
+# Content classification
+payment_type: "ach_transfers"
+payment_network: ["federal_reserve", "epn"]
+content_level: "advanced"
+content_type: "how_to"
 ---
 
 <!-- Series Navigation -->

@@ -11,11 +11,25 @@ banner_alt: "Credit card network downgrade analysis showing interchange categori
 excerpt: "Unlike ACH, where Notifications of Change (NOCs) tell you exactly what to fix, credit card networks provide no standardized correction feed. If your transactions downgrade into more expensive interchange categories, you must reverse-engineer the cause from settlement data."
 section: "Phase 1: Understanding the Rails"
 
+# Syndication and Original Content Declaration
+robots: "index, follow"
+syndication:
+  original: true
+  republish_allowed: true
+  canonical_source: "BuildTales.dev"
+
 # Series information
 series:
   name: "How U.S. Payments Really Work"
   index_url: "/series/payments"
-  part: 13
+  part: 9
+  series_type: "payments"
+
+# Content classification
+payment_type: "card_payments"
+payment_network: ["visa", "mastercard", "amex", "discover"]
+content_level: "advanced"
+content_type: "analysis"
 ---
 
 # Why Card Networks Don't Have NOCs (and How to Build Your Own Downgrade Feedback Loop)

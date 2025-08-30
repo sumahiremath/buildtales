@@ -21,7 +21,7 @@
     <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 25 }}{% else %}Stories and insights from the journey of building teams, systems, and culture in fintech.{% endif %}">
     <meta name="twitter:image" content="{% if page.og_image %}{{ page.og_image | absolute_url }}{% else %}{{ '/assets/images/logo.png' | absolute_url }}{% endif %}">
     {% if page.author.twitter %}<meta name="twitter:creator" content="{{ page.author.twitter }}">{% endif %}
-    <meta name="twitter:site" content="@sumahiremath">
+    <meta name="twitter:site" content="@buildtales">
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>

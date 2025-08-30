@@ -10,6 +10,26 @@ banner_image_series: "/assets/banners/resized/20251119wrongfile-series.jpg"
 banner_color: "#dc2626"
 ---
 
+# Syndication and Original Content Declaration
+robots: "index, follow"
+syndication:
+  original: true
+  republish_allowed: true
+  canonical_source: "BuildTales.dev"
+
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 20
+  series_type: "payments"
+
+# Content classification
+payment_type: "ach_transfers"
+payment_network: ["federal_reserve", "epn"]
+content_level: "intermediate"
+content_type: "case_study"
+
 # The Day I Submitted the Wrong ACH File (Personal tale for empathy + realism)
 
 *Coming soon...*

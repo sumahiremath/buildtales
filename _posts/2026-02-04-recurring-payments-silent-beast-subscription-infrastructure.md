@@ -10,6 +10,26 @@ banner_image_series: "/assets/banners/resized/20260204recurring-series.jpg"
 banner_color: "#059669"
 ---
 
+# Syndication and Original Content Declaration
+robots: "index, follow"
+syndication:
+  original: true
+  republish_allowed: true
+  canonical_source: "BuildTales.dev"
+
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 29
+  series_type: "payments"
+
+# Content classification
+payment_type: "ach_transfers"
+payment_network: ["federal_reserve", "epn"]
+content_level: "advanced"
+content_type: "architecture"
+
 # Recurring Payments: The Silent Beast Behind Subscription Infrastructure
 
 *Coming soon...*

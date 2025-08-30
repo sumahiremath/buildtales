@@ -28,3 +28,23 @@ This article will explore the critical importance of ACH trace IDs and how to tr
 
 Stay tuned for a comprehensive guide to ACH trace ID management that will save you hours of debugging and customer support.
 
+# Syndication and Original Content Declaration
+robots: "index, follow"
+syndication:
+  original: true
+  republish_allowed: true
+  canonical_source: "BuildTales.dev"
+
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 19
+  series_type: "payments"
+
+# Content classification
+payment_type: "ach_transfers"
+payment_network: ["federal_reserve", "epn"]
+content_level: "advanced"
+content_type: "how_to"
+

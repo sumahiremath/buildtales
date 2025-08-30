@@ -27,3 +27,23 @@ This article will explore the engineering management challenges when entire ACH 
 
 Stay tuned for an engineering manager's guide to surviving and learning from ACH file reversal disasters.
 
+# Syndication and Original Content Declaration
+robots: "index, follow"
+syndication:
+  original: true
+  republish_allowed: true
+  canonical_source: "BuildTales.dev"
+
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 16
+  series_type: "payments"
+
+# Content classification
+payment_type: "ach_transfers"
+payment_network: ["federal_reserve", "epn"]
+content_level: "advanced"
+content_type: "how_to"
+

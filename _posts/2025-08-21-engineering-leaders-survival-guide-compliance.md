@@ -2,16 +2,26 @@
 layout: default
 title: "The Engineering Leader's Survival Guide to Compliance"
 date: 2025-08-21
-categories: [leadership, management]
-section: "Vision & Planning"
-tags: [compliance, fintech, engineering-leadership, pci, ach, soc2]
+categories: [leadership, management, compliance]
+tags: [compliance, fintech, engineering_leadership, pci, ach, soc2, regulatory]
 excerpt: "Compliance doesn't have to feel like shackles. When leaders bring compliance into design, translate between legal and engineering, and invest in automation, teams stop treating it as a drag and start seeing it as part of system resilience."
-og_title: "The Engineering Leader's Survival Guide to Compliance"
-og_description: "How engineering leaders can turn compliance from a blocker into a design parameter that builds trust and system resilience."
-og_image: /assets/images/leadership-compliance-guide.png
 banner_image: "/assets/banners/resized/20250821elcompliancesurvial-blog.jpg"
 banner_image_series: "/assets/banners/resized/20250821elcompliancesurvial-series.jpg"
 banner_color: "#157878"
+
+# Series information
+series:
+  name: "Engineering Leadership Survival Guide"
+  index_url: "/series/leadership"
+  part: 1
+  series_type: "leadership"
+
+# Content classification
+leadership_level: "experienced_lead"
+leadership_focus: "compliance"
+team_size: "growing_team"
+content_level: "intermediate"
+content_type: "compliance_guide"
 
 # SEO and Canonical Tags
 canonical_url: "https://buildtales.dev/fintech/leadership/2025/08/21/engineering-leaders-survival-guide-compliance.html"
@@ -37,12 +47,6 @@ syndication:
   original: true
   republish_allowed: true
   canonical_source: "BuildTales.dev"
-
-# Series information
-series:
-  name: "Engineering Leadership in Regulated Environments"
-  index_url: "/series/leadership"
-  part: 1
 ---
 
 # The Engineering Leader's Survival Guide to Compliance

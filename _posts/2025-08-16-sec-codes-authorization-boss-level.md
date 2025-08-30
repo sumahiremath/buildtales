@@ -2,19 +2,31 @@
 layout: default
 title: "SEC Codes in ACH: Authorization, Compliance, and How to Not Get Burned"
 date: 2025-08-16
-categories: [fintech, ach]
-section: "ACH Operations & Compliance"
-tags: [ach, sec-codes, compliance, authorization, nacha]
+categories: [payments, ach, compliance]
+tags: [ach, sec_codes, compliance, authorization, nacha, reg_e]
 excerpt: "SEC codes determine your compliance fate in ACH payments. Get them wrong and face chargebacks, fines, and regulatory headaches. This guide shows you how to classify transactions correctly and stay compliant."
 banner_image: "/assets/banners/resized/20250816seccode-blog.jpg"
 banner_image_series: "/assets/banners/resized/20250816seccode-series.jpg"
 banner_color: "#157878"
 
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 4
+  series_type: "payments"
+
+# Content classification
+payment_type: "ach_transfers"
+payment_network: ["federal_reserve", "epn"]
+content_level: "advanced"
+content_type: "compliance_guide"
+
 # SEO and Canonical Tags
 canonical_url: "https://buildtales.dev/fintech/payments/2025/08/16/sec-codes-authorization-compliance.html"
 author:
   name: "Suma Manjunath"
-  twitter: "@sumahiremath"
+  twitter: "@buildtales"
   
 # Open Graph / Social Media
 og:

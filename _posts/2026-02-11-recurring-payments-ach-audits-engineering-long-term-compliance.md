@@ -10,6 +10,26 @@ banner_image_series: "/assets/banners/resized/20260211longtermcompliance-series.
 banner_color: "#7c3aed"
 ---
 
+# Syndication and Original Content Declaration
+robots: "index, follow"
+syndication:
+  original: true
+  republish_allowed: true
+  canonical_source: "BuildTales.dev"
+
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 30
+  series_type: "payments"
+
+# Content classification
+payment_type: "ach_transfers"
+payment_network: ["federal_reserve", "epn"]
+content_level: "advanced"
+content_type: "compliance_guide"
+
 # Recurring Payments & ACH Audits: Engineering for Long-Term Compliance
 
 *Coming soon...*

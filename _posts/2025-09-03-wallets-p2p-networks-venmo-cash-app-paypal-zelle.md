@@ -2,19 +2,31 @@
 layout: default
 title: "Wallets & P2P Networks: Venmo, Cash App, PayPal, Zelle"
 date: 2025-09-03
-categories: [fintech, payments]
-section: "Phase 1: Understanding the Rails"
-tags: [wallets, p2p, venmo, cash-app, paypal, zelle, apple-pay, google-pay, ach, card-networks]
+categories: [payments, wallets, p2p_networks]
+tags: [wallets, p2p, venmo, cash_app, paypal, zelle, apple_pay, google_pay, ach, card_networks]
 excerpt: "Consumers think Venmo = cash. Engineers know better: wallets are ledger-first abstractions that sit on top of ACH and card rails. If you mistake 'instant ledger' for 'settled funds,' your ops team will bleed."
 banner_image: "/assets/banners/resized/2025-09-03-wallets-blog.jpg"
 banner_image_series: "/assets/banners/resized/2025-09-03-wallets-series.jpg"
 banner_color: "#157878"
 
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 10
+  series_type: "payments"
+
+# Content classification
+payment_type: "wallet_p2p"
+payment_network: ["venmo", "cash_app", "paypal", "zelle"]
+content_level: "intermediate"
+content_type: "analysis"
+
 # SEO and Canonical Tags
 canonical_url: "https://buildtales.dev/fintech/payments/2025/09/05/wallets-p2p-networks-venmo-cash-app-paypal-zelle.html"
 author:
   name: "Suma Manjunath"
-  twitter: "@sumahiremath"
+  twitter: "@buildtales"
   
 # Open Graph / Social Media
 og:
@@ -34,12 +46,6 @@ syndication:
   original: true
   republish_allowed: true
   canonical_source: "BuildTales.dev"
-
-# Series information
-series:
-  name: "How U.S. Payments Really Work"
-  index_url: "/series/payments"
-  part: 3
 ---
 
 <!-- Series Navigation -->

@@ -2,12 +2,25 @@
 layout: default
 title: "Credit Cards: Swipe, Smile, Settle Later"
 date: 2025-08-27
-categories: [payments]
-section: "Phase 1: Understanding the Rails"
+categories: [payments, card_payments, fundamentals]
+tags: [credit_cards, card_networks, interchange, authorization, settlement, chargebacks]
 excerpt: "Understanding the credit card payment flow from authorization to settlement, and why it's not as instant as it seems."
 banner_image: "/assets/banners/resized/20250827creditcard-blog.jpg"
 banner_image_series: "/assets/banners/resized/20250827creditcard-series.jpg"
 banner_color: "#157878"
+
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 5
+  series_type: "payments"
+
+# Content classification
+payment_type: "card_payments"
+payment_network: ["visa", "mastercard", "amex", "discover"]
+content_level: "fundamentals"
+content_type: "how_to"
 
 # SEO and Canonical Tags
 canonical_url: "https://buildtales.dev/fintech/payments/2025/08/27/credit-cards-swipe-smile-settle-later.html"
@@ -33,12 +46,6 @@ syndication:
   original: true
   republish_allowed: true
   canonical_source: "BuildTales.dev"
-
-# Series information
-series:
-  name: "How U.S. Payments Really Work"
-  index_url: "/series/payments"
-  part: 5
 ---
 
 # Credit Cards: Swipe, Smile, Settle Later

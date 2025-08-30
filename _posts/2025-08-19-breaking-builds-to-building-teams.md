@@ -14,7 +14,7 @@ banner_color: "#157878"
 canonical_url: "https://buildtales.dev/engineering/leadership/2025/08/19/breaking-builds-to-building-teams.html"
 author:
   name: "Suma Manjunath"
-  twitter: "@sumahiremath"
+  twitter: "@buildtales"
   
 # Open Graph / Social Media
 og:

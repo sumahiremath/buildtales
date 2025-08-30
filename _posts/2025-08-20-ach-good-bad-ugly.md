@@ -15,7 +15,7 @@ future: true
 canonical_url: "https://buildtales.dev/fintech/payments/2025/08/20/ach-good-bad-ugly.html"
 author:
   name: "Suma Manjunath"
-  twitter: "@sumahiremath"
+  twitter: "@buildtales"
   
 # Open Graph / Social Media
 og:
@@ -41,6 +41,13 @@ series:
   name: "How U.S. Payments Really Work"
   index_url: "/series/payments"
   part: 3
+  series_type: "payments"
+
+# Content classification
+payment_type: "ach_transfers"
+payment_network: ["federal_reserve", "epn"]
+content_level: "intermediate"
+content_type: "analysis"
 ---
 
 <!-- Series Navigation -->

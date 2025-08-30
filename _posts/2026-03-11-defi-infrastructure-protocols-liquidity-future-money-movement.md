@@ -10,6 +10,26 @@ banner_image_series: "/assets/banners/resized/20260311defi-series.jpg"
 banner_color: "#7c3aed"
 ---
 
+# Syndication and Original Content Declaration
+robots: "index, follow"
+syndication:
+  original: true
+  republish_allowed: true
+  canonical_source: "BuildTales.dev"
+
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 33
+  series_type: "payments"
+
+# Content classification
+payment_type: "crypto_payments"
+payment_network: ["ethereum", "polygon", "arbitrum"]
+content_level: "advanced"
+content_type: "analysis"
+
 # DeFi Infrastructure: Protocols, Liquidity, and the Future of Money Movement
 
 *Coming soon...*

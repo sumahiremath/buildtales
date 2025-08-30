@@ -38,7 +38,14 @@ syndication:
 series:
   name: "How U.S. Payments Really Work"
   index_url: "/series/payments"
-  part: 7
+  part: 6
+  series_type: "payments"
+
+# Content classification
+payment_type: "faster_payments"
+payment_network: ["rtp", "the_clearing_house"]
+content_level: "intermediate"
+content_type: "analysis"
 ---
 
 # RTP: Real-Time Payments With Real-World Bottlenecks

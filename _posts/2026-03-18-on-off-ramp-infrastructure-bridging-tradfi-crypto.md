@@ -28,3 +28,23 @@ This article will explore the critical infrastructure that connects traditional 
 
 Stay tuned for a guide to building the infrastructure that connects traditional finance with the crypto world.
 
+# Syndication and Original Content Declaration
+robots: "index, follow"
+syndication:
+  original: true
+  republish_allowed: true
+  canonical_source: "BuildTales.dev"
+
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 34
+  series_type: "payments"
+
+# Content classification
+payment_type: "crypto_payments"
+payment_network: ["ethereum", "polygon", "arbitrum"]
+content_level: "advanced"
+content_type: "architecture"
+

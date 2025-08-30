@@ -2,19 +2,31 @@
 layout: default
 title: "How Money Moves In And Out Of Your Bank Account?"
 date: 2025-08-13
-categories: [fintech, payments]
-section: "Phase 1: Understanding the Rails"
-tags: [ach, payments, banking, fintech-basics]
+categories: [payments, ach, fundamentals]
+tags: [ach, payments, banking, fintech_basics, compliance]
 excerpt: "Ever wonder how your paycheck shows up in your bank account on payday? Or how your gym magically pulls your membership fee every month? That's all thanks to ACH - the behind-the-scenes hero of American banking."
 banner_image: "/assets/banners/resized/20250813moneyflow-blog.jpg"
 banner_image_series: "/assets/banners/resized/20250813moneyflow-series.jpg"
 banner_color: "#157878"
 
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 1
+  series_type: "payments"
+
+# Content classification
+payment_type: "ach_transfers"
+payment_network: ["federal_reserve", "epn"]
+content_level: "fundamentals"
+content_type: "how_to"
+
 # SEO and Canonical Tags
 canonical_url: "https://buildtales.dev/fintech/payments/2025/08/13/money-flow-bank-account.html"
 author:
   name: "Suma Manjunath"
-  twitter: "@sumahiremath"
+  twitter: "@buildtales"
   
 # Open Graph / Social Media
 og:
@@ -34,12 +46,6 @@ syndication:
   original: true
   republish_allowed: true
   canonical_source: "BuildTales.dev"
-
-# Series information
-series:
-  name: "How U.S. Payments Really Work"
-  index_url: "/series/payments"
-  part: 1
 ---
 
 <!-- Series Navigation -->

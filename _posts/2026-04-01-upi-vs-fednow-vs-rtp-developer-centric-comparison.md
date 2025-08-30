@@ -10,6 +10,26 @@ banner_image_series: "/assets/banners/resized/20260401upicomparison-series.jpg"
 banner_color: "#dc2626"
 ---
 
+# Syndication and Original Content Declaration
+robots: "index, follow"
+syndication:
+  original: true
+  republish_allowed: true
+  canonical_source: "BuildTales.dev"
+
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 36
+  series_type: "payments"
+
+# Content classification
+payment_type: "emerging_payments"
+payment_network: ["upi", "fednow", "rtp"]
+content_level: "intermediate"
+content_type: "analysis"
+
 # UPI vs FedNow vs RTP: Developer-Centric Comparison
 
 *Coming soon...*

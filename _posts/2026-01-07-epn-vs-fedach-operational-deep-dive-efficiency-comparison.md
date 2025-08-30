@@ -15,7 +15,7 @@ future: true
 canonical_url: "https://buildtales.dev/fintech/payments/2026/01/07/epn-vs-fedach-operational-deep-dive-efficiency-comparison.html"
 author:
   name: "Suma Manjunath"
-  twitter: "@sumahiremath"
+  twitter: "@buildtales"
   
 # Open Graph / Social Media
 og:
@@ -40,7 +40,14 @@ syndication:
 series:
   name: "How U.S. Payments Really Work"
   index_url: "/series/payments"
-  part: 3
+  part: 28
+  series_type: "payments"
+
+# Content classification
+payment_type: "ach_transfers"
+payment_network: ["federal_reserve", "epn"]
+content_level: "advanced"
+content_type: "analysis"
 ---
 
 <!-- Series Navigation -->

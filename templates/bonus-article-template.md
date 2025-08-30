@@ -10,7 +10,7 @@ excerpt: "[Brief compelling excerpt explaining what this bonus article covers]"
 canonical_url: "https://buildtales.dev/[URL_PATH]"
 author:
   name: "Suma Manjunath"
-  twitter: "@sumahiremath"
+  twitter: "@buildtales"
   
 # Open Graph / Social Media
 og:

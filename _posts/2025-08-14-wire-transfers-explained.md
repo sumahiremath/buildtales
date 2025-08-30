@@ -2,19 +2,31 @@
 layout: default
 title: "Wire Transfers Explained: Fast, Final, and Expensive"
 date: 2025-08-14
-categories: [fintech, payments]
-section: "Phase 1: Understanding the Rails"
-tags: [wire-transfers, fedwire, chips, swift, payments, banking]
+categories: [payments, wire_transfers, fundamentals]
+tags: [wire_transfers, fedwire, chips, swift, payments, banking, compliance]
 excerpt: "Wire transfers are the express lane of money movement - fast, final, and irreversible. Unlike ACH's batch processing, wires move money in real-time through networks like Fedwire and CHIPS."
 banner_image: "/assets/banners/resized/20250814wiretransfer-blog.jpg"
 banner_image_series: "/assets/banners/resized/20250814wiretransfer-series.jpg"
 banner_color: "#157878"
 
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 2
+  series_type: "payments"
+
+# Content classification
+payment_type: "wire_transfers"
+payment_network: ["fedwire", "chips", "swift"]
+content_level: "fundamentals"
+content_type: "how_to"
+
 # SEO and Canonical Tags
 canonical_url: "https://buildtales.dev/fintech/payments/2025/08/14/wire-transfers-explained.html"
 author:
   name: "Suma Manjunath"
-  twitter: "@sumahiremath"
+  twitter: "@buildtales"
   
 # Open Graph / Social Media
 og:
@@ -34,12 +46,6 @@ syndication:
   original: true
   republish_allowed: true
   canonical_source: "BuildTales.dev"
-
-# Series information
-series:
-  name: "How U.S. Payments Really Work"
-  index_url: "/series/payments"
-  part: 2
 ---
 
 <!-- Series Navigation -->

@@ -3,7 +3,7 @@ layout: default
 title: "NACHA File Demystified: Cracking the 94-Character Code"
 date: 2025-08-15
 categories: [fintech, ach]
-section: "ACH Fundamentals"
+section: "ACH"
 tags: [nacha, ach, file-format, fintech-operations, payments-infrastructure, banking]
 excerpt: "Every ACH transaction starts as a carefully crafted 94-character line in a NACHA file. Let's decode the cryptic structure that moves $72 trillion annually through the U.S. banking system."
 banner_image: "/assets/banners/resized/20250815nachafile-blog.jpg"
@@ -14,7 +14,7 @@ banner_color: "#157878"
 canonical_url: "https://buildtales.dev/fintech/payments/2025/08/15/nacha-file-demystified.html"
 author:
   name: "Suma Manjunath"
-  twitter: "@sumahiremath"
+  twitter: "@buildtales"
   
 # Open Graph / Social Media
 og:
@@ -34,6 +34,19 @@ syndication:
   original: true
   republish_allowed: true
   canonical_source: "BuildTales.dev"
+
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 3
+  series_type: "payments"
+
+# Content classification
+payment_type: "ach_transfers"
+payment_network: ["federal_reserve", "epn"]
+content_level: "fundamentals"
+content_type: "how_to"
 
 # NOTE: No "series" metadata = this will be classified as a bonus article
 ---

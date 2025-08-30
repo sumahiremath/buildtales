@@ -10,6 +10,26 @@ banner_image_series: "/assets/banners/resized/20260225refundsrevisited-series.jp
 banner_color: "#dc2626"
 ---
 
+# Syndication and Original Content Declaration
+robots: "index, follow"
+syndication:
+  original: true
+  republish_allowed: true
+  canonical_source: "BuildTales.dev"
+
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 32
+  series_type: "payments"
+
+# Content classification
+payment_type: "ach_transfers"
+payment_network: ["federal_reserve", "epn"]
+content_level: "advanced"
+content_type: "how_to"
+
 # ACH Refunds (Revisited for lifecycle integrity)
 
 *Coming soon...*

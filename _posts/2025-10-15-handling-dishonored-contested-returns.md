@@ -27,3 +27,23 @@ This article will explore the complex scenarios when ACH returns don't go as pla
 - Best practices: Preventing and managing return complications
 
 Stay tuned for a guide to handling the most challenging return scenarios that can break even well-designed payment systems.
+
+# Syndication and Original Content Declaration
+robots: "index, follow"
+syndication:
+  original: true
+  republish_allowed: true
+  canonical_source: "BuildTales.dev"
+
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 15
+  series_type: "payments"
+
+# Content classification
+payment_type: "ach_transfers"
+payment_network: ["federal_reserve", "epn"]
+content_level: "advanced"
+content_type: "how_to"

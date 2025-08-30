@@ -4,8 +4,7 @@ title: "Series"
 ---
 
 <div class="mx-auto max-w-3xl">
-  <h1 class="text-4xl font-bold mb-6">Series</h1>
-  <p class="text-lg opacity-80 mb-8">Deep, structured explorations of complex topics. Perfect for building comprehensive understanding over time.</p>
+  <p class="text-lg opacity-80 mb-4">Deep, structured explorations of complex topics. Perfect for building comprehensive understanding over time.</p>
   
   <!-- Featured Series -->
   <div class="series-grid">
@@ -43,10 +42,31 @@ title: "Series"
 <style>
 /* Series Grid Layout */
 .series-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
+}
+
+/* Override any default spacing from the layout/theme */
+.main-content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Force minimal spacing on the series page content */
+.mx-auto.max-w-3xl {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Override any default margins from Tailwind or theme */
+.text-4xl {
+  margin-bottom: 0.5rem !important;
+}
+
+.text-lg {
+  margin-bottom: 1rem !important;
 }
 
 /* Series Card Base */
@@ -183,7 +203,19 @@ title: "Series"
 }
 
 /* Mobile Responsive */
+@media (max-width: 768px) {
+  .series-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
 @media (max-width: 640px) {
+  .series-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
   .series-card {
     padding: 1.5rem;
   }

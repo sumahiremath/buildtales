@@ -38,7 +38,14 @@ syndication:
 series:
   name: "How U.S. Payments Really Work"
   index_url: "/series/payments"
-  part: 11
+  part: 12
+  series_type: "payments"
+
+# Content classification
+payment_type: "ach_transfers"
+payment_network: ["federal_reserve", "epn"]
+content_level: "advanced"
+content_type: "how_to"
 ---
 
 # ACH Retries: Designing a Safe and Compliant Retry Engine

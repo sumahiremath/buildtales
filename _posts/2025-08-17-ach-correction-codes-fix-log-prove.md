@@ -14,7 +14,7 @@ banner_color: "#157878"
 canonical_url: "https://buildtales.dev/fintech/payments/2025/08/17/ach-correction-codes-fix-log-prove.html"
 author:
   name: "Suma Manjunath"
-  twitter: "@sumahiremath"
+  twitter: "@buildtales"
   
 # Open Graph / Social Media
 og:
@@ -34,6 +34,19 @@ syndication:
   original: true
   republish_allowed: true
   canonical_source: "BuildTales.dev"
+
+# Series information
+series:
+  name: "How U.S. Payments Really Work"
+  index_url: "/series/payments"
+  part: 4
+  series_type: "payments"
+
+# Content classification
+payment_type: "ach_transfers"
+payment_network: ["federal_reserve", "epn"]
+content_level: "intermediate"
+content_type: "how_to"
 
 # NOTE: No "series" metadata = this will be classified as a bonus article
 ---

@@ -38,7 +38,14 @@ syndication:
 series:
   name: "How U.S. Payments Really Work"
   index_url: "/series/payments"
-  part: 6
+  part: 37
+  series_type: "payments"
+
+# Content classification
+payment_type: "card_payments"
+payment_network: ["visa", "mastercard", "amex", "discover"]
+content_level: "advanced"
+content_type: "compliance_guide"
 ---
 
 # Money Flows, Chargebacks, and Rails: A Leader's Guide to 3-D Secure
