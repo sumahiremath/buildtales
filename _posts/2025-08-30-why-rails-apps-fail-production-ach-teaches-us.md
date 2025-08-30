@@ -175,7 +175,6 @@ In the next post, we'll dive into stability patterns from Release It! and show h
 
 ---
 
-**Series: Release It! with Rails & ACH** | **Part 1 of 7**
 
 *This is the first article in a series exploring how to apply Michael Nygard's Release It! principles to Rails applications processing ACH payments. We'll cover circuit breakers, bulkheads, timeouts, and other resilience patterns that keep your payment systems running when external dependencies fail.*
 

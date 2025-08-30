@@ -50,13 +50,6 @@ content_level: "advanced"
 content_type: "analysis"
 ---
 
-<!-- Series Navigation -->
-<div style="background: #f8f9fa; border-left: 4px solid #007acc; padding: 1rem; margin: 1rem 0;">
-  <strong>Part 3 of the "How U.S. Payments Really Work" Series</strong><br>
-  <a href="/fintech/payments/2025/12/31/reconciling-like-ghost-ach-ops-third-party-service-providers.html">← Previous: Reconciling Like a Ghost: ACH Ops for Third-Party Service Providers</a> | 
-  <a href="/series/payments">View complete series roadmap</a> | 
-  <a href="/fintech/payments/2026/01/14/epn-access-fintechs-what-you-need-know.html">Next: EPN Access for Fintechs: What You Need to Know →</a>
-</div>
 
 # EPN vs. FedACH: Operational Deep Dive & Efficiency Comparison
 

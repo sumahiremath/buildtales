@@ -219,6 +219,5 @@ This article is part of the **Release It! with Rails + ACH** series:
 
 ---
 
-**Series: Release It! with Rails & ACH** | **Part 2 of 7**
 
 *This post introduces the toolkit. Each of the four patterns will get its own deep dive article later — here we're setting the stage.*
