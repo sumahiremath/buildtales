@@ -6,7 +6,7 @@ title: "Articles"
 <div class="mx-auto max-w-3xl">
   <h1 class="text-4xl font-bold mb-6">Articles</h1>
   
-  <!-- Filter Navigation -->
+    <!-- Filter Navigation -->
   <div class="filter-nav mb-6">
     <a class="filter-link filter-link--active" href="/blog">All</a>
     <span class="filter-separator">|</span>
@@ -15,8 +15,21 @@ title: "Articles"
     <a class="filter-link" href="/blog?tag=leadership">Leadership</a>
     <span class="filter-separator">|</span>
     <a class="filter-link" href="/blog?tag=systems">Systems</a>
-    <span class="filter-separator">|</span>
-
+    
+    <!-- Additional Categories Dropdown -->
+    <div class="filter-dropdown">
+      <button class="filter-dropdown-btn" onclick="toggleDropdown()">
+        More <span class="dropdown-arrow">▼</span>
+      </button>
+      <div class="filter-dropdown-content" id="filterDropdown">
+        {% assign all_categories = site.posts | map: "categories" | uniq | sort %}
+        {% for category in all_categories %}
+          {% if category != "fintech" and category != "leadership" and category != "systems" and category != "payments" %}
+            <a href="/blog?tag={{ category }}" class="filter-dropdown-link">{{ category | capitalize }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
   </div>
 
   <!-- Posts Grid - Finshots Style -->
@@ -104,10 +117,17 @@ title: "Articles"
 
 /* Clean Banner - No Text Overlay */
 .post-banner {
-  height: 160px;
+  height: 180px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* Desktop banner height */
+@media (min-width: 768px) {
+  .post-banner {
+    height: 200px;
+  }
 }
 
 .post-content {
@@ -189,6 +209,80 @@ title: "Articles"
   border: 1px solid #e5e7eb;
   border-radius: 8px;
   background: #fafbfc;
+  flex-wrap: wrap;
+}
+
+/* Filter Dropdown */
+.filter-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.filter-dropdown-btn {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.filter-dropdown-btn:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+}
+
+.dropdown-arrow {
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.filter-dropdown.active .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.filter-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 150px;
+  margin-top: 0.25rem;
+}
+
+.filter-dropdown-content.show {
+  display: block;
+}
+
+.filter-dropdown-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #374151;
+  text-decoration: none;
+  font-size: 0.875rem;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background-color 0.2s ease;
+}
+
+.filter-dropdown-link:last-child {
+  border-bottom: none;
+}
+
+.filter-dropdown-link:hover {
+  background-color: #f9fafb;
+  color: #157878;
 }
 
 .filter-link {
@@ -239,13 +333,18 @@ title: "Articles"
   .filter-nav {
     gap: 0.25rem;
     padding: 0.5rem;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
   }
   
   .filter-link {
     font-size: 13px;
     padding: 1px 4px;
+  }
+  
+  .filter-dropdown-btn {
+    font-size: 12px;
+    padding: 1px 6px;
   }
   
   .filter-separator {
@@ -293,6 +392,29 @@ title: "Articles"
 document.addEventListener('DOMContentLoaded', function() {
   const filterLinks = document.querySelectorAll('.filter-link');
   const postCards = document.querySelectorAll('.post-card-link');
+  
+  // Dropdown functionality
+  window.toggleDropdown = function() {
+    const dropdown = document.getElementById('filterDropdown');
+    const dropdownContainer = document.querySelector('.filter-dropdown');
+    
+    if (dropdown.classList.contains('show')) {
+      dropdown.classList.remove('show');
+      dropdownContainer.classList.remove('active');
+    } else {
+      dropdown.classList.add('show');
+      dropdownContainer.classList.add('active');
+    }
+  }
+  
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function(event) {
+    const dropdown = document.querySelector('.filter-dropdown');
+    if (!dropdown.contains(event.target)) {
+      document.getElementById('filterDropdown').classList.remove('show');
+      dropdown.classList.remove('active');
+    }
+  });
   
   // Get current filter from URL parameter
   const urlParams = new URLSearchParams(window.location.search);

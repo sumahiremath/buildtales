@@ -3,76 +3,66 @@ layout: default
 title: Build Tales
 ---
 
-<!-- Hero Section -->
-<section class="py-16">
-  <div class="mx-auto max-w-4xl text-center space-y-6">
-    <h1 class="text-5xl font-bold">Deep, no-fluff essays on engineering leadership & U.S. payments.</h1>
-    <p class="text-xl font-medium" style="color: #333; margin: 1.5rem auto; max-width: 600px; text-align: center;">Actionable breakdowns you can read in 7–12 minutes.</p>
-    
-    <!-- Hero Cards -->
-    <div class="hero-cards-grid">
-      <a class="hero-card primary" href="/series/payments">
-        <div class="hero-card-icon">🚀</div>
-        <h3>Start the Payments Series</h3>
-        <p>Deep dive into U.S. payment systems - from ACH to crypto</p>
-        <span class="hero-card-action">Begin Reading →</span>
-      </a>
-      <a class="hero-card secondary" href="/blog">
-        <div class="hero-card-icon">📚</div>
-        <h3>Explore All Articles</h3>
-        <p>Browse engineering leadership, systems, and payment articles</p>
-        <span class="hero-card-action">View Articles →</span>
-      </a>
+  <!-- Hero Section -->
+  <section class="py-16">
+  <div class="mx-auto max-w-3xl px-4">
+    <div class="hero-content">
+      <!-- Hero Image (right side on desktop) -->
+      <div class="hero-image">
+        <img src="/assets/images/blogger.jpg" alt="Mouse working on laptop with sleeping cat" class="hero-mascot">
+      </div>
+      
+      <!-- Hero Text Content (left side on desktop) -->
+      <div class="hero-text">
+        <h2 class="text-2xl font-semibold mb-6">Leadership lessons from code to culture</h2>
+        <p class="hero-description">From debugging code to guiding teams, these essays share the hard-won lessons of building systems, scaling payments, and leading with clarity.</p>
+        <!-- Subscribe Form -->
+        <div class="hero-newsletter">
+
+          <form id="newsletter-form-1" action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="hero-form" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
+            <input type="email" name="email_address" placeholder="Enter your email" required class="hero-input">
+            <button type="submit" class="hero-button">Subscribe</button>
+          </form>
+          <div id="form-message-1" class="form-message"></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Hero Inline Signup Bar -->
-<section id="newsletter" style="padding-top: 1.25em; padding-bottom: 8px; padding-left: 0; padding-right: 0; text-align: center;" class="py-8">
-  <div class="mx-auto max-w-4xl px-4">
-    <div class="newsletter-box">
-      <div class="text-center mb-6">
-        <p class="text-lg font-semibold text-gray-800 mb-2" style="font-size: 1.125rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">👋 Hey, I'm Suma</p>
-        <p class="text-gray-600" style="color: #4b5563; line-height: 1.6;">I write deep dives on fintech & engineering leadership. </p>
-      </div>
-      <div class="flex justify-center">
-        <form id="newsletter-form-1" action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="convertkit-form flex flex-col sm:flex-row gap-3 max-w-md" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
-          <input type="email" name="email_address" placeholder="Enter your email" required 
-                 class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base shadow-sm">
-          <button type="submit" 
-                  class="px-8 py-3 text-white font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 text-base whitespace-nowrap shadow-sm hover:shadow-md transform hover:-translate-y-0.5"
-                  style="background-color: #157878; border-color: #157878; color: white;"
-                  onmouseover="this.style.backgroundColor='#0f6b6b'; this.style.color='white';"
-                  onmouseout="this.style.backgroundColor='#157878'; this.style.color='white';">
-            Subscribe
-          </button>
-        </form>
-        <div id="form-message-1" style="margin-top: 1rem; font-size: 0.9rem; display: none; text-align: center;"></div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- Start Here Section -->
 <section class="py-8">
   <div class="mx-auto max-w-5xl">
     <h2 class="text-2xl font-semibold mb-6 text-center">Start here</h2>
     <div class="start-here-grid">
-                    <a class="start-here-card" href="/series/payments">
-         <div class="card-icon" style="background: #157878; color: white;">🚀</div>
+      <a class="start-here-card" href="/series/payments">
+        <div class="teacher-image">
+          <img src="/assets/images/teacher.jpg" alt="teacher mouse" class="hero-mascot">
+        </div>
          <h3 class="font-semibold mb-2">How U.S. Payments Really Work</h3>
-         <p class="opacity-80 text-sm">Inside the messy plumbing of money movement</p>
+         <p class="opacity-80 text-sm">Demystify the rails moving trillions daily.</p>
        </a>
 
        <a class="start-here-card" href="/series/leadership">
-         <div class="card-icon" style="background: #157878; color: white;">⚡</div>
+          <div class="leader-image">
+            <img src="/assets/images/leader.jpg" alt="leader mouse" class="hero-mascot">
+          </div>
          <h3 class="font-semibold mb-2">Build, Break, Lead</h3>
-         <p class="opacity-80 text-sm">Engineering leadership journey</p>
+         <p class="opacity-80 text-sm">Lessons from the trenches of engineering leadership.</p>
        </a>
        <a class="start-here-card" href="/series/systems">
-         <div class="card-icon" style="background: #157878; color: white;">🛡️</div>
+          <div class="designer-image">
+            <img src="/assets/images/builder.jpg" alt="designer mouse" class="hero-mascot">
+          </div>
          <h3 class="font-semibold mb-2">Designing for Failure</h3>
-         <p class="opacity-80 text-sm">Build resilient systems & incident habits</p>
+         <p class="opacity-80 text-sm">Patterns for resilient systems that don’t go down.</p>
+       </a>
+       <a class="start-here-card" href="/blog">
+          <div class="designer-image">
+            <img src="/assets/images/explorer.jpg" alt="explorer mouse" class="hero-mascot">
+          </div>         <h3 class="font-semibold mb-2">All Articles</h3>
+         <p class="opacity-80 text-sm">Browse all engineering leadership, systems, and payment articles</p>
        </a>
     </div>
   </div>
@@ -109,7 +99,7 @@ title: Build Tales
     <div class="recent-posts-grid">
       {% assign current_date = site.time | date: '%s' %}
       {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" | sort: 'date' | reverse %}
-      {% for post in published_posts limit:3 %}
+      {% for post in published_posts limit:4 %}
       <a href="{{ post.url }}" class="post-card-link">
         <article class="post-card">
           <!-- Clean Banner Image -->
@@ -148,11 +138,135 @@ title: Build Tales
       </a>
       {% endfor %}
     </div>
+    
+    <!-- See All Articles Link -->
+    <div class="see-all-articles">
+      <a href="/blog" class="see-all-link">See all articles →</a>
+    </div>
   </div>
 </section>
 
 <style>
 /* Custom styles for this page */
+
+/* Hero Section Layout */
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  text-align: left;
+  flex-direction: row-reverse;
+}
+
+.hero-image {
+  flex: 0 0 auto;
+}
+
+.hero-mascot {
+  width: 350px;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+}
+
+.hero-newsletter {
+  margin-top: 2rem;
+}
+
+.hero-form {
+  display: flex;
+  gap: 0.75rem;
+  max-width: 400px;
+}
+
+.hero-input {
+  flex: 1;
+  padding: 0.875rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.hero-input:focus {
+  outline: none;
+  border-color: #157878;
+  box-shadow: 0 0 0 3px rgba(21, 120, 120, 0.1);
+}
+
+.hero-button {
+  padding: 0.875rem 1.5rem;
+  background-color: #157878;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.hero-button:hover {
+  background-color: #0f6b6b;
+  transform: translateY(-1px);
+}
+
+.form-message {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  display: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-description {
+    font-size: 1.125rem;
+  }
+  
+  .hero-form {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-input,
+  .hero-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
 
 .container {
   display: flex;
@@ -174,10 +288,29 @@ title: Build Tales
 
 /* Recent Articles - Finshots Style */
 .recent-posts-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   margin-top: 1.5rem;
+}
+
+/* See All Articles Link */
+.see-all-articles {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.see-all-link {
+  color: #4fd1c7;
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.see-all-link:hover {
+  color: #157878;
+  text-decoration: underline;
 }
 
 /* Ensure cards don't nest and display properly */
@@ -198,6 +331,7 @@ title: Build Tales
   color: inherit;
   transition: all 0.2s ease;
   width: 100%;
+  height: 100%;
 }
 
 .post-card-link:hover {
@@ -212,6 +346,9 @@ title: Build Tales
   overflow: hidden;
   transition: all 0.2s ease;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .post-card-link:hover .post-card {
@@ -230,6 +367,9 @@ title: Build Tales
 
 .post-content {
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .post-content .post-meta {
@@ -272,6 +412,12 @@ title: Build Tales
   line-height: 1.6;
   margin: 0 0 1rem 0;
   font-size: 0.95rem;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .post-footer {
@@ -280,6 +426,7 @@ title: Build Tales
   align-items: center;
   padding-top: 0.75rem;
   border-top: 1px solid #f3f4f6;
+  margin-top: auto;
 }
 
 .post-categories {
@@ -289,8 +436,8 @@ title: Build Tales
 
 .category-tag {
   font-size: 0.75rem;
-  background: #e0f2fe;
-  color: #0369a1;
+  background: #4fd1c7;
+  color: #ffffff;
   padding: 0.25rem 0.5rem;
   border-radius: 12px;
   font-weight: 500;
@@ -564,6 +711,18 @@ title: Build Tales
     width: 100%;
     max-width: 300px;
     text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .recent-posts-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  
+  .start-here-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
 }
 </style>
