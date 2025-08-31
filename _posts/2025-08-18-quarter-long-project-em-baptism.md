@@ -12,10 +12,10 @@ banner_color: "#157878"
 
 # Series information
 series:
-  name: "Strategies & Tactics"
-  index_url: "/series/strategies"
+  name: "Leadership Series"
+  index_url: "/series/leadership"
   part: 1
-  series_type: "leadership"
+  series_type: "Strategies & Tactics"
 
 # Content classification
 content_level: "intermediate"

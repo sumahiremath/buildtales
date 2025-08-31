@@ -12,10 +12,10 @@ banner_color: "#157878"
 
 # Series information
 series:
-  name: "Execute & Assess"
-  index_url: "/series/execute-assess"
+  name: "Leadership Series"
+  index_url: "/series/leadership"
   part: 2
-  series_type: "leadership"
+  series_type: "Execute & Assess"
   
 # Content classification
 content_level: "beginner"

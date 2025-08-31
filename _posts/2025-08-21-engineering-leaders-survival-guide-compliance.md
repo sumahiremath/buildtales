@@ -3,6 +3,7 @@ layout: default
 title: "The Engineering Leader's Survival Guide to Compliance"
 date: 2025-08-21
 categories: [leadership, management, compliance]
+section: "Strategies & Tactics"
 tags: [compliance, fintech, engineering_leadership, pci, ach, soc2, regulatory]
 excerpt: "Compliance doesn't have to feel like shackles. When leaders bring compliance into design, translate between legal and engineering, and invest in automation, teams stop treating it as a drag and start seeing it as part of system resilience."
 banner_image: "/assets/banners/resized/20250821elcompliancesurvial-blog.jpg"
@@ -11,10 +12,10 @@ banner_color: "#157878"
 
 # Series information
 series:
-  name: "Engineering Leadership Survival Guide"
+  name: "Leadership Series"
   index_url: "/series/leadership"
   part: 3
-  series_type: "leadership"
+  series_type: "Strategies & Tactics"
 
 # Content classification
 leadership_level: "experienced_lead"
