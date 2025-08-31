@@ -2,7 +2,7 @@
 layout: default
 title: About
 ---
-# About
+## About
 
 <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
   <img src="{{ '/assets/images/ghibli-avatar.png' | relative_url }}" alt="Suma Manjunath" 
@@ -12,21 +12,56 @@ title: About
   </div>
 </div>
 
-## The Journey
+---
 
-My path began in QA, where I developed a quality-first mindset that propelled me into development and ultimately leadership. Now, I lead initiatives focused on modernizing legacy architectures, driving microservices adoption, and embedding observability across engineering ecosystems. I’ve guided teams through fintech transformations, built large-scale payments infrastructure, and navigated complex financial compliance—where “move fast” meets “don’t break anything.”
+### The Journey
 
-## Why I Write
+I started in QA, where a **quality-first mindset** shaped how I approach every layer of engineering. That foundation led me into development and, eventually, leadership roles guiding teams through modernization efforts.
 
-**Build Tales** captures stories from the engineering trenches—addressing the messy middle of scaling teams, legacy systems, and compliance puzzles that glossy case studies overlook. My ongoing series, “How U.S. Payments Really Work,” spans 50+ articles aimed at helping engineers build systems that earn trust by understanding money’s real-life path through banks, networks, and regulatory frameworks.
+I’m especially interested in **microservices and distributed systems**, **AI**, and **crypto**—areas shaping the future of engineering and payments. Exploring service decomposition, resilience patterns, intelligent automation, and digital asset infrastructure excites me because they sit at the intersection of innovation and trust.
 
-My current deep dive, "[How U.S. Payments Really Work](/how-us-payments-actually-work/)," is a 50+ article survival manual for anyone building platforms that move money. Because understanding how money flows through banks, payment networks, and regulatory frameworks isn't just technical knowledge—it's the foundation for building systems that earn trust.
+Along the way, I’ve also:
+- Built **payments infrastructure** that balances speed with compliance
+- Embedded **observability and automation** across engineering ecosystems
+- Guided teams through **legacy modernization** while keeping production stable
+- Defined **strategic roadmaps** that align technical execution with business goals
+
+This blend of curiosity, delivery, and forward-looking strategy fuels my perspective on building systems that last.
+
+---
+
+### Why I Write
+
+**Build Tales** is where I share stories from the trenches—practical insights that don’t always make it into polished case studies.
+
+My current series, **“How U.S. Payments Really Work,”** is a 50+ article survival manual for anyone building platforms that move money. It breaks down the rails—ACH, cards, wires, wallets, faster payments, and crypto—showing how money truly flows through banks, networks, and regulators.
+
+I also write about:
+- **Engineering leadership** — scaling teams without losing culture
+- **Systems architecture** — balancing legacy with modern design patterns
+- **Payments infrastructure** — building platforms that earn trust through compliance and reliability
+- **Emerging technologies** — exploring how **AI** and **crypto** are reshaping the engineering and financial landscape
+
+Across these themes, the thread is the same: **turning complexity into clarity so engineers can build with confidence.**
+
+---
 
 ## Beyond the Keyboard
+When I’m not untangling systems, you’ll usually find me:
+- Enjoying a strong cup of **black coffee**
+- Walking my **dog**
+- Exploring the world through **photography**
+- Experimenting in the **kitchen** and tending my **garden**
+- Staying curious about **AI, wellness, and mindfulness**
 
-Outside of work, I savor my daily cup of black coffee, walk my dog, and explore the world through photography. I also dive into cooking, tend to my garden, and stay curious with AI trends and physical/mental wellness practices. This intentional balance isn’t just a hobby—it keeps my leadership grounded and energized.
+This balance keeps my leadership grounded and my creativity alive.
 
-## Let's Connect
+---
+
+👉 At **Build Tales**, you’ll find lessons, frameworks, and survival patterns for engineers navigating the real world of **systems, leadership, payments, and the technologies shaping what comes next.**
+
+
+### Let's Connect
 
 Want to chat fintech strategy, engineering leadership, or share dog-walk stories over a virtual brew? I’d love to connect.
 
