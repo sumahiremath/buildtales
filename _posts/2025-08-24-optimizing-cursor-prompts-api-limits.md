@@ -139,7 +139,7 @@ Cursor Pro includes **500 "fast requests"** per month, with additional usage-bas
 
 **Location: Cursor Settings → Usage & Billing**
 
-<img src="/assets/banners/resized/cursorapiratelimit.jpg" alt="Cursor Pro vs Enterprise API Limits" class="wide-image" style="width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); max-width: none; display: block;">
+<img src="/assets/banners/resized/cursorapiratelimit.jpg" alt="Cursor Pro vs Enterprise API Limits" class="article-header-image" style="width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); max-width: none; display: block;">
 
 *Pro users see detailed usage metrics, Enterprise users have centralized management*
 
