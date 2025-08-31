@@ -35,11 +35,9 @@ permalink: /series/leadership
   <!-- Featured Articles (Show First 3) -->
   <div class="featured-articles">
     <h3>Featured Articles:</h3>
-    {% assign vision_posts = site.posts | where_exp: "post", "post.categories contains 'leadership'" | where_exp: "post", "post.section contains 'Strategies & Tactics'" | sort: 'date' %}
-    {% assign management_posts = site.posts | where_exp: "post", "post.categories contains 'leadership'" | where_exp: "post", "post.section contains 'Execute & Assess'" | sort: 'date' %}
-    {% assign all_vision_posts = vision_posts | concat: management_posts | sort: 'date' %}
+    {% assign vision_posts = site.posts | where_exp: "post", "post.section contains 'Vision & Planning'" | sort: 'date' %}
     {% assign count = 0 %}
-    {% for post in all_vision_posts %}
+    {% for post in vision_posts %}
       {% if count < 3 %}
         {% assign count = count | plus: 1 %}
         {% assign current_date = site.time | date: '%s' %}
@@ -64,7 +62,7 @@ permalink: /series/leadership
   <!-- Expandable Section -->
   <div class="expandable-section" id="vision-expanded" style="display: none;">
     <h3>All Vision & Planning Articles:</h3>
-    {% for post in all_vision_posts %}
+    {% for post in vision_posts %}
       {% assign current_date = site.time | date: '%s' %}
       {% assign post_date = post.date | date: '%s' %}
       
@@ -100,7 +98,7 @@ permalink: /series/leadership
   <!-- Featured Articles (Show First 3) -->
   <div class="featured-articles">
     <h3>Featured Articles:</h3>
-    {% assign strategy_posts = site.posts | where_exp: "post", "post.categories contains 'leadership'" | where_exp: "post", "post.section contains 'Strategies & Tactics'" | sort: 'date' %}
+    {% assign strategy_posts = site.posts | where_exp: "post", "post.section contains 'Strategies & Tactics'" | sort: 'date' %}
     {% assign count = 0 %}
     {% for post in strategy_posts %}
       {% if count < 3 %}
@@ -163,7 +161,7 @@ permalink: /series/leadership
   <!-- Featured Articles (Show First 3) -->
   <div class="featured-articles">
     <h3>Featured Articles:</h3>
-    {% assign execute_posts = site.posts | where_exp: "post", "post.categories contains 'leadership'" | where_exp: "post", "post.section contains 'Execute & Assess'" | sort: 'date' %}
+    {% assign execute_posts = site.posts | where_exp: "post", "post.section contains 'Execute & Assess'" | sort: 'date' %}
     {% assign count = 0 %}
     {% for post in execute_posts %}
       {% if count < 3 %}
@@ -226,11 +224,9 @@ permalink: /series/leadership
   <!-- Featured Articles (Show First 3) -->
   <div class="featured-articles">
     <h3>Featured Articles:</h3>
-    {% assign team_posts = site.posts | where_exp: "post", "post.categories contains 'leadership'" | where_exp: "post", "post.section contains 'Strategies & Tactics'" | sort: 'date' %}
-    {% assign management_posts = site.posts | where_exp: "post", "post.categories contains 'leadership'" | where_exp: "post", "post.section contains 'Execute & Assess'" | sort: 'date' %}
-    {% assign all_team_posts = team_posts | concat: management_posts | sort: 'date' %}
+    {% assign team_posts = site.posts | where_exp: "post", "post.section contains 'Team & Culture'" | sort: 'date' %}
     {% assign count = 0 %}
-    {% for post in all_team_posts %}
+    {% for post in team_posts %}
       {% if count < 3 %}
         {% assign count = count | plus: 1 %}
         {% assign current_date = site.time | date: '%s' %}
@@ -255,7 +251,7 @@ permalink: /series/leadership
   <!-- Expandable Section -->
   <div class="expandable-section" id="team-expanded" style="display: none;">
     <h3>All Team & Culture Articles:</h3>
-    {% for post in all_team_posts %}
+    {% for post in team_posts %}
       {% assign current_date = site.time | date: '%s' %}
       {% assign post_date = post.date | date: '%s' %}
       
