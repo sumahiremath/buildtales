@@ -11,10 +11,10 @@ banner_color: "#157878"
 
 # Series information
 series:
-  name: "Systems & Architecture Patterns"
+  name: "Systems Series"
   index_url: "/series/systems"
   part: 3
-  series_type: "systems"
+  series_type: "Architecture & Design"
 
 # Content classification
 system_scale: "startup"

@@ -36,10 +36,10 @@ syndication:
 
 # Series information
 series:
-  name: "System Design Fundamentals"
+  name: "Systems Series"
   index_url: "/series/systems"
   part: 6
-  series_type: "systems"
+  series_type: "releaseit"
   
 # Content classification
 payment_type: "ach_transfers"

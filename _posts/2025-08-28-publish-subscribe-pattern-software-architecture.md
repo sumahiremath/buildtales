@@ -36,10 +36,10 @@ syndication:
 
 # Series information
 series:
-  name: "System Design Fundamentals"
+  name: "Systems Series"
   index_url: "/series/systems"
   part: 5
-  series_type: "systems"
+  series_type: "Architecture & Design"
     
 # Content classification
 content_level: "intermediate"

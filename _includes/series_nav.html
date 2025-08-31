@@ -1,127 +1,218 @@
-<!-- Series Navigation -->
-<div class="series-navigation">
-  <div class="series-nav-container">
-    <div class="series-nav-header">
-      <h3 class="series-nav-title">{{ page.series.name }} Series</h3>
-      <span class="series-nav-part">Part {{ page.series.part }}</span>
+<!-- Simple Series Navigation Bar -->
+{% if page.series %}
+  {% assign current_series = page.series.name %}
+  {% assign current_part = page.series.part %}
+  {% assign current_date = site.time | date: '%s' %}
+  
+  <!-- Find all articles in this series -->
+  {% assign series_posts = site.posts | where_exp: "post", "post.series.name == current_series" %}
+  
+  <!-- Find previous and next articles by part number -->
+  {% assign prev_post = nil %}
+  {% assign next_post = nil %}
+  
+  {% for post in series_posts %}
+    {% if post.series.part == current_part %}
+      {% continue %}
+    {% endif %}
+    
+    {% if post.series.part < current_part %}
+      {% if prev_post == nil or post.series.part > prev_post.series.part %}
+        {% assign prev_post = post %}
+      {% endif %}
+    {% endif %}
+    
+    {% if post.series.part > current_part %}
+      {% if next_post == nil or post.series.part < next_post.series.part %}
+        {% assign next_post = post %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  
+  <!-- Check if next article is published -->
+  {% assign next_published = false %}
+  {% if next_post %}
+    {% assign next_post_date = next_post.date | date: '%s' %}
+    {% if next_post_date <= current_date %}
+      {% assign next_published = true %}
+    {% endif %}
+  {% endif %}
+
+
+
+<div class="series-nav-top">
+  <div class="series-nav-top-container">
+    <div class="series-nav-top-info">
+      <span class="series-nav-top-series">{{ page.series.name }}</span>
+      <span class="series-nav-top-part">Part {{ page.series.part }}</span>
     </div>
     
-    <div class="series-nav-links">
-      {% if page.series.part > 1 %}
-        <a href="{{ page.series.previous_url | default: '#' }}" class="series-nav-link prev-link" {% unless page.series.previous_url %}style="opacity: 0.5; pointer-events: none;"{% endunless %}>
-          ← Previous: {{ page.series.previous_title | default: 'Previous Part' }}
+    <div class="series-nav-top-arrows">
+      {% if prev_post %}
+        <a href="{{ prev_post.url }}" class="series-nav-arrow prev-arrow" title="Previous: {{ prev_post.title }}">
+          <span class="arrow-circle">‹‹</span>
         </a>
+      {% else %}
+        <span class="series-nav-arrow prev-arrow disabled" title="First article in series">
+          <span class="arrow-circle">‹‹</span>
+        </span>
       {% endif %}
       
-      <a href="{{ page.series.index_url | default: '/series' }}" class="series-nav-link index-link">
-        📚 Series Overview
+      <a href="{{ page.series.index_url | default: '/series' }}" class="series-nav-series-link" title="Series Overview">
+        {{ page.series.name }}
       </a>
       
-      {% if page.series.next_url %}
-        <a href="{{ page.series.next_url }}" class="series-nav-link next-link">
-          Next: {{ page.series.next_title | default: 'Next Part' }} →
+      {% if next_post and next_published %}
+        <a href="{{ next_post.url }}" class="series-nav-arrow next-arrow" title="Next: {{ next_post.title }}">
+          <span class="arrow-circle">››</span>
         </a>
+      {% elsif next_post %}
+        <span class="series-nav-arrow next-arrow disabled" title="Next article not yet published">
+          <span class="arrow-circle">››</span>
+        </span>
+      {% else %}
+        <span class="series-nav-arrow next-arrow disabled" title="Last article in series">
+          <span class="arrow-circle">››</span>
+        </span>
       {% endif %}
     </div>
   </div>
 </div>
+{% endif %}
 
 <style>
-.series-navigation {
+.series-nav-top {
   background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin: 2rem 0;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0.75rem 0;
+  margin-bottom: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+  background: rgba(248, 250, 252, 0.95);
 }
 
-.series-nav-container {
-  max-width: 100%;
+.series-nav-top-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.series-nav-header {
+.series-nav-top-info {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
-.series-nav-title {
-  font-size: 1.125rem;
+.series-nav-top-series {
+  font-size: 0.875rem;
   font-weight: 600;
-  color: #1e293b;
-  margin: 0;
+  color: #374151;
 }
 
-.series-nav-part {
+.series-nav-top-part {
   background: #157878;
   color: white;
-  padding: 0.25rem 0.75rem;
+  padding: 0.25rem 0.5rem;
   border-radius: 12px;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 500;
 }
 
-.series-nav-links {
+.series-nav-top-arrows {
   display: flex;
-  gap: 1rem;
   align-items: center;
-  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-.series-nav-link {
+.series-nav-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.series-nav-arrow.disabled {
+  cursor: default;
+  pointer-events: none;
+}
+
+.arrow-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #d1d5db;
+  color: #6b7280;
+  font-size: 1.25rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.series-nav-arrow:hover .arrow-circle {
+  border-color: #157878;
+  color: #157878;
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(21, 120, 120, 0.2);
+}
+
+.series-nav-arrow.disabled .arrow-circle {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+  color: #9ca3af;
+  opacity: 0.6;
+}
+
+.series-nav-arrow.disabled:hover .arrow-circle {
+  transform: none;
+  box-shadow: none;
+}
+
+.series-nav-series-link {
   color: #157878;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
+  font-weight: 600;
   font-size: 0.875rem;
-  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
   transition: all 0.2s ease;
-  background: white;
+  background: rgba(21, 120, 120, 0.1);
+  border: 1px solid transparent;
 }
 
-.series-nav-link:hover {
+.series-nav-series-link:hover {
   background: #157878;
   color: white;
-  border-color: #157878;
   text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(21, 120, 120, 0.2);
 }
 
-.series-nav-link.index-link {
-  background: #157878;
-  color: white;
-  border-color: #157878;
+.series-nav-arrow.prev-arrow .arrow-circle {
+  /* No rotation needed for << */
 }
 
-.series-nav-link.index-link:hover {
-  background: #0f5a5a;
-  border-color: #0f5a5a;
+.series-nav-arrow.next-arrow .arrow-circle {
+  /* No rotation needed for >> */
 }
 
-/* Mobile responsive */
-@media (max-width: 640px) {
-  .series-navigation {
-    padding: 1rem;
-    margin: 1.5rem 0;
+/* Mobile: Hide the top navigation and show a simple inline version */
+@media (max-width: 768px) {
+  .series-nav-top {
+    display: none;
   }
-  
-  .series-nav-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-  
-  .series-nav-links {
-    flex-direction: column;
-    gap: 0.75rem;
-    width: 100%;
-  }
-  
-  .series-nav-link {
-    width: 100%;
-    text-align: center;
-  }
+}
+
+/* Ensure the navigation stays above other content */
+.series-nav-top {
+  z-index: 1000;
 }
 </style>

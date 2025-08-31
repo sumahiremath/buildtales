@@ -36,7 +36,8 @@ syndication:
 
 # Series information
 series:
-  name: "System Design Fundamentals"
+  name: "Systems Series"
+  series_type: "releaseit"
   index_url: "/series/systems"
   part: 7
 ---

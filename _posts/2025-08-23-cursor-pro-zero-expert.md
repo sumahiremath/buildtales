@@ -36,7 +36,7 @@ syndication:
 
 # Series information
 series:
-  name: "Leveraging AI Tools for Engineering Teams"
+  name: "Systems Series"
   index_url: "/series/systems"
   part: 1
   series_type: "ai_tools"
