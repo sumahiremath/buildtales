@@ -38,8 +38,7 @@
     {% endif %}
   {% endif %}
 
-
-
+<!-- Desktop Series Navigation (Hidden on Mobile) -->
 <div class="series-nav-top">
   <div class="series-nav-top-container">
     <div class="series-nav-top-info">
@@ -78,9 +77,48 @@
     </div>
   </div>
 </div>
+
+<!-- Mobile Series Navigation (Hidden on Desktop) -->
+<div class="series-nav-mobile">
+  <div class="series-nav-mobile-header">
+    <span class="series-nav-mobile-series">{{ page.series.name }}</span>
+    <span class="series-nav-mobile-part">Part {{ page.series.part }}</span>
+  </div>
+  
+  <div class="series-nav-mobile-links">
+    {% if prev_post %}
+      <a href="{{ prev_post.url }}" class="series-nav-mobile-link prev-link" title="Previous: {{ prev_post.title }}">
+        <span class="mobile-arrow-circle">‹‹</span>
+      </a>
+    {% else %}
+      <span class="series-nav-mobile-link prev-link disabled" title="First article in series">
+        <span class="mobile-arrow-circle">‹‹</span>
+      </span>
+    {% endif %}
+    
+    <a href="{{ page.series.index_url | default: '/series' }}" class="series-nav-mobile-link series-link">
+      Series Overview
+    </a>
+    
+    {% if next_post and next_published %}
+      <a href="{{ next_post.url }}" class="series-nav-mobile-link next-link" title="Next: {{ next_post.title }}">
+        <span class="mobile-arrow-circle">››</span>
+      </a>
+    {% elsif next_post %}
+      <span class="series-nav-mobile-link next-link disabled" title="Next article not yet published">
+        <span class="mobile-arrow-circle">››</span>
+      </span>
+    {% else %}
+      <span class="series-nav-mobile-link next-link disabled" title="Last article in series">
+        <span class="mobile-arrow-circle">››</span>
+      </span>
+    {% endif %}
+  </div>
+</div>
 {% endif %}
 
 <style>
+/* Desktop Series Navigation Styles */
 .series-nav-top {
   background: #f8fafc;
   border-bottom: 1px solid #e2e8f0;
@@ -196,17 +234,152 @@
   box-shadow: 0 2px 8px rgba(21, 120, 120, 0.2);
 }
 
-.series-nav-arrow.prev-arrow .arrow-circle {
-  /* No rotation needed for << */
+/* Mobile Series Navigation Styles */
+.series-nav-mobile {
+  display: none;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.series-nav-arrow.next-arrow .arrow-circle {
-  /* No rotation needed for >> */
+.series-nav-mobile-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
 }
 
-/* Mobile: Hide the top navigation and show a simple inline version */
+.series-nav-mobile-series {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.series-nav-mobile-part {
+  background: #157878;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.series-nav-mobile-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.series-nav-mobile-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #157878;
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  background: rgba(21, 120, 120, 0.1);
+  border: 1px solid transparent;
+  flex: 1;
+  justify-content: center;
+}
+
+.series-nav-mobile-link.prev-link,
+.series-nav-mobile-link.next-link {
+  flex: 0 0 auto;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.series-nav-mobile-link.series-link {
+  flex: 1;
+}
+
+.series-nav-mobile-link:hover {
+  background: #157878;
+  color: white;
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(21, 120, 120, 0.2);
+}
+
+.series-nav-mobile-link.prev-link:hover,
+.series-nav-mobile-link.next-link:hover {
+  background: transparent;
+  transform: none;
+  box-shadow: none;
+}
+
+.series-nav-mobile-link.disabled {
+  color: #9ca3af;
+  background: #f3f4f6;
+  cursor: default;
+  pointer-events: none;
+}
+
+.series-nav-mobile-link.disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.mobile-arrow-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #d1d5db;
+  color: #6b7280;
+  font-size: 1.25rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.series-nav-mobile-link:hover .mobile-arrow-circle {
+  border-color: #157878;
+  color: #157878;
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(21, 120, 120, 0.2);
+}
+
+.series-nav-mobile-link.disabled .mobile-arrow-circle {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+  color: #9ca3af;
+  opacity: 0.6;
+}
+
+.series-nav-mobile-link.disabled:hover .mobile-arrow-circle {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .series-nav-top {
+    display: none;
+  }
+  
+  .series-nav-mobile {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .series-nav-mobile {
     display: none;
   }
 }
