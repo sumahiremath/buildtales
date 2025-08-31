@@ -17,10 +17,6 @@ permalink: /series/systems
     <span class="nav-icon">🤖</span>
     <span class="nav-text">AI Tools</span>
   </a>
-  <a href="#patterns" class="quick-nav-item">
-    <span class="nav-icon">🔧</span>
-    <span class="nav-text">Patterns</span>
-  </a>
   <a href="#architecture" class="quick-nav-item">
     <span class="nav-icon">🌐</span>
     <span class="nav-text">Architecture</span>
@@ -153,71 +149,6 @@ permalink: /series/systems
   </div>
 </section>
 
-<!-- Advanced Architecture Patterns Section -->
-<section id="patterns" class="content-section">
-  <h2 class="section-title">🔧 Advanced Architecture Patterns</h2>
-  <p class="section-description">Advanced patterns, design principles, and cutting-edge architectural approaches for complex systems.</p>
-  
-  <!-- Featured Articles (Show First 3) -->
-  <div class="featured-articles">
-    <h3>Featured Articles:</h3>
-    {% assign patterns_posts = site.posts | where_exp: "post", "post.categories contains 'systems'" | where_exp: "post", "post.section contains 'System Design Fundamentals'" | sort: 'date' %}
-    {% assign count = 0 %}
-    {% for post in patterns_posts %}
-      {% if count < 3 %}
-        {% assign count = count | plus: 1 %}
-        {% assign current_date = site.time | date: '%s' %}
-        {% assign post_date = post.date | date: '%s' %}
-        
-        {% if post_date > current_date %}
-          <div class="article-item future">
-            <span class="article-title">{{ post.title }}</span>
-            <span class="article-date">({{ post.date | date: "%b %d, %Y" }})</span>
-            <span class="status-badge">Coming Soon</span>
-          </div>
-        {% else %}
-          <div class="article-item published">
-            <a href="{{ post.url }}" class="article-title">{{ post.title }}</a>
-            <span class="article-date">({{ post.date | date: "%b %d, %Y" }})</span>
-          </div>
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
-  
-  <!-- Expandable Section -->
-  <div class="expandable-section" id="patterns-expanded" style="display: none;">
-    <h3>All Architecture Patterns Articles:</h3>
-    {% for post in patterns_posts %}
-      {% assign current_date = site.time | date: '%s' %}
-      {% assign post_date = post.date | date: '%s' %}
-      
-      {% if post_date > current_date %}
-        <div class="article-item future">
-          <span class="article-title">{{ post.title }}</span>
-          <span class="article-date">({{ post.date | date: "%b %d, %Y" }})</span>
-          <span class="status-badge">Coming Soon</span>
-        </div>
-      {% else %}
-        <div class="article-item published">
-          <a href="{{ post.url }}" class="article-title">{{ post.title }}</a>
-          <span class="article-date">({{ post.date | date: "%b %d, %Y" }})</span>
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-  
-  <!-- View All Button -->
-  <div class="view-all-container">
-    <button class="view-all-btn" onclick="toggleSection('patterns-expanded', this)">
-      <span class="btn-text">View All Architecture Patterns Articles</span>
-      <span class="btn-icon">▼</span>
-    </button>
-  </div>
-</section>
-
-
-
 <!-- Architecture & Design Section -->
 <section id="architecture" class="content-section">
   <h2 class="section-title">🌐 Architecture & Design</h2>
@@ -323,9 +254,10 @@ h1 {
 /* Quick Navigation */
 .quick-nav {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
   margin: 1rem 0 1.5rem 0;
+  justify-content: center;
 }
 
 .quick-nav-item {
