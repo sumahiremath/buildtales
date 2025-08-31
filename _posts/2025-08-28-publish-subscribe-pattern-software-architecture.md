@@ -42,16 +42,24 @@ series:
 ---
 
 # Guide to Publish-Subscribe Pattern in Software Architecture
-
 *Master the publish-subscribe pattern for building scalable, loosely-coupled systems*
+
+<div class="personal-branding">
+  <img src="/assets/images/ghibli-avatar.jpg" alt="Suma Manjunath" class="ghibli-avatar">
+  <div class="author-info">
+    <div class="author-name">Author: Suma Manjunath</div>
+    <div class="publish-date">Published on: {{ page.date | date: "%B %d, %Y" }}</div>
+    {% if page.last_modified_at %}
+    <div class="update-date">Updated on: {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
+    {% endif %}
+  </div>
+</div>
 
 <img src="/assets/banners/resized/20250828pubsub-blog.jpg" alt="Publish-Subscribe Pattern in Software Architecture" class="article-header-image">
 
-The publish-subscribe (pub-sub) pattern is one of the most powerful messaging patterns in distributed systems and software architecture. It enables loose coupling between components by introducing an intermediary that handles message distribution, allowing systems to scale and evolve independently.
-
----
-
 ## What is the Publish-Subscribe Pattern?
+
+The publish-subscribe (pub-sub) pattern is one of the most powerful messaging patterns in distributed systems and software architecture. It enables loose coupling between components by introducing an intermediary that handles message distribution, allowing systems to scale and evolve independently.
 
 The publish-subscribe pattern is an architectural messaging pattern where senders of messages (publishers) don't program the messages to be sent directly to specific receivers (subscribers). Instead, published messages are characterized into classes without knowledge of which subscribers, if any, there may be.
 

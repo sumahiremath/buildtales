@@ -42,6 +42,18 @@ series:
 ---
 
 # Why Rails Apps Fail in Production (and What ACH Teaches Us)
+*Using ACH payment processing as a case study to explore system reliability and resilience patterns from Release It!*
+
+<div class="personal-branding">
+  <img src="/assets/images/ghibli-avatar.jpg" alt="Suma Manjunath" class="ghibli-avatar">
+  <div class="author-info">
+    <div class="author-name">Author: Suma Manjunath</div>
+    <div class="publish-date">Published on: {{ page.date | date: "%B %d, %Y" }}</div>
+    {% if page.last_modified_at %}
+    <div class="update-date">Updated on: {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
+    {% endif %}
+  </div>
+</div>  
 
 <img src="/assets/banners/resized/20250830railsfail-blog.jpg" alt="Why Rails Apps Fail in Production (and What ACH Teaches Us)" class="article-header-image">
 

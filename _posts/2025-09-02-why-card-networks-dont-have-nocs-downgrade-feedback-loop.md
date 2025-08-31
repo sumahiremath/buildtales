@@ -33,6 +33,17 @@ content_type: "analysis"
 ---
 
 # Why Card Networks Don't Have NOCs (and How to Build Your Own Downgrade Feedback Loop)
+*The hidden cost of credit card transactions — and how to fix it with data-driven engineering.*
+<div class="personal-branding">
+  <img src="/assets/images/ghibli-avatar.jpg" alt="Suma Manjunath" class="ghibli-avatar">
+  <div class="author-info">
+    <div class="author-name">Author: Suma Manjunath</div>
+    <div class="publish-date">Published on: {{ page.date | date: "%B %d, %Y" }}</div>
+    {% if page.last_modified_at %}
+    <div class="update-date">Updated on: {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
+    {% endif %}
+  </div>
+</div>   
 
 <img src="/assets/banners/resized/20250902cardnocs-blog.jpg" alt="Credit card network downgrade analysis showing interchange categories and fee impacts" class="article-header-image">
 

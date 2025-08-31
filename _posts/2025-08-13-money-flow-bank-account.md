@@ -48,9 +48,10 @@ syndication:
   canonical_source: "BuildTales.dev"
 ---
 # How Money Moves In and Out of Your Bank Account?
+*The ACH network - the $72 trillion backbone of American banking.*
 
 <div class="personal-branding">
-  <img src="/assets/images/ghibli-avatar.png" alt="Suma Manjunath" class="ghibli-avatar">
+  <img src="/assets/images/ghibli-avatar.jpg" alt="Suma Manjunath" class="ghibli-avatar">
   <div class="author-info">
     <div class="author-name">Author: Suma Manjunath</div>
     <div class="publish-date">Published on: {{ page.date | date: "%B %d, %Y" }}</div>

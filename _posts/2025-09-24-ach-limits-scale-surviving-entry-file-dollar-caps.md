@@ -49,10 +49,20 @@ content_type: "how_to"
 ---
 
 # ACH Limits at Scale: Surviving Entry, File, and Dollar Caps
-
 *Why your "perfect" file can still be rejected — and how to design for scale.*
 
-![ACH Limits at Scale](/assets/banners/resized/202500924achlimits-blog.jpg)
+<div class="personal-branding">
+  <img src="/assets/images/ghibli-avatar.jpg" alt="Suma Manjunath" class="ghibli-avatar">
+  <div class="author-info">
+    <div class="author-name">Author: Suma Manjunath</div>
+    <div class="publish-date">Published on: {{ page.date | date: "%B %d, %Y" }}</div>
+    {% if page.last_modified_at %}
+    <div class="update-date">Updated on: {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
+    {% endif %}
+  </div>
+</div>
+
+<img src="/assets/banners/resized/202500924achlimits-blog.jpg" alt="ACH Limits at Scale" class="article-header-image">
 
 ## The Hidden World of ACH Limits
 

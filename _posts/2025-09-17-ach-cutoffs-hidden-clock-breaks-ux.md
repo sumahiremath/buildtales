@@ -49,10 +49,20 @@ content_type: "how_to"
 ---
 
 # ACH Cutoffs: The Hidden Clock That Breaks Your UX
-
 *Why "send money today" doesn't always mean it moves today.*
 
-![ACH Cutoffs](/assets/banners/resized/20250917achcutoffs-blog.jpg)
+<div class="personal-branding">
+  <img src="/assets/images/ghibli-avatar.jpg" alt="Suma Manjunath" class="ghibli-avatar">
+  <div class="author-info">
+    <div class="author-name">Author: Suma Manjunath</div>
+    <div class="publish-date">Published on: {{ page.date | date: "%B %d, %Y" }}</div>
+    {% if page.last_modified_at %}
+    <div class="update-date">Updated on: {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
+    {% endif %}
+  </div>
+</div>
+
+<img src="/assets/banners/resized/20250917achcutoffs-blog.jpg" alt="ACH Cutoffs" class="article-header-image">
 
 ## What Are ACH Cutoffs?
 

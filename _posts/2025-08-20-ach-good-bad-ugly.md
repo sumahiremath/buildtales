@@ -52,12 +52,19 @@ content_type: "analysis"
 
 
 # ACH: The Good, The Bad, and The Ugly
+*Still powering trillions. Still moving like it's stuck in fax machine mode. ACH is the OG payments backbone that's both the foundation and frustration of American finance.*
 
-*Published on: August 20, 2025*
-
+<div class="personal-branding">
+  <img src="/assets/images/ghibli-avatar.jpg" alt="Suma Manjunath" class="ghibli-avatar">
+  <div class="author-info">
+    <div class="author-name">Author: Suma Manjunath</div>
+    <div class="publish-date">Published on: {{ page.date | date: "%B %d, %Y" }}</div>
+    {% if page.last_modified_at %}
+    <div class="update-date">Updated on: {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
+    {% endif %}
+  </div>
+</div>
 <img src="/assets/banners/resized/20250820goodbadugly-blog.jpg" alt="ACH Good Bad Ugly" class="article-header-image">
-
-**Still powering trillions. Still moving like it's stuck in fax machine mode.**
 
 The Automated Clearing House is the OG payments backbone of America. It's how your paycheck shows up. How your bills autopay. How fintechs fake "instant transfers" and businesses settle invoices behind the scenes.
 

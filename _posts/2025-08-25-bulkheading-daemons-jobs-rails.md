@@ -50,8 +50,18 @@ syndication:
 ---
 
 # Bulkheading Daemons and Jobs in Rails: Building Resilient Background Systems
-
 *How to use the bulkhead pattern with Sidekiq daemons and scheduled jobs in Rails to isolate failures and keep critical workloads running*
+
+<div class="personal-branding">
+  <img src="/assets/images/ghibli-avatar.jpg" alt="Suma Manjunath" class="ghibli-avatar">
+  <div class="author-info">
+    <div class="author-name">Author: Suma Manjunath</div>
+    <div class="publish-date">Published on: {{ page.date | date: "%B %d, %Y" }}</div>
+    {% if page.last_modified_at %}
+    <div class="update-date">Updated on: {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
+    {% endif %}
+  </div>
+</div>
 
 <img src="/assets/banners/resized/20250825railsbulkhead-blog.jpg" alt="Bulkheading Daemons" class="article-header-image">
 

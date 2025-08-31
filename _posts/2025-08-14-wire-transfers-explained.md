@@ -51,8 +51,18 @@ syndication:
 
 
 # Wire Transfers Explained: Fast, Final, and Expensive
+*The express lane of money movement - fast, final, and irreversible.*
 
-*Published on: August 14, 2025*
+<div class="personal-branding">
+  <img src="/assets/images/ghibli-avatar.jpg" alt="Suma Manjunath" class="ghibli-avatar">
+  <div class="author-info">
+    <div class="author-name">Author: Suma Manjunath</div>
+    <div class="publish-date">Published on: {{ page.date | date: "%B %d, %Y" }}</div>
+    {% if page.last_modified_at %}
+    <div class="update-date">Updated on: {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
+    {% endif %}
+  </div>
+</div>
 
 <img src="/assets/banners/resized/20250814wiretransfer-blog.jpg" alt="Wire Transfers" class="wide-image" style="width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); max-width: none; display: block;">
 

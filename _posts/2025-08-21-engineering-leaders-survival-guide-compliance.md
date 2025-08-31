@@ -50,8 +50,18 @@ syndication:
 ---
 
 # The Engineering Leader's Survival Guide to Compliance
+*Compliance doesn't have to feel like shackles. When leaders bring compliance into design, translate between legal and engineering, and invest in automation, teams stop treating it as a drag and start seeing it as part of system resilience.*
 
-*Published on: August 21, 2025*
+<div class="personal-branding">
+  <img src="/assets/images/ghibli-avatar.jpg" alt="Suma Manjunath" class="ghibli-avatar">
+  <div class="author-info">
+    <div class="author-name">Author: Suma Manjunath</div>
+    <div class="publish-date">Published on: {{ page.date | date: "%B %d, %Y" }}</div>
+    {% if page.last_modified_at %}
+    <div class="update-date">Updated on: {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
+    {% endif %}
+  </div>
+</div>
 
 <img src="/assets/banners/resized/20250821elcompliancesurvial-blog.jpg" alt="EL Survival" class="article-header-image">
 

@@ -58,10 +58,18 @@ series:
 ---
 
 # ACH Returns: The Compliance Survival Guide Every Fintech Needs
+*Early warning system for payment failures, handle them elegantly*
 
-By: Suma Manjunath
-Published on: {{ page.date | date: "%B %d, %Y" }}
-Updated on: {{ "_posts/2025-08-22-ach-returns-compliance-survival-guide.md" | git_last_modified }}
+<div class="personal-branding">
+  <img src="/assets/images/ghibli-avatar.jpg" alt="Suma Manjunath" class="ghibli-avatar">
+  <div class="author-info">
+    <div class="author-name">Author: Suma Manjunath</div>
+    <div class="publish-date">Published on: {{ page.date | date: "%B %d, %Y" }}</div>
+    {% if page.last_modified_at %}
+    <div class="update-date">Updated on: {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
+    {% endif %}
+  </div>
+</div>
 
 <img src="/assets/banners/resized/20250817nocs-blog.jpg" alt="ACH Returns Compliance" class="article-header-image">
 

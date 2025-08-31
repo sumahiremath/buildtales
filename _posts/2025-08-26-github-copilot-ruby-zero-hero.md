@@ -42,8 +42,18 @@ series:
 ---
 
 # GitHub Copilot: Zero to Hero — Build Your First Ruby Project with AI Pair Programming
-
 *Learn Copilot by building a complete app from scratch — no fluff, just code.*
+
+<div class="personal-branding">
+  <img src="/assets/images/ghibli-avatar.jpg" alt="Suma Manjunath" class="ghibli-avatar">
+  <div class="author-info">
+    <div class="author-name">Author: Suma Manjunath</div>
+    <div class="publish-date">Published on: {{ page.date | date: "%B %d, %Y" }}</div>
+    {% if page.last_modified_at %}
+    <div class="update-date">Updated on: {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
+    {% endif %}
+  </div>
+</div>
 
 <img src="/assets/banners/resized/20250826copilot-ruby-blog.jpg" alt="GitHub Copilot: Zero to Hero" class="article-header-image">
 

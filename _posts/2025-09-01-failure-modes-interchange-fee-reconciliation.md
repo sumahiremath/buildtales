@@ -49,6 +49,18 @@ content_level: "advanced"
 content_type: "case_study"
 ---
 # Why Credit Card Interchange Fees Differ at Authorization vs Settlement (and How to Reconcile Them)
+*Understanding why credit card interchange fees change between authorization and settlement is crucial for payment system design. This article explores the reconciliation challenges and provides practical solutions for tracking fee variances.*
+
+<div class="personal-branding">
+  <img src="/assets/images/ghibli-avatar.jpg" alt="Suma Manjunath" class="ghibli-avatar">
+  <div class="author-info">
+    <div class="author-name">Author: Suma Manjunath</div>
+    <div class="publish-date">Published on: {{ page.date | date: "%B %d, %Y" }}</div>
+    {% if page.last_modified_at %}
+    <div class="update-date">Updated on: {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
+    {% endif %}
+  </div>
+</div>  
 
 <img src="/assets/banners/resized/20250901cardauth-blog.jpg" alt="Why Credit Card Interchange Fees Differ at Authorization vs Settlement (and How to Reconcile Them)" class="article-header-image">
 

@@ -39,8 +39,18 @@ syndication:
 ---
 
 # When a Supposedly Quarter-Long Project Became My Real EM Baptism
+*Sometimes the projects that look simple on paper become the most transformative experiences. Here's how what was supposed to be a straightforward quarter-long initiative became my real introduction to engineering management.*
 
-*Published on: August 18, 2025*
+<div class="personal-branding">
+  <img src="/assets/images/ghibli-avatar.jpg" alt="Suma Manjunath" class="ghibli-avatar">
+  <div class="author-info">
+    <div class="author-name">Author: Suma Manjunath</div>
+    <div class="publish-date">Published on: {{ page.date | date: "%B %d, %Y" }}</div>
+    {% if page.last_modified_at %}
+    <div class="update-date">Updated on: {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
+    {% endif %}
+  </div>
+</div>
 
 <img src="/assets/banners/resized/20250818mousefinish-blog.jpg" alt="Mouse finish line" class="article-header-image"/>
 

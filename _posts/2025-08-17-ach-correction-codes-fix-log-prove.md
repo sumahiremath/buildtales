@@ -52,8 +52,18 @@ content_type: "how_to"
 ---
 
 # ACH Correction Codes: Fix It, Log It, Prove It
+*When it comes to ACH payments, mistakes happen. Instead of rejecting every transaction, the ACH Network gives us Notification of Change (NOC) codes. I learned the hard way: every NOC is not just a suggestion—it's a requirement.*
 
-*Published on: August 17, 2025*
+<div class="personal-branding">
+  <img src="/assets/images/ghibli-avatar.jpg" alt="Suma Manjunath" class="ghibli-avatar">
+  <div class="author-info">
+    <div class="author-name">Author: Suma Manjunath</div>
+    <div class="publish-date">Published on: {{ page.date | date: "%B %d, %Y" }}</div>
+    {% if page.last_modified_at %}
+    <div class="update-date">Updated on: {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
+    {% endif %}
+  </div>
+</div>
 
 <img src="/assets/banners/resized/20250817nocs-blog.jpg" alt="noc fixing" class="wide-image" style="width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); max-width: none; display: block;">
 

@@ -49,16 +49,26 @@ syndication:
 ---
 
 # Credit Cards: Swipe, Smile, Settle Later
+*The rail that powers commerce — with a hidden settlement machine behind the scenes.*
+
+<div class="personal-branding">
+  <img src="/assets/images/ghibli-avatar.jpg" alt="Suma Manjunath" class="ghibli-avatar">
+  <div class="author-info">
+    <div class="author-name">Author: Suma Manjunath</div>
+    <div class="publish-date">Published on: {{ page.date | date: "%B %d, %Y" }}</div>
+    {% if page.last_modified_at %}
+    <div class="update-date">Updated on: {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
+    {% endif %}
+  </div>
+</div>
 
 <img src="/assets/banners/resized/20250827creditcard-blog.jpg" alt="Credit Cards: Swipe, Smile, Settle Later" class="article-header-image">
-
-*The rail that powers commerce — with a hidden settlement machine behind the scenes.*
 
 ## What Are Credit Card Payments?
 
 Credit cards are the default payment rail in the U.S. — accepted everywhere from gas pumps to e-commerce checkouts. At a glance, they feel instantaneous: swipe, dip, or tap, and you're done. Behind that "smile and go" user experience lies a four-party model (issuer, acquirer, network, merchant) and a complex chain of authorizations, clears, and settlements that take days.
 
-Credit cards are not real-time money movement. They are real-time credit approvals coupled with delayed settlement. This tradeoff is why the rail works so well for consumers — and creates both opportunities and headaches for businesses.
+Credit cards are not real-time money movement. They are real-time credit approvals coupled with delayed settlement. This tradeoff is why the rail works so well for consumers — and creates both opportunities and headaches for businesses. Credit cards are the backbone of consumer payments in the U.S. They offer a seamless user experience, global acceptance, and consumer protections that make them the preferred choice for many shoppers. But beneath the surface lies a complex web of fees, delays, and operational challenges that merchants and developers must navigate.
 
 ## The Good: Instant Credit, Global Acceptance
 

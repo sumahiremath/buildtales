@@ -49,10 +49,21 @@ content_type: "analysis"
 ---
 
 # RTP: Real-Time Payments With Real-World Bottlenecks
-
 *The rail that's ready for the future—but held back by the past.*
 
-![rtp](/assets/banners/resized/20250903rtp-blog.jpg)
+<div class="personal-branding">
+  <img src="/assets/images/ghibli-avatar.jpg" alt="Suma Manjunath" class="ghibli-avatar">
+  <div class="author-info">
+    <div class="author-name">Author: Suma Manjunath</div>
+    <div class="publish-date">Published on: {{ page.date | date: "%B %d, %Y" }}</div>
+    {% if page.last_modified_at %}
+    <div class="update-date">Updated on: {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
+    {% endif %}
+  </div>
+</div>
+
+<img src="/assets/banners/resized/20250903rtp-blog.jpg" alt="RTP: Real-Time Payments With Real-World Bottlenecks" class="article-header-image">
+
 ## What Is RTP?
 
 Real-Time Payments (RTP) represents the future of money movement in the United States. Launched in 2017 by The Clearing House (TCH), RTP promised to deliver instant, irrevocable payments with rich messaging capabilities. As we approach 2025, the reality is more nuanced than the marketing suggests.

@@ -49,10 +49,20 @@ content_type: "how_to"
 ---
 
 # ACH Retries: Designing a Safe and Compliant Retry Engine
-
 *Why retries are not just a technical decision — they're a regulatory minefield.*
 
-![ACH retry Banner](/assets/banners/resized/20251001achretry-blog.jpg)
+<div class="personal-branding">
+  <img src="/assets/images/ghibli-avatar.jpg" alt="Suma Manjunath" class="ghibli-avatar">
+  <div class="author-info">
+    <div class="author-name">Author: Suma Manjunath</div>
+    <div class="publish-date">Published on: {{ page.date | date: "%B %d, %Y" }}</div>
+    {% if page.last_modified_at %}
+    <div class="update-date">Updated on: {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
+    {% endif %}
+  </div>
+</div>
+
+<img src="/assets/banners/resized/20251001achretry-blog.jpg" alt="ACH Retries: Designing a Safe, Compliant Retry Engine" class="article-header-image">
 
 ACH retry are one of the trickiest payment system pain points. They sit at the intersection of **Reg E compliance**, **user trust**, and **technical resilience**. If you build retry logic like you build HTTP retries, you'll end up in **NACHA/CFPB hell**.
 

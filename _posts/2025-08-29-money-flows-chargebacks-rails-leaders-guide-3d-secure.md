@@ -49,10 +49,20 @@ content_type: "compliance_guide"
 ---
 
 # Money Flows, Chargebacks, and Rails: A Leader's Guide to 3-D Secure
+*The rail that powers commerce — with a hidden settlement machine behind the scenes.*
+
+<div class="personal-branding">
+  <img src="/assets/images/ghibli-avatar.jpg" alt="Suma Manjunath" class="ghibli-avatar">
+  <div class="author-info">
+    <div class="author-name">Author: Suma Manjunath</div>
+    <div class="publish-date">Published on: {{ page.date | date: "%B %d, %Y" }}</div>
+    {% if page.last_modified_at %}
+    <div class="update-date">Updated on: {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
+    {% endif %}
+  </div>
+</div>
 
 <img src="/assets/banners/resized/20250829creditcard3ds-blog.jpg" alt="Money Flows, Chargebacks, and Rails: A Leader's Guide to 3-D Secure" class="article-header-image">
-
-*The rail that powers commerce — with a hidden settlement machine behind the scenes.*
 
 Payments engineering isn't just plumbing—it's how money, risk, and trust flow through your product. **3-D Secure (3DS)** is often treated like a compliance checkbox. In reality, it's a **profitability lever**: done well, it reduces fraud exposure, shifts liability upstream, and improves your authorization posture over time. Done poorly, it adds friction and hides your risk data in a vendor black box.
 

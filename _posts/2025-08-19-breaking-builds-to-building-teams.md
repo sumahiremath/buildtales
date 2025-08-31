@@ -39,8 +39,18 @@ syndication:
 ---
 
 # Breaking Builds to Building Teams: How QA Sculpted Me Into an Engineering Leader
+*From breaking builds in QA to building teams as an engineering leader — the lessons that carried over: systems thinking, empathy, automation, and risk prioritization.*
 
-Published on: August 19, 2025
+<div class="personal-branding">
+  <img src="/assets/images/ghibli-avatar.jpg" alt="Suma Manjunath" class="ghibli-avatar">
+  <div class="author-info">
+    <div class="author-name">Author: Suma Manjunath</div>
+    <div class="publish-date">Published on: {{ page.date | date: "%B %d, %Y" }}</div>
+    {% if page.last_modified_at %}
+    <div class="update-date">Updated on: {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
+    {% endif %}
+  </div>
+</div>
 
 <img src="/assets/banners/resized/20250819qatolead-blog.jpg" alt="Breaking Builds to Building Teams" class="article-header-image">
 
