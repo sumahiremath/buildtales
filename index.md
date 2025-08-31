@@ -15,10 +15,10 @@ title: Build Tales
       <!-- Hero Text Content (left side on desktop) -->
       <div class="hero-text">
         <h2 class="text-2xl font-semibold mb-6">Leadership lessons from code to culture</h2>
-        <p class="hero-description">From debugging code to guiding teams, these essays share the hard-won lessons of building systems, scaling payments, and leading with clarity.</p>
+        <p class="medium-font-home">From debugging code to guiding teams, these essays share the hard-won lessons of building systems, scaling payments, and leading with clarity.</p>
         <!-- Subscribe Form -->
         <div class="hero-newsletter">
-
+          <p class="small-italic">Written by Suma Manjunath, an engineering leader with 20 years of experience in systems, payments, and scaling teams. Build Tales shares lessons from the trenches of building resilient platforms.</p>
           <form id="newsletter-form-1" action="https://app.kit.com/forms/8443001/subscriptions" method="post" class="hero-form" data-sv-form="8443001" data-uid="8443001" data-format="inline" data-version="5">
             <input type="email" name="email_address" placeholder="Enter your email" required class="hero-input">
             <button type="submit" class="hero-button">Subscribe</button>
@@ -724,6 +724,15 @@ title: Build Tales
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
   }
+}
+
+.small-italic {
+  font-size: 0.75em;
+  font-style: italic;
+}
+
+.medium-font-home {
+  font-size: 0.9em;
 }
 </style>
 
