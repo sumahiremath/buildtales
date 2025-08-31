@@ -51,16 +51,7 @@ content_type: "compliance_guide"
 # Money Flows, Chargebacks, and Rails: A Leader's Guide to 3-D Secure
 *The rail that powers commerce — with a hidden settlement machine behind the scenes.*
 
-<div class="personal-branding">
-  <img src="/assets/images/ghibli-avatar.jpg" alt="Suma Manjunath" class="ghibli-avatar">
-  <div class="author-info">
-    <div class="author-name">Author: Suma Manjunath</div>
-    <div class="publish-date">Published on: {{ page.date | date: "%B %d, %Y" }}</div>
-    {% if page.last_modified_at %}
-    <div class="update-date">Updated on: {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
-    {% endif %}
-  </div>
-</div>
+{% include personal-branding.html %}
 
 <img src="/assets/banners/resized/20250829creditcard3ds-blog.jpg" alt="Money Flows, Chargebacks, and Rails: A Leader's Guide to 3-D Secure" class="article-header-image">
 

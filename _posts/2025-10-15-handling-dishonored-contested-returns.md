@@ -11,6 +11,8 @@ banner_color: "#dc2626"
 ---
 
 # Handling Dishonored and Contested Returns
+*When returns come back dishonored or customers contest them, your payment system needs to handle the chaos gracefully.*
+{% include personal-branding.html %}
 
 *Coming soon...*
 

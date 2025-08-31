@@ -40,20 +40,17 @@ series:
   name: "Series Name"
   index_url: "/series/[series-slug]"
   part: [X]
+  series_type: "[series-type]"
+
+# Content classification
+content_level: "beginner|intermediate|advanced"
+content_type: "how_to|personal_experience|compliance_guide|case_study
 ---
 
 # Your Article Title Here
+*A compelling excerpt that describes what the article covers and why readers should care.*
 
-<div class="personal-branding">
-  <img src="/assets/images/ghibli-avatar.png" alt="Suma Manjunath" class="ghibli-avatar">
-  <div class="author-info">
-    <div class="author-name">Author: Suma Manjunath</div>
-    <div class="publish-date">Published on: {{ page.date | date: "%B %d, %Y" }}</div>
-    {% if page.last_modified_at %}
-    <div class="update-date">Updated on: {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
-    {% endif %}
-  </div>
-</div>
+{% include personal-branding.html %}
 
 <img src="/assets/banners/resized/[filename]-blog.jpg" alt="Article Banner" class="article-header-image">
 
@@ -69,8 +66,10 @@ Your article content starts here...
 
 ## Conclusion
 
+## Acronyms & Terms
+
+## References
+
 Wrap up your article with actionable takeaways.
 
 ---
-
-**Next in the series:** [Link to next article or series index]

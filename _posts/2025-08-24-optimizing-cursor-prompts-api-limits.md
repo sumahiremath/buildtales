@@ -49,16 +49,7 @@ content_type: "how_to"
 # Optimizing Your Cursor Prompts: Stay Under API Limits While Maximizing AI Assistance
 *A practical guide to getting more done with fewer tokens*
 
-<div class="personal-branding">
-  <img src="/assets/images/ghibli-avatar.jpg" alt="Suma Manjunath" class="ghibli-avatar">
-  <div class="author-info">
-    <div class="author-name">Author: Suma Manjunath</div>
-    <div class="publish-date">Published on: {{ page.date | date: "%B %d, %Y" }}</div>
-    {% if page.last_modified_at %}
-    <div class="update-date">Updated on: {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
-    {% endif %}
-  </div>
-</div>
+{% include personal-branding.html %}
 
 <img src="/assets/banners/resized/20250824cursorapilimit-blog.jpg "title image" alt="Optimizing Your Cursor Prompts" class="article-header-image">
 

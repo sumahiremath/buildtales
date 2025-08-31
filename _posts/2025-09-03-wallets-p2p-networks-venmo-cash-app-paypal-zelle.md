@@ -51,16 +51,7 @@ syndication:
 # Wallets & P2P Networks: Venmo, Cash App, PayPal, Zelle
 *Deep dive into wallet systems and P2P networks - understanding the gap between instant user experience and actual settlement reality.*
 
-<div class="personal-branding">
-  <img src="/assets/images/ghibli-avatar.jpg" alt="Suma Manjunath" class="ghibli-avatar">
-  <div class="author-info">
-    <div class="author-name">Author: Suma Manjunath</div>
-    <div class="publish-date">Published on: {{ page.date | date: "%B %d, %Y" }}</div>
-    {% if page.last_modified_at %}
-    <div class="update-date">Updated on: {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
-    {% endif %}
-  </div>
-</div>
+{% include personal-branding.html %}
 
 <img src="/assets/banners/resized/2025-09-03-wallets-blog.jpg" alt="Wallets & P2P Networks: Venmo, Cash App, PayPal, Zelle" class="article-header-image">
 

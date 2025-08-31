@@ -54,31 +54,7 @@ content_type: "how_to"
 # NACHA File Demystified: Cracking the 94-Character Code
 *The 94-character lines that power $72 trillion in ACH transactions annually.*
 
-<div class="personal-branding">
-  <img src="/assets/images/ghibli-avatar.jpg" alt="Suma Manjunath" class="ghibli-avatar">
-  <div class="author-info">
-    <div class="author-name">Author: Suma Manjunath</div>
-    <div class="publish-date">
-      Published on: {{ page.date | date: "%B %d, %Y" }}
-      <div class="social-icons">
-        <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url }}&via=buildtales" 
-           target="_blank" rel="noopener" class="social-icon twitter" title="Share on Twitter">X</a>
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url }}" 
-           target="_blank" rel="noopener" class="social-icon linkedin" title="Share on LinkedIn">in</a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" 
-           target="_blank" rel="noopener" class="social-icon facebook" title="Share on Facebook">f</a>
-        <button onclick="navigator.clipboard.writeText('{{ page.url | absolute_url }}')" 
-                class="social-icon copy-link" title="Copy link">🔗</button>
-        <a href="https://instagram.com/buildtales" target="_blank" rel="noopener" class="social-icon instagram" title="Follow on Instagram">ig</a>
-        <a href="https://medium.com/@buildtales" target="_blank" rel="noopener" class="social-icon medium" title="Follow on Medium">m</a>
-        <a href="https://substack.com/@buildtales" target="_blank" rel="noopener" class="social-icon substack" title="Subscribe on Substack">s</a>
-      </div>
-    </div>
-    {% if page.last_modified_at %}
-    <div class="update-date">Updated on: {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
-    {% endif %}
-  </div>
-</div>
+{% include personal-branding.html %}
 
 <img src="/assets/banners/resized/20250815nachafile-blog.jpg" alt="NACHA Demystified Banner" class="article-header-image" style="width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); max-width: none; display: block;">
 
