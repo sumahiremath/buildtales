@@ -46,7 +46,7 @@ Across these themes, the thread is the same: **turning complexity into clarity s
 
 ---
 
-## Beyond the Keyboard
+### Beyond the Keyboard
 When I’m not untangling systems, you’ll usually find me:
 - Enjoying a strong cup of **black coffee**
 - Walking my **dog**
