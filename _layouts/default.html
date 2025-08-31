@@ -34,14 +34,14 @@
     {% if site.head_custom %}{% include head-custom.html %}{% endif %}
     
     <!-- Google Analytics 4 -->
-    {% if site.google_analytics %}
+    {% if jekyll.environment == "production" and site.google_analytics %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async defer src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', '{{ site.google_analytics }}');
+      gtag('config', '{{ site.google_analytics }}', { 'transport_type': 'beacon' });
     </script>
     {% endif %}
     
@@ -767,49 +767,6 @@
           });
         })();
       </script>
-      
-      <!-- Footer Copy Button Script -->
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          var footerCopyBtn = document.getElementById('footer-copy-link');
-          if (footerCopyBtn) {
-            footerCopyBtn.addEventListener('click', function() {
-              var url = "{{ page.url | absolute_url }}";
-              // Clipboard API fallback
-              if (navigator.clipboard) {
-                navigator.clipboard.writeText(url).then(function() {
-                  showFooterCopied(footerCopyBtn);
-                }, function() {
-                  fallbackCopyTextToClipboard(url);
-                  showFooterCopied(footerCopyBtn);
-                });
-              } else {
-                fallbackCopyTextToClipboard(url);
-                showFooterCopied(footerCopyBtn);
-              }
-            });
-          }
-          
-          function fallbackCopyTextToClipboard(text) {
-            var textarea = document.createElement("textarea");
-            textarea.value = text;
-            document.body.appendChild(textarea);
-            textarea.focus();
-            textarea.select();
-            try {
-              document.execCommand('copy');
-            } catch (err) {}
-            document.body.removeChild(textarea);
-          }
-          
-          function showFooterCopied(btn) {
-            btn.classList.add('copied');
-            setTimeout(function() {
-              btn.classList.remove('copied');
-            }, 1200);
-          }
-        });
-      </script>
     </header>
 
     <main id="content" class="main-content" role="main">
@@ -855,12 +812,11 @@
                     </a>
 
                     <!-- Copy Link -->
-                    <button id="footer-copy-link"
-                            class="footer-icon-link" title="Copy link" type="button">
+                    <button onclick="navigator.clipboard.writeText('{{ page.url | absolute_url }}')"
+                            class="footer-icon-link" title="Copy link">
                         <svg class="footer-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M3.9 12a5 5 0 0 1 5-5h3v2h-3a3 3 0 1 0 0 6h3v2h-3a5 5 0 0 1-5-5zm7.1 1h2v-2h-2v2zm5-6h-3v2h3a3 3 0 1 1 0 6h-3v2h3a5 5 0 1 0 0-10z"/>
                         </svg>
-                        <span class="footer-copied-tooltip">Copied!</span>
                     </button>
 
                 </div>
@@ -1045,30 +1001,11 @@
     }
     
     .footer-icon-link:hover {
-      background: #157878;
-      color: white;
-      transform: translateY(-1px);
-      box-shadow: 0 2px 8px rgba(21, 120, 120, 0.2);
-    }
-
-    /* Footer Copy Button Tooltip */
-    .footer-copied-tooltip {
-      display: none;
-      position: absolute;
-      top: -22px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #222;
-      color: #fff;
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-size: 0.8em;
-      z-index: 10;
-      white-space: nowrap;
-    }
-
-    .footer-icon-link.copied .footer-copied-tooltip {
-      display: block;
+      background: #e2e8f0;
+      color: #157878;
+      border-color: #157878;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(21, 120, 120, 0.15);
     }
     
     .footer-icon {
