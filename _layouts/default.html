@@ -98,7 +98,7 @@
         <h1 class="project-name" style="margin: 0;"><a href="/" style="color: white; text-decoration: none;">{{ site.title }}</a></h1>
       </div>
       <h2 class="project-tagline">{{ site.description }}</h2>
-      <nav style="margin-top: 1rem; display: flex; justify-content: center; align-items: center;">
+      <nav style="margin-top: 0.75rem; display: flex; justify-content: center; align-items: center;">
         <div style="display: flex; align-items: baseline; justify-content: center; gap: 0.75rem;">
           <a href="/" class="btn">Home</a>
           <span class="nav-separator">|</span>
@@ -113,7 +113,7 @@
       </nav>
       
       <!-- Search Bar -->
-      <div style="margin-top: 1rem; display: flex; justify-content: center;">
+      <div style="margin-top: 0.75rem; display: flex; justify-content: center;">
         <div style="position: relative;">
           <input type="text" id="header-search" placeholder="Search articles..." 
                  style="border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; width: 300px; backdrop-filter: blur(10px); padding: 8px 16px; border-radius: 4px; font-size: 16px;" 
@@ -123,13 +123,32 @@
       </div>
       
       <!-- Series Quick Navigation -->
-      <div style="margin-top: 1rem; text-align: center; color: rgba(255,255,255,0.9); font-size: 0.9rem;">
+      <div style="margin-top: 0.75rem; text-align: center; color: rgba(255,255,255,0.9); font-size: 0.9rem;">
         Read: <a href="/series/payments" style="color: white; text-decoration: none; font-weight: 500;">Payment Series</a> | 
         <a href="/series/leadership" style="color: white; text-decoration: none; font-weight: 500;">Leadership Series</a> | 
         <a href="/series/systems" style="color: white; text-decoration: none; font-weight: 500;">Systems Series</a>
       </div>
       
       <style>
+        /* Header spacing optimization */
+        .page-header {
+          padding-bottom: 1rem;
+          margin-top: 0;
+          padding-top: 0;
+        }
+        
+        /* Remove default theme spacing */
+        .page-header h1,
+        .page-header h2 {
+          margin-top: 0;
+        }
+        
+        /* Ensure logo section starts at top */
+        .page-header > div:first-child {
+          margin-top: 0;
+          padding-top: 0;
+        }
+        
         /* Clean navigation link styling */
         nav .btn {
           background: none !important;
