@@ -39,6 +39,11 @@ series:
   name: "Leveraging AI Tools for Engineering Teams"
   index_url: "/series/systems"
   part: 2
+  series_type: "ai-tools"
+  
+# Content classification
+content_level: "intermediate"
+content_type: "how_to"
 ---
 
 # Optimizing Your Cursor Prompts: Stay Under API Limits While Maximizing AI Assistance

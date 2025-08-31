@@ -38,7 +38,7 @@ syndication:
 series:
   name: "System Design Fundamentals"
   index_url: "/series/systems"
-  part: 4
+  part: 7
 ---
 
 # Stability Patterns Every Rails Fintech Engineer Should Know

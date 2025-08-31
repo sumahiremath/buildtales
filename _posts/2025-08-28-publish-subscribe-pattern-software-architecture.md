@@ -38,7 +38,12 @@ syndication:
 series:
   name: "System Design Fundamentals"
   index_url: "/series/systems"
-  part: 2
+  part: 5
+  series_type: "systems"
+    
+# Content classification
+content_level: "intermediate"
+content_type: "tutorial"
 ---
 
 # Guide to Publish-Subscribe Pattern in Software Architecture

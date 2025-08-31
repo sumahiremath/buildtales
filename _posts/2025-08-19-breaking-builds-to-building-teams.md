@@ -10,6 +10,18 @@ banner_image: "/assets/banners/resized/20250819qatolead-blog.jpg"
 banner_image_series: "/assets/banners/resized/20250819qatolead-series.jpg"
 banner_color: "#157878"
 
+# Series information
+series:
+  name: "Execute & Assess"
+  index_url: "/series/execute-assess"
+  part: 2
+  series_type: "leadership"
+  
+# Content classification
+content_level: "beginner"
+content_type: "personal_experience"
+
+
 # SEO and Canonical Tags
 canonical_url: "https://buildtales.dev/engineering/leadership/2025/08/19/breaking-builds-to-building-teams.html"
 author:

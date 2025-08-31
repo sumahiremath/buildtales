@@ -13,7 +13,7 @@ banner_color: "#157878"
 series:
   name: "Systems & Architecture Patterns"
   index_url: "/series/systems"
-  part: 1
+  part: 3
   series_type: "systems"
 
 # Content classification

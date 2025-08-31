@@ -40,7 +40,7 @@ syndication:
 series:
   name: "How U.S. Payments Really Work"
   index_url: "/series/payments"
-  part: 3
+  part: 6
   series_type: "payments"
 
 # Content classification

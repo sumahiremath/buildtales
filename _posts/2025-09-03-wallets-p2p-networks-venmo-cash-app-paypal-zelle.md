@@ -13,7 +13,7 @@ banner_color: "#157878"
 series:
   name: "How U.S. Payments Really Work"
   index_url: "/series/payments"
-  part: 10
+  part: 12
   series_type: "payments"
 
 # Content classification

@@ -13,7 +13,7 @@ banner_color: "#157878"
 series:
   name: "Engineering Leadership Survival Guide"
   index_url: "/series/leadership"
-  part: 1
+  part: 3
   series_type: "leadership"
 
 # Content classification

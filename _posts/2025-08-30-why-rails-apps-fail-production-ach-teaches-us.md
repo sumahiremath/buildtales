@@ -38,7 +38,14 @@ syndication:
 series:
   name: "System Design Fundamentals"
   index_url: "/series/systems"
-  part: 3
+  part: 6
+  series_type: "systems"
+  
+# Content classification
+payment_type: "ach_transfers"
+payment_network: ["federal_reserve", "epn"]
+content_level: "intermediate"
+content_type: "how_to"
 ---
 
 # Why Rails Apps Fail in Production (and What ACH Teaches Us)

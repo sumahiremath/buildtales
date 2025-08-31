@@ -38,7 +38,12 @@ syndication:
 series:
   name: "Leveraging AI Tools for Engineering Teams"
   index_url: "/series/systems"
-  part: 3
+  part: 4
+  series_type: "ai-tools"
+
+# Content classification
+content_level: "beginner"
+content_type: "how_to"
 ---
 
 # GitHub Copilot: Zero to Hero — Build Your First Ruby Project with AI Pair Programming

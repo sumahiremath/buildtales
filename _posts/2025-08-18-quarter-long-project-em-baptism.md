@@ -10,6 +10,17 @@ banner_image: "/assets/banners/resized/20250818mousefinish-blog.jpg"
 banner_image_series: "/assets/banners/resized/20250818mousefinish-series.jpg"
 banner_color: "#157878"
 
+# Series information
+series:
+  name: "Strategies & Tactics"
+  index_url: "/series/strategies"
+  part: 1
+  series_type: "leadership"
+
+# Content classification
+content_level: "intermediate"
+content_type: "personal_experience"
+
 # SEO and Canonical Tags
 canonical_url: "https://buildtales.dev/engineering/leadership/2025/08/18/quarter-long-project-em-baptism.html"
 author:

@@ -39,6 +39,11 @@ series:
   name: "Leveraging AI Tools for Engineering Teams"
   index_url: "/series/systems"
   part: 1
+  series_type: "ai_tools"
+
+# Content classification
+content_level: "beginner_to_advanced"
+content_type: "how-to-guide"
 ---
 
 # Cursor Pro: Zero to Expert - The Complete Developer's Journey
