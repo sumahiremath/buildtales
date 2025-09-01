@@ -48,23 +48,48 @@ payment_network: ["visa", "mastercard", "amex", "discover"]
 content_level: "advanced"
 content_type: "case_study"
 ---
+
 # Why Credit Card Interchange Fees Differ at Authorization vs Settlement (and How to Reconcile Them)
+
 *Understanding why credit card interchange fees change between authorization and settlement is crucial for payment system design. This article explores the reconciliation challenges and provides practical solutions for tracking fee variances.*
 
 {% include personal-branding.html %}
 
 <img src="/assets/banners/resized/20250901cardauth-blog.jpg" alt="Why Credit Card Interchange Fees Differ at Authorization vs Settlement (and How to Reconcile Them)" class="article-header-image">
 
-Interchange at auth is just an estimate. Final fees are set at settlement, where missing data, timing, and classification issues can "downgrade" a transaction. If you treat auth as final, you'll end up with reconciliation noise, misstated margins, and ops pain.
+**For:** Payment engineers, finance systems architects  
+**Reading Time:** 12 minutes  
+**Prerequisites:** Familiarity with card processing flows, Rails background job frameworks  
+**Why now:** Interchange downgrades are rising with new scheme rules—misreporting margins creates material financial risk.  
 
-> **Note:** This post focuses on U.S. credit card interchange (Visa, Mastercard, AmEx). Other regions/methods differ.
+> **TL;DR:**  
+> - Authorization interchange is **only a provisional estimate**, not final economics.  
+> - Settlement introduces **data, timing, and reclassification adjustments** that change fees.  
+> - Treating auth as final creates reconciliation noise and margin misreporting.  
+> - Build variance tracking pipelines to **close the loop between auth and settlement**.  
+
+⚠️ **Disclaimer**: All scenarios, accounts, names, and data used in examples are not real. They are realistic scenarios provided only for educational and illustrative purposes.
+
+---
+
+## Problem Definition
+
+**The challenge:** Many payment systems treat authorization fees as final, leading to reconciliation mismatches when settlement occurs.  
+
+**Who faces this:** Merchants, PSPs, and finance teams handling high transaction volumes.  
+
+**Cost of inaction:** Reconciliation breaks, finance reporting errors, margin leakage of tens of thousands monthly.  
+
+**Why current approaches fail:** Most ledger systems don’t model fee variances explicitly, hiding downgrade causes from engineering.  
+
+---
 
 ## The Misconception
 
-Many systems assume authorization = final economics. In reality:
+Many assume **authorization = final economics**. In reality:  
 
-- **Auth (T0):** Approval + provisional fee category.
-- **Settlement (T+1…T+3):** Networks calculate final fee with all data.
+- **Auth (T0):** Approval + provisional fee category.  
+- **Settlement (T+1…T+3):** Networks compute **final fee** with complete data.  
 
 ```mermaid
 sequenceDiagram
@@ -85,32 +110,29 @@ sequenceDiagram
     PSP-->>Merchant: Payouts + fees
     end
 ```
+![Sequence diagram of authorization vs settlement fee flow](fallbacks/auth-vs-settlement.png)
+
+---
 
 ## Why Auth ≠ Settlement
 
-Common reasons the final interchange differs from your auth-time estimate:
+Final interchange differs due to:  
 
-* **Data Downgrades**: Missing or incorrect fields (AVS, CVV match, postal code, tax indicators, Level II/III data) force a higher fee bracket.
-* **Timing Downgrades**: Late clearing (e.g., >24 hours after auth) or partial captures.
-* **Reclassification**: MCC, recurring flag, small-ticket vs. standard, card-not-present vs. present, cross-border.
-* **Amount/Metadata Mismatch**: Tipping, amended amounts, currency conversions.
-
-* **Rule Changes**: Scheme updates or regional programs applied at clearing.
-
+- **Data Downgrades** – missing AVS, CVV, postal code, Level II/III data.  
+- **Timing Downgrades** – late clearing (>24h), partial captures.  
+- **Reclassification** – MCC changes, recurring flag mis-set, cross-border detection.  
+- **Amount Mismatch** – tips, amended amounts, FX conversions.  
+- **Network Rule Updates** – scheme changes applied at clearing.  
 
 ```mermaid
 graph TD
   A[Auth Estimate] -->|Mismatch Sources| B[Final Fee at Settlement]
   B --> D[Variance]
 
-  A1["Data Downgrade
-(missing AVS, CVV, Level II/III)"]
-  A2["Timing Downgrade
-(late clearing >24h)"]
-  A3["Reclassification
-(MCC, recurring, small-ticket)"]
-  A4["Amount/Metadata Mismatch
-(tips, amended amounts)"]
+  A1["Data Downgrade (missing AVS, CVV, Level II/III)"]
+  A2["Timing Downgrade (late clearing >24h)"]
+  A3["Reclassification (MCC, recurring, small-ticket)"]
+  A4["Amount/Metadata Mismatch (tips, amended amounts)"]
   A5["Network Rule Updates"]
 
   A1 --> B
@@ -119,6 +141,9 @@ graph TD
   A4 --> B
   A5 --> B
 ```
+![Diagram of downgrade sources leading to variance](fallbacks/downgrade-sources.png)
+
+---
 
 ## Failure Mode in Reconciliation
 
@@ -128,26 +153,34 @@ flowchart LR
   Settlement[Final Fee] --> Ledger
   Ledger -->|Mismatch| Variance[Variance Account]
 ```
+![Flowchart of fee mismatch leading to variance account](fallbacks/reconciliation-failure.png)
 
-**Impact:**
-- Finance books don't tie.
-- Ops spends hours chasing deltas.
-- Margins misreported by product/region.
+**Impact:**  
+- Finance books don’t tie.  
+- Ops spends hours chasing deltas.  
+- Margins misreported.  
+
+---
 
 ## Real-World Impact
 
-On a $100 txn:
-- Estimated = $1.75
-- Final = $2.00 (due to MISSING_AVS)
-- Variance = +$0.25 (Unfavorable)
+On a $100 txn:  
+- Estimated = $1.75  
+- Final = $2.00 (due to MISSING_AVS)  
+- Variance = +$0.25 (unfavorable)  
 
-Across 100,000 transactions/month, this becomes $25,000 in unexpected cost. For thin-margin businesses, that's material.
+Across **100,000 transactions/month**, this becomes **$25,000 in hidden costs**.  
 
-## Rails Implementation
+---
 
-**Code context:** These examples assume a Rails monolith handling payments through a PSP (Payment Service Provider). Interchange estimation/finalization lives in a domain service layer, while settlement ingestion runs in background jobs (e.g., Sidekiq). Variance data is persisted to support both finance reporting and engineering feedback loops.
+## Solution Implementation (Rails Example)
 
-### Data Model (simplified)
+We’ll build a pipeline to:  
+1. Estimate fees at auth.  
+2. Ingest settlement files.  
+3. Record variances + downgrade reasons.  
+
+### Data Model
 
 ```ruby
 create_table :payments do |t|
@@ -211,6 +244,8 @@ module Interchange
 end
 ```
 
+---
+
 ## Ops Playbook
 
 ```mermaid
@@ -222,56 +257,51 @@ flowchart TD
   Variance --> Reporting[Ops/Finance Dashboards]
   Reporting --> Fixes[Engineering Fixes]
 ```
+![Ops playbook diagram for reconciliation loop](fallbacks/ops-playbook.png)
 
-- At capture: Book provisional accrual.
-- At settlement: Adjust with final fee.
-- Track reasons: AVS missing, late clearing, etc.
-- Alert: Spikes in unfavorable variance.
-- Feedback loop: Downgrades → engineering fixes.
+💡 **Tip:** Map downgrade reasons to specific engineering fixes:  
+- MISSING_AVS → enforce ZIP at checkout.  
+- LATE_CLEARING → run capture jobs within 24h.  
+- MISSING_CVV → reject requests missing CVV.  
+- RECURRING MISFLAGGED → fix subscription flags.  
 
-Common downgrade reasons map to specific engineering solutions:
+---
 
-## Engineering Fixes for Downgrades
+## Validation & Monitoring
 
-- **MISSING_AVS** → enforce ZIP/address collection at checkout.
-- **LATE_CLEARING** → ensure capture jobs run within 24h; add monitoring for delays.
-- **MISSING_CVV** → require CVV field; reject requests missing it.
-- **RECURRING MISFLAGGED** → fix subscription billing flags in PSP integration.
+- **Validation:** Compare provisional accrual vs. final fee in variance table.  
+- **Monitoring:** Alert on unfavorable variance > X bps.  
+- **Failure Modes:** Missing downgrade reasons → finance blind spots.  
 
-## Example
+---
 
-On $100 txn:
-- Estimated at auth: 1.65% + $0.10 = $1.75
-- Final at settlement (downgraded): 1.90% + $0.10 = $2.00
-- Variance: +$0.25 (Unfavorable)
+## Takeaways
 
-## Takeaway
+- Authorization interchange is **only a hint**.  
+- Settlement determines **final economics**.  
+- Build systems that **estimate → finalize → explain**.  
+- Variance tracking converts noise into **actionable engineering fixes**.  
 
-Interchange at auth is only a hint. Build systems to:
+---
 
-```mermaid
-flowchart LR
-  Estimate --> Finalize --> Explain
-```
+## Acronym
 
-That loop is what turns messy variance into actionable cost reduction.
+- **AVS:** Address Verification Service  
+- **CNP/CP:** Card Not Present / Card Present  
+- **MCC:** Merchant Category Code  
+- **PSP:** Payment Service Provider  
+- **Issuer:** Bank issuing the card  
+- **Acquirer:** Bank acquiring merchant transactions  
+- **Downgrade:** Movement into higher-cost interchange bucket  
+- **BPS:** Basis points (100 bps = 1%)  
 
-## Glossary
-
-- **AVS:** Address Verification Service.
-- **CNP/CP:** Card Not Present / Card Present.
-- **MCC:** Merchant Category Code (e.g., 5732 = electronics stores).
-- **PSP:** Payment Service Provider (processor/gateway).
-- **Issuer:** Bank that issued the card.
-- **Acquirer:** Bank that processes payments for the merchant.
-- **Downgrade:** When a transaction falls into a higher-cost interchange bucket.
-- **BPS:** Basis points. 100 bps = 1.00%.
+---
 
 ## References
 
-- [Visa USA Interchange Reimbursement Fees (PDF)](https://usa.visa.com/support/small-business/merchant-resources/rates.html)
-- [Mastercard US Interchange Rates (PDF)](https://www.mastercard.us/en-us/business/issuers/rates.html)
-- [AmEx Merchant Pricing Overview](https://network.americanexpress.com/globalnetwork/business/en_US/merchant-pricing)
-- [Nacha Rules (ACH comparison)](https://www.nacha.org/rules)
+1. Visa Interchange Fees - [Visa USA Interchange Reimbursement Fees, 2024](https://usa.visa.com/dam/VCOM/download/merchants/visa-usa-interchange-reimbursement-fees.pdf)  
+2. Mastercard Interchange Rates - [Mastercard US Interchange Rates, 2024](https://www.mastercard.us/content/dam/public/mastercardcom/na/us/en/documents/merchant-rates-2024-2025.pdf)  
+3. AmEx Merchant Pricing - [American Express Merchant Pricing Overview, 2024](https://www.americanexpress.com/ca/en/merchant/card-acceptance-pricing.html?linknav=merchant-nsnu-support-cardpricing#:~:text=Merchants%20pay%20a%20single%20Discount,visiting%20international%20Cardmember%2C%20among%20others.)  
+4. NACHA ACH Rules - [NACHA ACH Operations Rules & Advisories, 2024](https://www.nacha.org/products/2024-nacha-operating-rules-guidelines)  
 
-
+---
