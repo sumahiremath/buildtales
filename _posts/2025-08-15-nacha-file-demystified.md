@@ -58,7 +58,7 @@ content_type: "how_to"
 
 **Audience:** Fintech engineers, payroll system builders, backend developers working with ACH  
 **Reading Time:** 12 minutes  
-**Prerequisites:** Basic understanding of bank accounts and ACH money flow  
+**Prerequisites:** Basic understanding of bank accounts and [ACH money flow]({% post_url 2025-08-13-money-flow-bank-account %})  
 **Why Now:** $72 trillion moves through ACH each year. If you build fintech in the U.S., you *will* touch NACHA files. Getting it wrong means payroll failures, rejected batches, and angry CFOs.  
 
 > **TL;DR:**  
@@ -102,14 +102,14 @@ Here’s a **Mermaid diagram** of the structure:
 
 ```mermaid
 flowchart TD
-    A[File Header (1)] --> B[Batch Header (5)]
-    B --> C1[Entry Detail (6)]
-    B --> C2[Entry Detail (6)]
-    C1 --> D[Addenda (7, optional)]
+    A["File Header (1)"] --> B["Batch Header (5)"]
+    B --> C1["Entry Detail (6)"]
+    B --> C2["Entry Detail (6)"]
+    C1 --> D["Addenda (7, optional)"]
     C2 --> D
-    B --> E[Batch Control (8)]
-    A --> F[File Control (9)]
-    F --> G[Filler Lines (all 9s)]
+    B --> E["Batch Control (8)"]
+    A --> F["File Control (9)"]
+    F --> G["Filler Lines (all 9s)"]
 ```
 
 ![NACHA structure diagram fallback](/assets/diagrams/nacha-structure.png)  
@@ -269,7 +269,7 @@ puts builder.generate_file
 
 ## References  
 
-1. **NACHA**. "ACH Operating Rules & Guidelines." *NACHA*, 2024. [nacha.org](https://www.nacha.org)  
-2. **Federal Reserve**. "FedACH Services." *Federal Reserve Financial Services*, 2024.  
+1. **NACHA**. "ACH Operating Rules & Guidelines." *NACHA*, 2024 - [nacha.org](https://www.nacha.org)  
+2. **Federal Reserve**. ["FedACH Services."](https://www.frbservices.org/financial-services/ach/service-setup)
 
 ---

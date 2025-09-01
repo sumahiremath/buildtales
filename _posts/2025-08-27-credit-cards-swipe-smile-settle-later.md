@@ -53,7 +53,7 @@ syndication:
 
 {% include personal-branding.html %}
 
-<img src="/assets/banners/resized/20250827creditcard-blog.jpg" alt="Credit Cards: Swipe, Smile, Settle Later" class="article-header-image">
+   <img src="/assets/banners/resized/20250827creditcard-blog.jpg" alt="Credit Cards: Swipe, Smile, Settle Later" class="article-header-image">
 
 ## What Are Credit Card Payments?
 

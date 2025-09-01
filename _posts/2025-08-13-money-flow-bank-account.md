@@ -91,15 +91,16 @@ syndication:
 
 ```mermaid
 graph TD
-    A[Originator] --> B(Authorization)
-    B --> C(ODFI - Originating Bank)
-    C --> D[ACH Operator]
-    D --> E[RDFI - Receiving Bank]
-    E --> F[Receiver]
-    D --> C
-    E --> D
+    A["Originator (Individual/Business/Government)"]:::start --> B("Obtains Authorization"):::process
+    B --> C("Submits ACH Transaction to ODFI"):::process
+    C --> D["ODFI (Originating Depository Financial Institution)"]:::bank
+    D -- Collects & Batches Transactions --> E["ACH Operator (Federal Reserve / The Clearing House)"]:::operator
+    E -- Sorts & Processes Batches --> F["RDFI (Receiving Depository Financial Institution)"]:::bank
+    F -- Posts Transactions to Accounts --> G["Receiver (Account Holder)"]:::endClass
+    E -- Facilitates Settlement --> D
+    F -- Returns/Notifications (if applicable) --> E
+    E -- Returns/Notifications (if applicable) --> D
 ```
-
 ![ACH flow fallback diagram](/assets/diagrams/ach-flow.png)
 
 ℹ️ **Note:** There are two ACH operators: [FedACH (Federal Reserve)](https://www.frbservices.org/financial-services/ach) and [EPN (The Clearing House)](https://www.theclearinghouse.org/payment-systems/ach).
@@ -263,17 +264,21 @@ It’s the **invisible backbone** of American money movement.
 - **RDFI** – Receiving Depository Financial Institution
 - **PPD** – Prearranged Payment and Deposit
 - **WEB** – Internet-Initiated Entry
+- **EPN** – Electronic Payments Network
+- **FedACH** – Federal Reserve Automated Clearing House
+- **NACHA** – National Automated Clearing House Association
+- **R01, R03** – Common ACH return codes (insufficient funds, no account)
 
 ---
 
 ## References
 
-1. [NACHA ACH Volume Statistics, 2024](https://www.nacha.org/rules/ach-operations-bulletins-and-advisories)
-2. [Federal Reserve FedACH Services](https://www.frbservices.org/financial-services/ach)
-3. [The Clearing House EPN Overview](https://www.theclearinghouse.org/payment-systems/ach)
-4. [NACHA Operating Rules, 2024](https://www.nacha.org/rules)
-5. [Ruby ACH Gem Documentation](https://github.com/jm81/ach)
-6. [FRED ACH Credit Statistics](https://fred.stlouisfed.org/series/ACHCREDIT)
-7. [BIS Payment Systems in the U.S.](https://www.bis.org/cpmi/publ/d105.htm)
+1. NACHA ACH Volume Stats - [NACHA ACH Volume Statistics, 2024](https://www.nacha.org/rules/ach-operations-bulletins-and-advisories)
+2. FedACH - [Federal Reserve FedACH Services](https://www.frbservices.org/financial-services/ach)
+3. EPN Overview - [The Clearing House EPN Overview](https://www.theclearinghouse.org/payment-systems/ach)
+4. NACHA Operating Rules - [NACHA Operating Rules, 2024](https://www.nacha.org/rules)
+5. Ruby ACH Gem - [Ruby ACH Gem Documentation](https://github.com/jm81/ach)
+6. FRED ACH Credit Stats - [FRED ACH Credit Statistics](https://fred.stlouisfed.org/series/ACHCREDIT)
+7. BIS Payment Systems - [BIS Payment Systems in the U.S.](https://www.bis.org/cpmi/publ/d105.htm)
 
 ---
