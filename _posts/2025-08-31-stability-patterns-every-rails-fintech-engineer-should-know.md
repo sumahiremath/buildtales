@@ -2,6 +2,7 @@
 layout: default
 title: "Stability Patterns Every Rails Fintech Engineer Should Know"
 date: 2025-08-31
+permalink: /stability-patterns-every-rails-fintech-engineer-should-know/
 categories: [systems, architecture, releaseit, design-patterns]
 section: "System Design Fundamentals"
 excerpt: "Learn the four essential stability patterns for Rails fintech apps: Circuit Breakers, Timeouts, Retries, and Bulkheads. These patterns aren't optional for ACH payments — they're survival skills."

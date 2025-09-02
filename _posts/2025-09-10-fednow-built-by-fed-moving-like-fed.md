@@ -2,6 +2,7 @@
 layout: default
 title: "FedNow: Built by the Fed. Moving Like the Fed"
 date: 2025-09-10
+permalink: /fednow-built-by-fed-moving-like-fed/
 categories: [payments, real_time_payments, faster_payments]
 tags: [fednow, federal_reserve, real_time_payments, rtp, instant_settlement]
 excerpt: "Examining the Federal Reserve's entry into real-time payments and why government-built systems move at government speed."

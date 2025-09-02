@@ -2,6 +2,7 @@
 layout: default
 title: "ACH Correction Codes: Fix It, Log It, Prove It"
 date: 2025-08-17
+permalink: /ach-correction-codes-fix-log-prove/
 categories: [fintech, ach, compliance]
 section: "ACH Operations & Compliance"
 tags: [ach, nacha, noc, correction-codes, compliance, fintech-operations, audit]

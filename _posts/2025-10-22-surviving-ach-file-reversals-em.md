@@ -2,6 +2,7 @@
 layout: default
 title: "Surviving ACH File Reversals as an EM"
 date: 2025-10-22
+permalink: /surviving-ach-file-reversals-em/
 categories: [payments]
 section: "Phase 2: Failure Modes — Returns, Reversals, & Chaos"
 excerpt: "When an entire ACH file needs to be reversed, engineering managers need to coordinate teams, systems, and stakeholders to minimize damage."

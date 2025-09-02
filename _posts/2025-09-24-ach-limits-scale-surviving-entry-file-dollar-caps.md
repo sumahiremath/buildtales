@@ -2,6 +2,7 @@
 layout: default
 title: "ACH Limits at Scale: Surviving Entry File Dollar Caps"
 date: 2025-09-24
+permalink: /ach-limits-scale-surviving-entry-file-dollar-caps/
 categories: [payments]
 section: "Phase 1: Understanding the Rails"
 excerpt: "How to handle ACH dollar limits when processing millions of transactions and why entry file caps matter more than you think."

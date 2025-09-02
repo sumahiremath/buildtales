@@ -2,6 +2,7 @@
 layout: default
 title: "Why Credit Card Interchange Fees Differ at Authorization vs Settlement (and How to Reconcile Them)"
 date: 2025-09-01
+permalink: /failure-modes-interchange-fee-reconciliation/
 categories: [payments]
 section: "Phase 1: Understanding the Rails"
 tags: [interchange, variance, reconciliation, payment-systems, credit-cards, compliance, fintech]

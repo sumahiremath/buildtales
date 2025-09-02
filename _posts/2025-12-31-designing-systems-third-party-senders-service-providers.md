@@ -2,6 +2,7 @@
 layout: default
 title: "Designing Systems for Third-Party Senders & Service Providers"
 date: 2025-12-31
+permalink: /designing-systems-third-party-senders-service-providers/
 categories: [payments]
 section: "Phase 4: Multi-Client, Multi-Rail Complexity"
 excerpt: "When you're processing payments for other companies, your system design needs to handle multiple clients, rails, and compliance requirements."

@@ -2,6 +2,7 @@
 layout: default
 title: "On/Off-Ramp Infrastructure: Bridging TradFi and Crypto"
 date: 2026-03-18
+permalink: /on-off-ramp-infrastructure-bridging-tradfi-crypto/
 categories: [payments]
 section: "Phase 6: Modern Money Movement (Crypto & Global)"
 excerpt: "On/off-ramps are the bridges between traditional finance and crypto. Learn how to build and integrate with these critical infrastructure pieces."

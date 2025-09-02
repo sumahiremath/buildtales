@@ -2,6 +2,7 @@
 layout: default
 title: "Cursor Pro: Zero to Expert - The Complete Developer's Journey"
 date: 2025-08-23
+permalink: /cursor-pro-zero-expert/
 categories: [systems, ai-tools]
 section: "Leveraging AI Tools"
 excerpt: "A structured guide to mastering AI-powered development with Cursor Pro, from installation to expert-level workflows."

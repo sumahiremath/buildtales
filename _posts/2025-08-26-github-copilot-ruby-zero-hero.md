@@ -2,6 +2,7 @@
 layout: default
 title: "GitHub Copilot: Zero to Hero — Build Your First Ruby Project with AI Pair Programming"
 date: 2025-08-26
+permalink: /github-copilot-ruby-zero-hero/
 categories: [ai-tools, systems]
 section: "Leveraging AI Tools"
 excerpt: "Learn GitHub Copilot by building a Ruby CLI project from scratch. A hands-on, end-to-end guide from installation to tests, persistence, and documentation."

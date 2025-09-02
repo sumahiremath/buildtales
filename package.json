@@ -1,0 +1,27 @@
+{
+  "name": "buildtales-automation",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "ci:build": "node tools/compile-markdown.mjs content/**/*.md",
+    "ci:render": "node tools/render-mermaid.mjs content/**/*.md --out assets/diagrams --image-type svg --theme neutral",
+    "ci:github-urls": "node tools/generate-github-urls.mjs",
+    "ci:snippets": "node tools/generate-snippets.mjs dist",
+    "ci:medium": "node tools/publish-medium.mjs",
+    "ci:substack": "node tools/prepare-substack.mjs",
+    "ci:all": "npm run ci:render && npm run ci:github-urls && npm run ci:build && npm run ci:snippets",
+    "ci:publish": "npm run ci:all && npm run ci:medium && npm run ci:substack"
+  },
+  "dependencies": {
+    "@mermaid-js/mermaid-cli": "^10.9.1",
+    "gray-matter": "^4.0.3",
+    "globby": "^14.0.2",
+    "mdast-util-from-markdown": "^2.0.1",
+    "mdast-util-to-markdown": "^2.1.0",
+    "micromark-extension-gfm": "^3.0.0",
+    "picocolors": "^1.0.0",
+    "remark-gfm": "^4.0.0",
+    "slugify": "^1.6.6"
+  }
+}

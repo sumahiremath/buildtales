@@ -2,6 +2,7 @@
 layout: default
 title: "Why Rails Apps Fail in Production (and What ACH Teaches Us)"
 date: 2025-08-30
+permalink: /why-rails-apps-fail-production-ach-teaches-us/
 categories: [systems, architecture, releaseit, design-patterns]
 section: "System Design Fundamentals"
 excerpt: "Understanding why Rails apps fail in production using ACH payment processing as a case study, and how to apply Release It! principles for resilience."
@@ -46,6 +47,7 @@ payment_type: "ach_transfers"
 payment_network: ["federal_reserve", "epn"]
 content_level: "intermediate"
 content_type: "how_to"
+future: true
 ---
 
 # Why Rails Apps Fail in Production (and What ACH Teaches Us)

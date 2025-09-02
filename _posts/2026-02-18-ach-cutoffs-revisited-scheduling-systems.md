@@ -2,6 +2,7 @@
 layout: default
 title: "ACH Cutoffs (Revisited for scheduling systems)"
 date: 2026-02-18
+permalink: /ach-cutoffs-revisited-scheduling-systems/
 categories: [payments]
 section: "Phase 5: Recurring, Revenue, and Lifecycle Systems"
 excerpt: "When building scheduling systems, ACH cutoffs take on new complexity. Learn how to design systems that work around these timing constraints."

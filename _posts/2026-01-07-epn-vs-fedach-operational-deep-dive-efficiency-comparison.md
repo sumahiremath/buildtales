@@ -2,6 +2,7 @@
 layout: default
 title: "EPN vs. FedACH: Operational Deep Dive & Efficiency Comparison"
 date: 2026-01-07
+permalink: /epn-vs-fedach-operational-deep-dive-efficiency-comparison/
 categories: [fintech, payments]
 section: "Phase 4: Multi-Client, Multi-Rail Complexity"
 tags: [ach, payments, fintech, epn, fedach, operations, efficiency, third-party-senders]

@@ -2,6 +2,7 @@
 layout: default
 title: "Surviving an ACH Audit: Engineering Manager's Guide"
 date: 2025-12-03
+permalink: /surviving-ach-audit-engineering-managers-guide/
 categories: [payments]
 section: "Phase 3: Observability & Ops Strategy"
 excerpt: "ACH audits can be stressful, but with proper preparation and system design, engineering managers can navigate them successfully."

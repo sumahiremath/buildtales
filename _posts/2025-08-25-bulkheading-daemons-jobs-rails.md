@@ -2,6 +2,7 @@
 layout: default
 title: "Bulkheading Daemons and Jobs in Rails: Building Resilient Background Systems"
 date: 2025-08-25
+permalink: /bulkheading-daemons-jobs-rails/
 categories: [systems, rails, architecture]
 tags: [rails, sidekiq, bulkhead_pattern, system_design, resilience, background_jobs]
 excerpt: "How to use the bulkhead pattern with Sidekiq daemons and scheduled jobs in Rails to isolate failures and keep critical workloads running."

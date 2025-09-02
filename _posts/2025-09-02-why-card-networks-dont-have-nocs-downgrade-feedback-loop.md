@@ -2,6 +2,7 @@
 layout: default
 title: "Why Card Networks Don't Have NOCs (and How to Build Your Own Downgrade Feedback Loop)"
 date: 2025-09-02
+permalink: /why-card-networks-dont-have-nocs-downgrade-feedback-loop/
 categories: [payments]
 tags: [credit-cards, interchange, downgrades, reconciliation, fintech]
 banner_image: 20250902cardnocs-blog.jpg

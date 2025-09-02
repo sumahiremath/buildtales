@@ -2,6 +2,7 @@
 layout: default
 title: "UPI vs FedNow vs RTP: Developer-Centric Comparison"
 date: 2026-04-01
+permalink: /upi-vs-fednow-vs-rtp-developer-centric-comparison/
 categories: [payments]
 section: "Phase 6: Modern Money Movement (Crypto & Global)"
 excerpt: "How do the world's major real-time payment systems compare from a developer's perspective? A technical deep dive into UPI, FedNow, and RTP."

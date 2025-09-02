@@ -1,0 +1,71 @@
+# Redirects for old article URLs to new clean permalinks
+# This file handles redirects from the old category-based URLs to new title-based URLs
+
+# 2025-08 Articles
+/fintech/payments/2025/08/13/money-flow-bank-account.html /money-flow-bank-account/ 301
+/fintech/ach/2025/08/14/wire-transfers-explained.html /wire-transfers-explained/ 301
+/fintech/ach/2025/08/15/nacha-file-demystified.html /nacha-file-demystified/ 301
+/fintech/ach/2025/08/16/sec-codes-authorization-boss-level.html /sec-codes-authorization-boss-level/ 301
+/fintech/ach/2025/08/17/ach-correction-codes-fix-log-prove.html /ach-correction-codes-fix-log-prove/ 301
+/fintech/leadership/2025/08/18/quarter-long-project-em-baptism.html /quarter-long-project-em-baptism/ 301
+/fintech/leadership/2025/08/19/breaking-builds-to-building-teams.html /breaking-builds-to-building-teams/ 301
+/fintech/ach/2025/08/20/ach-good-bad-ugly.html /ach-good-bad-ugly/ 301
+/fintech/leadership/2025/08/21/engineering-leaders-survival-guide-compliance.html /engineering-leaders-survival-guide-compliance/ 301
+/fintech/ach/2025/08/22/ach-returns-compliance-survival-guide.html /ach-returns-compliance-survival-guide/ 301
+/fintech/tools/2025/08/23/cursor-pro-zero-expert.html /cursor-pro-zero-expert/ 301
+/fintech/tools/2025/08/24/optimizing-cursor-prompts-api-limits.html /optimizing-cursor-prompts-api-limits/ 301
+/fintech/systems/2025/08/25/bulkheading-daemons-jobs-rails.html /bulkheading-daemons-jobs-rails/ 301
+/fintech/tools/2025/08/26/github-copilot-ruby-zero-hero.html /github-copilot-ruby-zero-hero/ 301
+/fintech/payments/2025/08/27/credit-cards-swipe-smile-settle-later.html /credit-cards-swipe-smile-settle-later/ 301
+/fintech/systems/2025/08/28/publish-subscribe-pattern-software-architecture.html /publish-subscribe-pattern-software-architecture/ 301
+/fintech/payments/2025/08/29/money-flows-chargebacks-rails-leaders-guide-3d-secure.html /money-flows-chargebacks-rails-leaders-guide-3d-secure/ 301
+/fintech/systems/2025/08/30/why-rails-apps-fail-production-ach-teaches-us.html /why-rails-apps-fail-production-ach-teaches-us/ 301
+/fintech/systems/2025/08/31/stability-patterns-every-rails-fintech-engineer-should-know.html /stability-patterns-every-rails-fintech-engineer-should-know/ 301
+
+# 2025-09 Articles
+/fintech/payments/2025/09/01/failure-modes-interchange-fee-reconciliation.html /failure-modes-interchange-fee-reconciliation/ 301
+/fintech/payments/2025/09/02/why-card-networks-dont-have-nocs-downgrade-feedback-loop.html /why-card-networks-dont-have-nocs-downgrade-feedback-loop/ 301
+/fintech/payments/2025/09/03/wallets-p2p-networks-venmo-cash-app-paypal-zelle.html /wallets-p2p-networks-venmo-cash-app-paypal-zelle/ 301
+/fintech/payments/2025/09/05/rtp-real-time-payments-real-world-bottlenecks.html /rtp-real-time-payments-real-world-bottlenecks/ 301
+/fintech/payments/2025/09/10/fednow-built-by-fed-moving-like-fed.html /fednow-built-by-fed-moving-like-fed/ 301
+/fintech/ach/2025/09/17/ach-cutoffs-hidden-clock-breaks-ux.html /ach-cutoffs-hidden-clock-breaks-ux/ 301
+/fintech/ach/2025/09/24/ach-limits-scale-surviving-entry-file-dollar-caps.html /ach-limits-scale-surviving-entry-file-dollar-caps/ 301
+
+# 2025-10 Articles
+/fintech/ach/2025/10/01/ach-retries-designing-safe-compliant-retry-engine.html /ach-retries-designing-safe-compliant-retry-engine/ 301
+/fintech/ach/2025/10/15/handling-dishonored-contested-returns.html /handling-dishonored-contested-returns/ 301
+/fintech/ach/2025/10/22/surviving-ach-file-reversals-em.html /surviving-ach-file-reversals-em/ 301
+/fintech/ach/2025/10/29/handling-ach-returns-missing-broken-data.html /handling-ach-returns-missing-broken-data/ 301
+
+# 2025-11 Articles
+/fintech/ach/2025/11/05/inevitable-handling-missed-entries-file-resubmission.html /inevitable-handling-missed-entries-file-resubmission/ 301
+/fintech/ach/2025/11/12/tracking-ach-trace-ids-yours-theirs-feds.html /tracking-ach-trace-ids-yours-theirs-feds/ 301
+/fintech/ach/2025/11/19/day-submitted-wrong-ach-file-personal-tale.html /day-submitted-wrong-ach-file-personal-tale/ 301
+/fintech/ach/2025/11/26/ach-returns-corrections-threshold-monitoring-engineering-leaders.html /ach-returns-corrections-threshold-monitoring-engineering-leaders/ 301
+
+# 2025-12 Articles
+/fintech/ach/2025/12/03/surviving-ach-audit-engineering-managers-guide.html /surviving-ach-audit-engineering-managers-guide/ 301
+/fintech/ach/2025/12/10/working-legal-risk-stay-within-ach-thresholds.html /working-legal-risk-stay-within-ach-thresholds/ 301
+/fintech/ach/2025/12/17/building-legal-risk-core.html /building-legal-risk-core/ 301
+/fintech/leadership/2025/12/24/reg-e-udaap-engineering-leaders-playbook.html /reg-e-udaap-engineering-leaders-playbook/ 301
+/fintech/systems/2025/12/31/designing-systems-third-party-senders-service-providers.html /designing-systems-third-party-senders-service-providers/ 301
+/fintech/ach/2025/12/31/reconciling-like-ghost-ach-ops-third-party-service-providers.html /reconciling-like-ghost-ach-ops-third-party-service-providers/ 301
+
+# 2026 Articles
+/fintech/ach/2026/01/07/epn-vs-fedach-operational-deep-dive-efficiency-comparison.html /epn-vs-fedach-operational-deep-dive-efficiency-comparison/ 301
+/fintech/payments/2026/02/04/recurring-payments-silent-beast-subscription-infrastructure.html /recurring-payments-silent-beast-subscription-infrastructure/ 301
+/fintech/ach/2026/02/11/recurring-payments-ach-audits-engineering-long-term-compliance.html /recurring-payments-ach-audits-engineering-long-term-compliance/ 301
+/fintech/ach/2026/02/18/ach-cutoffs-revisited-scheduling-systems.html /ach-cutoffs-revisited-scheduling-systems/ 301
+/fintech/ach/2026/02/25/ach-refunds-revisited-lifecycle-integrity.html /ach-refunds-revisited-lifecycle-integrity/ 301
+/fintech/crypto/2026/03/04/stablecoins-crypto-rails-new-instant-settlement-layer.html /stablecoins-crypto-rails-new-instant-settlement-layer/ 301
+/fintech/crypto/2026/03/11/defi-infrastructure-protocols-liquidity-future-money-movement.html /defi-infrastructure-protocols-liquidity-future-money-movement/ 301
+/fintech/crypto/2026/03/18/on-off-ramp-infrastructure-bridging-tradfi-crypto.html /on-off-ramp-infrastructure-bridging-tradfi-crypto/ 301
+/fintech/payments/2026/03/25/upi-integration-developer.html /upi-integration-developer/ 301
+/fintech/payments/2026/04/01/upi-vs-fednow-vs-rtp-developer-centric-comparison.html /upi-vs-fednow-vs-rtp-developer-centric-comparison/ 301
+
+# Legacy redirects for old canonical URLs
+/fintech/systems/2025/08/28/publish-subscribe-pattern-software-architecture.html /publish-subscribe-pattern-software-architecture/ 301
+/fintech/payments/2025/08/13/money-flow-bank-account.html /money-flow-bank-account/ 301
+
+# Catch-all for any remaining old format URLs
+/fintech/*/20*/**/*.html / 301

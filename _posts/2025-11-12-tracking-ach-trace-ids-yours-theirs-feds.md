@@ -2,6 +2,7 @@
 layout: default
 title: "Tracking ACH Trace IDs: Yours, Theirs, and the Fed's"
 date: 2025-11-12
+permalink: /tracking-ach-trace-ids-yours-theirs-feds/
 categories: [payments]
 section: "Phase 2: Failure Modes — Returns, Reversals, & Chaos"
 excerpt: "ACH trace IDs are your lifeline when payments go wrong. Learn how to track them across your systems, banks, and the Federal Reserve."

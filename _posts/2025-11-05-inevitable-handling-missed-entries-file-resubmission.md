@@ -2,6 +2,7 @@
 layout: default
 title: "The Inevitable: Handling Missed Entries and File Resubmission"
 date: 2025-11-05
+permalink: /inevitable-handling-missed-entries-file-resubmission/
 categories: [payments]
 section: "Phase 2: Failure Modes — Returns, Reversals, & Chaos"
 excerpt: "File processing failures are inevitable. The question is how quickly and gracefully you can recover and resubmit."

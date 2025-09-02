@@ -2,6 +2,7 @@
 layout: default
 title: "The Engineering Leader's Survival Guide to Compliance"
 date: 2025-08-21
+permalink: /engineering-leaders-survival-guide-compliance/
 categories: [leadership, management, compliance]
 section: "Strategies & Tactics"
 tags: [compliance, fintech, engineering_leadership, pci, ach, soc2, regulatory]

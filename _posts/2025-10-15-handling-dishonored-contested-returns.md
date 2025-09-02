@@ -2,6 +2,7 @@
 layout: default
 title: "Handling Dishonored and Contested Returns"
 date: 2025-10-15
+permalink: /handling-dishonored-contested-returns/
 categories: [payments]
 section: "Phase 2: Failure Modes — Returns, Reversals, & Chaos"
 excerpt: "When returns come back dishonored or customers contest them, your payment system needs to handle the chaos gracefully."

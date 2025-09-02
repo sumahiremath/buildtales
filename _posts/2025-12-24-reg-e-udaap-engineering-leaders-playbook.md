@@ -2,6 +2,7 @@
 layout: default
 title: "Reg E & UDAAP: The Engineering Leader's Playbook"
 date: 2025-12-24
+permalink: /reg-e-udaap-engineering-leaders-playbook/
 categories: [payments]
 section: "Phase 3: Observability & Ops Strategy"
 excerpt: "Understanding Reg E and UDAAP requirements is essential for engineering leaders building consumer-facing payment systems."

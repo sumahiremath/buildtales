@@ -2,6 +2,7 @@
 layout: default
 title: "ACH Cutoffs: The Hidden Clock That Breaks Your UX"
 date: 2025-09-17
+permalink: /ach-cutoffs-hidden-clock-breaks-ux/
 categories: [payments]
 section: "Phase 1: Understanding the Rails"
 excerpt: "Understanding the invisible time constraints that make ACH payments feel slow and how to design around these hidden deadlines."

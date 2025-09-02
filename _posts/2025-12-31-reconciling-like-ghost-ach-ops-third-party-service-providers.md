@@ -2,6 +2,7 @@
 layout: default
 title: "Reconciling Like a Ghost: ACH Ops for Third-Party Service Providers"
 date: 2025-12-31
+permalink: /reconciling-like-ghost-ach-ops-third-party-service-providers/
 categories: [fintech, payments]
 section: "Phase 4: Multi-Client, Multi-Rail Complexity"
 tags: [ach, payments, fintech, third-party-senders, reconciliation, operations]

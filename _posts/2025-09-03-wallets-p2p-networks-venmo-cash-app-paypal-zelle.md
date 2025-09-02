@@ -2,6 +2,7 @@
 layout: default
 title: "Wallets & P2P Networks: Venmo, Cash App, PayPal, Zelle"
 date: 2025-09-03
+permalink: /wallets-p2p-networks-venmo-cash-app-paypal-zelle/
 categories: [payments, wallets, p2p_networks]
 tags: [wallets, p2p, venmo, cash_app, paypal, zelle, apple_pay, google_pay, ach, card_networks]
 excerpt: "Consumers think Venmo = cash. Engineers know better: wallets are ledger-first abstractions that sit on top of ACH and card rails. If you mistake 'instant ledger' for 'settled funds,' your ops team will bleed."

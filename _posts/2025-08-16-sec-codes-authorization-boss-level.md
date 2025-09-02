@@ -2,6 +2,7 @@
 layout: default
 title: "SEC Codes in ACH: Authorization, Compliance, and How to Not Get Burned"
 date: 2025-08-16
+permalink: /sec-codes-authorization-boss-level/
 categories: [payments, ach, compliance]
 tags: [ach, sec_codes, compliance, authorization, nacha, reg_e]
 excerpt: "SEC codes determine your compliance fate in ACH payments. Get them wrong and face chargebacks, fines, and regulatory headaches. This guide shows you how to classify transactions correctly and stay compliant."

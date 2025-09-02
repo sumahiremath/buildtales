@@ -2,6 +2,7 @@
 layout: default
 title: "Breaking Builds to Building Teams: How QA Sculpted Me Into an Engineering Leader"
 date: 2025-08-19
+permalink: /breaking-builds-to-building-teams/
 categories: [engineering, leadership, management, career]
 section: "Execute & Assess"
 tags: [qa, engineering-leadership, team-building, systems-thinking, empathy, documentation]

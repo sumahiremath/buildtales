@@ -2,6 +2,7 @@
 layout: default
 title: "The Day I Submitted the Wrong ACH File (Personal tale for empathy + realism)"
 date: 2025-11-19
+permalink: /day-submitted-wrong-ach-file-personal-tale/
 categories: [payments]
 section: "Phase 2: Failure Modes — Returns, Reversals, & Chaos"
 excerpt: "A personal story about the time I submitted the wrong ACH file and what I learned about human error in payment systems."

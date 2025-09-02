@@ -2,6 +2,7 @@
 layout: default
 title: "ACH Refunds (Revisited for lifecycle integrity)"
 date: 2026-02-25
+permalink: /ach-refunds-revisited-lifecycle-integrity/
 categories: [payments]
 section: "Phase 5: Recurring, Revenue, and Lifecycle Systems"
 excerpt: "In recurring payment systems, refunds affect more than just one transaction. Learn how to maintain lifecycle integrity during refund operations."

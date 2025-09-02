@@ -2,6 +2,7 @@
 layout: default
 title: "Stablecoins & Crypto Rails: The New Instant Settlement Layer?"
 date: 2026-03-04
+permalink: /stablecoins-crypto-rails-new-instant-settlement-layer/
 categories: [payments, crypto, faster_payments]
 tags: [stablecoins, crypto, defi, instant_settlement, blockchain, ethereum]
 excerpt: "Are stablecoins and crypto rails the future of instant settlement, or just another layer of complexity in the payment ecosystem?"

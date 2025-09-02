@@ -2,6 +2,7 @@
 layout: default
 title: "Wire Transfers Explained: Fast, Final, and Expensive"
 date: 2025-08-14
+permalink: /wire-transfers-explained/
 categories: [payments, wire_transfers, fundamentals]
 tags: [wire_transfers, fedwire, chips, swift, payments, banking, compliance]
 excerpt: "Wire transfers are the express lane of money movement - fast, final, and irreversible. Unlike ACH's batch processing, wires move money in real-time through networks like Fedwire and CHIPS."

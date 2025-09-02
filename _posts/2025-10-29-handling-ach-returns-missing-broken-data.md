@@ -2,6 +2,7 @@
 layout: default
 title: "Handling ACH Returns with Missing or Broken Data"
 date: 2025-10-29
+permalink: /handling-ach-returns-missing-broken-data/
 categories: [payments]
 section: "Phase 2: Failure Modes — Returns, Reversals, & Chaos"
 excerpt: "When ACH returns arrive with incomplete or corrupted information, your systems need to handle the uncertainty gracefully."

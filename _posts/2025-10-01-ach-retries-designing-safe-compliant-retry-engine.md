@@ -2,6 +2,7 @@
 layout: default
 title: "ACH Retries: Designing a Safe, Compliant Retry Engine"
 date: 2025-10-01
+permalink: /ach-retries-designing-safe-compliant-retry-engine/
 categories: [payments]
 section: "Phase 1: Understanding the Rails"
 excerpt: "Building a retry engine for ACH payments that handles failures gracefully while staying compliant with NACHA rules and avoiding duplicate submissions."

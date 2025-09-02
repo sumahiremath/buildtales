@@ -2,6 +2,7 @@
 layout: default
 title: "UPI Integration as a Developer"
 date: 2026-03-25
+permalink: /upi-integration-developer/
 categories: [payments]
 section: "Phase 6: Modern Money Movement (Crypto & Global)"
 excerpt: "India's UPI system offers lessons for developers building payment systems. Learn how to integrate with UPI and what it teaches us about payment design."

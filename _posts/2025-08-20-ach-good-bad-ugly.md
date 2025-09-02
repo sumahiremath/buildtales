@@ -2,6 +2,7 @@
 layout: default
 title: "ACH: The Good, The Bad, and The Ugly"
 date: 2025-08-20
+permalink: /ach-good-bad-ugly/
 categories: [fintech, payments]
 section: "Phase 1: Understanding the Rails"
 tags: [ach, nacha, payments, reconciliation, same-day-ach, fintech-operations]

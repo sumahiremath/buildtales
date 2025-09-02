@@ -2,6 +2,7 @@
 layout: default
 title: "Lessons from Incident Management"
 date: 2026-12-21
+permalink: /leadership/
 categories: [payments]
 Section: "Execution"
 section: "Phase 6: Modern Money Movement (Crypto & Global)"

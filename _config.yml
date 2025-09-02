@@ -28,6 +28,7 @@ exclude:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-redirect-from
 
 # Markdown settings for better code and diagram support
 markdown: kramdown
@@ -35,8 +36,17 @@ kramdown:
   syntax_highlighter: rouge
   input: GFM
 
-# Permalink structure - use categories for clean URLs
-permalink: /:categories/:year/:month/:day/:title.html
+# Permalink structure - use clean, Medium-friendly URLs
+permalink: /:title/
+
+# Redirect configuration for old URLs
+redirect_from:
+  # This will be handled by the _redirects file for better performance
+  # Individual redirects can be added here if needed for specific cases
+
+# Include redirects file in build
+include:
+  - _redirects
 
 # Mermaid diagrams enabled via CDN in layout
 

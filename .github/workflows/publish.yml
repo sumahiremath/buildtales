@@ -1,0 +1,79 @@
+name: Publish Buildtales + Zapier + Medium + Substack
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - "content/**.md"
+      - "tools/**"
+      - "package.json"
+      - "package-lock.json"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - name: Install
+        run: npm ci
+
+      - name: Render Mermaid → SVG
+        run: npm run ci:render
+
+      - name: Generate GitHub Image URLs
+        run: npm run ci:github-urls
+
+      - name: Build Markdown with image fallbacks + disclaimer
+        run: npm run ci:build
+
+      - name: Generate social snippets
+        run: npm run ci:snippets
+
+      - name: Publish to Medium
+        if: ${{ secrets.MEDIUM_ACCESS_TOKEN != '' && secrets.MEDIUM_USER_ID != '' }}
+        env:
+          MEDIUM_ACCESS_TOKEN: ${{ secrets.MEDIUM_ACCESS_TOKEN }}
+          MEDIUM_USER_ID: ${{ secrets.MEDIUM_USER_ID }}
+        run: npm run ci:medium
+
+      - name: Prepare Substack content
+        run: npm run ci:substack
+
+      - name: Commit generated images and artifacts
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add assets/diagrams/ dist/ assets/diagrams-manifest.json
+          git commit -m "Auto-generate diagrams and build artifacts" || echo "No changes to commit"
+          git push
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: built-markdown-and-snippets
+          path: |
+            dist/**/*.md
+            dist/social-snippets.json
+            dist/medium-publish-results.json
+            dist/substack-articles.json
+            dist/substack/
+            assets/diagrams-manifest.json
+
+      - name: Notify Zapier (optional)
+        if: ${{ secrets.ZAPIER_HOOK_URL != '' }}
+        env:
+          ZAPIER_HOOK_URL: ${{ secrets.ZAPIER_HOOK_URL }}
+        run: |
+          set -e
+          payload=$(jq -Rs '{snippets: (inputs | fromjson)}' dist/social-snippets.json < dist/social-snippets.json)
+          curl -sS -X POST "$ZAPIER_HOOK_URL" \
+            -H 'Content-Type: application/json' \
+            --data-binary @"dist/social-snippets.json"

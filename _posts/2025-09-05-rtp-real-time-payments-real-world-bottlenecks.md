@@ -2,6 +2,7 @@
 layout: default
 title: "RTP: Real-Time Payments With Real-World Bottlenecks"
 date: 2025-09-05
+permalink: /rtp-real-time-payments-real-world-bottlenecks/
 categories: [payments]
 section: "Phase 1: Understanding the Rails"
 excerpt: "Exploring the promise of real-time payments and the practical bottlenecks that limit their true potential in production systems."

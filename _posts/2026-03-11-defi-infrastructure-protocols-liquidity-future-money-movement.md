@@ -2,6 +2,7 @@
 layout: default
 title: "DeFi Infrastructure: Protocols, Liquidity, and the Future of Money Movement"
 date: 2026-03-11
+permalink: /defi-infrastructure-protocols-liquidity-future-money-movement/
 categories: [payments]
 section: "Phase 6: Modern Money Movement (Crypto & Global)"
 excerpt: "DeFi protocols are reimagining how money moves. Learn what this means for traditional payment systems and how to prepare."

@@ -2,6 +2,7 @@
 layout: default
 title: "Recurring Payments & ACH Audits: Engineering for Long-Term Compliance"
 date: 2026-02-11
+permalink: /recurring-payments-ach-audits-engineering-long-term-compliance/
 categories: [payments]
 section: "Phase 5: Recurring, Revenue, and Lifecycle Systems"
 excerpt: "Long-term compliance in recurring payments requires engineering systems that can withstand years of regulatory scrutiny and audits."

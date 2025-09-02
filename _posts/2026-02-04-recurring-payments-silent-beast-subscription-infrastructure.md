@@ -2,6 +2,7 @@
 layout: default
 title: "Recurring Payments: The Silent Beast Behind Subscription Infrastructure"
 date: 2026-02-04
+permalink: /recurring-payments-silent-beast-subscription-infrastructure/
 categories: [payments]
 section: "Phase 5: Recurring, Revenue, and Lifecycle Systems"
 excerpt: "Recurring payments are the engine that keeps subscription businesses running, but they're also the source of complex engineering challenges."

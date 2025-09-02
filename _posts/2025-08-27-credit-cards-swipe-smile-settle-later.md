@@ -2,6 +2,7 @@
 layout: default
 title: "Credit Cards: Swipe, Smile, Settle Later"
 date: 2025-08-27
+permalink: /credit-cards-swipe-smile-settle-later/
 categories: [payments, card_payments, fundamentals]
 tags: [credit_cards, card_networks, interchange, authorization, settlement, chargebacks]
 excerpt: "Understanding the credit card payment flow from authorization to settlement, and why it's not as instant as it seems."

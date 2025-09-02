@@ -2,6 +2,7 @@
 layout: default
 title: "NACHA File Demystified: Cracking the 94-Character Code"
 date: 2025-08-15
+permalink: /nacha-file-demystified/
 categories: [fintech, ach]
 section: "ACH"
 tags: [nacha, ach, file-format, fintech-operations, payments-infrastructure, banking]

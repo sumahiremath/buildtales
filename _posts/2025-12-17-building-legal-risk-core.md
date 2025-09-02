@@ -2,6 +2,7 @@
 layout: default
 title: "Building with Legal and Risk at the Core"
 date: 2025-12-17
+permalink: /building-legal-risk-core/
 categories: [payments]
 section: "Phase 3: Observability & Ops Strategy"
 excerpt: "Instead of bolting on compliance, build it into your system architecture from the ground up."

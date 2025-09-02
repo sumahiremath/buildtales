@@ -2,6 +2,7 @@
 layout: default
 title: "Working with Legal & Risk to Stay Within ACH Thresholds"
 date: 2025-12-10
+permalink: /working-legal-risk-stay-within-ach-thresholds/
 categories: [payments]
 section: "Phase 3: Observability & Ops Strategy"
 excerpt: "Engineering teams need to collaborate with legal and risk teams to build systems that stay within ACH thresholds and compliance requirements."

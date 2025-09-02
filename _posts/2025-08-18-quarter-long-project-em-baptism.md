@@ -2,6 +2,7 @@
 layout: default
 title: "When a Supposedly Quarter-Long Project Became My Real EM Baptism"
 date: 2025-08-18
+permalink: /quarter-long-project-em-baptism/
 categories: [engineering, leadership, management, systems]
 section: "Strategies & Tactics"
 tags: [engineering-management, project-management, leadership, team-building, technical-decision-making]
