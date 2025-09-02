@@ -5,8 +5,8 @@ date: 2025-09-02
 permalink: /why-card-networks-dont-have-nocs-downgrade-feedback-loop/
 categories: [payments]
 tags: [credit-cards, interchange, downgrades, reconciliation, fintech]
-banner_image: "/assets/banners/resized/20250902cardnocs-blog.jpg"
-banner_image_series: "/assets/banners/resized/20250902cardnocs-series.jpg"
+banner_image: "/assets/banners/resized/20250902cardcorrections-blog.jpg"
+banner_image_series: "/assets/banners/resized/20250902cardcorrections-series.jpg"
 banner_color: "#157878"
 banner_alt: "Credit card network downgrade analysis showing interchange categories and fee impacts"
 excerpt: "Unlike ACH, where Notifications of Change (NOCs) tell you exactly what to fix, credit card networks provide no standardized correction feed. If your transactions downgrade into more expensive interchange categories, you must reverse-engineer the cause from settlement data."
@@ -38,7 +38,7 @@ content_type: "analysis"
 
 {% include personal-branding.html %}
 
-<img src="/assets/banners/resized/20250902cardnocs-blog.jpg" alt="Credit card network downgrade analysis showing interchange categories and fee impacts" class="article-header-image">
+<img src="/assets/banners/resized/20250902cardcorrections-blog.jpg" alt="Credit card network downgrade analysis showing interchange categories and fee impacts" class="article-header-image">
 
 **Audience:** Payments engineers, data engineers, fintech architects  
 **Reading time:** 18 minutes  
