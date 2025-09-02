@@ -4,6 +4,7 @@ title: "Money Flows, Chargebacks, and Rails: A Leader's Guide to 3-D Secure"
 date: 2025-08-29
 permalink: /money-flows-chargebacks-rails-leaders-guide-3d-secure/
 categories: [payments]
+tags: [credit_cards, card_networks, interchange, authorization, settlement, chargebacks, 3ds]
 section: "Phase 1: Understanding the Rails"
 excerpt: "Understanding how 3-D Secure changes money flows, how to reason about chargebacks, and what to instrument in a Rails stack to defend disputes and protect margin."
 banner_image: "/assets/banners/resized/20250829creditcard3ds-blog.jpg"

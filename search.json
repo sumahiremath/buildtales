@@ -1,4 +1,5 @@
 ---
+layout: json
 ---
 [
   {% for post in site.posts %}

@@ -45,7 +45,7 @@ series:
 # Content classification
 content_level: "intermediate"
 content_type: "tutorial"
-future:true
+future: true
 ---
 
 ## Idempotent Pub/Sub with RabbitMQ, Node.js & Redis: Exactly-Once Side-Effects (Even Under At-Least-Once Delivery)
