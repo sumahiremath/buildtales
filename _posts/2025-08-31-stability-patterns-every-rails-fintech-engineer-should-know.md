@@ -205,7 +205,7 @@ graph LR
 
 This article is part of the **Release It! with Rails + ACH** series:
 
-- **Previous**: [Why Rails Apps Fail in Production](/2025/08/30/why-rails-apps-fail-production-ach-teaches-us.html)
+- **Previous**: [Why Rails Apps Fail in Production](https://buildtales.dev/why-rails-apps-fail-production-ach-teaches-us/)
 - **Next**: The Four Core Production Concerns in Fintech Systems
 
 **Related upcoming deep dives**:
