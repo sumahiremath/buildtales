@@ -181,7 +181,7 @@ Use Prometheus/Grafana:
 - ACH retries > 5% → instability alert
 - Settlement > 72h → compliance alert
 
-## Example: Rails ACH Payment Flow
+Example: Rails ACH Payment Flow
 
 ```mermaid
 flowchart TD
@@ -202,7 +202,7 @@ flowchart TD
 
 ## Recovery Procedures (When Things Go Wrong)
 
-### ACH File Corruption
+### 1. ACH File Corruption
 
 ❗ **Warning:** Corrupted ACH files are rejected at the ODFI level.
 
@@ -222,22 +222,24 @@ else
 end
 ```
 
-### Partial Batch Failures
+### 2. Partial Batch Failures
 
 ℹ️ **Note:** A 1,000-entry file can partially fail (950 succeed, 50 rejected).
 
 ✅ **Recovery:** Parse return codes, retry failed subset only, maintain per-entry queue.
 
-### Duplicate Submissions
+### 3. Duplicate Submissions
 
 💡 **Tip:** Never rollback completed ACH entries. Instead:
+
 - Record duplicates as compensating transactions.
 - Retain trace numbers for reconciliation.
 - Notify compliance immediately.
 
 ## Compliance Considerations (Reliability in a Regulated Context)
 
-### Audit Trails – Every ACH submission must have a complete log (trace, retries, user ID).
+### 1. Audit Trails
+Every ACH submission must have a complete log (trace, retries, user ID).
 
 ```ruby
 AuditLog.create!(
@@ -249,9 +251,11 @@ AuditLog.create!(
 )
 ```
 
-### Data Retention – ACH records must be stored 2+ years, often in immutable storage.
+### 2. Data Retention
+ACH records must be stored 2+ years, often in immutable storage.
 
-### Error Reporting – Material incidents (delays, duplicates) may require reporting to ODFI/NACHA within 24 hours.
+### 3. Error Reporting
+Material incidents (delays, duplicates) may require reporting to ODFI/NACHA within 24 hours.
 
 ❗ **Warning:** Noncompliance risks fines, audits, and loss of ACH privileges.
 
@@ -315,4 +319,5 @@ AuditLog.create!(
 - [Michael Nygard](https://pragprog.com/titles/mnee2/release-it-second-edition/) - Release It!: Design and Deploy Production-Ready Software, 2018
 - [Google SRE](https://sre.google/sre-book/error-budgets/) - Site Reliability Engineering: Error Budgets, 2020
 - [Martin Kleppmann](https://dataintensive.net/) - Designing Data-Intensive Applications, 2017
+  
 ---
