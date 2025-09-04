@@ -54,6 +54,10 @@ future: true
 
 Whether you're using Rails, Django, or Spring Boot, production failures rarely come from syntax errors—they come from timeouts, retries, duplicates, and slow dependencies that integration tests miss.
 
+{% include personal-branding.html %}
+
+<img src="/assets/banners/resized/20250830railsfail-blog.jpg" alt="Why Rails Apps Fail in Production (and What ACH Teaches Us)" class="article-header-image">
+
 **For:** Backend engineers, Rails developers, fintech architects  
 **Reading Time:** 14 minutes  
 **Prerequisites:** Rails app in production, basic ACH/payment knowledge  
@@ -66,10 +70,6 @@ Whether you're using Rails, Django, or Spring Boot, production failures rarely c
 - Reliability design must also cover recovery procedures (batch failures, corruption, duplicates) and compliance obligations (audit, retention, reporting).
 
 ⚠️ **Disclaimer:** All scenarios, accounts, names, and data used in examples are not real. They are realistic scenarios provided only for educational and illustrative purposes.
-
-{% include personal-branding.html %}
-
-<img src="/assets/banners/resized/20250830railsfail-blog.jpg" alt="Why Rails Apps Fail in Production (and What ACH Teaches Us)" class="article-header-image">
 
 ## Problem Definition
 
