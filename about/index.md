@@ -64,7 +64,7 @@ This balance keeps my leadership grounded and my creativity alive.
 
 ### Community Feedback
 
-This site is about sharing real-world engineering lessons. All content is my ideas, AI-assisted, and human-reviewed — but if you spot an inaccuracy, please use the [contact form](#contact-form) to shoot me an email. I rely on the community to keep things sharp.
+This site is about sharing real-world engineering lessons. All the content you find here are my ideas, AI-assisted, and human-reviewed — but if you spot an inaccuracy, please use the [contact form](#contact-form) to shoot me an email. I rely on the community to keep things sharp.
 
 ---
 
