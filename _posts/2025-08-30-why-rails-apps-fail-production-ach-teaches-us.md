@@ -39,7 +39,7 @@ syndication:
 series:
   name: "Systems Series"
   index_url: "/series/systems"
-  part: 5
+  part: 6
   series_type: "releaseit"
   
 # Content classification
