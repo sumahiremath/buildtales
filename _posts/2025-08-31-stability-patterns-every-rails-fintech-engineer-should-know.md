@@ -40,7 +40,7 @@ series:
   name: "Systems Series"
   series_type: "releaseit"
   index_url: "/series/systems"
-  part: 5
+  part: 6
 ---
 
 # Stability Patterns Every Rails Fintech Engineer Should Know
