@@ -32,9 +32,9 @@ This blend of curiosity, delivery, and forward-looking strategy fuels my perspec
 
 ### Why I Write
 
-**Build Tales** is where I share stories from the trenches—practical insights that don’t always make it into polished case studies.
+**Build Tales** is where I share stories from the trenches—practical insights that don't always make it into polished case studies. All articles are based on real-world engineering practice. Ideas are my own, written with AI assistance for speed, and reviewed by me for accuracy and reliability.
 
-My current series, **“How U.S. Payments Really Work,”** is a 50+ article survival manual for anyone building platforms that move money. It breaks down the rails—ACH, cards, wires, wallets, faster payments, and crypto—showing how money truly flows through banks, networks, and regulators.
+My current series, **"How U.S. Payments Really Work,"** is a 50+ article survival manual for anyone building platforms that move money. It breaks down the rails—ACH, cards, wires, wallets, faster payments, and crypto—showing how money truly flows through banks, networks, and regulators.
 
 I also write about:
 - **Engineering leadership** — scaling teams without losing culture
@@ -58,8 +58,15 @@ This balance keeps my leadership grounded and my creativity alive.
 
 ---
 
-👉 At **Build Tales**, you’ll find lessons, frameworks, and survival patterns for engineers navigating the real world of **systems, leadership, payments, and the technologies shaping what comes next.**
+👉 At **Build Tales**, you'll find lessons, frameworks, and survival patterns for engineers navigating the real world of **systems, leadership, payments, and the technologies shaping what comes next.**
 
+---
+
+### Community Feedback
+
+This site is about sharing real-world engineering lessons. All content is my ideas, AI-assisted, and human-reviewed — but if you spot an inaccuracy, please use the [contact form](#contact-form) to shoot me an email. I rely on the community to keep things sharp.
+
+---
 
 ### Let's Connect
 
