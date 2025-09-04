@@ -209,9 +209,9 @@ This article is part of the **Release It! with Rails + ACH** series:
 - **Next**: The Four Core Production Concerns in Fintech Systems
 
 **Related upcoming deep dives**:
-- Circuit Breakers (Post #4)
-- Retries & Backoff (Post #5)
-- Bulkhead isolation (Post #7)
+- Circuit Breakers (Post #2)
+- Retries & Backoff (Post #3)
+- Bulkhead isolation (Post #4)
 
 ---
 
