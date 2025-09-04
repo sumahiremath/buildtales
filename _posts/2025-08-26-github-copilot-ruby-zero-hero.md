@@ -50,6 +50,10 @@ content_type: "how_to"
 # GitHub Copilot: Zero to Hero — Build Your First Ruby Project with AI Pair Programming
 *Learn Copilot by building a complete Ruby CLI Todo app from scratch with AI pair programming — no fluff, just code.*
 
+{% include personal-branding.html %}
+
+<img src="/assets/banners/resized/20250826copilot-ruby-blog.jpg" alt="Survival" class="article-header-image">  
+
 **For:** Software engineers, backend developers, tech leads  
 **Reading Time:** ~50 minutes  
 **Prerequisites:** Ruby installed (`ruby -v`), basic CLI knowledge, VS Code with GitHub Copilot & Copilot Chat extensions  

@@ -39,25 +39,25 @@ syndication:
 series:
   name: "Systems Series"
   index_url: "/series/systems"
-  part: 5
+  part: 99
   series_type: "Architecture & Design"
-    
+  
 # Content classification
 content_level: "intermediate"
 content_type: "tutorial"
 future: true
 ---
-
 ## Idempotent Pub/Sub with RabbitMQ, Node.js & Redis: Exactly-Once Side-Effects (Even Under At-Least-Once Delivery)
 
 Validated at ~3–5K msg/s with P95 < 100ms on a modest VM; duplicate side-effects = 0.
 
-**For:** Backend engineers & platform architects  
-**Reading Time:** 17 minutes  
-**Prerequisites:** Node 18+, Docker, basic RabbitMQ & Redis proficiency  
+**For:** Backend engineers & platform architects
+**Reading Time:** 17 minutes
+**Prerequisites:** Node 18+, Docker, basic RabbitMQ & Redis proficiency
 **Why now:** Event volumes and retries rise as systems decompose; at-least-once delivery guarantees mean duplicates are inevitable—idempotency and production-grade retries are mandatory.
 
 ### TL;DR:
+
 - Use Redis SETNX with TTL to guarantee exactly-once side-effects per idempotency_key
 - Implement multi-queue exponential backoff (no plugins) + DLQ using RabbitMQ TTL + DLX
 - Run publisher in confirm mode and set consumer prefetch; instrument Prometheus metrics
@@ -82,6 +82,7 @@ Validated at ~3–5K msg/s with P95 < 100ms on a modest VM; duplicate side-effec
 ## Architecture Overview
 
 We'll build:
+
 - **Topic exchange:** payment_events
 - **Main queue (accounting):** accounting-service.main (durable)
 - **Retry queues:** accounting-service.retry.1|2|3 with TTLs [1s, 5s, 15s] and DLX back to main
@@ -92,6 +93,7 @@ We'll build:
 - **Metrics:** Prometheus counters/gauges + simple queue depth sampler
 
 ### Mermaid (canonical)
+
 ```mermaid
 flowchart LR
   A["Producer (Payment Service)"] -->|Publish topic: <code>payment.succeeded</code>| B["Topic Exchange: <code>payment_events</code>"]
@@ -112,6 +114,7 @@ flowchart LR
 ## Solution Implementation
 
 ### 0) Project layout
+
 ```
 pubsub-idem/
 ├─ docker-compose.yml
@@ -126,6 +129,7 @@ pubsub-idem/
 ```
 
 ### 1) package.json
+
 ```json
 {
   "name": "pubsub-idempotency",
@@ -146,6 +150,7 @@ pubsub-idem/
 ```
 
 ### 2) docker-compose.yml
+
 ```yaml
 version: "3.8"
 services:
@@ -184,6 +189,7 @@ volumes:
 ```
 
 ### 3) src/config.js
+
 ```javascript
 // All values are realistic; tune for your environment.
 export const config = {
@@ -216,6 +222,7 @@ export const config = {
 ```
 
 ### 4) src/connection.js
+
 ```javascript
 import amqplib from "amqplib";
 import pino from "pino";
@@ -251,6 +258,7 @@ export async function connectWithRetry(url, { maxAttempts, delayMs }) {
 ```
 
 ### 5) src/topology.js
+
 ```javascript
 /**
  * Declare exchange, DLX, main queue, retry queues and DLQ.
@@ -300,6 +308,7 @@ export async function ensureTopology(ch, config) {
 ```
 
 ### 6) src/metrics.js
+
 ```javascript
 /**
  * Prometheus metrics with sensible cardinalities.
@@ -353,6 +362,7 @@ export function startMetricsServer(port) {
 ```
 
 ### 7) src/publisher.js
+
 ```javascript
 /**
  * Publisher in ConfirmChannel mode for at-least-once publish semantics.
@@ -417,6 +427,7 @@ setTimeout(() => process.exit(0), 500);
 ```
 
 ### 8) src/subscriber.js
+
 ```javascript
 /**
  * Consumer with idempotency + multi-queue exponential backoff + DLQ.
@@ -544,6 +555,7 @@ await ch.consume(mainQ, async (msg) => {
 ## Security & TLS
 
 ### RabbitMQ (production posture)
+
 ```bash
 # /etc/rabbitmq/rabbitmq.conf
 listeners.ssl.default = 5671
@@ -555,11 +567,13 @@ ssl_options.fail_if_no_peer_cert = true
 ```
 
 **AMQP URL:**
+
 ```
 amqps://pubsub_user:secure_password_123@broker.example.com:5671?heartbeat=60
 ```
 
 **Per-service user and permissions (principle of least privilege):**
+
 ```bash
 rabbitmqctl add_user accounting_service S3curePass!
 rabbitmqctl add_vhost /payment_vhost
@@ -573,6 +587,7 @@ rabbitmqctl set_permissions -p /payment_vhost accounting_service "^payment_event
 **Prefetch:** Start with `--env PREFETCH=50`, adjust to keep CPU < 70% and P95 < 100ms.
 
 **When to add consumers:**
+
 - Queue depth rising for > 5 minutes
 - DLQ growth or P95 processing > target
 - CPU < 60% but backlog > SLO threshold
@@ -582,6 +597,7 @@ rabbitmqctl set_permissions -p /payment_vhost accounting_service "^payment_event
 ## Validation & Monitoring
 
 ### Run it
+
 ```bash
 docker compose up -d
 node src/subscriber.js
@@ -591,18 +607,22 @@ node src/publisher.js
 ### Verify end-to-end
 
 **Success path:**
+
 - Logs show: `💾 Ledger debit for payment PAY-1001 — $125.00 (seq=1)` then `📤 Published ...`
 - `curl -s localhost:9091/metrics | grep msgs_processed_total`
 
 **Duplicate suppression:**
+
 - Re-run `node src/publisher.js` with the same idempotency_key → subscriber logs `msgs_duplicates_suppressed_total` increases; side-effect logs do not repeat.
 
 **Failure & retries:**
+
 - Edit `publisher.js` and set `data.simulate_fail = true`.
 - Observe: first failure gets ACK+repub to retry.1 (1s delay), then retry.2 (5s), then retry.3 (15s). On final failure, message is NACKed to DLQ.
 - `docker exec pubsub-rmq rabbitmqctl list_queues name messages | grep accounting-service` shows DLQ depth > 0.
 
 **Metrics you should see:**
+
 - `msgs_published_total`, `msgs_processed_total`, `msgs_failed_total`, `msgs_duplicates_suppressed_total`, `msgs_deadlettered_total`
 - Gauges: `queue_depth`, `dlq_depth`, `amqp_active_connections`, and `processing_latency_ms` summary.
 
@@ -620,6 +640,7 @@ node src/publisher.js
 - Ship with metrics, TLS, and scoped permissions on day one.
 
 **Next:**
+
 - Add per-entity sequence checks if ordering matters.
 - Consider the Delayed Message Exchange plugin if you prefer per-message x-delay instead of multiple queues.
 

@@ -49,11 +49,16 @@ content_type: "how-to-guide"
 
 # Cursor Pro: Zero to Expert — The Complete Developer’s Journey
 
+{% include personal-branding.html %}
+
+<img src="/assets/banners/resized/20250823cursorpro-blog.jpg" alt="Cursor Zero to Expert" class="article-header-image">
+
 **One-line metric:** Go from first install to a production PR with AI pair-programming in **7 days**, and a measurable **3–5× feature throughput** by **week 6**.  
 **Audience:** Individual developers, tech leads, and platform engineers adopting Cursor Pro.  
 **Reading time:** ~20 minutes.  
 **Prerequisites:** Git, Node.js 18+ or Python 3.10+, a GitHub account, and a sample repo you can freely modify.  
 **Urgency hook:** Teams that standardize AI workflows early capture compounding velocity gains—late adopters spend months unlearning ad-hoc habits.  
+
 **TL;DR:** Install Cursor → wire a tiny app and tests → codify standards in `.cursorrules` → scale to refactors, code review, and CI checks. This guide gives you runnable examples, validation steps, and production guardrails.
 
 > ⚠️ **Disclaimer**: All scenarios, accounts, names, and data used in examples are not real. They are realistic scenarios provided only for educational and illustrative purposes.
