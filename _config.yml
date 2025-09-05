@@ -11,6 +11,9 @@ cayman:
 github:
   is_project_page: false
 
+# Repository configuration for GitHub Pages
+repository: sumahiremath/buildtales
+
 # Exclude non-content files from Jekyll processing
 exclude:
   - .idea/
