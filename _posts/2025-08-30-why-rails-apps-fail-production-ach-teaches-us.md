@@ -43,8 +43,6 @@ series:
   series_type: "releaseit"
   
 # Content classification
-payment_type: "ach_transfers"
-payment_network: ["federal_reserve", "epn"]
 content_level: "intermediate"
 content_type: "how_to"
 future: true
@@ -56,7 +54,7 @@ Whether you're using Rails, Django, or Spring Boot, production failures rarely c
 
 {% include personal-branding.html %}
 
-<img src="/assets/banners/resized/20250830railsfail-blog.jpg" alt="Why Rails Apps Fail in Production (and What ACH Teaches Us)" class="article-header-image">
+<img src="/assets/banners/resized/20250830railsfail-blog.jpg" alt="Why Apps Fail in Production (and What ACH Teaches Us)" class="article-header-image">
 
 **Audience** Backend engineers, Rails developers, fintech architects  
 **Reading Time:** 14 minutes  
