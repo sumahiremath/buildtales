@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Why Rails Apps Fail in Production (and What ACH Teaches Us)"
+title: "Why Apps Fail in Production (and What ACH Teaches Us)"
 date: 2025-08-30
 permalink: /why-rails-apps-fail-production-ach-teaches-us/
 categories: [systems, architecture, releaseit, design-patterns]
