@@ -18,15 +18,15 @@ author:
   
 # Open Graph / Social Media
 og:
-  title: "Why Rails Apps Fail in Production (and What ACH Teaches Us)"
-  description: "Understanding why Rails apps fail in production using ACH payment processing as a case study, and how to apply Release It! principles for resilience."
+  title: "Why Apps Fail in Production (and What ACH Teaches Us)"
+  description: "Understanding why apps fail in production using ACH payment processing as a case study, and how to apply Release It! principles for resilience."
   type: "article"
   
 # Twitter Card
 twitter:
   card: "summary"
-  title: "Why Rails Apps Fail in Production (and What ACH Teaches Us)"
-  description: "Understanding why Rails apps fail in production using ACH payment processing as a case study, and how to apply Release It! principles for resilience."
+  title: "Why Apps Fail in Production (and What ACH Teaches Us)"
+  description: "Understanding why apps fail in production using ACH payment processing as a case study, and how to apply Release It! principles for resilience."
 
 # Syndication and Original Content Declaration
 robots: "index, follow"
@@ -48,7 +48,7 @@ content_type: "how_to"
 future: true
 ---
 
-# Why Rails Apps Fail in Production (and What ACH Teaches Us)
+# Why Apps Fail in Production (and What ACH Teaches Us)
 
 Whether you're using Rails, Django, or Spring Boot, production failures rarely come from syntax errors—they come from timeouts, retries, duplicates, and slow dependencies that integration tests miss.
 
