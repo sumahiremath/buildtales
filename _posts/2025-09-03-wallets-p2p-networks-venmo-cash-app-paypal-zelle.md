@@ -48,16 +48,16 @@ syndication:
   republish_allowed: true
   canonical_source: "BuildTales.dev"
 ---
+## Wallets & P2P Networks: Venmo, Cash App, PayPal, Zelle — Deliver Instant UX Without Eating Deferred-Settlement Losses
+*Cut ACH return losses with proven engineering practices: separate ledger tracking from settlement timing, add provisional holds, and implement automated rail reconciliation.*
 
-## Nibble Notes
+{% include personal-branding.html %}
 
-**Wallets & P2P Networks: Venmo, Cash App, PayPal, Zelle** — Deliver Instant UX Without Eating Deferred-Settlement Losses
+<img src="/assets/banners/resized/2025-09-03-wallets-blog.jpg" alt="Wallets & P2P Networks" class="article-header-image">
 
-Cut ACH return losses by 35% in 60 days by separating ledger vs. settlement, adding provisional holds, and wiring rail-specific reconciliation.
-
-**For:** Backend/payment engineers, risk analysts, operations leaders  
-**Reading time:** 16 minutes  
-**Prerequisites:** ACH & card basics, REST webhooks, command line, Ruby 3.x (examples use Ruby)  
+**Audience** Backend/payment engineers, risk analysts, operations leaders
+**Reading time:** 16 minutes
+**Prerequisites:** ACH & card basics, REST webhooks, command line, Ruby 3.x (examples use Ruby)
 **Why now:** Wallet adoption keeps rising while ACH/card dispute tails get longer. If you treat "instant balance" as settled cash, you'll ship happy-path UX and wake up to negative balances and write-offs.
 
 ## TL;DR
@@ -97,6 +97,7 @@ flowchart TD
 ```
 
 **Core principles:**
+
 - Double-entry ledger owns truth; ACH/card rails confirm or unwind it.
 - Every ledger move carries a rail evidence key (ACH trace, capture ID, dispute case).
 - Provisional → settled state machine controlled by webhooks & reports.
@@ -387,6 +388,7 @@ puts JSON.pretty_generate(recon.report)
 ```
 
 **What you'll see (abridged):**
+
 - ✅ ACH funding submitted … → provisional balance increases
 - ✅ ACH settled … → available increases, provisional drops
 - 🍔 P2P transfer → internal move, no rail yet
@@ -489,6 +491,7 @@ end
 ```
 
 **Security Checklist:**
+
 - Verify signature & timestamp before parsing JSON
 - Reject old timestamps; drop already-seen event_ids
 - Log digest of body for forensics; never log raw secrets
@@ -545,19 +548,22 @@ end
 
 ## Reconciliation & Aging
 
-| Flow | Reconcile Against | Primary Evidence | Risk Tail (Typical) |
-|------|------------------|------------------|-------------------|
-| ACH load | ACH ODFI file & bank statement | trace_id, effective_date, amount | R01: due by 2 banking days; R10: up to 60 calendar days (consumer) |
-| Card load | Processor captures & dispute logs | capture_id, auth_id, ARN | Chargebacks: windows vary by network & reason code — Visa disputes typically allow up to 120 days; Mastercard allows up to 540 days in some scenarios |
-| P2P | Internal ledger | Ledger tx_id, memo | Irreversible once spent |
-| Cash-out | Bank statement / processor report | trace_id (ACH) / push_ref (debit push) | Return / push failure windows vary |
+
+| Flow      | Reconcile Against                 | Primary Evidence                       | Risk Tail (Typical)                                                                                                                                    |
+| --------- | --------------------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ACH load  | ACH ODFI file & bank statement    | trace_id, effective_date, amount       | R01: due by 2 banking days; R10: up to 60 calendar days (consumer)                                                                                     |
+| Card load | Processor captures & dispute logs | capture_id, auth_id, ARN               | Chargebacks: windows vary by network & reason code — Visa disputes typically allow up to 120 days; Mastercard allows up to 540 days in some scenarios |
+| P2P       | Internal ledger                   | Ledger tx_id, memo                     | Irreversible once spent                                                                                                                                |
+| Cash-out  | Bank statement / processor report | trace_id (ACH) / push_ref (debit push) | Return / push failure windows vary                                                                                                                     |
 
 **Aging strategy:**
+
 - 0–5d (ACH): Full hold if high-risk; release gradually by user risk tier.
 - 6–60d (ACH): Tail exposure; increase velocity limits based on tenure.
 - 0–120d (Card): Keep reserve vs. gross card loads; lower for 3DS-authenticated tokens.
 
 **ACH Return Timelines:**
+
 - **ACH R01 (Insufficient Funds):** RDFI must return within 2 banking days of settlement.
 - **ACH R10 (Unauthorized):** Consumer unauthorized returns allowed up to 60 calendar days.
 
@@ -638,6 +644,7 @@ def inc(metric) ; $metrics[metric] += 1 ; end
 ```
 
 **Set alerts:**
+
 - ach_returns_total rate spike > 3x 7-day baseline = page
 - recon_breaks_total > 0 for > 24h = page
 - Cash-out push failures > 0.5% last 1h = investigate

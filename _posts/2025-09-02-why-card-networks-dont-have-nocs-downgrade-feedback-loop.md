@@ -40,7 +40,7 @@ content_type: "analysis"
 
 <img src="/assets/banners/resized/20250902cardcorrections-blog.jpg" alt="Credit card network downgrade analysis showing interchange categories and fee impacts" class="article-header-image">
 
-**Audience:** Payments engineers, data engineers, fintech architects  
+**Audience** Payments engineers, data engineers, fintech architects  
 **Reading time:** 18 minutes  
 **Prerequisites:** Access to processor settlement exports, Node.js 18+, PostgreSQL 14+, ability to add AVS/CVV at checkout  
 **Why now:** Interchange programs shift, processors vary in pass-through, and there's still no NOC. A rule-driven feedback loop is your best defense.

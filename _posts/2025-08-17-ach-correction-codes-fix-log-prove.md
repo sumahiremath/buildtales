@@ -59,7 +59,7 @@ content_type: "how_to"
 
 <img src="/assets/banners/resized/20250817nocs-blog.jpg" alt="ACH NOC Handling" class="article-header-image">
 
-**For:** Fintech engineers, ACH operations managers, compliance leads  
+**Audience** Fintech engineers, ACH operations managers, compliance leads  
 **Reading time:** 9 minutes  
 **Prerequisites:** Familiarity with [ACH]({% post_url 2025-08-13-money-flow-bank-account %}) [file formats]({% post_url 2025-08-15-nacha-file-demystified %}) (PPD/CCD), basic NACHA rule knowledge  
 **Why now:** NACHA’s compliance audits are more rigorous than ever, and repeated NOC mishandling can cost fintechs thousands in fees plus reputational damage.

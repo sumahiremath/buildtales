@@ -58,7 +58,7 @@ content_type: "case_study"
 
 <img src="/assets/banners/resized/20250901cardauth-blog.jpg" alt="Why Credit Card Interchange Fees Differ at Authorization vs Settlement (and How to Reconcile Them)" class="article-header-image">
 
-**For:** Payment engineers, finance systems architects  
+**Audience** Payment engineers, finance systems architects  
 **Reading Time:** 12 minutes  
 **Prerequisites:** Familiarity with card processing flows, Rails background job frameworks  
 **Why now:** Interchange downgrades are rising with new scheme rules—misreporting margins creates material financial risk.  

@@ -58,7 +58,7 @@ Whether you're using Rails, Django, or Spring Boot, production failures rarely c
 
 <img src="/assets/banners/resized/20250830railsfail-blog.jpg" alt="Why Rails Apps Fail in Production (and What ACH Teaches Us)" class="article-header-image">
 
-**For:** Backend engineers, Rails developers, fintech architects  
+**Audience** Backend engineers, Rails developers, fintech architects  
 **Reading Time:** 14 minutes  
 **Prerequisites:** Rails app in production, basic ACH/payment knowledge  
 **Why now:** ACH volumes keep growing (29.1B payments in 2023). Rails teams building financial systems face outages not from syntax errors, but from distributed system realities.

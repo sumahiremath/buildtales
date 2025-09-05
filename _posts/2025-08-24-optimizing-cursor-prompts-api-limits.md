@@ -55,7 +55,7 @@ content_type: "how_to"
 
 <img src="/assets/banners/resized/20250824cursorapilimit-blog.jpg" alt="EL Survival" class="article-header-image">  
 
-**For:** Software engineers and AI-assisted developers\
+**Audience** Software engineers and AI-assisted developers\
 **Reading Time:** 12 minutes\
 **Prerequisites:** Basic Cursor usage, familiarity with prompt engineering\
 **Why Now:** Rising API costs and token overages in Cursor Pro make optimization urgent for developers scaling daily use

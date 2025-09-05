@@ -54,7 +54,7 @@ content_type: "how_to"
 
 <img src="/assets/banners/resized/20250826copilot-ruby-blog.jpg" alt="Survival" class="article-header-image">  
 
-**For:** Software engineers, backend developers, tech leads  
+**Audience** Software engineers, backend developers, tech leads  
 **Reading Time:** ~50 minutes  
 **Prerequisites:** Ruby installed (`ruby -v`), basic CLI knowledge, VS Code with GitHub Copilot & Copilot Chat extensions  
 **Why now:** AI coding assistants like GitHub Copilot are rapidly becoming standard in professional workflows. Teams adopting it effectively see up to 30% faster feature delivery.

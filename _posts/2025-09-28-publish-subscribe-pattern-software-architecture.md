@@ -51,7 +51,7 @@ future: true
 
 Validated at ~3–5K msg/s with P95 < 100ms on a modest VM; duplicate side-effects = 0.
 
-**For:** Backend engineers & platform architects
+**Audience** Backend engineers & platform architects
 **Reading Time:** 17 minutes
 **Prerequisites:** Node 18+, Docker, basic RabbitMQ & Redis proficiency
 **Why now:** Event volumes and retries rise as systems decompose; at-least-once delivery guarantees mean duplicates are inevitable—idempotency and production-grade retries are mandatory.
