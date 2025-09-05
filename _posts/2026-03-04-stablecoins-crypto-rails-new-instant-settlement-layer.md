@@ -21,7 +21,7 @@ syndication:
 series:
   name: "How U.S. Payments Really Work"
   index_url: "/series/payments"
-  part: 11
+  part: 99
   series_type: "payments"
 
 # Content classification
@@ -29,6 +29,7 @@ payment_type: "crypto_payments"
 payment_network: ["ethereum", "polygon", "arbitrum"]
 content_level: "intermediate"
 content_type: "analysis"
+future: tru
 ---
 
 # Stablecoins & Crypto Rails: The New Instant Settlement Layer?
