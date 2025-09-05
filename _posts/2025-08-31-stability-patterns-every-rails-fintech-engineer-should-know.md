@@ -205,13 +205,13 @@ graph LR
 
 This article is part of the **Release It! with Rails + ACH** series:
 
-- **Previous**: [Why Rails Apps Fail in Production](/2025/08/30/why-rails-apps-fail-production-ach-teaches-us.html)
+- **Previous**: [Why Rails Apps Fail in Production](https://buildtales.dev/why-rails-apps-fail-production-ach-teaches-us/)
 - **Next**: The Four Core Production Concerns in Fintech Systems
 
 **Related upcoming deep dives**:
-- Circuit Breakers (Post #4)
-- Retries & Backoff (Post #5)
-- Bulkhead isolation (Post #7)
+- Circuit Breakers (Post #3)
+- Retries & Backoff (Post #4)
+- Bulkhead isolation (Post #5)
 
 ---
 
