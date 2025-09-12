@@ -34,7 +34,7 @@ og:
   title: "FedNow: Built by the Fed. Moving Like the Fed"
   description: "Examining the Federal Reserve's entry into real-time payments and why government-built systems move at government speed."
   type: "article"
-  
+
 # Twitter Card
 twitter:
   card: "summary"
