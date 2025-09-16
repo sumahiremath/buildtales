@@ -57,10 +57,10 @@ content_type: "how_to"
 
 <img src="/assets/banners/resized/20250917achcutoff-blog.jpg" alt="ACH Cutoffs" class="article-header-image">
 
-**Audience:** Payments engineers, fintech product managers
-**Reading time:** 9 minutes
-**Prerequisites:** Basic ACH knowledge, awareness of batch settlement windows
-**Why now:** Same-Day ACH volume is crossing \$3T annually, but user frustration remains high due to hidden cutoff times.
+**Audience:** Payments engineers, fintech product managers  
+**Reading time:** 9 minutes  
+**Prerequisites:** Basic ACH knowledge, awareness of batch settlement windows  
+**Why now:** Same-Day ACH volume is crossing \$3T annually, but user frustration remains high due to hidden cutoff times  
 
 > **TL;DR:**
 - ACH cutoffs define when a payment makes today’s file vs tomorrow’s. 
