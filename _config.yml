@@ -59,7 +59,7 @@ google_analytics: G-RRLZZG4DPV  # Replace with your GA4 Measurement ID
 
 # Google reCAPTCHA - will be set via environment variable in production
 recaptcha:
-  site_key: "6Le2g6crAAAAABrTyFxjbc5sCYhgnUs0Nnxuicwf"  # Default for local development
+  site_key: "PUBLIC_KEY_FROM_ENV"  # Placeholder - real key injected from environment variables
 
 # Giscus Comments (GitHub Discussions)
 giscus:

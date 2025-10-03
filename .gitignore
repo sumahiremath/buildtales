@@ -30,5 +30,3 @@ __pycache__/
 *.temp
 /vendor/
 .env
-env.example
-test-netlify-function.cjs
