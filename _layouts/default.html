@@ -81,10 +81,125 @@
     </script>
     
     <!-- Google reCAPTCHA v3 -->
-    <script src="https://www.google.com/recaptcha/api.js?render=6Le2g6crAAAAABrTyFxjbc5sCYhgnUs0Nnxuicwf" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?render={{ site.recaptcha.site_key }}" async defer></script>
     <script>
-      function onSubmit(token) {
-        document.querySelector('form').submit();
+      // reCAPTCHA v3 implementation
+      async function onSubmit(token) {
+        const form = document.querySelector('form[action*="formspree.io"]');
+        if (!form) return;
+        
+        const submitButton = form.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.textContent;
+        
+        try {
+          // Show loading state
+          submitButton.textContent = 'Verifying...';
+          submitButton.disabled = true;
+          
+          // Collect form data
+          const formData = new FormData(form);
+          const formObject = {};
+          formData.forEach((value, key) => {
+            formObject[key] = value;
+          });
+          
+          // Submit to our verification endpoint
+          const response = await fetch('/.netlify/functions/verify-recaptcha', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              token: token,
+              formData: formObject
+            })
+          });
+          
+          const result = await response.json();
+          
+          if (result.success) {
+            // Show success message
+            showMessage('✅ Message sent successfully! Thanks for reaching out.', 'success');
+            form.reset();
+          } else {
+            throw new Error(result.error || 'Verification failed');
+          }
+          
+        } catch (error) {
+          console.error('Form submission error:', error);
+          showMessage('❌ Failed to send message. Please try again.', 'error');
+        } finally {
+          // Reset button
+          submitButton.textContent = originalButtonText;
+          submitButton.disabled = false;
+        }
+      }
+      
+      function showMessage(text, type) {
+        // Create or update message element
+        let messageDiv = document.getElementById('form-message');
+        if (!messageDiv) {
+          messageDiv = document.createElement('div');
+          messageDiv.id = 'form-message';
+          messageDiv.style.marginTop = '1rem';
+          messageDiv.style.padding = '0.75rem';
+          messageDiv.style.borderRadius = '4px';
+          messageDiv.style.fontWeight = '500';
+          
+          const form = document.querySelector('form[action*="formspree.io"]');
+          form.parentNode.insertBefore(messageDiv, form.nextSibling);
+        }
+        
+        messageDiv.textContent = text;
+        messageDiv.style.display = 'block';
+        messageDiv.style.backgroundColor = type === 'success' ? '#d1fae5' : '#fee2e2';
+        messageDiv.style.color = type === 'success' ? '#059669' : '#dc2626';
+        messageDiv.style.border = `1px solid ${type === 'success' ? '#a7f3d0' : '#fecaca'}`;
+        
+        // Hide message after 5 seconds
+        setTimeout(() => {
+          messageDiv.style.display = 'none';
+        }, 5000);
+      }
+
+      // Initialize reCAPTCHA v3 when page loads
+      function initializeRecaptcha() {
+        if (typeof grecaptcha !== 'undefined') {
+          grecaptcha.ready(function() {
+            // Set up contact form submission
+            const contactForm = document.querySelector('form[action*="formspree.io"]');
+            if (contactForm) {
+              const submitButton = contactForm.querySelector('button[type="submit"]');
+              if (submitButton) {
+                submitButton.addEventListener('click', async function(e) {
+                  e.preventDefault();
+                  
+                  // Validate form first
+                  if (!contactForm.checkValidity()) {
+                    contactForm.reportValidity();
+                    return;
+                  }
+                  
+                  try {
+                    // Execute reCAPTCHA v3
+                    const token = await grecaptcha.execute('{{ site.recaptcha.site_key }}', {action: 'contact_form'});
+                    onSubmit(token);
+                  } catch (error) {
+                    console.error('reCAPTCHA error:', error);
+                    alert('reCAPTCHA verification failed. Please try again.');
+                  }
+                });
+              }
+            }
+          });
+        }
+      }
+
+      // Initialize when DOM is loaded
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initializeRecaptcha);
+      } else {
+        initializeRecaptcha();
       }
     </script>
   </head>

@@ -1,0 +1,18 @@
+[build]
+  publish = "_site"
+  command = "bundle exec jekyll build"
+
+[build.environment]
+  JEKYLL_ENV = "production"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
+
+[functions]
+  directory = "netlify/functions"
+
+# Environment variables needed:
+# RECAPTCHA_SITE_KEY - Your reCAPTCHA site key
+# GOOGLE_RECAPTCHA_API_KEY - Your Google API key for reCAPTCHA Enterprise

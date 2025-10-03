@@ -29,3 +29,6 @@ __pycache__/
 *.tmp
 *.temp
 /vendor/
+.env
+env.example
+test-netlify-function.cjs
